@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>清风(xovel)</title>
+  <title>清风[xovel]</title>
   <subtitle>清风【神龙阁】</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-05-12T03:15:41.909Z</updated>
+  <updated>2016-05-16T08:34:56.694Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://xovel.cn/2016/05/16/test/"/>
+    <id>http://xovel.cn/2016/05/16/test/</id>
+    <published>2016-05-16T08:34:56.000Z</published>
+    <updated>2016-05-16T08:34:56.694Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
@@ -40,7 +56,7 @@
     
     </summary>
     
-      <category term="心情" scheme="http://xovel.cn/categories/%E5%BF%83%E6%83%85/"/>
+      <category term="心情" scheme="http://xovel.cn/categories/mood/"/>
     
     
       <category term="心情" scheme="http://xovel.cn/tags/%E5%BF%83%E6%83%85/"/>
