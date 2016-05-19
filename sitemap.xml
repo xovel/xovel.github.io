@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://xovel.cn/about/index.html</loc>
+    <loc>http://xovel.cn/2016/05/19/normalize.css_vs_cssreset/</loc>
     
-    <lastmod>2016-05-18T08:22:32.416Z</lastmod>
+    <lastmod>2016-05-19T02:42:11.936Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://xovel.cn/2016/05/16/test/</loc>
+    <loc>http://xovel.cn/about/index.html</loc>
     
-    <lastmod>2016-05-16T08:34:56.694Z</lastmod>
+    <lastmod>2016-05-18T08:22:32.416Z</lastmod>
     
   </url>
   
@@ -26,13 +26,6 @@
     <loc>http://xovel.cn/categories/index.html</loc>
     
     <lastmod>2016-05-12T03:22:09.311Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xovel.cn/2016/04/21/hello-world/</loc>
-    
-    <lastmod>2016-05-12T03:15:41.909Z</lastmod>
     
   </url>
   
