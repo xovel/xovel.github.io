@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://xovel.cn/2016/05/19/normalize.css_vs_cssreset/</loc>
+    <loc>http://xovel.cn/article/things-about-display.html</loc>
     
-    <lastmod>2016-05-19T02:45:46.511Z</lastmod>
+    <lastmod>2016-05-20T09:01:35.661Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://xovel.cn/about/index.html</loc>
     
-    <lastmod>2016-05-18T08:22:32.416Z</lastmod>
+    <lastmod>2016-05-20T07:29:26.400Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xovel.cn/holyblood/index.html</loc>
+    
+    <lastmod>2016-05-20T06:21:43.871Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xovel.cn/article/normalize-cssreset.html</loc>
+    
+    <lastmod>2016-05-20T03:52:58.444Z</lastmod>
     
   </url>
   

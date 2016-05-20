@@ -1,0 +1,805 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="css,display," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="清风轩" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="关于display的一些知识。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一探究竟：display">
+<meta property="og:url" content="http://xovel.cn/article/things-about-display.html">
+<meta property="og:site_name" content="清风轩">
+<meta property="og:description" content="关于display的一些知识。">
+<meta property="og:updated_time" content="2016-05-20T09:01:35.661Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="一探究竟：display">
+<meta name="twitter:description" content="关于display的一些知识。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 一探究竟：display | 清风轩 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="http://s6.cnzz.com/stat.php?id=1259096563&web_id=1259096563" type="text/javascript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">清风轩</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">清风轩居 - 引仙阁</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                一探究竟：display
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-20T12:35:06+08:00" content="2016-05-20">
+              2016-05-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/frontend/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>一句话概括：display属性，设置元素如何显示。</p>
+<blockquote>
+<p>display属性指定元素渲染使用的类型。</p>
+</blockquote>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p><em>display: none | inline | block | list-item | inline-list-item | inline-block | inline-table | table | table-cell | table-column | table-column-group | table-footer-group | table-header-group | table-row | table-row-group | flex | inline-flex | grid | inline-grid | run-in | ruby | ruby-base | ruby-text | ruby-base-container | ruby-text-container | contents</em></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">none</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">inline</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">block</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">contents</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">list-item</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">inline-block</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">inline-table</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">table</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">table-cell</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">table-column</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">table-column-group</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">table-footer-group</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">table-header-group</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">table-row</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">table-row-group</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">flex</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">inline-flex</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">grid</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">inline-grid</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">ruby</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">ruby-base</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">ruby-text</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">ruby-base-container</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">ruby-text-container</span> </span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">run-in</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">inherit</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">initial</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">unset</span></span><br></pre></td></tr></table></figure>
+<h3 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h3><table>
+<thead>
+<tr>
+<th>值</th>
+<th>释义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<td>隐藏对象。与visibility属性的hidden值不同，其不为被隐藏的对象保留其物理空间</td>
+</tr>
+<tr>
+<td>inline</td>
+<td>指定对象为内联元素。</td>
+</tr>
+<tr>
+<td>block</td>
+<td>指定对象为块元素。</td>
+</tr>
+<tr>
+<td>list-item</td>
+<td>指定对象为列表项目。</td>
+</tr>
+<tr>
+<td>inline-block</td>
+<td>指定对象为内联块元素。（CSS2）</td>
+</tr>
+<tr>
+<td>table</td>
+<td>指定对象作为块元素级的表格。类同于html标签<code>table</code>（CSS2）</td>
+</tr>
+<tr>
+<td>inline-table</td>
+<td>指定对象作为内联元素级的表格。类同于html标签<code>table</code>（CSS2）</td>
+</tr>
+<tr>
+<td>table-caption</td>
+<td>指定对象作为表格标题。类同于html标签<code>caption</code>（CSS2）</td>
+</tr>
+<tr>
+<td>table-cell</td>
+<td>指定对象作为表格单元格。类同于html标签<code>td</code>（CSS2）</td>
+</tr>
+<tr>
+<td>table-row</td>
+<td>指定对象作为表格行。类同于html标签<code>tr</code>（CSS2）</td>
+</tr>
+<tr>
+<td>table-row-group</td>
+<td>指定对象作为表格行组。类同于html标签<code>tbody</code>（CSS2）</td>
+</tr>
+<tr>
+<td>table-column</td>
+<td>指定对象作为表格列。类同于html标签<code>col</code>（CSS2）</td>
+</tr>
+<tr>
+<td>table-column-group</td>
+<td>指定对象作为表格列组显示。类同于html标签<code>colgroup</code>（CSS2）</td>
+</tr>
+<tr>
+<td>table-header-group</td>
+<td>指定对象作为表格标题组。类同于html标签<code>thead</code>（CSS2）</td>
+</tr>
+<tr>
+<td>table-footer-group</td>
+<td>指定对象作为表格脚注组。类同于html标签<code>tfoot</code>（CSS2）</td>
+</tr>
+<tr>
+<td>run-in</td>
+<td>根据上下文决定对象是内联对象还是块级对象。（CSS3）</td>
+</tr>
+<tr>
+<td>box</td>
+<td>将对象作为弹性伸缩盒显示。（伸缩盒最老版本）（CSS3）</td>
+</tr>
+<tr>
+<td>inline-box</td>
+<td>将对象作为内联块级弹性伸缩盒显示。（伸缩盒最老版本）（CSS3）</td>
+</tr>
+<tr>
+<td>flexbox</td>
+<td>将对象作为弹性伸缩盒显示。（伸缩盒过渡版本）（CSS3）</td>
+</tr>
+<tr>
+<td>inline-flexbox</td>
+<td>将对象作为内联块级弹性伸缩盒显示。（伸缩盒过渡版本）（CSS3）</td>
+</tr>
+<tr>
+<td>flex</td>
+<td>将对象作为弹性伸缩盒显示。（伸缩盒最新版本）（CSS3）</td>
+</tr>
+<tr>
+<td>inline-flex</td>
+<td>将对象作为内联块级弹性伸缩盒显示。（伸缩盒最新版本）（CSS3）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>实验性的属性，如grid, ruby, content等这里没有列出，具体请参考<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display#Values" target="_blank" rel="external">MDN</a>页面。</p>
+</blockquote>
+<h4 id="display-none-vs-visibility-hidden"><a href="#display-none-vs-visibility-hidden" class="headerlink" title="display:none vs visibility:hidden"></a><em>display:none</em> vs <em>visibility:hidden</em></h4><ul>
+<li>display:none<ul>
+<li>视为不存在，且不加载！</li>
+<li>使用该属性后，HTML元素（对象）的宽度、高度等各种属性值都将“丢失”</li>
+<li>消失于视野，不占任何空间</li>
+</ul>
+</li>
+<li>visibility:hidden<ul>
+<li>隐藏，但在浏览时保留位置</li>
+<li>使用该属性后，HTML元素（对象）仅仅是在视觉上看不见（完全透明），而它所占据的空间位置仍然存在，也即是说它仍具有高度、宽度等属性值。</li>
+<li>隐形，虽然视野看不见，但仍有占位符</li>
+</ul>
+</li>
+</ul>
+<h4 id="display-inline-block相关"><a href="#display-inline-block相关" class="headerlink" title="display:inline-block相关"></a><em>display:inline-block</em>相关</h4><ul>
+<li><em>display:inline-block</em>：将对象呈递为内联对象，但是对象的内容作为块对象呈递。旁边的内联对象会被呈递在同一行内，允许空格。</li>
+<li>IE6、7支持inline元素转换成inline-block，但不支持block元素转换成inline-block，所以非inline元素在IE6、7下要转换成inline-block，需先转换成inline，然后触发hasLayout，以此来获得和inline-block类似的效果</li>
+</ul>
+<blockquote>
+<p>你可以使用以下代码实现上一条效果：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">	display: inline-block;</span><br><span class="line">	*display: inline;</span><br><span class="line">	*zoom: 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="其他说明"><a href="#其他说明" class="headerlink" title="其他说明"></a>其他说明</h4><ul>
+<li>如果position既不是static也不是relative或者float不是none或者元素是根元素，当display:inline-table时，display的计算值为table；当display:inline | inline-block | run-in | table-* 系时，display的计算值为block，其它情况为指定值。</li>
+</ul>
+<h3 id="jQuery中对元素display属性的操作"><a href="#jQuery中对元素display属性的操作" class="headerlink" title="jQuery中对元素display属性的操作"></a>jQuery中对元素display属性的操作</h3><p>jQuery中对获取元素默认display属性的代码：</p>
+<figure class="highlight javascript"><figcaption><span>jQuery1.12.2</span><a href="https://github.com/jquery/jquery/blob/1.12-stable/src/css/defaultDisplay.js" target="_blank" rel="external">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 代码太长，请点击右上角link查看。</span></span><br></pre></td></tr></table></figure>
+<p>jQuery中调用display默认值进行应用的实现函数：</p>
+<figure class="highlight javascript"><figcaption><span>jQuery1.12.2</span><a href="https://github.com/jquery/jquery/blob/1.12-stable/src/css/showHide.js" target="_blank" rel="external">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 代码太长，请点击右上角link查看。</span></span><br></pre></td></tr></table></figure>
+<p>jQuery通过创建一个新元素，然后获取其默认的display属性值，并加入到缓存中。需要使用时从这个缓存对象中将display默认值取出并使用。最终实现方法为fn.show()、fn.hide()以及fn.toggle()。jQuery中对show/hide/toggle方法在后续处理中进行过动画相关操作，这里不是本文探讨的内容。更多信息请参阅<a href="http://api.jquery.com/show" target="_blank" rel="external">jQuery官方API文档</a>。</p>
+<h3 id="QsLinz-js对display的实现"><a href="#QsLinz-js对display的实现" class="headerlink" title="QsLinz.js对display的实现"></a>QsLinz.js对display的实现</h3><figure class="highlight javascript"><figcaption><span>QsLinz.js</span><a href="https://github.com/xovel/qslinz/blob/master/QsLinz.0.1.1.js#L707" target="_blank" rel="external">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 代码太长，请点击右上角link查看。</span></span><br></pre></td></tr></table></figure>
+<p>采用强制指定元素display属性的方式，将常见的不同display值存于对象oDisplay中，实现快速获取display值。<blockquote><p>QsLinz.js是仿照jQuery代码风格实现的一个简易Javascript类库，算是一个练手的自定义类库。<del>已弃坑，目前未公布版本为0.1.4。</del></p>
+<footer><strong>QsLinz.js</strong><cite><a href="https://github.com/xovel/qslinz/" target="_blank" rel="external">github.com/xovel/qslinz</a></cite></footer></blockquote></p>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" target="_blank" rel="external">display - CSS | MDN</a></li>
+<li><a href="http://blog.csdn.net/teamlet/article/details/42024995" target="_blank" rel="external">CSS中display对布局的影响以及元素display的默认值</a></li>
+<li><a href="http://www.w3schools.com/cssref/pr_class_display.asp" target="_blank" rel="external">CSS display property</a></li>
+<li><a href="http://api.jquery.com/show/" target="_blank" rel="external">.show() | jQuery API Documentation</a></li>
+<li><a href="http://www.css88.com/book/css/properties/layout/display.htm" target="_blank" rel="external">display - CSS3参考手册</a></li>
+<li><a href="https://www.zhihu.com/question/22991944" target="_blank" rel="external">CSS3 display:flex和display:box有什么区别？</a></li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/css/" rel="tag">#css</a>
+          
+            <a href="/tags/display/" rel="tag">#display</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/article/normalize-cssreset.html" rel="next" title="从 normalize.css 分析 CSS Reset">
+                <i class="fa fa-chevron-left"></i> 从 normalize.css 分析 CSS Reset
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="article/things-about-display.html"
+           data-title="一探究竟：display" data-url="http://xovel.cn/article/things-about-display.html">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/xovel.jpg"
+               alt="xovel" />
+          <p class="site-author-name" itemprop="name">xovel</p>
+          <p class="site-description motion-element" itemprop="description">缓缓之间，风云静变</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xovel" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://hdk4.com" target="_blank" title="hdk4.com">
+                  
+                    <i class="fa fa-fw fa-adjust"></i>
+                  
+                  hdk4.com
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语法"><span class="nav-number">2.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#取值"><span class="nav-number">3.</span> <span class="nav-text">取值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#display-none-vs-visibility-hidden"><span class="nav-number">3.1.</span> <span class="nav-text">display:none vs visibility:hidden</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#display-inline-block相关"><span class="nav-number">3.2.</span> <span class="nav-text">display:inline-block相关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他说明"><span class="nav-number">3.3.</span> <span class="nav-text">其他说明</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery中对元素display属性的操作"><span class="nav-number">4.</span> <span class="nav-text">jQuery中对元素display属性的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QsLinz-js对display的实现"><span class="nav-number">5.</span> <span class="nav-text">QsLinz.js对display的实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xovel</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io" rel="external nofollow">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"xovel"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
