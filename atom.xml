@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-05-24T09:29:58.790Z</updated>
+  <updated>2016-05-24T09:42:40.316Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/language-tags-in-html.html"/>
     <id>http://xovel.cn/article/language-tags-in-html.html</id>
     <published>2016-05-24T02:58:41.000Z</published>
-    <updated>2016-05-24T09:29:58.790Z</updated>
+    <updated>2016-05-24T09:42:40.316Z</updated>
     
     <content type="html">&lt;p&gt;很多网站中，都会对html标签设置一个lang属性，用来指定网页采用的语言类型。英文网站中，这个值通常是en，即&lt;code&gt;&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;&lt;/code&gt;，而在中文网站中，这个值就变得光怪陆离了。在以前，最常见的两个设置方式是&lt;code&gt;&amp;lt;html lang=&amp;quot;zh&amp;quot;&amp;gt;&lt;/code&gt;和&lt;code&gt;&amp;lt;html lang=&amp;quot;zh-cn&amp;quot;&amp;gt;&lt;/code&gt;，那么，这究竟是怎么一回事呢？&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -58,7 +58,7 @@
 &lt;/ul&gt;
 &lt;p&gt;所有语言标签都是大小写无关的，但是通常约定language标签全部小写，region标签全部大写，script标签只有首字母大写。不同标签之间用连字号-连接。&lt;/p&gt;
 &lt;h3 id=&quot;复杂的汉语体系&quot;&gt;&lt;a href=&quot;#复杂的汉语体系&quot; class=&quot;headerlink&quot; title=&quot;复杂的汉语体系&quot;&gt;&lt;/a&gt;复杂的汉语体系&lt;/h3&gt;&lt;p&gt;汉语演进到当今的情形，已经变得十分繁杂，有简体、繁体、各地方言，不同地区的不同汉语也不尽相同，比如东南亚的新加坡、马来西亚等地的汉语，在使用上与其他地方有一定的差异性。在中国，各地方言体系更加繁杂，如普通话、吴语、闽南语、粤语、客家话等。&lt;/p&gt;
-&lt;p&gt;在2007年公布的ISO标准中，指定了汉语为一个宏语言（macrolanguage），也可以叫做大语种，包含了13个语种：&lt;/p&gt;
+&lt;p&gt;在2007年公布的ISO标准中，指定了汉语为一个宏语言（macrolanguage），也可以叫做大语种。以下表格列出了13个主要的语种：&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -138,12 +138,12 @@
 &lt;p&gt;看一看BCP 47的解释：&lt;blockquote&gt;&lt;p&gt;For example, the macro language Chinese (‘zh’) encompasses a number of languages. For compatibility reasons, each of these languages has both a primary and extended language subtag in the registry. A few selected examples of these include Gan Chinese (‘gan’), Cantonese Chinese (‘yue’), and Mandarin Chinese (‘cmn’). Each is encompassed by the macro language ‘zh’ (Chinese). Therefore, they each have the prefix “zh” in their registry records. Thus, Gan Chinese is represented with tags beginning “zh-gan” or “gan”, Cantonese with tags beginning either “yue” or “zh-yue”, and Mandarin Chinese with “zh-cmn” or “cmn”. The language subtag ‘zh’ can still be used without an extended language subtag to label a resource as some unspecified variety of Chinese, while the primary language subtag (‘gan’, ‘yue’, ‘cmn’) is preferred to using the extended language form (“zh-gan”, “zh-yue”, “zh-cmn”).&lt;/p&gt;
 &lt;footer&gt;&lt;strong&gt;BCP 47&lt;/strong&gt;&lt;cite&gt;&lt;a href=&quot;https://tools.ietf.org/html/bcp47#section-2.2.2&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;tools.ietf.org/html/bcp47#section-2.2.2&lt;/a&gt;&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;&lt;br&gt;大意为汉语这个语系太大了，包含了许多语种，为了兼容性与精确性，将之分为一些不同的小语种。所以就出现了形如 &lt;code&gt;zh-gan&lt;/code&gt;/&lt;code&gt;gan&lt;/code&gt;、&lt;code&gt;zh-yue&lt;/code&gt;/&lt;code&gt;yue&lt;/code&gt;、&lt;code&gt;zh-cmn&lt;/code&gt;/&lt;code&gt;cmn&lt;/code&gt;这样的标记方法。推荐使用后者，即不带&lt;code&gt;zh-&lt;/code&gt;的。&lt;/p&gt;
 &lt;h3 id=&quot;到底用哪一个？&quot;&gt;&lt;a href=&quot;#到底用哪一个？&quot; class=&quot;headerlink&quot; title=&quot;到底用哪一个？&quot;&gt;&lt;/a&gt;到底用哪一个？&lt;/h3&gt;&lt;p&gt;既然汉语语种如此之多，在实际运用中我们到底应该怎么处理呢？&lt;/p&gt;
-&lt;p&gt;之前提到的知乎上的问题：&lt;a href=&quot;https://www.zhihu.com/question/20797118&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;网页头部的声明应该是用 lang=”zh” 还是 lang=”zh-cn”？&lt;/a&gt;，里面的大部分回答者都表示题主提到的两种方式已经不赞成继续使用了。&lt;/p&gt;
-&lt;p&gt;根据INNA的语言标准注册记录&lt;a href=&quot;http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;language-subtag-registry&lt;/a&gt;，诸如&lt;code&gt;zh-Hans, zh-Hans-CN, zh-cmn, zh-cmn-Hans, zh-cmn-Hant, zh-wuu, zh-yue, zh-gan&lt;/code&gt;这些都已经变成了Deprecated状态了。&lt;/p&gt;
+&lt;p&gt;之前提到的知乎上的问题：&lt;a href=&quot;https://www.zhihu.com/question/20797118&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;网页头部的声明应该是用 lang=”zh” 还是 lang=”zh-cn”？&lt;/a&gt;，里面的大部分回答者都表示题主提到的两种方式已经不赞成被继续使用了。&lt;/p&gt;
+&lt;p&gt;根据IANA的语言标准注册记录&lt;a href=&quot;http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;language-subtag-registry&lt;/a&gt;，诸如&lt;code&gt;zh-Hans, zh-Hans-CN, zh-cmn, zh-cmn-Hans, zh-cmn-Hant, zh-wuu, zh-yue, zh-gan&lt;/code&gt;这些都已经变成了Deprecated状态了。&lt;/p&gt;
 &lt;p&gt;然而，为了照顾兼容性，很多网页依旧保留了这样的方式。&lt;/p&gt;
 &lt;p&gt;在BCF 47的文档中，并没有提出形如&lt;code&gt;lang=&amp;quot;zh&amp;quot;&lt;/code&gt;、&lt;code&gt;lang=&amp;quot;zh-CN&amp;quot;&lt;/code&gt;、&lt;code&gt;lang=&amp;quot;zh-cmn-Hans&amp;quot;&lt;/code&gt;这类表述方式不符合要求。如大名鼎鼎的&lt;a href=&quot;https://zh.wikipedia.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;维基百科&lt;/a&gt;，&lt;a href=&quot;https://www.zhihu.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;知乎平台&lt;/a&gt;，更有如今已经被墙的科技巨头的谷歌中文站点，其网页的语言类型使用的都是&lt;code&gt;lang=&amp;quot;zh-CN&amp;quot;&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;关于被废弃的写法，BCP 47里面也做了相应的介绍：&lt;blockquote&gt;&lt;p&gt;Many of these registered tags were made redundant by the advent of either RFC 4646 or this document. A redundant tag is a grandfathered registration whose individual subtags appear with the same semantic meaning in the registry. For example, the tag “zh-Hant” (Traditional Chinese) can now be composed from the subtags ‘zh’ (Chinese) and ‘Hant’ (Han script traditional variant). These redundant tags are maintained in the registry as records of type ‘redundant’, mostly as a matter of historical curiosity.&lt;/p&gt;
-&lt;footer&gt;&lt;strong&gt;BCP 47&lt;/strong&gt;&lt;cite&gt;&lt;a href=&quot;http://tools.ietf.org/html/bcp47#section-2.2.8&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;tools.ietf.org/html/bcp47#section-2.2.8&lt;/a&gt;&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;&lt;br&gt;大致意思是因为&lt;code&gt;zh&lt;/code&gt;和&lt;code&gt;Hans&lt;/code&gt;已经被收录了，再来一个&lt;code&gt;zh-Hans&lt;/code&gt;就显得有点多余了；然而真正使用&lt;code&gt;lang=&amp;quot;zh-Hans&amp;quot;&lt;/code&gt;也是没有什么问题的。&lt;/p&gt;
+&lt;p&gt;关于被废弃（deprecated）的写法，BCP 47里面也做了相应的介绍：&lt;blockquote&gt;&lt;p&gt;Many of these registered tags were made redundant by the advent of either RFC 4646 or this document. A redundant tag is a grandfathered registration whose individual subtags appear with the same semantic meaning in the registry. For example, the tag “zh-Hant” (Traditional Chinese) can now be composed from the subtags ‘zh’ (Chinese) and ‘Hant’ (Han script traditional variant). These redundant tags are maintained in the registry as records of type ‘redundant’, mostly as a matter of historical curiosity.&lt;/p&gt;
+&lt;footer&gt;&lt;strong&gt;BCP 47&lt;/strong&gt;&lt;cite&gt;&lt;a href=&quot;http://tools.ietf.org/html/bcp47#section-2.2.8&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;tools.ietf.org/html/bcp47#section-2.2.8&lt;/a&gt;&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;&lt;br&gt;大致意思是因为&lt;code&gt;zh&lt;/code&gt;和&lt;code&gt;Hans&lt;/code&gt;已经被收录了，再来一个&lt;code&gt;zh-Hans&lt;/code&gt;就显得有点多余（redundant）了；然而真正使用&lt;code&gt;lang=&amp;quot;zh-Hans&amp;quot;&lt;/code&gt;也是没有什么问题的。&lt;/p&gt;
 &lt;p&gt;以下列举一下所谓的&lt;em&gt;符合规范&lt;/em&gt;的写法：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;cms-Hans: 简体普通话，用规范汉子写下来，如“它是一个刮胡刀”，为了兼容，可以使用&lt;code&gt;zh-cmn-Hans&lt;/code&gt;。&lt;/li&gt;
@@ -155,8 +155,8 @@
 &lt;p&gt;以上示例摘自知乎作者&lt;a href=&quot;https://www.zhihu.com/question/20797118/answer/81543429&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;杨周&lt;/a&gt;的回答。&lt;/p&gt;
 &lt;p&gt;突然想起了一句诗词（&lt;del&gt;内心思想还真是天马行空呐&lt;/del&gt;）：&lt;blockquote&gt;&lt;p&gt;本是同根生，相煎何太急。&lt;/p&gt;
 &lt;footer&gt;&lt;strong&gt;曹植&lt;/strong&gt;&lt;cite&gt;七步诗&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;&lt;/p&gt;
-&lt;h3 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h3&gt;&lt;p&gt;针对这个问题，我忍不住翻越了大量的资料，到头来发现自己更加懵懂了。之前我设计网页的时候已经习惯了采用&lt;code&gt;&amp;lt;html lang=&amp;quot;zh-cmn-Hans&amp;quot;&amp;gt;&lt;/code&gt;和&lt;code&gt;&amp;lt;html lang=&amp;quot;zh-CN&amp;quot;&amp;gt;&lt;/code&gt;了。但是现在更多时候是不指定lang属性。&lt;/p&gt;
-&lt;p&gt;前端是个纷杂的世界，具体需要采用哪一种值，只要&lt;strong&gt;不是太令人费解&lt;/strong&gt;，都是可以接受的。&lt;/p&gt;
+&lt;h3 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h3&gt;&lt;p&gt;针对这个问题，我忍不住翻越了大量的资料，到头来发现自己更加懵懂了。之前我设计网页的时候已经习惯了采用&lt;code&gt;&amp;lt;html lang=&amp;quot;zh-cmn-Hans&amp;quot;&amp;gt;&lt;/code&gt;和&lt;code&gt;&amp;lt;html lang=&amp;quot;zh-CN&amp;quot;&amp;gt;&lt;/code&gt;了；但是现在更多时候是不指定lang属性。&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;前端是个纷杂的世界，具体需要采用哪一种值，只要&lt;strong&gt;不是太令人费解&lt;/strong&gt;，都是可以接受的。&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;有的时候为了照顾兼容性，不得不舍弃了新特性，想想也真是人在江湖，身不由己。有些问题有时候也是一个历史遗留问题，是没有良好的解决办法的，总不能直接全部推倒重来吧。然而社会在往前走，科技也在逐渐更新换代，比如最新的CSS选择器草案里面，已经把之前&lt;del&gt;不起眼&lt;/del&gt;的&lt;a href=&quot;https://drafts.csswg.org/selectors/#lang-pseudo&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;:lang选择器&lt;/a&gt;加入了关于BCP 47的高级匹配算法支持。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;本文到此结束，以下有诸多资料，诸君自行阅读。&lt;/p&gt;
