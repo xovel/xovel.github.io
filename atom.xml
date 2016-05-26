@@ -570,9 +570,9 @@
       <category term="前端" scheme="http://xovel.cn/categories/frontend/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
   </entry>
   
