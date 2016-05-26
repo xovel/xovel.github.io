@@ -1007,7 +1007,7 @@ pre .javascript .function {
 }
 .post-body .fancybox img {
   display: block !important;
-  margin: 0 auto;
+  margin: 0 auto !important; /* 居中！！ */
   cursor: pointer;
   cursor: zoom-in;
   cursor: -webkit-zoom-in;
@@ -1548,7 +1548,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffcf5b;
+  background: #bfffff;
 }
 .links-of-blogroll {
   font-size: 13px;
