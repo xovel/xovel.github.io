@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-05-26T03:31:58.542Z</updated>
+  <updated>2016-05-26T03:37:37.035Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/how-technology-hijacks-poeples-minds.html"/>
     <id>http://xovel.cn/article/how-technology-hijacks-poeples-minds.html</id>
     <published>2016-05-26T01:53:26.000Z</published>
-    <updated>2016-05-26T03:31:58.542Z</updated>
+    <updated>2016-05-26T03:37:37.035Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;本文由钛媒体编译自连续创业者、谷歌前设计伦理学家（design ethicist）Tristan Harris发表于&lt;a href=&quot;https://medium.com/@tristanharris/how-technology-hijacks-peoples-minds-from-a-magician-and-google-s-design-ethicist-56d62ef5edf3#.e6cc78g3b&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Medium&lt;/a&gt;的文章。岳恒/翻译，Joyce/编辑。&lt;/p&gt;
@@ -84,7 +84,7 @@
 &lt;/ul&gt;
 &lt;p&gt;但是，生活的目的并不是担心错过任何东西。&lt;/p&gt;
 &lt;p&gt;只要你尝试克服这种所谓的担忧，比如过上一天没有电话没有通讯的日子，你就会很快发现，那些脑补的担心的事并没有发生。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;我们不会错过没看到的事情。**&lt;/strong&gt;这种FOMO心里只存在于你下定决心断网的前一刻。**&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;我们不会错过没看到的事情。这种FOMO心里只存在于你下定决心断网的前一刻。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;如果科技公司们也能认识到这一点，并主动帮助我们更好地协调生活和工作，以“我们想做什么”而不是“我们错过了什么”为核心来设计交互界面，生活会变得更加简单而美好。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://7xil86.com2.z0.glb.qiniucdn.com/uploads/images/2016/05/f1540454664c794db7cd0ce87a01b159_1464102977.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h3 id=&quot;社会认可&quot;&gt;&lt;a href=&quot;#社会认可&quot; class=&quot;headerlink&quot; title=&quot;社会认可&quot;&gt;&lt;/a&gt;社会认可&lt;/h3&gt;&lt;p&gt;这大概是人类最需要的一种感情了。&lt;/p&gt;
@@ -570,9 +570,9 @@
       <category term="前端" scheme="http://xovel.cn/categories/frontend/"/>
     
     
-      <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
     
   </entry>
   
