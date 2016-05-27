@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://xovel.cn/article/css-specificity.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="一个元素，其对应的CSS选择可以有很多个。如果同一个元素的某个样式，使用了两个不同的CSS选择器进行定义，那么最终使用的到底是哪一个呢？于是这里就引入了一个概念，最初叫做cascade order，后来的官方文档中间叫做specificity。这个单词翻译成中文叫做特异性、特性，其概念与C语言中运算符的优先级类似，所以也称之为CSS优先级。">
-<meta property="og:updated_time" content="2016-05-27T10:11:13.196Z">
+<meta property="og:updated_time" content="2016-05-27T10:18:16.125Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS权重">
 <meta name="twitter:description" content="一个元素，其对应的CSS选择可以有很多个。如果同一个元素的某个样式，使用了两个不同的CSS选择器进行定义，那么最终使用的到底是哪一个呢？于是这里就引入了一个概念，最初叫做cascade order，后来的官方文档中间叫做specificity。这个单词翻译成中文叫做特异性、特性，其概念与C语言中运算符的优先级类似，所以也称之为CSS优先级。">
@@ -393,7 +393,7 @@
 <h4 id="同权重的情形"><a href="#同权重的情形" class="headerlink" title="同权重的情形"></a>同权重的情形</h4><p>根据CSS样式被定义的顺序决定优先级，后面的将会覆盖前面定义过的，一句话概括就是<strong>后来者居上</strong>。</p>
 <ul>
 <li>页内样式<code>&lt;style&gt;...&lt;/style&gt;</code>与外联方式<code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;...&quot;&gt;</code>同样比较谁后应用，摆放在后面的具有更高优先级。</li>
-<li>在<code>import</code>即文件引入方法中，被引入的文件优先级<strong>仅次于</strong>被引用的文件。<strong>不建议使用import方法</strong>，请参阅：<a href="https://gtmetrix.com/avoid-css-import.html" target="_blank" rel="external">PageSpeed: Avoid CSS @import</a>、<a href="http://www.programering.com/a/MjM4kTMwATM.html" target="_blank" rel="external">Why does not recommend the use of CSS @import</a></li>
+<li>在<code>import</code>即文件引入方法中，被引入的文件优先级<strong>仅次于</strong>引用的。<strong>不建议使用import方法</strong>，请参阅：<a href="https://gtmetrix.com/avoid-css-import.html" target="_blank" rel="external">PageSpeed: Avoid CSS @import</a>、<a href="http://www.programering.com/a/MjM4kTMwATM.html" target="_blank" rel="external">Why does not recommend the use of CSS @import</a></li>
 </ul>
 <h4 id="关于一个小BUG"><a href="#关于一个小BUG" class="headerlink" title="关于一个小BUG"></a>关于一个小BUG</h4><p>在网上曾有这样的CSS权重计算说明：</p>
 <blockquote>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-05-27T10:11:13.196Z</updated>
+  <updated>2016-05-27T10:18:16.125Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/css-specificity.html"/>
     <id>http://xovel.cn/article/css-specificity.html</id>
     <published>2016-05-27T09:41:51.000Z</published>
-    <updated>2016-05-27T10:11:13.196Z</updated>
+    <updated>2016-05-27T10:18:16.125Z</updated>
     
     <content type="html">&lt;h3 id=&quot;起因&quot;&gt;&lt;a href=&quot;#起因&quot; class=&quot;headerlink&quot; title=&quot;起因&quot;&gt;&lt;/a&gt;起因&lt;/h3&gt;&lt;p&gt;我为什么要做这样一个文章？&lt;/p&gt;
 &lt;p&gt;触发我讨论这个问题的导火线来自于我的个人博客采用的hexo主题中&lt;a href=&quot;https://github.com/iissnan/hexo-theme-next/issues/910&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;内容页图片居中问题&lt;/a&gt;。当时眼睛花了，没看清CSS代码，但也因此牵扯出来一些关于CSS权重（也叫做CSS优先级）的问题。&lt;/p&gt;
@@ -85,7 +85,7 @@
 &lt;h4 id=&quot;同权重的情形&quot;&gt;&lt;a href=&quot;#同权重的情形&quot; class=&quot;headerlink&quot; title=&quot;同权重的情形&quot;&gt;&lt;/a&gt;同权重的情形&lt;/h4&gt;&lt;p&gt;根据CSS样式被定义的顺序决定优先级，后面的将会覆盖前面定义过的，一句话概括就是&lt;strong&gt;后来者居上&lt;/strong&gt;。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;页内样式&lt;code&gt;&amp;lt;style&amp;gt;...&amp;lt;/style&amp;gt;&lt;/code&gt;与外联方式&lt;code&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;...&amp;quot;&amp;gt;&lt;/code&gt;同样比较谁后应用，摆放在后面的具有更高优先级。&lt;/li&gt;
-&lt;li&gt;在&lt;code&gt;import&lt;/code&gt;即文件引入方法中，被引入的文件优先级&lt;strong&gt;仅次于&lt;/strong&gt;被引用的文件。&lt;strong&gt;不建议使用import方法&lt;/strong&gt;，请参阅：&lt;a href=&quot;https://gtmetrix.com/avoid-css-import.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PageSpeed: Avoid CSS @import&lt;/a&gt;、&lt;a href=&quot;http://www.programering.com/a/MjM4kTMwATM.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Why does not recommend the use of CSS @import&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;在&lt;code&gt;import&lt;/code&gt;即文件引入方法中，被引入的文件优先级&lt;strong&gt;仅次于&lt;/strong&gt;引用的。&lt;strong&gt;不建议使用import方法&lt;/strong&gt;，请参阅：&lt;a href=&quot;https://gtmetrix.com/avoid-css-import.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PageSpeed: Avoid CSS @import&lt;/a&gt;、&lt;a href=&quot;http://www.programering.com/a/MjM4kTMwATM.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Why does not recommend the use of CSS @import&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&quot;关于一个小BUG&quot;&gt;&lt;a href=&quot;#关于一个小BUG&quot; class=&quot;headerlink&quot; title=&quot;关于一个小BUG&quot;&gt;&lt;/a&gt;关于一个小BUG&lt;/h4&gt;&lt;p&gt;在网上曾有这样的CSS权重计算说明：&lt;/p&gt;
 &lt;blockquote&gt;
@@ -681,7 +681,7 @@
     <link href="http://xovel.cn/article/normalize-cssreset.html"/>
     <id>http://xovel.cn/article/normalize-cssreset.html</id>
     <published>2016-05-19T02:38:03.000Z</published>
-    <updated>2016-05-27T10:06:49.847Z</updated>
+    <updated>2016-05-27T10:14:17.668Z</updated>
     
     <content type="html">&lt;h3 id=&quot;为什么要进行-CSS-Reset&quot;&gt;&lt;a href=&quot;#为什么要进行-CSS-Reset&quot; class=&quot;headerlink&quot; title=&quot;为什么要进行 CSS Reset&quot;&gt;&lt;/a&gt;为什么要进行 &lt;code&gt;CSS Reset&lt;/code&gt;&lt;/h3&gt;&lt;p&gt;目的简单而又粗暴：使CSS样式在各种浏览器下呈现的效果一样。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;当年的一个&lt;del&gt;黑魔法&lt;/del&gt;：&lt;br&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;* &amp;#123; &lt;span class=&quot;attribute&quot;&gt;margin&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;padding&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;这种粗暴的方式曾经给浏览器带来了很大的负荷，它由曾经的红极一时变成现在不受待见。&lt;/p&gt;
