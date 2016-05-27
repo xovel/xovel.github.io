@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://xovel.cn/article/css-specificity.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="一个元素，其对应的CSS选择可以有很多个。如果同一个元素的某个样式，使用了两个不同的CSS选择器进行定义，那么最终使用的到底是哪一个呢？于是这里就引入了一个概念，最初叫做cascade order，后来的官方文档中间叫做specificity。这个单词翻译成中文叫做特异性、特性，其概念与C语言中运算符的优先级类似，所以也称之为CSS优先级。">
-<meta property="og:updated_time" content="2016-05-27T10:06:27.436Z">
+<meta property="og:updated_time" content="2016-05-27T10:11:13.196Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS权重">
 <meta name="twitter:description" content="一个元素，其对应的CSS选择可以有很多个。如果同一个元素的某个样式，使用了两个不同的CSS选择器进行定义，那么最终使用的到底是哪一个呢？于是这里就引入了一个概念，最初叫做cascade order，后来的官方文档中间叫做specificity。这个单词翻译成中文叫做特异性、特性，其概念与C语言中运算符的优先级类似，所以也称之为CSS优先级。">
@@ -336,7 +336,7 @@
 <h3 id="CSS权重的定义"><a href="#CSS权重的定义" class="headerlink" title="CSS权重的定义"></a>CSS权重的定义</h3><p>一个元素，其对应的CSS选择可以有很多个。如果同一个元素的某个样式，使用了两个不同的CSS选择器进行定义，那么最终使用的到底是哪一个呢？于是这里就引入了一个概念，最初叫做<code>cascade order</code>，后来的官方文档中间叫做<code>specificity</code>。这个单词翻译成中文叫做<code>特异性</code>、<code>特性</code>，其概念与C语言中运算符的优先级类似，所以也称之为CSS优先级。</p>
 <p>由于CSS选择器可以很长很复杂，单一的优先级的参数并不能直接表示，还需要与其对应的数量相乘。在数学统计学里，这个概念叫做加权。</p>
 <blockquote>
-<p>某个学科的最终成绩分为两部分：平时分和考试分。假设平时分所占的权重为30%，考试成绩所占的权重为70%。现有一名学生，平时分为60，考试分为90。那么其常规平均成绩为60+90/2=75；加权成绩为60*30%+90*70%=81。</p>
+<p>某个学科的最终成绩分为两部分：平时分和考试分。假设平时分所占的权重为30%，考试成绩所占的权重为70%。现有一名学生，平时分为60，考试分为90。那么其常规平均成绩为(60+90)/2=75；加权成绩为60*30%+90*70%=81。</p>
 </blockquote>
 <p>CSS权重这一概念与加权值类似，那么它的具体计算方式是什么呢？</p>
 <h3 id="CSS权重的计算"><a href="#CSS权重的计算" class="headerlink" title="CSS权重的计算"></a>CSS权重的计算</h3><h4 id="CSS1"><a href="#CSS1" class="headerlink" title="CSS1"></a>CSS1</h4><p>在<a href="https://www.w3.org/TR/REC-CSS1/#cascading-order" target="_blank" rel="external">CSS1</a>中，将优先级分为了三组：</p>
@@ -581,7 +581,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>

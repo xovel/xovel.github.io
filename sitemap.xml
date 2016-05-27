@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xovel.cn/article/css-specificity.html</loc>
+    
+    <lastmod>2016-05-27T10:11:13.196Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xovel.cn/article/things-about-display.html</loc>
     
     <lastmod>2016-05-27T10:07:09.487Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://xovel.cn/article/normalize-cssreset.html</loc>
     
     <lastmod>2016-05-27T10:06:49.847Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xovel.cn/article/css-specificity.html</loc>
-    
-    <lastmod>2016-05-27T10:06:27.436Z</lastmod>
     
   </url>
   
