@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-05-27T10:18:16.125Z</updated>
+  <updated>2016-06-03T09:34:15.001Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -16,11 +16,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>HTTP 状态码</title>
+    <link href="http://xovel.cn/article/http-status-code.html"/>
+    <id>http://xovel.cn/article/http-status-code.html</id>
+    <published>2016-06-03T09:29:49.000Z</published>
+    <updated>2016-06-03T09:34:15.001Z</updated>
+    
+    <content type="html">&lt;p&gt;HTTP 状态码。&lt;/p&gt;
+&lt;p&gt;本周工作安排出现差错，本篇文章下周进行更新。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;HTTP 状态码。&lt;/p&gt;
+&lt;p&gt;本周工作安排出现差错，本篇文章下周进行更新。&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="WEB" scheme="http://xovel.cn/categories/web/"/>
+    
+      <category term="HTTP" scheme="http://xovel.cn/categories/web/http/"/>
+    
+    
+      <category term="http" scheme="http://xovel.cn/tags/http/"/>
+    
+      <category term="rfc" scheme="http://xovel.cn/tags/rfc/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CSS权重</title>
     <link href="http://xovel.cn/article/css-specificity.html"/>
     <id>http://xovel.cn/article/css-specificity.html</id>
     <published>2016-05-27T09:41:51.000Z</published>
-    <updated>2016-05-27T10:18:16.125Z</updated>
+    <updated>2016-06-03T09:32:22.824Z</updated>
     
     <content type="html">&lt;h3 id=&quot;起因&quot;&gt;&lt;a href=&quot;#起因&quot; class=&quot;headerlink&quot; title=&quot;起因&quot;&gt;&lt;/a&gt;起因&lt;/h3&gt;&lt;p&gt;我为什么要做这样一个文章？&lt;/p&gt;
 &lt;p&gt;触发我讨论这个问题的导火线来自于我的个人博客采用的hexo主题中&lt;a href=&quot;https://github.com/iissnan/hexo-theme-next/issues/910&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;内容页图片居中问题&lt;/a&gt;。当时眼睛花了，没看清CSS代码，但也因此牵扯出来一些关于CSS权重（也叫做CSS优先级）的问题。&lt;/p&gt;
@@ -163,12 +193,14 @@
     
     </summary>
     
-      <category term="前端" scheme="http://xovel.cn/categories/frontend/"/>
+      <category term="WEB" scheme="http://xovel.cn/categories/web/"/>
     
-      <category term="CSS" scheme="http://xovel.cn/categories/frontend/css/"/>
+      <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
       <category term="specificity" scheme="http://xovel.cn/tags/specificity/"/>
     
@@ -332,7 +364,7 @@
     <link href="http://xovel.cn/article/language-tags-in-html.html"/>
     <id>http://xovel.cn/article/language-tags-in-html.html</id>
     <published>2016-05-24T02:58:41.000Z</published>
-    <updated>2016-05-27T10:07:03.234Z</updated>
+    <updated>2016-06-03T09:31:51.734Z</updated>
     
     <content type="html">&lt;p&gt;很多网站中，都会对html标签设置一个lang属性，用来指定网页采用的语言类型。英文网站中，这个值通常是en，即&lt;code&gt;&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;&lt;/code&gt;，而在中文网站中，这个值就变得光怪陆离了。在以前，最常见的两个设置方式是&lt;code&gt;&amp;lt;html lang=&amp;quot;zh&amp;quot;&amp;gt;&lt;/code&gt;和&lt;code&gt;&amp;lt;html lang=&amp;quot;zh-cn&amp;quot;&amp;gt;&lt;/code&gt;，那么，这究竟是怎么一回事呢？&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -492,10 +524,12 @@
     
     </summary>
     
-      <category term="前端" scheme="http://xovel.cn/categories/frontend/"/>
+      <category term="WEB" scheme="http://xovel.cn/categories/web/"/>
     
-      <category term="HTML" scheme="http://xovel.cn/categories/frontend/html/"/>
+      <category term="HTML" scheme="http://xovel.cn/categories/web/html/"/>
     
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
       <category term="lang" scheme="http://xovel.cn/tags/lang/"/>
     
@@ -508,7 +542,7 @@
     <link href="http://xovel.cn/article/things-about-display.html"/>
     <id>http://xovel.cn/article/things-about-display.html</id>
     <published>2016-05-20T04:35:06.000Z</published>
-    <updated>2016-05-27T10:07:09.487Z</updated>
+    <updated>2016-06-03T09:31:29.171Z</updated>
     
     <content type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;一句话概括：display属性，设置元素如何显示。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -665,12 +699,14 @@
     
     </summary>
     
-      <category term="前端" scheme="http://xovel.cn/categories/frontend/"/>
+      <category term="WEB" scheme="http://xovel.cn/categories/web/"/>
     
-      <category term="CSS" scheme="http://xovel.cn/categories/frontend/css/"/>
+      <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
       <category term="display" scheme="http://xovel.cn/tags/display/"/>
     
@@ -681,7 +717,7 @@
     <link href="http://xovel.cn/article/normalize-cssreset.html"/>
     <id>http://xovel.cn/article/normalize-cssreset.html</id>
     <published>2016-05-19T02:38:03.000Z</published>
-    <updated>2016-05-27T10:14:17.668Z</updated>
+    <updated>2016-06-03T09:32:31.749Z</updated>
     
     <content type="html">&lt;h3 id=&quot;为什么要进行-CSS-Reset&quot;&gt;&lt;a href=&quot;#为什么要进行-CSS-Reset&quot; class=&quot;headerlink&quot; title=&quot;为什么要进行 CSS Reset&quot;&gt;&lt;/a&gt;为什么要进行 &lt;code&gt;CSS Reset&lt;/code&gt;&lt;/h3&gt;&lt;p&gt;目的简单而又粗暴：使CSS样式在各种浏览器下呈现的效果一样。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;当年的一个&lt;del&gt;黑魔法&lt;/del&gt;：&lt;br&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;* &amp;#123; &lt;span class=&quot;attribute&quot;&gt;margin&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;padding&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;这种粗暴的方式曾经给浏览器带来了很大的负荷，它由曾经的红极一时变成现在不受待见。&lt;/p&gt;
@@ -730,9 +766,9 @@
     
     </summary>
     
-      <category term="前端" scheme="http://xovel.cn/categories/frontend/"/>
+      <category term="WEB" scheme="http://xovel.cn/categories/web/"/>
     
-      <category term="CSS" scheme="http://xovel.cn/categories/frontend/css/"/>
+      <category term="前端" scheme="http://xovel.cn/categories/web/frontend/"/>
     
     
       <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
