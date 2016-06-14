@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-06-08T10:14:25.601Z</updated>
+  <updated>2016-06-14T09:33:50.077Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/http-status-code.html"/>
     <id>http://xovel.cn/article/http-status-code.html</id>
     <published>2016-06-03T09:29:49.000Z</published>
-    <updated>2016-06-08T10:14:25.601Z</updated>
+    <updated>2016-06-14T09:33:50.077Z</updated>
     
     <content type="html">&lt;h2 id=&quot;HTTP状态码概念&quot;&gt;&lt;a href=&quot;#HTTP状态码概念&quot; class=&quot;headerlink&quot; title=&quot;HTTP状态码概念&quot;&gt;&lt;/a&gt;HTTP状态码概念&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;The status-code element is a three-digit integer code giving the result of the attempt to understand and satisfy the request.&lt;/p&gt;
@@ -695,6 +695,7 @@
 &lt;li&gt;502.7    执行请求失败&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;更多信息请参阅微软官方文档：&lt;a href=&quot;https://support.microsoft.com/zh-cn/kb/943891&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;IIS 7.0、IIS 7.5 和 IIS 8.0 中的 HTTP 状态代码&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;看完中文再看英文，心好累，还是阅读英文的文档吧：&lt;a href=&quot;https://support.microsoft.com/en-us/kb/943891&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;The HTTP status code in IIS 7.0, IIS 7.5, and IIS 8.0&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
 &lt;h2 id=&quot;IANA中注册在案的HTTP状态码一览&quot;&gt;&lt;a href=&quot;#IANA中注册在案的HTTP状态码一览&quot; class=&quot;headerlink&quot; title=&quot;IANA中注册在案的HTTP状态码一览&quot;&gt;&lt;/a&gt;IANA中注册在案的HTTP状态码一览&lt;/h2&gt;&lt;p&gt;IANA(The Internet Assigned Numbers Authority，互联网数字分配机构)是负责协调一些使Internet正常运作的机构。&lt;/p&gt;
 &lt;p&gt;以下代码摘自：&lt;a href=&quot;http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hypertext Transfer Protocol (HTTP) Status Code Registry&lt;/a&gt;&lt;/p&gt;
 &lt;table&gt;
@@ -1068,6 +1069,10 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h2 id=&quot;HTTPDD：一张HTTP状态码总结图&quot;&gt;&lt;a href=&quot;#HTTPDD：一张HTTP状态码总结图&quot; class=&quot;headerlink&quot; title=&quot;HTTPDD：一张HTTP状态码总结图&quot;&gt;&lt;/a&gt;HTTPDD：一张HTTP状态码总结图&lt;/h2&gt;&lt;p&gt;在Github上发现一张针对HTTP状态码进行一个总结的图。&lt;br&gt;&lt;a href=&quot;https://github.com/for-GET/http-decision-diagram&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;for-GET/http-decision-diagram&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这里不直接放图了，&lt;a href=&quot;https://raw.githubusercontent.com/for-GET/http-decision-diagram/master/httpdd.png&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;点我查看大图&lt;/a&gt;。&lt;del&gt;注意：大图杀猫，请谨慎点击&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;还有一张之前传播甚广的图也一并附上：&lt;a href=&quot;http://i.stack.imgur.com/whhD1.png&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTTP Status Codes Flowchart&lt;/a&gt;。&lt;del&gt;我不会告诉你前面那张总结更全，效果更好&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;本节内容2016.6.14新增&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://tools.ietf.org/html/rfc2616&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RFC 2616 - Hypertext Transfer Protocol – HTTP/1.1&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://tools.ietf.org/html/rfc7231&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RFC 7231 - Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content&lt;/a&gt;&lt;/li&gt;
@@ -1246,9 +1251,9 @@
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
       <category term="specificity" scheme="http://xovel.cn/tags/specificity/"/>
     
@@ -1752,9 +1757,9 @@
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
       <category term="display" scheme="http://xovel.cn/tags/display/"/>
     
@@ -1819,9 +1824,9 @@
       <category term="前端" scheme="http://xovel.cn/categories/web/frontend/"/>
     
     
-      <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
     
   </entry>
   
