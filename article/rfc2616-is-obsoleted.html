@@ -1,0 +1,702 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="http,rfc,协议,http1.1," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="清风轩" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="2014年年中，IETF更新了HTTP/1.1协议：将原来的HTTP/1.1协议（RFC2616）拆开，分成了六个单独的协议。在这六个新的协议说明中，重点对之前语义模糊的部分进行了重新诠释。更新之后的协议变得更易懂、易读。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTP1.1协议更新，RFC2616被废弃">
+<meta property="og:url" content="http://xovel.cn/article/rfc2616-is-obsoleted.html">
+<meta property="og:site_name" content="清风轩">
+<meta property="og:description" content="2014年年中，IETF更新了HTTP/1.1协议：将原来的HTTP/1.1协议（RFC2616）拆开，分成了六个单独的协议。在这六个新的协议说明中，重点对之前语义模糊的部分进行了重新诠释。更新之后的协议变得更易懂、易读。">
+<meta property="og:updated_time" content="2016-06-15T03:47:26.921Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTTP1.1协议更新，RFC2616被废弃">
+<meta name="twitter:description" content="2014年年中，IETF更新了HTTP/1.1协议：将原来的HTTP/1.1协议（RFC2616）拆开，分成了六个单独的协议。在这六个新的协议说明中，重点对之前语义模糊的部分进行了重新诠释。更新之后的协议变得更易懂、易读。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> HTTP1.1协议更新，RFC2616被废弃 | 清风轩 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="http://s6.cnzz.com/stat.php?id=1259096563&web_id=1259096563" type="text/javascript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">清风轩</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">清风轩居 - 引仙阁</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                HTTP1.1协议更新，RFC2616被废弃
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-15T12:16:12+08:00" content="2016-06-15">
+              2016-06-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/web/" itemprop="url" rel="index">
+                    <span itemprop="name">WEB</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/web/http/" itemprop="url" rel="index">
+                    <span itemprop="name">HTTP</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>2014年年中，IETF更新了HTTP/1.1协议：将原来的HTTP/1.1协议（<a href="https://tools.ietf.org/html/rfc2616" target="_blank" rel="external">RFC2616</a>）拆开，分成了六个单独的协议。在这六个新的协议说明中，重点对之前语义模糊的部分进行了重新诠释。更新之后的协议变得更易懂、易读。</p>
+<a id="more"></a>
+<p>以下是新的六个协议：</p>
+<ul>
+<li>RFC7230 - <a href="http://tools.ietf.org/html/rfc7230" target="_blank" rel="external">HTTP/1.1: Message Syntax and Routing</a> - low-level message parsing and connection management</li><li>RFC7231 - <a href="http://tools.ietf.org/html/rfc7231" target="_blank" rel="external">HTTP/1.1: Semantics and Content</a> - methods, status codes and headers</li><li>RFC7232 - <a href="http://tools.ietf.org/html/rfc7232" target="_blank" rel="external">HTTP/1.1: Conditional Requests</a> - e.g., If-Modified-Since</li><li>RFC7233 - <a href="http://tools.ietf.org/html/rfc7233" target="_blank" rel="external">HTTP/1.1: Range Requests</a> - getting partial content</li><li>RFC7234 - <a href="http://tools.ietf.org/html/rfc7234" target="_blank" rel="external">HTTP/1.1: Caching</a> - browser and intermediary caches</li><li>RFC7235 - <a href="http://tools.ietf.org/html/rfc7235" target="_blank" rel="external">HTTP/1.1: Authentication</a> - a framework for HTTP authentication</li></ul>
+<p>正如Mark Nottingham在其个人博客中的一篇文章（<a href="https://www.mnot.net/blog/2014/06/07/rfc2616_is_dead" target="_blank" rel="external">RFC2616 is Dead</a>）中的吐槽一样：</p>
+<blockquote>
+<p>Don’t use RFC2616. Delete it from your hard drives, bookmarks, and burn (or responsibly recycle) any copies that are printed out.</p>
+<p>不要再使用RFC2616了。将它从你的磁盘、书签中删除，并将打印出来的任何副本烧掉，当然你也可以回收再利用。</p>
+</blockquote>
+<p>RFC2616已经变为废弃状态。</p>
+<p>其实早在2007年，IETF内部就针对HTTP/1.1的修订展开了工作，他们成立了一个名字叫做<a href="https://tools.ietf.org/wg/httpbis/" target="_blank" rel="external">HTTPbis</a>的工作小组，目的是让HTTP/1.1协议规范更加清晰易读，并非对之前的协议进行升级或者添加新的特性。在这个修订过程中，小组成员发布了数十个草稿版本，并处理了<a href="https://trac.tools.ietf.org/wg/httpbis/trac/report/19" target="_blank" rel="external">550+问题</a>。</p>
+<blockquote>
+<p>HTTPbis就是现在的HTTP Working Group，其官方主页为：<a href="http://httpwg.org/" target="_blank" rel="external">http://httpwg.org/</a></p>
+<p>关于为何取名HTTPbis，stackoverflow上有个讨论：<a href="http://stackoverflow.com/questions/9105639/httpbis-what-does-bis-mean" target="_blank" rel="external">HTTPbis - what does bis mean?</a></p>
+</blockquote>
+<p>在文档整理过程中，HTTPbis也对HTTP/1.1协议中的一些不合理或者不安全的地方进行了修正与完。在官方文档中描述了对应于RFC2616的变更部分：<a href="http://tools.ietf.org/html/rfc7230#appendix-A.2" target="_blank" rel="external">Changes from RFC 2616</a>。Evert在其博客（<a href="https://evertpot.com/http-11-updated/" target="_blank" rel="external">HTTP/1.1 just got a major update</a>）中有一番总结，指出了其中的一些重大变更：</p>
+<blockquote>
+<ul>
+<li>Clarifications around dealing with unexpected whitespace, which should fix response splitting vulnerabilities.</li><li>The limit of two connections per server has been removed.</li><li>HTTP/0.9 support has been dropped.</li><li>Default charset of ISO-8859-1 has been removed.</li><li>Servers are no longer required to handle all <code>Content-*</code> header fields.</li><li><code>Content-Range</code> has been explicitly banned in PUT requests.</li><li>It’s now suggested to use the <code>about:blank</code> uri in the <code>Referer</code> header when no referer exists, to distinguish between “there was no referrer” and “I don’t want to send a referrer”.</li><li>The <code>204</code>, <code>404</code>, <code>405</code>, <code>414</code> and <code>501</code> status codes are now cachable.</li><li>The status codes <code>301</code> and <code>302</code> have been changed to allow user agents to rewrite the method from <code>POST</code> to <code>GET</code>. This is a good example of a case where everybody has been (incorrectly) already doing this, and the spec now reflects the real world implementation.</li><li>The <code>Location</code> header can now contain relative uri’s as well as fragment identifiers.</li><li><code>Content-MD5</code> has been removed.</li></ul>
+</blockquote>
+<p>翻译如下：</p>
+<ul>
+<li>明确了针对未预期空格的处理，以修复<code>HTTP Response Splitting</code>漏洞。</li><li>每个服务器两个连接数的限制被移除。</li><li>放弃对<code>HTTP/0.9</code>的支持。</li><li><code>ISO-8859-1</code>不再是默认的字符集。</li><li>服务器不再需要去处理所有的<code>Content-*</code>请求头内容。</li><li>明确禁止在<code>PUT</code>请求中使用<code>Content-Range</code>。</li><li>当referer不存在时，为了区分“这里没有referrer”和“我不想发送referrer”，建议在请求头<code>Referer</code>中使用<code>about:blank</code>这个uri。</li><li>状态码<code>204</code>、<code>404</code>、<code>405</code>、<code>414</code>以及<code>501</code>现在可以缓存了。</li><li>状态码<code>301</code>、<code>302</code>现在允许用户代理将请求方式从<code>POST</code>重写为<code>GET</code>。<em>人们之前早就这样做了（<del>尽管当时是不正确的</del>），现在现实世界中的操作被规范重新表述，这个就是一个很好的例子。</em></li><li>现在请求头<code>Location</code>可以包含相对URI和片段标识符。</li><li><code>Content-MD5</code>被移除。</li></ul>
+<hr>
+<p>参考资料：</p>
+<ul>
+<li><a href="https://www.mnot.net/blog/2014/06/07/rfc2616_is_dead" target="_blank" rel="external">RFC2616 is Dead</a></li><li><a href="https://evertpot.com/http-11-updated/" target="_blank" rel="external">HTTP/1.1 just got a major update</a></li></ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/http/" rel="tag">#http</a>
+          
+            <a href="/tags/rfc/" rel="tag">#rfc</a>
+          
+            <a href="/tags/协议/" rel="tag">#协议</a>
+          
+            <a href="/tags/http1-1/" rel="tag">#http1.1</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/article/http-status-code.html" rel="next" title="HTTP 状态码">
+                <i class="fa fa-chevron-left"></i> HTTP 状态码
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="article/rfc2616-is-obsoleted.html"
+           data-title="HTTP1.1协议更新，RFC2616被废弃" data-url="http://xovel.cn/article/rfc2616-is-obsoleted.html">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/xovel.jpg"
+               alt="xovel" />
+          <p class="site-author-name" itemprop="name">xovel</p>
+          <p class="site-description motion-element" itemprop="description">缓缓之间，风云静变</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xovel" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://hdk4.com" target="_blank" title="hdk4.com">
+                  
+                    <i class="fa fa-fw fa-adjust"></i>
+                  
+                  hdk4.com
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xovel</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io" rel="external nofollow" target="_blank">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow" target="_blank">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"xovel"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
