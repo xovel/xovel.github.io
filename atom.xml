@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-06-17T09:19:13.600Z</updated>
+  <updated>2016-06-17T09:44:52.964Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/markdown-syntax.html"/>
     <id>http://xovel.cn/article/markdown-syntax.html</id>
     <published>2016-06-17T05:41:41.000Z</published>
-    <updated>2016-06-17T09:19:13.600Z</updated>
+    <updated>2016-06-17T09:44:52.964Z</updated>
     
     <content type="html">&lt;p&gt;Markdown是一款轻量级文本标记语言。使用Markdown进行写作，你可以轻松的使用纯文本格式编辑HTML代码。&lt;blockquote&gt;&lt;p&gt;&lt;code&gt;Markdown&lt;/code&gt; is a way to style text on the web. You control the display of the document; formatting words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly, Markdown is just regular text with a few non-alphabetic characters thrown in, like &lt;code&gt;#&lt;/code&gt; or &lt;code&gt;*&lt;/code&gt;.&lt;/p&gt;
 &lt;footer&gt;&lt;strong&gt;What is Markdown&lt;/strong&gt;&lt;cite&gt;&lt;a href=&quot;https://guides.github.com/features/mastering-markdown/#what&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;guides.github.com/features/mastering-markdown/#what&lt;/a&gt;&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;&lt;br&gt;关于Markdown的介绍与优势，这里就不深入详细讨论了，在本文末尾有参考资料，可自行参阅。本文主要讲述Markdown的相关语法。话不多说，直接上干货吧！&lt;/p&gt;
@@ -302,6 +302,8 @@ __我也是粗体__
       <category term="语法" scheme="http://xovel.cn/tags/%E8%AF%AD%E6%B3%95/"/>
     
       <category term="百科" scheme="http://xovel.cn/tags/%E7%99%BE%E7%A7%91/"/>
+    
+      <category term="资料" scheme="http://xovel.cn/tags/docs/"/>
     
   </entry>
   
@@ -1403,9 +1405,9 @@ __我也是粗体__
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
       <category term="specificity" scheme="http://xovel.cn/tags/specificity/"/>
     
@@ -1843,9 +1845,9 @@ __我也是粗体__
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
       <category term="display" scheme="http://xovel.cn/tags/display/"/>
     
@@ -1894,9 +1896,9 @@ __我也是粗体__
       <category term="前端" scheme="http://xovel.cn/categories/web/frontend/"/>
     
     
-      <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
     
   </entry>
   
