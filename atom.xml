@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-06-15T03:47:26.921Z</updated>
+  <updated>2016-06-17T09:19:13.600Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,296 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>markdown语法说明</title>
+    <link href="http://xovel.cn/article/markdown-syntax.html"/>
+    <id>http://xovel.cn/article/markdown-syntax.html</id>
+    <published>2016-06-17T05:41:41.000Z</published>
+    <updated>2016-06-17T09:19:13.600Z</updated>
+    
+    <content type="html">&lt;p&gt;Markdown是一款轻量级文本标记语言。使用Markdown进行写作，你可以轻松的使用纯文本格式编辑HTML代码。&lt;blockquote&gt;&lt;p&gt;&lt;code&gt;Markdown&lt;/code&gt; is a way to style text on the web. You control the display of the document; formatting words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly, Markdown is just regular text with a few non-alphabetic characters thrown in, like &lt;code&gt;#&lt;/code&gt; or &lt;code&gt;*&lt;/code&gt;.&lt;/p&gt;
+&lt;footer&gt;&lt;strong&gt;What is Markdown&lt;/strong&gt;&lt;cite&gt;&lt;a href=&quot;https://guides.github.com/features/mastering-markdown/#what&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;guides.github.com/features/mastering-markdown/#what&lt;/a&gt;&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;&lt;br&gt;关于Markdown的介绍与优势，这里就不深入详细讨论了，在本文末尾有参考资料，可自行参阅。本文主要讲述Markdown的相关语法。话不多说，直接上干货吧！&lt;/p&gt;
+&lt;h2 id=&quot;Markdown基本语法&quot;&gt;&lt;a href=&quot;#Markdown基本语法&quot; class=&quot;headerlink&quot; title=&quot;Markdown基本语法&quot;&gt;&lt;/a&gt;Markdown基本语法&lt;/h2&gt;&lt;h3 id=&quot;段落&quot;&gt;&lt;a href=&quot;#段落&quot; class=&quot;headerlink&quot; title=&quot;段落&quot;&gt;&lt;/a&gt;段落&lt;/h3&gt;&lt;p&gt;普通文本即为段落，没有任何语法修饰。&lt;/p&gt;
+&lt;h3 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h3&gt;&lt;p&gt;标题使用1到6个符号&lt;code&gt;#&lt;/code&gt;来表示。标题的级别由&lt;code&gt;#&lt;/code&gt;的数量决定。标题文本与&lt;code&gt;#&lt;/code&gt;之间由一个空格隔开。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 标题1
+## 标题2
+### 标题3
+#### 标题4
+##### 标题5
+###### 标题6
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;标题还可以使用另一种方式：在文字的下一行使用符号&lt;code&gt;=&lt;/code&gt;或者&lt;code&gt;-&lt;/code&gt;。&lt;code&gt;=&lt;/code&gt;为一级标题，&lt;code&gt;-&lt;/code&gt;为二级标题。原则上任意数量的符号都是可行的，不过建议至少使用&lt;strong&gt;3&lt;/strong&gt;个（部分Markdown工具不会处理只有一个符号的情形）。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;这里是标题1
+===========
+这里是标题2
+-----------
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#&lt;/code&gt;形式的标题来源于&lt;a href=&quot;http://www.aaronsw.com/2002/atx/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;atx&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;=&lt;/code&gt;和&lt;code&gt;-&lt;/code&gt;形式的标题来源于&lt;a href=&quot;http://docutils.sourceforge.net/mirror/setext.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;Setext&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;#&lt;/code&gt;形式的标题可以主动闭合，即文本后面也可以跟&lt;code&gt;#&lt;/code&gt;，通常这样做是为了文本看起来更加美观。如&lt;code&gt;## 这里是标题2 ##&lt;/code&gt;，标题的级别由开头的&lt;code&gt;#&lt;/code&gt;数量决定。&lt;/li&gt;&lt;li&gt;&lt;code&gt;=&lt;/code&gt;和&lt;code&gt;-&lt;/code&gt;的方式看起来就像是给文字加了一条下划线。不过&lt;code&gt;#&lt;/code&gt;显得更加直观&lt;/li&gt;&lt;/ul&gt;
+&lt;h3 id=&quot;块引用&quot;&gt;&lt;a href=&quot;#块引用&quot; class=&quot;headerlink&quot; title=&quot;块引用&quot;&gt;&lt;/a&gt;块引用&lt;/h3&gt;&lt;p&gt;使用符号&lt;code&gt;&amp;gt;&lt;/code&gt;表示块引用。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 这里是块引用
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;语法来源于早期的邮件文本格式。&lt;/li&gt;&lt;li&gt;使用块引用语法后，如果下一行紧跟的依然是文本，那么这一段文本将会跟在上一行后面，同样被当作块引用的内容。&lt;/li&gt;&lt;li&gt;文本的每一行前面都可以使用&lt;code&gt;&amp;gt;&lt;/code&gt;，这样做可以让文本更直观，也更美观。但是这些文本将会在同一行内呈现。&lt;ul&gt;
+&lt;li&gt;如果需要分行显示，请直接在文本之间使用换行符或者在以&lt;code&gt;&amp;gt;&lt;/code&gt;作为单独的一行插入。 &lt;/li&gt;&lt;li&gt;注意：部分markdown处理工具会有不同的效果，请根据相关文档自行选用具体方式。&lt;/li&gt;&lt;/ul&gt;
+&lt;/li&gt;&lt;li&gt;块引用可以嵌套使用，在&lt;code&gt;&amp;gt;&lt;/code&gt;后再跟&lt;code&gt;&amp;gt;&lt;/code&gt;即可。&lt;/li&gt;&lt;li&gt;建议文本与符号&lt;code&gt;&amp;gt;&lt;/code&gt;之间留出一个空格。&lt;/li&gt;&lt;li&gt;块引用的内容可以包含标题、列表、代码块等Markdown元素。&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;以下为示例代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 白日依山尽，
+&amp;gt; 黄河入海流。
+&amp;gt; 欲穷千里目，
+&amp;gt; 更上一层楼。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;分行语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 白日依山尽，
+&amp;gt;
+&amp;gt; 黄河入海流。
+&amp;gt;
+&amp;gt; 欲穷千里目，
+&amp;gt;
+&amp;gt; 更上一层楼。
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;列表&quot;&gt;&lt;a href=&quot;#列表&quot; class=&quot;headerlink&quot; title=&quot;列表&quot;&gt;&lt;/a&gt;列表&lt;/h3&gt;&lt;p&gt;无序列表与有序列表两种均可支持。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;无序列表&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;无序列表语法为文本前面使用符号&lt;code&gt;-&lt;/code&gt;、&lt;code&gt;+&lt;/code&gt;和&lt;code&gt;*&lt;/code&gt;。文本与符号之间由一个空格隔开。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;* 列表项1
+* 列表项2
+* 列表项3
+
++ 列表项1
++ 列表项2
++ 列表项3
+
+- 列表项1
+- 列表项2
+- 列表项3
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;有序列表&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;有序列表语法为文本前面使用阿拉伯数字和符号&lt;code&gt;.&lt;/code&gt;。与无序列表一样，文本与符号之间须有一个空格。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 列表项1
+2. 列表项2
+3. 列表项3 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果你不想使用递增的数字，可以这样做：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 列表项1
+1. 列表项2
+1. 列表项3 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;甚至，这样做（不建议）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;9. 列表项1
+3. 列表项2
+5. 列表项3 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;注意事项&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;使用列表时，分行的文本会自动处理为一行显示，这一点与块引用语法类似。&lt;/p&gt;
+&lt;p&gt;如果为了美观，你可以在多行列表文本的前面添加缩进。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;* 列表项1的文本，
+  我也是1的文本，
+  好巧我也是。
+* 列表项2的文本，
+  我是2的文本。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;你还可将各个列表之间使用换行符隔开，这样它们将会变为段落性质的列表。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- 列表项1
+- 列表项2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这段代码将被转换成：&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;ul&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;列表项1&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;列表项2&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;ul&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;而这段代码&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- 列表项1
+
+- 列表项2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;将被转换成：&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;ul&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;列表项1&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;列表项2&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;ul&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果列表项内容为多行，对每一行进行缩进即可。段落中有多行的情况时可以一并缩进也可以不用缩进。&lt;/p&gt;
+&lt;p&gt;列表项的内容可以嵌套其他markdown语法，如块引用，代码块等。&lt;/p&gt;
+&lt;p&gt;无序列表的三个不同的符号避免在同一列表中交叉使用，不同的符号生成的列表是独立的，这可能会对样式的渲染造成一定的干扰。&lt;/p&gt;
+&lt;p&gt;如果某一段文本本身是以列表语法开始的，如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;2016. 我不知会遇见你
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;请使用反斜杠对符号&lt;code&gt;.&lt;/code&gt;进行取消转义。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;2016\. 我不知会遇见你
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;代码块&quot;&gt;&lt;a href=&quot;#代码块&quot; class=&quot;headerlink&quot; title=&quot;代码块&quot;&gt;&lt;/a&gt;代码块&lt;/h3&gt;&lt;p&gt;在文本的前面使用至少4个空格或者1个Tab。&lt;/p&gt;
+&lt;p&gt;代码块的内容将会处理成被&lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt;和&lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt;标签包裹。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;This is a normal paragraph:
+
+    This is a code block.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这段代码将被转换成：&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;This is a normal paragraph:&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;pre&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;code&lt;/span&gt;&amp;gt;&lt;/span&gt;This is a code block.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;code&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;pre&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;代码块会对里面的一些符号进行转义，变为HTML实体符：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;And连接符&lt;code&gt;&amp;amp;&lt;/code&gt;将被转换为&lt;code&gt;&amp;amp;amp;&lt;/code&gt;&lt;/li&gt;&lt;li&gt;左尖括号&lt;code&gt;&amp;lt;&lt;/code&gt;将被转换为&lt;code&gt;&amp;amp;lt;&lt;/code&gt;&lt;/li&gt;&lt;li&gt;左尖括号&lt;code&gt;&amp;gt;&lt;/code&gt;将被转换为&lt;code&gt;&amp;amp;gt;&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;代码块中的内容不会再进行markdown语法的操作。&lt;/p&gt;
+&lt;h3 id=&quot;水平线&quot;&gt;&lt;a href=&quot;#水平线&quot; class=&quot;headerlink&quot; title=&quot;水平线&quot;&gt;&lt;/a&gt;水平线&lt;/h3&gt;&lt;p&gt;水平线，即&lt;code&gt;&amp;lt;hr&amp;gt;&lt;/code&gt;标签。&lt;/p&gt;
+&lt;p&gt;在单独的一行里，使用至少三个相同的符号。这些符号可以是：星号&lt;code&gt;*&lt;/code&gt;、连字符/减号&lt;code&gt;-&lt;/code&gt;、下划线&lt;code&gt;_&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;符号之间可以由空格隔开。&lt;/p&gt;
+&lt;p&gt;下面的代码均会被转换成水平线：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;* * *
+
+***
+
+*****
+
+- - -
+
+---------------------------------------
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h3&gt;&lt;p&gt;链接的语法有两种：内联方式和引用方式。&lt;/p&gt;
+&lt;p&gt;内联方式示例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Github是一个优秀的平台，[点此访问](https://github.com &amp;quot;github&amp;quot;)
+[我不带标题](https://github.com)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;引用方式示例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Github是一个优秀的平台，[点此访问][github]
+
+[github]: https://github.com &amp;quot;github&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;链接文本使用方括号&lt;code&gt;[]&lt;/code&gt;定界，内联方式的链接地址与链接标题（即&lt;code&gt;title&lt;/code&gt;属性）使用圆括号&lt;code&gt;()&lt;/code&gt;定界；引用方式的链接地址与链接标题使用另一个方括号&lt;code&gt;[]&lt;/code&gt;进行引用，被引用的内容在文档中单独列出。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;链接标题使用双引号&lt;code&gt;&amp;quot;&amp;quot;&lt;/code&gt;定界，也可以使用单引号&lt;code&gt;&amp;#39;&amp;#39;&lt;/code&gt;进行定界。&lt;/li&gt;&lt;li&gt;可以不需要链接标题，只保留链接地址即可。&lt;/li&gt;&lt;li&gt;链接标题性与链接地址之间使用空格隔开。&lt;/li&gt;&lt;li&gt;如果链接地址在本域，可以使用相对链接的形式。&lt;/li&gt;&lt;li&gt;可以使用尖括号&lt;code&gt;&amp;lt;&amp;gt;&lt;/code&gt;对链接地址进行定界。&lt;/li&gt;&lt;li&gt;引用方式中，方括号后跟一个冒号&lt;code&gt;:&lt;/code&gt;，冒号后跟一个或多个空格。&lt;/li&gt;&lt;li&gt;引用方式中，两组方括号之间可以使用空格分开。&lt;/li&gt;&lt;li&gt;引用方式中，被引用的内容部分可以放在文档中的任意位置。&lt;/li&gt;&lt;li&gt;引用方式中，链接标题的定界符还可以使用圆括号&lt;code&gt;()&lt;/code&gt;。&lt;/li&gt;&lt;li&gt;引用方式中，标题可以另起一行，可自由缩进。&lt;/li&gt;&lt;li&gt;引用方式中，定义的名称不区分大小写。&lt;/li&gt;&lt;li&gt;引用方式中，如果链接文本与引用的定义名称一样，后面的方括号内容可以置空。&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;关于使用哪一种方式，这里不做讨论。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;强调&quot;&gt;&lt;a href=&quot;#强调&quot; class=&quot;headerlink&quot; title=&quot;强调&quot;&gt;&lt;/a&gt;强调&lt;/h3&gt;&lt;p&gt;文本强调的方式分为&lt;code&gt;加粗&lt;/code&gt;和&lt;code&gt;斜体&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;使用星号&lt;code&gt;*&lt;/code&gt;或者下划线&lt;code&gt;_&lt;/code&gt;对文本定界来表示强调。一对单个符号表示斜体，一对两个符号表示加粗。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;*我是斜体*
+
+_我也是斜体_
+
+**我是粗体**
+
+__我也是粗体__
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;加粗和斜体可以同时使用。&lt;/li&gt;&lt;li&gt;强调可以用在单词或者词组的字符中间。如&lt;code&gt;s*mile*s&lt;/code&gt;，s&lt;em&gt;mile&lt;/em&gt;s。&lt;/li&gt;&lt;li&gt;如果要使用符号本身，请使用转义符反斜杠&lt;code&gt;\&lt;/code&gt;。&lt;/li&gt;&lt;/ul&gt;
+&lt;h3 id=&quot;代码-行内引用&quot;&gt;&lt;a href=&quot;#代码-行内引用&quot; class=&quot;headerlink&quot; title=&quot;代码/行内引用&quot;&gt;&lt;/a&gt;代码/行内引用&lt;/h3&gt;&lt;p&gt;使用反勾号/反引号/重音号（backtick quote）&lt;code&gt;`&lt;/code&gt;对文本定界。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;C++中输出操作符为：`cout`
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;与代码块不同的是，本语法为行内操作，类似于强调的语法。可以放在强调的语法中。&lt;/p&gt;
+&lt;p&gt;本语法操作的文本中其他的语法将不会被处理，部分HTML符号也会被替换成实体符，这一点跟代码块一样。&lt;/p&gt;
+&lt;p&gt;如果要在行内引用本语法中的操作符&lt;code&gt;`&lt;/code&gt;，请使用这样的语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;`` ` ``
+
+示例：`` `我是示例` ``
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;图片&quot;&gt;&lt;a href=&quot;#图片&quot; class=&quot;headerlink&quot; title=&quot;图片&quot;&gt;&lt;/a&gt;图片&lt;/h3&gt;&lt;p&gt;插入图片的语法跟链接的语法几乎一模一样，图像的语法在链接的语法前有一个惊叹号&lt;code&gt;!&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;链接语法中的说明针对图片均有效。链接与图像对应的关系为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;链接文本对应图片说明，即图片的&lt;code&gt;alt&lt;/code&gt;属性&lt;/li&gt;&lt;li&gt;链接地址对应图片地址，即图片的&lt;code&gt;src&lt;/code&gt;属性&lt;/li&gt;&lt;li&gt;链接标题对应图片标题，即图片的&lt;code&gt;title&lt;/code&gt;属性&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;示例代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Github的图标：![github icon](https://guides.github.com/favicon.ico)
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;自动链接&quot;&gt;&lt;a href=&quot;#自动链接&quot; class=&quot;headerlink&quot; title=&quot;自动链接&quot;&gt;&lt;/a&gt;自动链接&lt;/h3&gt;&lt;p&gt;文档中的链接可以使用定界符尖括号&lt;code&gt;&amp;lt;&amp;gt;&lt;/code&gt;实现自动链接效果，不需要额外的链接语法操作。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;https://github.com/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;将被转换为：&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;href&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;https://github.com/&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;https://github.com/&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;对于邮件链接，同样有效。&lt;/p&gt;
+&lt;h3 id=&quot;取消转义&quot;&gt;&lt;a href=&quot;#取消转义&quot; class=&quot;headerlink&quot; title=&quot;取消转义&quot;&gt;&lt;/a&gt;取消转义&lt;/h3&gt;&lt;p&gt;使用反斜杠&lt;code&gt;\&lt;/code&gt;进行语法取消。&lt;/p&gt;
+&lt;p&gt;使用反斜杠可以使得语法相关符号以字面量进行显示，接受以下符号的取消转义：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;反斜杠&lt;code&gt;\&lt;/code&gt;&lt;/li&gt;&lt;li&gt;反引号&lt;code&gt;`&lt;/code&gt;&lt;/li&gt;&lt;li&gt;星号&lt;code&gt;*&lt;/code&gt;&lt;/li&gt;&lt;li&gt;下划线&lt;code&gt;_&lt;/code&gt;&lt;/li&gt;&lt;li&gt;花括号&lt;code&gt;{}&lt;/code&gt;&lt;/li&gt;&lt;li&gt;方括号&lt;code&gt;[]&lt;/code&gt;&lt;/li&gt;&lt;li&gt;圆括号&lt;code&gt;()&lt;/code&gt;&lt;/li&gt;&lt;li&gt;#号&lt;code&gt;#&lt;/code&gt;&lt;/li&gt;&lt;li&gt;加号&lt;code&gt;+&lt;/code&gt;&lt;/li&gt;&lt;li&gt;减号/连字符&lt;code&gt;-&lt;/code&gt;&lt;/li&gt;&lt;li&gt;数点&lt;code&gt;.&lt;/code&gt;&lt;/li&gt;&lt;li&gt;惊叹号&lt;code&gt;!&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;部分增强和进阶语法中使用的特殊符号，也采用反斜杠&lt;code&gt;\&lt;/code&gt;进行取消转义。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;GitHub上的部分增强语法&quot;&gt;&lt;a href=&quot;#GitHub上的部分增强语法&quot; class=&quot;headerlink&quot; title=&quot;GitHub上的部分增强语法&quot;&gt;&lt;/a&gt;GitHub上的部分增强语法&lt;/h2&gt;&lt;p&gt;GitHub作为一个代码分享平台，其书写格式采用的就是Markdown。Github针对Markdown语法进行了一些扩展，以更好的支持代码方面的写作。&lt;/p&gt;
+&lt;h3 id=&quot;自动链接-1&quot;&gt;&lt;a href=&quot;#自动链接-1&quot; class=&quot;headerlink&quot; title=&quot;自动链接&quot;&gt;&lt;/a&gt;自动链接&lt;/h3&gt;&lt;p&gt;与基础语法中的自动链接类似，不过不需要额外的语法，识别为链接的文本将自动生成链接。&lt;/p&gt;
+&lt;h3 id=&quot;删除线&quot;&gt;&lt;a href=&quot;#删除线&quot; class=&quot;headerlink&quot; title=&quot;删除线&quot;&gt;&lt;/a&gt;删除线&lt;/h3&gt;&lt;p&gt;使用一对&lt;code&gt;~~&lt;/code&gt;作为定界符，使文本转换后带有删除线。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;~~我被删除线贯穿~~
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;删除线作用方式为行内操作，可以放在其他语法内。&lt;/p&gt;
+&lt;h3 id=&quot;Emoji&quot;&gt;&lt;a href=&quot;#Emoji&quot; class=&quot;headerlink&quot; title=&quot;Emoji&quot;&gt;&lt;/a&gt;Emoji&lt;/h3&gt;&lt;p&gt;可以在文档中插入Emoji表情，语法为对应Emoji表情名称使用一对冒号&lt;code&gt;:&lt;/code&gt;进行定界即可。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;:smile:
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.emoji-cheat-sheet.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emoji Cheat Sheet&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;围栏代码块与语法高亮&quot;&gt;&lt;a href=&quot;#围栏代码块与语法高亮&quot; class=&quot;headerlink&quot; title=&quot;围栏代码块与语法高亮&quot;&gt;&lt;/a&gt;围栏代码块与语法高亮&lt;/h3&gt;&lt;p&gt;使用三个&lt;code&gt;`&lt;/code&gt;作为定界符，也可以使文本转换为可以代码块。我们可以将之称为围栏代码块。&lt;/p&gt;
+&lt;p&gt;在第一组&lt;code&gt;`&lt;/code&gt;后面可以指定高亮采用的语法。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;```javascript&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var now = function()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    return new Date().getTime()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;```&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;以上代码将会以javascript语法的方式对代码进行高亮显示。&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; now = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Date&lt;/span&gt;().getTime()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We use &lt;a href=&quot;https://github.com/github/linguist&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Linguist&lt;/a&gt; to perform language detection and syntax highlighting. You can find out which keywords are valid in &lt;a href=&quot;https://github.com/github/linguist/blob/master/lib/linguist/languages.yml&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;the languages YAML file&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;常用高亮代码库&lt;a href=&quot;https://github.com/isagalaev/highlight.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Highlight&lt;/a&gt;可以实现多种语法的高亮风格展示，其支持的高亮语法与样式效果请自行参考&lt;a href=&quot;https://highlightjs.org/static/demo/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方Demo&lt;/a&gt;。&lt;/p&gt;
+&lt;h3 id=&quot;任务列表&quot;&gt;&lt;a href=&quot;#任务列表&quot; class=&quot;headerlink&quot; title=&quot;任务列表&quot;&gt;&lt;/a&gt;任务列表&lt;/h3&gt;&lt;p&gt;在列表项前面使用&lt;code&gt;[ ]&lt;/code&gt;和&lt;code&gt;[x]&lt;/code&gt;可以表示该任务列表的状态。前者为未完成，后者为已完成。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;[ ]&lt;/code&gt;和&lt;code&gt;[x]&lt;/code&gt;的位置在列表标识符和列表项的中间，均由空格隔开。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- [ ] 未完成1
+- [x] 已完成1
+- [x] 已完成2
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;表格&quot;&gt;&lt;a href=&quot;#表格&quot; class=&quot;headerlink&quot; title=&quot;表格&quot;&gt;&lt;/a&gt;表格&lt;/h3&gt;&lt;p&gt;通过使用下面的语法方式实现表格：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;| 表头1 | 表头2 |
+| ----- | ----- |
+| A1    | A2    |
+| B1    | B2    |
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;两边的符号竖线&lt;code&gt;|&lt;/code&gt;可以去掉。&lt;/li&gt;&lt;li&gt;第二行符号竖线之间的符号&lt;code&gt;-&lt;/code&gt;数量至少&lt;strong&gt;1&lt;/strong&gt;个，可以是很多个，建议&lt;strong&gt;3&lt;/strong&gt;个。&lt;/li&gt;&lt;li&gt;表格里面的内容可以使用行内语法。&lt;/li&gt;&lt;li&gt;表格模块与其他模块以换行符分开，否则紧跟表格的部分会作为表格的内容进行解析。&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;如果需要指定对齐方式，可以在代码中的第二行进行指定，语法方式为：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;| 左对齐 | 居中 | 右对齐 |
+| :--- | :---: | ---: |
+| A1   | A2    | A3   |
+| B1   | B2    | B3   |
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果表格内需要使用符号&lt;code&gt;|&lt;/code&gt;，请使用转义符&lt;code&gt;\&lt;/code&gt;。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;| 名称   | 符号 |
+| ---    | ---  |
+| 单引号 | &amp;apos;    |
+| 竖线   | \|   |
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;高阶语法&quot;&gt;&lt;a href=&quot;#高阶语法&quot; class=&quot;headerlink&quot; title=&quot;高阶语法&quot;&gt;&lt;/a&gt;高阶语法&lt;/h2&gt;&lt;p&gt;以下列出一些常见的进阶语法。&lt;/p&gt;
+&lt;p&gt;这些语法是扩展语法，实际使用时请注意采用的Markdown解析工具&lt;strong&gt;是否支持&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&quot;定义列表&quot;&gt;&lt;a href=&quot;#定义列表&quot; class=&quot;headerlink&quot; title=&quot;定义列表&quot;&gt;&lt;/a&gt;定义列表&lt;/h3&gt;&lt;p&gt;以下语法实现一个定义列表：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;名称1
+:    A1
+:    A2
+
+名称2
+:    B1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;代码将被转换为：&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dl&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dt&lt;/span&gt;&amp;gt;&lt;/span&gt;名称1&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dt&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dd&lt;/span&gt;&amp;gt;&lt;/span&gt;A1&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dd&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dd&lt;/span&gt;&amp;gt;&lt;/span&gt;A2&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dd&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dt&lt;/span&gt;&amp;gt;&lt;/span&gt;名称2&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dt&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dd&lt;/span&gt;&amp;gt;&lt;/span&gt;B1&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dd&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dl&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://michelf.ca/projects/php-markdown/extra/#def-list&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PHP Markdown Extra - Definition Lists &lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;h3 id=&quot;特殊属性&quot;&gt;&lt;a href=&quot;#特殊属性&quot; class=&quot;headerlink&quot; title=&quot;特殊属性&quot;&gt;&lt;/a&gt;特殊属性&lt;/h3&gt;&lt;p&gt;可以对生成后的元素指定特殊属性，如ID，类名等。&lt;/p&gt;
+&lt;p&gt;使用花括号&lt;code&gt;{}&lt;/code&gt;作为定界符对转换后的标签添加特殊属性。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;我是一个段落 {#para .color-red foo=bar}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;将被转换为：&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;para&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;color-red&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;foo&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;bar&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;我是一个段落&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;缩写&quot;&gt;&lt;a href=&quot;#缩写&quot; class=&quot;headerlink&quot; title=&quot;缩写&quot;&gt;&lt;/a&gt;缩写&lt;/h3&gt;&lt;p&gt;可以对指定文本进行缩写提示，转换后对该文本使用&lt;code&gt;&amp;lt;abbr&amp;gt;&lt;/code&gt;标签包裹，该标签会有一个&lt;code&gt;title&lt;/code&gt;属性指定其详细名称。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;喜大普奔是一个缩写词。
+
+*[喜大普奔]: 喜闻乐见、大快人心、普天同庆、奔走相告
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;将被转换为：&lt;br&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;abbr&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;title&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;喜闻乐见、大快人心、普天同庆、奔走相告&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;喜大普奔&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;abbr&lt;/span&gt;&amp;gt;&lt;/span&gt;是一个缩写词。&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;*[text]: title&lt;/code&gt;为缩写的描述定义文本语法，&lt;code&gt;text&lt;/code&gt;为缩写，&lt;code&gt;title&lt;/code&gt;为描述，跟链接引用的定义文本类似，可以在文档中的任意位置，最终解析出来的文档将会忽略。&lt;/p&gt;
+&lt;h3 id=&quot;脚注&quot;&gt;&lt;a href=&quot;#脚注&quot; class=&quot;headerlink&quot; title=&quot;脚注&quot;&gt;&lt;/a&gt;脚注&lt;/h3&gt;&lt;p&gt;脚注的语法：在需要添加脚注的地方使用语法：&lt;code&gt;[^x]&lt;/code&gt;，在文档的任意位置放置脚注的定义说明即可，如：&lt;code&gt;[^x]: 我是脚注说明&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://pandoc.org/README.html#footnotes&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Pandoc - Pandoc User’s Guide - Footnotes&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-footnote&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;markdown-it/markdown-it-footnote: Footnotes plugin for markdown-it markdown parser&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/LouisBarranqueiro/hexo-footnotes&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;LouisBarranqueiro/hexo-footnotes: A plugin to support markdown footnotes in your Hexo blog posts&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;h3 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h3&gt;&lt;p&gt;自动生成文档的目录。语法格式为：&lt;code&gt;[TOC]&lt;/code&gt;（Table of Content）。&lt;/p&gt;
+&lt;p&gt;参考一个目录实现的repo：&lt;a href=&quot;https://github.com/jonschlinkert/markdown-toc&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;jonschlinkert/markdown-toc&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;下标&quot;&gt;&lt;a href=&quot;#下标&quot; class=&quot;headerlink&quot; title=&quot;下标&quot;&gt;&lt;/a&gt;下标&lt;/h3&gt;&lt;p&gt;使用一对符号&lt;code&gt;~&lt;/code&gt;对文本定界。如：&lt;code&gt;H~2~O&lt;/code&gt;。转换后的文本将使用标签&lt;code&gt;&amp;lt;sub&amp;gt;&lt;/code&gt;包裹。&lt;/p&gt;
+&lt;h3 id=&quot;上标&quot;&gt;&lt;a href=&quot;#上标&quot; class=&quot;headerlink&quot; title=&quot;上标&quot;&gt;&lt;/a&gt;上标&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;使用一对符号&lt;code&gt;^&lt;/code&gt;对文本定界。如：&lt;code&gt;21^st^&lt;/code&gt;。转换后的文本将使用标签&lt;code&gt;&amp;lt;sup&amp;gt;&lt;/code&gt;包裹。&lt;/li&gt;&lt;li&gt;使用数学公式实现上标。如：&lt;code&gt;`$21^{st}$`&lt;/code&gt;。&lt;/li&gt;&lt;/ul&gt;
+&lt;h3 id=&quot;下划线&quot;&gt;&lt;a href=&quot;#下划线&quot; class=&quot;headerlink&quot; title=&quot;下划线&quot;&gt;&lt;/a&gt;下划线&lt;/h3&gt;&lt;p&gt;使用一对符号&lt;code&gt;++&lt;/code&gt;对文本定界。如：&lt;code&gt;++文本++&lt;/code&gt;。转换后的文本将使用标签&lt;code&gt;&amp;lt;ins&amp;gt;&lt;/code&gt;包裹。&lt;/p&gt;
+&lt;h3 id=&quot;标记块&quot;&gt;&lt;a href=&quot;#标记块&quot; class=&quot;headerlink&quot; title=&quot;标记块&quot;&gt;&lt;/a&gt;标记块&lt;/h3&gt;&lt;p&gt;使用一对符号&lt;code&gt;==&lt;/code&gt;对文本定界。如：&lt;code&gt;==标记==&lt;/code&gt;。转换后的文本将使用标签&lt;code&gt;&amp;lt;mark&amp;gt;&lt;/code&gt;包裹。&lt;/p&gt;
+&lt;h3 id=&quot;自定义文本块&quot;&gt;&lt;a href=&quot;#自定义文本块&quot; class=&quot;headerlink&quot; title=&quot;自定义文本块&quot;&gt;&lt;/a&gt;自定义文本块&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;:: info
+这里是信息文本块
+::
+
+:: warn
+这里是警告文本块
+::
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;数学公式&quot;&gt;&lt;a href=&quot;#数学公式&quot; class=&quot;headerlink&quot; title=&quot;数学公式&quot;&gt;&lt;/a&gt;数学公式&lt;/h3&gt;&lt;p&gt;使用一对符号&lt;code&gt;`$&lt;/code&gt;对文本定界。如：&lt;code&gt;`$E=mc^2$`&lt;/code&gt;。这个公式为行内公式。&lt;/p&gt;
+&lt;p&gt;块状数学公式语法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一行公式，定界符改为&lt;code&gt;$$&lt;/code&gt;即可（Mathjax的语法）。&lt;/li&gt;&lt;li&gt;多行公式，使用类似语法高亮的语法，反引号后跟&lt;code&gt;math&lt;/code&gt;即可。&lt;/li&gt;&lt;/ul&gt;
+&lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;code&quot;&gt;```math&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;这里放置具体公式代码&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;```&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;常见数学公式渲染工具：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mathjax/MathJax&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mathjax&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.latex-project.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;LeTeX&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/Khan/KaTeX&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;KaTeX&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;h3 id=&quot;流程图、时序图、甘特图&quot;&gt;&lt;a href=&quot;#流程图、时序图、甘特图&quot; class=&quot;headerlink&quot; title=&quot;流程图、时序图、甘特图&quot;&gt;&lt;/a&gt;流程图、时序图、甘特图&lt;/h3&gt;&lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;流程图：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;code&quot;&gt;```&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;graph TD;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    A--&amp;gt;B;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    A--&amp;gt;C;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    B--&amp;gt;D;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    C--&amp;gt;D;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;```&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;时序图：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;code&quot;&gt;```&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sequenceDiagram&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Alice-&amp;gt;&amp;gt;John: Hello John, how are you?&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    John--&amp;gt;&amp;gt;Alice: Great!&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;```&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;甘特图：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;code&quot;&gt;```&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;gantt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    title A Gantt Diagram&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    section Section&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    A task           :a1, 2014-01-01, 30d&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Another task     :after a1  , 20d&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    section Another&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Task in sec      :2014-01-12  , 12d&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    anther task      : 24d&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;```&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/adrai/flowchart.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;adrai/flowchart.js&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/knsv/mermaid&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;knsv/mermaid&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.codinghorror.com/the-future-of-markdown/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;The Future of Markdown&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.worldhello.net/gotgithub/appendix/markups.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;轻量级标记语言 — GotGitHub&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://daringfireball.net/projects/markdown/syntax&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Daring Fireball: Markdown Syntax Documentation&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://tool.lu/markdown/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;html转markdown - 在线工具&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.atool.org/html2markdown.php&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Html转MarkDown代码, Html2MarkDown - aTool在线工具&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/basic-writing-and-formatting-syntax/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Basic writing and formatting syntax - User Documentation - Github&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      Markdown是一款轻量级文本标记语言。使用Markdown进行写作，你可以轻松的使用纯文本格式编辑HTML代码；本文对Markdown语法进行一个说明，会涉及大部分常见Markdown语法，增强语法与进阶语法部分请在使用时结合当前解析工具进行，部分可能不支持或者效果不对应。
+    
+    </summary>
+    
+      <category term="开发" scheme="http://xovel.cn/categories/dev/"/>
+    
+      <category term="文档" scheme="http://xovel.cn/categories/dev/docs/"/>
+    
+    
+      <category term="markdown" scheme="http://xovel.cn/tags/markdown/"/>
+    
+      <category term="语法" scheme="http://xovel.cn/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+      <category term="百科" scheme="http://xovel.cn/tags/%E7%99%BE%E7%A7%91/"/>
+    
+  </entry>
   
   <entry>
     <title>HTTP1.1协议更新，RFC2616被废弃</title>
@@ -1113,9 +1403,9 @@
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
       <category term="specificity" scheme="http://xovel.cn/tags/specificity/"/>
     
@@ -1553,9 +1843,9 @@
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
       <category term="display" scheme="http://xovel.cn/tags/display/"/>
     
@@ -1604,9 +1894,9 @@
       <category term="前端" scheme="http://xovel.cn/categories/web/frontend/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
   </entry>
   
