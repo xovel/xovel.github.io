@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xovel.cn/article/things-about-display.html</loc>
+    
+    <lastmod>2016-06-20T00:40:31.719Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xovel.cn/article/css-specificity.html</loc>
+    
+    <lastmod>2016-06-20T00:39:36.176Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xovel.cn/article/markdown-syntax.html</loc>
     
-    <lastmod>2016-06-17T09:44:52.964Z</lastmod>
+    <lastmod>2016-06-20T00:38:26.816Z</lastmod>
     
   </url>
   
@@ -30,23 +44,9 @@
   </url>
   
   <url>
-    <loc>http://xovel.cn/article/css-specificity.html</loc>
-    
-    <lastmod>2016-06-03T09:32:22.824Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://xovel.cn/article/language-tags-in-html.html</loc>
     
     <lastmod>2016-06-03T09:31:51.734Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xovel.cn/article/things-about-display.html</loc>
-    
-    <lastmod>2016-06-03T09:31:29.171Z</lastmod>
     
   </url>
   

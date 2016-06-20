@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://xovel.cn/article/css-specificity.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="一个元素，其对应的CSS选择可以有很多个。如果同一个元素的某个样式，使用了两个不同的CSS选择器进行定义，那么最终使用的到底是哪一个呢？于是这里就引入了一个概念，最初叫做cascade order，后来的官方文档中间叫做specificity。这个单词翻译成中文叫做特异性、特性，其概念与C语言中运算符的优先级类似，所以也称之为CSS优先级。">
-<meta property="og:updated_time" content="2016-06-03T09:32:22.824Z">
+<meta property="og:updated_time" content="2016-06-20T00:39:36.176Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS权重">
 <meta name="twitter:description" content="一个元素，其对应的CSS选择可以有很多个。如果同一个元素的某个样式，使用了两个不同的CSS选择器进行定义，那么最终使用的到底是哪一个呢？于是这里就引入了一个概念，最初叫做cascade order，后来的官方文档中间叫做specificity。这个单词翻译成中文叫做特异性、特性，其概念与C语言中运算符的优先级类似，所以也称之为CSS优先级。">
@@ -346,12 +346,28 @@
 <ul>
 <li>a：ID选择器</li><li>b：类名选择器</li><li>c：标签选择器</li></ul>
 <p>根据具体选择器中a、b、c三组分别出现的数量，依次进行计算，最终得出优先级权重排序。</p>
-<p>示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">LI            &#123;...&#125;  /* a=0 b=0 c=1 -&gt; specificity =   1 */</span><br><span class="line">UL LI         &#123;...&#125;  /* a=0 b=0 c=2 -&gt; specificity =   2 */</span><br><span class="line">UL OL LI      &#123;...&#125;  /* a=0 b=0 c=3 -&gt; specificity =   3 */</span><br><span class="line">LI.red        &#123;...&#125;  /* a=0 b=1 c=1 -&gt; specificity =  11 */</span><br><span class="line">UL OL LI.red  &#123;...&#125;  /* a=0 b=1 c=3 -&gt; specificity =  13 */ </span><br><span class="line">#x34y         &#123;...&#125;  /* a=1 b=0 c=0 -&gt; specificity = 100 */</span><br></pre></td></tr></table></figure></p>
-<h4 id="CSS2"><a href="#CSS2" class="headerlink" title="CSS2"></a>CSS2</h4><p>在<a href="https://www.w3.org/TR/2011/REC-CSS2-20110607/cascade.html#specificity" target="_blank" rel="external">CSS2</a>中，加入了行内样式，之前的三组变为四组：</p>
+<p>示例：</p>
+<pre><code>LI            {...}  /* a=0 b=0 c=1 -&gt; specificity =   1 */
+UL LI         {...}  /* a=0 b=0 c=2 -&gt; specificity =   2 */
+UL OL LI      {...}  /* a=0 b=0 c=3 -&gt; specificity =   3 */
+LI.red        {...}  /* a=0 b=1 c=1 -&gt; specificity =  11 */
+UL OL LI.red  {...}  /* a=0 b=1 c=3 -&gt; specificity =  13 */ 
+#x34y         {...}  /* a=1 b=0 c=0 -&gt; specificity = 100 */ 
+</code></pre><h4 id="CSS2"><a href="#CSS2" class="headerlink" title="CSS2"></a>CSS2</h4><p>在<a href="https://www.w3.org/TR/2011/REC-CSS2-20110607/cascade.html#specificity" target="_blank" rel="external">CSS2</a>中，加入了行内样式，之前的三组变为四组：</p>
 <ul>
 <li>a：行内样式。由于已经是对应元素了，所以就没有选择器了，后面三组的值均为0。</li><li>b：ID选择器。</li><li>c：除ID之外的其他属性，如<code>.classname</code>、<code>[href]</code>；伪类，如<code>:active</code>、<code>:first-child</code>；不包含伪元素。</li><li>d：标签选择器；伪元素，如<code>:first-letter</code>、<code>:before</code></li><li>忽略通配符<code>*</code>，即abcd值均为0</li></ul>
-<p>示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">*             &#123;&#125;  /* a=0 b=0 c=0 d=0 -&gt; specificity = 0,0,0,0 */</span><br><span class="line">li            &#123;&#125;  /* a=0 b=0 c=0 d=1 -&gt; specificity = 0,0,0,1 */</span><br><span class="line">li:first-line &#123;&#125;  /* a=0 b=0 c=0 d=2 -&gt; specificity = 0,0,0,2 */</span><br><span class="line">ul li         &#123;&#125;  /* a=0 b=0 c=0 d=2 -&gt; specificity = 0,0,0,2 */</span><br><span class="line">ul ol+li      &#123;&#125;  /* a=0 b=0 c=0 d=3 -&gt; specificity = 0,0,0,3 */</span><br><span class="line">h1 + *[rel=up]&#123;&#125;  /* a=0 b=0 c=1 d=1 -&gt; specificity = 0,0,1,1 */</span><br><span class="line">ul ol li.red  &#123;&#125;  /* a=0 b=0 c=1 d=3 -&gt; specificity = 0,0,1,3 */</span><br><span class="line">li.red.level  &#123;&#125;  /* a=0 b=0 c=2 d=1 -&gt; specificity = 0,0,2,1 */</span><br><span class="line">#x34y         &#123;&#125;  /* a=0 b=1 c=0 d=0 -&gt; specificity = 0,1,0,0 */</span><br><span class="line">style=&quot;&quot;          /* a=1 b=0 c=0 d=0 -&gt; specificity = 1,0,0,0 */</span><br></pre></td></tr></table></figure></p>
-<blockquote>
+<p>示例：</p>
+<pre><code>*             {}  /* a=0 b=0 c=0 d=0 -&gt; specificity = 0,0,0,0 */
+li            {}  /* a=0 b=0 c=0 d=1 -&gt; specificity = 0,0,0,1 */
+li:first-line {}  /* a=0 b=0 c=0 d=2 -&gt; specificity = 0,0,0,2 */
+ul li         {}  /* a=0 b=0 c=0 d=2 -&gt; specificity = 0,0,0,2 */
+ul ol+li      {}  /* a=0 b=0 c=0 d=3 -&gt; specificity = 0,0,0,3 */
+h1 + *[rel=up]{}  /* a=0 b=0 c=1 d=1 -&gt; specificity = 0,0,1,1 */
+ul ol li.red  {}  /* a=0 b=0 c=1 d=3 -&gt; specificity = 0,0,1,3 */
+li.red.level  {}  /* a=0 b=0 c=2 d=1 -&gt; specificity = 0,0,2,1 */
+#x34y         {}  /* a=0 b=1 c=0 d=0 -&gt; specificity = 0,1,0,0 */
+style=&quot;&quot;          /* a=1 b=0 c=0 d=0 -&gt; specificity = 1,0,0,0 */
+</code></pre><blockquote>
 <ul>
 <li>即使选择器中使用的是<code>[id=&quot;foo&quot;]</code>，它也只是一个<strong>属性选择器</strong>，ID选择器<code>#foo</code>的优先级依然较高。</li><li><del>选择器<code>.bar[class=&quot;bar&quot;]</code>计算为2个。</del></li><li><del>同一个选择器使用了多次均进行计算。比如<code>.foo.foo.foo</code>计算为3个、<code>[title][title]</code>计算为2个。</del></li></ul>
 </blockquote>
@@ -361,8 +377,17 @@
 <blockquote>
 <p>本质上跟CSS2里面的规则是一样的。</p>
 </blockquote>
-<p>示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">*               /* a=0 b=0 c=0 -&gt; specificity =   0 */</span><br><span class="line">LI              /* a=0 b=0 c=1 -&gt; specificity =   1 */</span><br><span class="line">UL LI           /* a=0 b=0 c=2 -&gt; specificity =   2 */</span><br><span class="line">UL OL+LI        /* a=0 b=0 c=3 -&gt; specificity =   3 */</span><br><span class="line">H1 + *[REL=up]  /* a=0 b=1 c=1 -&gt; specificity =  11 */</span><br><span class="line">UL OL LI.red    /* a=0 b=1 c=3 -&gt; specificity =  13 */</span><br><span class="line">LI.red.level    /* a=0 b=2 c=1 -&gt; specificity =  21 */</span><br><span class="line">#x34y           /* a=1 b=0 c=0 -&gt; specificity = 100 */</span><br><span class="line">#s12:not(FOO)   /* a=1 b=0 c=1 -&gt; specificity = 101 */</span><br></pre></td></tr></table></figure></p>
-<blockquote>
+<p>示例：</p>
+<pre><code>*               /* a=0 b=0 c=0 -&gt; specificity =   0 */
+LI              /* a=0 b=0 c=1 -&gt; specificity =   1 */
+UL LI           /* a=0 b=0 c=2 -&gt; specificity =   2 */
+UL OL+LI        /* a=0 b=0 c=3 -&gt; specificity =   3 */
+H1 + *[REL=up]  /* a=0 b=1 c=1 -&gt; specificity =  11 */
+UL OL LI.red    /* a=0 b=1 c=3 -&gt; specificity =  13 */
+LI.red.level    /* a=0 b=2 c=1 -&gt; specificity =  21 */
+#x34y           /* a=1 b=0 c=0 -&gt; specificity = 100 */
+#s12:not(FOO)   /* a=1 b=0 c=1 -&gt; specificity = 101 */
+</code></pre><blockquote>
 <p>在线演示：<a href="http://runjs.cn/code/mkk1w1x5" target="_blank" rel="external">Test 1</a></p>
 </blockquote>
 <h4 id="被忽略的"><a href="#被忽略的" class="headerlink" title="被忽略的"></a>被忽略的</h4><p>选择器中以下部分在计算优先级时将被忽略：</p>
@@ -403,11 +428,27 @@
 </blockquote>
 <p>从示例中可以看到，A字母的颜色并不是行内样式指定的青色<code>cyan</code>，而是红色<code>red</code>。</p>
 <p>W3的官方文档<a href="https://www.w3.org/TR/2011/REC-css3-selectors-20110929/#pseudo-elements" target="_blank" rel="external">Selectors Level 3</a>中指出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">p &#123; color: red; font-size: 12pt &#125;</span><br><span class="line">p::first-letter &#123; color: green; font-size: 200% &#125;</span><br><span class="line">p::first-line &#123; color: blue &#125;</span><br><span class="line"></span><br><span class="line">&lt;P&gt;Some text that ends up on two lines&lt;/P&gt;</span><br></pre></td></tr></table></figure>
-<p>以上的代码将会以下面的方式进行解析：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;P&gt;</span><br><span class="line">&lt;P::first-line&gt;</span><br><span class="line">&lt;P::first-letter&gt; </span><br><span class="line">S </span><br><span class="line">&lt;/P::first-letter&gt;ome text that </span><br><span class="line">&lt;/P::first-line&gt; </span><br><span class="line">ends up on two lines </span><br><span class="line">&lt;/P&gt;</span><br></pre></td></tr></table></figure></p>
-<p>多个元素层叠的情况时，以下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">&lt;p&gt;The first text.</span><br></pre></td></tr></table></figure></p>
-<p>将被视作：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">&lt;p&gt;&lt;div::first-letter&gt;&lt;p::first-letter&gt;T&lt;/...&gt;&lt;/...&gt;he first text.</span><br></pre></td></tr></table></figure></p>
-<p>之后再计算其CSS规则，所以在<a href="http://runjs.cn/code/52lchoew" target="_blank" rel="external">Test 4</a>中可以看到即使指定了其行内样式，最终css样式应用的却是伪元素指定的那个。</p>
+<pre><code>p { color: red; font-size: 12pt }
+p::first-letter { color: green; font-size: 200% }
+p::first-line { color: blue }
+
+&lt;P&gt;Some text that ends up on two lines&lt;/P&gt;
+</code></pre><p>以上的代码将会以下面的方式进行解析：</p>
+<pre><code>&lt;P&gt;
+&lt;P::first-line&gt;
+&lt;P::first-letter&gt; 
+S 
+&lt;/P::first-letter&gt;ome text that 
+&lt;/P::first-line&gt; 
+ends up on two lines 
+&lt;/P&gt;
+</code></pre><p>多个元素层叠的情况时，以下代码：</p>
+<pre><code>&lt;div&gt;
+&lt;p&gt;The first text.
+</code></pre><p>将被视作：</p>
+<pre><code>&lt;div&gt;
+&lt;p&gt;&lt;div::first-letter&gt;&lt;p::first-letter&gt;T&lt;/...&gt;&lt;/...&gt;he first text.
+</code></pre><p>之后再计算其CSS规则，所以在<a href="http://runjs.cn/code/52lchoew" target="_blank" rel="external">Test 4</a>中可以看到即使指定了其行内样式，最终css样式应用的却是伪元素指定的那个。</p>
 <blockquote>
 <ul>
 <li>After the rule p::before {content: “Note: “}, the selector p::first-letter matches the “N” of “Note”.</li><li>在before伪元素的内容里面，first-letter伪元素同样会进行匹配。</li></ul>

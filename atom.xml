@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-06-17T09:44:52.964Z</updated>
+  <updated>2016-06-20T00:38:26.816Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/markdown-syntax.html"/>
     <id>http://xovel.cn/article/markdown-syntax.html</id>
     <published>2016-06-17T05:41:41.000Z</published>
-    <updated>2016-06-17T09:44:52.964Z</updated>
+    <updated>2016-06-20T00:38:26.816Z</updated>
     
     <content type="html">&lt;p&gt;Markdown是一款轻量级文本标记语言。使用Markdown进行写作，你可以轻松的使用纯文本格式编辑HTML代码。&lt;blockquote&gt;&lt;p&gt;&lt;code&gt;Markdown&lt;/code&gt; is a way to style text on the web. You control the display of the document; formatting words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly, Markdown is just regular text with a few non-alphabetic characters thrown in, like &lt;code&gt;#&lt;/code&gt; or &lt;code&gt;*&lt;/code&gt;.&lt;/p&gt;
 &lt;footer&gt;&lt;strong&gt;What is Markdown&lt;/strong&gt;&lt;cite&gt;&lt;a href=&quot;https://guides.github.com/features/mastering-markdown/#what&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;guides.github.com/features/mastering-markdown/#what&lt;/a&gt;&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;&lt;br&gt;关于Markdown的介绍与优势，这里就不深入详细讨论了，在本文末尾有参考资料，可自行参阅。本文主要讲述Markdown的相关语法。话不多说，直接上干货吧！&lt;/p&gt;
@@ -120,7 +120,7 @@
 &lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;This is a normal paragraph:&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;pre&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;code&lt;/span&gt;&amp;gt;&lt;/span&gt;This is a code block.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;code&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;pre&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;代码块会对里面的一些符号进行转义，变为HTML实体符：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;And连接符&lt;code&gt;&amp;amp;&lt;/code&gt;将被转换为&lt;code&gt;&amp;amp;amp;&lt;/code&gt;&lt;/li&gt;&lt;li&gt;左尖括号&lt;code&gt;&amp;lt;&lt;/code&gt;将被转换为&lt;code&gt;&amp;amp;lt;&lt;/code&gt;&lt;/li&gt;&lt;li&gt;左尖括号&lt;code&gt;&amp;gt;&lt;/code&gt;将被转换为&lt;code&gt;&amp;amp;gt;&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;li&gt;And连接符&lt;code&gt;&amp;amp;&lt;/code&gt;将被转换为&lt;code&gt;&amp;amp;amp;&lt;/code&gt;&lt;/li&gt;&lt;li&gt;左尖括号&lt;code&gt;&amp;lt;&lt;/code&gt;将被转换为&lt;code&gt;&amp;amp;lt;&lt;/code&gt;&lt;/li&gt;&lt;li&gt;右尖括号&lt;code&gt;&amp;gt;&lt;/code&gt;将被转换为&lt;code&gt;&amp;amp;gt;&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;p&gt;代码块中的内容不会再进行markdown语法的操作。&lt;/p&gt;
 &lt;h3 id=&quot;水平线&quot;&gt;&lt;a href=&quot;#水平线&quot; class=&quot;headerlink&quot; title=&quot;水平线&quot;&gt;&lt;/a&gt;水平线&lt;/h3&gt;&lt;p&gt;水平线，即&lt;code&gt;&amp;lt;hr&amp;gt;&lt;/code&gt;标签。&lt;/p&gt;
 &lt;p&gt;在单独的一行里，使用至少三个相同的符号。这些符号可以是：星号&lt;code&gt;*&lt;/code&gt;、连字符/减号&lt;code&gt;-&lt;/code&gt;、下划线&lt;code&gt;_&lt;/code&gt;。&lt;/p&gt;
@@ -1302,7 +1302,7 @@ __我也是粗体__
     <link href="http://xovel.cn/article/css-specificity.html"/>
     <id>http://xovel.cn/article/css-specificity.html</id>
     <published>2016-05-27T09:41:51.000Z</published>
-    <updated>2016-06-03T09:32:22.824Z</updated>
+    <updated>2016-06-20T00:39:36.176Z</updated>
     
     <content type="html">&lt;h3 id=&quot;起因&quot;&gt;&lt;a href=&quot;#起因&quot; class=&quot;headerlink&quot; title=&quot;起因&quot;&gt;&lt;/a&gt;起因&lt;/h3&gt;&lt;p&gt;我为什么要做这样一个文章？&lt;/p&gt;
 &lt;p&gt;触发我讨论这个问题的导火线来自于我的个人博客采用的hexo主题中&lt;a href=&quot;https://github.com/iissnan/hexo-theme-next/issues/910&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;内容页图片居中问题&lt;/a&gt;。当时眼睛花了，没看清CSS代码，但也因此牵扯出来一些关于CSS权重（也叫做CSS优先级）的问题。&lt;/p&gt;
@@ -1320,12 +1320,28 @@ __我也是粗体__
 &lt;ul&gt;
 &lt;li&gt;a：ID选择器&lt;/li&gt;&lt;li&gt;b：类名选择器&lt;/li&gt;&lt;li&gt;c：标签选择器&lt;/li&gt;&lt;/ul&gt;
 &lt;p&gt;根据具体选择器中a、b、c三组分别出现的数量，依次进行计算，最终得出优先级权重排序。&lt;/p&gt;
-&lt;p&gt;示例：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;LI            &amp;#123;...&amp;#125;  /* a=0 b=0 c=1 -&amp;gt; specificity =   1 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UL LI         &amp;#123;...&amp;#125;  /* a=0 b=0 c=2 -&amp;gt; specificity =   2 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UL OL LI      &amp;#123;...&amp;#125;  /* a=0 b=0 c=3 -&amp;gt; specificity =   3 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;LI.red        &amp;#123;...&amp;#125;  /* a=0 b=1 c=1 -&amp;gt; specificity =  11 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UL OL LI.red  &amp;#123;...&amp;#125;  /* a=0 b=1 c=3 -&amp;gt; specificity =  13 */ &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#x34y         &amp;#123;...&amp;#125;  /* a=1 b=0 c=0 -&amp;gt; specificity = 100 */&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h4 id=&quot;CSS2&quot;&gt;&lt;a href=&quot;#CSS2&quot; class=&quot;headerlink&quot; title=&quot;CSS2&quot;&gt;&lt;/a&gt;CSS2&lt;/h4&gt;&lt;p&gt;在&lt;a href=&quot;https://www.w3.org/TR/2011/REC-CSS2-20110607/cascade.html#specificity&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CSS2&lt;/a&gt;中，加入了行内样式，之前的三组变为四组：&lt;/p&gt;
+&lt;p&gt;示例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;LI            {...}  /* a=0 b=0 c=1 -&amp;gt; specificity =   1 */
+UL LI         {...}  /* a=0 b=0 c=2 -&amp;gt; specificity =   2 */
+UL OL LI      {...}  /* a=0 b=0 c=3 -&amp;gt; specificity =   3 */
+LI.red        {...}  /* a=0 b=1 c=1 -&amp;gt; specificity =  11 */
+UL OL LI.red  {...}  /* a=0 b=1 c=3 -&amp;gt; specificity =  13 */ 
+#x34y         {...}  /* a=1 b=0 c=0 -&amp;gt; specificity = 100 */ 
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&quot;CSS2&quot;&gt;&lt;a href=&quot;#CSS2&quot; class=&quot;headerlink&quot; title=&quot;CSS2&quot;&gt;&lt;/a&gt;CSS2&lt;/h4&gt;&lt;p&gt;在&lt;a href=&quot;https://www.w3.org/TR/2011/REC-CSS2-20110607/cascade.html#specificity&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CSS2&lt;/a&gt;中，加入了行内样式，之前的三组变为四组：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;a：行内样式。由于已经是对应元素了，所以就没有选择器了，后面三组的值均为0。&lt;/li&gt;&lt;li&gt;b：ID选择器。&lt;/li&gt;&lt;li&gt;c：除ID之外的其他属性，如&lt;code&gt;.classname&lt;/code&gt;、&lt;code&gt;[href]&lt;/code&gt;；伪类，如&lt;code&gt;:active&lt;/code&gt;、&lt;code&gt;:first-child&lt;/code&gt;；不包含伪元素。&lt;/li&gt;&lt;li&gt;d：标签选择器；伪元素，如&lt;code&gt;:first-letter&lt;/code&gt;、&lt;code&gt;:before&lt;/code&gt;&lt;/li&gt;&lt;li&gt;忽略通配符&lt;code&gt;*&lt;/code&gt;，即abcd值均为0&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;示例：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;*             &amp;#123;&amp;#125;  /* a=0 b=0 c=0 d=0 -&amp;gt; specificity = 0,0,0,0 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;li            &amp;#123;&amp;#125;  /* a=0 b=0 c=0 d=1 -&amp;gt; specificity = 0,0,0,1 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;li:first-line &amp;#123;&amp;#125;  /* a=0 b=0 c=0 d=2 -&amp;gt; specificity = 0,0,0,2 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ul li         &amp;#123;&amp;#125;  /* a=0 b=0 c=0 d=2 -&amp;gt; specificity = 0,0,0,2 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ul ol+li      &amp;#123;&amp;#125;  /* a=0 b=0 c=0 d=3 -&amp;gt; specificity = 0,0,0,3 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;h1 + *[rel=up]&amp;#123;&amp;#125;  /* a=0 b=0 c=1 d=1 -&amp;gt; specificity = 0,0,1,1 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ul ol li.red  &amp;#123;&amp;#125;  /* a=0 b=0 c=1 d=3 -&amp;gt; specificity = 0,0,1,3 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;li.red.level  &amp;#123;&amp;#125;  /* a=0 b=0 c=2 d=1 -&amp;gt; specificity = 0,0,2,1 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#x34y         &amp;#123;&amp;#125;  /* a=0 b=1 c=0 d=0 -&amp;gt; specificity = 0,1,0,0 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;style=&amp;quot;&amp;quot;          /* a=1 b=0 c=0 d=0 -&amp;gt; specificity = 1,0,0,0 */&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;blockquote&gt;
+&lt;p&gt;示例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;*             {}  /* a=0 b=0 c=0 d=0 -&amp;gt; specificity = 0,0,0,0 */
+li            {}  /* a=0 b=0 c=0 d=1 -&amp;gt; specificity = 0,0,0,1 */
+li:first-line {}  /* a=0 b=0 c=0 d=2 -&amp;gt; specificity = 0,0,0,2 */
+ul li         {}  /* a=0 b=0 c=0 d=2 -&amp;gt; specificity = 0,0,0,2 */
+ul ol+li      {}  /* a=0 b=0 c=0 d=3 -&amp;gt; specificity = 0,0,0,3 */
+h1 + *[rel=up]{}  /* a=0 b=0 c=1 d=1 -&amp;gt; specificity = 0,0,1,1 */
+ul ol li.red  {}  /* a=0 b=0 c=1 d=3 -&amp;gt; specificity = 0,0,1,3 */
+li.red.level  {}  /* a=0 b=0 c=2 d=1 -&amp;gt; specificity = 0,0,2,1 */
+#x34y         {}  /* a=0 b=1 c=0 d=0 -&amp;gt; specificity = 0,1,0,0 */
+style=&amp;quot;&amp;quot;          /* a=1 b=0 c=0 d=0 -&amp;gt; specificity = 1,0,0,0 */
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;即使选择器中使用的是&lt;code&gt;[id=&amp;quot;foo&amp;quot;]&lt;/code&gt;，它也只是一个&lt;strong&gt;属性选择器&lt;/strong&gt;，ID选择器&lt;code&gt;#foo&lt;/code&gt;的优先级依然较高。&lt;/li&gt;&lt;li&gt;&lt;del&gt;选择器&lt;code&gt;.bar[class=&amp;quot;bar&amp;quot;]&lt;/code&gt;计算为2个。&lt;/del&gt;&lt;/li&gt;&lt;li&gt;&lt;del&gt;同一个选择器使用了多次均进行计算。比如&lt;code&gt;.foo.foo.foo&lt;/code&gt;计算为3个、&lt;code&gt;[title][title]&lt;/code&gt;计算为2个。&lt;/del&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;/blockquote&gt;
@@ -1335,8 +1351,17 @@ __我也是粗体__
 &lt;blockquote&gt;
 &lt;p&gt;本质上跟CSS2里面的规则是一样的。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;示例：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;*               /* a=0 b=0 c=0 -&amp;gt; specificity =   0 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;LI              /* a=0 b=0 c=1 -&amp;gt; specificity =   1 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UL LI           /* a=0 b=0 c=2 -&amp;gt; specificity =   2 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UL OL+LI        /* a=0 b=0 c=3 -&amp;gt; specificity =   3 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;H1 + *[REL=up]  /* a=0 b=1 c=1 -&amp;gt; specificity =  11 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UL OL LI.red    /* a=0 b=1 c=3 -&amp;gt; specificity =  13 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;LI.red.level    /* a=0 b=2 c=1 -&amp;gt; specificity =  21 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#x34y           /* a=1 b=0 c=0 -&amp;gt; specificity = 100 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#s12:not(FOO)   /* a=1 b=0 c=1 -&amp;gt; specificity = 101 */&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;blockquote&gt;
+&lt;p&gt;示例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;*               /* a=0 b=0 c=0 -&amp;gt; specificity =   0 */
+LI              /* a=0 b=0 c=1 -&amp;gt; specificity =   1 */
+UL LI           /* a=0 b=0 c=2 -&amp;gt; specificity =   2 */
+UL OL+LI        /* a=0 b=0 c=3 -&amp;gt; specificity =   3 */
+H1 + *[REL=up]  /* a=0 b=1 c=1 -&amp;gt; specificity =  11 */
+UL OL LI.red    /* a=0 b=1 c=3 -&amp;gt; specificity =  13 */
+LI.red.level    /* a=0 b=2 c=1 -&amp;gt; specificity =  21 */
+#x34y           /* a=1 b=0 c=0 -&amp;gt; specificity = 100 */
+#s12:not(FOO)   /* a=1 b=0 c=1 -&amp;gt; specificity = 101 */
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;在线演示：&lt;a href=&quot;http://runjs.cn/code/mkk1w1x5&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Test 1&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h4 id=&quot;被忽略的&quot;&gt;&lt;a href=&quot;#被忽略的&quot; class=&quot;headerlink&quot; title=&quot;被忽略的&quot;&gt;&lt;/a&gt;被忽略的&lt;/h4&gt;&lt;p&gt;选择器中以下部分在计算优先级时将被忽略：&lt;/p&gt;
@@ -1377,11 +1402,27 @@ __我也是粗体__
 &lt;/blockquote&gt;
 &lt;p&gt;从示例中可以看到，A字母的颜色并不是行内样式指定的青色&lt;code&gt;cyan&lt;/code&gt;，而是红色&lt;code&gt;red&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;W3的官方文档&lt;a href=&quot;https://www.w3.org/TR/2011/REC-css3-selectors-20110929/#pseudo-elements&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Selectors Level 3&lt;/a&gt;中指出：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;p &amp;#123; color: red; font-size: 12pt &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;p::first-letter &amp;#123; color: green; font-size: 200% &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;p::first-line &amp;#123; color: blue &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;P&amp;gt;Some text that ends up on two lines&amp;lt;/P&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;以上的代码将会以下面的方式进行解析：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;P&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;P::first-line&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;P::first-letter&amp;gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;S &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/P::first-letter&amp;gt;ome text that &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/P::first-line&amp;gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ends up on two lines &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/P&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;多个元素层叠的情况时，以下代码：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;p&amp;gt;The first text.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;将被视作：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;p&amp;gt;&amp;lt;div::first-letter&amp;gt;&amp;lt;p::first-letter&amp;gt;T&amp;lt;/...&amp;gt;&amp;lt;/...&amp;gt;he first text.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;之后再计算其CSS规则，所以在&lt;a href=&quot;http://runjs.cn/code/52lchoew&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Test 4&lt;/a&gt;中可以看到即使指定了其行内样式，最终css样式应用的却是伪元素指定的那个。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;p { color: red; font-size: 12pt }
+p::first-letter { color: green; font-size: 200% }
+p::first-line { color: blue }
+
+&amp;lt;P&amp;gt;Some text that ends up on two lines&amp;lt;/P&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;以上的代码将会以下面的方式进行解析：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;P&amp;gt;
+&amp;lt;P::first-line&amp;gt;
+&amp;lt;P::first-letter&amp;gt; 
+S 
+&amp;lt;/P::first-letter&amp;gt;ome text that 
+&amp;lt;/P::first-line&amp;gt; 
+ends up on two lines 
+&amp;lt;/P&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;多个元素层叠的情况时，以下代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div&amp;gt;
+&amp;lt;p&amp;gt;The first text.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;将被视作：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;div::first-letter&amp;gt;&amp;lt;p::first-letter&amp;gt;T&amp;lt;/...&amp;gt;&amp;lt;/...&amp;gt;he first text.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;之后再计算其CSS规则，所以在&lt;a href=&quot;http://runjs.cn/code/52lchoew&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Test 4&lt;/a&gt;中可以看到即使指定了其行内样式，最终css样式应用的却是伪元素指定的那个。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;After the rule p::before {content: “Note: “}, the selector p::first-letter matches the “N” of “Note”.&lt;/li&gt;&lt;li&gt;在before伪元素的内容里面，first-letter伪元素同样会进行匹配。&lt;/li&gt;&lt;/ul&gt;
@@ -1700,15 +1741,44 @@ __我也是粗体__
     <link href="http://xovel.cn/article/things-about-display.html"/>
     <id>http://xovel.cn/article/things-about-display.html</id>
     <published>2016-05-20T04:35:06.000Z</published>
-    <updated>2016-06-03T09:31:29.171Z</updated>
+    <updated>2016-06-20T00:40:31.719Z</updated>
     
     <content type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;一句话概括：display属性，设置元素如何显示。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;display属性指定元素渲染使用的类型。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;p&gt;&lt;em&gt;display: none | inline | block | list-item | inline-list-item | inline-block | inline-table | table | table-cell | table-column | table-column-group | table-footer-group | table-header-group | table-row | table-row-group | flex | inline-flex | grid | inline-grid | run-in | ruby | ruby-base | ruby-text | ruby-base-container | ruby-text-container | contents&lt;/em&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;none&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;inline&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;block&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;contents&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;list-item&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;inline-block&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;inline-table&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;table&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;table-cell&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;table-column&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;table-column-group&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;table-footer-group&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;table-header-group&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;table-row&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;table-row-group&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;flex&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;inline-flex&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;grid&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;inline-grid&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;ruby&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;ruby-base&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;ruby-text&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;ruby-base-container&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;ruby-text-container&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;run-in&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;inherit&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;initial&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;unset&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;取值&quot;&gt;&lt;a href=&quot;#取值&quot; class=&quot;headerlink&quot; title=&quot;取值&quot;&gt;&lt;/a&gt;取值&lt;/h3&gt;&lt;table&gt;
+&lt;pre&gt;&lt;code&gt;display: none
+
+display: inline
+display: block
+display: contents
+display: list-item
+display: inline-block
+display: inline-table
+display: table
+display: table-cell
+display: table-column
+display: table-column-group
+display: table-footer-group
+display: table-header-group
+display: table-row
+display: table-row-group
+display: flex
+display: inline-flex
+display: grid
+display: inline-grid
+display: ruby
+display: ruby-base
+display: ruby-text
+display: ruby-base-container
+display: ruby-text-container 
+display: run-in
+
+display: inherit
+display: initial
+display: unset
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;取值&quot;&gt;&lt;a href=&quot;#取值&quot; class=&quot;headerlink&quot; title=&quot;取值&quot;&gt;&lt;/a&gt;取值&lt;/h3&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;值&lt;/th&gt;
@@ -1818,8 +1888,9 @@ __我也是粗体__
 &lt;h4 id=&quot;display-inline-block相关&quot;&gt;&lt;a href=&quot;#display-inline-block相关&quot; class=&quot;headerlink&quot; title=&quot;display:inline-block相关&quot;&gt;&lt;/a&gt;&lt;em&gt;display:inline-block&lt;/em&gt;相关&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;&lt;em&gt;display:inline-block&lt;/em&gt;：将对象呈递为内联对象，但是对象的内容作为块对象呈递。旁边的内联对象会被呈递在同一行内，允许空格。&lt;/li&gt;&lt;li&gt;IE6、7支持inline元素转换成inline-block，但不支持block元素转换成inline-block，所以非inline元素在IE6、7下要转换成inline-block，需先转换成inline，然后触发hasLayout，以此来获得和inline-block类似的效果&lt;/li&gt;&lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;你可以使用以下代码实现上一条效果：&lt;br&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;div &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	display: inline-block;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	*display: inline;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	*zoom: 1;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;你可以使用以下代码实现上一条效果：&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;div &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    display: inline-block;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    *display: inline;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    *zoom: 1;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h4 id=&quot;其他说明&quot;&gt;&lt;a href=&quot;#其他说明&quot; class=&quot;headerlink&quot; title=&quot;其他说明&quot;&gt;&lt;/a&gt;其他说明&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;如果position既不是static也不是relative或者float不是none或者元素是根元素，当display:inline-table时，display的计算值为table；当display:inline | inline-block | run-in | table-* 系时，display的计算值为block，其它情况为指定值。&lt;/li&gt;&lt;/ul&gt;
 &lt;h3 id=&quot;jQuery中对元素display属性的操作&quot;&gt;&lt;a href=&quot;#jQuery中对元素display属性的操作&quot; class=&quot;headerlink&quot; title=&quot;jQuery中对元素display属性的操作&quot;&gt;&lt;/a&gt;jQuery中对元素display属性的操作&lt;/h3&gt;&lt;p&gt;jQuery中对获取元素默认display属性的代码：&lt;/p&gt;
