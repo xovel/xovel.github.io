@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-06-20T00:38:26.816Z</updated>
+  <updated>2016-06-22T10:09:09.467Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -16,11 +16,67 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>贷款中的等额本息计算方法</title>
+    <link href="http://xovel.cn/article/equal-loan-payment.html"/>
+    <id>http://xovel.cn/article/equal-loan-payment.html</id>
+    <published>2016-06-22T07:29:45.000Z</published>
+    <updated>2016-06-22T10:09:09.467Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;概念介绍&quot;&gt;&lt;a href=&quot;#概念介绍&quot; class=&quot;headerlink&quot; title=&quot;概念介绍&quot;&gt;&lt;/a&gt;概念介绍&lt;/h2&gt;&lt;p&gt;目前常见的贷款方式有等额本息和等额本金，它们都属于按揭贷款，或者叫做抵押贷款。&lt;/p&gt;
+&lt;h3 id=&quot;等额本息&quot;&gt;&lt;a href=&quot;#等额本息&quot; class=&quot;headerlink&quot; title=&quot;等额本息&quot;&gt;&lt;/a&gt;等额本息&lt;/h3&gt;&lt;p&gt;顾名思义，等额本息贷款的意思就是把按揭贷款的本金总额与偿还的利息总额相加并平摊到还款期限中的每个月中去。等额本息贷款中，每个月的还款额是固定的。每月还款额中的本金与利息组成结构不同，随着时间的推移，本金比重会逐月递增，而利息则逐月递减。&lt;/p&gt;
+&lt;p&gt;目前大部分银行推荐使用这一种方式进行贷款业务。&lt;/p&gt;
+&lt;h3 id=&quot;等额本金&quot;&gt;&lt;a href=&quot;#等额本金&quot; class=&quot;headerlink&quot; title=&quot;等额本金&quot;&gt;&lt;/a&gt;等额本金&lt;/h3&gt;&lt;p&gt;等额本金指的是在还款期内把贷款数的总额进行划分，每月的还款额的组成为固定的还款额和剩余贷款在该月的利息。因为每月还款本金固定，利息会随着时间的推移逐月递减，贷款人开始的时候还款压力较大，随着时间的推移每月还款额越来越少。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;参考资料：&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Mortgage_loan&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mortgage loan&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;h2 id=&quot;每月还款额的计算方式&quot;&gt;&lt;a href=&quot;#每月还款额的计算方式&quot; class=&quot;headerlink&quot; title=&quot;每月还款额的计算方式&quot;&gt;&lt;/a&gt;每月还款额的计算方式&lt;/h2&gt;&lt;h3 id=&quot;等额本息-1&quot;&gt;&lt;a href=&quot;#等额本息-1&quot; class=&quot;headerlink&quot; title=&quot;等额本息&quot;&gt;&lt;/a&gt;等额本息&lt;/h3&gt;&lt;p&gt;每月还款额=贷款额*月贷款利息*(1+月贷款利息)^贷款期限/((1+月贷款利息)^贷款期限-1)&lt;/p&gt;
+&lt;p&gt;我们进行一个简单的数学建模：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;设贷款总额为$A$，银行月利率为$r$，总期数为$N$（月），求月还款额$x$。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;推演过程：&lt;/p&gt;
+&lt;p&gt;每个月所欠银行的贷款为：&lt;br&gt;第一个月：$A$&lt;br&gt;第二个月：$A(1+r)-x$&lt;br&gt;第三个月：$(A(1+r)-x)(1+r)-x = A(1+r)^2-x(1+(1+r))$&lt;br&gt;第四个月：$((A(1+r)-x)(1+r)-x)(1+r)-x = A(1+r)^3-x(1+(1+r)+(1+r)^2)$&lt;br&gt;…&lt;br&gt;依次类推，第n个月后所欠银行贷款为&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;：&lt;br&gt;$$A(1+r)^n-x(1+(1+r)+(1+r)^2+…+(1+r)^{n-1}) = A(1+r)^n-x\cdot\frac{(1+r)^n-1}{r}$$ &lt;/p&gt;
+&lt;p&gt;第$N$个月还清，有：&lt;br&gt;$$A(1+r)^N-x\cdot\frac{(1+r)^N-1}{r}=0$$&lt;/p&gt;
+&lt;p&gt;于是：&lt;br&gt;$$x=\frac{Ar(1+r)^N}{(1+r)^N-1}$$&lt;/p&gt;
+&lt;p&gt;推演完毕。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;每月还款额中的还掉的本金计算公式：$x=\frac{Ar(1+r)^{n-1}}{(1+r)^N-1}$&lt;br&gt;&lt;em&gt;其中$A$为总贷款总额，$r$为贷款利率，$N$为总期数，$n$为当前月份的序号&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;等额本金-1&quot;&gt;&lt;a href=&quot;#等额本金-1&quot; class=&quot;headerlink&quot; title=&quot;等额本金&quot;&gt;&lt;/a&gt;等额本金&lt;/h3&gt;&lt;p&gt;每月月供额=(贷款本金÷还款月数)+(贷款本金-已归还本金累计额)×月利率&lt;/p&gt;
+&lt;p&gt;推演过程此处省略。&lt;/p&gt;
+&lt;h2 id=&quot;Excel计算&quot;&gt;&lt;a href=&quot;#Excel计算&quot; class=&quot;headerlink&quot; title=&quot;Excel计算&quot;&gt;&lt;/a&gt;Excel计算&lt;/h2&gt;&lt;p&gt;在Excel中，直接使用公式&lt;code&gt;PMT&lt;/code&gt;计算等额本息的每月还款额。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;PMT(Rate, Nper, Pv, Fv, Type)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;参数说明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Rate，必需。贷款利率。&lt;/li&gt;&lt;li&gt;Nper，必需。贷款的总期数。&lt;/li&gt;&lt;li&gt;Pv，必需。贷款总额。&lt;/li&gt;&lt;li&gt;Fv，可选。未来值，或在最后一次付款后可以获得的现金余额。如果忽略，则此值为0。&lt;/li&gt;&lt;li&gt;Type，可选。用以指定付款时间在期初还是在期末。1表示起初，0表示在期末。默认为0。&lt;/li&gt;&lt;/ul&gt;
+&lt;div id=&quot;footnotes&quot;&gt;&lt;hr&gt;&lt;div id=&quot;footnotelist&quot;&gt;&lt;ol&gt;&lt;li id=&quot;fn:1&quot;&gt;等比数列求和公式：$S_n=a_1\cdot\frac{1-q^n}{1-q}=\frac{a_1-a_n*q}{1-q} (q\neq1)$，$a_1$为基数，$q$为等比系数。&lt;a href=&quot;#fnref:1&quot; rev=&quot;footnote&quot;&gt; ↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;&lt;/div&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;概念介绍&quot;&gt;&lt;a href=&quot;#概念介绍&quot; class=&quot;headerlink&quot; title=&quot;概念介绍&quot;&gt;&lt;/a&gt;概念介绍&lt;/h2&gt;&lt;p&gt;目前常见的贷款方式有等额本息和等额本金，它们都属于按揭贷款，或者叫做抵押贷款。&lt;/p&gt;
+&lt;h3 id=&quot;等额本息&quot;&gt;&lt;a h
+    
+    </summary>
+    
+      <category term="杂项" scheme="http://xovel.cn/categories/misc/"/>
+    
+    
+      <category term="贷款" scheme="http://xovel.cn/tags/%E8%B4%B7%E6%AC%BE/"/>
+    
+      <category term="等额本息" scheme="http://xovel.cn/tags/%E7%AD%89%E9%A2%9D%E6%9C%AC%E6%81%AF/"/>
+    
+      <category term="excel" scheme="http://xovel.cn/tags/excel/"/>
+    
+      <category term="pmt" scheme="http://xovel.cn/tags/pmt/"/>
+    
+  </entry>
+  
+  <entry>
     <title>markdown语法说明</title>
     <link href="http://xovel.cn/article/markdown-syntax.html"/>
     <id>http://xovel.cn/article/markdown-syntax.html</id>
     <published>2016-06-17T05:41:41.000Z</published>
-    <updated>2016-06-20T00:38:26.816Z</updated>
+    <updated>2016-06-22T07:19:59.771Z</updated>
     
     <content type="html">&lt;p&gt;Markdown是一款轻量级文本标记语言。使用Markdown进行写作，你可以轻松的使用纯文本格式编辑HTML代码。&lt;blockquote&gt;&lt;p&gt;&lt;code&gt;Markdown&lt;/code&gt; is a way to style text on the web. You control the display of the document; formatting words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly, Markdown is just regular text with a few non-alphabetic characters thrown in, like &lt;code&gt;#&lt;/code&gt; or &lt;code&gt;*&lt;/code&gt;.&lt;/p&gt;
 &lt;footer&gt;&lt;strong&gt;What is Markdown&lt;/strong&gt;&lt;cite&gt;&lt;a href=&quot;https://guides.github.com/features/mastering-markdown/#what&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;guides.github.com/features/mastering-markdown/#what&lt;/a&gt;&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;&lt;br&gt;关于Markdown的介绍与优势，这里就不深入详细讨论了，在本文末尾有参考资料，可自行参阅。本文主要讲述Markdown的相关语法。话不多说，直接上干货吧！&lt;/p&gt;
@@ -43,7 +99,7 @@
 &lt;pre&gt;&lt;code&gt;&amp;gt; 这里是块引用
 &lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
 &lt;li&gt;语法来源于早期的邮件文本格式。&lt;/li&gt;&lt;li&gt;使用块引用语法后，如果下一行紧跟的依然是文本，那么这一段文本将会跟在上一行后面，同样被当作块引用的内容。&lt;/li&gt;&lt;li&gt;文本的每一行前面都可以使用&lt;code&gt;&amp;gt;&lt;/code&gt;，这样做可以让文本更直观，也更美观。但是这些文本将会在同一行内呈现。&lt;ul&gt;
-&lt;li&gt;如果需要分行显示，请直接在文本之间使用换行符或者在以&lt;code&gt;&amp;gt;&lt;/code&gt;作为单独的一行插入。 &lt;/li&gt;&lt;li&gt;注意：部分markdown处理工具会有不同的效果，请根据相关文档自行选用具体方式。&lt;/li&gt;&lt;/ul&gt;
+&lt;li&gt;如果需要分行显示，请直接在文本之间使用换行符或者在以&lt;code&gt;&amp;gt;&lt;/code&gt;作为单独的一行插入。&lt;/li&gt;&lt;li&gt;注意：部分markdown处理工具会有不同的效果，请根据相关文档自行选用具体方式。&lt;/li&gt;&lt;/ul&gt;
 &lt;/li&gt;&lt;li&gt;块引用可以嵌套使用，在&lt;code&gt;&amp;gt;&lt;/code&gt;后再跟&lt;code&gt;&amp;gt;&lt;/code&gt;即可。&lt;/li&gt;&lt;li&gt;建议文本与符号&lt;code&gt;&amp;gt;&lt;/code&gt;之间留出一个空格。&lt;/li&gt;&lt;li&gt;块引用的内容可以包含标题、列表、代码块等Markdown元素。&lt;/li&gt;&lt;/ul&gt;
 &lt;p&gt;以下为示例代码：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;gt; 白日依山尽，
@@ -76,15 +132,15 @@
 &lt;p&gt;有序列表语法为文本前面使用阿拉伯数字和符号&lt;code&gt;.&lt;/code&gt;。与无序列表一样，文本与符号之间须有一个空格。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;1. 列表项1
 2. 列表项2
-3. 列表项3 
+3. 列表项3
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果你不想使用递增的数字，可以这样做：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;1. 列表项1
 1. 列表项2
-1. 列表项3 
+1. 列表项3
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;甚至，这样做（不建议）：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;9. 列表项1
 3. 列表项2
-5. 列表项3 
+5. 列表项3
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;注意事项&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;使用列表时，分行的文本会自动处理为一行显示，这一点与块引用语法类似。&lt;/p&gt;
 &lt;p&gt;如果为了美观，你可以在多行列表文本的前面添加缩进。&lt;/p&gt;
@@ -145,7 +201,7 @@
 [github]: https://github.com &amp;quot;github&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;链接文本使用方括号&lt;code&gt;[]&lt;/code&gt;定界，内联方式的链接地址与链接标题（即&lt;code&gt;title&lt;/code&gt;属性）使用圆括号&lt;code&gt;()&lt;/code&gt;定界；引用方式的链接地址与链接标题使用另一个方括号&lt;code&gt;[]&lt;/code&gt;进行引用，被引用的内容在文档中单独列出。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;链接标题使用双引号&lt;code&gt;&amp;quot;&amp;quot;&lt;/code&gt;定界，也可以使用单引号&lt;code&gt;&amp;#39;&amp;#39;&lt;/code&gt;进行定界。&lt;/li&gt;&lt;li&gt;可以不需要链接标题，只保留链接地址即可。&lt;/li&gt;&lt;li&gt;链接标题性与链接地址之间使用空格隔开。&lt;/li&gt;&lt;li&gt;如果链接地址在本域，可以使用相对链接的形式。&lt;/li&gt;&lt;li&gt;可以使用尖括号&lt;code&gt;&amp;lt;&amp;gt;&lt;/code&gt;对链接地址进行定界。&lt;/li&gt;&lt;li&gt;引用方式中，方括号后跟一个冒号&lt;code&gt;:&lt;/code&gt;，冒号后跟一个或多个空格。&lt;/li&gt;&lt;li&gt;引用方式中，两组方括号之间可以使用空格分开。&lt;/li&gt;&lt;li&gt;引用方式中，被引用的内容部分可以放在文档中的任意位置。&lt;/li&gt;&lt;li&gt;引用方式中，链接标题的定界符还可以使用圆括号&lt;code&gt;()&lt;/code&gt;。&lt;/li&gt;&lt;li&gt;引用方式中，标题可以另起一行，可自由缩进。&lt;/li&gt;&lt;li&gt;引用方式中，定义的名称不区分大小写。&lt;/li&gt;&lt;li&gt;引用方式中，如果链接文本与引用的定义名称一样，后面的方括号内容可以置空。&lt;/li&gt;&lt;/ul&gt;
+&lt;li&gt;链接标题使用双引号&lt;code&gt;&amp;quot;&amp;quot;&lt;/code&gt;定界，也可以使用单引号&lt;code&gt;&amp;#39;&amp;#39;&lt;/code&gt;进行定界。&lt;/li&gt;&lt;li&gt;可以不需要链接标题，只保留链接地址即可。&lt;/li&gt;&lt;li&gt;链接标题应与链接地址之间使用空格隔开。&lt;/li&gt;&lt;li&gt;如果链接地址在本域，可以使用相对链接的形式。&lt;/li&gt;&lt;li&gt;可以使用尖括号&lt;code&gt;&amp;lt;&amp;gt;&lt;/code&gt;对链接地址进行定界。&lt;/li&gt;&lt;li&gt;引用方式中，方括号后跟一个冒号&lt;code&gt;:&lt;/code&gt;，冒号后跟一个或多个空格。&lt;/li&gt;&lt;li&gt;引用方式中，两组方括号之间可以使用空格分开。&lt;/li&gt;&lt;li&gt;引用方式中，被引用的内容部分可以放在文档中的任意位置。&lt;/li&gt;&lt;li&gt;引用方式中，链接标题的定界符还可以使用圆括号&lt;code&gt;()&lt;/code&gt;。&lt;/li&gt;&lt;li&gt;引用方式中，标题可以另起一行，可自由缩进。&lt;/li&gt;&lt;li&gt;引用方式中，定义的名称不区分大小写。&lt;/li&gt;&lt;li&gt;引用方式中，如果链接文本与引用的定义名称一样，后面的方括号内容可以置空。&lt;/li&gt;&lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;关于使用哪一种方式，这里不做讨论。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -178,7 +234,7 @@ __我也是粗体__
 &lt;pre&gt;&lt;code&gt;&amp;lt;https://github.com/&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;将被转换为：&lt;/p&gt;
 &lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;href&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;https://github.com/&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;https://github.com/&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;对于邮件链接，同样有效。&lt;/p&gt;
+&lt;p&gt;对于邮箱地址链接，同样有效。&lt;/p&gt;
 &lt;h3 id=&quot;取消转义&quot;&gt;&lt;a href=&quot;#取消转义&quot; class=&quot;headerlink&quot; title=&quot;取消转义&quot;&gt;&lt;/a&gt;取消转义&lt;/h3&gt;&lt;p&gt;使用反斜杠&lt;code&gt;\&lt;/code&gt;进行语法取消。&lt;/p&gt;
 &lt;p&gt;使用反斜杠可以使得语法相关符号以字面量进行显示，接受以下符号的取消转义：&lt;/p&gt;
 &lt;ul&gt;
@@ -1728,11 +1784,11 @@ ends up on two lines
       <category term="HTML" scheme="http://xovel.cn/categories/web/html/"/>
     
     
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
-    
       <category term="lang" scheme="http://xovel.cn/tags/lang/"/>
     
       <category term="html" scheme="http://xovel.cn/tags/html/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
   </entry>
   

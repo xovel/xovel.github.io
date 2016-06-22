@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="http,rfc,协议,http1.1," />
+  <meta name="keywords" content="贷款,等额本息,excel,pmt," />
 
 
 
@@ -86,16 +86,25 @@
 
 
 
-<meta name="description" content="2014年年中，IETF更新了HTTP/1.1协议：将原来的HTTP/1.1协议（RFC2616）拆开，分成了六个单独的协议。在这六个新的协议说明中，重点对之前语义模糊的部分进行了重新诠释。更新之后的协议变得更易懂、易读。">
+<meta name="description" content="概念介绍目前常见的贷款方式有等额本息和等额本金，它们都属于按揭贷款，或者叫做抵押贷款。
+等额本息顾名思义，等额本息贷款的意思就是把按揭贷款的本金总额与偿还的利息总额相加并平摊到还款期限中的每个月中去。等额本息贷款中，每个月的还款额是固定的。每月还款额中的本金与利息组成结构不同，随着时间的推移，本金比重会逐月递增，而利息则逐月递减。
+目前大部分银行推荐使用这一种方式进行贷款业务。
+等额本金等额本金指">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTTP1.1协议更新，RFC2616被废弃">
-<meta property="og:url" content="http://xovel.cn/article/rfc2616-is-obsoleted.html">
+<meta property="og:title" content="贷款中的等额本息计算方法">
+<meta property="og:url" content="http://xovel.cn/article/equal-loan-payment.html">
 <meta property="og:site_name" content="清风轩">
-<meta property="og:description" content="2014年年中，IETF更新了HTTP/1.1协议：将原来的HTTP/1.1协议（RFC2616）拆开，分成了六个单独的协议。在这六个新的协议说明中，重点对之前语义模糊的部分进行了重新诠释。更新之后的协议变得更易懂、易读。">
-<meta property="og:updated_time" content="2016-06-15T03:47:26.921Z">
+<meta property="og:description" content="概念介绍目前常见的贷款方式有等额本息和等额本金，它们都属于按揭贷款，或者叫做抵押贷款。
+等额本息顾名思义，等额本息贷款的意思就是把按揭贷款的本金总额与偿还的利息总额相加并平摊到还款期限中的每个月中去。等额本息贷款中，每个月的还款额是固定的。每月还款额中的本金与利息组成结构不同，随着时间的推移，本金比重会逐月递增，而利息则逐月递减。
+目前大部分银行推荐使用这一种方式进行贷款业务。
+等额本金等额本金指">
+<meta property="og:updated_time" content="2016-06-22T10:09:09.467Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTTP1.1协议更新，RFC2616被废弃">
-<meta name="twitter:description" content="2014年年中，IETF更新了HTTP/1.1协议：将原来的HTTP/1.1协议（RFC2616）拆开，分成了六个单独的协议。在这六个新的协议说明中，重点对之前语义模糊的部分进行了重新诠释。更新之后的协议变得更易懂、易读。">
+<meta name="twitter:title" content="贷款中的等额本息计算方法">
+<meta name="twitter:description" content="概念介绍目前常见的贷款方式有等额本息和等额本金，它们都属于按揭贷款，或者叫做抵押贷款。
+等额本息顾名思义，等额本息贷款的意思就是把按揭贷款的本金总额与偿还的利息总额相加并平摊到还款期限中的每个月中去。等额本息贷款中，每个月的还款额是固定的。每月还款额中的本金与利息组成结构不同，随着时间的推移，本金比重会逐月递增，而利息则逐月递减。
+目前大部分银行推荐使用这一种方式进行贷款业务。
+等额本金等额本金指">
 
 
 
@@ -113,7 +122,7 @@
   };
 </script>
 
-  <title> HTTP1.1协议更新，RFC2616被废弃 | 清风轩 </title>
+  <title> 贷款中的等额本息计算方法 | 清风轩 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -259,7 +268,7 @@
             
             
               
-                HTTP1.1协议更新，RFC2616被废弃
+                贷款中的等额本息计算方法
               
             
           </h1>
@@ -271,8 +280,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-15T12:16:12+08:00" content="2016-06-15">
-              2016-06-15
+            <time itemprop="dateCreated" datetime="2016-06-22T15:29:45+08:00" content="2016-06-22">
+              2016-06-22
             </time>
           </span>
 
@@ -285,20 +294,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/web/" itemprop="url" rel="index">
-                    <span itemprop="name">WEB</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/web/http/" itemprop="url" rel="index">
-                    <span itemprop="name">HTTP</span>
+                  <a href="/categories/misc/" itemprop="url" rel="index">
+                    <span itemprop="name">杂项</span>
                   </a>
                 </span>
 
@@ -330,35 +327,34 @@
       
 
       
-        <p>2014年年中，IETF更新了HTTP/1.1协议：将原来的HTTP/1.1协议（<a href="https://tools.ietf.org/html/rfc2616" target="_blank" rel="external">RFC2616</a>）拆开，分成了六个单独的协议。在这六个新的协议说明中，重点对之前语义模糊的部分进行了重新诠释。更新之后的协议变得更易懂、易读。</p>
-<a id="more"></a>
-<p>以下是新的六个协议：</p>
+        <h2 id="概念介绍"><a href="#概念介绍" class="headerlink" title="概念介绍"></a>概念介绍</h2><p>目前常见的贷款方式有等额本息和等额本金，它们都属于按揭贷款，或者叫做抵押贷款。</p>
+<h3 id="等额本息"><a href="#等额本息" class="headerlink" title="等额本息"></a>等额本息</h3><p>顾名思义，等额本息贷款的意思就是把按揭贷款的本金总额与偿还的利息总额相加并平摊到还款期限中的每个月中去。等额本息贷款中，每个月的还款额是固定的。每月还款额中的本金与利息组成结构不同，随着时间的推移，本金比重会逐月递增，而利息则逐月递减。</p>
+<p>目前大部分银行推荐使用这一种方式进行贷款业务。</p>
+<h3 id="等额本金"><a href="#等额本金" class="headerlink" title="等额本金"></a>等额本金</h3><p>等额本金指的是在还款期内把贷款数的总额进行划分，每月的还款额的组成为固定的还款额和剩余贷款在该月的利息。因为每月还款本金固定，利息会随着时间的推移逐月递减，贷款人开始的时候还款压力较大，随着时间的推移每月还款额越来越少。</p>
+<p><em>参考资料：</em></p>
 <ul>
-<li>RFC7230 - <a href="http://tools.ietf.org/html/rfc7230" target="_blank" rel="external">HTTP/1.1: Message Syntax and Routing</a> - low-level message parsing and connection management</li><li>RFC7231 - <a href="http://tools.ietf.org/html/rfc7231" target="_blank" rel="external">HTTP/1.1: Semantics and Content</a> - methods, status codes and headers</li><li>RFC7232 - <a href="http://tools.ietf.org/html/rfc7232" target="_blank" rel="external">HTTP/1.1: Conditional Requests</a> - e.g., If-Modified-Since</li><li>RFC7233 - <a href="http://tools.ietf.org/html/rfc7233" target="_blank" rel="external">HTTP/1.1: Range Requests</a> - getting partial content</li><li>RFC7234 - <a href="http://tools.ietf.org/html/rfc7234" target="_blank" rel="external">HTTP/1.1: Caching</a> - browser and intermediary caches</li><li>RFC7235 - <a href="http://tools.ietf.org/html/rfc7235" target="_blank" rel="external">HTTP/1.1: Authentication</a> - a framework for HTTP authentication</li></ul>
-<p>正如Mark Nottingham在其个人博客中的一篇文章（<a href="https://www.mnot.net/blog/2014/06/07/rfc2616_is_dead" target="_blank" rel="external">RFC2616 is Dead</a>）中的吐槽一样：</p>
+<li><a href="https://en.wikipedia.org/wiki/Mortgage_loan" target="_blank" rel="external">Mortgage loan</a></li></ul>
+<h2 id="每月还款额的计算方式"><a href="#每月还款额的计算方式" class="headerlink" title="每月还款额的计算方式"></a>每月还款额的计算方式</h2><h3 id="等额本息-1"><a href="#等额本息-1" class="headerlink" title="等额本息"></a>等额本息</h3><p>每月还款额=贷款额*月贷款利息*(1+月贷款利息)^贷款期限/((1+月贷款利息)^贷款期限-1)</p>
+<p>我们进行一个简单的数学建模：</p>
 <blockquote>
-<p>Don’t use RFC2616. Delete it from your hard drives, bookmarks, and burn (or responsibly recycle) any copies that are printed out.</p>
-<p>不要再使用RFC2616了。将它从你的磁盘、书签中删除，并将打印出来的任何副本烧掉，当然你也可以回收再利用。</p>
+<p>设贷款总额为$A$，银行月利率为$r$，总期数为$N$（月），求月还款额$x$。</p>
 </blockquote>
-<p>RFC2616已经变为废弃状态。</p>
-<p>其实早在2007年，IETF内部就针对HTTP/1.1的修订展开了工作，他们成立了一个名字叫做<a href="https://tools.ietf.org/wg/httpbis/" target="_blank" rel="external">HTTPbis</a>的工作小组，目的是让HTTP/1.1协议规范更加清晰易读，并非对之前的协议进行升级或者添加新的特性。在这个修订过程中，小组成员发布了数十个草稿版本，并处理了<a href="https://trac.tools.ietf.org/wg/httpbis/trac/report/19" target="_blank" rel="external">550+问题</a>。</p>
+<p>推演过程：</p>
+<p>每个月所欠银行的贷款为：<br>第一个月：$A$<br>第二个月：$A(1+r)-x$<br>第三个月：$(A(1+r)-x)(1+r)-x = A(1+r)^2-x(1+(1+r))$<br>第四个月：$((A(1+r)-x)(1+r)-x)(1+r)-x = A(1+r)^3-x(1+(1+r)+(1+r)^2)$<br>…<br>依次类推，第n个月后所欠银行贷款为<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>：<br>$$A(1+r)^n-x(1+(1+r)+(1+r)^2+…+(1+r)^{n-1}) = A(1+r)^n-x\cdot\frac{(1+r)^n-1}{r}$$ </p>
+<p>第$N$个月还清，有：<br>$$A(1+r)^N-x\cdot\frac{(1+r)^N-1}{r}=0$$</p>
+<p>于是：<br>$$x=\frac{Ar(1+r)^N}{(1+r)^N-1}$$</p>
+<p>推演完毕。</p>
 <blockquote>
-<p>HTTPbis就是现在的HTTP Working Group，其官方主页为：<a href="http://httpwg.org/" target="_blank" rel="external">http://httpwg.org/</a></p>
-<p>关于为何取名HTTPbis，stackoverflow上有个讨论：<a href="http://stackoverflow.com/questions/9105639/httpbis-what-does-bis-mean" target="_blank" rel="external">HTTPbis - what does bis mean?</a></p>
+<p>每月还款额中的还掉的本金计算公式：$x=\frac{Ar(1+r)^{n-1}}{(1+r)^N-1}$<br><em>其中$A$为总贷款总额，$r$为贷款利率，$N$为总期数，$n$为当前月份的序号</em></p>
 </blockquote>
-<p>在文档整理过程中，HTTPbis也对HTTP/1.1协议中的一些不合理或者不安全的地方进行了修正与完。在官方文档中描述了对应于RFC2616的变更部分：<a href="http://tools.ietf.org/html/rfc7230#appendix-A.2" target="_blank" rel="external">Changes from RFC 2616</a>。Evert在其博客（<a href="https://evertpot.com/http-11-updated/" target="_blank" rel="external">HTTP/1.1 just got a major update</a>）中有一番总结，指出了其中的一些重大变更：</p>
-<blockquote>
+<h3 id="等额本金-1"><a href="#等额本金-1" class="headerlink" title="等额本金"></a>等额本金</h3><p>每月月供额=(贷款本金÷还款月数)+(贷款本金-已归还本金累计额)×月利率</p>
+<p>推演过程此处省略。</p>
+<h2 id="Excel计算"><a href="#Excel计算" class="headerlink" title="Excel计算"></a>Excel计算</h2><p>在Excel中，直接使用公式<code>PMT</code>计算等额本息的每月还款额。</p>
+<p><code>PMT(Rate, Nper, Pv, Fv, Type)</code></p>
+<p>参数说明：</p>
 <ul>
-<li>Clarifications around dealing with unexpected whitespace, which should fix response splitting vulnerabilities.</li><li>The limit of two connections per server has been removed.</li><li>HTTP/0.9 support has been dropped.</li><li>Default charset of ISO-8859-1 has been removed.</li><li>Servers are no longer required to handle all <code>Content-*</code> header fields.</li><li><code>Content-Range</code> has been explicitly banned in PUT requests.</li><li>It’s now suggested to use the <code>about:blank</code> uri in the <code>Referer</code> header when no referer exists, to distinguish between “there was no referrer” and “I don’t want to send a referrer”.</li><li>The <code>204</code>, <code>404</code>, <code>405</code>, <code>414</code> and <code>501</code> status codes are now cachable.</li><li>The status codes <code>301</code> and <code>302</code> have been changed to allow user agents to rewrite the method from <code>POST</code> to <code>GET</code>. This is a good example of a case where everybody has been (incorrectly) already doing this, and the spec now reflects the real world implementation.</li><li>The <code>Location</code> header can now contain relative uri’s as well as fragment identifiers.</li><li><code>Content-MD5</code> has been removed.</li></ul>
-</blockquote>
-<p>翻译如下：</p>
-<ul>
-<li>明确了针对未预期空格的处理，以修复<code>HTTP Response Splitting</code>漏洞。</li><li>每个服务器两个连接数的限制被移除。</li><li>放弃对<code>HTTP/0.9</code>的支持。</li><li><code>ISO-8859-1</code>不再是默认的字符集。</li><li>服务器不再需要去处理所有的<code>Content-*</code>请求头内容。</li><li>明确禁止在<code>PUT</code>请求中使用<code>Content-Range</code>。</li><li>当referer不存在时，为了区分“这里没有referrer”和“我不想发送referrer”，建议在请求头<code>Referer</code>中使用<code>about:blank</code>这个uri。</li><li>状态码<code>204</code>、<code>404</code>、<code>405</code>、<code>414</code>以及<code>501</code>现在可以缓存了。</li><li>状态码<code>301</code>、<code>302</code>现在允许用户代理将请求方式从<code>POST</code>重写为<code>GET</code>。<em>人们之前早就这样做了（<del>尽管当时是不正确的</del>），现在现实世界中的操作被规范重新表述，这个就是一个很好的例子。</em></li><li>现在请求头<code>Location</code>可以包含相对URI和片段标识符。</li><li><code>Content-MD5</code>被移除。</li></ul>
-<hr>
-<p>参考资料：</p>
-<ul>
-<li><a href="https://www.mnot.net/blog/2014/06/07/rfc2616_is_dead" target="_blank" rel="external">RFC2616 is Dead</a></li><li><a href="https://evertpot.com/http-11-updated/" target="_blank" rel="external">HTTP/1.1 just got a major update</a></li></ul>
-
+<li>Rate，必需。贷款利率。</li><li>Nper，必需。贷款的总期数。</li><li>Pv，必需。贷款总额。</li><li>Fv，可选。未来值，或在最后一次付款后可以获得的现金余额。如果忽略，则此值为0。</li><li>Type，可选。用以指定付款时间在期初还是在期末。1表示起初，0表示在期末。默认为0。</li></ul>
+<div id="footnotes"><hr><div id="footnotelist"><ol><li id="fn:1">等比数列求和公式：$S_n=a_1\cdot\frac{1-q^n}{1-q}=\frac{a_1-a_n*q}{1-q} (q\neq1)$，$a_1$为基数，$q$为等比系数。<a href="#fnref:1" rev="footnote"> ↩</a></li></ol></div></div>
       
     </div>
 
@@ -379,13 +375,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/http/" rel="tag">#http</a>
+            <a href="/tags/贷款/" rel="tag">#贷款</a>
           
-            <a href="/tags/rfc/" rel="tag">#rfc</a>
+            <a href="/tags/等额本息/" rel="tag">#等额本息</a>
           
-            <a href="/tags/协议/" rel="tag">#协议</a>
+            <a href="/tags/excel/" rel="tag">#excel</a>
           
-            <a href="/tags/http1-1/" rel="tag">#http1.1</a>
+            <a href="/tags/pmt/" rel="tag">#pmt</a>
           
         </div>
       
@@ -394,17 +390,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/article/http-status-code.html" rel="next" title="HTTP 状态码">
-                <i class="fa fa-chevron-left"></i> HTTP 状态码
+              <a href="/article/markdown-syntax.html" rel="next" title="markdown语法说明">
+                <i class="fa fa-chevron-left"></i> markdown语法说明
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/article/markdown-syntax.html" rel="prev" title="markdown语法说明">
-                markdown语法说明 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -430,8 +422,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="article/rfc2616-is-obsoleted.html"
-           data-title="HTTP1.1协议更新，RFC2616被废弃" data-url="http://xovel.cn/article/rfc2616-is-obsoleted.html">
+      <div class="ds-thread" data-thread-key="article/equal-loan-payment.html"
+           data-title="贷款中的等额本息计算方法" data-url="http://xovel.cn/article/equal-loan-payment.html">
       </div>
     
   </div>
@@ -555,7 +547,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念介绍"><span class="nav-number">1.</span> <span class="nav-text">概念介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#等额本息"><span class="nav-number">1.1.</span> <span class="nav-text">等额本息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#等额本金"><span class="nav-number">1.2.</span> <span class="nav-text">等额本金</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#每月还款额的计算方式"><span class="nav-number">2.</span> <span class="nav-text">每月还款额的计算方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#等额本息-1"><span class="nav-number">2.1.</span> <span class="nav-text">等额本息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#等额本金-1"><span class="nav-number">2.2.</span> <span class="nav-text">等额本金</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Excel计算"><span class="nav-number">3.</span> <span class="nav-text">Excel计算</span></a></li></ol></div>
             
           </div>
         </section>
@@ -697,6 +689,26 @@
   
   
   
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
   
 
