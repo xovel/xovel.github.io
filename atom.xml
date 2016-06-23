@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-06-23T07:32:40.112Z</updated>
+  <updated>2016-06-23T07:45:39.647Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/mathjax-basic-tutorial-and-quick-reference.html"/>
     <id>http://xovel.cn/article/mathjax-basic-tutorial-and-quick-reference.html</id>
     <published>2016-06-23T02:14:36.000Z</published>
-    <updated>2016-06-23T07:32:40.112Z</updated>
+    <updated>2016-06-23T07:45:39.647Z</updated>
     
     <content type="html">&lt;p&gt;MathJax是一个JavaScript显示引擎，用来在浏览器上显示数学公式。正如它的口号：&lt;code&gt;Beautiful math in all browsers&lt;/code&gt;，MathJax提供优美的数学公式展现。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -226,7 +226,7 @@
 &lt;h3 id=&quot;分组与界定&quot;&gt;&lt;a href=&quot;#分组与界定&quot; class=&quot;headerlink&quot; title=&quot;分组与界定&quot;&gt;&lt;/a&gt;分组与界定&lt;/h3&gt;&lt;p&gt;在上标、下标和其他操作中，操作对象仅对下一个“组”有效。这个“组”可以是一个单个符号，或者使用花括号&lt;code&gt;{...}&lt;/code&gt;包裹起来的内容。&lt;/p&gt;
 &lt;p&gt;对于10的10次方这样的一个公式，如果使用&lt;code&gt;10^10&lt;/code&gt;，将会得到$10^10$。对后面的&lt;code&gt;10&lt;/code&gt;使用花括号包裹即可：&lt;code&gt;10^{10}&lt;/code&gt;，$10^{10}$。&lt;/p&gt;
 &lt;p&gt;对于连续上标或者下标的情形，同样需要使用花括号进行定界，&lt;code&gt;x^5^6&lt;/code&gt;是一个错误的公式。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;{x^y}^z&lt;/code&gt;：${x^y}^z$，&lt;code&gt;x^{y^z}&lt;/code&gt;：$x^{y^z}$，两者结果一样。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{x^y}^z&lt;/code&gt;：${x^y}^z$，&lt;code&gt;x^{y^z}&lt;/code&gt;：$x^{y^z}$，注意区分两者的不同。&lt;/p&gt;
 &lt;p&gt;注意区分这两个公式：&lt;code&gt;x_i^2&lt;/code&gt;，$x_i^2$ 和&lt;code&gt;x_{i^2}&lt;/code&gt;，$x_{i^2}$。&lt;/p&gt;
 &lt;h3 id=&quot;括号组&quot;&gt;&lt;a href=&quot;#括号组&quot; class=&quot;headerlink&quot; title=&quot;括号组&quot;&gt;&lt;/a&gt;括号组&lt;/h3&gt;&lt;p&gt;圆括号和方括号使用符号&lt;code&gt;()[]&lt;/code&gt;即可：$(2+3)[4+4]$。&lt;/p&gt;
 &lt;p&gt;由于花括号&lt;code&gt;{}&lt;/code&gt;被用来作为分组符号，故而使用&lt;code&gt;\{&lt;/code&gt;和&lt;code&gt;\}&lt;/code&gt;来表示：$\{\}$。也可以使用&lt;code&gt;\lbrace&lt;/code&gt;和&lt;code&gt;\rbrace&lt;/code&gt;来表示：$\lbrace\rbrace$。&lt;/p&gt;
@@ -1772,9 +1772,9 @@ ends up on two lines
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
       <category term="specificity" scheme="http://xovel.cn/tags/specificity/"/>
     
@@ -2242,9 +2242,9 @@ display: unset
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
       <category term="display" scheme="http://xovel.cn/tags/display/"/>
     
@@ -2293,9 +2293,9 @@ display: unset
       <category term="前端" scheme="http://xovel.cn/categories/web/frontend/"/>
     
     
-      <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
     
   </entry>
   

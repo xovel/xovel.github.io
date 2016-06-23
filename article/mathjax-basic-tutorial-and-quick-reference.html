@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://xovel.cn/article/mathjax-basic-tutorial-and-quick-reference.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="MathJax是一个开源JavaScript库，提供优美的数学公式展现，它支持LaTeX、MathML、AsciiMath符号，可以运行于所有流行浏览器上；本文根据Stackexchange上的一篇关于MathJax的基础教程与快速参考的文章整理而成。更多内容可前往Stackexchange的原页面进行详细阅读。">
-<meta property="og:updated_time" content="2016-06-23T07:32:40.112Z">
+<meta property="og:updated_time" content="2016-06-23T07:45:39.647Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MathJax基础教程与快速参考">
 <meta name="twitter:description" content="MathJax是一个开源JavaScript库，提供优美的数学公式展现，它支持LaTeX、MathML、AsciiMath符号，可以运行于所有流行浏览器上；本文根据Stackexchange上的一篇关于MathJax的基础教程与快速参考的文章整理而成。更多内容可前往Stackexchange的原页面进行详细阅读。">
@@ -534,7 +534,7 @@
 <h3 id="分组与界定"><a href="#分组与界定" class="headerlink" title="分组与界定"></a>分组与界定</h3><p>在上标、下标和其他操作中，操作对象仅对下一个“组”有效。这个“组”可以是一个单个符号，或者使用花括号<code>{...}</code>包裹起来的内容。</p>
 <p>对于10的10次方这样的一个公式，如果使用<code>10^10</code>，将会得到$10^10$。对后面的<code>10</code>使用花括号包裹即可：<code>10^{10}</code>，$10^{10}$。</p>
 <p>对于连续上标或者下标的情形，同样需要使用花括号进行定界，<code>x^5^6</code>是一个错误的公式。</p>
-<p><code>{x^y}^z</code>：${x^y}^z$，<code>x^{y^z}</code>：$x^{y^z}$，两者结果一样。</p>
+<p><code>{x^y}^z</code>：${x^y}^z$，<code>x^{y^z}</code>：$x^{y^z}$，注意区分两者的不同。</p>
 <p>注意区分这两个公式：<code>x_i^2</code>，$x_i^2$ 和<code>x_{i^2}</code>，$x_{i^2}$。</p>
 <h3 id="括号组"><a href="#括号组" class="headerlink" title="括号组"></a>括号组</h3><p>圆括号和方括号使用符号<code>()[]</code>即可：$(2+3)[4+4]$。</p>
 <p>由于花括号<code>{}</code>被用来作为分组符号，故而使用<code>\{</code>和<code>\}</code>来表示：$\{\}$。也可以使用<code>\lbrace</code>和<code>\rbrace</code>来表示：$\lbrace\rbrace$。</p>
