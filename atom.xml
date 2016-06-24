@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-06-24T00:39:02.834Z</updated>
+  <updated>2016-06-24T01:23:48.573Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>nodeType属性详解</title>
+    <link href="http://xovel.cn/article/dom-nodetype.html"/>
+    <id>http://xovel.cn/article/dom-nodetype.html</id>
+    <published>2016-06-24T00:45:25.000Z</published>
+    <updated>2016-06-24T01:23:48.573Z</updated>
+    
+    <content type="html">&lt;p&gt;只读属性&lt;code&gt;Node.nodeType&lt;/code&gt;用来表示节点的类型。&lt;/p&gt;
+&lt;h3 id=&quot;描述&quot;&gt;&lt;a href=&quot;#描述&quot; class=&quot;headerlink&quot; title=&quot;描述&quot;&gt;&lt;/a&gt;描述&lt;/h3&gt;&lt;p&gt;&lt;code&gt;nodeType&lt;/code&gt;属性用来区分不同类型的节点，如元素&lt;code&gt;elements&lt;/code&gt;，文本&lt;code&gt;text&lt;/code&gt;和注释&lt;code&gt;comments&lt;/code&gt;等。&lt;/p&gt;
+&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;var type = node.nodeType;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;返回一个整数，表示该节点的类型。下面将列出节点类型常量。&lt;/p&gt;
+&lt;h3 id=&quot;常量&quot;&gt;&lt;a href=&quot;#常量&quot; class=&quot;headerlink&quot; title=&quot;常量&quot;&gt;&lt;/a&gt;常量&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Node.ELEMENT_NODE&lt;/code&gt;，1，&lt;code&gt;Element&lt;/code&gt;，&lt;code&gt;元素&lt;/code&gt;，如&lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;，&lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;Node.ATTRIBUTE_NODE&lt;/code&gt;，2，&lt;code&gt;Attr&lt;/code&gt;，元素的属性。&lt;em&gt;已废弃&lt;/em&gt;。&lt;/li&gt;&lt;li&gt;&lt;code&gt;Node.TEXT_NODE&lt;/code&gt;，3，&lt;code&gt;Text&lt;/code&gt;，文本。元素或者属性的实际文本。&lt;/li&gt;&lt;li&gt;&lt;code&gt;Node.CDATA_SECTION_NODE&lt;/code&gt;，4，&lt;code&gt;CDATASection&lt;/code&gt;，文档中的 CDATA 部分。&lt;em&gt;已废弃&lt;/em&gt;。&lt;/li&gt;&lt;li&gt;&lt;code&gt;Node.ENTITY_REFERENCE_NODE&lt;/code&gt;，5，&lt;code&gt;EntityReference&lt;/code&gt;，XML的实体引用节点。&lt;em&gt;已废弃&lt;/em&gt;。&lt;/li&gt;&lt;li&gt;&lt;code&gt;Node.ENTITY_NODE&lt;/code&gt;，6，&lt;code&gt;Entity&lt;/code&gt;，XML中的&lt;code&gt;&amp;lt;!ENTITY ...&amp;gt;&lt;/code&gt;节点。&lt;em&gt;已废弃&lt;/em&gt;。&lt;/li&gt;&lt;li&gt;&lt;code&gt;Node.PROCESSING_INSTRUCTION_NODE&lt;/code&gt;，7，&lt;code&gt;ProcessingInstruction&lt;/code&gt;，XML文档中的处理指令声明，如&lt;code&gt;&amp;lt;?xml-stylesheet ... ?&amp;gt;&lt;/code&gt;。&lt;/li&gt;&lt;li&gt;&lt;code&gt;Node.COMMENT_NODE&lt;/code&gt;，8，&lt;code&gt;Comment&lt;/code&gt;，注释。&lt;/li&gt;&lt;li&gt;&lt;code&gt;Node.DOCUMENT_NODE&lt;/code&gt;，9，&lt;code&gt;Document&lt;/code&gt;，文档。&lt;/li&gt;&lt;li&gt;&lt;code&gt;Node.DOCUMENT_TYPE_NODE&lt;/code&gt;，10，&lt;code&gt;DocumentType&lt;/code&gt;，描述文档类型，如&lt;code&gt;HTML5&lt;/code&gt;的声明&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/code&gt;。&lt;/li&gt;&lt;li&gt;&lt;code&gt;Node.DOCUMENT_FRAGMENT_NODE&lt;/code&gt;，11，&lt;code&gt;DocumentFragment&lt;/code&gt;，文档片段。&lt;/li&gt;&lt;li&gt;&lt;code&gt;Node.NOTATION_NODE&lt;/code&gt;，12，&lt;code&gt;Notation&lt;/code&gt;，XML的&lt;code&gt;&amp;lt;!NOTATION ...&amp;gt;&lt;/code&gt;节点。&lt;em&gt;已废弃&lt;/em&gt;。&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在&lt;a href=&quot;https://www.w3.org/TR/2015/REC-dom-20151119/#dom-node-nodetype&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOM4的规范草案&lt;/a&gt;中，nodeType属性值&lt;code&gt;2&lt;/code&gt;、&lt;code&gt;4&lt;/code&gt;、&lt;code&gt;5&lt;/code&gt;、&lt;code&gt;6&lt;/code&gt;、&lt;code&gt;12&lt;/code&gt;均已废弃不再使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;示例&quot;&gt;&lt;a href=&quot;#示例&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;document.nodeType === Node.DOCUMENT_NODE; // true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;document.doctype.nodeType === Node.DOCUMENT_TYPE_NODE; // true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var fragment = document.createDocumentFragment();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;fragment.nodeType === Node.DOCUMENT_FRAGMENT_NODE; // true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var p = document.createElement(&amp;quot;p&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;p.textContent = &amp;quot;Once upon a time...&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;p.nodeType === Node.ELEMENT_NODE; // true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;p.firstChild.nodeType === Node.TEXT_NODE; // true&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;以下示例代码检查文档的第一个节点是否为注释；如果不是，则进行一个提示。&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; node = &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.documentElement.firstChild;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (node.nodeType != Node.COMMENT_NODE)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&quot;You should comment your code well!&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;p&gt;参考文档：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Node.nodeType - Web APIs | MDN&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1950641247&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Document Object Model (DOM) Level 3 Core Specification - Node.nodeType&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      只读属性Node.nodeType是一个整数，用来区分不同类型的节点，如元素，文本，注释等。
+    
+    </summary>
+    
+      <category term="WEB" scheme="http://xovel.cn/categories/web/"/>
+    
+      <category term="DOM" scheme="http://xovel.cn/categories/web/dom/"/>
+    
+    
+      <category term="DOM" scheme="http://xovel.cn/tags/DOM/"/>
+    
+      <category term="nodetype" scheme="http://xovel.cn/tags/nodetype/"/>
+    
+      <category term="W3C" scheme="http://xovel.cn/tags/W3C/"/>
+    
+  </entry>
   
   <entry>
     <title>MathJax基础教程与快速参考</title>
@@ -1772,9 +1818,9 @@ ends up on two lines
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
       <category term="specificity" scheme="http://xovel.cn/tags/specificity/"/>
     
@@ -2054,11 +2100,11 @@ ends up on two lines
       <category term="HTML" scheme="http://xovel.cn/categories/web/html/"/>
     
     
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
-    
       <category term="lang" scheme="http://xovel.cn/tags/lang/"/>
     
       <category term="html" scheme="http://xovel.cn/tags/html/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
   </entry>
   
@@ -2242,9 +2288,9 @@ display: unset
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
       <category term="display" scheme="http://xovel.cn/tags/display/"/>
     
