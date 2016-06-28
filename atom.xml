@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-06-24T01:23:48.573Z</updated>
+  <updated>2016-06-28T10:04:41.619Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title>nodeType属性详解</title>
     <link href="http://xovel.cn/article/dom-nodetype.html"/>
     <id>http://xovel.cn/article/dom-nodetype.html</id>
-    <published>2016-06-24T00:45:25.000Z</published>
-    <updated>2016-06-24T01:23:48.573Z</updated>
+    <published>2016-06-28T04:45:25.000Z</published>
+    <updated>2016-06-28T10:04:41.619Z</updated>
     
     <content type="html">&lt;p&gt;只读属性&lt;code&gt;Node.nodeType&lt;/code&gt;用来表示节点的类型。&lt;/p&gt;
 &lt;h3 id=&quot;描述&quot;&gt;&lt;a href=&quot;#描述&quot; class=&quot;headerlink&quot; title=&quot;描述&quot;&gt;&lt;/a&gt;描述&lt;/h3&gt;&lt;p&gt;&lt;code&gt;nodeType&lt;/code&gt;属性用来区分不同类型的节点，如元素&lt;code&gt;elements&lt;/code&gt;，文本&lt;code&gt;text&lt;/code&gt;和注释&lt;code&gt;comments&lt;/code&gt;等。&lt;/p&gt;
@@ -1818,9 +1818,9 @@ ends up on two lines
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
       <category term="specificity" scheme="http://xovel.cn/tags/specificity/"/>
     
@@ -2100,11 +2100,11 @@ ends up on two lines
       <category term="HTML" scheme="http://xovel.cn/categories/web/html/"/>
     
     
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
+    
       <category term="lang" scheme="http://xovel.cn/tags/lang/"/>
     
       <category term="html" scheme="http://xovel.cn/tags/html/"/>
-    
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
   </entry>
   
@@ -2288,9 +2288,9 @@ display: unset
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
       <category term="display" scheme="http://xovel.cn/tags/display/"/>
     
