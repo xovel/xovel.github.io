@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-06-28T10:04:41.619Z</updated>
+  <updated>2016-06-30T06:29:04.659Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,67 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>路由器当交换机使用</title>
+    <link href="http://xovel.cn/article/turn-a-router-to-a-switch.html"/>
+    <id>http://xovel.cn/article/turn-a-router-to-a-switch.html</id>
+    <published>2016-06-30T03:35:26.000Z</published>
+    <updated>2016-06-30T06:29:04.659Z</updated>
+    
+    <content type="html">&lt;p&gt;昨天，我哥因为要自主创业，搬了新房子，晚上我就去了那边。新房子总体来说环境非常好，适合居家跟办公一起。&lt;/p&gt;
+&lt;p&gt;晚餐比较丰盛，有龙虾、血鸭、水煮鱼，一行人吃的很是开心，一边吃喝一边畅谈生活与事业，不觉到了十点多。&lt;/p&gt;
+&lt;p&gt;一番整顿与休息，我们便开始安装办公桌。&lt;del&gt;安装期间出现了各种问题，比如布局、布线、螺丝钉嵌入等等，此处不表&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;由于我哥那边是刚搬进去，宽带还未设置完整。之前在公司上班的时候宽带网线，我会帮着处理一些，于是弄网络这个任务就交到了我的头上。&lt;/p&gt;
+&lt;p&gt;房子里面的网络现状是：有一个光纤猫入户，分出四条线，从墙壁里面走线分到四个不同的地方，三个小房间和大厅，大厅那个主要用于网络电视&lt;del&gt;然而并没有电视机&lt;/del&gt;方面的。&lt;/p&gt;
+&lt;p&gt;但是在设备上，我们并没有一个合适的交换机，路由器倒是有三四个。&lt;/p&gt;
+&lt;p&gt;于是问题来了：要使有线网络能够多人使用，就必须对第二个路由器做特殊的设置。&lt;/p&gt;
+&lt;p&gt;种种原因，桥接的方式被弃用，于是，剩下的问题就是：如何把一个路由器当交换机使用。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;路由器当作交换机使用的意思是：不使用WAN口，其它的LAN口相当于交换机的网口。&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;之前我在泉州工作的时候，曾经购买过一个无线路由器，直接将网线插在路由器的LAN口就可以了。其实到昨天我才知道这个方法并不会对所有路由器有效，因为泉州那个路由器自带了更改IP等之类的功能，可以直接插线就能当作交换机使用。&lt;/p&gt;
+&lt;p&gt;一番折腾&lt;del&gt;可能是太久没有设置路由器相关操作，不小心走了一些弯路&lt;/del&gt;总算是把路由器给设置好了。下面就稍作一番总结，谈不上什么技术，权当作是一个工作生活中的小记录吧。&lt;/p&gt;
+&lt;p&gt;以操作的步骤依次进行说明吧：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;将第二个路由器连接上电脑，并进入设置界面。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;路由器的背面通常会有路由器的IP与管理员帐密，直接访问即可进入路由器管理设置界面。&lt;br&gt;我处理的路由器型号为迅捷&lt;code&gt;FWR310&lt;/code&gt;。直接连接光纤猫的路由器为&lt;code&gt;TP-Link 845N&lt;/code&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;&lt;li&gt;&lt;p&gt;在设置界面找到DHCP设置项，&lt;strong&gt;关闭&lt;/strong&gt;之。&lt;/p&gt;
+&lt;/li&gt;&lt;li&gt;&lt;p&gt;更改路由器的IP，使其与第一个路由器不同。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里我修改IP为&lt;code&gt;192.168.0.8&lt;/code&gt;&lt;br&gt;&lt;code&gt;TP-Link 845N&lt;/code&gt;的IP未更改，是默认的&lt;code&gt;192.168.1.1&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;&lt;li&gt;&lt;p&gt;重启。&lt;/p&gt;
+&lt;/li&gt;&lt;/ol&gt;
+&lt;p&gt;大功告成，重新连接电脑后室内所有设备均可进行有线连接上网了。&lt;/p&gt;
+&lt;p&gt;完事，时间不觉已经到了夜里一两点了。洗澡，睡觉。&lt;del&gt;白天还要去上班呢&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;如依然不行，可尝试禁用路由器的&lt;code&gt;DNS&lt;/code&gt;和&lt;code&gt;防火墙&lt;/code&gt;功能。&lt;/p&gt;
+&lt;p&gt;如果路由器之前有设置，可以&lt;strong&gt;事先重置&lt;/strong&gt;之。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;小TIP：长按路由器电线入口旁边的&lt;code&gt;reset&lt;/code&gt;/&lt;code&gt;重置&lt;/code&gt;（&lt;em&gt;可能需要用到牙签之类的针状物&lt;/em&gt;）按钮可以重置路由器。长按时间一般为3-5秒，路由器所有指示灯全部亮起意味着重置成功。&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      本文通过一个亲身经历，简单介绍一下如何将一个路由器当作交换机使用。
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
+    
+    
+      <category term="路由器" scheme="http://xovel.cn/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
+    
+      <category term="交换机" scheme="http://xovel.cn/tags/%E4%BA%A4%E6%8D%A2%E6%9C%BA/"/>
+    
+      <category term="DHCP" scheme="http://xovel.cn/tags/DHCP/"/>
+    
+      <category term="IP" scheme="http://xovel.cn/tags/IP/"/>
+    
+  </entry>
   
   <entry>
     <title>nodeType属性详解</title>
@@ -1818,9 +1879,9 @@ ends up on two lines
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
       <category term="specificity" scheme="http://xovel.cn/tags/specificity/"/>
     
@@ -2288,9 +2349,9 @@ display: unset
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
       <category term="display" scheme="http://xovel.cn/tags/display/"/>
     
@@ -2339,9 +2400,9 @@ display: unset
       <category term="前端" scheme="http://xovel.cn/categories/web/frontend/"/>
     
     
-      <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
     
   </entry>
   
