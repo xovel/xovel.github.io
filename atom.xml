@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-06-30T06:29:04.659Z</updated>
+  <updated>2016-06-30T10:40:01.997Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,65 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>正则表达式之零宽断言</title>
+    <link href="http://xovel.cn/article/regexp-lookahead-lookbehind.html"/>
+    <id>http://xovel.cn/article/regexp-lookahead-lookbehind.html</id>
+    <published>2016-06-30T07:19:31.000Z</published>
+    <updated>2016-06-30T10:40:01.997Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;本篇文章提到的零宽断言是正则表达式高级语法，阅读此文需要有一定的正则表达式基础。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;关于断言&quot;&gt;&lt;a href=&quot;#关于断言&quot; class=&quot;headerlink&quot; title=&quot;关于断言&quot;&gt;&lt;/a&gt;关于断言&lt;/h3&gt;&lt;p&gt;断言（&lt;code&gt;assertion&lt;/code&gt;）在正则表达式里面有着举足轻重的作用。通常情况下指的是在目标字符串的当前位置进行的一种判断测试，但这种测试不会占用目标字符串，这意味着不会移动目标字符串在当前匹配中的位置。&lt;/p&gt;
+&lt;h3 id=&quot;断言元字符&quot;&gt;&lt;a href=&quot;#断言元字符&quot; class=&quot;headerlink&quot; title=&quot;断言元字符&quot;&gt;&lt;/a&gt;断言元字符&lt;/h3&gt;&lt;p&gt;最常用的两个断言元字符是&lt;code&gt;^&lt;/code&gt;和&lt;code&gt;$&lt;/code&gt;，它们分别表示字符串开始和字符串结束。&lt;/p&gt;
+&lt;p&gt;其他一些断言元字符参见下表：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;\b&lt;/code&gt;，单词分界符&lt;/li&gt;&lt;li&gt;&lt;code&gt;\B&lt;/code&gt;，非单词分界符&lt;/li&gt;&lt;li&gt;&lt;code&gt;\A&lt;/code&gt;，字符串的开头，忽略&lt;code&gt;multiline&lt;/code&gt;标识&lt;/li&gt;&lt;li&gt;&lt;code&gt;\Z&lt;/code&gt;，字符串的结尾或者字符串结尾的换行符&lt;code&gt;\n&lt;/code&gt;之前，忽略&lt;code&gt;multiline&lt;/code&gt;标识&lt;/li&gt;&lt;li&gt;&lt;code&gt;\z&lt;/code&gt;，字符串的结尾，忽略&lt;code&gt;multiline&lt;/code&gt;标识&lt;/li&gt;&lt;li&gt;&lt;code&gt;\G&lt;/code&gt;，字符串的第一个位置&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;\A&lt;/code&gt;、&lt;code&gt;\Z&lt;/code&gt;、&lt;code&gt;\z&lt;/code&gt;、&lt;code&gt;\G&lt;/code&gt;很少使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;捕获与非捕获组&quot;&gt;&lt;a href=&quot;#捕获与非捕获组&quot; class=&quot;headerlink&quot; title=&quot;捕获与非捕获组&quot;&gt;&lt;/a&gt;捕获与非捕获组&lt;/h3&gt;&lt;p&gt;非捕获组&lt;code&gt;(?:pattern)&lt;/code&gt;不是本文的知识点，这里不做详细讲解，文章后面有参考资料可自行参阅。&lt;/p&gt;
+&lt;h3 id=&quot;零宽断言&quot;&gt;&lt;a href=&quot;#零宽断言&quot; class=&quot;headerlink&quot; title=&quot;零宽断言&quot;&gt;&lt;/a&gt;零宽断言&lt;/h3&gt;&lt;p&gt;断言元字符通常是基于当前位置的测试，断言也可以支持更加复杂的判断条件。更复杂的断言以子模式来进行表示，包括先行断言和后行断言。两者都是本文要解说的&lt;code&gt;零宽断言&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;同断言元字符一样，零宽断言的判断匹配只做条件匹配，不会记录匹配结果，也不会匹配字符。&lt;/p&gt;
+&lt;h4 id=&quot;零宽正向先行断言&quot;&gt;&lt;a href=&quot;#零宽正向先行断言&quot; class=&quot;headerlink&quot; title=&quot;零宽正向先行断言&quot;&gt;&lt;/a&gt;零宽正向先行断言&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;英文：&lt;code&gt;zero-width positive lookahead assertion&lt;/code&gt;&lt;/li&gt;&lt;li&gt;简称：&lt;code&gt;positive lookahead&lt;/code&gt;&lt;/li&gt;&lt;li&gt;语法：&lt;code&gt;(?=pattern)&lt;/code&gt;&lt;/li&gt;&lt;li&gt;概述：从当前位置开始测试后面的字符串&lt;strong&gt;匹配&lt;/strong&gt;&lt;code&gt;pattern&lt;/code&gt;，仅当右侧&lt;strong&gt;匹配成功&lt;/strong&gt;时才继续。&lt;/li&gt;&lt;li&gt;举例：&lt;code&gt;[a-zA-Z]+(?=\d)&lt;/code&gt;，匹配一个后面跟着数字的字母，但匹配结果不包含该数字。&lt;/li&gt;&lt;/ul&gt;
+&lt;h4 id=&quot;零宽负向先行断言&quot;&gt;&lt;a href=&quot;#零宽负向先行断言&quot; class=&quot;headerlink&quot; title=&quot;零宽负向先行断言&quot;&gt;&lt;/a&gt;零宽负向先行断言&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;英文：&lt;code&gt;zero-width negative lookahead assertion&lt;/code&gt;&lt;/li&gt;&lt;li&gt;简称：&lt;code&gt;negative lookahead&lt;/code&gt;&lt;/li&gt;&lt;li&gt;语法：&lt;code&gt;(?!pattern)&lt;/code&gt;&lt;/li&gt;&lt;li&gt;概述：从当前位置开始测试后面的字符串&lt;strong&gt;不匹配&lt;/strong&gt;&lt;code&gt;pattern&lt;/code&gt;，仅当右侧&lt;strong&gt;不能匹配&lt;/strong&gt;时才继续。&lt;/li&gt;&lt;li&gt;举例：使用正则表达式&lt;code&gt;re(?!g)&lt;/code&gt;，匹配字符串&lt;code&gt;regular expression&lt;/code&gt;，则&lt;em&gt;&lt;strong&gt;re&lt;/strong&gt;gular&lt;/em&gt;中的&lt;em&gt;re&lt;/em&gt;不会被匹配，&lt;em&gt;exp&lt;strong&gt;re&lt;/strong&gt;ssion&lt;/em&gt;中的&lt;em&gt;re&lt;/em&gt;将会被匹配。&lt;/li&gt;&lt;/ul&gt;
+&lt;h4 id=&quot;零宽正向后行断言&quot;&gt;&lt;a href=&quot;#零宽正向后行断言&quot; class=&quot;headerlink&quot; title=&quot;零宽正向后行断言&quot;&gt;&lt;/a&gt;零宽正向后行断言&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;英文：&lt;code&gt;zero-width positive lookbehind assertion&lt;/code&gt;&lt;/li&gt;&lt;li&gt;简称：&lt;code&gt;positive lookbehind&lt;/code&gt;&lt;/li&gt;&lt;li&gt;语法：&lt;code&gt;(?&amp;lt;=pattern)&lt;/code&gt;&lt;/li&gt;&lt;li&gt;概述：从当前位置开始测试前面的字符串&lt;strong&gt;匹配&lt;/strong&gt;&lt;code&gt;pattern&lt;/code&gt;，仅当左侧&lt;em&gt;匹配成功&lt;/em&gt;时才继续。&lt;/li&gt;&lt;/ul&gt;
+&lt;h4 id=&quot;零宽正向后行断言-1&quot;&gt;&lt;a href=&quot;#零宽正向后行断言-1&quot; class=&quot;headerlink&quot; title=&quot;零宽正向后行断言&quot;&gt;&lt;/a&gt;零宽正向后行断言&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;英文：&lt;code&gt;zero-width negative lookbehind assertion&lt;/code&gt;&lt;/li&gt;&lt;li&gt;简称：&lt;code&gt;negative lookbehind&lt;/code&gt;&lt;/li&gt;&lt;li&gt;语法：&lt;code&gt;(?&amp;lt;!pattern)&lt;/code&gt;&lt;/li&gt;&lt;li&gt;概述：从当前位置开始测试前面的字符串&lt;em&gt;不匹配&lt;/em&gt;&lt;code&gt;pattern&lt;/code&gt;，仅当左侧&lt;em&gt;不能匹配&lt;/em&gt;时才继续。&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：后行断言由于存在回溯情况，&lt;code&gt;JavaScript&lt;/code&gt;&lt;strong&gt;没有对其进行实现&lt;/strong&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/20154937&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;为什么 JavaScript 的正则不支持 “零宽度正回顾后发断言” ？&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://regexr.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RegExr - 在线测试正则表达式&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://regexper.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Regexper - 根据正则表达式生成SVG示意图&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RegExp - JavaScript | MDN&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/zh-cn/library/ae5bf541(v=vs.100&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Regular Expression Syntax - 微软官方正则表达式参考&lt;/a&gt;.aspx)&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.regular-expressions.info/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Regular-Expressions.info - The Premier website about Regular Expressions&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.regular-expressions.info/lookaround.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Regex Tutorial - Lookahead and Lookbehind Zero-Length Assertions&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.regular-expressions.info/brackets.html&quot; title=&quot;分组与捕获&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Regex Tutorial - Parentheses for Grouping and Capturing&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.regular-expressions.info/refcapture.html&quot; title=&quot;捕获组详细介绍，内含各种编程语言对其的实现&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Regular Expression Reference: Capturing Groups and Backreferences&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/3512471/what-is-a-non-capturing-group&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;regex - What is a non capturing group? (?:) - Stack Overflow&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://blog.getify.com/to-capture-or-not/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;To capture or not to capture | getiblog&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;本篇文章提到的零宽断言是正则表达式高级语法，阅读此文需要有一定的正则表达式基础。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;关于断言&quot;&gt;&lt;a href=&quot;#关于断言&quot; class=&quot;headerlink&quot; title=&quot;关于断言&quot;&gt;&lt;/a
+    
+    </summary>
+    
+      <category term="开发" scheme="http://xovel.cn/categories/dev/"/>
+    
+      <category term="文档" scheme="http://xovel.cn/categories/dev/docs/"/>
+    
+    
+      <category term="正则表达式" scheme="http://xovel.cn/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+      <category term="断言" scheme="http://xovel.cn/tags/%E6%96%AD%E8%A8%80/"/>
+    
+      <category term="零宽断言" scheme="http://xovel.cn/tags/%E9%9B%B6%E5%AE%BD%E6%96%AD%E8%A8%80/"/>
+    
+  </entry>
   
   <entry>
     <title>路由器当交换机使用</title>
@@ -1879,9 +1938,9 @@ ends up on two lines
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
       <category term="specificity" scheme="http://xovel.cn/tags/specificity/"/>
     
@@ -2161,11 +2220,11 @@ ends up on two lines
       <category term="HTML" scheme="http://xovel.cn/categories/web/html/"/>
     
     
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
-    
       <category term="lang" scheme="http://xovel.cn/tags/lang/"/>
     
       <category term="html" scheme="http://xovel.cn/tags/html/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
   </entry>
   
@@ -2349,9 +2408,9 @@ display: unset
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
       <category term="display" scheme="http://xovel.cn/tags/display/"/>
     
@@ -2400,9 +2459,9 @@ display: unset
       <category term="前端" scheme="http://xovel.cn/categories/web/frontend/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
   </entry>
   

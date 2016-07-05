@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xovel.cn/article/regexp-lookahead-lookbehind.html</loc>
+    
+    <lastmod>2016-06-30T10:40:01.997Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xovel.cn/article/turn-a-router-to-a-switch.html</loc>
     
     <lastmod>2016-06-30T06:29:04.659Z</lastmod>

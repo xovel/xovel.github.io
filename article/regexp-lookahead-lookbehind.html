@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="http,rfc,协议,http1.1," />
+  <meta name="keywords" content="正则表达式,断言,零宽断言," />
 
 
 
@@ -86,16 +86,28 @@
 
 
 
-<meta name="description" content="2014年年中，IETF更新了HTTP/1.1协议：将原来的HTTP/1.1协议（RFC2616）拆开，分成了六个单独的协议。在这六个新的协议说明中，重点对之前语义模糊的部分进行了重新诠释。更新之后的协议变得更易懂、易读。">
+<meta name="description" content="本篇文章提到的零宽断言是正则表达式高级语法，阅读此文需要有一定的正则表达式基础。
+
+关于断言断言（assertion）在正则表达式里面有着举足轻重的作用。通常情况下指的是在目标字符串的当前位置进行的一种判断测试，但这种测试不会占用目标字符串，这意味着不会移动目标字符串在当前匹配中的位置。
+断言元字符最常用的两个断言元字符是^和$，它们分别表示字符串开始和字符串结束。
+其他一些断言元字符参见下表：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTTP1.1协议更新，RFC2616被废弃">
-<meta property="og:url" content="http://xovel.cn/article/rfc2616-is-obsoleted.html">
+<meta property="og:title" content="正则表达式之零宽断言">
+<meta property="og:url" content="http://xovel.cn/article/regexp-lookahead-lookbehind.html">
 <meta property="og:site_name" content="清风轩">
-<meta property="og:description" content="2014年年中，IETF更新了HTTP/1.1协议：将原来的HTTP/1.1协议（RFC2616）拆开，分成了六个单独的协议。在这六个新的协议说明中，重点对之前语义模糊的部分进行了重新诠释。更新之后的协议变得更易懂、易读。">
-<meta property="og:updated_time" content="2016-06-15T03:47:26.921Z">
+<meta property="og:description" content="本篇文章提到的零宽断言是正则表达式高级语法，阅读此文需要有一定的正则表达式基础。
+
+关于断言断言（assertion）在正则表达式里面有着举足轻重的作用。通常情况下指的是在目标字符串的当前位置进行的一种判断测试，但这种测试不会占用目标字符串，这意味着不会移动目标字符串在当前匹配中的位置。
+断言元字符最常用的两个断言元字符是^和$，它们分别表示字符串开始和字符串结束。
+其他一些断言元字符参见下表：">
+<meta property="og:updated_time" content="2016-06-30T10:40:01.997Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTTP1.1协议更新，RFC2616被废弃">
-<meta name="twitter:description" content="2014年年中，IETF更新了HTTP/1.1协议：将原来的HTTP/1.1协议（RFC2616）拆开，分成了六个单独的协议。在这六个新的协议说明中，重点对之前语义模糊的部分进行了重新诠释。更新之后的协议变得更易懂、易读。">
+<meta name="twitter:title" content="正则表达式之零宽断言">
+<meta name="twitter:description" content="本篇文章提到的零宽断言是正则表达式高级语法，阅读此文需要有一定的正则表达式基础。
+
+关于断言断言（assertion）在正则表达式里面有着举足轻重的作用。通常情况下指的是在目标字符串的当前位置进行的一种判断测试，但这种测试不会占用目标字符串，这意味着不会移动目标字符串在当前匹配中的位置。
+断言元字符最常用的两个断言元字符是^和$，它们分别表示字符串开始和字符串结束。
+其他一些断言元字符参见下表：">
 
 
 
@@ -113,7 +125,7 @@
   };
 </script>
 
-  <title> HTTP1.1协议更新，RFC2616被废弃 | 清风轩 </title>
+  <title> 正则表达式之零宽断言 | 清风轩 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -259,7 +271,7 @@
             
             
               
-                HTTP1.1协议更新，RFC2616被废弃
+                正则表达式之零宽断言
               
             
           </h1>
@@ -271,8 +283,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-15T12:16:12+08:00" content="2016-06-15">
-              2016-06-15
+            <time itemprop="dateCreated" datetime="2016-06-30T15:19:31+08:00" content="2016-06-30">
+              2016-06-30
             </time>
           </span>
 
@@ -285,8 +297,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/web/" itemprop="url" rel="index">
-                    <span itemprop="name">WEB</span>
+                  <a href="/categories/dev/" itemprop="url" rel="index">
+                    <span itemprop="name">开发</span>
                   </a>
                 </span>
 
@@ -297,8 +309,8 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/web/http/" itemprop="url" rel="index">
-                    <span itemprop="name">HTTP</span>
+                  <a href="/categories/dev/docs/" itemprop="url" rel="index">
+                    <span itemprop="name">文档</span>
                   </a>
                 </span>
 
@@ -330,34 +342,34 @@
       
 
       
-        <p>2014年年中，IETF更新了HTTP/1.1协议：将原来的HTTP/1.1协议（<a href="https://tools.ietf.org/html/rfc2616" target="_blank" rel="external">RFC2616</a>）拆开，分成了六个单独的协议。在这六个新的协议说明中，重点对之前语义模糊的部分进行了重新诠释。更新之后的协议变得更易懂、易读。</p>
-<a id="more"></a>
-<p>以下是新的六个协议：</p>
-<ul>
-<li>RFC7230 - <a href="http://tools.ietf.org/html/rfc7230" target="_blank" rel="external">HTTP/1.1: Message Syntax and Routing</a> - low-level message parsing and connection management</li><li>RFC7231 - <a href="http://tools.ietf.org/html/rfc7231" target="_blank" rel="external">HTTP/1.1: Semantics and Content</a> - methods, status codes and headers</li><li>RFC7232 - <a href="http://tools.ietf.org/html/rfc7232" target="_blank" rel="external">HTTP/1.1: Conditional Requests</a> - e.g., If-Modified-Since</li><li>RFC7233 - <a href="http://tools.ietf.org/html/rfc7233" target="_blank" rel="external">HTTP/1.1: Range Requests</a> - getting partial content</li><li>RFC7234 - <a href="http://tools.ietf.org/html/rfc7234" target="_blank" rel="external">HTTP/1.1: Caching</a> - browser and intermediary caches</li><li>RFC7235 - <a href="http://tools.ietf.org/html/rfc7235" target="_blank" rel="external">HTTP/1.1: Authentication</a> - a framework for HTTP authentication</li></ul>
-<p>正如Mark Nottingham在其个人博客中的一篇文章（<a href="https://www.mnot.net/blog/2014/06/07/rfc2616_is_dead" target="_blank" rel="external">RFC2616 is Dead</a>）中的吐槽一样：</p>
-<blockquote>
-<p>Don’t use RFC2616. Delete it from your hard drives, bookmarks, and burn (or responsibly recycle) any copies that are printed out.</p>
-<p>不要再使用RFC2616了。将它从你的磁盘、书签中删除，并将打印出来的任何副本烧掉，当然你也可以回收再利用。</p>
+        <blockquote>
+<p>本篇文章提到的零宽断言是正则表达式高级语法，阅读此文需要有一定的正则表达式基础。</p>
 </blockquote>
-<p>RFC2616已经变为废弃状态。</p>
-<p>其实早在2007年，IETF内部就针对HTTP/1.1的修订展开了工作，他们成立了一个名字叫做<a href="https://tools.ietf.org/wg/httpbis/" target="_blank" rel="external">HTTPbis</a>的工作小组，目的是让HTTP/1.1协议规范更加清晰易读，并非对之前的协议进行升级或者添加新的特性。在这个修订过程中，小组成员发布了数十个草稿版本，并处理了<a href="https://trac.tools.ietf.org/wg/httpbis/trac/report/19" target="_blank" rel="external">550+问题</a>。</p>
+<h3 id="关于断言"><a href="#关于断言" class="headerlink" title="关于断言"></a>关于断言</h3><p>断言（<code>assertion</code>）在正则表达式里面有着举足轻重的作用。通常情况下指的是在目标字符串的当前位置进行的一种判断测试，但这种测试不会占用目标字符串，这意味着不会移动目标字符串在当前匹配中的位置。</p>
+<h3 id="断言元字符"><a href="#断言元字符" class="headerlink" title="断言元字符"></a>断言元字符</h3><p>最常用的两个断言元字符是<code>^</code>和<code>$</code>，它们分别表示字符串开始和字符串结束。</p>
+<p>其他一些断言元字符参见下表：</p>
+<ul>
+<li><code>\b</code>，单词分界符</li><li><code>\B</code>，非单词分界符</li><li><code>\A</code>，字符串的开头，忽略<code>multiline</code>标识</li><li><code>\Z</code>，字符串的结尾或者字符串结尾的换行符<code>\n</code>之前，忽略<code>multiline</code>标识</li><li><code>\z</code>，字符串的结尾，忽略<code>multiline</code>标识</li><li><code>\G</code>，字符串的第一个位置</li></ul>
 <blockquote>
-<p>HTTPbis就是现在的HTTP Working Group，其官方主页为：<a href="http://httpwg.org/" target="_blank" rel="external">http://httpwg.org/</a></p>
-<p>关于为何取名HTTPbis，stackoverflow上有个讨论：<a href="http://stackoverflow.com/questions/9105639/httpbis-what-does-bis-mean" target="_blank" rel="external">HTTPbis - what does bis mean?</a></p>
+<p><code>\A</code>、<code>\Z</code>、<code>\z</code>、<code>\G</code>很少使用。</p>
 </blockquote>
-<p>在文档整理过程中，HTTPbis也对HTTP/1.1协议中的一些不合理或者不安全的地方进行了修正与完。在官方文档中描述了对应于RFC2616的变更部分：<a href="http://tools.ietf.org/html/rfc7230#appendix-A.2" target="_blank" rel="external">Changes from RFC 2616</a>。Evert在其博客（<a href="https://evertpot.com/http-11-updated/" target="_blank" rel="external">HTTP/1.1 just got a major update</a>）中有一番总结，指出了其中的一些重大变更：</p>
+<h3 id="捕获与非捕获组"><a href="#捕获与非捕获组" class="headerlink" title="捕获与非捕获组"></a>捕获与非捕获组</h3><p>非捕获组<code>(?:pattern)</code>不是本文的知识点，这里不做详细讲解，文章后面有参考资料可自行参阅。</p>
+<h3 id="零宽断言"><a href="#零宽断言" class="headerlink" title="零宽断言"></a>零宽断言</h3><p>断言元字符通常是基于当前位置的测试，断言也可以支持更加复杂的判断条件。更复杂的断言以子模式来进行表示，包括先行断言和后行断言。两者都是本文要解说的<code>零宽断言</code>。</p>
+<p>同断言元字符一样，零宽断言的判断匹配只做条件匹配，不会记录匹配结果，也不会匹配字符。</p>
+<h4 id="零宽正向先行断言"><a href="#零宽正向先行断言" class="headerlink" title="零宽正向先行断言"></a>零宽正向先行断言</h4><ul>
+<li>英文：<code>zero-width positive lookahead assertion</code></li><li>简称：<code>positive lookahead</code></li><li>语法：<code>(?=pattern)</code></li><li>概述：从当前位置开始测试后面的字符串<strong>匹配</strong><code>pattern</code>，仅当右侧<strong>匹配成功</strong>时才继续。</li><li>举例：<code>[a-zA-Z]+(?=\d)</code>，匹配一个后面跟着数字的字母，但匹配结果不包含该数字。</li></ul>
+<h4 id="零宽负向先行断言"><a href="#零宽负向先行断言" class="headerlink" title="零宽负向先行断言"></a>零宽负向先行断言</h4><ul>
+<li>英文：<code>zero-width negative lookahead assertion</code></li><li>简称：<code>negative lookahead</code></li><li>语法：<code>(?!pattern)</code></li><li>概述：从当前位置开始测试后面的字符串<strong>不匹配</strong><code>pattern</code>，仅当右侧<strong>不能匹配</strong>时才继续。</li><li>举例：使用正则表达式<code>re(?!g)</code>，匹配字符串<code>regular expression</code>，则<em><strong>re</strong>gular</em>中的<em>re</em>不会被匹配，<em>exp<strong>re</strong>ssion</em>中的<em>re</em>将会被匹配。</li></ul>
+<h4 id="零宽正向后行断言"><a href="#零宽正向后行断言" class="headerlink" title="零宽正向后行断言"></a>零宽正向后行断言</h4><ul>
+<li>英文：<code>zero-width positive lookbehind assertion</code></li><li>简称：<code>positive lookbehind</code></li><li>语法：<code>(?&lt;=pattern)</code></li><li>概述：从当前位置开始测试前面的字符串<strong>匹配</strong><code>pattern</code>，仅当左侧<em>匹配成功</em>时才继续。</li></ul>
+<h4 id="零宽正向后行断言-1"><a href="#零宽正向后行断言-1" class="headerlink" title="零宽正向后行断言"></a>零宽正向后行断言</h4><ul>
+<li>英文：<code>zero-width negative lookbehind assertion</code></li><li>简称：<code>negative lookbehind</code></li><li>语法：<code>(?&lt;!pattern)</code></li><li>概述：从当前位置开始测试前面的字符串<em>不匹配</em><code>pattern</code>，仅当左侧<em>不能匹配</em>时才继续。</li></ul>
+<p><strong>注意</strong>：后行断言由于存在回溯情况，<code>JavaScript</code><strong>没有对其进行实现</strong>。</p>
 <blockquote>
-<ul>
-<li>Clarifications around dealing with unexpected whitespace, which should fix response splitting vulnerabilities.</li><li>The limit of two connections per server has been removed.</li><li>HTTP/0.9 support has been dropped.</li><li>Default charset of ISO-8859-1 has been removed.</li><li>Servers are no longer required to handle all <code>Content-*</code> header fields.</li><li><code>Content-Range</code> has been explicitly banned in PUT requests.</li><li>It’s now suggested to use the <code>about:blank</code> uri in the <code>Referer</code> header when no referer exists, to distinguish between “there was no referrer” and “I don’t want to send a referrer”.</li><li>The <code>204</code>, <code>404</code>, <code>405</code>, <code>414</code> and <code>501</code> status codes are now cachable.</li><li>The status codes <code>301</code> and <code>302</code> have been changed to allow user agents to rewrite the method from <code>POST</code> to <code>GET</code>. This is a good example of a case where everybody has been (incorrectly) already doing this, and the spec now reflects the real world implementation.</li><li>The <code>Location</code> header can now contain relative uri’s as well as fragment identifiers.</li><li><code>Content-MD5</code> has been removed.</li></ul>
+<p><a href="https://www.zhihu.com/question/20154937" target="_blank" rel="external">为什么 JavaScript 的正则不支持 “零宽度正回顾后发断言” ？</a></p>
 </blockquote>
-<p>翻译如下：</p>
-<ul>
-<li>明确了针对未预期空格的处理，以修复<code>HTTP Response Splitting</code>漏洞。</li><li>每个服务器两个连接数的限制被移除。</li><li>放弃对<code>HTTP/0.9</code>的支持。</li><li><code>ISO-8859-1</code>不再是默认的字符集。</li><li>服务器不再需要去处理所有的<code>Content-*</code>请求头内容。</li><li>明确禁止在<code>PUT</code>请求中使用<code>Content-Range</code>。</li><li>当referer不存在时，为了区分“这里没有referrer”和“我不想发送referrer”，建议在请求头<code>Referer</code>中使用<code>about:blank</code>这个uri。</li><li>状态码<code>204</code>、<code>404</code>、<code>405</code>、<code>414</code>以及<code>501</code>现在可以缓存了。</li><li>状态码<code>301</code>、<code>302</code>现在允许用户代理将请求方式从<code>POST</code>重写为<code>GET</code>。<em>人们之前早就这样做了（<del>尽管当时是不正确的</del>），现在现实世界中的操作被规范重新表述，这个就是一个很好的例子。</em></li><li>现在请求头<code>Location</code>可以包含相对URI和片段标识符。</li><li><code>Content-MD5</code>被移除。</li></ul>
-<hr>
-<p>参考资料：</p>
-<ul>
-<li><a href="https://www.mnot.net/blog/2014/06/07/rfc2616_is_dead" target="_blank" rel="external">RFC2616 is Dead</a></li><li><a href="https://evertpot.com/http-11-updated/" target="_blank" rel="external">HTTP/1.1 just got a major update</a></li></ul>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
+<li><a href="http://regexr.com/" target="_blank" rel="external">RegExr - 在线测试正则表达式</a></li><li><a href="https://regexper.com" target="_blank" rel="external">Regexper - 根据正则表达式生成SVG示意图</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp" target="_blank" rel="external">RegExp - JavaScript | MDN</a></li><li><a href="https://msdn.microsoft.com/zh-cn/library/ae5bf541(v=vs.100" target="_blank" rel="external">Regular Expression Syntax - 微软官方正则表达式参考</a>.aspx)</li><li><a href="http://www.regular-expressions.info/" target="_blank" rel="external">Regular-Expressions.info - The Premier website about Regular Expressions</a></li><li><a href="http://www.regular-expressions.info/lookaround.html" target="_blank" rel="external">Regex Tutorial - Lookahead and Lookbehind Zero-Length Assertions</a></li><li><a href="http://www.regular-expressions.info/brackets.html" title="分组与捕获" target="_blank" rel="external">Regex Tutorial - Parentheses for Grouping and Capturing</a></li><li><a href="http://www.regular-expressions.info/refcapture.html" title="捕获组详细介绍，内含各种编程语言对其的实现" target="_blank" rel="external">Regular Expression Reference: Capturing Groups and Backreferences</a></li><li><a href="http://stackoverflow.com/questions/3512471/what-is-a-non-capturing-group" target="_blank" rel="external">regex - What is a non capturing group? (?:) - Stack Overflow</a></li><li><a href="https://blog.getify.com/to-capture-or-not/" target="_blank" rel="external">To capture or not to capture | getiblog</a></li></ul>
 
       
     </div>
@@ -379,13 +391,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/http/" rel="tag">#http</a>
+            <a href="/tags/正则表达式/" rel="tag">#正则表达式</a>
           
-            <a href="/tags/rfc/" rel="tag">#rfc</a>
+            <a href="/tags/断言/" rel="tag">#断言</a>
           
-            <a href="/tags/协议/" rel="tag">#协议</a>
-          
-            <a href="/tags/http1-1/" rel="tag">#http1.1</a>
+            <a href="/tags/零宽断言/" rel="tag">#零宽断言</a>
           
         </div>
       
@@ -394,17 +404,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/article/http-status-code.html" rel="next" title="HTTP 状态码">
-                <i class="fa fa-chevron-left"></i> HTTP 状态码
+              <a href="/article/turn-a-router-to-a-switch.html" rel="next" title="路由器当交换机使用">
+                <i class="fa fa-chevron-left"></i> 路由器当交换机使用
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/article/markdown-syntax.html" rel="prev" title="markdown语法说明">
-                markdown语法说明 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -430,8 +436,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="article/rfc2616-is-obsoleted.html"
-           data-title="HTTP1.1协议更新，RFC2616被废弃" data-url="http://xovel.cn/article/rfc2616-is-obsoleted.html">
+      <div class="ds-thread" data-thread-key="article/regexp-lookahead-lookbehind.html"
+           data-title="正则表达式之零宽断言" data-url="http://xovel.cn/article/regexp-lookahead-lookbehind.html">
       </div>
     
   </div>
@@ -555,7 +561,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于断言"><span class="nav-number">1.</span> <span class="nav-text">关于断言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#断言元字符"><span class="nav-number">2.</span> <span class="nav-text">断言元字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#捕获与非捕获组"><span class="nav-number">3.</span> <span class="nav-text">捕获与非捕获组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#零宽断言"><span class="nav-number">4.</span> <span class="nav-text">零宽断言</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#零宽正向先行断言"><span class="nav-number">4.1.</span> <span class="nav-text">零宽正向先行断言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#零宽负向先行断言"><span class="nav-number">4.2.</span> <span class="nav-text">零宽负向先行断言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#零宽正向后行断言"><span class="nav-number">4.3.</span> <span class="nav-text">零宽正向后行断言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#零宽正向后行断言-1"><span class="nav-number">4.4.</span> <span class="nav-text">零宽正向后行断言</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
           </div>
         </section>
