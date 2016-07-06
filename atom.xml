@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-06-30T10:40:01.997Z</updated>
+  <updated>2016-07-06T09:25:10.690Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title>正则表达式之零宽断言</title>
     <link href="http://xovel.cn/article/regexp-lookahead-lookbehind.html"/>
     <id>http://xovel.cn/article/regexp-lookahead-lookbehind.html</id>
-    <published>2016-06-30T07:19:31.000Z</published>
-    <updated>2016-06-30T10:40:01.997Z</updated>
+    <published>2016-07-06T03:48:12.000Z</published>
+    <updated>2016-07-06T09:25:10.690Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;本篇文章提到的零宽断言是正则表达式高级语法，阅读此文需要有一定的正则表达式基础。&lt;/p&gt;
@@ -54,10 +54,7 @@
     
     <summary type="html">
     
-      &lt;blockquote&gt;
-&lt;p&gt;本篇文章提到的零宽断言是正则表达式高级语法，阅读此文需要有一定的正则表达式基础。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;关于断言&quot;&gt;&lt;a href=&quot;#关于断言&quot; class=&quot;headerlink&quot; title=&quot;关于断言&quot;&gt;&lt;/a
+      断言在正则表达式里面有着举足轻重的作用。通常情况下指的是在目标字符串的当前位置进行的一种判断测试，但这种测试不会占用目标字符串，这意味着不会移动目标字符串在当前匹配中的位置。本文对断言进行一个简单的收集与整理，以巩固学到的有关正则表达式高级语法方面的知识。
     
     </summary>
     
@@ -79,9 +76,9 @@
     <link href="http://xovel.cn/article/turn-a-router-to-a-switch.html"/>
     <id>http://xovel.cn/article/turn-a-router-to-a-switch.html</id>
     <published>2016-06-30T03:35:26.000Z</published>
-    <updated>2016-06-30T06:29:04.659Z</updated>
+    <updated>2016-07-06T03:50:09.524Z</updated>
     
-    <content type="html">&lt;p&gt;昨天，我哥因为要自主创业，搬了新房子，晚上我就去了那边。新房子总体来说环境非常好，适合居家跟办公一起。&lt;/p&gt;
+    <content type="html">&lt;p&gt;昨天，我哥搬了新房子，晚上我就去了那边。新房子总体来说环境非常好，适合居家跟办公一起。&lt;/p&gt;
 &lt;p&gt;晚餐比较丰盛，有龙虾、血鸭、水煮鱼，一行人吃的很是开心，一边吃喝一边畅谈生活与事业，不觉到了十点多。&lt;/p&gt;
 &lt;p&gt;一番整顿与休息，我们便开始安装办公桌。&lt;del&gt;安装期间出现了各种问题，比如布局、布线、螺丝钉嵌入等等，此处不表&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;由于我哥那边是刚搬进去，宽带还未设置完整。之前在公司上班的时候宽带网线，我会帮着处理一些，于是弄网络这个任务就交到了我的头上。&lt;/p&gt;
@@ -1938,9 +1935,9 @@ ends up on two lines
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
       <category term="specificity" scheme="http://xovel.cn/tags/specificity/"/>
     
@@ -2220,11 +2217,11 @@ ends up on two lines
       <category term="HTML" scheme="http://xovel.cn/categories/web/html/"/>
     
     
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
+    
       <category term="lang" scheme="http://xovel.cn/tags/lang/"/>
     
       <category term="html" scheme="http://xovel.cn/tags/html/"/>
-    
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
   </entry>
   
@@ -2408,9 +2405,9 @@ display: unset
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
       <category term="display" scheme="http://xovel.cn/tags/display/"/>
     
@@ -2459,9 +2456,9 @@ display: unset
       <category term="前端" scheme="http://xovel.cn/categories/web/frontend/"/>
     
     
-      <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
     
   </entry>
   
