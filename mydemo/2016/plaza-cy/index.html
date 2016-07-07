@@ -619,6 +619,16 @@ $('.top-goback').on('click',function(){
   }
 });
 
+// 微信或者QQ
++function(ua){
+  var isQQorWX = /[^m]qq[^b]|micromessenger/i.test(ua);
+  if(isQQorWX){
+    $('.top').hide();
+    $('.zm-title').css({'padding-top':'10px'}).find('i').css({'top':'10px'});
+    $('.zm-slide').css({'padding-top':'0px'});
+  }
+}(window.navigator.userAgent);
+
 </script>
 
 </body>
