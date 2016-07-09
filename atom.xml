@@ -1935,9 +1935,9 @@ ends up on two lines
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
       <category term="specificity" scheme="http://xovel.cn/tags/specificity/"/>
     
@@ -2405,9 +2405,9 @@ display: unset
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
       <category term="display" scheme="http://xovel.cn/tags/display/"/>
     
@@ -2456,9 +2456,9 @@ display: unset
       <category term="前端" scheme="http://xovel.cn/categories/web/frontend/"/>
     
     
-      <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
     
   </entry>
   
