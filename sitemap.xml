@@ -2,23 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://xovel.cn/mydemo/index.html</loc>
+    <loc>http://xovel.cn/garden/index.html</loc>
     
-    <lastmod>2016-07-09T07:29:25.077Z</lastmod>
+    <lastmod>2016-07-11T07:44:20.194Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://xovel.cn/article/regexp-lookahead-lookbehind.html</loc>
     
-    <lastmod>2016-07-06T09:25:10.690Z</lastmod>
+    <lastmod>2016-07-11T07:35:05.558Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xovel.cn/about/index.html</loc>
+    
+    <lastmod>2016-07-11T06:10:15.120Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://xovel.cn/article/turn-a-router-to-a-switch.html</loc>
     
-    <lastmod>2016-07-06T03:50:09.524Z</lastmod>
+    <lastmod>2016-07-11T05:00:34.382Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xovel.cn/article/test.html</loc>
+    
+    <lastmod>2016-07-11T03:21:05.503Z</lastmod>
     
   </url>
   
@@ -96,13 +110,6 @@
     <loc>http://xovel.cn/article/how-technology-hijacks-poeples-minds.html</loc>
     
     <lastmod>2016-05-26T03:49:04.489Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xovel.cn/about/index.html</loc>
-    
-    <lastmod>2016-05-20T07:29:26.400Z</lastmod>
     
   </url>
   

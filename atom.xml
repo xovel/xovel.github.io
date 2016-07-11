@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-07-06T09:25:10.690Z</updated>
+  <updated>2016-07-11T03:21:05.503Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -16,11 +16,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>test</title>
+    <link href="http://xovel.cn/article/test.html"/>
+    <id>http://xovel.cn/article/test.html</id>
+    <published>2016-07-11T03:19:01.000Z</published>
+    <updated>2016-07-11T03:21:05.503Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;宇成朝阳广场页面&quot;&gt;&lt;a href=&quot;#宇成朝阳广场页面&quot; class=&quot;headerlink&quot; title=&quot;宇成朝阳广场页面&quot;&gt;&lt;/a&gt;&lt;a href=&quot;2016/plaza-cy&quot;&gt;宇成朝阳广场页面&lt;/a&gt;&lt;/h3&gt;&lt;a href=&quot;/article/http-status-code.html&quot; title=&quot;see 123&quot;&gt;see 123&lt;/a&gt;
+&lt;a href=&quot;/article/turn-a-router-to-a-switch.html&quot; title=&quot;路由器当交换机使用&quot;&gt;路由器当交换机使用&lt;/a&gt;
+&lt;p&gt;之前的宇成朝阳广场手机端页面重构而来。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;全屏滚屏方式，引用&lt;a href=&quot;https://github.com/powy1993/fullpage&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;fullpage&lt;/a&gt;。&lt;del&gt;内有巨坑，慎用&lt;/del&gt;&lt;/li&gt;&lt;li&gt;自定义动画，翻屏提示条、翻屏时的特效、播放音乐时的无限旋转等&lt;/li&gt;&lt;li&gt;首屏自动播放的slide&lt;/li&gt;&lt;li&gt;播放音频&lt;/li&gt;&lt;li&gt;侧边栏导航：上一屏、下一屏、目录&lt;/li&gt;&lt;/ul&gt;
+&lt;a href=&quot;/article/how-technology-hijacks-poeples-minds.html&quot; title=&quot;科技公司如何用“方便”绑架了你的生活？&quot;&gt;科技公司如何用“方便”绑架了你的生活？&lt;/a&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;宇成朝阳广场页面&quot;&gt;&lt;a href=&quot;#宇成朝阳广场页面&quot; class=&quot;headerlink&quot; title=&quot;宇成朝阳广场页面&quot;&gt;&lt;/a&gt;&lt;a href=&quot;2016/plaza-cy&quot;&gt;宇成朝阳广场页面&lt;/a&gt;&lt;/h3&gt;&lt;a href=&quot;/article/htt
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>正则表达式之零宽断言</title>
     <link href="http://xovel.cn/article/regexp-lookahead-lookbehind.html"/>
     <id>http://xovel.cn/article/regexp-lookahead-lookbehind.html</id>
     <published>2016-07-06T03:48:12.000Z</published>
-    <updated>2016-07-06T09:25:10.690Z</updated>
+    <updated>2016-07-11T07:35:05.558Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;本篇文章提到的零宽断言是正则表达式高级语法，阅读此文需要有一定的正则表达式基础。&lt;/p&gt;
@@ -76,7 +99,7 @@
     <link href="http://xovel.cn/article/turn-a-router-to-a-switch.html"/>
     <id>http://xovel.cn/article/turn-a-router-to-a-switch.html</id>
     <published>2016-06-30T03:35:26.000Z</published>
-    <updated>2016-07-06T03:50:09.524Z</updated>
+    <updated>2016-07-11T05:00:34.382Z</updated>
     
     <content type="html">&lt;p&gt;昨天，我哥搬了新房子，晚上我就去了那边。新房子总体来说环境非常好，适合居家跟办公一起。&lt;/p&gt;
 &lt;p&gt;晚餐比较丰盛，有龙虾、血鸭、水煮鱼，一行人吃的很是开心，一边吃喝一边畅谈生活与事业，不觉到了十点多。&lt;/p&gt;
@@ -1935,9 +1958,9 @@ ends up on two lines
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
       <category term="specificity" scheme="http://xovel.cn/tags/specificity/"/>
     
@@ -2405,9 +2428,9 @@ display: unset
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
       <category term="display" scheme="http://xovel.cn/tags/display/"/>
     
@@ -2456,9 +2479,9 @@ display: unset
       <category term="前端" scheme="http://xovel.cn/categories/web/frontend/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
   </entry>
   

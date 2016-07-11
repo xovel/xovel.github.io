@@ -17,10 +17,14 @@
 <style type="text/css">
 .main{margin:0px auto; max-width:1200px;}
 .box{border:1px solid #e1e1e1;padding: 10px; margin: 10px 0; border-radius: 3px; }
-#show{min-height:100px; padding: 10px;word-break: break-word; }
+#show{min-height:100px; padding: 10px;word-break: break-all; }
 #img{max-width: 100%; vertical-align: top;}
 #tip{ margin:10px 0;}
 .author{ text-align: right; font-size: small;}
+</style>
+
+<style type="text/css">
+.bamboo-toc{ list-style: none; }  
 </style>
 
 <div class="main">
@@ -39,7 +43,7 @@
   </div>  
 
   <div class="box">
-    <p>Base64是网络上最常见的用于传输8Bit字节代码的编码方式之一，是基于64个可打印字符(52个字母，10个数字，以及符号“+”、“/”)来表示二进制数据的表示方法。</p>
+    <p>Base64是网络上最常见的用于传输8Bit字节代码的编码方式之一，是基于64个可打印字符(52个大小写字母，10个数字，以及符号“+”、“/”)来表示二进制数据的表示方法。</p>
     <p>图片可以使用Base64进行编码，使用方法为：（引号部分为图片的Base64编码）</p>
     <ul>
       <li>CSS：<code>background-image: url("data:image...");</code></li>
