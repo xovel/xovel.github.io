@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-07-11T03:21:05.503Z</updated>
+  <updated>2016-07-11T07:35:05.558Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,29 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://xovel.cn/article/test.html"/>
-    <id>http://xovel.cn/article/test.html</id>
-    <published>2016-07-11T03:19:01.000Z</published>
-    <updated>2016-07-11T03:21:05.503Z</updated>
-    
-    <content type="html">&lt;h3 id=&quot;宇成朝阳广场页面&quot;&gt;&lt;a href=&quot;#宇成朝阳广场页面&quot; class=&quot;headerlink&quot; title=&quot;宇成朝阳广场页面&quot;&gt;&lt;/a&gt;&lt;a href=&quot;2016/plaza-cy&quot;&gt;宇成朝阳广场页面&lt;/a&gt;&lt;/h3&gt;&lt;a href=&quot;/article/http-status-code.html&quot; title=&quot;see 123&quot;&gt;see 123&lt;/a&gt;
-&lt;a href=&quot;/article/turn-a-router-to-a-switch.html&quot; title=&quot;路由器当交换机使用&quot;&gt;路由器当交换机使用&lt;/a&gt;
-&lt;p&gt;之前的宇成朝阳广场手机端页面重构而来。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;全屏滚屏方式，引用&lt;a href=&quot;https://github.com/powy1993/fullpage&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;fullpage&lt;/a&gt;。&lt;del&gt;内有巨坑，慎用&lt;/del&gt;&lt;/li&gt;&lt;li&gt;自定义动画，翻屏提示条、翻屏时的特效、播放音乐时的无限旋转等&lt;/li&gt;&lt;li&gt;首屏自动播放的slide&lt;/li&gt;&lt;li&gt;播放音频&lt;/li&gt;&lt;li&gt;侧边栏导航：上一屏、下一屏、目录&lt;/li&gt;&lt;/ul&gt;
-&lt;a href=&quot;/article/how-technology-hijacks-poeples-minds.html&quot; title=&quot;科技公司如何用“方便”绑架了你的生活？&quot;&gt;科技公司如何用“方便”绑架了你的生活？&lt;/a&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;宇成朝阳广场页面&quot;&gt;&lt;a href=&quot;#宇成朝阳广场页面&quot; class=&quot;headerlink&quot; title=&quot;宇成朝阳广场页面&quot;&gt;&lt;/a&gt;&lt;a href=&quot;2016/plaza-cy&quot;&gt;宇成朝阳广场页面&lt;/a&gt;&lt;/h3&gt;&lt;a href=&quot;/article/htt
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>正则表达式之零宽断言</title>
