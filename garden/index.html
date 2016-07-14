@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://xovel.cn/garden/index.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="这里存放一些自己设计过的页面，仅此而已。">
-<meta property="og:updated_time" content="2016-07-11T07:44:20.194Z">
+<meta property="og:updated_time" content="2016-07-11T10:09:37.722Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="花园/竹林 - 自定义">
 <meta name="twitter:description" content="这里存放一些自己设计过的页面，仅此而已。">
@@ -279,17 +279,10 @@ ul li{ list-style:circle;}
 <hr>
 <h3 id="宇成朝阳广场页面"><a href="#宇成朝阳广场页面" class="headerlink" title="宇成朝阳广场页面"></a><a href="demo/plaza-cy">宇成朝阳广场页面</a></h3><p>之前的宇成朝阳广场手机端页面重构而来。</p>
 <ul>
-<li>全屏滚屏方式，引用<a href="https://github.com/powy1993/fullpage" target="_blank" rel="external">fullpage</a>。<del>内有巨坑，慎用</del></li><li>自定义动画，翻屏提示条、翻屏时的特效、播放音乐时的无限旋转等</li><li>首屏自动播放的slide</li><li>播放音频</li><li>侧边栏导航：上一屏、下一屏、目录</li></ul>
+<li>全屏滚屏方式，引用<a href="https://github.com/powy1993/fullpage" target="_blank" rel="external">fullpage</a></li><li>自定义动画，翻屏提示条、翻屏时的特效、播放音乐时的无限旋转等</li><li>首屏自动播放的slide</li><li>播放音频</li><li>侧边栏导航：上一屏、下一屏、目录</li></ul>
 <blockquote>
-<p>调用的fullpage有坑：在移动端开启触摸滚屏功能时内容超出部分不可自动滚动查看，链接无法愉快的点击触发。详情可自行前往github页面搜索issue。</p>
+<p>调用的fullpage有坑：在移动端开启触摸滚屏功能时内容超出部分不可自动滚动查看，链接无法愉快的点击触发。详情可自行前往github页面搜索issue。<br>修正方案：取消触摸功能；引入jQuery的swipe事件类库监听滚动事件；在内容超出的滚屏页面，加入一个“查看更多”，点击后提取内容并进行覆盖弹出。<br>引用的两个jQuery插件，分别为<a href="https://github.com/stephband/jquery.event.move" target="_blank" rel="external">jquery.event.move</a>和<a href="https://github.com/stephband/jquery.event.swipe" target="_blank" rel="external">jquery.event.swipe</a><br>如果你需要更加完善的滚动效果，请使用<a href="https://github.com/alvarotrigo" target="_blank" rel="external">Alvaro Trigo</a>编写的功能强大的<a href="https://github.com/alvarotrigo/fullPage.js" target="_blank" rel="external">fullPage.js</a>进行替代。</p>
 </blockquote>
-<p>修正方案：</p>
-<ul>
-<li>取消触摸功能</li><li>引入jQuery的swipe事件类库监听滚动事件</li><li>在内容超出的滚屏页面，加入一个“查看更多”，点击后提取内容并进行覆盖弹出</li></ul>
-<blockquote>
-<p>引用的两个jQuery插件，分别为<a href="https://github.com/stephband/jquery.event.move" target="_blank" rel="external">jquery.event.move</a>和<a href="https://github.com/stephband/jquery.event.swipe" target="_blank" rel="external">jquery.event.swipe</a></p>
-</blockquote>
-<p>如果你需要更加完善的滚动效果，请使用<a href="https://github.com/alvarotrigo" target="_blank" rel="external">Alvaro Trigo</a>编写的功能强大的<a href="https://github.com/alvarotrigo/fullPage.js" target="_blank" rel="external">fullPage.js</a>进行替代。</p>
 <p>页面内音乐为<code>7AND5</code>的作品<code>A is A</code>，版权归原作者所有。<em>因为文件大小的关系，对文件进行过压缩，码率降低为32kbps。</em></p>
 <p><strong>该demo页面仅作演示，严禁转载，其内图片与文字有版权，请勿盗用。</strong></p>
 <hr>
