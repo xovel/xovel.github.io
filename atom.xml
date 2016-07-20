@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-07-20T02:55:10.685Z</updated>
+  <updated>2016-07-20T03:06:37.823Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/css-animation.html"/>
     <id>http://xovel.cn/article/css-animation.html</id>
     <published>2016-07-19T09:51:43.000Z</published>
-    <updated>2016-07-20T02:55:10.685Z</updated>
+    <updated>2016-07-20T03:06:37.823Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;本文根据MDN上的文章&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/animation&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;animation - CSS | MDN&lt;/a&gt;整理而成。&lt;/p&gt;
@@ -52,7 +52,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;identifier&lt;/code&gt;，动画的名称，对应于上面提到的&lt;code&gt;animation-name&lt;/code&gt;。&lt;/li&gt;&lt;li&gt;&lt;code&gt;selector&lt;/code&gt;，动画持续时间的百分比。可以使用&lt;code&gt;from&lt;/code&gt;来表示&lt;code&gt;0%&lt;/code&gt;、&lt;code&gt;to&lt;/code&gt;来表示&lt;code&gt;100%&lt;/code&gt;。&lt;/li&gt;&lt;li&gt;&lt;code&gt;style&lt;/code&gt;，合理的CSS样式值，或者组合。&lt;/li&gt;&lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;selector&lt;/code&gt;可以使用多个进行组合，以逗号&lt;code&gt;,&lt;/code&gt;分隔。&lt;br&gt;存在多个百分比一样的声明时，以最后一个为准，前面不论设置了什么都将被忽略&lt;del&gt;最新版规范没有对此进行说明，但已经有部分浏览器已经考虑对其实现了&lt;/del&gt;。&lt;br&gt;使用&lt;code&gt;!important&lt;/code&gt;声明样式时，该声明将被&lt;strong&gt;忽略&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;selector&lt;/code&gt;可以使用多个进行组合，以逗号&lt;code&gt;,&lt;/code&gt;分隔。&lt;br&gt;存在多个百分比一样的声明时，以最后一个为准，前面不论设置了什么都将被忽略&lt;del&gt;最新版规范没有对此进行说明，但有部分浏览器已经考虑对其实现了&lt;/del&gt;。&lt;br&gt;使用&lt;code&gt;!important&lt;/code&gt;声明样式时，该声明将被&lt;strong&gt;忽略&lt;/strong&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;格式化语法：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;@keyframes &amp;lt;identifier&amp;gt; {
@@ -60,8 +60,10 @@
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;示例&quot;&gt;&lt;a href=&quot;#示例&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/* @keyframes duration | timing-function | delay | &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   iteration-count | direction | fill-mode | play-state | name */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  animation: 3s ease-in 1s 2 reverse both paused slidein;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/* @keyframes duration | timing-function | delay | name */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  animation: 3s linear 1s slidein;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/* @keyframes duration | name */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  animation: 3s slidein;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;p&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;animation-duration&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;3s&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;animation-name&lt;/span&gt;: slidein;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;      &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@&lt;span class=&quot;keyword&quot;&gt;keyframes&lt;/span&gt; slidein &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;from&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attribute&quot;&gt;margin-left&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;100%&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;300%&lt;/span&gt;; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;to&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attribute&quot;&gt;margin-left&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0%&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;100%&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/animation&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;animation - CSS | MDN&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;@keyframes - CSS | MDN&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;animation-name - CSS | MDN&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/animation-duration&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;animation-duration - CSS | MDN&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;animation-timing-function - CSS | MDN&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;animation-delay - CSS | MDN&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;animation-iteration-count - CSS | MDN&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;animation-direction - CSS | MDN&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;animation-fill-mode - CSS | MDN&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;animation-play-state - CSS | MDN&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;h3 id=&quot;扩展阅读&quot;&gt;&lt;a href=&quot;#扩展阅读&quot; class=&quot;headerlink&quot; title=&quot;扩展阅读&quot;&gt;&lt;/a&gt;扩展阅读&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://drafts.csswg.org/css-animations/#animation&quot; title=&quot;CSS动画草案&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CSS Animations Level 1&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties,&quot; title=&quot;可以使用动画的CSS属性&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CSS animated properties - CSS | MDN&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/AnimationEvent&quot; title=&quot;动画事件&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AnimationEvent - Web APIs | MDN&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://drafts.csswg.org/css-animations/#animation&quot; title=&quot;CSS动画草案&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CSS Animations Level 1&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/animation&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Using CSS animations - CSS | MDN&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties,&quot; title=&quot;可以使用动画的CSS属性&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CSS animated properties - CSS | MDN&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/AnimationEvent&quot; title=&quot;动画事件&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AnimationEvent - Web APIs | MDN&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;hr&gt;
 &lt;p&gt;&amp;lt;全文完&amp;gt;&lt;/p&gt;
 </content>
@@ -2005,9 +2007,9 @@ ends up on two lines
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
       <category term="specificity" scheme="http://xovel.cn/tags/specificity/"/>
     
@@ -2287,11 +2289,11 @@ ends up on two lines
       <category term="HTML" scheme="http://xovel.cn/categories/web/html/"/>
     
     
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
+    
       <category term="lang" scheme="http://xovel.cn/tags/lang/"/>
     
       <category term="html" scheme="http://xovel.cn/tags/html/"/>
-    
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
   </entry>
   
@@ -2475,9 +2477,9 @@ display: unset
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
       <category term="display" scheme="http://xovel.cn/tags/display/"/>
     
@@ -2526,9 +2528,9 @@ display: unset
       <category term="前端" scheme="http://xovel.cn/categories/web/frontend/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
   </entry>
   
