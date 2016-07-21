@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-07-20T03:56:37.732Z</updated>
+  <updated>2016-07-21T06:16:12.023Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/css-animation.html"/>
     <id>http://xovel.cn/article/css-animation.html</id>
     <published>2016-07-19T09:51:43.000Z</published>
-    <updated>2016-07-20T03:56:37.732Z</updated>
+    <updated>2016-07-21T06:16:12.023Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;本文根据MDN上的文章&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/animation&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;animation - CSS | MDN&lt;/a&gt;整理而成。&lt;/p&gt;
@@ -74,7 +74,7 @@
 &lt;h3 id=&quot;扩展阅读&quot;&gt;&lt;a href=&quot;#扩展阅读&quot; class=&quot;headerlink&quot; title=&quot;扩展阅读&quot;&gt;&lt;/a&gt;扩展阅读&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://drafts.csswg.org/css-animations/#animation&quot; title=&quot;CSS动画草案&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CSS Animations Level 1&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/animation&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Using CSS animations - CSS | MDN&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties,&quot; title=&quot;可以使用动画的CSS属性&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CSS animated properties - CSS | MDN&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/AnimationEvent&quot; title=&quot;动画事件&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AnimationEvent - Web APIs | MDN&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;&amp;lt;全文完&amp;gt;&lt;/p&gt;
+&lt;p&gt;全文完。&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -2016,9 +2016,9 @@ ends up on two lines
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
       <category term="specificity" scheme="http://xovel.cn/tags/specificity/"/>
     
@@ -2486,9 +2486,9 @@ display: unset
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
       <category term="display" scheme="http://xovel.cn/tags/display/"/>
     
@@ -2537,9 +2537,9 @@ display: unset
       <category term="前端" scheme="http://xovel.cn/categories/web/frontend/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
   </entry>
   
