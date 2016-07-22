@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xovel.cn/article/a-responsive-menu.html</loc>
+    
+    <lastmod>2016-07-22T03:10:47.814Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xovel.cn/article/normalize-cssreset.html</loc>
     
     <lastmod>2016-07-22T02:56:37.578Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://xovel.cn/article/things-about-display.html</loc>
     
     <lastmod>2016-07-22T02:53:50.944Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xovel.cn/article/a-responsive-menu.html</loc>
-    
-    <lastmod>2016-07-22T02:51:19.655Z</lastmod>
     
   </url>
   
