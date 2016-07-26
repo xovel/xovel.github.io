@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-07-22T03:30:51.127Z</updated>
+  <updated>2016-07-26T05:43:07.362Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/a-responsive-menu.html"/>
     <id>http://xovel.cn/article/a-responsive-menu.html</id>
     <published>2016-07-22T01:29:18.000Z</published>
-    <updated>2016-07-22T03:30:51.127Z</updated>
+    <updated>2016-07-26T05:43:07.362Z</updated>
     
     <content type="html">&lt;p&gt;实现的需求如下：在屏幕宽度较小时，菜单为横向可滑动；屏幕较宽时则变为拉伸充满整屏。知识点：&lt;code&gt;横向滚动&lt;/code&gt;，&lt;code&gt;媒体查询&lt;/code&gt;，&lt;code&gt;弹性布局&lt;/code&gt;。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -48,6 +48,7 @@
 &lt;p&gt;&lt;code&gt;justify-content: space-around;&lt;/code&gt;指定了元素之间的留白方式为等距离并且两边有留白。&lt;/p&gt;
 &lt;p&gt;那么，这个菜单我们就设计实现完毕了。完整代码如下：&lt;/p&gt;
 &lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;style&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text/css&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;css&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;body&lt;/span&gt;&amp;#123; &lt;span class=&quot;attribute&quot;&gt;background&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;#282828&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;margin&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;font-family&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&#39;San Francisco&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;Noto SansCJK&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;Microsoft Yahei&#39;&lt;/span&gt;;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.nav-menu&lt;/span&gt;&amp;#123; &lt;span class=&quot;attribute&quot;&gt;height&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;40px&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;line-height&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;40px&lt;/span&gt;;&lt;span class=&quot;attribute&quot;&gt;overflow&lt;/span&gt;: hidden; &lt;span class=&quot;attribute&quot;&gt;overflow-x&lt;/span&gt;: scroll;&lt;span class=&quot;attribute&quot;&gt;white-space&lt;/span&gt;: nowrap; &lt;span class=&quot;attribute&quot;&gt;background&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;#333&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;margin-top&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;10px&lt;/span&gt;;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.nav-menu&lt;/span&gt;&lt;span class=&quot;selector-pseudo&quot;&gt;::-webkit-scrollbar&lt;/span&gt;&amp;#123;&lt;span class=&quot;attribute&quot;&gt;display&lt;/span&gt;:none;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.nav-item&lt;/span&gt;&amp;#123;&lt;span class=&quot;attribute&quot;&gt;display&lt;/span&gt;: inline-block; &lt;span class=&quot;attribute&quot;&gt;height&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;38px&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;margin&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;5px&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;overflow&lt;/span&gt;: hidden;&lt;span class=&quot;attribute&quot;&gt;text-align&lt;/span&gt;: center;&lt;span class=&quot;attribute&quot;&gt;color&lt;/span&gt;: white;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@&lt;span class=&quot;keyword&quot;&gt;media&lt;/span&gt; (min-width: &lt;span class=&quot;number&quot;&gt;440px&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-class&quot;&gt;.nav-menu&lt;/span&gt;&amp;#123; &lt;span class=&quot;attribute&quot;&gt;display&lt;/span&gt;: -webkit-flex; &lt;span class=&quot;attribute&quot;&gt;display&lt;/span&gt;: flex; &lt;span class=&quot;attribute&quot;&gt;justify-content&lt;/span&gt;: space-around; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;style&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-menu&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单1&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单2&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单3&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单4&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单5&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单6&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单7&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单8&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;演示：&lt;a href=&quot;garden/demo/a-responsive-menu.html&quot;&gt;一个自适应菜单导航页面&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;del&gt;打完收工&lt;/del&gt;&lt;/p&gt;
 </content>
@@ -2076,9 +2077,9 @@ ends up on two lines
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
       <category term="specificity" scheme="http://xovel.cn/tags/specificity/"/>
     
@@ -2517,9 +2518,9 @@ ends up on two lines
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
       <category term="display" scheme="http://xovel.cn/tags/display/"/>
     
@@ -2568,9 +2569,9 @@ ends up on two lines
       <category term="前端" scheme="http://xovel.cn/categories/web/frontend/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
   </entry>
   
