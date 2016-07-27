@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-07-26T06:08:45.111Z</updated>
+  <updated>2016-07-27T03:21:46.308Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GIT使用札记</title>
+    <link href="http://xovel.cn/article/notes-for-git.html"/>
+    <id>http://xovel.cn/article/notes-for-git.html</id>
+    <published>2016-07-27T03:19:05.000Z</published>
+    <updated>2016-07-27T03:21:46.308Z</updated>
+    
+    <content type="html">&lt;p&gt;记录一下使用Git过程的一些不大不小的问题。不算全面，只是记录，详细的Git使用教程请参阅下方的参考资料。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;创建SSH-Key&quot;&gt;&lt;a href=&quot;#创建SSH-Key&quot; class=&quot;headerlink&quot; title=&quot;创建SSH Key&quot;&gt;&lt;/a&gt;创建SSH Key&lt;/h3&gt;&lt;p&gt;使用Git时，本地的Git仓库与远程Git仓库（比如Github）之间的传输是通过SSH加密的，故此需要创建一个SSH Key，在&lt;code&gt;Shell&lt;/code&gt;/&lt;code&gt;Git Bash&lt;/code&gt;中输入：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ ssh-keygen -t rsa -C &amp;quot;youremail@example.com&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;youremail@example.com&lt;/code&gt;是你的邮件地址，然后回车。&lt;code&gt;passphrase&lt;/code&gt;是本地密码，如有需要可以进行设置。&lt;/p&gt;
+&lt;p&gt;创建成功之后的加密文件放在用户主目录下的&lt;code&gt;.ssh&lt;/code&gt;目录下，里面有两个密钥文件：&lt;code&gt;id_rsa&lt;/code&gt;和&lt;code&gt;id_rsa.pub&lt;/code&gt;。前者是私钥，后者是公钥。远程仓库需要添加公钥到账户中。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;设置邮箱和用户名：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git config --global user.name [username]&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;git config --global user.email [email]&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;解决冲突&quot;&gt;&lt;a href=&quot;#解决冲突&quot; class=&quot;headerlink&quot; title=&quot;解决冲突&quot;&gt;&lt;/a&gt;解决冲突&lt;/h3&gt;&lt;p&gt;如果本地仓库跟远程仓库对同一个地方都进行了修改，在合并时，系统无法自动判断要选用哪一个修改，于是就出现了冲突。在提交时必须先解决冲突。&lt;/p&gt;
+&lt;p&gt;修改本地仓库，如果有多个冲突的地方，每一个都需要修改。&lt;/p&gt;
+&lt;h3 id=&quot;撤销修改&quot;&gt;&lt;a href=&quot;#撤销修改&quot; class=&quot;headerlink&quot; title=&quot;撤销修改&quot;&gt;&lt;/a&gt;撤销修改&lt;/h3&gt;&lt;p&gt;&lt;code&gt;git checkout -- &amp;lt;file&amp;gt;...&lt;/code&gt;丢弃工作区的修改。&lt;/p&gt;
+&lt;p&gt;如果状态已经被缓存，即将提交，可以使用&lt;code&gt;git reset HEAD file&lt;/code&gt;命令把暂存区的修改撤销掉，重新放回工作区。再使用上面的方法撤销修改。&lt;/p&gt;
+&lt;p&gt;如果已经提交当前修改到本地仓库，使用版本回退功能，退回到之前的版本即可，命令为&lt;code&gt;git reset --hard commit_id&lt;/code&gt;，其中&lt;code&gt;commit_id&lt;/code&gt;如果不知道，可以使用&lt;code&gt;git reflog&lt;/code&gt;查看命令行的历史记录。&lt;code&gt;git log&lt;/code&gt;可以查看提交历史。&lt;/p&gt;
+&lt;p&gt;如果你已经提交到远程库……阿弥陀佛，请自行珍重。&lt;/p&gt;
+&lt;h3 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://git-scm.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Git&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Git教程 - 廖雪峰的官方网站&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://marklodato.github.io/visual-git-guide/index-zh-cn.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;图解Git&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://gitref.justjavac.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Git 参考手册&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://backlogtool.com/git-guide/cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;猴子都能懂的GIT入门&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录一下使用Git过程的一些不大不小的问题。不算全面，只是记录，详细的Git使用教程请参阅下方的参考资料。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
+    
+    
+      <category term="git" scheme="http://xovel.cn/tags/git/"/>
+    
+      <category term="notes" scheme="http://xovel.cn/tags/notes/"/>
+    
+      <category term="github" scheme="http://xovel.cn/tags/github/"/>
+    
+  </entry>
   
   <entry>
     <title>一个自适应菜单导航的设计实现过程</title>
@@ -2077,9 +2122,9 @@ ends up on two lines
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
       <category term="specificity" scheme="http://xovel.cn/tags/specificity/"/>
     
@@ -2518,9 +2563,9 @@ ends up on two lines
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
       <category term="display" scheme="http://xovel.cn/tags/display/"/>
     
@@ -2569,9 +2614,9 @@ ends up on two lines
       <category term="前端" scheme="http://xovel.cn/categories/web/frontend/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
   </entry>
   
