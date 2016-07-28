@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-07-28T01:06:44.072Z</updated>
+  <updated>2016-07-28T01:13:10.640Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/css-flex.html"/>
     <id>http://xovel.cn/article/css-flex.html</id>
     <published>2016-07-28T00:04:58.000Z</published>
-    <updated>2016-07-28T01:06:44.072Z</updated>
+    <updated>2016-07-28T01:13:10.640Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;本文根据&lt;a href=&quot;https://css-tricks.com/snippets/css/a-guide-to-flexbox/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;A Complete Guide to Flexbox | CSS-Tricks&lt;/a&gt;和&lt;a href=&quot;http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Flex 布局教程：语法篇 - 阮一峰的网络日志&lt;/a&gt;，翻译/整理而成。&lt;/p&gt;

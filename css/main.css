@@ -1391,6 +1391,9 @@ pre .javascript .function {
 .fancybox-close:hover {
   border: none;
 }
+.post-body a[rel~="external"] {
+  color: #3370bb;
+}
 .sidebar {
   position: fixed;
   right: 0;
