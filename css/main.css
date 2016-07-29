@@ -1394,10 +1394,10 @@ pre .javascript .function {
 .post-body a[rel~="external"] {
   color: #3370bb;
 }
-.post-body a[rel~="external"]:hover:after {
+.post-body a[rel~="external"]:after {
   content: "\f08e";
   font: normal normal normal 14px/1 FontAwesome;
-  margin-left: 5px;
+  margin-left: 2px;
 }
 .sidebar {
   position: fixed;
