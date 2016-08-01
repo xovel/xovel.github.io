@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xovel.cn/garden/index.html</loc>
+    
+    <lastmod>2016-08-01T09:38:18.163Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xovel.cn/article/a-responsive-menu.html</loc>
     
     <lastmod>2016-07-29T03:17:59.446Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://xovel.cn/article/notes-for-git.html</loc>
     
     <lastmod>2016-07-27T03:21:46.308Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xovel.cn/garden/index.html</loc>
-    
-    <lastmod>2016-07-26T06:09:19.306Z</lastmod>
     
   </url>
   
