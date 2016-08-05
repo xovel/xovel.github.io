@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-08-02T09:46:48.172Z</updated>
+  <updated>2016-08-05T08:49:58.152Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,47 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>写给母亲的歌却一直被误解</title>
+    <link href="http://xovel.cn/article/misunderstood-songs-for-mother.html"/>
+    <id>http://xovel.cn/article/misunderstood-songs-for-mother.html</id>
+    <published>2016-08-05T08:09:14.000Z</published>
+    <updated>2016-08-05T08:49:58.152Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;没什么好说的，就是想抒发一下感慨。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;还是直切主题吧，来聊一聊一些被误解的写给母亲的歌曲。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;真的爱你&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;二十多年前，黄家驹创作了一曲《真的爱你》，此曲收录在Beyond乐队在Beyond于1989年发行的粤语专辑《Beyond IV》 内。Beyond乐队凭借这张专辑奠定了在乐坛的地位，《真的爱你》作为主打歌，作词为梁美薇，作曲为黄家驹。此曲歌颂的主题为伟大的母爱。然而，很多年过去了，这首歌一直处于被世人误解的尴尬境地。&lt;/p&gt;
+&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;懂你&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;与《真的爱你》一样，《懂你》这首歌也是一首歌颂母爱的歌曲。《懂你》由满文军演唱，于1994年面世。令人啼笑皆非的是，如今有许多人拿这首歌来进行男女朋友之间的表白，真是百思不得其解。&lt;/p&gt;
+&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;星星&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这里的星星是一首俄语歌曲，俄文名是《Звезда》。由VITAS创作，收录在2003年发行的专辑《妈妈（mama）》当中，是写给母亲的歌曲。歌手用其深邃的嗓音表述了对母亲无尽的思念，然而还是被很多人误解了该曲创作的用意。&lt;/p&gt;
+&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;邓紫棋最新出的一张专辑《新的心跳》里面有一首歌是写给父母的，叫做《盲点》，这首歌依然逃不出被误解的命运。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;好吧，其实我是有点思念母亲了。就不写太多的文字了，免得又要感伤。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      一些被误解的写给母亲的歌曲。
+    
+    </summary>
+    
+      <category term="音乐" scheme="http://xovel.cn/categories/music/"/>
+    
+    
+      <category term="歌曲" scheme="http://xovel.cn/tags/%E6%AD%8C%E6%9B%B2/"/>
+    
+      <category term="母亲" scheme="http://xovel.cn/tags/%E6%AF%8D%E4%BA%B2/"/>
+    
+      <category term="误解" scheme="http://xovel.cn/tags/%E8%AF%AF%E8%A7%A3/"/>
+    
+  </entry>
   
   <entry>
     <title>EXCEL中给奇偶行条纹</title>
@@ -2258,9 +2299,9 @@ ends up on two lines
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
       <category term="specificity" scheme="http://xovel.cn/tags/specificity/"/>
     
@@ -2540,11 +2581,11 @@ ends up on two lines
       <category term="HTML" scheme="http://xovel.cn/categories/web/html/"/>
     
     
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
+    
       <category term="lang" scheme="http://xovel.cn/tags/lang/"/>
     
       <category term="html" scheme="http://xovel.cn/tags/html/"/>
-    
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
   </entry>
   
@@ -2699,9 +2740,9 @@ ends up on two lines
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
       <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
+    
+      <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
       <category term="display" scheme="http://xovel.cn/tags/display/"/>
     
@@ -2750,9 +2791,9 @@ ends up on two lines
       <category term="前端" scheme="http://xovel.cn/categories/web/frontend/"/>
     
     
-      <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="normalize" scheme="http://xovel.cn/tags/normalize/"/>
     
   </entry>
   
