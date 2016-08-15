@@ -1,0 +1,733 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.useso.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="css,filter," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="清风轩" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="-webkit-filter是css3的一个属性，它为相应元素提供了诸如模糊、色相饱和、反转、灰度化等等之类的图像效果。该属性通常用在对图片、背景、边框这些对象的渲染上面。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="-webkit-filter冰山一角">
+<meta property="og:url" content="http://xovel.cn/article/webkit-filter.html">
+<meta property="og:site_name" content="清风轩">
+<meta property="og:description" content="-webkit-filter是css3的一个属性，它为相应元素提供了诸如模糊、色相饱和、反转、灰度化等等之类的图像效果。该属性通常用在对图片、背景、边框这些对象的渲染上面。">
+<meta property="og:updated_time" content="2016-08-15T10:28:19.664Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="-webkit-filter冰山一角">
+<meta name="twitter:description" content="-webkit-filter是css3的一个属性，它为相应元素提供了诸如模糊、色相饱和、反转、灰度化等等之类的图像效果。该属性通常用在对图片、背景、边框这些对象的渲染上面。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> -webkit-filter冰山一角 | 清风轩 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="http://s6.cnzz.com/stat.php?id=1259096563&web_id=1259096563" type="text/javascript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">清风轩</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">清风轩居 - 引仙阁</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-garden">
+          <a href="/garden" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-life-ring"></i> <br />
+            
+            花园
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                -webkit-filter冰山一角
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-15T18:22:45+08:00" content="2016-08-15">
+              2016-08-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/web/" itemprop="url" rel="index">
+                    <span itemprop="name">WEB</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/web/css/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>本文根据MDN上的文章<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter" target="_blank" rel="external">filter - CSS | MDN</a>翻译/整理而成，去掉了关于<code>svg</code>和<code>url()</code>方面的内容，并加入了一些自己对CSS Filters的理解。</p>
+</blockquote>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><code>-webkit-filter</code>是css3的一个属性，它为相应元素提供了诸如模糊、色相饱和、反转、灰度化等等之类的图像效果。该属性通常用在对图片、背景、边框这些对象的渲染上面。</p>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">blur</span>(5<span class="selector-tag">px</span>);</span><br><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">brightness</span>(0<span class="selector-class">.4</span>);</span><br><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">contrast</span>(200%);</span><br><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">drop-shadow</span>(16<span class="selector-tag">px</span> 16<span class="selector-tag">px</span> 20<span class="selector-tag">px</span> <span class="selector-tag">blue</span>);</span><br><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">grayscale</span>(50%);</span><br><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">hue-rotate</span>(90<span class="selector-tag">deg</span>);</span><br><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">invert</span>(75%);</span><br><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">opacity</span>(25%);</span><br><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">saturate</span>(30%);</span><br><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">sepia</span>(60%);</span><br></pre></td></tr></table></figure>
+<p>可以多个属性合并写，如：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">contrast</span>(175%) <span class="selector-tag">brightness</span>(3%);</span><br></pre></td></tr></table></figure></p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 给类名为mydiv的元素50%灰度化的效果  */</span></span><br><span class="line"><span class="selector-class">.mydiv</span> &#123; <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(50%) &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 给所有图片50%灰度化并给10像素模糊的效果 */</span></span><br><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(0.5) <span class="built_in">blur</span>(10px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="十种效果的详解"><a href="#十种效果的详解" class="headerlink" title="十种效果的详解"></a>十种效果的详解</h2><h3 id="blur"><a href="#blur" class="headerlink" title="blur()"></a>blur()</h3><p>模糊效果。对元素应用高斯模糊效果。</p>
+<ul>
+<li>模糊值为CSS距离，<em>不支持百分比</em></li><li>默认值为<code>0</code>，表示没有模糊效果</li></ul>
+<h3 id="brightness"><a href="#brightness" class="headerlink" title="brightness()"></a>brightness()</h3><p>亮度。</p>
+<ul>
+<li>取值为数值或者百分比</li><li>默认值为<code>1</code>，表示亮度保持不变</li><li>为<code>0</code>表示没有亮度，呈现为黑色。<del>小于0时视为0，均为黑色显示</del></li><li>数值越大，越亮。<del>可以亮瞎双眼</del></li></ul>
+<h3 id="contrast"><a href="#contrast" class="headerlink" title="contrast()"></a>contrast()</h3><p>对比度。</p>
+<ul>
+<li>取值同上</li><li>默认值为<code>1</code>，表示对比度不变</li><li>为<code>0</code>将会完全灰化，灰化后的颜色值为<code>grey</code>/<code>gray</code>。同样，小于0时视为0。</li><li>数值越大，对比度越强。</li></ul>
+<h3 id="drop-shadow"><a href="#drop-shadow" class="headerlink" title="drop-shadow()"></a>drop-shadow()</h3><p>阴影。跟<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow" target="_blank" rel="external">box-shadow</a>类似。</p>
+<p>阴影的具体语法为<code>drop-shadow(offset-x, offset-y&lt;, blur-radius&gt;&lt;, color&gt;)</code></p>
+<ul>
+<li><code>offset-x</code>/<code>offset-y</code>为必需参数，前者表示阴影的横向偏移量，后者表示纵向偏移量</li><li><code>blur-radius</code>为模糊半径，默认为<code>0</code></li><li><code>color</code>为阴影的CSS颜色值，默认值为黑色<code>#000000</code>/<code>black</code></li></ul>
+<blockquote>
+<p>与<code>box-shadow</code>不同的是，应用多个阴影时，需要额外写<code>drop-shadow()</code>，不能向前者一样使用逗号进行分隔。概括的说就是<code>drop-shadow()</code>每次只能添加一中阴影效果。</p>
+</blockquote>
+<h3 id="grayscale"><a href="#grayscale" class="headerlink" title="grayscale()"></a>grayscale()</h3><p>灰度化。</p>
+<ul>
+<li>取值为<code>0</code>到<code>1</code>之间的<strong>数值或百分比</strong>，其他值无效</li><li>默认值为<code>0</code>，没有灰度化效果</li><li>取值为<code>1</code>/<code>100%</code>时表示完全灰度化</li></ul>
+<h3 id="hue-rotate"><a href="#hue-rotate" class="headerlink" title="hue-rotate()"></a>hue-rotate()</h3><p>色相旋转。</p>
+<ul>
+<li>取值为色相旋转的具体<strong>角度值</strong></li><li>默认值为<code>0deg</code>，表示色相旋转为0，无变化</li></ul>
+<h3 id="invert"><a href="#invert" class="headerlink" title="invert()"></a>invert()</h3><p>反色。</p>
+<ul>
+<li>取值为<code>0</code>到<code>1</code>之间的<strong>数值或百分比</strong>，其他值无效</li><li>默认值为<code>0</code>/<code>0%</code>，维持原样</li><li>取值为<code>1</code>/<code>100%</code>时表示完全反色</li></ul>
+<blockquote>
+<p>取值为<code>.5</code>/<code>50%</code>时效果将完全灰化</p>
+</blockquote>
+<h3 id="opacity"><a href="#opacity" class="headerlink" title="opacity()"></a>opacity()</h3><p>透明度。与常规的CSS透明度一样，这里不再赘述。</p>
+<blockquote>
+<p>尽管效果一样，但某些浏览器在使用Filters时会通过硬件加速的方式使其有更好的展现。</p>
+</blockquote>
+<h3 id="saturate"><a href="#saturate" class="headerlink" title="saturate()"></a>saturate()</h3><p>饱和度。</p>
+<ul>
+<li>取值为数值或者百分比</li><li>默认值为<code>1</code>/<code>100%</code>，维持原样</li><li>为<code>0</code>表示没有饱和度，呈现为完全灰度化。<del>小于0时视为0</del></li><li>数值越大，饱和程度越高。</li></ul>
+<h3 id="sepia"><a href="#sepia" class="headerlink" title="sepia()"></a>sepia()</h3><p>褐色化。</p>
+<ul>
+<li>取值为<code>0</code>到<code>1</code>之间的<strong>数值或百分比</strong>，其他值无效</li><li><del>默认值为<code>0</code>，没有褐化效果</del>这里的解释有误，参见脚注<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></li><li>取值为<code>1</code>/<code>100%</code>时表示完全灰度化</li></ul>
+<blockquote>
+<p>该单词的本意为<code>乌贼墨色/深褐色</code>，该效果与灰度化类似，不同的是<code>sepia</code>是使得元素往褐色去渲染。</p>
+<p>根据<a href="http://encycolorpedia.com/704214" target="_blank" rel="external">Encycolorpedia</a>的解释，<code>sepia</code>的十六进制颜色值为<code>#704214</code>。</p>
+</blockquote>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter" target="_blank" rel="external">filter - CSS | MDN</a></li><li><a href="http://caniuse.com/#feat=css-filters" target="_blank" rel="external">Can I Use</a></li><li><a href="http://www.w3cplus.com/css3/ten-effects-with-css3-filter" target="_blank" rel="external">CSS3 Filter的十种特效</a></li></ul>
+<p>全文完。<div id="footnotes"><hr><div id="footnotelist"><ol><li id="fn:1"><strong>注意</strong>：MDN上的默认值解释与浏览器实际展现效果有出入，不给参数时，该值为<code>1</code>/<code>100%</code>，并非是<code>0</code>。<a href="#fnref:1" rev="footnote"> ↩</a></li></ol></div></div></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/css/" rel="tag">#css</a>
+          
+            <a href="/tags/filter/" rel="tag">#filter</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/article/today-is-7-7.html" rel="next" title="又是一年七夕时">
+                <i class="fa fa-chevron-left"></i> 又是一年七夕时
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article> 
+  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="article/webkit-filter.html"
+           data-title="-webkit-filter冰山一角" data-url="http://xovel.cn/article/webkit-filter.html">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/xovel.jpg"
+               alt="xovel" />
+          <p class="site-author-name" itemprop="name">xovel</p>
+          <p class="site-description motion-element" itemprop="description">缓缓之间，风云静变</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">54</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xovel" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://hdk4.com" target="_blank" title="hdk4.com">
+                  
+                    <i class="fa fa-fw fa-adjust"></i>
+                  
+                  hdk4.com
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语法"><span class="nav-number">2.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">3.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十种效果的详解"><span class="nav-number">4.</span> <span class="nav-text">十种效果的详解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#blur"><span class="nav-number">4.1.</span> <span class="nav-text">blur()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#brightness"><span class="nav-number">4.2.</span> <span class="nav-text">brightness()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#contrast"><span class="nav-number">4.3.</span> <span class="nav-text">contrast()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#drop-shadow"><span class="nav-number">4.4.</span> <span class="nav-text">drop-shadow()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#grayscale"><span class="nav-number">4.5.</span> <span class="nav-text">grayscale()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hue-rotate"><span class="nav-number">4.6.</span> <span class="nav-text">hue-rotate()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#invert"><span class="nav-number">4.7.</span> <span class="nav-text">invert()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#opacity"><span class="nav-number">4.8.</span> <span class="nav-text">opacity()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#saturate"><span class="nav-number">4.9.</span> <span class="nav-text">saturate()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sepia"><span class="nav-number">4.10.</span> <span class="nav-text">sepia()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xovel</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io" rel="external nofollow" target="_blank">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow" target="_blank">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"xovel"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  
+</body>
+</html>
