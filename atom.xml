@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-08-15T10:28:19.664Z</updated>
+  <updated>2016-08-15T10:36:56.013Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/webkit-filter.html"/>
     <id>http://xovel.cn/article/webkit-filter.html</id>
     <published>2016-08-15T10:22:45.000Z</published>
-    <updated>2016-08-15T10:28:19.664Z</updated>
+    <updated>2016-08-15T10:36:56.013Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;本文根据MDN上的文章&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/filter&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;filter - CSS | MDN&lt;/a&gt;翻译/整理而成，去掉了关于&lt;code&gt;svg&lt;/code&gt;和&lt;code&gt;url()&lt;/code&gt;方面的内容，并加入了一些自己对CSS Filters的理解。&lt;/p&gt;
@@ -73,7 +73,7 @@
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/filter&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;filter - CSS | MDN&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://caniuse.com/#feat=css-filters&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Can I Use&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.w3cplus.com/css3/ten-effects-with-css3-filter&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CSS3 Filter的十种特效&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;全文完。&lt;div id=&quot;footnotes&quot;&gt;&lt;hr&gt;&lt;div id=&quot;footnotelist&quot;&gt;&lt;ol&gt;&lt;li id=&quot;fn:1&quot;&gt;&lt;strong&gt;注意&lt;/strong&gt;：MDN上的默认值解释与浏览器实际展现效果有出入，不给参数时，该值为&lt;code&gt;1&lt;/code&gt;/&lt;code&gt;100%&lt;/code&gt;，并非是&lt;code&gt;0&lt;/code&gt;。&lt;a href=&quot;#fnref:1&quot; rev=&quot;footnote&quot;&gt; ↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;全文完&lt;div id=&quot;footnotes&quot;&gt;&lt;hr&gt;&lt;div id=&quot;footnotelist&quot;&gt;&lt;ol&gt;&lt;li id=&quot;fn:1&quot;&gt;&lt;strong&gt;注意&lt;/strong&gt;：MDN上的默认值解释与浏览器实际展现效果有出入，不给参数时，该值为&lt;code&gt;1&lt;/code&gt;/&lt;code&gt;100%&lt;/code&gt;，并非是&lt;code&gt;0&lt;/code&gt;。&lt;a href=&quot;#fnref:1&quot; rev=&quot;footnote&quot;&gt; ↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -2408,9 +2408,9 @@ ends up on two lines
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
       <category term="specificity" scheme="http://xovel.cn/tags/specificity/"/>
     
@@ -2849,9 +2849,9 @@ ends up on two lines
       <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
     
     
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
-    
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
+    
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
       <category term="display" scheme="http://xovel.cn/tags/display/"/>
     
