@@ -1,0 +1,208 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: 清风轩
+subtitle: 清风轩居 - 引仙阁
+description: 缓缓之间，风云静变
+author: xovel
+email: xovel@vip.qq.com
+language: zh-Hans
+timezone:
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://xovel.cn
+root: /
+permalink: article/:title.html
+permalink_defaults: 
+#permalink: :year/:month/:day/:title/
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+  - garden/2016/*
+  - garden/2016/**/*
+  - garden/2017/*
+  - garden/2017/**/*
+  - garden/demo/*
+  - garden/demo/**/*
+  - garden/tool/*
+  - garden/tool/**/*
+  - garden/tr/*
+  - garden/tr/**/*
+  - garden/slide/*
+  - garden/slide/**/*
+  - README.md
+#  - mydemo/**/*
+#  - mydemo/**/*.js
+#  - mydemo/**/*.css
+#  - mydemo/**/*.html
+#  - mydemo/**/*.jpg
+#  - mydemo/**/*.png
+#  - mydemo/**/*.gif
+#  - mydemo/**/*.mp3
+#  - mydemo/**/*.mp4
+
+# Writing
+new_post_name: :year-:month-:day-:title.md # File name of new posts
+#new_post_name: :title.md
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+  心情: mood
+  随笔: essay
+  杂项: misc
+  开发: dev
+  文档: docs  
+  前端: frontend
+  后端: backend
+  WEB: web
+  WWW: www
+  DOM: dom
+  HTTP: http
+  HTML: html
+  JS: js
+  Node: node
+  CSS: css
+  jQuery: jquery
+  UI: ui
+  UX: ux
+  基建: fund
+  IDE: ide
+  IOS: ios
+  ANDROID: android
+  APP: app
+  软件: software
+  硬件: hardware
+  音乐: music
+  诗词: poetry
+  小说: fiction
+  翻译: translate
+  健康: health
+  圣血记: holyblood
+  鸣泉录: tweetspring
+  寻玉: seekjade
+  清风工具: zephyrtool
+  转载: reprint
+  
+tag_map:
+#  心情: mood
+#  碎碎念: ssn
+  逻辑: logic
+  算法: algorithm
+  加密: encryption
+  科技: technology
+  心理学: psychology
+  自然: nature
+  地理: geography
+  历史: history
+  人文: humanity
+  生活: life
+  前端: frontend
+  后端: backend
+  CSS: css
+  HTML: html
+  jQuery: jquery
+  Javascript: js
+  Node.js: node
+  UI: ui
+  MVC: mvc
+  MVVM: mvvm
+  ASP: asp
+  PHP: php
+  Java: java
+  设计: design
+  Photoshop: ps
+  MV: mv
+  CMS: cms
+  SEO: seo
+  SEM: sem
+  Github: github
+  HEXO: hexo
+  API: api
+  O2O: o2o
+  资料: docs
+  更新: update
+  原创: original
+  转载: reprint
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 8
+pagination_dir: page
+
+archive_generator:
+  per_page: 20
+
+tag_generator:
+  per_page: 20
+
+category_generator:
+  per_page: 12
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: next.xovel
+exclude_generator:
+Plugins:
+- hexo-generator-feed
+- hexo-generator-sitemap
+- hexo-footnotes
+
+#sitemap
+sitemap:
+  path: sitemap.xml
+
+#Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+
+## https://github.com/chjj/marked
+marked:
+  gfm: true
+  pedantic: false
+  sanitize: false
+  tables: true
+  breaks: true
+  smartLists: true
+  smartypants: true
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  #repository: https://github.com/xovel/xovel.github.io.git
+  repository: git@github.com:xovel/xovel.github.io.git
+  branch: master
