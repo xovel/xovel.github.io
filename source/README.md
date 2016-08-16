@@ -1,3 +1,0 @@
-# Blog of xovel
-
-Welcome~
