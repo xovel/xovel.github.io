@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-08-18T09:25:12.721Z</updated>
+  <updated>2016-08-18T09:27:10.197Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/code-golf-output-fit-numbers.html"/>
     <id>http://xovel.cn/article/code-golf-output-fit-numbers.html</id>
     <published>2016-08-18T09:12:50.000Z</published>
-    <updated>2016-08-18T09:25:12.721Z</updated>
+    <updated>2016-08-18T09:27:10.197Z</updated>
     
     <content type="html">&lt;p&gt;爱下棋的朋友应该对“排局”这个词并不陌生，与“排局”一样，编程领域也有跟这个类似的好玩的东西：有一种故意出一种看起来不切合实际的问题，要求使用尽量短的代码来实现对应的功能。这个叫做“Code Golf”的黑科技却吸引着众多的程序员参与其中，今天我们就来看看其中的一个例子。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -88,8 +88,8 @@
 &lt;h3 id=&quot;CJam&quot;&gt;&lt;a href=&quot;#CJam&quot; class=&quot;headerlink&quot; title=&quot;CJam&quot;&gt;&lt;/a&gt;CJam&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;q~2b1+0a%0a*);2b&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;a href=&quot;https://sourceforge.net/projects/cjam/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CJam&lt;/a&gt;，&lt;a href=&quot;http://cjam.aditsu.net/#code=q~2b1%2B0a%250a*%29%3B2b&amp;amp;input=65000&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;在线测试&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;代码解释：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;q~     read and evaluate the input number&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2b     convert to base 2 (array of 1s and 0s)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;1+     append a 1 to deal with trailing zeros&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;0a%    split by [0], dropping empty pieces; only chunks of 1s are left&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;0a*    join by [0]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;);     discard the 1 we appended before&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2b     convert back from base 2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h2 id=&quot;后记&quot;&gt;&lt;a href=&quot;#后记&quot; class=&quot;headerlink&quot; title=&quot;后记&quot;&gt;&lt;/a&gt;后记&lt;/h2&gt;&lt;p&gt;&lt;del&gt;抄了这么多的编程语言的实现之后&lt;/del&gt;，颇有一种井底之蛙的感觉。还有很多编程语言也可以很简洁的失效该需求，这里就不再继续贴出了，有兴趣的可自行访问&lt;a href=&quot;http://codegolf.stackexchange.com/questions/90067/output-fit-numbers&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;该页面的源地址&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;全文完#&lt;/p&gt;
+&lt;h2 id=&quot;后记&quot;&gt;&lt;a href=&quot;#后记&quot; class=&quot;headerlink&quot; title=&quot;后记&quot;&gt;&lt;/a&gt;后记&lt;/h2&gt;&lt;p&gt;&lt;del&gt;抄了这么多的编程语言的实现之后&lt;/del&gt;，颇有一种井底之蛙的感觉。还有很多编程语言也可以很简洁的实现该需求，这里就不再继续贴出了，有兴趣的可自行访问&lt;a href=&quot;http://codegolf.stackexchange.com/questions/90067/output-fit-numbers&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;该页面的源地址&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;全文完~&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -2784,11 +2784,11 @@ ends up on two lines
       <category term="HTML" scheme="http://xovel.cn/categories/web/html/"/>
     
     
+      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
+    
       <category term="lang" scheme="http://xovel.cn/tags/lang/"/>
     
       <category term="html" scheme="http://xovel.cn/tags/html/"/>
-    
-      <category term="前端" scheme="http://xovel.cn/tags/frontend/"/>
     
   </entry>
   
