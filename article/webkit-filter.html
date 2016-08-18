@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://xovel.cn/article/webkit-filter.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="-webkit-filter是css3的一个属性，它为相应元素提供了诸如模糊、色相饱和、反转、灰度化等等之类的图像效果。该属性通常用在对图片、背景、边框这些对象的渲染上面。">
-<meta property="og:updated_time" content="2016-08-15T10:36:56.013Z">
+<meta property="og:updated_time" content="2016-08-18T05:33:01.667Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="-webkit-filter冰山一角">
 <meta name="twitter:description" content="-webkit-filter是css3的一个属性，它为相应元素提供了诸如模糊、色相饱和、反转、灰度化等等之类的图像效果。该属性通常用在对图片、背景、边框这些对象的渲染上面。">
@@ -353,7 +353,7 @@
 <li>模糊值为CSS距离，<em>不支持百分比</em></li><li>默认值为<code>0</code>，表示没有模糊效果</li></ul>
 <h3 id="brightness"><a href="#brightness" class="headerlink" title="brightness()"></a>brightness()</h3><p>亮度。</p>
 <ul>
-<li>取值为数值或者百分比</li><li>默认值为<code>1</code>，表示亮度保持不变</li><li>为<code>0</code>表示没有亮度，呈现为黑色。<del>小于0时视为0，均为黑色显示</del></li><li>数值越大，越亮。<del>可以亮瞎双眼</del></li></ul>
+<li>取值为数值或者百分比</li><li>默认值为<code>1</code>，表示亮度保持不变</li><li>为<code>0</code>表示没有亮度，呈现为黑色。小于0时视为0。</li><li>数值越大，越亮。<del>可以亮瞎双眼</del></li></ul>
 <h3 id="contrast"><a href="#contrast" class="headerlink" title="contrast()"></a>contrast()</h3><p>对比度。</p>
 <ul>
 <li>取值同上</li><li>默认值为<code>1</code>，表示对比度不变</li><li>为<code>0</code>将会完全灰化，灰化后的颜色值为<code>grey</code>/<code>gray</code>。同样，小于0时视为0。</li><li>数值越大，对比度越强。</li></ul>
@@ -362,7 +362,7 @@
 <ul>
 <li><code>offset-x</code>/<code>offset-y</code>为必需参数，前者表示阴影的横向偏移量，后者表示纵向偏移量</li><li><code>blur-radius</code>为模糊半径，默认为<code>0</code></li><li><code>color</code>为阴影的CSS颜色值，默认值为黑色<code>#000000</code>/<code>black</code></li></ul>
 <blockquote>
-<p>与<code>box-shadow</code>不同的是，应用多个阴影时，需要额外写<code>drop-shadow()</code>，不能向前者一样使用逗号进行分隔。概括的说就是<code>drop-shadow()</code>每次只能添加一中阴影效果。</p>
+<p>与<code>box-shadow</code>不同的是，应用多个阴影时，需要额外写<code>drop-shadow()</code>，不能向前者一样使用逗号进行分隔。概括的说就是<code>drop-shadow()</code>每次只能添加一种阴影效果。</p>
 </blockquote>
 <h3 id="grayscale"><a href="#grayscale" class="headerlink" title="grayscale()"></a>grayscale()</h3><p>灰度化。</p>
 <ul>
