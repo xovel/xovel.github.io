@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-09-01T09:38:39.559Z</updated>
+  <updated>2016-09-14T09:00:27.248Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>明天就是中秋佳节了</title>
+    <link href="http://xovel.cn/article/tomorrow-is-the-mid-autumn-festival.html"/>
+    <id>http://xovel.cn/article/tomorrow-is-the-mid-autumn-festival.html</id>
+    <published>2016-09-14T08:41:15.000Z</published>
+    <updated>2016-09-14T09:00:27.248Z</updated>
+    
+    <content type="html">&lt;p&gt;时间过得飞快，明天就是中国传统佳节——&lt;strong&gt;中秋节&lt;/strong&gt;了。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;blockquote&gt;
+&lt;p&gt;中秋节是东亚文化圈民间的一个传统节日，起源于古代中国，为每年的农历八月十五，约在公历的9月至10月初。按照中国的农历，八月为秋季的第二个月，古时称为仲秋，因此民间称为中秋，又称秋夕、八月节、八月半、月夕、月节、 十五夜，又因为这一天月亮满圆，象征团圆，又称为团圆节，是华人四大节日之一。除华人地区外，中秋节也是韩国、日本、越南、琉球、泰国的传统节日。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;del&gt;以上代码来自维基百科&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;遥记得小时候，村子里面过中秋的热闹场景，只怕以后再也没有机会体验到了。吃着传说中的&lt;em&gt;五仁月饼&lt;/em&gt;，讲真，还是比较喜欢莲蓉馅的。&lt;/p&gt;
+&lt;p&gt;小时候的光景，也一去不复返咯，成长的忧伤慢慢增加起来，如今更是要面对各种各样的压力，实在是没什么闲暇时间去享受这该有的乐趣。&lt;/p&gt;
+&lt;p&gt;本博客也有很久没有做技术方面文章的更新了，近段时间由于公司人员波动，诸多项目暂时搁置了，等节后再来统一处理吧。&lt;/p&gt;
+&lt;p&gt;等会要开节前项目安排的会议，估计要花很长时间，该去准备准备了。&lt;/p&gt;
+&lt;p&gt;以上，谨祝诸君中秋佳节快乐。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;时间过得飞快，明天就是中国传统佳节——&lt;strong&gt;中秋节&lt;/strong&gt;了。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
+    
+    
+      <category term="中秋" scheme="http://xovel.cn/tags/%E4%B8%AD%E7%A7%8B/"/>
+    
+      <category term="心情" scheme="http://xovel.cn/tags/%E5%BF%83%E6%83%85/"/>
+    
+  </entry>
   
   <entry>
     <title>弹性布局的兼容性问题</title>
@@ -1503,64 +1538,6 @@ __我也是粗体__
       <category term="百科" scheme="http://xovel.cn/tags/%E7%99%BE%E7%A7%91/"/>
     
       <category term="资料" scheme="http://xovel.cn/tags/docs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTTP1.1协议更新，RFC2616被废弃</title>
-    <link href="http://xovel.cn/article/rfc2616-is-obsoleted.html"/>
-    <id>http://xovel.cn/article/rfc2616-is-obsoleted.html</id>
-    <published>2016-06-15T04:16:12.000Z</published>
-    <updated>2016-06-15T03:47:26.921Z</updated>
-    
-    <content type="html">&lt;p&gt;2014年年中，IETF更新了HTTP/1.1协议：将原来的HTTP/1.1协议（&lt;a href=&quot;https://tools.ietf.org/html/rfc2616&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RFC2616&lt;/a&gt;）拆开，分成了六个单独的协议。在这六个新的协议说明中，重点对之前语义模糊的部分进行了重新诠释。更新之后的协议变得更易懂、易读。&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;以下是新的六个协议：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;RFC7230 - &lt;a href=&quot;http://tools.ietf.org/html/rfc7230&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTTP/1.1: Message Syntax and Routing&lt;/a&gt; - low-level message parsing and connection management&lt;/li&gt;&lt;li&gt;RFC7231 - &lt;a href=&quot;http://tools.ietf.org/html/rfc7231&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTTP/1.1: Semantics and Content&lt;/a&gt; - methods, status codes and headers&lt;/li&gt;&lt;li&gt;RFC7232 - &lt;a href=&quot;http://tools.ietf.org/html/rfc7232&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTTP/1.1: Conditional Requests&lt;/a&gt; - e.g., If-Modified-Since&lt;/li&gt;&lt;li&gt;RFC7233 - &lt;a href=&quot;http://tools.ietf.org/html/rfc7233&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTTP/1.1: Range Requests&lt;/a&gt; - getting partial content&lt;/li&gt;&lt;li&gt;RFC7234 - &lt;a href=&quot;http://tools.ietf.org/html/rfc7234&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTTP/1.1: Caching&lt;/a&gt; - browser and intermediary caches&lt;/li&gt;&lt;li&gt;RFC7235 - &lt;a href=&quot;http://tools.ietf.org/html/rfc7235&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTTP/1.1: Authentication&lt;/a&gt; - a framework for HTTP authentication&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;正如Mark Nottingham在其个人博客中的一篇文章（&lt;a href=&quot;https://www.mnot.net/blog/2014/06/07/rfc2616_is_dead&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RFC2616 is Dead&lt;/a&gt;）中的吐槽一样：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Don’t use RFC2616. Delete it from your hard drives, bookmarks, and burn (or responsibly recycle) any copies that are printed out.&lt;/p&gt;
-&lt;p&gt;不要再使用RFC2616了。将它从你的磁盘、书签中删除，并将打印出来的任何副本烧掉，当然你也可以回收再利用。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;RFC2616已经变为废弃状态。&lt;/p&gt;
-&lt;p&gt;其实早在2007年，IETF内部就针对HTTP/1.1的修订展开了工作，他们成立了一个名字叫做&lt;a href=&quot;https://tools.ietf.org/wg/httpbis/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTTPbis&lt;/a&gt;的工作小组，目的是让HTTP/1.1协议规范更加清晰易读，并非对之前的协议进行升级或者添加新的特性。在这个修订过程中，小组成员发布了数十个草稿版本，并处理了&lt;a href=&quot;https://trac.tools.ietf.org/wg/httpbis/trac/report/19&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;550+问题&lt;/a&gt;。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;HTTPbis就是现在的HTTP Working Group，其官方主页为：&lt;a href=&quot;http://httpwg.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://httpwg.org/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;关于为何取名HTTPbis，stackoverflow上有个讨论：&lt;a href=&quot;http://stackoverflow.com/questions/9105639/httpbis-what-does-bis-mean&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTTPbis - what does bis mean?&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;在文档整理过程中，HTTPbis也对HTTP/1.1协议中的一些不合理或者不安全的地方进行了修正与完。在官方文档中描述了对应于RFC2616的变更部分：&lt;a href=&quot;http://tools.ietf.org/html/rfc7230#appendix-A.2&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Changes from RFC 2616&lt;/a&gt;。Evert在其博客（&lt;a href=&quot;https://evertpot.com/http-11-updated/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTTP/1.1 just got a major update&lt;/a&gt;）中有一番总结，指出了其中的一些重大变更：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;Clarifications around dealing with unexpected whitespace, which should fix response splitting vulnerabilities.&lt;/li&gt;&lt;li&gt;The limit of two connections per server has been removed.&lt;/li&gt;&lt;li&gt;HTTP/0.9 support has been dropped.&lt;/li&gt;&lt;li&gt;Default charset of ISO-8859-1 has been removed.&lt;/li&gt;&lt;li&gt;Servers are no longer required to handle all &lt;code&gt;Content-*&lt;/code&gt; header fields.&lt;/li&gt;&lt;li&gt;&lt;code&gt;Content-Range&lt;/code&gt; has been explicitly banned in PUT requests.&lt;/li&gt;&lt;li&gt;It’s now suggested to use the &lt;code&gt;about:blank&lt;/code&gt; uri in the &lt;code&gt;Referer&lt;/code&gt; header when no referer exists, to distinguish between “there was no referrer” and “I don’t want to send a referrer”.&lt;/li&gt;&lt;li&gt;The &lt;code&gt;204&lt;/code&gt;, &lt;code&gt;404&lt;/code&gt;, &lt;code&gt;405&lt;/code&gt;, &lt;code&gt;414&lt;/code&gt; and &lt;code&gt;501&lt;/code&gt; status codes are now cachable.&lt;/li&gt;&lt;li&gt;The status codes &lt;code&gt;301&lt;/code&gt; and &lt;code&gt;302&lt;/code&gt; have been changed to allow user agents to rewrite the method from &lt;code&gt;POST&lt;/code&gt; to &lt;code&gt;GET&lt;/code&gt;. This is a good example of a case where everybody has been (incorrectly) already doing this, and the spec now reflects the real world implementation.&lt;/li&gt;&lt;li&gt;The &lt;code&gt;Location&lt;/code&gt; header can now contain relative uri’s as well as fragment identifiers.&lt;/li&gt;&lt;li&gt;&lt;code&gt;Content-MD5&lt;/code&gt; has been removed.&lt;/li&gt;&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;翻译如下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;明确了针对未预期空格的处理，以修复&lt;code&gt;HTTP Response Splitting&lt;/code&gt;漏洞。&lt;/li&gt;&lt;li&gt;每个服务器两个连接数的限制被移除。&lt;/li&gt;&lt;li&gt;放弃对&lt;code&gt;HTTP/0.9&lt;/code&gt;的支持。&lt;/li&gt;&lt;li&gt;&lt;code&gt;ISO-8859-1&lt;/code&gt;不再是默认的字符集。&lt;/li&gt;&lt;li&gt;服务器不再需要去处理所有的&lt;code&gt;Content-*&lt;/code&gt;请求头内容。&lt;/li&gt;&lt;li&gt;明确禁止在&lt;code&gt;PUT&lt;/code&gt;请求中使用&lt;code&gt;Content-Range&lt;/code&gt;。&lt;/li&gt;&lt;li&gt;当referer不存在时，为了区分“这里没有referrer”和“我不想发送referrer”，建议在请求头&lt;code&gt;Referer&lt;/code&gt;中使用&lt;code&gt;about:blank&lt;/code&gt;这个uri。&lt;/li&gt;&lt;li&gt;状态码&lt;code&gt;204&lt;/code&gt;、&lt;code&gt;404&lt;/code&gt;、&lt;code&gt;405&lt;/code&gt;、&lt;code&gt;414&lt;/code&gt;以及&lt;code&gt;501&lt;/code&gt;现在可以缓存了。&lt;/li&gt;&lt;li&gt;状态码&lt;code&gt;301&lt;/code&gt;、&lt;code&gt;302&lt;/code&gt;现在允许用户代理将请求方式从&lt;code&gt;POST&lt;/code&gt;重写为&lt;code&gt;GET&lt;/code&gt;。&lt;em&gt;人们之前早就这样做了（&lt;del&gt;尽管当时是不正确的&lt;/del&gt;），现在现实世界中的操作被规范重新表述，这个就是一个很好的例子。&lt;/em&gt;&lt;/li&gt;&lt;li&gt;现在请求头&lt;code&gt;Location&lt;/code&gt;可以包含相对URI和片段标识符。&lt;/li&gt;&lt;li&gt;&lt;code&gt;Content-MD5&lt;/code&gt;被移除。&lt;/li&gt;&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;参考资料：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.mnot.net/blog/2014/06/07/rfc2616_is_dead&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RFC2616 is Dead&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://evertpot.com/http-11-updated/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTTP/1.1 just got a major update&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;2014年年中，IETF更新了HTTP/1.1协议：将原来的HTTP/1.1协议（&lt;a href=&quot;https://tools.ietf.org/html/rfc2616&quot;&gt;RFC2616&lt;/a&gt;）拆开，分成了六个单独的协议。在这六个新的协议说明中，重点对之前语义模糊的部分进行了重新诠释。更新之后的协议变得更易懂、易读。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="WEB" scheme="http://xovel.cn/categories/web/"/>
-    
-      <category term="HTTP" scheme="http://xovel.cn/categories/web/http/"/>
-    
-    
-      <category term="http" scheme="http://xovel.cn/tags/http/"/>
-    
-      <category term="rfc" scheme="http://xovel.cn/tags/rfc/"/>
-    
-      <category term="协议" scheme="http://xovel.cn/tags/%E5%8D%8F%E8%AE%AE/"/>
-    
-      <category term="http1.1" scheme="http://xovel.cn/tags/http1-1/"/>
     
   </entry>
   
