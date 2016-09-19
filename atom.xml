@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-09-18T09:09:46.899Z</updated>
+  <updated>2016-09-19T06:57:47.727Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -16,18 +16,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>一个CSS梯形导航的实现</title>
-    <link href="http://xovel.cn/article/css-trapezoid.html"/>
-    <id>http://xovel.cn/article/css-trapezoid.html</id>
-    <published>2016-09-18T08:46:11.000Z</published>
-    <updated>2016-09-18T09:09:46.899Z</updated>
+    <title>解决IIS中MIME类型方面的404错误</title>
+    <link href="http://xovel.cn/article/iis-404-mime-type.html"/>
+    <id>http://xovel.cn/article/iis-404-mime-type.html</id>
+    <published>2016-09-19T06:50:07.000Z</published>
+    <updated>2016-09-19T06:57:47.727Z</updated>
     
-    <content type="html">&lt;p&gt;明天再写吧……&lt;/p&gt;
+    <content type="html">&lt;p&gt;在IIS部署本地站点时，偶然发现有几个404错误；但是使用开发工具查看具体文件时，所指向的文件本地却是存在的。那么，像这样的情况究竟是怎么回事，又怎么去解决呢？&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;请检查IIS是否开启了对相应文件类型的支持，添加对应的MIME类型即可。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://image18.poco.cn/mypoco/myphoto/20160919/13/5599735820160919133814077.png&quot; alt=&quot;IIS-MIME&quot;&gt;&lt;/p&gt;
+&lt;p&gt;如上图所示，打开IIS的MIME类型设置界面，添加条目即可。&lt;/p&gt;
+&lt;p&gt;常见的可能需要手动设置的MIME类型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;json，MIME类型为&lt;code&gt;application/json&lt;/code&gt;&lt;/li&gt;&lt;li&gt;woff/woff2，MIME类型为&lt;code&gt;application/x-font-woff&lt;/code&gt;&lt;/li&gt;&lt;li&gt;svg，MIME类型为&lt;code&gt;image/svg+xml&lt;/code&gt;&lt;/li&gt;&lt;li&gt;mp3，MIME类型为&lt;code&gt;audio/mpeg&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;更多MIME类型请参阅：&lt;a href=&quot;http://www.iana.org/assignments/media-types/media-types.xhtml&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Media Types&lt;/a&gt;。&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;明天再写吧……&lt;/p&gt;
+      &lt;p&gt;在IIS部署本地站点时，偶然发现有几个404错误；但是使用开发工具查看具体文件时，所指向的文件本地却是存在的。那么，像这样的情况究竟是怎么回事，又怎么去解决呢？&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="开发" scheme="http://xovel.cn/categories/dev/"/>
+    
+    
+      <category term="IIS" scheme="http://xovel.cn/tags/IIS/"/>
+    
+      <category term="MIME" scheme="http://xovel.cn/tags/MIME/"/>
+    
+      <category term="404" scheme="http://xovel.cn/tags/404/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一个CSS梯形导航的实现</title>
+    <link href="http://xovel.cn/article/css-trapezoid.html"/>
+    <id>http://xovel.cn/article/css-trapezoid.html</id>
+    <published>2016-09-18T08:46:11.000Z</published>
+    <updated>2016-09-19T06:48:12.052Z</updated>
+    
+    <content type="html">&lt;p&gt;以后再写吧……&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;以后再写吧……&lt;/p&gt;
 
     
     </summary>
@@ -1219,61 +1254,6 @@
       <category term="教程" scheme="http://xovel.cn/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="参考" scheme="http://xovel.cn/tags/%E5%8F%82%E8%80%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>贷款中的等额本息计算方法</title>
-    <link href="http://xovel.cn/article/equal-loan-payment.html"/>
-    <id>http://xovel.cn/article/equal-loan-payment.html</id>
-    <published>2016-06-22T07:29:45.000Z</published>
-    <updated>2016-06-22T10:12:40.673Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;概念介绍&quot;&gt;&lt;a href=&quot;#概念介绍&quot; class=&quot;headerlink&quot; title=&quot;概念介绍&quot;&gt;&lt;/a&gt;概念介绍&lt;/h2&gt;&lt;p&gt;目前常见的贷款方式有等额本息和等额本金，它们都属于按揭贷款，或者叫做抵押贷款。&lt;/p&gt;
-&lt;h3 id=&quot;等额本息&quot;&gt;&lt;a href=&quot;#等额本息&quot; class=&quot;headerlink&quot; title=&quot;等额本息&quot;&gt;&lt;/a&gt;等额本息&lt;/h3&gt;&lt;p&gt;顾名思义，等额本息贷款的意思就是把按揭贷款的本金总额与偿还的利息总额相加并平摊到还款期限中的每个月中去。等额本息贷款中，每个月的还款额是固定的。每月还款额中的本金与利息组成结构不同，随着时间的推移，本金比重会逐月递增，而利息则逐月递减。&lt;/p&gt;
-&lt;p&gt;目前大部分银行推荐使用这一种方式进行贷款业务。&lt;/p&gt;
-&lt;h3 id=&quot;等额本金&quot;&gt;&lt;a href=&quot;#等额本金&quot; class=&quot;headerlink&quot; title=&quot;等额本金&quot;&gt;&lt;/a&gt;等额本金&lt;/h3&gt;&lt;p&gt;等额本金指的是在还款期内把贷款数的总额进行划分，每月的还款额的组成为固定的还款额和剩余贷款在该月的利息。因为每月还款本金固定，利息会随着时间的推移逐月递减，贷款人开始的时候还款压力较大，随着时间的推移每月还款额越来越少。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;参考资料：&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Mortgage_loan&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mortgage loan&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;h2 id=&quot;每月还款额的计算方式&quot;&gt;&lt;a href=&quot;#每月还款额的计算方式&quot; class=&quot;headerlink&quot; title=&quot;每月还款额的计算方式&quot;&gt;&lt;/a&gt;每月还款额的计算方式&lt;/h2&gt;&lt;h3 id=&quot;等额本息-1&quot;&gt;&lt;a href=&quot;#等额本息-1&quot; class=&quot;headerlink&quot; title=&quot;等额本息&quot;&gt;&lt;/a&gt;等额本息&lt;/h3&gt;&lt;p&gt;每月还款额=贷款额*月贷款利息*(1+月贷款利息)^贷款期限/((1+月贷款利息)^贷款期限-1)&lt;/p&gt;
-&lt;p&gt;我们进行一个简单的数学建模：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;设贷款总额为$A$，银行月利率为$r$，总期数为$N$（月），求月还款额$x$。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;推演过程：&lt;/p&gt;
-&lt;p&gt;每个月所欠银行的贷款为：&lt;br&gt;第一个月：$A$&lt;br&gt;第二个月：$A(1+r)-x$&lt;br&gt;第三个月：$(A(1+r)-x)(1+r)-x = A(1+r)^2-x(1+(1+r))$&lt;br&gt;第四个月：$((A(1+r)-x)(1+r)-x)(1+r)-x = A(1+r)^3-x(1+(1+r)+(1+r)^2)$&lt;br&gt;…&lt;br&gt;依次类推，第n个月后所欠银行贷款为&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;：&lt;br&gt;$$A(1+r)^n-x(1+(1+r)+(1+r)^2+…+(1+r)^{n-1}) = A(1+r)^n-x\cdot\frac{(1+r)^n-1}{r}$$ &lt;/p&gt;
-&lt;p&gt;第$N$个月还清，有：&lt;br&gt;$$A(1+r)^N-x\cdot\frac{(1+r)^N-1}{r}=0$$&lt;/p&gt;
-&lt;p&gt;于是：&lt;br&gt;$$x=\frac{Ar(1+r)^N}{(1+r)^N-1}$$&lt;/p&gt;
-&lt;p&gt;推演完毕。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;每月还款额中的还掉的本金计算公式：$x=\frac{Ar(1+r)^{n-1}}{(1+r)^N-1}$&lt;br&gt;&lt;em&gt;其中$A$为总贷款总额，$r$为贷款利率，$N$为总期数，$n$为当前月份的序号&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;等额本金-1&quot;&gt;&lt;a href=&quot;#等额本金-1&quot; class=&quot;headerlink&quot; title=&quot;等额本金&quot;&gt;&lt;/a&gt;等额本金&lt;/h3&gt;&lt;p&gt;每月月供额=(贷款本金÷还款月数)+(贷款本金-已归还本金累计额)×月利率&lt;/p&gt;
-&lt;p&gt;推演过程此处省略。&lt;/p&gt;
-&lt;h2 id=&quot;Excel计算&quot;&gt;&lt;a href=&quot;#Excel计算&quot; class=&quot;headerlink&quot; title=&quot;Excel计算&quot;&gt;&lt;/a&gt;Excel计算&lt;/h2&gt;&lt;p&gt;在Excel中，直接使用公式&lt;code&gt;PMT&lt;/code&gt;计算等额本息的每月还款额。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;PMT(Rate, Nper, Pv, Fv, Type)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;参数说明：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Rate，必需。贷款利率。&lt;/li&gt;&lt;li&gt;Nper，必需。贷款的总期数。&lt;/li&gt;&lt;li&gt;Pv，必需。贷款总额。&lt;/li&gt;&lt;li&gt;Fv，可选。未来值，或在最后一次付款后可以获得的现金余额。如果忽略，则此值为0。&lt;/li&gt;&lt;li&gt;Type，可选。用以指定付款时间在期初还是在期末。1表示起初，0表示在期末。默认为0。&lt;/li&gt;&lt;/ul&gt;
-&lt;div id=&quot;footnotes&quot;&gt;&lt;hr&gt;&lt;div id=&quot;footnotelist&quot;&gt;&lt;ol&gt;&lt;li id=&quot;fn:1&quot;&gt;等比数列求和公式：$S_n=a_1\cdot\frac{1-q^n}{1-q}=\frac{a_1-a_n*q}{1-q} (q\neq1)$，$a_1$为基数，$q$为等比系数。&lt;a href=&quot;#fnref:1&quot; rev=&quot;footnote&quot;&gt; ↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;&lt;/div&gt;</content>
-    
-    <summary type="html">
-    
-      目前常见的贷款方式有等额本息和等额本金，它们都属于按揭贷款，或者叫做抵押贷款。等额本息贷款的意思就是把按揭贷款的本金总额与偿还的利息总额相加并平摊到还款期限中的每个月中去。等额本息贷款中，每个月的还款额是固定的。每月还款额中的本金与利息组成结构不同，随着时间的推移，本金比重会逐月递增，而利息则逐月递减。
-    
-    </summary>
-    
-      <category term="杂项" scheme="http://xovel.cn/categories/misc/"/>
-    
-    
-      <category term="贷款" scheme="http://xovel.cn/tags/%E8%B4%B7%E6%AC%BE/"/>
-    
-      <category term="等额本息" scheme="http://xovel.cn/tags/%E7%AD%89%E9%A2%9D%E6%9C%AC%E6%81%AF/"/>
-    
-      <category term="excel" scheme="http://xovel.cn/tags/excel/"/>
-    
-      <category term="pmt" scheme="http://xovel.cn/tags/pmt/"/>
     
   </entry>
   
