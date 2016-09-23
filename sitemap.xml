@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://xovel.cn/article/iis-404-mime-type.html</loc>
+    <loc>http://xovel.cn/404.html</loc>
     
-    <lastmod>2016-09-19T06:57:47.727Z</lastmod>
+    <lastmod>2016-09-20T03:06:41.024Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://xovel.cn/article/css-trapezoid.html</loc>
+    <loc>http://xovel.cn/article/iis-404-mime-type.html</loc>
     
-    <lastmod>2016-09-19T06:48:12.052Z</lastmod>
+    <lastmod>2016-09-19T06:57:47.727Z</lastmod>
     
   </url>
   
@@ -236,13 +236,6 @@
     <loc>http://xovel.cn/categories/index.html</loc>
     
     <lastmod>2016-05-12T03:22:09.311Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xovel.cn/404.html</loc>
-    
-    <lastmod>2016-05-12T03:14:13.345Z</lastmod>
     
   </url>
   
