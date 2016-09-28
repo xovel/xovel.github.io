@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-09-28T02:02:23.236Z</updated>
+  <updated>2016-09-28T02:04:50.106Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://xovel.cn/article/limitation-of-wechat-weapp.html"/>
     <id>http://xovel.cn/article/limitation-of-wechat-weapp.html</id>
     <published>2016-09-28T00:43:15.000Z</published>
-    <updated>2016-09-28T02:02:23.236Z</updated>
+    <updated>2016-09-28T02:04:50.106Z</updated>
     
     <content type="html">&lt;p&gt;前段时间（&lt;code&gt;2016年9月22日&lt;/code&gt;），腾讯释出了微信小程序的测试版，各路开发者纷纷出台攻略，一举攻占这块&lt;del&gt;高地&lt;/del&gt;。&lt;/p&gt;
-&lt;p&gt;随着各路牛人，纷至沓来的对微信小程序进行各种各样的测试与编制，如今这一块已经没有什么很高深的技术难度了。想要学习微信小程序的，读懂官方释出的[开发文档][官方开发文档]，基本就能应对大部分的开发需求了。&lt;/p&gt;
+&lt;p&gt;随着各路牛人，纷至沓来的对微信小程序进行各种各样的测试与编制，如今这一块已经没有什么很高深的技术难度了。想要学习微信小程序的，读懂官方释出的&lt;a href=&quot;https://mp.weixin.qq.com/debug/wxadoc/dev/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;开发文档&lt;/a&gt;，基本就能应对大部分的开发需求了。&lt;/p&gt;
 &lt;p&gt;当然，由于目前微信小程序还处于内侧阶段，并不是所有开发者都有自由创建微信小程序的权限。但是这并不能难倒&lt;del&gt;无所不能的&lt;/del&gt;开发群众，一个&lt;a href=&quot;https://github.com/gavinkwoe/weapp-ide-crack&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;IDE破解版&lt;/a&gt;应运而生。&lt;/p&gt;
 &lt;p&gt;本篇文章的重点并不是要介绍微信小程序是如何开发与运作的，下面将给出本人在攻略微信小程序的过程中遇到的一些问题，同时结合目前网上出现的一些其他疑难杂症，做一个简单的阐述。&lt;/p&gt;
 &lt;p&gt;首先，微信小程序的项目文件看起来是前端文件，但实际上并不完全是。其页面文件格式为&lt;code&gt;wxml&lt;/code&gt;，样式文件为&lt;code&gt;wxss&lt;/code&gt;。或许是仿照&lt;code&gt;react native&lt;/code&gt;的&lt;code&gt;JSX&lt;/code&gt;，也或许是参考了&lt;code&gt;vue.js&lt;/code&gt;的模板格式，微信小程序现在是不支持HTML的。这意味着如果要实现微信小程序的页面，需要对HTML/CSS/JS进行重写。没有DOM，这也稍稍提升了一些难度，然而这并不是什么太大的问题，参照官方给出的手册，一个个照着修改就行了。&lt;/p&gt;
