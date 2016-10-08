@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="歌曲,母亲,误解," />
+  <meta name="keywords" content="event,API," />
 
 
 
@@ -60,16 +60,19 @@
 
 
 
-<meta name="description" content="一些被误解的写给母亲的歌曲。">
+<meta name="description" content="简介Page Visibility API提供了一套让用户获悉当前网页是否可见或是否在焦点中。在多页浏览时，该属性会随着页面的切换而进行改动。当用户最小化页面或者切换至其他页面时，该API会发出一个visibilitychange事件告知网页的visibility属性已经发生了改变。
+利用这个特性，我们可以针对性的做出一些动作，比如提醒用户已经离开该页面。特别是在播放视频的页面，当页面丢失焦点之后">
 <meta property="og:type" content="article">
-<meta property="og:title" content="写给母亲的歌却一直被误解">
-<meta property="og:url" content="http://xovel.cn/article/misunderstood-songs-for-mother.html">
+<meta property="og:title" content="Page Visibility API之visibilitychange事件简介">
+<meta property="og:url" content="http://xovel.cn/article/visibilitychange-event.html">
 <meta property="og:site_name" content="清风轩">
-<meta property="og:description" content="一些被误解的写给母亲的歌曲。">
-<meta property="og:updated_time" content="2016-08-05T08:49:58.152Z">
+<meta property="og:description" content="简介Page Visibility API提供了一套让用户获悉当前网页是否可见或是否在焦点中。在多页浏览时，该属性会随着页面的切换而进行改动。当用户最小化页面或者切换至其他页面时，该API会发出一个visibilitychange事件告知网页的visibility属性已经发生了改变。
+利用这个特性，我们可以针对性的做出一些动作，比如提醒用户已经离开该页面。特别是在播放视频的页面，当页面丢失焦点之后">
+<meta property="og:updated_time" content="2016-10-08T08:33:01.572Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="写给母亲的歌却一直被误解">
-<meta name="twitter:description" content="一些被误解的写给母亲的歌曲。">
+<meta name="twitter:title" content="Page Visibility API之visibilitychange事件简介">
+<meta name="twitter:description" content="简介Page Visibility API提供了一套让用户获悉当前网页是否可见或是否在焦点中。在多页浏览时，该属性会随着页面的切换而进行改动。当用户最小化页面或者切换至其他页面时，该API会发出一个visibilitychange事件告知网页的visibility属性已经发生了改变。
+利用这个特性，我们可以针对性的做出一些动作，比如提醒用户已经离开该页面。特别是在播放视频的页面，当页面丢失焦点之后">
 
 
 
@@ -87,7 +90,7 @@
   };
 </script>
 
-  <title> 写给母亲的歌却一直被误解 | 清风轩 </title>
+  <title> Page Visibility API之visibilitychange事件简介 | 清风轩 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -243,7 +246,7 @@
             
             
               
-                写给母亲的歌却一直被误解
+                Page Visibility API之visibilitychange事件简介
               
             
           </h1>
@@ -255,8 +258,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-05T16:09:14+08:00" content="2016-08-05">
-              2016-08-05
+            <time itemprop="dateCreated" datetime="2016-10-08T15:46:39+08:00" content="2016-10-08">
+              2016-10-08
             </time>
           </span>
 
@@ -269,8 +272,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/music/" itemprop="url" rel="index">
-                    <span itemprop="name">音乐</span>
+                  <a href="/categories/web/" itemprop="url" rel="index">
+                    <span itemprop="name">WEB</span>
                   </a>
                 </span>
 
@@ -303,21 +306,82 @@
       
 
       
-        <blockquote>
-<p>没什么好说的，就是想抒发一下感慨。</p>
-</blockquote>
-<p>还是直切主题吧，来聊一聊一些被误解的写给母亲的歌曲。</p>
+        <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><code>Page Visibility API</code>提供了一套让用户获悉当前网页是否可见或是否在焦点中。在多页浏览时，该属性会随着页面的切换而进行改动。当用户最小化页面或者切换至其他页面时，该API会发出一个<code>visibilitychange</code>事件告知网页的visibility属性已经发生了改变。</p>
+<p>利用这个特性，我们可以针对性的做出一些动作，比如提醒用户已经离开该页面。特别是在播放视频的页面，当页面丢失焦点之后可以利用这个API做出一些特定的动作以提升网页的用户体验，比如暂停视频的播放。</p>
+<p>注意：在使用了<code>iframe</code>的页面中，iframe的visibility属性跟随父文档。</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p><em>页面失去焦点后改变文档的标题</em></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"visibilitychange"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">document</span>.title = <span class="string">'new title~'</span>;</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="浏览器兼容性"><a href="#浏览器兼容性" class="headerlink" title="浏览器兼容性"></a>浏览器兼容性</h3><p><strong>桌面浏览器</strong></p>
+<table>
+<thead>
+<tr>
+<th>浏览器</th>
+<th>起始版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chrome</td>
+<td>13<code>webkit</code></td>
+</tr>
+<tr>
+<td>Chrome</td>
+<td>33</td>
+</tr>
+<tr>
+<td>Firefox (Gecko)</td>
+<td>18 (18)</td>
+</tr>
+<tr>
+<td>Internet Explorer</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Opera</td>
+<td>12.10</td>
+</tr>
+<tr>
+<td>Safari (WebKit)</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<p><strong>移动端</strong></p>
+<table>
+<thead>
+<tr>
+<th>浏览器</th>
+<th>起始版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Android</td>
+<td>4.4<code>webkit</code></td>
+</tr>
+<tr>
+<td>Firefox Mobile (Gecko)</td>
+<td>18.0 (18)</td>
+</tr>
+<tr>
+<td>IE Phone</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Opera Mobile</td>
+<td>12.10</td>
+</tr>
+<tr>
+<td>Safari Mobile</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<p>注意：</p>
 <ul>
-<li><p><strong>真的爱你</strong></p>
-<p>二十多年前，黄家驹创作了一曲《真的爱你》，此曲收录在Beyond乐队在Beyond于1989年发行的粤语专辑《Beyond IV》 内。Beyond乐队凭借这张专辑奠定了在乐坛的地位，《真的爱你》作为主打歌，作词为梁美薇，作曲为黄家驹。此曲歌颂的主题为伟大的母爱。然而，很多年过去了，这首歌一直处于被世人误解的尴尬境地。</p>
-</li><li><p><strong>懂你</strong></p>
-<p>与《真的爱你》一样，《懂你》这首歌也是一首歌颂母爱的歌曲。《懂你》由满文军演唱，于1994年面世。令人啼笑皆非的是，如今有许多人拿这首歌来进行男女朋友之间的表白，真是百思不得其解。</p>
-</li><li><p><strong>星星</strong></p>
-<p>这里的星星是一首俄语歌曲，俄文名是《Звезда》。由VITAS创作，收录在2003年发行的专辑《妈妈（mama）》当中，是写给母亲的歌曲。歌手用其深邃的嗓音表述了对母亲无尽的思念，然而还是被很多人误解了该曲创作的用意。</p>
-</li></ul>
-<p>邓紫棋最新出的一张专辑《新的心跳》里面有一首歌是写给父母的，叫做《盲点》，这首歌依然逃不出被误解的命运。</p>
-<hr>
-<p>好吧，其实我是有点思念母亲了。就不写太多的文字了，免得又要感伤。</p>
+<li>Opera浏览器中，当窗口最小化之后不要触发<code>visibilitychange</code>事件，也不要尝试设置<code>hidden</code>值</li><li>Firefox浏览器中，版本10-51之间的需要添加私有前缀moz(<code>-moz-</code>)</li><li><code>webkit</code>表示需要添加私有前缀<code>-webkit-</code></li></ul>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
+<li><a href="https://www.w3.org/TR/page-visibility/#sec-visibilitychange-event" target="_blank" rel="external">Page Visibility - The visibilitychange event</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API" target="_blank" rel="external">Page Visibility API - Web APIs | MDN</a></li><li><a href="https://blogs.msdn.microsoft.com/ie/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2/" title="Using PC Hardware more efficiently in HTML5: New Web Performance APIs, Part 2" target="_blank" rel="external">Description of the Page Visibility API on the IEBlog</a></li></ul>
 
       
     </div>
@@ -339,11 +403,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/歌曲/" rel="tag">#歌曲</a>
+            <a href="/tags/event/" rel="tag">#event</a>
           
-            <a href="/tags/母亲/" rel="tag">#母亲</a>
-          
-            <a href="/tags/误解/" rel="tag">#误解</a>
+            <a href="/tags/api/" rel="tag">#API</a>
           
         </div>
       
@@ -352,17 +414,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/article/excel-even-odd-color.html" rel="next" title="EXCEL中给奇偶行条纹">
-                <i class="fa fa-chevron-left"></i> EXCEL中给奇偶行条纹
+              <a href="/article/limitation-of-wechat-weapp.html" rel="next" title="微信小程序的一些不够美的地方">
+                <i class="fa fa-chevron-left"></i> 微信小程序的一些不够美的地方
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/article/today-is-7-7.html" rel="prev" title="又是一年七夕时">
-                又是一年七夕时 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -388,8 +446,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="article/misunderstood-songs-for-mother.html"
-           data-title="写给母亲的歌却一直被误解" data-url="http://xovel.cn/article/misunderstood-songs-for-mother.html">
+      <div class="ds-thread" data-thread-key="article/visibilitychange-event.html"
+           data-title="Page Visibility API之visibilitychange事件简介" data-url="http://xovel.cn/article/visibilitychange-event.html">
       </div>
     
   </div>
@@ -513,7 +571,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#示例"><span class="nav-number">2.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器兼容性"><span class="nav-number">3.</span> <span class="nav-text">浏览器兼容性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
           </div>
         </section>
