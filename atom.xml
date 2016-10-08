@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-10-08T08:33:01.572Z</updated>
+  <updated>2016-10-08T09:31:06.889Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/visibilitychange-event.html"/>
     <id>http://xovel.cn/article/visibilitychange-event.html</id>
     <published>2016-10-08T07:46:39.000Z</published>
-    <updated>2016-10-08T08:33:01.572Z</updated>
+    <updated>2016-10-08T09:31:06.889Z</updated>
     
     <content type="html">&lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;&lt;code&gt;Page Visibility API&lt;/code&gt;提供了一套让用户获悉当前网页是否可见或是否在焦点中。在多页浏览时，该属性会随着页面的切换而进行改动。当用户最小化页面或者切换至其他页面时，该API会发出一个&lt;code&gt;visibilitychange&lt;/code&gt;事件告知网页的visibility属性已经发生了改变。&lt;/p&gt;
 &lt;p&gt;利用这个特性，我们可以针对性的做出一些动作，比如提醒用户已经离开该页面。特别是在播放视频的页面，当页面丢失焦点之后可以利用这个API做出一些特定的动作以提升网页的用户体验，比如暂停视频的播放。&lt;/p&gt;
@@ -102,7 +102,7 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;&lt;code&gt;Page Visibility API&lt;/code&gt;提供了一套让用户获悉当前网页是否可见或是否在焦点中。在多页浏览时，该属性会随
+      本文简单介绍一下Page Visibility API，利用document的visibilitychange可以做一些有趣的事情。
     
     </summary>
     
