@@ -66,7 +66,7 @@
 <meta property="og:url" content="http://xovel.cn/article/visibilitychange-event.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="本文简单介绍一下Page Visibility API，利用document的visibilitychange可以做一些有趣的事情。">
-<meta property="og:updated_time" content="2016-10-08T09:31:06.889Z">
+<meta property="og:updated_time" content="2016-10-09T01:57:04.097Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Page Visibility API之visibilitychange事件简介">
 <meta name="twitter:description" content="本文简单介绍一下Page Visibility API，利用document的visibilitychange可以做一些有趣的事情。">
@@ -308,7 +308,8 @@
 <p>注意：在使用了<code>iframe</code>的页面中，iframe的visibility属性跟随父文档。</p>
 <h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p><em>页面失去焦点后改变文档的标题</em></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"visibilitychange"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">document</span>.title = <span class="string">'new title~'</span>;</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
-<h3 id="浏览器兼容性"><a href="#浏览器兼容性" class="headerlink" title="浏览器兼容性"></a>浏览器兼容性</h3><p><strong>桌面浏览器</strong></p>
+<h3 id="浏览器兼容性"><a href="#浏览器兼容性" class="headerlink" title="浏览器兼容性"></a>浏览器兼容性</h3><p><del>该小节内容改编自MDN文档，请参考最新的兼容性说明页面<a href="http://caniuse.com/#feat=pagevisibility" target="_blank" rel="external">Page Visibility - Can I Use</a></del></p>
+<p><strong>桌面浏览器</strong></p>
 <table>
 <thead>
 <tr>
@@ -378,7 +379,7 @@
 <ul>
 <li>Opera浏览器中，当窗口最小化之后不要触发<code>visibilitychange</code>事件，也不要尝试设置<code>hidden</code>值</li><li>Firefox浏览器中，版本10-51之间的需要添加私有前缀moz(<code>-moz-</code>)</li><li><code>webkit</code>表示需要添加私有前缀<code>-webkit-</code></li></ul>
 <h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
-<li><a href="https://www.w3.org/TR/page-visibility/#sec-visibilitychange-event" target="_blank" rel="external">Page Visibility - The visibilitychange event</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API" target="_blank" rel="external">Page Visibility API - Web APIs | MDN</a></li><li><a href="https://blogs.msdn.microsoft.com/ie/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2/" title="Using PC Hardware more efficiently in HTML5: New Web Performance APIs, Part 2" target="_blank" rel="external">Description of the Page Visibility API on the IEBlog</a></li></ul>
+<li><a href="https://www.w3.org/TR/page-visibility/#sec-visibilitychange-event" target="_blank" rel="external">Page Visibility - The visibilitychange event</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API" target="_blank" rel="external">Page Visibility API - Web APIs | MDN</a></li><li><a href="https://blogs.msdn.microsoft.com/ie/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2/" title="Using PC Hardware more efficiently in HTML5: New Web Performance APIs, Part 2" target="_blank" rel="external">Description of the Page Visibility API on the IEBlog</a></li><li><a href="http://caniuse.com/#feat=pagevisibility" target="_blank" rel="external">Page Visibility - Can I Use</a></li></ul>
 
       
     </div>
