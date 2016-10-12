@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-10-11T08:23:55.327Z</updated>
+  <updated>2016-10-12T01:53:22.207Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,76 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Yarn - A new package manager for JavaScript</title>
+    <link href="http://xovel.cn/article/yarn-a-new-package-manager-for-javascript.html"/>
+    <id>http://xovel.cn/article/yarn-a-new-package-manager-for-javascript.html</id>
+    <published>2016-10-12T01:22:27.000Z</published>
+    <updated>2016-10-12T01:53:22.207Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/79be2309gw1f8p8wzobk8j20go094wep.jpg&quot; alt=&quot;yarn&quot;&gt;&lt;/p&gt;
+&lt;p&gt;In the JavaScript community, engineers share hundreds of thousands of pieces of code so we can avoid rewriting basic components, libraries, or frameworks of our own. Each piece of code may in turn depend on other pieces of code, and these dependencies are managed by package managers. The most popular JavaScript package manager is the npm client, which provides access to more than 300,000 packages in the npm registry. More than 5 million engineers use the npm registry, which sees up to 5 billion downloads every month.&lt;/p&gt;
+&lt;p&gt;We’ve used the npm client successfully at Facebook for years, but as the size of our codebase and the number of engineers grew, we ran into problems with consistency, security, and performance. After trying to solve for each issue as it came up, we set out to build a new solution to help us manage our dependencies more reliably. The product of that work is called Yarn — a fast, reliable, and secure alternative npm client.&lt;/p&gt;
+&lt;p&gt;We’re pleased to announce the open source release of Yarn, a collaboration with Exponent, Google, and Tilde. With Yarn, engineers still have access to the npm registry, but can install packages more quickly and manage dependencies consistently across machines or in secure offline environments. Yarn enables engineers to move faster and with confidence when using shared code so they can focus on what matters — building new products and features.&lt;/p&gt;
+&lt;h2 id=&quot;The-evolution-of-JavaScript-package-management-at-Facebook&quot;&gt;&lt;a href=&quot;#The-evolution-of-JavaScript-package-management-at-Facebook&quot; class=&quot;headerlink&quot; title=&quot;The evolution of JavaScript package management at Facebook&quot;&gt;&lt;/a&gt;The evolution of JavaScript package management at Facebook&lt;/h2&gt;&lt;p&gt;In the days before package managers, it was commonplace for JavaScript engineers to rely on a small number of dependencies stored directly in their projects or served by a CDN. The first major JavaScript package manager, npm, was built shortly after Node.js was introduced, and it quickly became one of the most popular package managers in the world. Thousands of new open source projects were created and engineers shared more code than ever before.&lt;/p&gt;
+&lt;p&gt;Many of our projects at Facebook, like React, depend on code in the npm registry. However, as we scaled internally, we faced problems with consistency when installing dependencies across different machines and users, the amount of time it took to pull dependencies in, and had some security concerns with the way the npm client executes code from some of those dependencies automatically. We attempted to build solutions around these issues, but they often raised new issues themselves.&lt;/p&gt;
+&lt;h3 id=&quot;Attempts-at-scaling-the-npm-client&quot;&gt;&lt;a href=&quot;#Attempts-at-scaling-the-npm-client&quot; class=&quot;headerlink&quot; title=&quot;Attempts at scaling the npm client&quot;&gt;&lt;/a&gt;Attempts at scaling the npm client&lt;/h3&gt;&lt;p&gt;Initially, following the prescribed best practices, we only checked in &lt;code&gt;package.json&lt;/code&gt; and asked engineers to manually run &lt;code&gt;npm install&lt;/code&gt;. This worked well enough for engineers, but broke down in our continuous integration environments, which need to be sandboxed and cut off from the internet for security and reliability reasons.&lt;/p&gt;
+&lt;p&gt;The next solution we implemented was to check all of &lt;code&gt;node_modules&lt;/code&gt; into the repository. While this worked, it made some simple operations quite difficult. For example, updating a minor version of &lt;a href=&quot;https://babeljs.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;babel&lt;/a&gt; generated an 800,000-line commit that was difficult to land and triggered lint rules for invalid utf8 byte sequences, windows line endings, non png-crushed images, and more. Merging changes to &lt;code&gt;node_modules&lt;/code&gt; would often take engineers an entire day. Our source control team also pointed out that our checked-in &lt;code&gt;node_modules&lt;/code&gt; folder was responsible for a tremendous amount of metadata. The React Native &lt;code&gt;package.json&lt;/code&gt; currently lists just 68 dependencies, but after running &lt;code&gt;npm install&lt;/code&gt; the &lt;code&gt;node_modules&lt;/code&gt; directory contains 121,358 files.&lt;/p&gt;
+&lt;p&gt;We made one final attempt to scale the npm client to work with the number of engineers at Facebook and the amount of code that we need to install. We decided to zip the entire &lt;code&gt;node_modules&lt;/code&gt; folder and upload it to an internal CDN so that both engineers and our continuous integration systems could download and extract the files consistently. This enabled us to remove hundreds of thousands of files from source control, but made it so engineers needed internet access not just to pull new code, but also to build it.&lt;/p&gt;
+&lt;p&gt;We also had to work around issues with npm’s &lt;a href=&quot;https://docs.npmjs.com/cli/shrinkwrap&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;shrinkwrap&lt;/a&gt; feature, which we used to lock down dependency versions. Shrinkwrap files aren’t generated by default and will fall out of sync if engineers forget to generate them, so we wrote a tool to verify that the contents of the shrinkwrap file matches what’s in &lt;code&gt;node_modules&lt;/code&gt;. These files are huge JSON blobs with unsorted keys, though, so changes to them would generate massive, difficult-to-review commits. To mitigate this, we needed to add an additional script to sort all the entries.&lt;/p&gt;
+&lt;p&gt;Finally, updating a single dependency with npm also updates many unrelated ones based on &lt;a href=&quot;http://semver.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;semantic versioning&lt;/a&gt; rules. This makes every change much larger than anticipated, and having to do things like committing &lt;code&gt;node_modules&lt;/code&gt; or uploading it to a CDN made the process less than ideal for engineers.&lt;/p&gt;
+&lt;h3 id=&quot;Building-a-new-client&quot;&gt;&lt;a href=&quot;#Building-a-new-client&quot; class=&quot;headerlink&quot; title=&quot;Building a new client&quot;&gt;&lt;/a&gt;Building a new client&lt;/h3&gt;&lt;p&gt;Rather than continue building infrastructure around the npm client, we decided to try looking at the problem more holistically. What if instead we attempted to build a new client that addressed the core issues we were experiencing? Sebastian McKenzie in our London office started hacking on this idea and we quickly became excited about its potential.&lt;/p&gt;
+&lt;p&gt;As we worked on this, we began speaking with engineers across the industry and found that they faced a similar set of problems and had attempted many of the same solutions, often focused on resolving a single issue at a time. It became obvious that by collaborating on the whole set of problems the community was facing, we could develop a solution that worked for everyone. With the help of engineers from Exponent, Google, and Tilde, we built out the Yarn client and tested and validated its performance on every major JS framework and for additional use cases outside of Facebook. Today, we’re excited to share it with the community.&lt;/p&gt;
+&lt;h2 id=&quot;Introducing-Yarn&quot;&gt;&lt;a href=&quot;#Introducing-Yarn&quot; class=&quot;headerlink&quot; title=&quot;Introducing Yarn&quot;&gt;&lt;/a&gt;Introducing Yarn&lt;/h2&gt;&lt;p&gt;Yarn is a new package manager that replaces the existing workflow for the npm client or other package managers while remaining compatible with the npm registry. It has the same feature set as existing workflows while operating faster, more securely, and more reliably.&lt;/p&gt;
+&lt;p&gt;The primary function of any package manager is to install some package — a piece of code that serves a particular purpose — from a global registry into an engineer’s local environment. Each package may or may not depend on other packages. A typical project could have tens, hundreds, or even thousands of packages within its tree of dependencies.&lt;/p&gt;
+&lt;p&gt;These dependencies are versioned and installed based on semantic versioning (semver). Semver defines a versioning scheme that reflects the types of changes in each new version, whether a change breaks an API, adds a new feature, or fixes a bug. However, semver relies on package developers not making mistakes — breaking changes or new bugs may find their way into installed dependencies if the dependencies are not locked down.&lt;/p&gt;
+&lt;h3 id=&quot;Architecture&quot;&gt;&lt;a href=&quot;#Architecture&quot; class=&quot;headerlink&quot; title=&quot;Architecture&quot;&gt;&lt;/a&gt;Architecture&lt;/h3&gt;&lt;p&gt;In the Node ecosystem, dependencies get placed within a &lt;code&gt;node_modules&lt;/code&gt; directory in your project. However, this file structure can differ from the actual dependency tree as duplicate dependencies are merged together. The npm client installs dependencies into the &lt;code&gt;node_modules&lt;/code&gt; directory non-deterministically. This means that based on the order dependencies are installed, the structure of a &lt;code&gt;node_modules&lt;/code&gt; directory could be different from one person to another. These differences can cause “works on my machine” bugs that take a long time to hunt down.&lt;/p&gt;
+&lt;p&gt;Yarn resolves these issues around versioning and non-determinism by using lockfiles and an install algorithm that is deterministic and reliable. These lockfiles lock the installed dependencies to a specific version, and ensure that every install results in the exact same file structure in &lt;code&gt;node_modules&lt;/code&gt; across all machines. The written lockfile uses a concise format with ordered keys to ensure that changes are minimal and review is simple.&lt;/p&gt;
+&lt;p&gt;The install process is broken down into three steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Resolution&lt;/strong&gt;: Yarn starts resolving dependencies by making requests to the registry and recursively looking up each dependency.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Fetching&lt;/strong&gt;: Next, Yarn looks in a global cache directory to see if the package needed has already been downloaded. If it hasn’t, Yarn fetches the tarball for the package and places it in the global cache so it can work offline and won’t need to download dependencies more than once. Dependencies can also be placed in source control as tarballs for full offline installs.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Linking&lt;/strong&gt;: Finally, Yarn links everything together by copying all the files needed from the global cache into the local node_modules directory.&lt;/li&gt;&lt;/ol&gt;
+&lt;p&gt;By breaking these steps down cleanly and having deterministic results, Yarn is able to parallelize operations, which maximizes resource utilization and makes the install process faster. On some Facebook projects, Yarn reduced the install process by an order of magnitude, from several minutes to just seconds. Yarn also uses a mutex to ensure that multiple running CLI instances don’t collide and pollute each other.&lt;/p&gt;
+&lt;p&gt;Throughout this entire process, Yarn imposes strict guarantees around package installation. You have control over which lifecycle scripts are executed for which packages. Package checksums are also stored in the lockfile to ensure that you get the same package every single time.&lt;/p&gt;
+&lt;h3 id=&quot;Features&quot;&gt;&lt;a href=&quot;#Features&quot; class=&quot;headerlink&quot; title=&quot;Features&quot;&gt;&lt;/a&gt;Features&lt;/h3&gt;&lt;p&gt;In addition to making installs much faster and more reliable, Yarn has additional features to further simplify the dependency management workflow.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Compatibility with both the npm and bower workflows and supports mixing registries.&lt;/li&gt;&lt;li&gt;Ability to restrict licenses of installed modules and a means for outputting license information.&lt;/li&gt;&lt;li&gt;Exposes a stable public JS API with logging abstracted for consumption via build tools.&lt;/li&gt;&lt;li&gt;Readable, minimal, pretty CLI output.&lt;/li&gt;&lt;/ul&gt;
+&lt;h3 id=&quot;Yarn-in-production&quot;&gt;&lt;a href=&quot;#Yarn-in-production&quot; class=&quot;headerlink&quot; title=&quot;Yarn in production&quot;&gt;&lt;/a&gt;Yarn in production&lt;/h3&gt;&lt;p&gt;At Facebook we’re already using Yarn in production, and it’s been working really well for us. It powers the dependency and package management for many of our JavaScript projects. With each migration we’ve enabled engineers to build offline and helped speed up their workflow. You can see how install times for Yarn and npm compare on React Native under different conditions, which you can find &lt;a href=&quot;http://yarnpkg.com/en/compare&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/79be2309gw1f8p8lxllbtg20nj05ldjm.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Getting-started&quot;&gt;&lt;a href=&quot;#Getting-started&quot; class=&quot;headerlink&quot; title=&quot;Getting started&quot;&gt;&lt;/a&gt;Getting started&lt;/h2&gt;&lt;p&gt;The easiest way to get started is to run:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install -g yarn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;yarn&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;The &lt;code&gt;yarn&lt;/code&gt; CLI replaces &lt;code&gt;npm&lt;/code&gt; in your development workflow, either with a matching command or a new, similar command:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;npm install&lt;/code&gt; → &lt;code&gt;yarn&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;With no arguments, the &lt;code&gt;yarn&lt;/code&gt; command will read your &lt;code&gt;package.json&lt;/code&gt;, fetch packages from the npm registry, and populate your &lt;code&gt;node_modules&lt;/code&gt; folder. It is equivalent to running &lt;code&gt;npm install&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;code&gt;npm install --save &amp;lt;name&amp;gt;&lt;/code&gt; → &lt;code&gt;yarn add &amp;lt;name&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;We removed the “invisible dependency” behavior of &lt;code&gt;npm install &amp;lt;name&amp;gt;&lt;/code&gt; and split the command. Running &lt;code&gt;yarn add &amp;lt;name&amp;gt;&lt;/code&gt; is equivalent to running &lt;code&gt;npm install --save &amp;lt;name&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;&lt;/ul&gt;
+&lt;h3 id=&quot;Future&quot;&gt;&lt;a href=&quot;#Future&quot; class=&quot;headerlink&quot; title=&quot;Future&quot;&gt;&lt;/a&gt;Future&lt;/h3&gt;&lt;p&gt;Many of us came together to build Yarn to solve common problems, and we knew that we wanted Yarn to be a true community project that everyone can use. Yarn is now &lt;a href=&quot;https://github.com/yarnpkg/yarn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;available on GitHub&lt;/a&gt; and we’re ready for the Node community to do what it does best: Use Yarn, share ideas, write documentation, support each other, and help build a great community to care for it. We believe that Yarn is already off to a great start, and it can be even better with your help.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Source: &lt;a href=&quot;https://code.facebook.com/posts/1840075619545360&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Yarn: A new package manager for JavaScript&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      With Yarn, engineers have access to the npm registry while operating faster, more securely, and more reliably.
+    
+    </summary>
+    
+      <category term="开发" scheme="http://xovel.cn/categories/dev/"/>
+    
+    
+      <category term="yarn" scheme="http://xovel.cn/tags/yarn/"/>
+    
+      <category term="facebook" scheme="http://xovel.cn/tags/facebook/"/>
+    
+      <category term="package" scheme="http://xovel.cn/tags/package/"/>
+    
+      <category term="npm" scheme="http://xovel.cn/tags/npm/"/>
+    
+      <category term="javascript" scheme="http://xovel.cn/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>关于undefined与void 0</title>
@@ -1041,62 +1111,6 @@
       <category term="css3" scheme="http://xovel.cn/tags/css3/"/>
     
       <category term="animation" scheme="http://xovel.cn/tags/animation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>正则表达式之零宽断言</title>
-    <link href="http://xovel.cn/article/regexp-assertion.html"/>
-    <id>http://xovel.cn/article/regexp-assertion.html</id>
-    <published>2016-07-06T03:48:12.000Z</published>
-    <updated>2016-07-11T07:35:05.558Z</updated>
-    
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;本篇文章提到的零宽断言是正则表达式高级语法，阅读此文需要有一定的正则表达式基础。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;关于断言&quot;&gt;&lt;a href=&quot;#关于断言&quot; class=&quot;headerlink&quot; title=&quot;关于断言&quot;&gt;&lt;/a&gt;关于断言&lt;/h3&gt;&lt;p&gt;断言（&lt;code&gt;assertion&lt;/code&gt;）在正则表达式里面有着举足轻重的作用。通常情况下指的是在目标字符串的当前位置进行的一种判断测试，但这种测试不会占用目标字符串，这意味着不会移动目标字符串在当前匹配中的位置。&lt;/p&gt;
-&lt;h3 id=&quot;断言元字符&quot;&gt;&lt;a href=&quot;#断言元字符&quot; class=&quot;headerlink&quot; title=&quot;断言元字符&quot;&gt;&lt;/a&gt;断言元字符&lt;/h3&gt;&lt;p&gt;最常用的两个断言元字符是&lt;code&gt;^&lt;/code&gt;和&lt;code&gt;$&lt;/code&gt;，它们分别表示字符串开始和字符串结束。&lt;/p&gt;
-&lt;p&gt;其他一些断言元字符参见下表：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;\b&lt;/code&gt;，单词分界符&lt;/li&gt;&lt;li&gt;&lt;code&gt;\B&lt;/code&gt;，非单词分界符&lt;/li&gt;&lt;li&gt;&lt;code&gt;\A&lt;/code&gt;，字符串的开头，忽略&lt;code&gt;multiline&lt;/code&gt;标识&lt;/li&gt;&lt;li&gt;&lt;code&gt;\Z&lt;/code&gt;，字符串的结尾或者字符串结尾的换行符&lt;code&gt;\n&lt;/code&gt;之前，忽略&lt;code&gt;multiline&lt;/code&gt;标识&lt;/li&gt;&lt;li&gt;&lt;code&gt;\z&lt;/code&gt;，字符串的结尾，忽略&lt;code&gt;multiline&lt;/code&gt;标识&lt;/li&gt;&lt;li&gt;&lt;code&gt;\G&lt;/code&gt;，字符串的第一个位置&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;\A&lt;/code&gt;、&lt;code&gt;\Z&lt;/code&gt;、&lt;code&gt;\z&lt;/code&gt;、&lt;code&gt;\G&lt;/code&gt;很少使用。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;捕获与非捕获组&quot;&gt;&lt;a href=&quot;#捕获与非捕获组&quot; class=&quot;headerlink&quot; title=&quot;捕获与非捕获组&quot;&gt;&lt;/a&gt;捕获与非捕获组&lt;/h3&gt;&lt;p&gt;非捕获组&lt;code&gt;(?:pattern)&lt;/code&gt;不是本文的知识点，这里不做详细讲解，文章后面有参考资料可自行参阅。&lt;/p&gt;
-&lt;h3 id=&quot;零宽断言&quot;&gt;&lt;a href=&quot;#零宽断言&quot; class=&quot;headerlink&quot; title=&quot;零宽断言&quot;&gt;&lt;/a&gt;零宽断言&lt;/h3&gt;&lt;p&gt;断言元字符通常是基于当前位置的测试，断言也可以支持更加复杂的判断条件。更复杂的断言以子模式来进行表示，包括先行断言和后行断言。两者都是本文要解说的&lt;code&gt;零宽断言&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;同断言元字符一样，零宽断言的判断匹配只做条件匹配，不会记录匹配结果，也不会匹配字符。&lt;/p&gt;
-&lt;h4 id=&quot;零宽正向先行断言&quot;&gt;&lt;a href=&quot;#零宽正向先行断言&quot; class=&quot;headerlink&quot; title=&quot;零宽正向先行断言&quot;&gt;&lt;/a&gt;零宽正向先行断言&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;英文：&lt;code&gt;zero-width positive lookahead assertion&lt;/code&gt;&lt;/li&gt;&lt;li&gt;简称：&lt;code&gt;positive lookahead&lt;/code&gt;&lt;/li&gt;&lt;li&gt;语法：&lt;code&gt;(?=pattern)&lt;/code&gt;&lt;/li&gt;&lt;li&gt;概述：从当前位置开始测试后面的字符串&lt;strong&gt;匹配&lt;/strong&gt;&lt;code&gt;pattern&lt;/code&gt;，仅当右侧&lt;strong&gt;匹配成功&lt;/strong&gt;时才继续。&lt;/li&gt;&lt;li&gt;举例：&lt;code&gt;[a-zA-Z]+(?=\d)&lt;/code&gt;，匹配一个后面跟着数字的字母，但匹配结果不包含该数字。&lt;/li&gt;&lt;/ul&gt;
-&lt;h4 id=&quot;零宽负向先行断言&quot;&gt;&lt;a href=&quot;#零宽负向先行断言&quot; class=&quot;headerlink&quot; title=&quot;零宽负向先行断言&quot;&gt;&lt;/a&gt;零宽负向先行断言&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;英文：&lt;code&gt;zero-width negative lookahead assertion&lt;/code&gt;&lt;/li&gt;&lt;li&gt;简称：&lt;code&gt;negative lookahead&lt;/code&gt;&lt;/li&gt;&lt;li&gt;语法：&lt;code&gt;(?!pattern)&lt;/code&gt;&lt;/li&gt;&lt;li&gt;概述：从当前位置开始测试后面的字符串&lt;strong&gt;不匹配&lt;/strong&gt;&lt;code&gt;pattern&lt;/code&gt;，仅当右侧&lt;strong&gt;不能匹配&lt;/strong&gt;时才继续。&lt;/li&gt;&lt;li&gt;举例：使用正则表达式&lt;code&gt;re(?!g)&lt;/code&gt;，匹配字符串&lt;code&gt;regular expression&lt;/code&gt;，则&lt;em&gt;&lt;strong&gt;re&lt;/strong&gt;gular&lt;/em&gt;中的&lt;em&gt;re&lt;/em&gt;不会被匹配，&lt;em&gt;exp&lt;strong&gt;re&lt;/strong&gt;ssion&lt;/em&gt;中的&lt;em&gt;re&lt;/em&gt;将会被匹配。&lt;/li&gt;&lt;/ul&gt;
-&lt;h4 id=&quot;零宽正向后行断言&quot;&gt;&lt;a href=&quot;#零宽正向后行断言&quot; class=&quot;headerlink&quot; title=&quot;零宽正向后行断言&quot;&gt;&lt;/a&gt;零宽正向后行断言&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;英文：&lt;code&gt;zero-width positive lookbehind assertion&lt;/code&gt;&lt;/li&gt;&lt;li&gt;简称：&lt;code&gt;positive lookbehind&lt;/code&gt;&lt;/li&gt;&lt;li&gt;语法：&lt;code&gt;(?&amp;lt;=pattern)&lt;/code&gt;&lt;/li&gt;&lt;li&gt;概述：从当前位置开始测试前面的字符串&lt;strong&gt;匹配&lt;/strong&gt;&lt;code&gt;pattern&lt;/code&gt;，仅当左侧&lt;em&gt;匹配成功&lt;/em&gt;时才继续。&lt;/li&gt;&lt;/ul&gt;
-&lt;h4 id=&quot;零宽正向后行断言-1&quot;&gt;&lt;a href=&quot;#零宽正向后行断言-1&quot; class=&quot;headerlink&quot; title=&quot;零宽正向后行断言&quot;&gt;&lt;/a&gt;零宽正向后行断言&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;英文：&lt;code&gt;zero-width negative lookbehind assertion&lt;/code&gt;&lt;/li&gt;&lt;li&gt;简称：&lt;code&gt;negative lookbehind&lt;/code&gt;&lt;/li&gt;&lt;li&gt;语法：&lt;code&gt;(?&amp;lt;!pattern)&lt;/code&gt;&lt;/li&gt;&lt;li&gt;概述：从当前位置开始测试前面的字符串&lt;em&gt;不匹配&lt;/em&gt;&lt;code&gt;pattern&lt;/code&gt;，仅当左侧&lt;em&gt;不能匹配&lt;/em&gt;时才继续。&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：后行断言由于存在回溯情况，&lt;code&gt;JavaScript&lt;/code&gt;&lt;strong&gt;没有对其进行实现&lt;/strong&gt;。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/20154937&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;为什么 JavaScript 的正则不支持 “零宽度正回顾后发断言” ？&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://regexr.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RegExr - 在线测试正则表达式&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://regexper.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Regexper - 根据正则表达式生成SVG示意图&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RegExp - JavaScript | MDN&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/zh-cn/library/ae5bf541(v=vs.100&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Regular Expression Syntax - 微软官方正则表达式参考&lt;/a&gt;.aspx)&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.regular-expressions.info/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Regular-Expressions.info - The Premier website about Regular Expressions&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.regular-expressions.info/lookaround.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Regex Tutorial - Lookahead and Lookbehind Zero-Length Assertions&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.regular-expressions.info/brackets.html&quot; title=&quot;分组与捕获&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Regex Tutorial - Parentheses for Grouping and Capturing&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.regular-expressions.info/refcapture.html&quot; title=&quot;捕获组详细介绍，内含各种编程语言对其的实现&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Regular Expression Reference: Capturing Groups and Backreferences&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/3512471/what-is-a-non-capturing-group&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;regex - What is a non capturing group? (?:) - Stack Overflow&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://blog.getify.com/to-capture-or-not/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;To capture or not to capture | getiblog&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      断言在正则表达式里面有着举足轻重的作用。通常情况下指的是在目标字符串的当前位置进行的一种判断测试，但这种测试不会占用目标字符串，这意味着不会移动目标字符串在当前匹配中的位置。本文对断言进行一个简单的收集与整理，以巩固学到的有关正则表达式高级语法方面的知识。
-    
-    </summary>
-    
-      <category term="开发" scheme="http://xovel.cn/categories/dev/"/>
-    
-      <category term="文档" scheme="http://xovel.cn/categories/dev/docs/"/>
-    
-    
-      <category term="正则表达式" scheme="http://xovel.cn/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-    
-      <category term="断言" scheme="http://xovel.cn/tags/%E6%96%AD%E8%A8%80/"/>
-    
-      <category term="零宽断言" scheme="http://xovel.cn/tags/%E9%9B%B6%E5%AE%BD%E6%96%AD%E8%A8%80/"/>
     
   </entry>
   
