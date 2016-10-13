@@ -1,0 +1,709 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="yarn,facebook,package,npm,javascript,翻译," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="清风轩" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="Yarn是一个新的包管理器，可以替换现有的npm客户端或者其他包管理器的工作流，同时保持与npm注册表的兼容。它与现有的工作流有着同样的特性，同时操作更快速、更安全、更可靠。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Yarn：一个新的JavaScript包管理器">
+<meta property="og:url" content="http://xovel.cn/article/yarn-a-new-package-manager-for-javascript-zh-cn.html">
+<meta property="og:site_name" content="清风轩">
+<meta property="og:description" content="Yarn是一个新的包管理器，可以替换现有的npm客户端或者其他包管理器的工作流，同时保持与npm注册表的兼容。它与现有的工作流有着同样的特性，同时操作更快速、更安全、更可靠。">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/79be2309gw1f8p8wzobk8j20go094wep.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/79be2309gw1f8p8lxllbtg20nj05ldjm.gif">
+<meta property="og:updated_time" content="2016-10-13T06:20:02.869Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Yarn：一个新的JavaScript包管理器">
+<meta name="twitter:description" content="Yarn是一个新的包管理器，可以替换现有的npm客户端或者其他包管理器的工作流，同时保持与npm注册表的兼容。它与现有的工作流有着同样的特性，同时操作更快速、更安全、更可靠。">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/79be2309gw1f8p8wzobk8j20go094wep.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> Yarn：一个新的JavaScript包管理器 | 清风轩 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="http://s6.cnzz.com/stat.php?id=1259096563&web_id=1259096563" type="text/javascript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">清风轩</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">清风轩居 - 引仙阁</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-garden">
+          <a href="/garden" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-life-ring"></i> <br />
+            
+            花园
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Yarn：一个新的JavaScript包管理器
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-13T08:09:35+08:00" content="2016-10-13">
+              2016-10-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/dev/" itemprop="url" rel="index">
+                    <span itemprop="name">开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>本文翻译自: <a href="https://code.facebook.com/posts/1840075619545360" target="_blank" rel="external">Yarn: A new package manager for JavaScript</a>。<del>可能需要翻墙</del><br>本博客英文原文链接：<a href="http://xovel.cn/article/yarn-a-new-package-manager-for-javascript.html">Yarn - A new package manager for JavaScript</a>。<del>墙内可以查看此文</del></p>
+</blockquote>
+<p><img src="http://ww1.sinaimg.cn/large/79be2309gw1f8p8wzobk8j20go094wep.jpg" alt="yarn"></p>
+<p>在Javascript社区中，工程师们共享成千上万个代码片段，以便于我们可以避免重写自己的基本组件、库或者框架。每个代码片段都可以依赖于其他的代码片段，这些依赖关系由包管理器进行统一管理。最流行的JavaScript包管理器是<code>npm</code>，在<code>npm</code>的注册表中，有超过30万个包可供我们访问与使用。超过500万的工程师使用<code>npm</code>注册表，每月产生50亿次的下载量。</p>
+<blockquote>
+<p><code>npm</code>是<code>node package manager</code>的缩写。 ——<em>译者注</em></p>
+</blockquote>
+<p>我们在FaceBook上成功地使用了<code>npm</code>客户端多年，但随着我们的代码库的大小和工程师数量的增长，我们遭遇到了一致性、安全性、和性能方面的问题。在尝试解决每个问题后，我们开始构建一个新的方案来帮助我们更加可靠地管理我们的依赖。这个产品被称之为<strong>Yarn</strong>——一个快速、可靠、安全的<code>npm</code>客户端替代品。</p>
+<p>我们很高兴地宣告与Exponent、Google以及Tilde一起合作研发的Yarn的开源发布。使用Yarn，工程师依然可以访问<code>npm</code>注册表，但是在使用安装包时会更加快速，并且可以在各个机器或者安全的离线环境中一致地管理依赖。Yarn使工程师能快速活动，同时在使用分享代码时更加自信，以便于他们可以专注于重要的事情——构建新的产品和特性。</p>
+<blockquote>
+<p><a href="http://www.exponent.com/" target="_blank" rel="external">Exponent</a>、<a href="https://www.google.com/" target="_blank" rel="external">Google</a>、<a href="http://www.tilde.io/" target="_blank" rel="external">Tilde</a>均是美国知名科技公司。 ——<em>译者注</em></p>
+</blockquote>
+<h2 id="Facebook中JavaScript包管理器的演进"><a href="#Facebook中JavaScript包管理器的演进" class="headerlink" title="Facebook中JavaScript包管理器的演进"></a>Facebook中JavaScript包管理器的演进</h2><p>在包管理器之前的年代， JavaScript工程师通常将少量的依赖直接存储在项目中或者由CND提供。第一个主要的JavaScript包管理器<code>npm</code>是在<code>Node.js</code>推出之后不就建立的，它很快地就成为了世界上最受欢迎的包管理器之一。上千个新的开源项目被创建，工程师也共享了比之前更多的代码。</p>
+<p>在Facebook，我们的许多项目，如<code>React</code>，依赖于<code>npm</code>注册表中的代码。但是，在我们的内测中，在不同机器和用户之间安装依赖时，我们面临着一致性的问题，拉取依赖所消耗的时间，甚至npm客户端从某些依赖自动执行造成一些安全问题。我们试图针对这些问题制定解决方案，但它们常常又会引发新的问题。</p>
+<h3 id="尝试缩放npm客户端"><a href="#尝试缩放npm客户端" class="headerlink" title="尝试缩放npm客户端"></a>尝试缩放npm客户端</h3><p>最初，按照既定的最佳实践，我们只检查<code>package.json</code>并要求工程师手动执行<code>npm install</code>。对于工程师来说，这种方式很好，但是在我们的可持续集成环境中就出故障了，需要放在沙箱中并且切断网络以保证安全性和可靠性。</p>
+<p>接下来的实现方案是，检查所有的<code>node_modules</code>到仓库中。虽然这个可以工作，但是让一些简单的操作变得困难。举个例子，更新一个产生了80万行提交的<a href="https://babeljs.io/" target="_blank" rel="external">babel</a>的主要版本就变得异常困难，并且会引发无效的UTF-8字节序列、Windows行尾（<code>CR</code>与<code>CRLF</code>的区别，<em>译者注</em>）、非PNG损坏图像等等。合并<code>node_modules</code>的更改通常会花费工程师一整天的时间。我们的源代码控制团队还指出，我们签入的<code>node_modules</code>文件夹，需要负责承载大量的元数据。<code>React Native</code>的<code>package.json</code>中目前只包含了68个依赖，但是在执行完<code>npm install</code>后，<code>node_modules</code>目录下将包含121358个文件。</p>
+<p>我们做了最后一次尝试，缩放整个<code>npm</code>客户端，处理Facebook的工程师数量和我们需要安装的代码量。我们决定对整个<code>node_modules</code>文件夹进行压缩并上传至一个内部CDN，这样可以使工程师和我们的可持续集成系统都可以下载和解压这些文件，以保证一致性。这使得我们从代码控制中删除了成千上万个文件，但这样工程师需要互联网访问，不仅仅只是拉取新的代码，还需要构建它。</p>
+<p>我们还必须解决<code>npm</code>的<a href="https://docs.npmjs.com/cli/shrinkwrap" target="_blank" rel="external">shrinkwrap</a>特性，用来锁定依赖版本。默认情况下，Shrinkwrap文件不会自动生成。如果工程师忘记生成它们，将会出现不一致的情形。针对这个，我们写了一个工具用来验证shrinkwrap文件的内容是否匹配<code>node_modules</code>中的。这些文件是大体积JSON blob并且键值是无序的，这导致了对它们的更改将会产生大量的、难以审查的提交。为了缓和这样的情形，我们需要添加一个额外的脚本来对所有的条目进行排序。</p>
+<p>最终，使用<code>npm</code>更新一个单一的依赖同样会更新许多基于<a href="http://semver.org/" target="_blank" rel="external">版本语义化</a> 规则的不相关的依赖。这使得每一个更改都比预期的要大，并且不得不做一些事情比如提交<code>node_modules</code>或者将其上传至CDN，使其过程比工程师想象的少一些。</p>
+<h3 id="构建一个新的客户端"><a href="#构建一个新的客户端" class="headerlink" title="构建一个新的客户端"></a>构建一个新的客户端</h3><p>我们并非打算在npm客户端周围继续构建一个基础设施，而是决定尝试更加全面地查看问题。如果我们试图创建一个解决我们遇到的核心问题的新的客户端，结果会怎么样呢？我们在伦敦办事处的Sebastian McKenzie开始关注到的这个想法，让我们很快对其潜力感到兴奋。</p>
+<p>在我们开展工作时，我们开始与整个行业的工程师交谈，发现他们也面临着同样的问题，也尝试过很多相同的解决方案，通常专注于一次解决一个问题。很明显，通过协作，解决社区面临的一系列问题，我们可以开发出一套适用于每个人的解决方案。在Exponent、Google以及Tilde的工程师的帮助之下，我们创建了Yarn客户端，并测试和验证了它在每个主要的JS框架以及Facebook外的其他用例方面的性能。今天，我们很高兴能在社区进行分享。</p>
+<h2 id="Yarn简介"><a href="#Yarn简介" class="headerlink" title="Yarn简介"></a>Yarn简介</h2><p>Yarn是一个新的包管理器，可以替换现有的<code>npm</code>客户端或者其他包管理器的工作流，同时保持与<code>npm</code>注册表的兼容。它与现有的工作流有着同样的特性，同时操作更快速、更安全、更可靠。</p>
+<p>任何包管理器的主要功能是从一个全局注册表安装一些软件包——一个有些特定目的的代码片段——到工程师的本地环境。每个包可以也可以不依赖于其他包。一个典型的项目中，其依赖可能包含有数十、数百甚至数千个包。</p>
+<p>这些依赖关系是版本化的，根据版本语义化，即<code>semver</code>，进行安装。Semver定义了一个版本规划用来映射每个新版本中的更改类型，如改动API、添加新特性、修复bug。然而，semver依赖于包开发人员不犯错误——如果依赖未被锁定，在已安装的依赖中可能会找到破坏性变化或者新的bug。</p>
+<h3 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h3><p>在Node的生态系统中，依赖会放置在你的项目中<code>node_modules</code>的一个目录下。但是，此文件结构会与实际的依赖关系树不同，因为重复的依赖关系会合并在一起。<code>npm</code>客户端安装依赖到<code>node_modules</code>目录下时会具有不确定性。这意味着，基于顺序的依赖被安装，一个人的<code>node_modules</code>目录的结构可能会与另一个人的不一样。这种不同导致了要花很长时间才能发现的“在我的机器上可以工作”的问题。</p>
+<p>Yarn通过锁定文件和一个具有确定性和可靠性的安装算法来解决版本控制和非确定性方面的问题。这些锁定文件会将已安装的依赖锁定到一个指定的版本，并确保在所有机器上的每一次安装结果中<code>node_modules</code>的文件结构都会是相同的。写好的锁定文件使用了带有序键值的简明格式以确保更改是最小的，审查起来也很简单。</p>
+<p>安装过程分为以下三个步骤：</p>
+<ol>
+<li><strong>决议</strong>：Yarn开始通过请求注册和递归查找每一个依赖，决定要安装的依赖。</li><li><strong>获取</strong>：接着，Yarn在全部缓存目录中查看所需要的包是否已经下载。如果没有，Yarn获取包的<code>tarball</code>并放置的全局缓存中，这样它可以脱机工作并且不用多次下载依赖。依赖也可以放置在代码控制中作为完整的离线安装<code>tarball</code>。</li><li><strong>连接</strong>：最后，Yarn通过从全局缓存中复制所有需要的文件到本地的<code>node_modules</code>目录来串联所有东西。</li></ol>
+<blockquote>
+<p><code>tarball</code>是压缩包的意思。 ——<em>译者注</em></p>
+</blockquote>
+<p>通过清晰的分解步骤和具有确定定的结果，Yarn可以进行并行操作，从而最大限度地利用资源，并使安装过程更快。在一些Facebook的项目中，Yarn将安装过程减少了一个量级，从几分钟锐减到几秒钟。Yarn还可以使用互斥来保证多个在运行的CLI实例之间不会互相冲突和污染。</p>
+<p>在整个过程中，Yarn对包的安装强制进行了严格的保证。你可以控制某个包的某个生命周期脚本。包的校验也可以存储在锁定文件中，以确保每次获取的包是一样的。</p>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><p>除了使安装更快、更可靠之外，Yarn还有进一步简化依赖管理工作流的附加功能。</p>
+<ul>
+<li>兼容<code>npm</code>和<code>bower</code>的工作流，并支持混合注册模式。</li><li>能够限制已安装模块的许可证，并且有输出许可证信息的方法。</li><li>暴露一个稳定的公共的JS API，通过构建工具可以进行消费日志文件的提取。</li><li>可读、最小化、美观的CLI输出。</li></ul>
+<h3 id="Yarn的使用"><a href="#Yarn的使用" class="headerlink" title="Yarn的使用"></a>Yarn的使用</h3><p>在Facebook，我们已经在生产中使用Yarn，它为我们一直都工作地非常好。它为我们的许多JavaScript项目提供了依赖和包管理。每次迁移，我们能够让工程师离线构建并帮助他们加快工作流。在<a href="http://yarnpkg.com/en/compare" target="_blank" rel="external">这里</a>，你可以看到在不同的条件下<code>Yarn</code>和<code>npm</code>对<code>React Native</code>的安装情况的比较。</p>
+<p><img src="http://ww1.sinaimg.cn/large/79be2309gw1f8p8lxllbtg20nj05ldjm.gif" alt=""></p>
+<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><p>最简单的入门方法是运行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g yarn</span><br><span class="line">yarn</span><br></pre></td></tr></table></figure>
+<p>在你的开发工作流中，不论是一个匹配的命令还是一个新的，将<code>Yarn</code>的CLI替换掉<code>npm</code>的即可。类似的命令：</p>
+<ul>
+<li><p><code>npm install</code> → <code>yarn</code></p>
+<p>  不带任何参数，则<code>yarn</code>命令将会读取你的<code>package.json</code>，从<code>npm</code>注册表中获取包，并填充至你的<code>node_modules</code>目录下。这等同于运行<code>npm install</code>。</p>
+</li><li><p><code>npm install --save &lt;name&gt;</code> → <code>yarn add &lt;name&gt;</code></p>
+<p>  我们删除了<code>npm install &lt;name&gt;</code>的“隐形的依赖”的行为并拆分命令。运行<code>yarn add &lt;name&gt;</code>与<code>npm install --save &lt;name&gt;</code>效果等同。</p>
+</li></ul>
+<h3 id="未来"><a href="#未来" class="headerlink" title="未来"></a>未来</h3><p>我们许多人共同创建Yarn来解决常见的问题，我们希望Yarn能够成为一个真正的社区项目，每个人都可以使用。Yarn现在<a href="https://github.com/yarnpkg/yarn" target="_blank" rel="external">架设在Github上</a>，我们已经准备好了Node社区来让它变得更好：使用Yarn、分享观点、写文档、互相支持，并建立一个伟大的社区来维护它。我们相信Yarn已经有了一个伟大的开始，有你的帮助它会变得更好。</p>
+<hr>
+<p>全文完</p>
+<blockquote>
+<p>本文翻译自: <a href="https://code.facebook.com/posts/1840075619545360" target="_blank" rel="external">Yarn: A new package manager for JavaScript</a><br>翻译者：<a href="https://github.com/xovel" target="_blank" rel="external">xovel</a><br>翻译时间：2016年10月13日</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/yarn/" rel="tag">#yarn</a>
+          
+            <a href="/tags/facebook/" rel="tag">#facebook</a>
+          
+            <a href="/tags/package/" rel="tag">#package</a>
+          
+            <a href="/tags/npm/" rel="tag">#npm</a>
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+            <a href="/tags/翻译/" rel="tag">#翻译</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/article/yarn-a-new-package-manager-for-javascript.html" rel="next" title="Yarn - A new package manager for JavaScript">
+                <i class="fa fa-chevron-left"></i> Yarn - A new package manager for JavaScript
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article> 
+  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="article/yarn-a-new-package-manager-for-javascript-zh-cn.html"
+           data-title="Yarn：一个新的JavaScript包管理器" data-url="http://xovel.cn/article/yarn-a-new-package-manager-for-javascript-zh-cn.html">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/xovel.jpg"
+               alt="xovel" />
+          <p class="site-author-name" itemprop="name">xovel</p>
+          <p class="site-description motion-element" itemprop="description">缓缓之间，风云静变</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">34</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">82</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xovel" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://hdk4.com" target="_blank" title="hdk4.com">
+                  
+                    <i class="fa fa-fw fa-adjust"></i>
+                  
+                  hdk4.com
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Facebook中JavaScript包管理器的演进"><span class="nav-number">1.</span> <span class="nav-text">Facebook中JavaScript包管理器的演进</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#尝试缩放npm客户端"><span class="nav-number">1.1.</span> <span class="nav-text">尝试缩放npm客户端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建一个新的客户端"><span class="nav-number">1.2.</span> <span class="nav-text">构建一个新的客户端</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Yarn简介"><span class="nav-number">2.</span> <span class="nav-text">Yarn简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#架构"><span class="nav-number">2.1.</span> <span class="nav-text">架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特性"><span class="nav-number">2.2.</span> <span class="nav-text">特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Yarn的使用"><span class="nav-number">2.3.</span> <span class="nav-text">Yarn的使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速开始"><span class="nav-number">3.</span> <span class="nav-text">快速开始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#未来"><span class="nav-number">3.1.</span> <span class="nav-text">未来</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xovel</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io" rel="external nofollow" target="_blank">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow" target="_blank">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"xovel"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  
+</body>
+</html>
