@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-10-13T06:28:06.125Z</updated>
+  <updated>2016-10-17T09:40:58.125Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一个FPGA部门LOGO的设计说明</title>
+    <link href="http://xovel.cn/article/a-logo-note-for-zte-fpga-design-department.html"/>
+    <id>http://xovel.cn/article/a-logo-note-for-zte-fpga-design-department.html</id>
+    <published>2016-10-17T08:37:47.000Z</published>
+    <updated>2016-10-17T09:40:58.125Z</updated>
+    
+    <content type="html">&lt;p&gt;前段时间，某个人要求帮忙设计一个部门LOGO，原本也没有打算自己出手制作LOGO，所以叫一个专业做LOGO设计的人抽时间帮忙处理。然后就有了本篇文章：对一个FPGA部门LOGO的设计说明文档。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;有图有真相&quot;&gt;&lt;a href=&quot;#有图有真相&quot; class=&quot;headerlink&quot; title=&quot;有图有真相&quot;&gt;&lt;/a&gt;有图有真相&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/79be2309gw1f8vddm9webj20go08wdgc.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;图片这里只放上面这一张核心设计图，其他图可以自行点击链接进行查阅。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://ww2.sinaimg.cn/large/79be2309gw1f8vddltdmej20xc0dq75f.jpg&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;设计大图&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://ww4.sinaimg.cn/large/79be2309gw1f8vddnxna7j208w08w0sw.jpg&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ICON图&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;以下内容为针对本次设计的说明与解析：&lt;/p&gt;
+&lt;h3 id=&quot;LOGO简介&quot;&gt;&lt;a href=&quot;#LOGO简介&quot; class=&quot;headerlink&quot; title=&quot;LOGO简介&quot;&gt;&lt;/a&gt;LOGO简介&lt;/h3&gt;&lt;p&gt;以FPGA部门内容作为主体，由图像和文字的组合形式，体现部门主要的业务，同时加入了时尚年轻团结的元素，整体营造一种简约而富有气质的LOGO设计。&lt;/p&gt;
+&lt;h3 id=&quot;设计理念&quot;&gt;&lt;a href=&quot;#设计理念&quot; class=&quot;headerlink&quot; title=&quot;设计理念&quot;&gt;&lt;/a&gt;设计理念&lt;/h3&gt;&lt;p&gt;以亮灰化的蓝粉色（&lt;code&gt;light shade of blue-magenta&lt;/code&gt;）作为背景，营造我们中兴公司恢宏的气势。LOGO核心布局颜色采用了中兴蓝，字体颜色使用纯黑色，表述大局观与稳重感。&lt;/p&gt;
+&lt;p&gt;背景图由一组同心圆构成，体现中兴之“中”，圆形逐渐向外扩展，体现中兴之“兴”。&lt;/p&gt;
+&lt;p&gt;左侧部分可以看作一个异化之后的字母“F”，并且呈现为倒立的三角形。颜色的渐变体现我们追求设计的渐进过程。三角形在数学和设计领域，意味着稳定，体现了我们在设计上追求稳固可用的决心。形状为倒立，可以更好的展现我们全心为客户设计的服务态度。&lt;/p&gt;
+&lt;p&gt;左侧部分的右上方的斜线，为线路平行布线的模拟，这一块试图体现的内容：我们的主要产品设计是芯片电路。&lt;/p&gt;
+&lt;p&gt;左侧部分不同颜色之间的堆叠正意味着我们的设计电路具有一定的层次感，搭配在一起也映射了各个小组/部门之间的团结协作的氛围。&lt;/p&gt;
+&lt;p&gt;FPGA四个字母采用的是一款Clarendon字体（URWClarendonTExtBol Regular），简约又不失年轻洒脱的气质。&lt;/p&gt;
+&lt;p&gt;右侧字体上面部分留白，体现了这里潜力无限，具有极大的发展空间，与左侧部分搭配，也是在尝试营造出一种海纳百川的意境。&lt;/p&gt;
+&lt;p&gt;四个字母并排排列，未做任何修饰，除去本设计在极力追求简约的这一个因素，更意味着我们不单单注重团队的协作，同时也尊重每一个设计人员的个性。&lt;/p&gt;
+&lt;p&gt;字母A后面的蓝色模块，体现了我们在追求模块化设计时，同时也注重多样化，中兴蓝的颜色也意味着整体的统一性。其形状是一个倒立的直角三角形，不单单是为了追求与A的搭配，也是跟LOGO左侧部分遥相呼应。前呼后应，我们是一个整体。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;以上，敬请查阅。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前段时间，某个人要求帮忙设计一个部门LOGO，原本也没有打算自己出手制作LOGO，所以叫一个专业做LOGO设计的人抽时间帮忙处理。然后就有了本篇文章：对一个FPGA部门LOGO的设计说明文档。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="设计" scheme="http://xovel.cn/categories/design/"/>
+    
+    
+      <category term="设计" scheme="http://xovel.cn/tags/design/"/>
+    
+      <category term="logo" scheme="http://xovel.cn/tags/logo/"/>
+    
+      <category term="fpga" scheme="http://xovel.cn/tags/fpga/"/>
+    
+  </entry>
   
   <entry>
     <title>Yarn：一个新的JavaScript包管理器</title>
@@ -1054,72 +1100,6 @@
       <category term="notes" scheme="http://xovel.cn/tags/notes/"/>
     
       <category term="github" scheme="http://xovel.cn/tags/github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一个自适应菜单导航的设计实现过程</title>
-    <link href="http://xovel.cn/article/a-responsive-menu.html"/>
-    <id>http://xovel.cn/article/a-responsive-menu.html</id>
-    <published>2016-07-22T01:29:18.000Z</published>
-    <updated>2016-07-29T03:17:59.446Z</updated>
-    
-    <content type="html">&lt;p&gt;实现的需求如下：在屏幕宽度较小时，菜单为横向可滑动；屏幕较宽时则变为拉伸充满整屏。知识点：&lt;code&gt;横向滚动&lt;/code&gt;，&lt;code&gt;媒体查询&lt;/code&gt;，&lt;code&gt;弹性布局&lt;/code&gt;。&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;乍一看这个需求，显得有点奇特瑰丽，但作为一个前端工程师，是可以想出各种方案来进行实现的。下面就详细讲述一下实现的过程。&lt;/p&gt;
-&lt;p&gt;首先，我们搭建一个菜单的结构代码如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-menu&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单1&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单2&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单3&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单4&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单5&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单6&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单7&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单8&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;当然，也可以使用&lt;code&gt;&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;...&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&lt;/code&gt;的方式。这里我们采用&lt;code&gt;div&lt;/code&gt;实现子菜单，避免&lt;code&gt;ul&lt;/code&gt;/&lt;code&gt;li&lt;/code&gt;的自带的样式影响效果。&lt;/p&gt;
-&lt;p&gt;接着，&lt;strong&gt;横向滚动&lt;/strong&gt;效果的设计与实现。这里分为横向和滚动效果两个。&lt;/p&gt;
-&lt;p&gt;关于横向布局，网络上有大量的示例参考，使用&lt;code&gt;float&lt;/code&gt;，&lt;code&gt;绝对定位&lt;/code&gt;，&lt;code&gt;inline&lt;/code&gt;，&lt;code&gt;inline-block&lt;/code&gt;。&lt;em&gt;如果直接使用的子元素就是行内元素，则无须考虑横向的问题。&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;这里采用&lt;code&gt;inline-block&lt;/code&gt;的方式进行实现：&lt;code&gt;.nav-item{display: inline-block;}&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;至于滚动效果，需要在父容器上面进行实现，具体方式为：&lt;code&gt;.nav-menu{overflow: hidden; overflow-x: scroll;white-space: nowrap;}&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;注意：&lt;strong&gt;&lt;code&gt;white-space: nowrap;&lt;/code&gt;&lt;/strong&gt;指定元素在同一行内进行显示。更多信息请参考&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/white-space&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;white-space - CSS | MDN&lt;/a&gt;。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;滚动条可以隐藏起来，其语法为&lt;code&gt;::-webkit-scrollbar{display:none;}&lt;/code&gt;。&lt;em&gt;在Webkit内核浏览器下有效。&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;接下来，就是自适应功能的体现了。所使用到的核心技术：&lt;code&gt;媒体查询&lt;/code&gt;和&lt;code&gt;弹性布局&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;根据需求，在屏幕较小时，菜单为横向滚动，屏幕较大则自适应拉伸。这里就有一个临界值了，那么到底是多大的屏幕才去应用自适应布局呢？这个值是&lt;strong&gt;事先预定&lt;/strong&gt;的。比如这里我们设计了8个菜单项目，经过计算，这8个菜单的长度约摸为&lt;code&gt;440px&lt;/code&gt;，我们就用&lt;code&gt;440px&lt;/code&gt;作为划分临界值进行自适应布局的设计实现。&lt;/p&gt;
-&lt;p&gt;CSS3提供了一个叫做&lt;code&gt;Media Query&lt;/code&gt;——翻译过来叫做&lt;code&gt;媒体查询&lt;/code&gt;——的高级功能。关于媒体查询的详细资料，请参考&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Media queries - CSS | MDN&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;css代码中我们于是就将自适应效果的代码写成这个样子：&lt;/p&gt;
-&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;@&lt;span class=&quot;keyword&quot;&gt;media&lt;/span&gt; (min-width: &lt;span class=&quot;number&quot;&gt;440px&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  ...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;里面的&lt;code&gt;min-width: 440px&lt;/code&gt;表示花括号里面的代码将在屏幕宽度最小值超过440px时生效。于是，接下来就只剩下一件事情了：拉伸的自适应效果实现。&lt;/p&gt;
-&lt;p&gt;参考了一下CSS自适应布局，关于自动拉伸的方式，方法众多，比如&lt;code&gt;table&lt;/code&gt;、&lt;code&gt;百分比&lt;/code&gt;、&lt;code&gt;弹性布局&lt;/code&gt;等等。这里我们就使用&lt;code&gt;弹性布局&lt;/code&gt;进行实现。关于弹性布局的说明，近期本人会整理一篇文章专门进行解读。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;2016.7.28，文章整理完成，敬请参阅：&lt;a href=&quot;/article/css-flex.html&quot;&gt;初识Flex布局&lt;/a&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;具体代码如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;@&lt;span class=&quot;keyword&quot;&gt;media&lt;/span&gt; (min-width: &lt;span class=&quot;number&quot;&gt;440px&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-class&quot;&gt;.nav-menu&lt;/span&gt;&amp;#123; &lt;span class=&quot;attribute&quot;&gt;display&lt;/span&gt;: -webkit-flex; &lt;span class=&quot;attribute&quot;&gt;display&lt;/span&gt;: flex; &lt;span class=&quot;attribute&quot;&gt;justify-content&lt;/span&gt;: space-around; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;code&gt;justify-content: space-around;&lt;/code&gt;指定了元素之间的留白方式为等距离并且两边有留白。&lt;/p&gt;
-&lt;p&gt;那么，这个菜单我们就设计实现完毕了。完整代码如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;style&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text/css&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;css&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;body&lt;/span&gt;&amp;#123; &lt;span class=&quot;attribute&quot;&gt;background&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;#282828&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;margin&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;font-family&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&#39;San Francisco&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;Noto SansCJK&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;Microsoft Yahei&#39;&lt;/span&gt;;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.nav-menu&lt;/span&gt;&amp;#123; &lt;span class=&quot;attribute&quot;&gt;height&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;40px&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;line-height&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;40px&lt;/span&gt;;&lt;span class=&quot;attribute&quot;&gt;overflow&lt;/span&gt;: hidden; &lt;span class=&quot;attribute&quot;&gt;overflow-x&lt;/span&gt;: scroll;&lt;span class=&quot;attribute&quot;&gt;white-space&lt;/span&gt;: nowrap; &lt;span class=&quot;attribute&quot;&gt;background&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;#333&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;margin-top&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;10px&lt;/span&gt;;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.nav-menu&lt;/span&gt;&lt;span class=&quot;selector-pseudo&quot;&gt;::-webkit-scrollbar&lt;/span&gt;&amp;#123;&lt;span class=&quot;attribute&quot;&gt;display&lt;/span&gt;:none;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.nav-item&lt;/span&gt;&amp;#123;&lt;span class=&quot;attribute&quot;&gt;display&lt;/span&gt;: inline-block; &lt;span class=&quot;attribute&quot;&gt;height&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;38px&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;margin&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;5px&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;overflow&lt;/span&gt;: hidden;&lt;span class=&quot;attribute&quot;&gt;text-align&lt;/span&gt;: center;&lt;span class=&quot;attribute&quot;&gt;color&lt;/span&gt;: white;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@&lt;span class=&quot;keyword&quot;&gt;media&lt;/span&gt; (min-width: &lt;span class=&quot;number&quot;&gt;440px&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-class&quot;&gt;.nav-menu&lt;/span&gt;&amp;#123; &lt;span class=&quot;attribute&quot;&gt;display&lt;/span&gt;: -webkit-flex; &lt;span class=&quot;attribute&quot;&gt;display&lt;/span&gt;: flex; &lt;span class=&quot;attribute&quot;&gt;justify-content&lt;/span&gt;: space-around; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;style&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-menu&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单1&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单2&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单3&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单4&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单5&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单6&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单7&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;菜单8&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;演示：&lt;a href=&quot;/garden/demo/a-responsive-menu.html&quot;&gt;一个自适应菜单导航页面&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;del&gt;打完收工&lt;/del&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;实现的需求如下：在屏幕宽度较小时，菜单为横向可滑动；屏幕较宽时则变为拉伸充满整屏。知识点：&lt;code&gt;横向滚动&lt;/code&gt;，&lt;code&gt;媒体查询&lt;/code&gt;，&lt;code&gt;弹性布局&lt;/code&gt;。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
-    
-    
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
-      <category term="responsive" scheme="http://xovel.cn/tags/responsive/"/>
-    
-      <category term="menu" scheme="http://xovel.cn/tags/menu/"/>
-    
-      <category term="设计" scheme="http://xovel.cn/tags/design/"/>
-    
-      <category term="横向滚动" scheme="http://xovel.cn/tags/%E6%A8%AA%E5%90%91%E6%BB%9A%E5%8A%A8/"/>
-    
-      <category term="媒体查询" scheme="http://xovel.cn/tags/%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/"/>
-    
-      <category term="弹性布局" scheme="http://xovel.cn/tags/%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/"/>
     
   </entry>
   
