@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-10-17T09:40:58.125Z</updated>
+  <updated>2016-10-18T03:49:32.493Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/a-logo-note-for-zte-fpga-design-department.html"/>
     <id>http://xovel.cn/article/a-logo-note-for-zte-fpga-design-department.html</id>
     <published>2016-10-17T08:37:47.000Z</published>
-    <updated>2016-10-17T09:40:58.125Z</updated>
+    <updated>2016-10-18T03:49:32.493Z</updated>
     
     <content type="html">&lt;p&gt;前段时间，某个人要求帮忙设计一个部门LOGO，原本也没有打算自己出手制作LOGO，所以叫一个专业做LOGO设计的人抽时间帮忙处理。然后就有了本篇文章：对一个FPGA部门LOGO的设计说明文档。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -29,6 +29,9 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://ww2.sinaimg.cn/large/79be2309gw1f8vddltdmej20xc0dq75f.jpg&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;设计大图&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://ww4.sinaimg.cn/large/79be2309gw1f8vddnxna7j208w08w0sw.jpg&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ICON图&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;特别感谢：LOGO设计者LiuLei&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;以下内容为针对本次设计的说明与解析：&lt;/p&gt;
 &lt;h3 id=&quot;LOGO简介&quot;&gt;&lt;a href=&quot;#LOGO简介&quot; class=&quot;headerlink&quot; title=&quot;LOGO简介&quot;&gt;&lt;/a&gt;LOGO简介&lt;/h3&gt;&lt;p&gt;以FPGA部门内容作为主体，由图像和文字的组合形式，体现部门主要的业务，同时加入了时尚年轻团结的元素，整体营造一种简约而富有气质的LOGO设计。&lt;/p&gt;
 &lt;h3 id=&quot;设计理念&quot;&gt;&lt;a href=&quot;#设计理念&quot; class=&quot;headerlink&quot; title=&quot;设计理念&quot;&gt;&lt;/a&gt;设计理念&lt;/h3&gt;&lt;p&gt;以亮灰化的蓝粉色（&lt;code&gt;light shade of blue-magenta&lt;/code&gt;）作为背景，营造我们中兴公司恢宏的气势。LOGO核心布局颜色采用了中兴蓝，字体颜色使用纯黑色，表述大局观与稳重感。&lt;/p&gt;
