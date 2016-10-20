@@ -1645,7 +1645,7 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
                 if (t.editorIsHidden)
                     return Pt(e),
                     !1;
-                if (!t.force && t.visible.from >= n.viewFrom && t.visible.to <= n.viewto="" &&="" (null="=" n.updatelinenumbers="" ||="">= n.viewTo) && n.renderedView == n.view && 0 == Ft(e))
+                if (!t.force && t.visible.from >= n.viewFrom && t.visible.to <= n.viewTo && (null  == n.updateLineNumbers || n.updateLineNumbers >= n.viewTo) && n.renderedView == n.view && 0 == Ft(e))
                     return !1;
                 k(e) && (Pt(e),
                 t.dims = N(e));
@@ -1683,7 +1683,41 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
                     top: Math.min(e.doc.height + He(e.display) - Ue(e), n.top)
                 }),
                 t.visible = w(e.display, e.doc, n),
-                !(t.visible.from >= e.display.viewFrom && t.visible.to <= 8="" e.display.viewto)))="" &&="" m(e,="" t);="" r="!1)" {="" a(e);="" var="" i="f(e);" $e(e),="" t(e,="" i),="" y(e,="" i)="" }="" t.signal(e,="" "update",="" e),="" (e.display.viewfrom="" !="e.display.reportedViewFrom" ||="" e.display.viewto="" (t.signal(e,="" "viewportchange",="" e,="" e.display.viewfrom,="" e.display.viewto),="" e.display.reportedviewfrom="e.display.viewFrom," e.display.reportedviewto="e.display.viewTo)" function="" e(e,="" t)="" n="new" c(e,t);="" if="" (m(e,="" n))="" a(e),="" o(e,="" n);="" r),="" n.finish()="" e.display.sizer.style.minheight="t.docHeight" +="" "px";="" e.display.barheight;="" e.display.heightforcer.style.top="n" "px",="" e.display.gutters.style.height="Math.max(n" we(e),="" t.clientheight)="" "px"="" a(e)="" for="" (var="" t="e.display," <="" t.view.length;="" r++)="" i,="" o="t.view[r];" (!o.hidden)="" (po=""> fo) {
+                !(t.visible.from >= e.display.viewFrom && t.visible.to <= e.display.viewTo))) && M(e, t); r = !1) {
+                    A(e);
+                    var i = f(e);
+                    $e(e),
+                    T(e, i),
+                    y(e, i)
+                }
+                t.signal(e, "update", e),
+                (e.display.viewFrom != e.display.reportedViewFrom || e.display.viewTo != e.display.reportedViewTo) && (t.signal(e, "viewportChange", e, e.display.viewFrom, e.display.viewTo),
+                e.display.reportedViewFrom = e.display.viewFrom,
+                e.display.reportedViewTo = e.display.viewTo)
+            }
+            function E(e, t) {
+                var n = new C(e,t);
+                if (M(e, n)) {
+                    A(e),
+                    O(e, n);
+                    var r = f(e);
+                    $e(e),
+                    T(e, r),
+                    y(e, r),
+                    n.finish()
+                }
+            }
+            function T(e, t) {
+                e.display.sizer.style.minHeight = t.docHeight + "px";
+                var n = t.docHeight + e.display.barHeight;
+                e.display.heightForcer.style.top = n + "px",
+                e.display.gutters.style.height = Math.max(n + We(e), t.clientHeight) + "px"
+            }
+            function A(e) {
+                for (var t = e.display, n = t.lineDiv.offsetTop, r = 0; r < t.view.length; r++) {
+                    var i, o = t.view[r];
+                    if (!o.hidden) {
+                        if (po && 8 > fo) {
                             var s = o.node.offsetTop + o.node.offsetHeight;
                             i = s - n,
                             n = s
@@ -2231,7 +2265,7 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
                         for (var l = 0; l < a.markedSpans.length; ++l) {
                             var u = a.markedSpans[l]
                               , c = u.marker;
-                            if ((null  == u.from || (c.inclusiveLeft ? u.from <= o.ch="" :="" u.from="" <="" o.ch))="" &&="" (null="=" u.to="" ||="" (c.inclusiveright="" ?="">= o.ch : u.to > o.ch))) {
+                            if ((null  == u.from || (c.inclusiveLeft ? u.from <= o.ch : u.from < o.ch)) && (null  == u.to || (c.inclusiveRight ? u.to >= o.ch : u.to > o.ch))) {
                                 if (r && (Cs(c, "beforeCursorEnter"),
                                 c.explicitlyCleared)) {
                                     if (a.markedSpans) {
@@ -2398,7 +2432,13 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
             }
             function Fe(e, t, n) {
                 for (var r, i, o = e.doc, s = n ? -1 : t - (e.doc.mode.innerMode ? 1e3 : 100), a = t; a > s; --a) {
-                    if (a <= o.first)="" return="" o.first;="" var="" l="Gr(o," a="" -="" 1);="" if="" (l.stateafter="" &&="" (!n="" ||="" <="o.frontier))" a;="" u="$s(l.text," null="" ,="" e.options.tabsize);="" (null="=" i="" r=""> u) && (i = a - 1,
+                    if (a <= o.first)
+                        return o.first;
+                    var l = Gr(o, a - 1);
+                    if (l.stateAfter && (!n || a <= o.frontier))
+                        return a;
+                    var u = $s(l.text, null , e.options.tabSize);
+                    (null  == i || r > u) && (i = a - 1,
                     r = u)
                 }
                 return i
@@ -3038,11 +3078,17 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
                 e.curOp.viewChanged = !0,
                 t >= i.viewTo)
                     To && gr(e.doc, t) < i.viewTo && Pt(e);
-                else if (n <= i.viewfrom)="" to="" &&="" vr(e.doc,="" n="" +="" r)=""> i.viewFrom ? Pt(e) : (i.viewFrom += r,
+                else if (n <= i.viewFrom)
+                    To && vr(e.doc, n + r) > i.viewFrom ? Pt(e) : (i.viewFrom += r,
                     i.viewTo += r);
-                else if (t <= i.viewfrom="" &&="" n="">= i.viewTo)
+                else if (t <= i.viewFrom && n >= i.viewTo)
                     Pt(e);
-                else if (t <= i.viewfrom)="" {="" var="" o="Rt(e," n,="" n="" +="" r,="" 1);="" ?="" (i.view="i.view.slice(o.index)," i.viewfrom="o.lineN," i.viewto="" :="" pt(e)="" }="" else="" if="" (n="">= i.viewTo) {
+                else if (t <= i.viewFrom) {
+                    var o = Rt(e, n, n + r, 1);
+                    o ? (i.view = i.view.slice(o.index),
+                    i.viewFrom = o.lineN,
+                    i.viewTo += r) : Pt(e)
+                } else if (n >= i.viewTo) {
                     var o = Rt(e, t, t, -1);
                     o ? (i.view = i.view.slice(0, o.index),
                     i.viewTo = o.lineN) : Pt(e)
@@ -3118,7 +3164,8 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
             function _t(e, t, n) {
                 var r = e.display
                   , i = r.view;
-                0 == i.length || t >= r.viewTo || n <= r.viewfrom="" ?="" (r.view="$t(e," t,="" n),="" :="" (r.viewfrom=""> t ? r.view = $t(e, t, r.viewFrom).concat(r.view) : r.viewFrom < t && (r.view = r.view.slice(It(e, t))),
+                0 == i.length || t >= r.viewTo || n <= r.viewFrom ? (r.view = $t(e, t, n),
+                r.viewFrom = t) : (r.viewFrom > t ? r.view = $t(e, t, r.viewFrom).concat(r.view) : r.viewFrom < t && (r.view = r.view.slice(It(e, t))),
                 r.viewFrom = t,
                 r.viewTo < n ? r.view = r.view.concat($t(e, r.viewTo, n)) : r.viewTo > n && (r.view = r.view.slice(0, It(e, n)))),
                 r.viewTo = n
@@ -3142,7 +3189,14 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
                     if (1 != e.touches.length)
                         return !1;
                     var t = e.touches[0];
-                    return t.radiusX <= 1="" &&="" t.radiusy="" <="1" }="" function="" r(e,="" t)="" {="" if="" (null="=" t.left)="" return="" !0;="" var="" n="t.left" -="" e.left="" ,="" r="t.top" e.top;="" *="" +=""> 400
+                    return t.radiusX <= 1 && t.radiusY <= 1
+                }
+                function r(e, t) {
+                    if (null  == t.left)
+                        return !0;
+                    var n = t.left - e.left
+                      , r = t.top - e.top;
+                    return n * n + r * r > 400
                 }
                 var i = e.display;
                 js(i.scroller, "mousedown", Ot(e, qt)),
@@ -3171,7 +3225,134 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
                         i.activeTouch = {
                             start: t,
                             moved: !1,
-                            prev: t - s.end <= 0="" 1="=" 300="" ?="" s="" :="" null="" },="" e.touches.length="" &&="" (i.activetouch.left="e.touches[0].pageX," i.activetouch.top="e.touches[0].pageY)" }="" }),="" js(i.scroller,="" "touchmove",="" function()="" {="" i.activetouch="" (i.activetouch.moved="!0)" "touchend",="" function(n)="" var="" o="i.activeTouch;" if="" (o="" !bt(i,="" n)="" !="o.left" !o.moved="" new="" date="" -="" o.start="" <="" 300)="" s,="" a="e.coordsChar(i.activeTouch," "page");="" ||="" r(o,="" o.prev)="" de(a,a)="" !o.prev.prev="" o.prev.prev)="" e.findwordat(a)="" de(ao(a.line,="" 0),me(e.doc,="" ao(a.line="" +="" 1,="" 0))),="" e.setselection(s.anchor,="" s.head),="" e.focus(),="" ws(n)="" t()="" "touchcancel",="" t),="" "scroll",="" i.scroller.clientheight="" (jt(e,="" i.scroller.scrolltop),="" en(e,="" i.scroller.scrollleft,="" !0),="" cs(e,="" e))="" "mousewheel",="" function(t)="" tn(e,="" t)="" "dommousescroll",="" js(i.wrapper,="" i.wrapper.scrolltop="i.wrapper.scrollLeft" =="" i.dragfunctions="{" simple:="" xi(e,="" ks(t)="" start:="" zt(e,="" drop:="" ot(e,="" xt)="" };="" js(a,="" "keyup",="" cn.call(e,="" "keydown",="" ln)),="" "keypress",="" dn)),="" "focus",="" di(pn,="" e)),="" "blur",="" di(fn,="" function="" vt(t,="" n,="" r)="" i="r" r="" (!n="" ,="" js="" ss;="" s(t.display.scroller,="" "dragstart",="" o.start),="" "dragenter",="" o.simple),="" "dragover",="" "drop",="" o.drop)="" ht(e)="" t="e.display;" (t.lastwrapheight="" t.lastwrapwidth="" (t.cachedcharwidth="t.cachedTextHeight" t.cachedpaddingh="null" t.scrollbarsclipped="!1," e.setsize())="" bt(e,="" for="" (var="" n="vi(t);" n.nodetype="" "true"="=" n.getattribute("cm-ignore-events")="" n.parentnode="=" e.sizer="" return="" !0="" wt(e,="" t,="" vi(t).getattribute("cm-not-content"))="" ;="" o,="" try="" a.left,="" a.top="" catch="" (t)="" l,="" u="ft(e," s);="" (r="" u.xrel="" (l="Gr(e.doc," u.line).text).length="=" u.ch)="" c="$s(l," l.length,="" e.options.tabsize)="" l.length;="" math.max(0,="" math.round((o="" be(e.display).left)="" vt(e.display))="" c))="" qt(e)="" (!(n.activetouch="" n.input.supportstouch()="" xi(t,="" e)))="" (n.shift="e.shiftKey," bt(n,="" void="" (mo="" (n.scroller.draggable="!1," settimeout(function()="" n.scroller.draggable="!0" 100)));="" (!yt(t,="" e);="" switch="" (window.focus(),="" yi(e))="" case="" 1:="" ut(t,="" e,="" vi(e)="=" n.scroller="" ws(e);="" break;="" 2:="" mo="" (t.state.lastmiddledown="+new" date),="" we(t.doc,="" r),="" n.input.focus()="" 20),="" 3:="" oo="" mn(t,="" e)="" hn(t)="" ut(e,="" po="" settimeout(di(y,="" e),="" 0)="" e.curop.focus="Vi();" r,="" date;="" io="" io.time=""> i - 400 && 0 == $o(Io.pos, n) ? r = "triple" : Po && Po.time > i - 400 && 0 == $o(Po.pos, n) ? (r = "double",
+                            prev: t - s.end <= 300 ? s : null 
+                        },
+                        1 == e.touches.length && (i.activeTouch.left = e.touches[0].pageX,
+                        i.activeTouch.top = e.touches[0].pageY)
+                    }
+                }),
+                js(i.scroller, "touchmove", function() {
+                    i.activeTouch && (i.activeTouch.moved = !0)
+                }),
+                js(i.scroller, "touchend", function(n) {
+                    var o = i.activeTouch;
+                    if (o && !Bt(i, n) && null  != o.left && !o.moved && new Date - o.start < 300) {
+                        var s, a = e.coordsChar(i.activeTouch, "page");
+                        s = !o.prev || r(o, o.prev) ? new de(a,a) : !o.prev.prev || r(o, o.prev.prev) ? e.findWordAt(a) : new de(Ao(a.line, 0),me(e.doc, Ao(a.line + 1, 0))),
+                        e.setSelection(s.anchor, s.head),
+                        e.focus(),
+                        ws(n)
+                    }
+                    t()
+                }),
+                js(i.scroller, "touchcancel", t),
+                js(i.scroller, "scroll", function() {
+                    i.scroller.clientHeight && (Jt(e, i.scroller.scrollTop),
+                    en(e, i.scroller.scrollLeft, !0),
+                    Cs(e, "scroll", e))
+                }),
+                js(i.scroller, "mousewheel", function(t) {
+                    tn(e, t)
+                }),
+                js(i.scroller, "DOMMouseScroll", function(t) {
+                    tn(e, t)
+                }),
+                js(i.wrapper, "scroll", function() {
+                    i.wrapper.scrollTop = i.wrapper.scrollLeft = 0
+                }),
+                i.dragFunctions = {
+                    simple: function(t) {
+                        xi(e, t) || ks(t)
+                    },
+                    start: function(t) {
+                        Zt(e, t)
+                    },
+                    drop: Ot(e, Xt)
+                };
+                var a = i.input.getField();
+                js(a, "keyup", function(t) {
+                    cn.call(e, t)
+                }),
+                js(a, "keydown", Ot(e, ln)),
+                js(a, "keypress", Ot(e, dn)),
+                js(a, "focus", Di(pn, e)),
+                js(a, "blur", Di(fn, e))
+            }
+            function Vt(t, n, r) {
+                var i = r && r != e.Init;
+                if (!n != !i) {
+                    var o = t.display.dragFunctions
+                      , s = n ? js : Ss;
+                    s(t.display.scroller, "dragstart", o.start),
+                    s(t.display.scroller, "dragenter", o.simple),
+                    s(t.display.scroller, "dragover", o.simple),
+                    s(t.display.scroller, "drop", o.drop)
+                }
+            }
+            function Ht(e) {
+                var t = e.display;
+                (t.lastWrapHeight != t.wrapper.clientHeight || t.lastWrapWidth != t.wrapper.clientWidth) && (t.cachedCharWidth = t.cachedTextHeight = t.cachedPaddingH = null ,
+                t.scrollbarsClipped = !1,
+                e.setSize())
+            }
+            function Bt(e, t) {
+                for (var n = vi(t); n != e.wrapper; n = n.parentNode)
+                    if (!n || 1 == n.nodeType && "true" == n.getAttribute("cm-ignore-events") || n.parentNode == e.sizer && n != e.mover)
+                        return !0
+            }
+            function Wt(e, t, n, r) {
+                var i = e.display;
+                if (!n && "true" == vi(t).getAttribute("cm-not-content"))
+                    return null ;
+                var o, s, a = i.lineSpace.getBoundingClientRect();
+                try {
+                    o = t.clientX - a.left,
+                    s = t.clientY - a.top
+                } catch (t) {
+                    return null 
+                }
+                var l, u = ft(e, o, s);
+                if (r && 1 == u.xRel && (l = Gr(e.doc, u.line).text).length == u.ch) {
+                    var c = $s(l, l.length, e.options.tabSize) - l.length;
+                    u = Ao(u.line, Math.max(0, Math.round((o - Be(e.display).left) / vt(e.display)) - c))
+                }
+                return u
+            }
+            function qt(e) {
+                var t = this
+                  , n = t.display;
+                if (!(n.activeTouch && n.input.supportsTouch() || xi(t, e))) {
+                    if (n.shift = e.shiftKey,
+                    Bt(n, e))
+                        return void (mo || (n.scroller.draggable = !1,
+                        setTimeout(function() {
+                            n.scroller.draggable = !0
+                        }, 100)));
+                    if (!Yt(t, e)) {
+                        var r = Wt(t, e);
+                        switch (window.focus(),
+                        yi(e)) {
+                        case 1:
+                            r ? Ut(t, e, r) : vi(e) == n.scroller && ws(e);
+                            break;
+                        case 2:
+                            mo && (t.state.lastMiddleDown = +new Date),
+                            r && we(t.doc, r),
+                            setTimeout(function() {
+                                n.input.focus()
+                            }, 20),
+                            ws(e);
+                            break;
+                        case 3:
+                            Oo ? mn(t, e) : hn(t)
+                        }
+                    }
+                }
+            }
+            function Ut(e, t, n) {
+                po ? setTimeout(Di(Y, e), 0) : e.curOp.focus = Vi();
+                var r, i = +new Date;
+                Io && Io.time > i - 400 && 0 == $o(Io.pos, n) ? r = "triple" : Po && Po.time > i - 400 && 0 == $o(Po.pos, n) ? (r = "double",
                 Io = {
                     time: i,
                     pos: n
@@ -3597,7 +3778,77 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
             function vn(e, t) {
                 if ($o(e, t.from) < 0)
                     return e;
-                if ($o(e, t.to) <= 0="" 1="" 0)="" return="" uo(t);="" var="" n="e.line" +="" t.text.length="" -="" (t.to.line="" t.from.line)="" ,="" r="e.ch;" e.line="=" t.to.line="" &&="" (r="" t.to.ch),="" ao(n,="" r)="" }="" function="" yn(e,="" t)="" {="" for="" (var="" <="" e.sel.ranges.length;="" r++)="" i="e.sel.ranges[r];" n.push(new="" de(vn(i.anchor,="" t),vn(i.head,="" t)))="" he(n,="" e.sel.primindex)="" bn(e,="" t,="" n)="" t.line="" ?="" ao(n.line,="" e.ch="" t.ch="" n.ch)="" :="" ao(n.line="" (e.line="" t.line),="" e.ch)="" wn(e,="" 0),="" o="i," s="0;" t.length;="" s++)="" a="t[s]" l="bn(a.from," i,="" o)="" u="bn(Uo(a)," o);="" if="" (i="a.to," "around"="=" c="e.sel.ranges[s]" d="$o(c.head," c.anchor)="" 0;="" r[s]="new" de(d="" l,d="" u)="" else="" de(l,l)="" new="" ce(r,e.sel.primindex)="" xn(e,="" canceled:="" !1,="" from:="" t.from,="" to:="" t.to,="" text:="" t.text,="" origin:="" t.origin,="" cancel:="" function()="" this.canceled="!0" };="" (r.update="function(t," n,="" r,="" i)="" t="" (this.from="me(e," t)),="" (this.to="me(e," n)),="" (this.text="r)," void="" !="=" (this.origin="i)" ),="" cs(e,="" "beforechange",="" e,="" r),="" e.cm="" cs(e.cm,="" e.cm,="" r.canceled="" null="" r.from,="" r.to,="" r.text,="" r.origin="" kn(e,="" (e.cm)="" (!e.cm.curop)="" ot(e.cm,="" kn)(e,="" n);="" (e.cm.state.suppressedits)="" (!(ji(e,="" "beforechange")="" ||="" ji(e.cm,="" "beforechange"))="" (t="xn(e," !0)))="" !n="" ir(e,="" t.to);="" (r)="" 1;="">= 0; --i)
+                if ($o(e, t.to) <= 0)
+                    return Uo(t);
+                var n = e.line + t.text.length - (t.to.line - t.from.line) - 1
+                  , r = e.ch;
+                return e.line == t.to.line && (r += Uo(t).ch - t.to.ch),
+                Ao(n, r)
+            }
+            function yn(e, t) {
+                for (var n = [], r = 0; r < e.sel.ranges.length; r++) {
+                    var i = e.sel.ranges[r];
+                    n.push(new de(vn(i.anchor, t),vn(i.head, t)))
+                }
+                return he(n, e.sel.primIndex)
+            }
+            function bn(e, t, n) {
+                return e.line == t.line ? Ao(n.line, e.ch - t.ch + n.ch) : Ao(n.line + (e.line - t.line), e.ch)
+            }
+            function wn(e, t, n) {
+                for (var r = [], i = Ao(e.first, 0), o = i, s = 0; s < t.length; s++) {
+                    var a = t[s]
+                      , l = bn(a.from, i, o)
+                      , u = bn(Uo(a), i, o);
+                    if (i = a.to,
+                    o = u,
+                    "around" == n) {
+                        var c = e.sel.ranges[s]
+                          , d = $o(c.head, c.anchor) < 0;
+                        r[s] = new de(d ? u : l,d ? l : u)
+                    } else
+                        r[s] = new de(l,l)
+                }
+                return new ce(r,e.sel.primIndex)
+            }
+            function xn(e, t, n) {
+                var r = {
+                    canceled: !1,
+                    from: t.from,
+                    to: t.to,
+                    text: t.text,
+                    origin: t.origin,
+                    cancel: function() {
+                        this.canceled = !0
+                    }
+                };
+                return n && (r.update = function(t, n, r, i) {
+                    t && (this.from = me(e, t)),
+                    n && (this.to = me(e, n)),
+                    r && (this.text = r),
+                    void 0 !== i && (this.origin = i)
+                }
+                ),
+                Cs(e, "beforeChange", e, r),
+                e.cm && Cs(e.cm, "beforeChange", e.cm, r),
+                r.canceled ? null  : {
+                    from: r.from,
+                    to: r.to,
+                    text: r.text,
+                    origin: r.origin
+                }
+            }
+            function kn(e, t, n) {
+                if (e.cm) {
+                    if (!e.cm.curOp)
+                        return Ot(e.cm, kn)(e, t, n);
+                    if (e.cm.state.suppressEdits)
+                        return
+                }
+                if (!(ji(e, "beforeChange") || e.cm && ji(e.cm, "beforeChange")) || (t = xn(e, t, !0))) {
+                    var r = Eo && !n && ir(e, t.from, t.to);
+                    if (r)
+                        for (var i = r.length - 1; i >= 0; --i)
                             jn(e, {
                                 from: r[i].from,
                                 to: r[i].to,
@@ -3900,7 +4151,17 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
             }
             function _n(e, t) {
                 for (var n = e.doc.sel.ranges, r = [], i = 0; i < n.length; i++) {
-                    for (var o = t(n[i]); r.length && $o(o.from, Oi(r).to) <= 0;="" )="" {="" var="" s="r.pop();" if="" ($o(s.from,="" o.from)="" <="" 0)="" o.from="s.from;" break="" }="" r.push(o)="" mt(e,="" function()="" for="" (var="" t="r.length" -="" 1;="">= 0; t--)
+                    for (var o = t(n[i]); r.length && $o(o.from, Oi(r).to) <= 0; ) {
+                        var s = r.pop();
+                        if ($o(s.from, o.from) < 0) {
+                            o.from = s.from;
+                            break
+                        }
+                    }
+                    r.push(o)
+                }
+                Mt(e, function() {
+                    for (var t = r.length - 1; t >= 0; t--)
                         On(e.doc, "", r[t].from, r[t].to, "+delete");
                     Dn(e)
                 })
@@ -4044,7 +4305,91 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
                     o.collapsed)
                         Nt(u, t.line, n.line + 1);
                     else if (o.className || o.title || o.startStyle || o.endStyle || o.css)
-                        for (var c = t.line; c <= n.line;="" c++)="" dt(u,="" c,="" "text");="" o.atomic="" &&="" ee(u.doc),="" bi(u,="" "markeradded",="" u,="" o)="" }="" return="" o="" function="" qn(e,="" t,="" n,="" r,="" i)="" {="" r="Ni(r)," r.shared="!1;" var="" i)]="" ,="" s="o[0]" a="r.widgetNode;" qr(e,="" function(e)="" (r.widgetnode="a.cloneNode(!0))," o.push(wn(e,="" me(e,="" t),="" n),="" i));="" for="" (var="" l="0;" <="" e.linked.length;="" ++l)="" if="" (e.linked[l].isparent)="" return;="" }),="" new="" ds(o,s)="" un(e)="" e.findmarks(ao(e.first,="" 0),="" e.clippos(ao(e.lastline())),="" e.parent="" })="" gn(e,="" t)="" n="0;" t.length;="" n++)="" i="r.find()" ($o(o,="" s))="" o,="" s,="" r.primary,="" r.primary.type);="" r.markers.push(a),="" a.parent="r" kn(e)="" t="0;" e.length;="" t++)="" qr(n.primary.doc,="" r.push(e)="" });="" n.markers.length;="" i++)="" -1="=" ei(r,="" o.doc)="" (o.parent="null" n.markers.splice(i--,="" 1))="" n)="" this.marker="e," this.from="t," this.to="n" yn(e,="" (e)="" ++n)="" (r.marker="=" xn(e,="" ++r)="" e[r]="" !="t" (n="" ||="" zn(e,="" e.markedspans="e.markedSpans" ?="" e.markedspans.concat([t])="" :="" [t],="" t.marker.attachline(e)="" jn(e,="" ++i)="" =="o.from" (s.inclusiveleft="" o.from="" t);="" (a="" "bookmark"="=" s.type="" (!n="" !o.marker.insertleft))="" (s.inclusiveright="" o.to="">= t : o.to > t);
+                        for (var c = t.line; c <= n.line; c++)
+                            Dt(u, c, "text");
+                    o.atomic && Ee(u.doc),
+                    bi(u, "markerAdded", u, o)
+                }
+                return o
+            }
+            function qn(e, t, n, r, i) {
+                r = Ni(r),
+                r.shared = !1;
+                var o = [Wn(e, t, n, r, i)]
+                  , s = o[0]
+                  , a = r.widgetNode;
+                return qr(e, function(e) {
+                    a && (r.widgetNode = a.cloneNode(!0)),
+                    o.push(Wn(e, me(e, t), me(e, n), r, i));
+                    for (var l = 0; l < e.linked.length; ++l)
+                        if (e.linked[l].isParent)
+                            return;
+                    s = Oi(o)
+                }),
+                new ds(o,s)
+            }
+            function Un(e) {
+                return e.findMarks(Ao(e.first, 0), e.clipPos(Ao(e.lastLine())), function(e) {
+                    return e.parent
+                })
+            }
+            function Gn(e, t) {
+                for (var n = 0; n < t.length; n++) {
+                    var r = t[n]
+                      , i = r.find()
+                      , o = e.clipPos(i.from)
+                      , s = e.clipPos(i.to);
+                    if ($o(o, s)) {
+                        var a = Wn(e, o, s, r.primary, r.primary.type);
+                        r.markers.push(a),
+                        a.parent = r
+                    }
+                }
+            }
+            function Kn(e) {
+                for (var t = 0; t < e.length; t++) {
+                    var n = e[t]
+                      , r = [n.primary.doc];
+                    qr(n.primary.doc, function(e) {
+                        r.push(e)
+                    });
+                    for (var i = 0; i < n.markers.length; i++) {
+                        var o = n.markers[i];
+                        -1 == Ei(r, o.doc) && (o.parent = null ,
+                        n.markers.splice(i--, 1))
+                    }
+                }
+            }
+            function Qn(e, t, n) {
+                this.marker = e,
+                this.from = t,
+                this.to = n
+            }
+            function Yn(e, t) {
+                if (e)
+                    for (var n = 0; n < e.length; ++n) {
+                        var r = e[n];
+                        if (r.marker == t)
+                            return r
+                    }
+            }
+            function Xn(e, t) {
+                for (var n, r = 0; r < e.length; ++r)
+                    e[r] != t && (n || (n = [])).push(e[r]);
+                return n
+            }
+            function Zn(e, t) {
+                e.markedSpans = e.markedSpans ? e.markedSpans.concat([t]) : [t],
+                t.marker.attachLine(e)
+            }
+            function Jn(e, t, n) {
+                if (e)
+                    for (var r, i = 0; i < e.length; ++i) {
+                        var o = e[i]
+                          , s = o.marker
+                          , a = null  == o.from || (s.inclusiveLeft ? o.from <= t : o.from < t);
+                        if (a || o.from == t && "bookmark" == s.type && (!n || !o.marker.insertLeft)) {
+                            var l = null  == o.to || (s.inclusiveRight ? o.to >= t : o.to > t);
                             (r || (r = [])).push(new Qn(s,o.from,l ? null  : o.to))
                         }
                     }
@@ -4057,7 +4402,52 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
                           , s = o.marker
                           , a = null  == o.to || (s.inclusiveRight ? o.to >= t : o.to > t);
                         if (a || o.from == t && "bookmark" == s.type && (!n || o.marker.insertLeft)) {
-                            var l = null  == o.from || (s.inclusiveLeft ? o.from <= t="" :="" o.from="" <="" t);="" (r="" ||="" qn(s,l="" ?="" null="" -="" t,null="=" o.to="" t))="" }="" return="" r="" function="" tr(e,="" t)="" {="" if="" (t.full)="" ;="" var="" n="ve(e," t.from.line)="" &&="" gr(e,="" t.from.line).markedspans="" ,="" t.to.line)="" t.to.line).markedspans;="" (!n="" !r)="" i="t.from.ch" o="t.to.ch" s="0" =="$o(t.from," t.to)="" a="Jn(n," i,="" s)="" l="er(r," o,="" u="1" c="Oi(t.text).length" +="" (u="" 0);="" (a)="" for="" (var="" d="0;" a.length;="" ++d)="" h="a[d];" (null="=" h.to)="" p="Yn(l," h.marker);="" (h.to="null" p.to="" c)="" h.to="i" (l)="" l.length;="" !="h.to" h.from)="" (h.from="c," (a="" else="" h.from="" (l="nr(l));" f="[a];" (!u)="" m,="" g="t.text.length" 2;="" (g=""> 0 && a)
+                            var l = null  == o.from || (s.inclusiveLeft ? o.from <= t : o.from < t);
+                            (r || (r = [])).push(new Qn(s,l ? null  : o.from - t,null  == o.to ? null  : o.to - t))
+                        }
+                    }
+                return r
+            }
+            function tr(e, t) {
+                if (t.full)
+                    return null ;
+                var n = ve(e, t.from.line) && Gr(e, t.from.line).markedSpans
+                  , r = ve(e, t.to.line) && Gr(e, t.to.line).markedSpans;
+                if (!n && !r)
+                    return null ;
+                var i = t.from.ch
+                  , o = t.to.ch
+                  , s = 0 == $o(t.from, t.to)
+                  , a = Jn(n, i, s)
+                  , l = er(r, o, s)
+                  , u = 1 == t.text.length
+                  , c = Oi(t.text).length + (u ? i : 0);
+                if (a)
+                    for (var d = 0; d < a.length; ++d) {
+                        var h = a[d];
+                        if (null  == h.to) {
+                            var p = Yn(l, h.marker);
+                            p ? u && (h.to = null  == p.to ? null  : p.to + c) : h.to = i
+                        }
+                    }
+                if (l)
+                    for (var d = 0; d < l.length; ++d) {
+                        var h = l[d];
+                        if (null  != h.to && (h.to += c),
+                        null  == h.from) {
+                            var p = Yn(a, h.marker);
+                            p || (h.from = c,
+                            u && (a || (a = [])).push(h))
+                        } else
+                            h.from += c,
+                            u && (a || (a = [])).push(h)
+                    }
+                a && (a = nr(a)),
+                l && l != a && (l = nr(l));
+                var f = [a];
+                if (!u) {
+                    var m, g = t.text.length - 2;
+                    if (g > 0 && a)
                         for (var d = 0; d < a.length; ++d)
                             null  == a[d].to && (m || (m = [])).push(new Qn(a[d].marker,null ,null ));
                     for (var d = 0; g > d; ++d)
@@ -4412,7 +4802,66 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
                 var i = e.doc.mode
                   , o = new ls(t,e.options.tabSize);
                 for (o.start = o.pos = r || 0,
-                "" == t && Lr(i, n); !o.eol() && o.pos <= 0="=" 9="" e.options.maxhighlightlength;="" )="" mr(i,="" o,="" n),="" o.start="o.pos" }="" function="" nr(e,="" t)="" {="" if="" (!e="" ||="" ^\s*$="" .test(e))="" return="" null="" ;="" var="" n="t.addModeClass" ?="" ms="" :="" fs;="" n[e]="" (n[e]="e.replace(/\S+/g," "cm-$&"))="" dr(e,="" ,="" mo="" "padding-right:="" .1px"="" r="{" pre:="" _i("pre",="" [n]),="" content:="" n,="" col:="" 0,="" pos:="" cm:="" e,="" splitspaces:="" (po="" mo)="" &&="" e.getoption("linewrapping")="" };="" t.measure="{};" for="" (var="" i="0;" <="(t.rest" t.rest.length="" 0);="" i++)="" s="i" t.rest[i="" -="" 1]="" t.line;="" r.pos="0," r.addtoken="Ir," ki(e.display.measure)="" (o="ei(s))" (r.addtoken="_r(r.addToken," o)),="" r.map="[];" a="t" !="e.display.externalMeasured" xr(s);="" zr(s,="" r,="" ar(e,="" s,="" a)),="" s.styleclasses="" (s.styleclasses.bgclass="" (r.bgclass="Bi(s.styleClasses.bgClass," r.bgclass="" "")),="" s.styleclasses.textclass="" (r.textclass="Bi(s.styleClasses.textClass," r.textclass="" ""))),="" r.map.length="" r.map.push(0,="" r.content.appendchild(gi(e.display.measure))),="" (t.measure.map="r.map," t.measure.cache="{})" ((t.measure.maps="" (t.measure.maps="[])).push(r.map)," (t.measure.caches="" \bcm-tab\b="" .test(r.content.lastchild.classname)="" (r.content.classname="cm-tab-wrap-hack" ),="" cs(e,="" "renderline",="" t.line,="" r.pre),="" r.pre.classname="" pr(e)="" t="_i("span"," "\u2022",="" "cm-invalidchar");="" t.title="\\u" +="" e.charcodeat(0).tostring(16),="" t.setattribute("aria-label",="" t.title),="" ir(e,="" t,="" i,="" s)="" (t)="" t.replace(="" {3,}="" g,="" rr)="" l="e.cm.state.specialChars" u="!1;" (l.test(t))="" c="document.createDocumentFragment()," d="0;" l.lastindex="d;" h="l.exec(t)" p="h" h.index="" t.length="" d;="" (p)="" f="document.createTextNode(a.slice(d," p));="" po=""> fo ? c.appendChild(_i("span", [f])) : c.appendChild(f),
+                "" == t && Lr(i, n); !o.eol() && o.pos <= e.options.maxHighlightLength; )
+                    Mr(i, o, n),
+                    o.start = o.pos
+            }
+            function Nr(e, t) {
+                if (!e || /^\s*$/.test(e))
+                    return null ;
+                var n = t.addModeClass ? ms : fs;
+                return n[e] || (n[e] = e.replace(/\S+/g, "cm-$&"))
+            }
+            function Dr(e, t) {
+                var n = _i("span", null , null , mo ? "padding-right: .1px" : null )
+                  , r = {
+                    pre: _i("pre", [n]),
+                    content: n,
+                    col: 0,
+                    pos: 0,
+                    cm: e,
+                    splitSpaces: (po || mo) && e.getOption("lineWrapping")
+                };
+                t.measure = {};
+                for (var i = 0; i <= (t.rest ? t.rest.length : 0); i++) {
+                    var o, s = i ? t.rest[i - 1] : t.line;
+                    r.pos = 0,
+                    r.addToken = Ir,
+                    Ki(e.display.measure) && (o = ei(s)) && (r.addToken = _r(r.addToken, o)),
+                    r.map = [];
+                    var a = t != e.display.externalMeasured && Xr(s);
+                    zr(s, r, Ar(e, s, a)),
+                    s.styleClasses && (s.styleClasses.bgClass && (r.bgClass = Bi(s.styleClasses.bgClass, r.bgClass || "")),
+                    s.styleClasses.textClass && (r.textClass = Bi(s.styleClasses.textClass, r.textClass || ""))),
+                    0 == r.map.length && r.map.push(0, 0, r.content.appendChild(Gi(e.display.measure))),
+                    0 == i ? (t.measure.map = r.map,
+                    t.measure.cache = {}) : ((t.measure.maps || (t.measure.maps = [])).push(r.map),
+                    (t.measure.caches || (t.measure.caches = [])).push({}))
+                }
+                return mo && /\bcm-tab\b/.test(r.content.lastChild.className) && (r.content.className = "cm-tab-wrap-hack"),
+                Cs(e, "renderLine", e, t.line, r.pre),
+                r.pre.className && (r.textClass = Bi(r.pre.className, r.textClass || "")),
+                r
+            }
+            function Pr(e) {
+                var t = _i("span", "\u2022", "cm-invalidchar");
+                return t.title = "\\u" + e.charCodeAt(0).toString(16),
+                t.setAttribute("aria-label", t.title),
+                t
+            }
+            function Ir(e, t, n, r, i, o, s) {
+                if (t) {
+                    var a = e.splitSpaces ? t.replace(/ {3,}/g, Rr) : t
+                      , l = e.cm.state.specialChars
+                      , u = !1;
+                    if (l.test(t))
+                        for (var c = document.createDocumentFragment(), d = 0; ; ) {
+                            l.lastIndex = d;
+                            var h = l.exec(t)
+                              , p = h ? h.index - d : t.length - d;
+                            if (p) {
+                                var f = document.createTextNode(a.slice(d, d + p));
+                                po && 9 > fo ? c.appendChild(_i("span", [f])) : c.appendChild(f),
                                 e.map.push(e.pos, e.pos + p, f),
                                 e.col += p,
                                 e.pos += p
@@ -4465,7 +4914,10 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
                     for (var u = n.pos, c = u + r.length; ; ) {
                         for (var d = 0; d < t.length; d++) {
                             var h = t[d];
-                            if (h.to > u && h.from <= u)="" break="" }="" if="" (h.to="">= c)
+                            if (h.to > u && h.from <= u)
+                                break
+                        }
+                        if (h.to >= c)
                             return e(n, r, i, o, s, a, l);
                         e(n, r.slice(0, h.to - u), i, o, null , a, l),
                         o = null ,
@@ -4496,7 +4948,7 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
                             for (var y = [], b = 0; b < r.length; ++b) {
                                 var w = r[b]
                                   , x = w.marker;
-                                "bookmark" == x.type && w.from == f && x.widgetNode ? y.push(x) : w.from <= f="" &&="" (null="=" w.to="" ||=""> f || x.collapsed && w.to == f && w.from == f) ? (null  != w.to && w.to != f && v > w.to && (v = w.to,
+                                "bookmark" == x.type && w.from == f && x.widgetNode ? y.push(x) : w.from <= f && (null  == w.to || w.to > f || x.collapsed && w.to == f && w.from == f) ? (null  != w.to && w.to != f && v > w.to && (v = w.to,
                                 u = ""),
                                 x.className && (l += " " + x.className),
                                 x.css && (a = x.css),
@@ -4795,7 +5247,65 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
             }
             function si(e, t, n, r) {
                 var i = t.charAt(0);
-                return "*" == i || "+" == i && n.ranges.length == r.ranges.length && n.somethingSelected() == r.somethingSelected() && new Date - e.history.lastSelTime <= (e.cm="" ?="" e.cm.options.historyeventdelay="" :="" 500)="" }="" function="" ai(e,="" t,="" n,="" r)="" {="" var="" i="e.history" ,="" o="r" &&="" r.origin;="" n="=" i.lastselop="" ||="" i.lastselorigin="=" (i.lastmodtime="=" i.lastseltime="" i.lastorigin="=" si(e,="" o,="" oi(i.done),="" t))="" i.done[i.done.length="" -="" 1]="t" li(t,="" i.done),="" date,="" r="" r.clearredo="" !="=" !1="" ri(i.undone)="" li(e,="" t)="" n.ranges="" n.equals(e)="" t.push(e)="" ui(e,="" +="" e.id]="" e.iter(math.max(e.first,="" n),="" math.min(e.first="" e.size,="" r),="" function(n)="" n.markedspans="" ((i="" (i="t["spans_"" =="" n.markedspans),="" ++o="" })="" ci(e)="" if="" (!e)="" return="" null="" ;="" for="" (var="" <="" e.length;="" ++n)="" e[n].marker.explicitlycleared="" t="" (t="e.slice(0," n))="" t.push(e[n]);="" t.length="" e="" di(e,="" e.id];="" (!n)="" t.text.length;="" ++r)="" i.push(ci(n[r]));="" hi(e,="" n)="" (o.ranges)="" i.push(n="" ce.prototype.deepcopy.call(o)="" o);="" else="" s="o.changes" a="[];" i.push({="" changes:="" });="" l="0;" s.length;="" ++l)="" u,="" c="s[l];" (a.push({="" from:="" c.from,="" to:="" c.to,="" text:="" c.text="" }),="" d="" in="" c)="" (u="d.match(/^spans_(\d+)$/))" ei(t,="" number(u[1]))=""> -1 && (Oi(a)[d] = c[d],
+                return "*" == i || "+" == i && n.ranges.length == r.ranges.length && n.somethingSelected() == r.somethingSelected() && new Date - e.history.lastSelTime <= (e.cm ? e.cm.options.historyEventDelay : 500)
+            }
+            function ai(e, t, n, r) {
+                var i = e.history
+                  , o = r && r.origin;
+                n == i.lastSelOp || o && i.lastSelOrigin == o && (i.lastModTime == i.lastSelTime && i.lastOrigin == o || si(e, o, Oi(i.done), t)) ? i.done[i.done.length - 1] = t : li(t, i.done),
+                i.lastSelTime = +new Date,
+                i.lastSelOrigin = o,
+                i.lastSelOp = n,
+                r && r.clearRedo !== !1 && ri(i.undone)
+            }
+            function li(e, t) {
+                var n = Oi(t);
+                n && n.ranges && n.equals(e) || t.push(e)
+            }
+            function ui(e, t, n, r) {
+                var i = t["spans_" + e.id]
+                  , o = 0;
+                e.iter(Math.max(e.first, n), Math.min(e.first + e.size, r), function(n) {
+                    n.markedSpans && ((i || (i = t["spans_" + e.id] = {}))[o] = n.markedSpans),
+                    ++o
+                })
+            }
+            function ci(e) {
+                if (!e)
+                    return null ;
+                for (var t, n = 0; n < e.length; ++n)
+                    e[n].marker.explicitlyCleared ? t || (t = e.slice(0, n)) : t && t.push(e[n]);
+                return t ? t.length ? t : null  : e
+            }
+            function di(e, t) {
+                var n = t["spans_" + e.id];
+                if (!n)
+                    return null ;
+                for (var r = 0, i = []; r < t.text.length; ++r)
+                    i.push(ci(n[r]));
+                return i
+            }
+            function hi(e, t, n) {
+                for (var r = 0, i = []; r < e.length; ++r) {
+                    var o = e[r];
+                    if (o.ranges)
+                        i.push(n ? ce.prototype.deepCopy.call(o) : o);
+                    else {
+                        var s = o.changes
+                          , a = [];
+                        i.push({
+                            changes: a
+                        });
+                        for (var l = 0; l < s.length; ++l) {
+                            var u, c = s[l];
+                            if (a.push({
+                                from: c.from,
+                                to: c.to,
+                                text: c.text
+                            }),
+                            t)
+                                for (var d in c)
+                                    (u = d.match(/^spans_(\d+)$/)) && Ei(t, Number(u[1])) > -1 && (Oi(a)[d] = c[d],
                                     delete c[d])
                         }
                     }
@@ -4822,7 +5332,75 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
                             if (n < l.from.line)
                                 l.from = Ao(l.from.line + r, l.from.ch),
                                 l.to = Ao(l.to.line + r, l.to.ch);
-                            else if (t <= 0="=" 1="=" 2="" 4="" l.to.line)="" {="" s="!1;" break="" }="" ||="" (e.splice(0,="" i="" +="" 1),="" function="" mi(e,="" t)="" var="" n="t.from.line" ,="" r="t.to.line" -="" (r="" n)="" 1;="" fi(e.done,="" n,="" r,="" i),="" fi(e.undone,="" i)="" gi(e)="" return="" null="" !="e.defaultPrevented" ?="" e.defaultprevented="" :="" e.returnvalue="" vi(e)="" e.target="" e.srcelement="" yi(e)="" t="e.which;" &&="" (1="" &="" e.button="" (t="2))," so="" e.ctrlkey="" bi(e,="" n(e)="" function()="" e.apply(null="" o)="" e._handlers[t];="" if="" (r)="" i,="" o="Array.prototype.slice.call(arguments," 2);="" _o="" ls="" (i="Ls" =="" [],="" settimeout(wi,="" 0));="" for="" (var="" <="" r.length;="" ++s)="" i.push(n(r[s]))="" wi()="" e="Ls;" ;="" e.length;="" ++t)="" e[t]()="" xi(e,="" t,="" "string"="=" typeof="" type:="" preventdefault:="" this.defaultprevented="!0" }),="" cs(e,="" t.type,="" e,="" t),="" gi(t)="" t.codemirrorignore="" ki(e)="" e._handlers.cursoractivity;="" (t)="" (e.curop.cursoractivityhandlers="[])," t.length;="" ++r)="" -1="=" ei(n,="" t[r])="" n.push(t[r])="" ji(e,="" n.length=""> 0
+                            else if (t <= l.to.line) {
+                                s = !1;
+                                break
+                            }
+                        }
+                        s || (e.splice(0, i + 1),
+                        i = 0)
+                    }
+                }
+            }
+            function mi(e, t) {
+                var n = t.from.line
+                  , r = t.to.line
+                  , i = t.text.length - (r - n) - 1;
+                fi(e.done, n, r, i),
+                fi(e.undone, n, r, i)
+            }
+            function gi(e) {
+                return null  != e.defaultPrevented ? e.defaultPrevented : 0 == e.returnValue
+            }
+            function vi(e) {
+                return e.target || e.srcElement
+            }
+            function yi(e) {
+                var t = e.which;
+                return null  == t && (1 & e.button ? t = 1 : 2 & e.button ? t = 3 : 4 & e.button && (t = 2)),
+                So && e.ctrlKey && 1 == t && (t = 3),
+                t
+            }
+            function bi(e, t) {
+                function n(e) {
+                    return function() {
+                        e.apply(null , o)
+                    }
+                }
+                var r = e._handlers && e._handlers[t];
+                if (r) {
+                    var i, o = Array.prototype.slice.call(arguments, 2);
+                    _o ? i = _o.delayedCallbacks : Ls ? i = Ls : (i = Ls = [],
+                    setTimeout(wi, 0));
+                    for (var s = 0; s < r.length; ++s)
+                        i.push(n(r[s]))
+                }
+            }
+            function wi() {
+                var e = Ls;
+                Ls = null ;
+                for (var t = 0; t < e.length; ++t)
+                    e[t]()
+            }
+            function xi(e, t, n) {
+                return "string" == typeof t && (t = {
+                    type: t,
+                    preventDefault: function() {
+                        this.defaultPrevented = !0
+                    }
+                }),
+                Cs(e, n || t.type, e, t),
+                gi(t) || t.codemirrorIgnore
+            }
+            function ki(e) {
+                var t = e._handlers && e._handlers.cursorActivity;
+                if (t)
+                    for (var n = e.curOp.cursorActivityHandlers || (e.curOp.cursorActivityHandlers = []), r = 0; r < t.length; ++r)
+                        -1 == Ei(n, t[r]) && n.push(t[r])
+            }
+            function ji(e, t) {
+                var n = e._handlers && e._handlers[t];
+                return n && n.length > 0
             }
             function Si(e) {
                 e.prototype.on = function(e, t) {
@@ -4851,7 +5429,46 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
                 }
             }
             function Mi(e) {
-                for (; Ns.length <= e;="" )="" ns.push(oi(ns)="" +="" "="" ");="" return="" ns[e]="" }="" function="" oi(e)="" {="" e[e.length="" -="" 1]="" ei(e,="" t)="" for="" (var="" n="0;" <="" e.length;="" ++n)="" if="" (e[n]="=" n;="" -1="" ti(e,="" r="0;" r++)="" n[r]="t(e[r]," r);="" ai()="" {}="" $i(e,="" var="" object.create="" ?="" :="" (ai.prototype="e," ai),="" t="" &&="" ni(t,="" n),="" ni(e,="" t,="" n)="" ||="" (t="{});" in="" e)="" !e.hasownproperty(r)="" !1="" t.hasownproperty(r)="" (t[r]="e[r]);" di(e)="" 1);="" function()="" e.apply(null="" ,="" pi(e,="" t.source.indexof("\\w")=""> -1 && Rs(e) ? !0 : t.test(e) : Rs(e)
+                for (; Ns.length <= e; )
+                    Ns.push(Oi(Ns) + " ");
+                return Ns[e]
+            }
+            function Oi(e) {
+                return e[e.length - 1]
+            }
+            function Ei(e, t) {
+                for (var n = 0; n < e.length; ++n)
+                    if (e[n] == t)
+                        return n;
+                return -1
+            }
+            function Ti(e, t) {
+                for (var n = [], r = 0; r < e.length; r++)
+                    n[r] = t(e[r], r);
+                return n
+            }
+            function Ai() {}
+            function $i(e, t) {
+                var n;
+                return Object.create ? n = Object.create(e) : (Ai.prototype = e,
+                n = new Ai),
+                t && Ni(t, n),
+                n
+            }
+            function Ni(e, t, n) {
+                t || (t = {});
+                for (var r in e)
+                    !e.hasOwnProperty(r) || n === !1 && t.hasOwnProperty(r) || (t[r] = e[r]);
+                return t
+            }
+            function Di(e) {
+                var t = Array.prototype.slice.call(arguments, 1);
+                return function() {
+                    return e.apply(null , t)
+                }
+            }
+            function Pi(e, t) {
+                return t ? t.source.indexOf("\\w") > -1 && Rs(e) ? !0 : t.test(e) : Rs(e)
             }
             function Ii(e) {
                 for (var t in e)
@@ -4919,7 +5536,7 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
                 if (null  == zs) {
                     var t = _i("span", "\u200b");
                     zi(e, _i("span", [t, document.createTextNode("x")])),
-                    0 != e.firstChild.offsetHeight && (zs = t.offsetWidth <= 1="" &&="" t.offsetheight=""> 2 && !(po && 8 > fo))
+                    0 != e.firstChild.offsetHeight && (zs = t.offsetWidth <= 1 && t.offsetHeight > 2 && !(po && 8 > fo))
                 }
                 var n = zs ? _i("span", "\u200b") : _i("span", "\xa0", null , "display: inline-block; width: 1px; margin-right: -1px");
                 return n.setAttribute("cm-text", ""),
@@ -4989,7 +5606,14 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
                   , i = ei(r);
                 if (!i || 0 == i[0].level) {
                     var o = Math.max(0, r.text.search(/\S/))
-                      , s = t.line == n.line && t.ch <= 0="" o="" &&="" t.ch;="" return="" ao(n.line,="" s="" ?="" :="" o)="" }="" n="" function="" io(e,="" t,="" n)="" {="" var="" r="e[0].level;" t="=" !0="" !1=""> t
+                      , s = t.line == n.line && t.ch <= o && t.ch;
+                    return Ao(n.line, s ? 0 : o)
+                }
+                return n
+            }
+            function io(e, t, n) {
+                var r = e[0].level;
+                return t == r ? !0 : n == r ? !1 : n > t
             }
             function oo(e, t) {
                 Xs = null ;
@@ -5450,7 +6074,150 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
                             var i = r.doc.sel.primary()
                               , o = r.getLine(i.head.line)
                               , s = o.indexOf(t, Math.max(0, i.head.ch - t.length));
-                            s > -1 && s <= 0="" i.head.ch="" &&="" (n.composing.sel="pe(Ao(i.head.line," s),="" ao(i.head.line,="" s="" +="" t.length)))="" }="" }),="" js(i,="" "compositionupdate",="" function(e)="" {="" n.composing.data="e.data" "compositionend",="" var="" t="n.composing;" (e.data="=" t.startdata="" ||="" \u200b="" .test(e.data)="" (t.data="e.data)," settimeout(function()="" t.handled="" n.applycomposition(t),="" n.composing="=" (n.composing="null" )="" },="" 50))="" "touchstart",="" function()="" n.forcecompositionend()="" "input",="" n.pollcontent()="" mt(n.cm,="" nt(r)="" })="" "copy",="" t),="" "cut",="" t)="" prepareselection:="" e="Ne(this.cm," !1);="" return="" e.focus="this.cm.state.focused," showselection:="" this.cm.display.view.length="" (e.focus="" this.showprimaryselection(),="" this.showmultipleselections(e))="" showprimaryselection:="" ,="" n="ae(this.cm," e.anchornode,="" e.anchoroffset)="" r="ae(this.cm," e.focusnode,="" e.focusoffset);="" if="" (!n="" n.bad="" !r="" r.bad="" !="$o(Q(n," r),="" t.from())="" t.to()))="" i="oe(this.cm," o="oe(this.cm," t.to());="" (i="" o)="" a="e.rangeCount" e.getrangeat(0);="" (i)="" (!o)="" l="s[s.length" -="" 1].measure="" u="l.maps" ?="" l.maps[l.maps.length="" 1]="" :="" l.map;="" node:="" u[u.length="" 1],="" offset:="" 2]="" 3]="" else="" s[0].measure.map[2],="" };="" try="" c="Ps(i.node," i.offset,="" o.offset,="" o.node)="" catch="" (d)="" {}="" (e.removeallranges(),="" e.addrange(c),="" null="=" e.anchornode="" e.addrange(a)="" uo="" this.startgraceperiod()),="" this.rememberselection()="" startgraceperiod:="" cleartimeout(this.graceperiod),="" this.graceperiod="setTimeout(function()" e.graceperiod="!1," e.selectionchanged()="" e.cm.operation(function()="" e.cm.curop.selectionchanged="!0" 20)="" showmultipleselections:="" zi(this.cm.display.cursordiv,="" e.cursors),="" zi(this.cm.display.selectiondiv,="" e.selection)="" rememberselection:="" this.lastanchornode="e.anchorNode," this.lastanchoroffset="e.anchorOffset," this.lastfocusnode="e.focusNode," this.lastfocusoffset="e.focusOffset" selectionineditor:="" (!e.rangecount)="" !1;="" fs(this.div,="" focus:="" "nocursor"="" this.div.focus()="" blur:="" this.div.blur()="" getfield:="" this.div="" supportstouch:="" !0="" receivedfocus:="" function="" e()="" t.cm.state.focused="" (t.pollselection(),="" t.polling.set(t.cm.options.pollinterval,="" e))="" this.selectionineditor()="" this.pollselection()="" mt(this.cm,="" t.cm.curop.selectionchanged="!0" this.polling.set(this.cm.options.pollinterval,="" e)="" selectionchanged:="" e.anchoroffset="" e.focusnode="" e.focusoffset="" pollselection:="" (!this.composing="" !this.graceperiod="" this.selectionchanged())="" this.rememberselection();="" mt(t,="" le(t.doc,="" pe(n,="" es),="" (n.bad="" r.bad)="" (t.curop.selectionchanged="!0)" pollcontent:="" (r.line="" <="" t.viewfrom="" i.line=""> t.viewTo - 1)
+                            s > -1 && s <= i.head.ch && (n.composing.sel = pe(Ao(i.head.line, s), Ao(i.head.line, s + t.length)))
+                        }
+                    }),
+                    js(i, "compositionupdate", function(e) {
+                        n.composing.data = e.data
+                    }),
+                    js(i, "compositionend", function(e) {
+                        var t = n.composing;
+                        t && (e.data == t.startData || /\u200b/.test(e.data) || (t.data = e.data),
+                        setTimeout(function() {
+                            t.handled || n.applyComposition(t),
+                            n.composing == t && (n.composing = null )
+                        }, 50))
+                    }),
+                    js(i, "touchstart", function() {
+                        n.forceCompositionEnd()
+                    }),
+                    js(i, "input", function() {
+                        n.composing || n.pollContent() || Mt(n.cm, function() {
+                            Nt(r)
+                        })
+                    }),
+                    js(i, "copy", t),
+                    js(i, "cut", t)
+                },
+                prepareSelection: function() {
+                    var e = Ne(this.cm, !1);
+                    return e.focus = this.cm.state.focused,
+                    e
+                },
+                showSelection: function(e) {
+                    e && this.cm.display.view.length && (e.focus && this.showPrimarySelection(),
+                    this.showMultipleSelections(e))
+                },
+                showPrimarySelection: function() {
+                    var e = window.getSelection()
+                      , t = this.cm.doc.sel.primary()
+                      , n = ae(this.cm, e.anchorNode, e.anchorOffset)
+                      , r = ae(this.cm, e.focusNode, e.focusOffset);
+                    if (!n || n.bad || !r || r.bad || 0 != $o(Q(n, r), t.from()) || 0 != $o(K(n, r), t.to())) {
+                        var i = oe(this.cm, t.from())
+                          , o = oe(this.cm, t.to());
+                        if (i || o) {
+                            var s = this.cm.display.view
+                              , a = e.rangeCount && e.getRangeAt(0);
+                            if (i) {
+                                if (!o) {
+                                    var l = s[s.length - 1].measure
+                                      , u = l.maps ? l.maps[l.maps.length - 1] : l.map;
+                                    o = {
+                                        node: u[u.length - 1],
+                                        offset: u[u.length - 2] - u[u.length - 3]
+                                    }
+                                }
+                            } else
+                                i = {
+                                    node: s[0].measure.map[2],
+                                    offset: 0
+                                };
+                            try {
+                                var c = Ps(i.node, i.offset, o.offset, o.node)
+                            } catch (d) {}
+                            c && (e.removeAllRanges(),
+                            e.addRange(c),
+                            a && null  == e.anchorNode ? e.addRange(a) : uo && this.startGracePeriod()),
+                            this.rememberSelection()
+                        }
+                    }
+                },
+                startGracePeriod: function() {
+                    var e = this;
+                    clearTimeout(this.gracePeriod),
+                    this.gracePeriod = setTimeout(function() {
+                        e.gracePeriod = !1,
+                        e.selectionChanged() && e.cm.operation(function() {
+                            e.cm.curOp.selectionChanged = !0
+                        })
+                    }, 20)
+                },
+                showMultipleSelections: function(e) {
+                    zi(this.cm.display.cursorDiv, e.cursors),
+                    zi(this.cm.display.selectionDiv, e.selection)
+                },
+                rememberSelection: function() {
+                    var e = window.getSelection();
+                    this.lastAnchorNode = e.anchorNode,
+                    this.lastAnchorOffset = e.anchorOffset,
+                    this.lastFocusNode = e.focusNode,
+                    this.lastFocusOffset = e.focusOffset
+                },
+                selectionInEditor: function() {
+                    var e = window.getSelection();
+                    if (!e.rangeCount)
+                        return !1;
+                    var t = e.getRangeAt(0).commonAncestorContainer;
+                    return Fs(this.div, t)
+                },
+                focus: function() {
+                    "nocursor" != this.cm.options.readOnly && this.div.focus()
+                },
+                blur: function() {
+                    this.div.blur()
+                },
+                getField: function() {
+                    return this.div
+                },
+                supportsTouch: function() {
+                    return !0
+                },
+                receivedFocus: function() {
+                    function e() {
+                        t.cm.state.focused && (t.pollSelection(),
+                        t.polling.set(t.cm.options.pollInterval, e))
+                    }
+                    var t = this;
+                    this.selectionInEditor() ? this.pollSelection() : Mt(this.cm, function() {
+                        t.cm.curOp.selectionChanged = !0
+                    }),
+                    this.polling.set(this.cm.options.pollInterval, e)
+                },
+                selectionChanged: function() {
+                    var e = window.getSelection();
+                    return e.anchorNode != this.lastAnchorNode || e.anchorOffset != this.lastAnchorOffset || e.focusNode != this.lastFocusNode || e.focusOffset != this.lastFocusOffset;
+                },
+                pollSelection: function() {
+                    if (!this.composing && !this.gracePeriod && this.selectionChanged()) {
+                        var e = window.getSelection()
+                          , t = this.cm;
+                        this.rememberSelection();
+                        var n = ae(t, e.anchorNode, e.anchorOffset)
+                          , r = ae(t, e.focusNode, e.focusOffset);
+                        n && r && Mt(t, function() {
+                            Le(t.doc, pe(n, r), Es),
+                            (n.bad || r.bad) && (t.curOp.selectionChanged = !0)
+                        })
+                    }
+                },
+                pollContent: function() {
+                    var e = this.cm
+                      , t = e.display
+                      , n = e.doc.sel.primary()
+                      , r = n.from()
+                      , i = n.to();
+                    if (r.line < t.viewFrom || i.line > t.viewTo - 1)
                         return !1;
                     var o;
                     if (r.line == t.viewFrom || 0 == (o = It(e, r.line)))
@@ -5551,7 +6318,111 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
                     t || (t = e);
                     for (var n = 0; n < this.ranges.length; n++) {
                         var r = this.ranges[n];
-                        if ($o(t, r.from()) >= 0 && $o(e, r.to()) <= 0="" 0)="" return="" n="" }="" -1="" },="" de.prototype="{" from:="" function()="" {="" q(this.anchor,="" this.head)="" to:="" k(this.anchor,="" empty:="" this.head.line="=" this.anchor.line="" &&="" this.head.ch="=" this.anchor.ch="" };="" var="" do,="" po,="" io,="" ro="{" left:="" 0,="" right:="" top:="" bottom:="" _o="null" ,="" fo="0," zo="0," vo="0," ho="null" ;="" po="" ?="" :="" uo="" bo="" (ho="-1" 3);="" t="e.wheelDeltaX" null="=" e.detail="" e.axis="=" e.horizontal_axis="" (t="e.detail)," e.vertical_axis="" (n="e.wheelDelta)," x:="" t,="" y:="" e.wheeleventpixels="function(e)" t.x="" *="Ho," t.y="" wo="new" ci="" qo="null" =="" function(e)="" e.text="" ao(e.from.line="" +="" e.text.length="" -="" 1,="" oi(e.text).length="" (1="=" e.from.ch="" 0))="" e.to="" e.prototype="{" constructor:="" e,="" focus:="" window.focus(),="" this.display.input.focus()="" setoption:="" function(e,="" t)="" r="n[e];" (n[e]="" !="t" ||="" "mode"="=" e)="" ko.hasownproperty(e)="" ot(this,="" ko[e])(this,="" r))="" getoption:="" this.options[e]="" getdoc:="" this.doc="" addkeymap:="" this.state.keymaps[t="" "push"="" "unshift"](bn(e))="" removekeymap:="" for="" (var="" <="" t.length;="" ++n)="" if="" (t[n]="=" e="" t[n].name="=" t.splice(n,="" 1),="" !0="" addoverlay:="" et(function(t,="" n)="" e.getmode(this.options,="" t);="" (r.startstate)="" throw="" new="" error("overlays="" may="" not="" be="" stateful.");="" this.state.overlays.push({="" mode:="" r,="" modespec:="" opaque:="" n.opaque="" }),="" this.state.modegen++,="" nt(this)="" removeoverlay:="" et(function(e)="" (r="=" "string"="=" typeof="" r.name="=" void="" indentline:="" et(function(e,="" "number"="" this.options.smartindent="" "smart"="" "prev"="" "add"="" "subtract"),="" ve(this.doc,="" in(this,="" indentselection:="" r++)="" i="t[r];" (i.empty())="" i.head.line=""> n && (In(this, i.head.line, e, !0),
+                        if ($o(t, r.from()) >= 0 && $o(e, r.to()) <= 0)
+                            return n
+                    }
+                    return -1
+                }
+            },
+            de.prototype = {
+                from: function() {
+                    return Q(this.anchor, this.head)
+                },
+                to: function() {
+                    return K(this.anchor, this.head)
+                },
+                empty: function() {
+                    return this.head.line == this.anchor.line && this.head.ch == this.anchor.ch
+                }
+            };
+            var Do, Po, Io, Ro = {
+                left: 0,
+                right: 0,
+                top: 0,
+                bottom: 0
+            }, _o = null , Fo = 0, zo = 0, Vo = 0, Ho = null ;
+            po ? Ho = -.53 : uo ? Ho = 15 : vo ? Ho = -.7 : bo && (Ho = -1 / 3);
+            var Bo = function(e) {
+                var t = e.wheelDeltaX
+                  , n = e.wheelDeltaY;
+                return null  == t && e.detail && e.axis == e.HORIZONTAL_AXIS && (t = e.detail),
+                null  == n && e.detail && e.axis == e.VERTICAL_AXIS ? n = e.detail : null  == n && (n = e.wheelDelta),
+                {
+                    x: t,
+                    y: n
+                }
+            }
+            ;
+            e.wheelEventPixels = function(e) {
+                var t = Bo(e);
+                return t.x *= Ho,
+                t.y *= Ho,
+                t
+            }
+            ;
+            var Wo = new Ci
+              , qo = null 
+              , Uo = e.changeEnd = function(e) {
+                return e.text ? Ao(e.from.line + e.text.length - 1, Oi(e.text).length + (1 == e.text.length ? e.from.ch : 0)) : e.to
+            }
+            ;
+            e.prototype = {
+                constructor: e,
+                focus: function() {
+                    window.focus(),
+                    this.display.input.focus()
+                },
+                setOption: function(e, t) {
+                    var n = this.options
+                      , r = n[e];
+                    (n[e] != t || "mode" == e) && (n[e] = t,
+                    Ko.hasOwnProperty(e) && Ot(this, Ko[e])(this, t, r))
+                },
+                getOption: function(e) {
+                    return this.options[e]
+                },
+                getDoc: function() {
+                    return this.doc
+                },
+                addKeyMap: function(e, t) {
+                    this.state.keyMaps[t ? "push" : "unshift"](Bn(e))
+                },
+                removeKeyMap: function(e) {
+                    for (var t = this.state.keyMaps, n = 0; n < t.length; ++n)
+                        if (t[n] == e || t[n].name == e)
+                            return t.splice(n, 1),
+                            !0
+                },
+                addOverlay: Et(function(t, n) {
+                    var r = t.token ? t : e.getMode(this.options, t);
+                    if (r.startState)
+                        throw new Error("Overlays may not be stateful.");
+                    this.state.overlays.push({
+                        mode: r,
+                        modeSpec: t,
+                        opaque: n && n.opaque
+                    }),
+                    this.state.modeGen++,
+                    Nt(this)
+                }),
+                removeOverlay: Et(function(e) {
+                    for (var t = this.state.overlays, n = 0; n < t.length; ++n) {
+                        var r = t[n].modeSpec;
+                        if (r == e || "string" == typeof e && r.name == e)
+                            return t.splice(n, 1),
+                            this.state.modeGen++,
+                            void Nt(this)
+                    }
+                }),
+                indentLine: Et(function(e, t, n) {
+                    "string" != typeof t && "number" != typeof t && (t = null  == t ? this.options.smartIndent ? "smart" : "prev" : t ? "add" : "subtract"),
+                    ve(this.doc, e) && In(this, e, t, n)
+                }),
+                indentSelection: Et(function(e) {
+                    for (var t = this.doc.sel.ranges, n = -1, r = 0; r < t.length; r++) {
+                        var i = t[r];
+                        if (i.empty())
+                            i.head.line > n && (In(this, i.head.line, e, !0),
                             n = i.head.line,
                             r == this.doc.sel.primIndex && Dn(this));
                         else {
@@ -5728,7 +6599,8 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
                     else if ("above" == r || "near" == r) {
                         var l = Math.max(o.wrapper.clientHeight, this.doc.height)
                           , u = Math.max(o.sizer.clientWidth, o.lineSpace.clientWidth);
-                        ("above" == r || e.bottom + t.offsetHeight > l) && e.top > t.offsetHeight ? s = e.top - t.offsetHeight : e.bottom + t.offsetHeight <= l="" &&="" (s="e.bottom)," a="" +="" t.offsetwidth=""> u && (a = u - t.offsetWidth)
+                        ("above" == r || e.bottom + t.offsetHeight > l) && e.top > t.offsetHeight ? s = e.top - t.offsetHeight : e.bottom + t.offsetHeight <= l && (s = e.bottom),
+                        a + t.offsetWidth > u && (a = u - t.offsetWidth)
                     }
                     t.style.top = s + "px",
                     t.style.left = t.style.right = "",
@@ -6973,7 +7845,24 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
                     }
                 },
                 maybeSpill: function() {
-                    if (!(this.children.length <= 10))="" {="" var="" e="this;" do="" t="e.children.splice(e.children.length" -="" 5,="" 5)="" ,="" n="new" wr(t);="" if="" (e.parent)="" e.size="" e.height="" r="Ei(e.parent.children," e);="" e.parent.children.splice(r="" +="" 1,="" 0,="" n)="" }="" else="" i="new" wr(e.children);="" i.parent="e," e.children="[i," n],="" n.parent="e.parent" while="" (e.children.length=""> 10);e.parent.maybeSpill()
+                    if (!(this.children.length <= 10)) {
+                        var e = this;
+                        do {
+                            var t = e.children.splice(e.children.length - 5, 5)
+                              , n = new Wr(t);
+                            if (e.parent) {
+                                e.size -= n.size,
+                                e.height -= n.height;
+                                var r = Ei(e.parent.children, e);
+                                e.parent.children.splice(r + 1, 0, n)
+                            } else {
+                                var i = new Wr(e.children);
+                                i.parent = e,
+                                e.children = [i, n],
+                                e = i
+                            }
+                            n.parent = e.parent
+                        } while (e.children.length > 10);e.parent.maybeSpill()
                     }
                 },
                 iterN: function(e, t, n) {
@@ -7262,7 +8151,7 @@ System.register("npm:codemirror@5.3.0/lib/codemirror", ["github:jspm/nodelibs-pr
                     if (n)
                         for (var r = 0; r < n.length; ++r) {
                             var i = n[r];
-                            (null  == i.from || i.from <= e.ch)="" &&="" (null="=" i.to="" ||="">= e.ch) && t.push(i.marker.parent || i.marker)
+                            (null  == i.from || i.from <= e.ch) && (null  == i.to || i.to >= e.ch) && t.push(i.marker.parent || i.marker)
                         }
                     return t
                 },
@@ -8334,7 +9223,22 @@ System.register("npm:core-js@0.9.18/modules/es6.number.statics", ["npm:core-js@0
             return e != e
         },
         isSafeInteger: function(e) {
-            return n(e) && a(e) <= 0="=" 1="" c="" },="" max_safe_integer:="" c,="" min_safe_integer:="" -c,="" parsefloat:="" parsefloat,="" parseint:="" parseint="" }),="" r.define="i," t.exports="" system.register("npm:core-js@0.9.18="" modules="" es6.math",="" ["npm:core-js@0.9.18="" $.def"],="" !0,="" function(require,="" e,="" t)="" {="" function="" n(e)="" return="" e="" +="" y="" -="" }="" r(e)="" (e="+e)" ||="" !="e" ?="" :=""> e ? -1 : 1
+            return n(e) && a(e) <= c
+        },
+        MAX_SAFE_INTEGER: c,
+        MIN_SAFE_INTEGER: -c,
+        parseFloat: parseFloat,
+        parseInt: parseInt
+    }),
+    r.define = i,
+    t.exports
+}),
+System.register("npm:core-js@0.9.18/modules/es6.math", ["npm:core-js@0.9.18/modules/$.def"], !0, function(require, e, t) {
+    function n(e) {
+        return e + 1 / y - 1 / y
+    }
+    function r(e) {
+        return 0 == (e = +e) || e != e ? e : 0 > e ? -1 : 1
     }
     function i(e) {
         return isFinite(e = +e) && 0 != e ? 0 > e ? -i(-e) : f(e + m(e * e + 1)) : e
@@ -9850,7 +10754,8 @@ System.register("npm:core-js@0.9.18/modules/core.string.escape-html", ["npm:core
     n.define = void 0;
     var i, o = require("npm:core-js@0.9.18/modules/$.def"), s = require("npm:core-js@0.9.18/modules/$.replacer"), a = {
         "&": "&amp;",
-        "<": "&lt;",="" "="">": "&gt;",
+        "<": "&lt;",
+        ">": "&gt;",
         '"': "&quot;",
         "'": "&apos;"
     }, l = {};
@@ -10834,7 +11739,14 @@ function() {
             function S(e, t, n) {
                 if (Array.isArray(e)) {
                     var r = parseInt(t);
-                    e.length <= r="" &&="" (e.length="r" +="" 1),="" e[r]="n" }="" else="" e[t]="n;" return="" n="" function="" c(e)="" {="" e="">= Oe && Ee >= e || e === pt
+                    e.length <= r && (e.length = r + 1),
+                    e[r] = n
+                } else
+                    e[t] = n;
+                return n
+            }
+            function C(e) {
+                return e >= Oe && Ee >= e || e === pt
             }
             function L(e) {
                 return e >= st && ut >= e || e >= Ze && et >= e || e === ot || e === $e
@@ -11839,10 +12751,12 @@ function() {
                         return n / r;
                     case "%":
                         return n % r;
-                    case "<": return="" r=""> n;
+                    case "<":
+                        return r > n;
                     case ">":
                         return n > r;
-                    case "<=": return="" r="">= n;
+                    case "<=":
+                        return r >= n;
                     case ">=":
                         return n >= r;
                     case "^":
@@ -12224,7 +13138,8 @@ function() {
                     this.advance()
                 }
                 return e.prototype.scanToken = function() {
-                    for (; this.peek <= ee;="" )="" {="" if="" (++this.index="">= this.length)
+                    for (; this.peek <= Ee; ) {
+                        if (++this.index >= this.length)
                             return this.peek = Me,
                             null ;
                         this.peek = this.input.charCodeAt(this.index)
@@ -12383,7 +13298,7 @@ function() {
                 e
             }();
             e.Scanner = Ce;
-            var Le = ["undefined", "null", "true", "false", "+", "-", "*", "/", "%", "^", "=", "==", "===", "!=", "!==", "<", "="">", "<=", "="">=", "&&", "||", "&", "|", "!", "?"]
+            var Le = ["undefined", "null", "true", "false", "+", "-", "*", "/", "%", "^", "=", "==", "===", "!=", "!==", "<", ">", "<=", ">=", "&&", "||", "&", "|", "!", "?"]
               , Me = 0
               , Oe = 9
               , Ee = 32
@@ -12529,9 +13444,12 @@ function() {
                 ,
                 e.prototype.parseRelational = function() {
                     for (var e = this.parseAdditive(); ; )
-                        if (this.optional("<")) e="new" fe("<",e,this.parseadditive());="" else="" if="" (this.optional("="">"))
+                        if (this.optional("<"))
+                            e = new fe("<",e,this.parseAdditive());
+                        else if (this.optional(">"))
                             e = new fe(">",e,this.parseAdditive());
-                        else if (this.optional("<=")) e="new" fe("<=",e,this.parseAdditive());
+                        else if (this.optional("<="))
+                            e = new fe("<=",e,this.parseAdditive());
                         else {
                             if (!this.optional(">="))
                                 return e;
@@ -13750,7 +14668,7 @@ function() {
                 "writing-mode": !0
             };
             e.presentationAttributes = Rt,
-            "altglyph" === I("<svg><altglyph/></svg>").firstElementChild.nodeName && (Pt.altglyph = Pt.altGlyph,
+            "altglyph" === I("<svg><altGlyph /></svg>").firstElementChild.nodeName && (Pt.altglyph = Pt.altGlyph,
             delete Pt.altGlyph,
             Pt.altglyphdef = Pt.altGlyphDef,
             delete Pt.altGlyphDef,
@@ -14755,7 +15673,7 @@ function() {
                     throw new TypeError("Cannot call a class as a function")
             }
             e.__esModule = !0;
-            var r = /<script\b[^<]*(?:(?!<\ script="">)<[^<]*)*<\ script="">/gi
+            var r = /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi
               , i = function() {
                 function e() {
                     n(this, i),
@@ -21180,4 +22098,3 @@ System.register("app", ["less", "less-options", "default-less-src", "github:aure
         }
     }
 });
-</script></[^<]*)*<\></script\b[^<]*(?:(?!<\></="))></"))></=",></",></=></=":></":></=></require></":></=></=></=></=></=></=></=></=></=></=></=></=></=></=></=></=></=></=></=></=></=></=></=></=></=></=></=></=>

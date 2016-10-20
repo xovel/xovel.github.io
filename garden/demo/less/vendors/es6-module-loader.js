@@ -893,7 +893,7 @@ function(__global) {
                     })
                 }).then(function(c) {
                     if (void 0 === c)
-                        return b.address = b.address || "<anonymous module="" "="" +="" ++d="">",
+                        return b.address = b.address || "<Anonymous Module " + ++D + ">",
                         b.isDeclarative = !0,
                         a.loaderObj.transpile(b).then(function(a) {
                             var c = __global.System
@@ -1650,4 +1650,3 @@ function(__global) {
     }()
 }("undefined" != typeof window ? window : "undefined" != typeof global ? global : self);
 //# sourceMappingURL=es6-module-loader.js.map
-</unknown></unknown></anonymous>
