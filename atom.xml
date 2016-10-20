@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-10-20T07:41:55.892Z</updated>
+  <updated>2016-10-20T07:44:00.148Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/use-less.html"/>
     <id>http://xovel.cn/article/use-less.html</id>
     <published>2016-10-20T07:30:49.000Z</published>
-    <updated>2016-10-20T07:41:55.892Z</updated>
+    <updated>2016-10-20T07:44:00.148Z</updated>
     
     <content type="html">&lt;p&gt;&lt;del&gt;老司机要开车了，来不及解释&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;使用LESS可以帮助你快速构建CSS。&lt;/p&gt;
@@ -29,7 +29,7 @@
 &lt;h3 id=&quot;官方repoless-js&quot;&gt;&lt;a href=&quot;#官方repoless-js&quot; class=&quot;headerlink&quot; title=&quot;官方repoless.js&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://github.com/less/less.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方repoless.js&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;可持续追踪项目当前进度，并参与其中。&lt;/p&gt;
 &lt;h3 id=&quot;中文文档&quot;&gt;&lt;a href=&quot;#中文文档&quot; class=&quot;headerlink&quot; title=&quot;中文文档&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://less.bootcss.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;中文文档&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;文档的中文翻译。&lt;/p&gt;
 &lt;h3 id=&quot;在线编写&quot;&gt;&lt;a href=&quot;#在线编写&quot; class=&quot;headerlink&quot; title=&quot;在线编写&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://less2css.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;在线编写&lt;/a&gt;&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://xovel.cn/garden/demo/less&quot;&gt;山寨版&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://xovel.cn/garden/less&quot;&gt;山寨版&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;中文文档里面并未翻译完整，有机会会对这些做进一步说明。也算是自己对Less的一个深入理解的总结吧。&lt;/em&gt;&lt;/p&gt;
