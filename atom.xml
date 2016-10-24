@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-10-21T03:41:28.669Z</updated>
+  <updated>2016-10-24T07:44:26.322Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -16,9 +16,48 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>一段处理多行文本的代码</title>
+    <link href="http://xovel.cn/article/a-fragment-code-of-multi-line-string-trim.html"/>
+    <id>http://xovel.cn/article/a-fragment-code-of-multi-line-string-trim.html</id>
+    <published>2016-10-24T07:28:18.000Z</published>
+    <updated>2016-10-24T07:44:26.322Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;因为一些事情，本人搁置了&lt;code&gt;zmd.js&lt;/code&gt;的开发。今天查阅资料时，发现一段代码，针对多行文本进行处理的。&lt;/p&gt;
+&lt;h3 id=&quot;代码片段&quot;&gt;&lt;a href=&quot;#代码片段&quot; class=&quot;headerlink&quot; title=&quot;代码片段&quot;&gt;&lt;/a&gt;代码片段&lt;/h3&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;rTrimInputText&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;text&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; rsp = text.match(&lt;span class=&quot;regexp&quot;&gt;/^\s*/&lt;/span&gt;)[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;].length,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  rgx = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;RegExp&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;^\\s&amp;#123;0,&#39;&lt;/span&gt; + rsp + &lt;span class=&quot;string&quot;&gt;&#39;&amp;#125;&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;gm&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; text.replace(rgx, &lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;代码来自：&lt;a href=&quot;https://github.com/showdownjs/showdown/blob/master/dist/showdown.js#L884&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/showdownjs/showdown/blob/master/dist/showdown.js#L884&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;代码的功能&quot;&gt;&lt;a href=&quot;#代码的功能&quot; class=&quot;headerlink&quot; title=&quot;代码的功能&quot;&gt;&lt;/a&gt;代码的功能&lt;/h3&gt;&lt;p&gt;去除多行文本中的前置空格。&lt;/p&gt;
+&lt;h3 id=&quot;示例&quot;&gt;&lt;a href=&quot;#示例&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h3&gt;&lt;p&gt;以下的文本：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;code:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  aaa&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    bbb&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   ccc&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;在使用上面的一段代码处理后得到的结果为：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;result:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;aaa&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  bbb&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; ccc&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;即去除了每一行前面的两个空格。&lt;/p&gt;
+&lt;h3 id=&quot;应用场景&quot;&gt;&lt;a href=&quot;#应用场景&quot; class=&quot;headerlink&quot; title=&quot;应用场景&quot;&gt;&lt;/a&gt;应用场景&lt;/h3&gt;&lt;p&gt;在针对嵌套的语法中，比如嵌套列表，在针对被嵌套的列表进行的解析的时候，就需要先去掉前面的缩进。这一段代码正好可以满足这个需求。&lt;/p&gt;
+&lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;- &lt;/span&gt;list1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  * list1-1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  * list1-2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  * list1-3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;- &lt;/span&gt;list2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;- &lt;/span&gt;list3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  + list3-1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  + list3-2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      针对markdown语法解析的过程中的一个代码片段，今天无意中看到了，做个记录。
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
+    
+    
+      <category term="markdown" scheme="http://xovel.cn/tags/markdown/"/>
+    
+      <category term="code" scheme="http://xovel.cn/tags/code/"/>
+    
+      <category term="string" scheme="http://xovel.cn/tags/string/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网站备案之通管局审核时间</title>
-    <link href="http://xovel.cn/article/123.html"/>
-    <id>http://xovel.cn/article/123.html</id>
+    <link href="http://xovel.cn/article/audit-time-of-beian.html"/>
+    <id>http://xovel.cn/article/audit-time-of-beian.html</id>
     <published>2016-10-21T03:00:21.000Z</published>
     <updated>2016-10-21T03:41:28.669Z</updated>
     
@@ -1129,37 +1168,6 @@
       <category term="母亲" scheme="http://xovel.cn/tags/%E6%AF%8D%E4%BA%B2/"/>
     
       <category term="误解" scheme="http://xovel.cn/tags/%E8%AF%AF%E8%A7%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EXCEL中给奇偶行条纹</title>
-    <link href="http://xovel.cn/article/excel-even-odd-color.html"/>
-    <id>http://xovel.cn/article/excel-even-odd-color.html</id>
-    <published>2016-08-02T09:12:13.000Z</published>
-    <updated>2016-08-02T09:46:48.172Z</updated>
-    
-    <content type="html">&lt;p&gt;我们在使用Excel表格时，为了追求美观，通常会设置一些颜色，背景色。在Excel中给奇偶行不同的颜色，可以使表格显得有层次，也方便阅读。下面就简单介绍一下如何实现。&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;这里用到的Excel中的&lt;code&gt;条件格式&lt;/code&gt;的功能。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;选中对应的区域&lt;/li&gt;&lt;li&gt;点击&lt;code&gt;条件格式&lt;/code&gt;，选择&lt;code&gt;新建规则&lt;/code&gt;&lt;/li&gt;&lt;li&gt;在弹出的窗口中选择&lt;code&gt;使用公式确定要设置格式的单元格&lt;/code&gt;&lt;/li&gt;&lt;li&gt;在下方的输入框中输入&lt;code&gt;=MOD(ROW(),2)=0&lt;/code&gt;&lt;/li&gt;&lt;li&gt;输入框右侧的&lt;code&gt;格式...&lt;/code&gt;按钮点开可以对格式进行设置，设置相应的格式即可&lt;/li&gt;&lt;/ol&gt;
-&lt;p&gt;对于奇数行，同样操作，公式处改为&lt;code&gt;=MOD(ROW(),2)=1&lt;/code&gt;即可。&lt;em&gt;甚至直接写&lt;code&gt;=MOD(ROW(),2)&lt;/code&gt;也可以&lt;/em&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;del&gt;果然是很简单的介绍呢&lt;/del&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我们在使用Excel表格时，为了追求美观，通常会设置一些颜色，背景色。在Excel中给奇偶行不同的颜色，可以使表格显得有层次，也方便阅读。下面就简单介绍一下如何实现。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
-    
-    
-      <category term="excel" scheme="http://xovel.cn/tags/excel/"/>
     
   </entry>
   
