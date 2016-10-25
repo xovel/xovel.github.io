@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-10-25T07:43:49.674Z</updated>
+  <updated>2016-10-25T07:55:16.764Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,9 +20,14 @@
     <link href="http://xovel.cn/article/js-operator-precedence.html"/>
     <id>http://xovel.cn/article/js-operator-precedence.html</id>
     <published>2016-10-25T03:15:09.000Z</published>
-    <updated>2016-10-25T07:43:49.674Z</updated>
+    <updated>2016-10-25T07:55:16.764Z</updated>
     
-    <content type="html">&lt;p&gt;运算符的优先级决定了表达式中运算执行的先后顺序，优先级高的运算符最先被执行。&lt;/p&gt;
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;本文采编自&lt;a href=&quot;https://developer.mozilla.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MDN&lt;/a&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Operator precedence&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;运算符优先级&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;运算符的优先级决定了表达式中运算执行的先后顺序，优先级高的运算符最先被执行。&lt;/p&gt;
 &lt;p&gt;下面是一个简单的例子：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;3 + 4 * 5 // 计算结果为23
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;乘法运算符 (“*”)比起加法运算符(“+”)有着更高的优先级，所以它会被最先执行。&lt;/p&gt;
@@ -101,9 +106,6 @@
 &lt;blockquote&gt;
 &lt;p&gt;表格由word制作，导出为图片。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Operator precedence&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 </content>
     
     <summary type="html">
