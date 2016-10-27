@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-10-26T09:40:38.390Z</updated>
+  <updated>2016-10-27T09:34:47.005Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/js-operator-precedence.html"/>
     <id>http://xovel.cn/article/js-operator-precedence.html</id>
     <published>2016-10-25T03:15:09.000Z</published>
-    <updated>2016-10-26T09:40:38.390Z</updated>
+    <updated>2016-10-27T09:34:47.005Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;本文采编自&lt;a href=&quot;https://developer.mozilla.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MDN&lt;/a&gt;：&lt;/p&gt;
@@ -38,71 +38,379 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;结果 a 和 b 的值都会成为5。这是因为赋值运算符的返回结果就是赋值运算符右边的那个值，具体过程是：b被赋值为5，然后a也被赋值为 b=5 的返回值，也就是5。&lt;/p&gt;
 &lt;h3 id=&quot;汇总表&quot;&gt;&lt;a href=&quot;#汇总表&quot; class=&quot;headerlink&quot; title=&quot;汇总表&quot;&gt;&lt;/a&gt;汇总表&lt;/h3&gt;&lt;p&gt;下面的表将所有运算符按照优先级的不同从高到低排列。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/79be2309gw1f94hwlrlikj20j81i0t9t.jpg&quot; alt=&quot;运算符优先级表&quot;&gt;&lt;/p&gt;
-&lt;!--
-|优先级 | 运算类型 | 关联性 | 运算符|
-| -- | -- | -- | -- |
-| 20 | [`分组`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Grouping) | n/a | `( … )`|
-| 19 | [`成员访问`](https://developer.mozilla.org//en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Dot_notation &quot;Property accessors provide access to an object&#39;s properties by using the dot notation or the bracket notation.&quot;) | 从左至右 | `… . …` |
-| 19 | [`计算成员访问`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation &quot;Property accessors provide access to an object&#39;s properties by using the dot notation or the bracket notation.&quot;) | 从左至右 | `… [ … ]` |
-| 19 | [`new`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new &quot;The new operator creates an instance of a user-defined object type or of one of the built-in object types that has a constructor function.&quot;) (带参数) | n/a | `new … ( … )` |
-| 18 | [函数调用](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions) | 从左至右 | `… ( &lt;var&gt;… &lt;/var&gt;)` |
-| 18 | [`new`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new &quot;The new operator creates an instance of a user-defined object type or of one of the built-in object types that has a constructor function.&quot;) (无参数) | 从右至左 | `new …` |
-| 17 | [`后置自增`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment &quot;Arithmetic operators take numerical values (either literals or variables) as their operands and return a single numerical value. The standard arithmetic operators are addition (+), subtraction (-), multiplication (*), and division (https://developer.mozilla.org/).&quot;) | n/a | `… ++` |
-| 17 | [`后置自减`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement &quot;Arithmetic operators take numerical values (either literals or variables) as their operands and return a single numerical value. The standard arithmetic operators are addition (+), subtraction (-), multiplication (*), and division (https://developer.mozilla.org/).&quot;) | n/a | `… --` |
-| 16 | [逻辑非](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT) | 从右至左 | `! …` |
-| 16 | [按位取非](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT) | 从右至左 | `~ …` |
-| 16 | [一元加法](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_plus) | 从右至左 | `+ …` |
-| 16 | [一元剑法](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_negation) | 从右至左 | `- …` |
-| 16 | [前置自增](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment) | 从右至左 | `++ …` |
-| 16 | [前置自减](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement) | 从右至左 | `-- …` |
-| 16 | [typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof) | 从右至左 | `typeof …` |
-| 16 | [void](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void) | 从右至左 | `void …` |
-| 16 | [delete](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete) | 从右至左 | `delete …` |
-| 15 | [取幂](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation) | 从右至左 | `… ** …` |
-| 14 | [乘法](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Multiplication) | 从左至右 | `… * …` |
-| 14 | [除法](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Division) | 从左至右 | `… / …` |
-| 14 | [取余](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder) | 从左至右 | `… % …` |
-| 13 | [加法](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition) | 从左至右 | `… + …` |
-| 13 | [减法](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Subtraction) | 从左至右 | `… - …` |
-| 12 | [按位左移](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) | 从左至右 | `… &lt;&lt; …` |
-| 12 | [按位右移](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) | 从左至右 | `… &gt;&gt; …` |
-| 12 | [无符号右移](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) | 从左至右 | `… &gt;&gt;&gt; …` |
-| 11 | [小于](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than_operator) | 从左至右 | `… &lt; …` |
-| 11 | [小于等于](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than__or_equal_operator) | 从左至右 | `… &lt;= …` |
-| 11 | [大于](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_operator) | 从左至右 | `… &gt; …` |
-| 11 | [大于等于](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_or_equal_operator) | 从左至右 | `… &gt;= …` |
-| 11 | [in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) | 从左至右 | `… in …` |
-| 11 | [instanceof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) | 从左至右 | `… instanceof …` |
-| 10 | [等号](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality) | 从左至右 | `… == …` |
-| 10 | [不等号](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Inequality) | 从左至右 | `… != …` |
-| 10 | [全等](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity) | 从左至右 | `… === …` |
-| 10 | [非全等](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Nonidentity) | 从左至右 | `… !== …` |
-| 9 | [按位与](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND) | 从左至右 | `… &amp; …` |
-| 8 | [按位异或](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR) | 从左至右 | `… ^ …` |
-| 7 | [按位与](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR) | 从左至右 | `… | …` |
-| 6 | [逻辑与](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND) | 从左至右 | `… &amp;&amp; …` |
-| 5 | [逻辑或](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR) | 从左至右 | `… || …` |
-| 4 | [条件判断](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) | 从右至左 | `… ? … : …` |
-| 3 | [赋值运算](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators) | 从右至左 | `… = …` |
-| | | | `… += …` |
-| | | | `… -= …` |
-| | | | `… **= …` |
-| | | | `… *= …` |
-| | | | `… /= …` |
-| | | | `… %= …` |
-| | | | `… &lt;&lt;= …` |
-| | | | `… &gt;&gt;= …` |
-| | | | `… &gt;&gt;&gt;= …` |
-| | | | `… &amp;= …` |
-| | | | `… ^= …` |
-| | | | … \|= … 
-| 2 | [yield](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield) | 从右至左 | `yield …` |
-| 2 | [yield*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield*) | 从右至左 | `yield* …` |
-| 1 | [Spread](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator) | n/a | `...` … |
-| 0 | [逗号运算符](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator) | 从左至右 | `… , …` |
---&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;优先级&lt;/th&gt;
+&lt;th&gt;运算类型&lt;/th&gt;
+&lt;th&gt;关联性&lt;/th&gt;
+&lt;th&gt;运算符&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Grouping&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;分组&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;n/a&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;( … )&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org//en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Dot_notation&quot; title=&quot;Property accessors provide access to an object&amp;#39;s properties by using the dot notation or the bracket notation.&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;成员访问&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… . …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation&quot; title=&quot;Property accessors provide access to an object&amp;#39;s properties by using the dot notation or the bracket notation.&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;计算成员访问&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… [ … ]&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new&quot; title=&quot;The new operator creates an instance of a user-defined object type or of one of the built-in object types that has a constructor function.&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;new&lt;/code&gt;&lt;/a&gt; (带参数)&lt;/td&gt;
+&lt;td&gt;n/a&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;new … ( … )&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;函数调用&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… ( &amp;lt;var&amp;gt;… &amp;lt;/var&amp;gt;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new&quot; title=&quot;The new operator creates an instance of a user-defined object type or of one of the built-in object types that has a constructor function.&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;new&lt;/code&gt;&lt;/a&gt; (无参数)&lt;/td&gt;
+&lt;td&gt;从右至左&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;new …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment&quot; title=&quot;Arithmetic operators take numerical values (either literals or variables) as their operands and return a single numerical value. The standard arithmetic operators are addition (+), subtraction (-), multiplication (*), and division (https://developer.mozilla.org/).&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;后置自增&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;n/a&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… ++&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement&quot; title=&quot;Arithmetic operators take numerical values (either literals or variables) as their operands and return a single numerical value. The standard arithmetic operators are addition (+), subtraction (-), multiplication (*), and division (https://developer.mozilla.org/).&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;后置自减&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;n/a&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… --&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;逻辑非&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从右至左&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;! …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;按位取非&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从右至左&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;~ …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_plus&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;一元加法&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从右至左&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;+ …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_negation&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;一元剑法&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从右至左&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;- …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;前置自增&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从右至左&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;++ …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;前置自减&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从右至左&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;-- …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;typeof&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从右至左&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;typeof …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;void&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从右至左&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;void …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;delete&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从右至左&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;delete …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;取幂&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从右至左&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… ** …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Multiplication&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;乘法&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… * …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Division&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;除法&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… / …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;取余&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… % …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;加法&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… + …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Subtraction&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;减法&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… - …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;按位左移&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… &amp;lt;&amp;lt; …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;按位右移&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… &amp;gt;&amp;gt; …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;无符号右移&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… &amp;gt;&amp;gt;&amp;gt; …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than_operator&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;小于&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… &amp;lt; …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than__or_equal_operator&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;小于等于&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… &amp;lt;= …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_operator&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;大于&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… &amp;gt; …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_or_equal_operator&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;大于等于&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… &amp;gt;= …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;in&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… in …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;instanceof&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… instanceof …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;等号&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… == …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Inequality&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;不等号&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… != …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;全等&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… === …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Nonidentity&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;非全等&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… !== …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;按位与&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… &amp;amp; …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;按位异或&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… ^ …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;按位与&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;`…&lt;/td&gt;
+&lt;td&gt;…`&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;逻辑与&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… &amp;amp;&amp;amp; …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;逻辑或&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;`…&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;…`&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;条件判断&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从右至左&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… ? … : …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;赋值运算&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从右至左&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… = …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… += …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… -= …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… **= …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… *= …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… /= …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… %= …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… &amp;lt;&amp;lt;= …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… &amp;gt;&amp;gt;= …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… &amp;gt;&amp;gt;&amp;gt;= …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… &amp;amp;= …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… ^= …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;… \&lt;/td&gt;
+&lt;td&gt;= … &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;yield&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从右至左&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;yield …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield*&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;yield*&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从右至左&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;yield* …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Spread&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;n/a&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt; …&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;逗号运算符&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从左至右&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… , …&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;ul&gt;
 &lt;li&gt;取幂运算符&lt;code&gt;**&lt;/code&gt;为&lt;a href=&quot;http://www.ecma-international.org/ecma-262/7.0/index.html#sec-exp-operator&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ES7语法&lt;/a&gt;。&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Browser_compatibility&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;浏览器兼容性&lt;/a&gt;、&lt;a href=&quot;http://kangax.github.io/compat-table/es2016plus/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;exponentiation (**) operator&lt;/a&gt;&lt;/li&gt;&lt;li&gt;取幂赋值&lt;code&gt;**=&lt;/code&gt;同上。&lt;/li&gt;&lt;li&gt;三目运算符为条件判断语句。&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;del&gt;markdown解析表格时出现错误，竖线符识别问题，下次修复。&lt;/del&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;表格由word制作，导出为图片。&lt;/p&gt;
 &lt;/blockquote&gt;
