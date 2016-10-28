@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-10-28T03:24:05.448Z</updated>
+  <updated>2016-10-28T08:35:08.250Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -16,18 +16,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>tow</title>
+    <title>对象属性访问的两种方式</title>
     <link href="http://xovel.cn/article/object-property-accessor.html"/>
     <id>http://xovel.cn/article/object-property-accessor.html</id>
     <published>2016-10-28T03:24:05.000Z</published>
-    <updated>2016-10-28T03:24:05.448Z</updated>
+    <updated>2016-10-28T08:35:08.250Z</updated>
     
-    <content type="html"></content>
+    <content type="html">&lt;p&gt;在JS中，对象的访问方式通常有两种，本文将对其做一个简单的介绍。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;这两种方式一种是带点号&lt;code&gt;.&lt;/code&gt;的访问方式，另一种是以方括号&lt;code&gt;[...]&lt;/code&gt;的方式进行属性访问。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;object.property
+object[&amp;quot;property&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这两种属性访问方式效果等同。&lt;/p&gt;
+&lt;p&gt;这两种不同的方式的差异性如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;点号&lt;code&gt;.&lt;/code&gt;能访问对象的属性的名称必须是严格的JS识别符。这个识别符的具体要求跟变量名类似。&lt;/li&gt;&lt;li&gt;方括号&lt;code&gt;[]&lt;/code&gt;可以访问包含标准属性在内的一切属性。&lt;/li&gt;&lt;/ol&gt;
+&lt;p&gt;&lt;del&gt;可以简单粗暴的认为点号的访问方式是方括号访问方式的一种语法糖&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;数字的点号属性访问不能直接跟在后面，需要使用如下方式进行访问：&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;77&lt;/span&gt; .toExponential();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// or&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;77&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;.toExponential();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// or&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(&lt;span class=&quot;number&quot;&gt;77&lt;/span&gt;).toExponential();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// or&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;77.&lt;/span&gt;.toExponential();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// or&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;77.0&lt;/span&gt;.toExponential();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// because 77. === 77.0, no ambiguity :p&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;方括号可以访问特殊的属性，如可以使用&lt;code&gt;arr[1]&lt;/code&gt;可以访问到数组arr的第二个下标的值，但是不能使用&lt;code&gt;arr.1&lt;/code&gt;这种方式。&lt;/p&gt;
+&lt;p&gt;一些非常规的属性诸如&lt;code&gt;1$&lt;/code&gt;、&lt;code&gt;+66&lt;/code&gt;、&lt;code&gt;.233&lt;/code&gt;，需要使用方括号的形式去访问。&lt;blockquote&gt;&lt;p&gt;阅读过&lt;code&gt;jQuery&lt;/code&gt;源码的人，应该都见识过&lt;code&gt;Sizzle&lt;/code&gt;的&lt;code&gt;Expr&lt;/code&gt;对象，里面有类似的访问方式：&lt;code&gt;jQuery.expr[ &amp;quot;:&amp;quot; ] = jQuery.expr.pseudos;&lt;/code&gt;&lt;/p&gt;
+&lt;footer&gt;&lt;strong&gt;链接&lt;/strong&gt;&lt;cite&gt;&lt;a href=&quot;https://github.com/jquery/jquery/blob/1.12-stable/src/selector-sizzle.js#L8&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;github.com/jquery/jquery/blob/1.12-stable/src/selector-sizzle.js#L8&lt;/a&gt;&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;&lt;br&gt;参考资料：&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Property accessors - JavaScript | MDN&lt;/a&gt;&lt;/p&gt;
+</content>
     
     <summary type="html">
     
+      &lt;p&gt;在JS中，对象的访问方式通常有两种，本文将对其做一个简单的介绍。&lt;/p&gt;
+    
     </summary>
     
+      <category term="开发" scheme="http://xovel.cn/categories/dev/"/>
+    
+    
+      <category term="object" scheme="http://xovel.cn/tags/object/"/>
+    
+      <category term="property" scheme="http://xovel.cn/tags/property/"/>
+    
+      <category term="method" scheme="http://xovel.cn/tags/method/"/>
     
   </entry>
   
