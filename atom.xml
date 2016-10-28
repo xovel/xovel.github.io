@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-10-27T09:34:47.005Z</updated>
+  <updated>2016-10-28T00:36:27.958Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/js-operator-precedence.html"/>
     <id>http://xovel.cn/article/js-operator-precedence.html</id>
     <published>2016-10-25T03:15:09.000Z</published>
-    <updated>2016-10-27T09:34:47.005Z</updated>
+    <updated>2016-10-28T00:36:27.958Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;本文采编自&lt;a href=&quot;https://developer.mozilla.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MDN&lt;/a&gt;：&lt;/p&gt;
@@ -280,8 +280,7 @@
 &lt;td&gt;7&lt;/td&gt;
 &lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;按位与&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;从左至右&lt;/td&gt;
-&lt;td&gt;`…&lt;/td&gt;
-&lt;td&gt;…`&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… | …&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;6&lt;/td&gt;
@@ -293,9 +292,7 @@
 &lt;td&gt;5&lt;/td&gt;
 &lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;逻辑或&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;从左至右&lt;/td&gt;
-&lt;td&gt;`…&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;…`&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;… || …&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;4&lt;/td&gt;
@@ -379,8 +376,7 @@
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
-&lt;td&gt;… \&lt;/td&gt;
-&lt;td&gt;= … &lt;/td&gt;
+&lt;td&gt;… |= … &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2&lt;/td&gt;
@@ -408,15 +404,15 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;ul&gt;
-&lt;li&gt;取幂运算符&lt;code&gt;**&lt;/code&gt;为&lt;a href=&quot;http://www.ecma-international.org/ecma-262/7.0/index.html#sec-exp-operator&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ES7语法&lt;/a&gt;。&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Browser_compatibility&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;浏览器兼容性&lt;/a&gt;、&lt;a href=&quot;http://kangax.github.io/compat-table/es2016plus/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;exponentiation (**) operator&lt;/a&gt;&lt;/li&gt;&lt;li&gt;取幂赋值&lt;code&gt;**=&lt;/code&gt;同上。&lt;/li&gt;&lt;li&gt;三目运算符为条件判断语句。&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;del&gt;markdown解析表格时出现错误，竖线符识别问题，下次修复。&lt;/del&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;表格由word制作，导出为图片。&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;取幂运算符&lt;code&gt;**&lt;/code&gt;为&lt;a href=&quot;http://www.ecma-international.org/ecma-262/7.0/index.html#sec-exp-operator&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ES7语法&lt;/a&gt;。&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Browser_compatibility&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;浏览器兼容性&lt;/a&gt;、&lt;a href=&quot;http://kangax.github.io/compat-table/es2016plus/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;exponentiation (**) operator&lt;/a&gt;&lt;/li&gt;&lt;li&gt;取幂赋值&lt;code&gt;**=&lt;/code&gt;同上。&lt;/li&gt;&lt;li&gt;三目运算符为条件判断语句。&lt;/li&gt;&lt;/ul&gt;
 &lt;hr&gt;
+&lt;p&gt;&lt;del&gt;markdown解析表格时出现错误，竖线符识别问题，下次修复。&lt;/del&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;markdown表格支持不是很良好，表格的具体代码已经被注释。 &lt;/p&gt;
+&lt;p&gt;2016年10月28日，修复markdown表格中单元格带竖线&lt;code&gt;|&lt;/code&gt;的问题。 详情见：&lt;/p&gt;
 &lt;/blockquote&gt;
 </content>
     
