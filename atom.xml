@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-10-28T00:36:27.958Z</updated>
+  <updated>2016-10-28T03:24:05.448Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -16,11 +16,27 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>tow</title>
+    <link href="http://xovel.cn/article/object-member-access.html"/>
+    <id>http://xovel.cn/article/object-member-access.html</id>
+    <published>2016-10-28T03:24:05.000Z</published>
+    <updated>2016-10-28T03:24:05.448Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>JS运算符优先级</title>
     <link href="http://xovel.cn/article/js-operator-precedence.html"/>
     <id>http://xovel.cn/article/js-operator-precedence.html</id>
     <published>2016-10-25T03:15:09.000Z</published>
-    <updated>2016-10-28T00:36:27.958Z</updated>
+    <updated>2016-10-28T06:05:36.217Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;本文采编自&lt;a href=&quot;https://developer.mozilla.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MDN&lt;/a&gt;：&lt;/p&gt;
@@ -56,7 +72,7 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;19&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org//en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Dot_notation&quot; title=&quot;Property accessors provide access to an object&amp;#39;s properties by using the dot notation or the bracket notation.&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;成员访问&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Dot_notation&quot; title=&quot;Property accessors provide access to an object&amp;#39;s properties by using the dot notation or the bracket notation.&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;成员访问&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;从左至右&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;… . …&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
@@ -408,11 +424,11 @@
 &lt;p&gt;表格由word制作，导出为图片。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;取幂运算符&lt;code&gt;**&lt;/code&gt;为&lt;a href=&quot;http://www.ecma-international.org/ecma-262/7.0/index.html#sec-exp-operator&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ES7语法&lt;/a&gt;。&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Browser_compatibility&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;浏览器兼容性&lt;/a&gt;、&lt;a href=&quot;http://kangax.github.io/compat-table/es2016plus/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;exponentiation (**) operator&lt;/a&gt;&lt;/li&gt;&lt;li&gt;取幂赋值&lt;code&gt;**=&lt;/code&gt;同上。&lt;/li&gt;&lt;li&gt;三目运算符为条件判断语句。&lt;/li&gt;&lt;/ul&gt;
+&lt;li&gt;取幂运算符&lt;code&gt;**&lt;/code&gt;为&lt;a href=&quot;http://www.ecma-international.org/ecma-262/7.0/index.html#sec-exp-operator&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ES7语法&lt;/a&gt;。&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Browser_compatibility&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;浏览器兼容性&lt;/a&gt;、&lt;a href=&quot;http://kangax.github.io/compat-table/es2016plus/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;exponentiation (**) operator&lt;/a&gt;&lt;/li&gt;&lt;li&gt;取幂赋值&lt;code&gt;**=&lt;/code&gt;同上。&lt;/li&gt;&lt;li&gt;计算成员访问，指的是使用&lt;code&gt;[...]&lt;/code&gt;的方式访问对象的成员属性。&lt;/li&gt;&lt;li&gt;三目运算符为条件判断语句。&lt;/li&gt;&lt;/ul&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;del&gt;markdown解析表格时出现错误，竖线符识别问题，下次修复。&lt;/del&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;2016年10月28日，修复markdown表格中单元格带竖线&lt;code&gt;|&lt;/code&gt;的问题。 详情见：&lt;/p&gt;
+&lt;p&gt;2016年10月28日，修复markdown表格中单元格带竖线&lt;code&gt;|&lt;/code&gt;的问题。 详情见：&lt;a href=&quot;https://github.com/xovel/xovel.github.io/issues/10&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/xovel/xovel.github.io/issues/10&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 </content>
     
@@ -1518,37 +1534,6 @@
       <category term="css" scheme="http://xovel.cn/tags/css/"/>
     
       <category term="filter" scheme="http://xovel.cn/tags/filter/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>又是一年七夕时</title>
-    <link href="http://xovel.cn/article/today-is-7-7.html"/>
-    <id>http://xovel.cn/article/today-is-7-7.html</id>
-    <published>2016-08-09T09:30:35.000Z</published>
-    <updated>2016-08-09T09:56:39.667Z</updated>
-    
-    <content type="html">&lt;p&gt;时间荏苒，不知不觉又到了牛郎织女一年一度鹊桥相会的时间。&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;今天是丙申猴年丙申月癸亥日，宜祭祀，&lt;strong&gt;宜沐浴&lt;/strong&gt;，啧啧。&lt;/p&gt;
-&lt;p&gt;又想起了一句&lt;del&gt;古老的话语：老夫夜观星象，今夜宾馆必将血流成河&lt;/del&gt;……&lt;/p&gt;
-&lt;p&gt;其实对于我而言，并没有什么东西值得在今天这个时候去感慨一番的。心里只要有对方，又何必在乎这个时间节点？&lt;/p&gt;
-&lt;p&gt;今晚就安静低调的度过吧。&lt;/p&gt;
-&lt;p&gt;缘分这个东西，以后有机会再慢慢叙写吧。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;时间荏苒，不知不觉又到了牛郎织女一年一度鹊桥相会的时间。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
-    
-    
-      <category term="七夕" scheme="http://xovel.cn/tags/%E4%B8%83%E5%A4%95/"/>
-    
-      <category term="情人节" scheme="http://xovel.cn/tags/%E6%83%85%E4%BA%BA%E8%8A%82/"/>
     
   </entry>
   
