@@ -17,8 +17,8 @@
   
   <entry>
     <title>tow</title>
-    <link href="http://xovel.cn/article/object-member-access.html"/>
-    <id>http://xovel.cn/article/object-member-access.html</id>
+    <link href="http://xovel.cn/article/object-property-accessor.html"/>
+    <id>http://xovel.cn/article/object-property-accessor.html</id>
     <published>2016-10-28T03:24:05.000Z</published>
     <updated>2016-10-28T03:24:05.448Z</updated>
     
@@ -36,7 +36,7 @@
     <link href="http://xovel.cn/article/js-operator-precedence.html"/>
     <id>http://xovel.cn/article/js-operator-precedence.html</id>
     <published>2016-10-25T03:15:09.000Z</published>
-    <updated>2016-10-28T06:05:36.217Z</updated>
+    <updated>2016-10-28T07:14:28.642Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;本文采编自&lt;a href=&quot;https://developer.mozilla.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MDN&lt;/a&gt;：&lt;/p&gt;
@@ -428,7 +428,8 @@
 &lt;hr&gt;
 &lt;p&gt;&lt;del&gt;markdown解析表格时出现错误，竖线符识别问题，下次修复。&lt;/del&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;2016年10月28日，修复markdown表格中单元格带竖线&lt;code&gt;|&lt;/code&gt;的问题。 详情见：&lt;a href=&quot;https://github.com/xovel/xovel.github.io/issues/10&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/xovel/xovel.github.io/issues/10&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2016年10月28日，修复markdown表格中单元格带竖线&lt;code&gt;|&lt;/code&gt;的问题。&lt;/p&gt;
+&lt;p&gt;详情见：&lt;a href=&quot;https://github.com/xovel/xovel.github.io/issues/10&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/xovel/xovel.github.io/issues/10&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 </content>
     
