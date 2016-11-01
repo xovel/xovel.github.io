@@ -75,6 +75,7 @@ category_map:
   随笔: essay
   杂项: misc
   开发: dev
+  设计: design
   文档: docs  
   前端: frontend
   后端: backend
