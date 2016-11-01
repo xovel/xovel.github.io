@@ -25,12 +25,16 @@ since: 2016
 menu:
   home: /
   categories: /categories
-  tags: /tags
+  #tags: /tags
   archives: /archives
   about: /about
   #commonweal: /404.html
   garden: /garden
 
+menu_side:
+  categories: /categories
+  archives: /archives
+  tags: /tags  
 
 # Enable/Disable menu icons.
 # Icon Mapping:
