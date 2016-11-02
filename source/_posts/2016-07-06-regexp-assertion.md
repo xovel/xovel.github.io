@@ -82,7 +82,7 @@ description: 断言在正则表达式里面有着举足轻重的作用。通常�
 - [RegExr - 在线测试正则表达式](http://regexr.com/)
 - [Regexper - 根据正则表达式生成SVG示意图](https://regexper.com)
 - [RegExp - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
-- [Regular Expression Syntax - 微软官方正则表达式参考](https://msdn.microsoft.com/zh-cn/library/ae5bf541(v=vs.100).aspx)
+- [Regular Expression Syntax - 微软官方正则表达式参考][msreg]
 - [Regular-Expressions.info - The Premier website about Regular Expressions](http://www.regular-expressions.info/)
 - [Regex Tutorial - Lookahead and Lookbehind Zero-Length Assertions](http://www.regular-expressions.info/lookaround.html)
 - [Regex Tutorial - Parentheses for Grouping and Capturing](http://www.regular-expressions.info/brackets.html "分组与捕获")
@@ -90,6 +90,6 @@ description: 断言在正则表达式里面有着举足轻重的作用。通常�
 - [regex - What is a non capturing group? (?:) - Stack Overflow](http://stackoverflow.com/questions/3512471/what-is-a-non-capturing-group)
 - [To capture or not to capture | getiblog](https://blog.getify.com/to-capture-or-not/)
 
-
+[msreg]: https://msdn.microsoft.com/zh-cn/library/ae5bf541(v=vs.100).aspx
 
 

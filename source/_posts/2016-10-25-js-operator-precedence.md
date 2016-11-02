@@ -36,11 +36,11 @@ description: 运算符的优先级决定了表达式中运算执行的先后顺�
 
 ![运算符优先级表](http://ww4.sinaimg.cn/large/79be2309gw1f94hwlrlikj20j81i0t9t.jpg)
 
-<!--
+
 |优先级 | 运算类型 | 关联性 | 运算符|
 | -- | -- | -- | -- |
 | 20 | [`分组`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Grouping) | n/a | `( … )`|
-| 19 | [`成员访问`](https://developer.mozilla.org//en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Dot_notation "Property accessors provide access to an object's properties by using the dot notation or the bracket notation.") | 从左至右 | `… . …` |
+| 19 | [`成员访问`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Dot_notation "Property accessors provide access to an object's properties by using the dot notation or the bracket notation.") | 从左至右 | `… . …` |
 | 19 | [`计算成员访问`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation "Property accessors provide access to an object's properties by using the dot notation or the bracket notation.") | 从左至右 | `… [ … ]` |
 | 19 | [`new`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new "The new operator creates an instance of a user-defined object type or of one of the built-in object types that has a constructor function.") (带参数) | n/a | `new … ( … )` |
 | 18 | [函数调用](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions) | 从左至右 | `… ( <var>… </var>)` |
@@ -77,9 +77,9 @@ description: 运算符的优先级决定了表达式中运算执行的先后顺�
 | 10 | [非全等](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Nonidentity) | 从左至右 | `… !== …` |
 | 9 | [按位与](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND) | 从左至右 | `… & …` |
 | 8 | [按位异或](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR) | 从左至右 | `… ^ …` |
-| 7 | [按位与](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR) | 从左至右 | `… | …` |
+| 7 | [按位与](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR) | 从左至右 | `… \| …` |
 | 6 | [逻辑与](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND) | 从左至右 | `… && …` |
-| 5 | [逻辑或](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR) | 从左至右 | `… || …` |
+| 5 | [逻辑或](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR) | 从左至右 | `… \|\| …` |
 | 4 | [条件判断](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) | 从右至左 | `… ? … : …` |
 | 3 | [赋值运算](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators) | 从右至左 | `… = …` |
 | | | | `… += …` |
@@ -98,12 +98,20 @@ description: 运算符的优先级决定了表达式中运算执行的先后顺�
 | 2 | [yield*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield*) | 从右至左 | `yield* …` |
 | 1 | [Spread](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator) | n/a | `...` … |
 | 0 | [逗号运算符](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator) | 从左至右 | `… , …` |
--->
+
+> 表格由word制作，导出为图片。
 
 - 取幂运算符`**`为[ES7语法](http://www.ecma-international.org/ecma-262/7.0/index.html#sec-exp-operator)。[浏览器兼容性](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Browser_compatibility)、[exponentiation (**) operator](http://kangax.github.io/compat-table/es2016plus/)
 - 取幂赋值`**=`同上。
+- 计算成员访问，指的是使用`[...]`的方式访问对象的成员属性。
 - 三目运算符为条件判断语句。
 
-> 表格由word制作，导出为图片。
+---
+
+~~markdown解析表格时出现错误，竖线符识别问题，下次修复。~~
+
+> 2016年10月28日，修复markdown表格中单元格带竖线`|`的问题。
+>
+> 详情见：<https://github.com/xovel/xovel.github.io/issues/10>
 
 
