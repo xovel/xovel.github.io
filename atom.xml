@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-11-04T02:18:08.047Z</updated>
+  <updated>2016-11-04T02:23:25.463Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/mathjax-advanced.html"/>
     <id>http://xovel.cn/article/mathjax-advanced.html</id>
     <published>2016-11-03T06:57:41.000Z</published>
-    <updated>2016-11-04T02:18:08.047Z</updated>
+    <updated>2016-11-04T02:23:25.463Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;之前的文章：&lt;a href=&quot;/article/mathjax-basic-tutorial-and-quick-reference.html&quot;&gt;MathJax基础教程与快速参考&lt;/a&gt;，本篇文章将对进阶的MathJax语法做一个简单的介绍。大部分内容来自于&lt;a href=&quot;http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MathJax basic tutorial and quick reference&lt;/a&gt;一文中后面的评论。&lt;/p&gt;
@@ -181,7 +181,7 @@ e^x=\lim_{n\to\infty} \left( 1+\frac{x}{n} \right)^n
 $$
 
 &lt;hr&gt;
-&lt;p&gt;本文完&lt;/p&gt;
+&lt;p&gt;本文完。&lt;/p&gt;
 </content>
     
     <summary type="html">
