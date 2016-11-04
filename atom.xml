@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-11-04T02:23:25.463Z</updated>
+  <updated>2016-11-04T05:27:29.676Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/mathjax-advanced.html"/>
     <id>http://xovel.cn/article/mathjax-advanced.html</id>
     <published>2016-11-03T06:57:41.000Z</published>
-    <updated>2016-11-04T02:23:25.463Z</updated>
+    <updated>2016-11-04T05:27:29.676Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;之前的文章：&lt;a href=&quot;/article/mathjax-basic-tutorial-and-quick-reference.html&quot;&gt;MathJax基础教程与快速参考&lt;/a&gt;，本篇文章将对进阶的MathJax语法做一个简单的介绍。大部分内容来自于&lt;a href=&quot;http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MathJax basic tutorial and quick reference&lt;/a&gt;一文中后面的评论。&lt;/p&gt;
@@ -142,7 +142,7 @@ $$
 &lt;p&gt;&lt;code&gt;\newcommand{\SES}[3]{ 0 \to #1 \to #2 \to #3 \to 0 }&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;定义过的命令&lt;code&gt;SES&lt;/code&gt;就可以进行调用了：&lt;code&gt;\SES{A}{B}{C}&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;$$&lt;br&gt;\newcommand{\SES}[3]{ 0 \to #1 \to #2 \to #3 \to 0 }&lt;br&gt;\SES{A}{B}{C}&lt;br&gt;$$&lt;/p&gt;
-&lt;h3 id=&quot;任意操作符&quot;&gt;&lt;a href=&quot;#任意操作符&quot; class=&quot;headerlink&quot; title=&quot;任意操作符&quot;&gt;&lt;/a&gt;任意操作符&lt;/h3&gt;&lt;p&gt;使用&lt;code&gt;\operatorname{…}&lt;/code&gt;可以指定任意文本作为操作符进行展示。&lt;/p&gt;
+&lt;h3 id=&quot;指定操作符&quot;&gt;&lt;a href=&quot;#指定操作符&quot; class=&quot;headerlink&quot; title=&quot;指定操作符&quot;&gt;&lt;/a&gt;指定操作符&lt;/h3&gt;&lt;p&gt;使用&lt;code&gt;\operatorname{…}&lt;/code&gt;可以指定任意文本作为操作符进行展示。&lt;/p&gt;
 &lt;p&gt;如&lt;code&gt;\operatorname{arsinh}(x)&lt;/code&gt;展示为$\operatorname{arsinh}(x)$。&lt;/p&gt;
 &lt;p&gt;如果写成&lt;code&gt;arsinh(x)&lt;/code&gt;，会造成字体显示不对：$arsinh(x)$；写成&lt;code&gt;\arsinh(x)&lt;/code&gt;则会报错。&lt;/p&gt;
 &lt;h3 id=&quot;极限&quot;&gt;&lt;a href=&quot;#极限&quot; class=&quot;headerlink&quot; title=&quot;极限&quot;&gt;&lt;/a&gt;极限&lt;/h3&gt;&lt;p&gt;在极限符号&lt;code&gt;\lim&lt;/code&gt;后再跟一个&lt;code&gt; \limits&lt;/code&gt;可以添加极限的下标。&lt;/p&gt;
