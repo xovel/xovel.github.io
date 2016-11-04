@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xovel.cn/article/mathjax-advanced.html</loc>
+    
+    <lastmod>2016-11-04T02:18:08.047Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xovel.cn/article/regexp-assertion.html</loc>
     
     <lastmod>2016-11-02T02:50:38.935Z</lastmod>

@@ -1,0 +1,848 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="mathjax,教程,参考,进阶," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="清风轩" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="本文是对之前的文章《MathJax基础教程与快速参考》的扩充。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MathJax进阶">
+<meta property="og:url" content="http://xovel.cn/article/mathjax-advanced.html">
+<meta property="og:site_name" content="清风轩">
+<meta property="og:description" content="本文是对之前的文章《MathJax基础教程与快速参考》的扩充。">
+<meta property="og:updated_time" content="2016-11-04T02:18:08.047Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MathJax进阶">
+<meta name="twitter:description" content="本文是对之前的文章《MathJax基础教程与快速参考》的扩充。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> MathJax进阶 | 清风轩 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="http://s6.cnzz.com/stat.php?id=1259096563&web_id=1259096563" type="text/javascript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">清风轩</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">清风轩居 - 引仙阁</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-garden">
+          <a href="/garden" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-life-ring"></i> <br />
+            
+            花园
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                MathJax进阶
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-03T14:57:41+08:00" content="2016-11-03">
+              2016-11-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/dev/" itemprop="url" rel="index">
+                    <span itemprop="name">开发</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/dev/docs/" itemprop="url" rel="index">
+                    <span itemprop="name">文档</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>之前的文章：<a href="/article/mathjax-basic-tutorial-and-quick-reference.html">MathJax基础教程与快速参考</a>，本篇文章将对进阶的MathJax语法做一个简单的介绍。大部分内容来自于<a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="external">MathJax basic tutorial and quick reference</a>一文中后面的评论。</p>
+</blockquote>
+<h3 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h3><p>MathJax提供了良好的矩阵支持。矩阵的语法为：<code>$$\begin{matrix}…\end{matrix}$$</code>，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">        \begin&#123;matrix&#125;</span><br><span class="line">        1 &amp; x &amp; x^2 \\</span><br><span class="line">        1 &amp; y &amp; y^2 \\</span><br><span class="line">        1 &amp; z &amp; z^2 \\</span><br><span class="line">        \end&#123;matrix&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+<p>$$<br>\begin{matrix}<br>        1 &amp; x &amp; x^2 \\<br>        1 &amp; y &amp; y^2 \\<br>        1 &amp; z &amp; z^2 \\<br>        \end{matrix}<br>$$</p>
+<p>关于添加括号，除了在基础教程中提到的<code>\left…\right</code>方法，还可以使用指定字符串替换上面提到的语法中的<code>matrix</code>即可：</p>
+<ul>
+<li><code>pmatrix</code>，$\begin{pmatrix}1&amp;2\\3&amp;4\\ \end{pmatrix}$</li><li><code>bmatrix</code>，$\begin{bmatrix}1&amp;2\\3&amp;4\\ \end{bmatrix}$</li><li><code>Bmatrix</code>，$\begin{Bmatrix}1&amp;2\\3&amp;4\\ \end{Bmatrix}$</li><li><code>vmatrix</code>，$\begin{vmatrix}1&amp;2\\3&amp;4\\ \end{vmatrix}$</li><li><code>Vmatrix</code>，$\begin{Vmatrix}1&amp;2\\3&amp;4\\ \end{Vmatrix}$</li></ul>
+<p>在矩阵中可以添加点号<code>\cdots</code>$\cdots$、<code>\ddots</code>$\ddots$、<code>\vdots</code>$\vdots$来表示省略的部分：</p>
+<p>$$<br>\begin{pmatrix}<br>     1 &amp; a_1 &amp; a_1^2 &amp; \cdots &amp; a_1^n \\<br>     1 &amp; a_2 &amp; a_2^2 &amp; \cdots &amp; a_2^n \\<br>     \vdots  &amp; \vdots&amp; \vdots &amp; \ddots &amp; \vdots \\<br>     1 &amp; a_m &amp; a_m^2 &amp; \cdots &amp; a_m^n<br>     \end{pmatrix}<br>$$</p>
+<p>增广矩阵则使用格式化的表格：</p>
+<p>$$<br>\left[\begin{array}{cc|c}<br>  1&amp;2&amp;3\\<br>  4&amp;5&amp;6<br>  \end{array}\right]<br>$$</p>
+<p>上面的矩阵的具体代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$$ \left[</span><br><span class="line">    \begin&#123;array&#125;&#123;cc|c&#125;</span><br><span class="line">      1&amp;2&amp;3\\</span><br><span class="line">      4&amp;5&amp;6</span><br><span class="line">    \end&#123;array&#125;</span><br><span class="line">\right] $$</span><br></pre></td></tr></table></figure>
+<p>小型行内矩阵的表示方法为<code>\bigl(\begin{smallmatrix} ... \end{smallmatrix}\bigr)</code>。例如$\bigl( \begin{smallmatrix} a &amp; b \\ c &amp; d \end{smallmatrix} \bigr)$的代码为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$\bigl( \begin&#123;smallmatrix&#125; a &amp; b \\ c &amp; d \end&#123;smallmatrix&#125; \bigr)$</span><br></pre></td></tr></table></figure>
+<h3 id="对齐的方程式"><a href="#对齐的方程式" class="headerlink" title="对齐的方程式"></a>对齐的方程式</h3><p>很多时候，我们想让方程式对齐以显得更加整齐美观。为了达到这样的目的，我们采用语法<code>\begin{align}…\end{align}</code>并且在每个换行符<code>\\</code>之后，添加一个连接符<code>&amp;</code>即可。</p>
+<p>举个例子：</p>
+<p>$$<br>\begin{align}<br>\sqrt{37} &amp; = \sqrt{\frac{73^2-1}{12^2}} \\<br> &amp; = \sqrt{\frac{73^2}{12^2}\cdot\frac{73^2-1}{73^2}} \\<br> &amp; = \sqrt{\frac{73^2}{12^2}}\sqrt{\frac{73^2-1}{73^2}} \\<br> &amp; = \frac{73}{12}\sqrt{1 - \frac{1}{73^2}} \\<br> &amp; \approx \frac{73}{12}\left(1 - \frac{1}{2\cdot73^2}\right)<br>\end{align}<br>$$</p>
+<p>以上方程式的代码为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;align&#125;</span><br><span class="line">\sqrt&#123;37&#125; &amp; = \sqrt&#123;\frac&#123;73^2-1&#125;&#123;12^2&#125;&#125; \\</span><br><span class="line"> &amp; = \sqrt&#123;\frac&#123;73^2&#125;&#123;12^2&#125;\cdot\frac&#123;73^2-1&#125;&#123;73^2&#125;&#125; \\ </span><br><span class="line"> &amp; = \sqrt&#123;\frac&#123;73^2&#125;&#123;12^2&#125;&#125;\sqrt&#123;\frac&#123;73^2-1&#125;&#123;73^2&#125;&#125; \\</span><br><span class="line"> &amp; = \frac&#123;73&#125;&#123;12&#125;\sqrt&#123;1 - \frac&#123;1&#125;&#123;73^2&#125;&#125; \\ </span><br><span class="line"> &amp; \approx \frac&#123;73&#125;&#123;12&#125;\left(1 - \frac&#123;1&#125;&#123;2\cdot73^2&#125;\right)</span><br><span class="line">\end&#123;align&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="分段函数"><a href="#分段函数" class="headerlink" title="分段函数"></a>分段函数</h3><p>分段函数使用的语法为：<code>\begin{cases}…\end{cases}</code>，在带有换行符<code>\\</code>的一行中，在分段处加入连接符<code>&amp;</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">f(n) =</span><br><span class="line">\begin&#123;cases&#125;</span><br><span class="line">n/2,  &amp; \text&#123;if $n$ is even&#125; \\</span><br><span class="line">3n+1, &amp; \text&#123;if $n$ is odd&#125;</span><br><span class="line">\end&#123;cases&#125;</span><br></pre></td></tr></table></figure>
+<p>展示为：</p>
+<p>$$<br>f(n) =<br>\begin{cases}<br>n/2,  &amp; \text{if $n$ is even} \\<br>3n+1, &amp; \text{if $n$ is odd}<br>\end{cases}<br>$$</p>
+<p>也可以将括号放在右边：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\left.</span><br><span class="line">\begin&#123;array&#125;&#123;l&#125;</span><br><span class="line">\text&#123;if $n$ is even:&#125;&amp;n/2\\</span><br><span class="line">\text&#123;if $n$ is odd:&#125;&amp;3n+1</span><br><span class="line">\end&#123;array&#125;</span><br><span class="line">\right\&#125;</span><br><span class="line">=f(n)</span><br></pre></td></tr></table></figure>
+<p>$$<br>\left.<br>\begin{array}{l}<br>\text{if $n$ is even:}&amp;n/2\\<br>\text{if $n$ is odd:}&amp;3n+1<br>\end{array}<br>\right\}<br>=f(n)<br>$$</p>
+<p>要使得分段函数中间的空隙更大，可以使用<code>\\[2ex]</code>替换<code>\\</code>，如要得到：</p>
+<p>$$<br>f(n) =<br>\begin{cases}<br>\frac{n}{2},  &amp; \text{if $n$ is even} \\[2ex]<br>3n+1, &amp; \text{if $n$ is odd}<br>\end{cases}<br>$$</p>
+<p>使用以下代码即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">f(n) =</span><br><span class="line">\begin&#123;cases&#125;</span><br><span class="line">\frac&#123;n&#125;&#123;2&#125;,  &amp; \text&#123;if $n$ is even&#125; \\[2ex]</span><br><span class="line">3n+1, &amp; \text&#123;if $n$ is odd&#125;</span><br><span class="line">\end&#123;cases&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="数组表格化"><a href="#数组表格化" class="headerlink" title="数组表格化"></a>数组表格化</h3><p>先看一个例子：</p>
+<p>$$<br>\begin{array}{c|lcr}<br>n &amp; \text{Left} &amp; \text{Center} &amp; \text{Right} \\<br>\hline<br>1 &amp; 0.24 &amp; 1 &amp; 125 \\<br>2 &amp; -1 &amp; 189 &amp; -8 \\<br>3 &amp; -20 &amp; 2000 &amp; 1+10i<br>\end{array}<br>$$</p>
+<p>其代码为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;array&#125;&#123;c|lcr&#125;</span><br><span class="line">n &amp; \text&#123;Left&#125; &amp; \text&#123;Center&#125; &amp; \text&#123;Right&#125; \\</span><br><span class="line">\hline</span><br><span class="line">1 &amp; 0.24 &amp; 1 &amp; 125 \\</span><br><span class="line">2 &amp; -1 &amp; 189 &amp; -8 \\</span><br><span class="line">3 &amp; -20 &amp; 2000 &amp; 1+10i</span><br><span class="line">\end&#123;array&#125;</span><br></pre></td></tr></table></figure>
+<p>在上面的矩阵中，提到了格式化表格的方式。格式化代码<code>\begin{array}{c|lcr}</code>中<code>c</code>表示居中对齐，<code>l</code>表示左对齐，<code>r</code>表示右对齐。<code>\hline</code>表示横向的水平线。</p>
+<p>格式化的数组可以嵌套：</p>
+<p>$$<br>\begin{array}{c}<br>\begin{array}{cc}<br>\begin{array}{c|cccc}<br>\text{min} &amp; 0 &amp; 1 &amp; 2 &amp; 3\\<br>\hline<br>0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\<br>1 &amp; 0 &amp; 1 &amp; 1 &amp; 1\\<br>2 &amp; 0 &amp; 1 &amp; 2 &amp; 2\\<br>3 &amp; 0 &amp; 1 &amp; 2 &amp; 3<br>\end{array}<br>&amp;<br>\begin{array}{c|cccc}<br>\text{max}&amp;0&amp;1&amp;2&amp;3\\<br>\hline<br>0 &amp; 0 &amp; 1 &amp; 2 &amp; 3\\<br>1 &amp; 1 &amp; 1 &amp; 2 &amp; 3\\<br>2 &amp; 2 &amp; 2 &amp; 2 &amp; 3\\<br>3 &amp; 3 &amp; 3 &amp; 3 &amp; 3<br>\end{array}<br>\end{array}<br>\\<br>\begin{array}{c|cccc}<br>\Delta&amp;0&amp;1&amp;2&amp;3\\<br>\hline<br>0 &amp; 0 &amp; 1 &amp; 2 &amp; 3\\<br>1 &amp; 1 &amp; 0 &amp; 1 &amp; 2\\<br>2 &amp; 2 &amp; 1 &amp; 0 &amp; 1\\<br>3 &amp; 3 &amp; 2 &amp; 1 &amp; 0<br>\end{array}<br>\end{array}<br>$$</p>
+<p>以上代码省略。</p>
+<h3 id="带颜色的文本"><a href="#带颜色的文本" class="headerlink" title="带颜色的文本"></a>带颜色的文本</h3><p>MathJax支持HTML颜色代码来对文本进行染色显示。</p>
+<p>语法为<code>\color{black}{text}</code>。black为颜色的名称，text为进行染色的文本。</p>
+<p>$$<br>\begin{array}{|rc|}<br>\hline<br>\verb+\color{black}{text}+ &amp; \color{black}{text} \\<br>\verb+\color{gray}{text}+ &amp; \color{gray}{text} \\<br>\verb+\color{silver}{text}+ &amp; \color{silver}{text} \\<br>\verb+\color{white}{text}+ &amp; \color{white}{text} \\<br>\hline<br>\verb+\color{maroon}{text}+ &amp; \color{maroon}{text} \\<br>\verb+\color{red}{text}+ &amp; \color{red}{text} \\<br>\verb+\color{yellow}{text}+ &amp; \color{yellow}{text} \\<br>\verb+\color{lime}{text}+ &amp; \color{lime}{text} \\<br>\verb+\color{olive}{text}+ &amp; \color{olive}{text} \\<br>\verb+\color{green}{text}+ &amp; \color{green}{text} \\<br>\verb+\color{teal}{text}+ &amp; \color{teal}{text} \\<br>\verb+\color{aqua}{text}+ &amp; \color{aqua}{text} \\<br>\verb+\color{blue}{text}+ &amp; \color{blue}{text} \\<br>\verb+\color{navy}{text}+ &amp; \color{navy}{text} \\<br>\verb+\color{purple}{text}+ &amp; \color{purple}{text} \\<br>\verb+\color{fuchsia}{text}+ &amp; \color{magenta}{text} \\<br>\hline<br>\end{array}<br>$$</p>
+
+$$
+\begin{array}{|rrrrrrrr|}
+\hline
+\verb+#000+ & \color{#000}{text} & \verb+#005+ & \color{#005}{text} & \verb+#00A+ & \color{#00A}{text} & \verb+#00F+ & \color{#00F}{text}  \\
+\verb+#500+ & \color{#500}{text} & \verb+#505+ & \color{#505}{text} & \verb+#50A+ & \color{#50A}{text} & \verb+#50F+ & \color{#50F}{text}  \\
+\verb+#A00+ & \color{#A00}{text} & \verb+#A05+ & \color{#A05}{text} & \verb+#A0A+ & \color{#A0A}{text} & \verb+#A0F+ & \color{#A0F}{text}  \\
+\verb+#F00+ & \color{#F00}{text} & \verb+#F05+ & \color{#F05}{text} & \verb+#F0A+ & \color{#F0A}{text} & \verb+#F0F+ & \color{#F0F}{text}  \\
+\hline
+\verb+#080+ & \color{#080}{text} & \verb+#085+ & \color{#085}{text} & \verb+#08A+ & \color{#08A}{text} & \verb+#08F+ & \color{#08F}{text}  \\
+\verb+#580+ & \color{#580}{text} & \verb+#585+ & \color{#585}{text} & \verb+#58A+ & \color{#58A}{text} & \verb+#58F+ & \color{#58F}{text}  \\
+\verb+#A80+ & \color{#A80}{text} & \verb+#A85+ & \color{#A85}{text} & \verb+#A8A+ & \color{#A8A}{text} & \verb+#A8F+ & \color{#A8F}{text}  \\
+\verb+#F80+ & \color{#F80}{text} & \verb+#F85+ & \color{#F85}{text} & \verb+#F8A+ & \color{#F8A}{text} & \verb+#F8F+ & \color{#F8F}{text}  \\
+\hline
+\verb+#0F0+ & \color{#0F0}{text} & \verb+#0F5+ & \color{#0F5}{text} & \verb+#0FA+ & \color{#0FA}{text} & \verb+#0FF+ & \color{#0FF}{text}  \\
+\verb+#5F0+ & \color{#5F0}{text} & \verb+#5F5+ & \color{#5F5}{text} & \verb+#5FA+ & \color{#5FA}{text} & \verb+#5FF+ & \color{#5FF}{text}  \\
+\verb+#AF0+ & \color{#AF0}{text} & \verb+#AF5+ & \color{#AF5}{text} & \verb+#AFA+ & \color{#AFA}{text} & \verb+#AFF+ & \color{#AFF}{text}  \\
+\verb+#FF0+ & \color{#FF0}{text} & \verb+#FF5+ & \color{#FF5}{text} & \verb+#FFA+ & \color{#FFA}{text} & \verb+#FFF+ & \color{#FFF}{text}  \\
+\hline
+\end{array}
+$$
+
+<p>MathJax的HTML颜色，详情请参考<a href="http://www.w3schools.com/html/html_colors.asp" target="_blank" rel="external">这里</a>。</p>
+<h3 id="交叉线"><a href="#交叉线" class="headerlink" title="交叉线"></a>交叉线</h3><p>使用<code>\require{cancel}</code>开启实现对本文添加交叉线的效果。该语法可以用来展示删除，取消等效果。</p>
+<p>如：<br>
+$$
+\require{cancel}\begin{array}{rl}
+\verb|y+\cancel{x}| & y+\cancel{x}\\
+\verb|\cancel{y+x}| & \cancel{y+x}\\
+\verb|y+\bcancel{x}| & y+\bcancel{x}\\
+\verb|y+\xcancel{x}| & y+\xcancel{x}\\
+\verb|y+\cancelto{0}{x}| & y+\cancelto{0}{x}\\
+\verb+\frac{1\cancel9}{\cancel95} = \frac15+& \frac{1\cancel9}{\cancel95} = \frac15 \\
+\end{array}
+$$
+</p>
+<p>还可以使用<code>\require{enclose}</code>：</p>
+
+$$
+\require{enclose}\begin{array}{rl}
+\verb|\enclose{horizontalstrike}{x+y}| & \enclose{horizontalstrike}{x+y}\\
+\verb|\enclose{verticalstrike}{\frac xy}| & \enclose{verticalstrike}{\frac xy}\\
+\verb|\enclose{updiagonalstrike}{x+y}| & \enclose{updiagonalstrike}{x+y}\\
+\verb|\enclose{downdiagonalstrike}{x+y}| & \enclose{downdiagonalstrike}{x+y}\\
+\verb|\enclose{horizontalstrike,updiagonalstrike}{x+y}| & \enclose{horizontalstrike,updiagonalstrike}{x+y}\\
+\end{array}
+$$
+
+<h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h3><p>下面列出一些常见的文字修饰符：</p>
+<p><code>\overline</code> $\overline A$</p>
+<p><code>\underline</code> $\underline B$</p>
+<p><code>\widetilde</code> $\widetilde C$</p>
+<p><code>\widehat</code> $\widehat D$</p>
+<p><code>\fbox</code> $\fbox {$E$}$</p>
+<p><code>\underleftarrow</code> $\underleftarrow{F}$</p>
+<p><code>\underrightarrow</code> $\underrightarrow{G}$</p>
+<p><code>\underleftrightarrow</code> $\underleftrightarrow{H}$</p>
+<p><code>\overbrace</code> $\overbrace{(n - 2) + \overbrace{(n - 1) + n + (n + 1)} + (n + 2)}$</p>
+<p><code>\underbrace</code> $(n \underbrace{- 2) + (n \underbrace{- 1) + n + (n +} 1) + (n +} 2)$</p>
+<p><code>\overbrace</code>和<code>\underbrace</code>，可以添加上标/下标的文本。如<code>\underbrace{a\cdot a\cdots a}_{b\text{ times}}</code>展示为：</p>
+<p>$$\underbrace{a\cdot a\cdots a}_{b\text{ times}}$$</p>
+<p>音阶修饰符：</p>
+<p><code>\check</code> $\check{I}$</p>
+<p><code>\acute</code> $\acute{J}$</p>
+<p><code>\grave</code> $\grave{K}$</p>
+<h3 id="标签与标记"><a href="#标签与标记" class="headerlink" title="标签与标记"></a>标签与标记</h3><p>一些长公式，可能需要进行一些标注，或者是注明序号。</p>
+<p><code>a := x^2-y^3 \tag{*}\label{*}</code></p>
+<p>$$a := x^2-y^3 \tag{*}\label{*}$$</p>
+<p>方程式等号之上也可以添加一些本文标注：</p>
+<p><code>a+y^3 \stackrel{\eqref{*}}= x^2</code></p>
+<p>$$a+y^3 \stackrel{\eqref{*}}= x^2$$</p>
+<p>不带括号也可以，使用<code>\ref{somelabel}</code>即可。</p>
+<h3 id="自定义命令"><a href="#自定义命令" class="headerlink" title="自定义命令"></a>自定义命令</h3><p>使用<code>\newcommand</code>可以进行功能自定义。</p>
+<p><code>\newcommand{\SES}[3]{ 0 \to #1 \to #2 \to #3 \to 0 }</code></p>
+<p>定义过的命令<code>SES</code>就可以进行调用了：<code>\SES{A}{B}{C}</code></p>
+<p>$$<br>\newcommand{\SES}[3]{ 0 \to #1 \to #2 \to #3 \to 0 }<br>\SES{A}{B}{C}<br>$$</p>
+<h3 id="任意操作符"><a href="#任意操作符" class="headerlink" title="任意操作符"></a>任意操作符</h3><p>使用<code>\operatorname{…}</code>可以指定任意文本作为操作符进行展示。</p>
+<p>如<code>\operatorname{arsinh}(x)</code>展示为$\operatorname{arsinh}(x)$。</p>
+<p>如果写成<code>arsinh(x)</code>，会造成字体显示不对：$arsinh(x)$；写成<code>\arsinh(x)</code>则会报错。</p>
+<h3 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h3><p>在极限符号<code>\lim</code>后再跟一个<code> \limits</code>可以添加极限的下标。</p>
+<p><code>\lim \limits_{x \to 1} \frac{x^2-1}{x-1}</code></p>
+<p>$\lim \limits_{x \to 1} \frac{x^2-1}{x-1}$</p>
+<h3 id="高亮"><a href="#高亮" class="headerlink" title="高亮"></a>高亮</h3><p>使用<code>\bbox</code>可以对方程式进行高亮展示。</p>
+<p>如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\bbox[yellow]</span><br><span class="line">&#123;</span><br><span class="line">e^x=\lim_&#123;n\to\infty&#125; \left( 1+\frac&#123;x&#125;&#123;n&#125; \right)^n</span><br><span class="line">\qquad (1)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>将展示为：</p>
+
+$$ \bbox[yellow]
+{
+e^x=\lim_{n\to\infty} \left( 1+\frac{x}{n} \right)^n
+\qquad (1)
+}
+$$
+
+<p>可以添加内边距：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$$ \bbox[yellow,5px]</span><br><span class="line">&#123;</span><br><span class="line">e^x=\lim_&#123;n\to\infty&#125; \left( 1+\frac&#123;x&#125;&#123;n&#125; \right)^n</span><br><span class="line">\qquad (1)</span><br><span class="line">&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+
+$$ \bbox[yellow,5px]
+{
+e^x=\lim_{n\to\infty} \left( 1+\frac{x}{n} \right)^n
+\qquad (1)
+}
+$$
+
+<p>也可以指定边框：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$$ \bbox[#1695ea,5px,border:2px solid cyan]</span><br><span class="line">&#123;</span><br><span class="line">e^x=\lim_&#123;n\to\infty&#125; \left( 1+\frac&#123;x&#125;&#123;n&#125; \right)^n</span><br><span class="line">\qquad (2)</span><br><span class="line">&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+
+$$ \bbox[#1695ea,5px,border:2px solid cyan]
+{
+e^x=\lim_{n\to\infty} \left( 1+\frac{x}{n} \right)^n
+\qquad (2)
+}
+$$
+
+<hr>
+<p>本文完</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/mathjax/" rel="tag">#mathjax</a>
+          
+            <a href="/tags/教程/" rel="tag">#教程</a>
+          
+            <a href="/tags/参考/" rel="tag">#参考</a>
+          
+            <a href="/tags/进阶/" rel="tag">#进阶</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/article/object-property-accessor.html" rel="next" title="对象属性访问的两种方式">
+                <i class="fa fa-chevron-left"></i> 对象属性访问的两种方式
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article> 
+  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="article/mathjax-advanced.html"
+           data-title="MathJax进阶" data-url="http://xovel.cn/article/mathjax-advanced.html">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/xovel.jpg"
+               alt="xovel" />
+          <p class="site-author-name" itemprop="name">xovel</p>
+          <p class="site-description motion-element" itemprop="description">缓缓之间，风云静变</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">41</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">98</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xovel" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://hdk4.com" target="_blank" title="hdk4.com">
+                  
+                    <i class="fa fa-fw fa-adjust"></i>
+                  
+                  hdk4.com
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#矩阵"><span class="nav-number">1.</span> <span class="nav-text">矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对齐的方程式"><span class="nav-number">2.</span> <span class="nav-text">对齐的方程式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分段函数"><span class="nav-number">3.</span> <span class="nav-text">分段函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组表格化"><span class="nav-number">4.</span> <span class="nav-text">数组表格化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#带颜色的文本"><span class="nav-number">5.</span> <span class="nav-text">带颜色的文本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#交叉线"><span class="nav-number">6.</span> <span class="nav-text">交叉线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修饰符"><span class="nav-number">7.</span> <span class="nav-text">修饰符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签与标记"><span class="nav-number">8.</span> <span class="nav-text">标签与标记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义命令"><span class="nav-number">9.</span> <span class="nav-text">自定义命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#任意操作符"><span class="nav-number">10.</span> <span class="nav-text">任意操作符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#极限"><span class="nav-number">11.</span> <span class="nav-text">极限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高亮"><span class="nav-number">12.</span> <span class="nav-text">高亮</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xovel</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io" rel="external nofollow" target="_blank">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow" target="_blank">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"xovel"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+  <!--
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>-->
+  
+  <script type="text/x-mathjax-config">
+	MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+						tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+						TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+						messageStyle: "none"
+});
+</script>  
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+  
+</body>
+</html>
