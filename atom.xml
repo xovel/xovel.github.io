@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-11-10T02:45:54.507Z</updated>
+  <updated>2016-11-11T08:20:42.618Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>双十一小记</title>
+    <link href="http://xovel.cn/article/double-eleven-a-ironic-day.html"/>
+    <id>http://xovel.cn/article/double-eleven-a-ironic-day.html</id>
+    <published>2016-11-11T06:39:56.000Z</published>
+    <updated>2016-11-11T08:20:42.618Z</updated>
+    
+    <content type="html">&lt;p&gt;又是一年剁手时节，今年的双十一，我没有打算花费过多费用在购物上面，毕竟有些东西还是实体店购买来的更加方便可靠。&lt;/p&gt;
+&lt;p&gt;众所周知，眼下的双十一是一个电商狂欢节，起初，它的目的并不像现在这般，只是为了倾销堆积商品。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;后来，淘宝和天猫积压的商品在双十一之后仍旧过多，唯品会借助这个机会，弯道超车，另辟蹊径，成为了另一个大的电商平台。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;淘宝和天猫在双十一峰值的时候会达到十多万每秒的高并发请求数量（2015年的数据），这无疑是一个巨大的挑战。在今年这个数据可能会更高，据相关推算，今年的峰值并发量将会达到百万级。&lt;/p&gt;
+&lt;p&gt;那么，在应对如此巨大的并发请求的时候，通常采用的方式是什么呢？&lt;/p&gt;
+&lt;p&gt;应对高并发，有两个很重要的概念：缓存与异步。&lt;/p&gt;
+&lt;h3 id=&quot;缓存&quot;&gt;&lt;a href=&quot;#缓存&quot; class=&quot;headerlink&quot; title=&quot;缓存&quot;&gt;&lt;/a&gt;缓存&lt;/h3&gt;&lt;p&gt;缓存，即&lt;code&gt;cache&lt;/code&gt;，应对高并发场景，可以在用户行为的所有环节上添加一个合理的缓存操作。首先对浏览器端进行Cache设置，设置合理的过期规则，配合CDN，让部分元素直接从浏览器的Cache获取，有效降低服务器的访问压力。&lt;/p&gt;
+&lt;p&gt;业务层表现方式为动态和静态，大部分资源可以使用静态CDN的方式进行加速获取并展示。添加CDN Cache，可以大幅提升访问速度，同时降低后端实际负载。&lt;/p&gt;
+&lt;h3 id=&quot;异步&quot;&gt;&lt;a href=&quot;#异步&quot; class=&quot;headerlink&quot; title=&quot;异步&quot;&gt;&lt;/a&gt;异步&lt;/h3&gt;&lt;p&gt;使用非阻塞模式，也可以快速提升访问速度。异步化队列通过队列将请求或事务置入后台运行，从而使得同步阻塞模式变为异步非阻塞模式。&lt;/p&gt;
+&lt;p&gt;比如，多个用户在抢购同一个商品时，会同时调用支付借口，同步阻塞模式的情形下，用户过多时，支付数据库的压力会非常大，可能会引起数据库服务器宕机。&lt;/p&gt;
+&lt;h3 id=&quot;分布式&quot;&gt;&lt;a href=&quot;#分布式&quot; class=&quot;headerlink&quot; title=&quot;分布式&quot;&gt;&lt;/a&gt;分布式&lt;/h3&gt;&lt;p&gt;在处理商品展示和购买操作的时候选用了分布式数据库解决方案。据悉，天猫淘宝采用的交易库应该是&lt;code&gt;OceanBase&lt;/code&gt;，为了保持数据一致性，采用了&lt;code&gt;Paxos&lt;/code&gt;协议。具体可以参考知乎上面的这个回答：&lt;a href=&quot;https://www.zhihu.com/question/37421030/answer/72860789&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;天猫双十一是怎么保证高并发、分布式系统中，数据一致性的？&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;del&gt;有点偏离主题思路了，这篇文章就先写到这里吧&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;下面是一些参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://kb.cnblogs.com/page/508432/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;逃不掉的双十一 可怕的分布式架构隐患&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://cbinews.baijia.baidu.com/article/247864&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;技术大揭秘：阿里双11“逆天”记录是如何做到的？&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://geek.csdn.net/news/detail/74130&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;电商系统的高并发设计和挑战&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      今天是双十一，这只是一篇随笔。稍微讲一下大量并发请求出现的时候相应的解决方案。
+    
+    </summary>
+    
+      <category term="开发" scheme="http://xovel.cn/categories/dev/"/>
+    
+    
+      <category term="并发" scheme="http://xovel.cn/tags/%E5%B9%B6%E5%8F%91/"/>
+    
+      <category term="双十一" scheme="http://xovel.cn/tags/%E5%8F%8C%E5%8D%81%E4%B8%80/"/>
+    
+      <category term="服务器" scheme="http://xovel.cn/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="分布式" scheme="http://xovel.cn/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>《杜月笙全传》读后感</title>
@@ -1588,43 +1634,6 @@ object[&amp;quot;property&amp;quot;]
     <summary type="html">
     
       人生总是在各种迷失，面对这花花世界，我似乎又迷失了方向。《迷失》第二篇。
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
-    
-    
-      <category term="生活" scheme="http://xovel.cn/tags/life/"/>
-    
-      <category term="迷失" scheme="http://xovel.cn/tags/%E8%BF%B7%E5%A4%B1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>迷失在这五彩斑斓的世界</title>
-    <link href="http://xovel.cn/article/i-am-lost-in-the-colorful-world.html"/>
-    <id>http://xovel.cn/article/i-am-lost-in-the-colorful-world.html</id>
-    <published>2016-08-25T08:43:44.000Z</published>
-    <updated>2016-08-25T09:09:50.339Z</updated>
-    
-    <content type="html">&lt;p&gt;《迷失》应该是一个系列，这里是第一篇。&lt;/p&gt;
-&lt;p&gt;没有想过要叙写这样一个系列的文章，但最近发生的太多事情让我不得不重新考虑。&lt;/p&gt;
-&lt;p&gt;要说最近能够令自己后悔的事情，就要回到三个多月之前了。当时刚从上一个公司离职出来，迫于经济压力，出来重新找工作。几经周折，去了新环境那边面试。然而当天的状态不是太好，一个很简单的效果没有及时做出来，现在想想也不知道自己当时到底是一个什么样的状态。没有把自己应有的实力表现出来，遗憾的与新环境擦身而过。&lt;/p&gt;
-&lt;p&gt;回忆袭来，我大概还能想起当时那个面试考官出的题目：H5实现图片半屏倒影效果，并在下拉时文字半透明。很久没有专门针对移动端H5页面功能做开发的我有点慌张，实现了图片倒影效果（&lt;code&gt;-webkit-reflect&lt;/code&gt;），可能是由于太紧张，半屏效果忘记给&lt;code&gt;height:50%&lt;/code&gt;了，如此的失误事后回想起来也是很忧伤。&lt;/p&gt;
-&lt;p&gt;下拉时文字半透明，我说了思路，但由于时间问题，没有做实现。作为一个很少使用jQuery这种框架的人来说，突然要写代码实现这种效果，还是有点措手不及的感觉呢。但这个其实并不难，只是监听下拉事件，然后给对应元素一个&lt;code&gt;opacity&lt;/code&gt;实现透明度效果；或者使用CSS3的渐变；甚至使用蒙层遮盖效果。&lt;/p&gt;
-&lt;p&gt;考官看我太紧张，便说这个确实有点麻烦，换一个简单一点的题目吧：实现元素hover时（已经转移到PC端，可见考官的要求已然变得很低很低了）图标上下循环波动的效果。我果然还是太紧张了呢，竟然都忘记了&lt;code&gt;background-position&lt;/code&gt;这个东西了。当时用的是&lt;code&gt;position&lt;/code&gt;和&lt;code&gt;top&lt;/code&gt;来实现位置的变化。无奈由于对相对位置的模糊，仓促之间，失败了。&lt;/p&gt;
-&lt;p&gt;心灰意冷的我，便跟那个考官说一点其他的事情，然后就离开了。&lt;/p&gt;
-&lt;p&gt;下楼之后，我回头望了一眼那一座大楼，恨恨的回去了。作为一个有过面试别人经验的人来说，自己也无法通过自己这样的状态。&lt;/p&gt;
-&lt;p&gt;虽然后来我还是实现了上述效果，关于倒影的效果在本人的实验项目中有体现&lt;a href=&quot;https://github.com/xovel/Carousel3D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Carousel3D&lt;/a&gt;，关于动画，也整理过相关的文章：&lt;a href=&quot;http://xovel.cn/article/css-animation.html&quot;&gt;CSS - animation简介&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;但这又能改变什么！&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;不得不说新环境公司最近的发展势头还是挺厉害的，没能展现自己良好的一面固然是我的命运，现在也只能感慨嘘唏，当作是一个不大不小的遗憾了。&lt;/p&gt;
-&lt;p&gt;我是一个程序员，多么嘲讽的现实。总是在各种迷失之间徘徊。&lt;/p&gt;
-&lt;p&gt;以上，此为《迷失》第一篇，当作是一个吐槽。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      人生总是在各种迷失，面对这花花世界，我似乎又迷失了方向。《迷失》第一篇。
     
     </summary>
     
