@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-11-14T08:45:04.621Z</updated>
+  <updated>2016-11-16T09:14:27.211Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客优化之压缩HTML静态文件</title>
+    <link href="http://xovel.cn/article/minify-static-html-files.html"/>
+    <id>http://xovel.cn/article/minify-static-html-files.html</id>
+    <published>2016-11-16T09:07:40.000Z</published>
+    <updated>2016-11-16T09:14:27.211Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;本文来自博客issue&lt;a href=&quot;https://github.com/xovel/xovel.github.io/issues/16&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;#16&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用了&lt;code&gt;next&lt;/code&gt;主题之后，默认生成的HTML文件中，会出现大量的空行。直接查看网页源代码就能够看到。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;hexo&lt;/code&gt;默认没有提供压缩HTML/CSS/JS的功能，但我们可以通过另外的途径进行代码的压缩。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;之前的版本，有一个名为&lt;code&gt;hexo-generator-minify&lt;/code&gt;的插件，但已经无人维护，不支持hexo 3.x版本。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://hexo.io/plugins/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方插件库&lt;/a&gt;能搜到的压缩插件，均有不同程度的问题。详情这里不表，具体诸君可以自行安装测试。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这里介绍一种&lt;a href=&quot;https://github.com/gulpjs/gulp&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;gulp&lt;/code&gt;&lt;/a&gt;自动化任务压缩的方式来处理这个问题，缺陷就是每一次blog在deploy的时候都需要事先执行一次这个压缩任务。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本人的博客曾经开启过压缩功能，但后来放弃了。&lt;del&gt;一方面是嫌麻烦，一方面也是觉得暂时没有这个必要&lt;/del&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本人采用的具体压缩工具为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/jonschlinkert/gulp-htmlmin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;gulp-htmlmin&lt;/a&gt;，该插件对HTML代码进行压缩。&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/anseki/gulp-htmlclean&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;gulp-htmlclean&lt;/a&gt;，该插件对HTML进行代码清理，去除不必要的空行等。&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/scniro/gulp-clean-css&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;gulp-clean-css&lt;/a&gt;，该插件对CSS代码进行压缩与清理。&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;另外有一个图片压缩工具，暂未使用：&lt;a href=&quot;https://github.com/sindresorhus/gulp-imagemin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;gulp-imagemin&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;JS压缩工具可以参考：&lt;a href=&quot;https://github.com/terinjokes/gulp-uglify&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;gulp-uglify&lt;/a&gt;、&lt;a href=&quot;https://github.com/mishoo/UglifyJS2&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;UglifyJS2&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;引入各种插件：&lt;br&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; gulp = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;gulp&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; htmlmin = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;gulp-htmlmin&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; htmlclean = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;gulp-htmlclean&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; cleanCSS = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;gulp-clean-css&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; imagemin = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;gulp-imagemin&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;本人采用的核心的任务代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;gulp.task(&lt;span class=&quot;string&quot;&gt;&#39;minify-html&#39;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; gulp.src(&lt;span class=&quot;string&quot;&gt;&#39;./public/**/*.html&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .pipe(htmlclean())&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .pipe(htmlmin(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         removeComments: &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         minifyJS: &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         minifyCSS: &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         minifyURLs: &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .pipe(gulp.dest(&lt;span class=&quot;string&quot;&gt;&#39;./public&#39;&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;那么，在每一次deploy之前，在&lt;code&gt;Git Bash&lt;/code&gt;下执行一次&lt;code&gt;gulp minify-html&lt;/code&gt;即可对所有的HTML代码进行压缩。&lt;/p&gt;
+&lt;p&gt;CSS和JS的压缩可以编写类似的代码，这里不再赘述。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      博客优化之压缩HTML静态文件，本文介绍一种使用gulp的处理方式来解决这个问题。
+    
+    </summary>
+    
+      <category term="开发" scheme="http://xovel.cn/categories/dev/"/>
+    
+    
+      <category term="blog" scheme="http://xovel.cn/tags/blog/"/>
+    
+      <category term="优化" scheme="http://xovel.cn/tags/%E4%BC%98%E5%8C%96/"/>
+    
+      <category term="gulp" scheme="http://xovel.cn/tags/gulp/"/>
+    
+      <category term="minify" scheme="http://xovel.cn/tags/minify/"/>
+    
+  </entry>
   
   <entry>
     <title>双十一小记</title>
@@ -1601,43 +1652,6 @@ object[&amp;quot;property&amp;quot;]
     <summary type="html">
     
       人生总是在各种迷失，面对这花花世界，我似乎又迷失了方向。《迷失》第三篇。
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
-    
-    
-      <category term="生活" scheme="http://xovel.cn/tags/life/"/>
-    
-      <category term="迷失" scheme="http://xovel.cn/tags/%E8%BF%B7%E5%A4%B1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>迷失在这五彩斑斓的世界 - 2</title>
-    <link href="http://xovel.cn/article/i-am-lost-in-the-colorful-world-2.html"/>
-    <id>http://xovel.cn/article/i-am-lost-in-the-colorful-world-2.html</id>
-    <published>2016-08-26T09:14:00.000Z</published>
-    <updated>2016-08-26T09:51:57.613Z</updated>
-    
-    <content type="html">&lt;p&gt;迷失第二篇。&lt;/p&gt;
-&lt;p&gt;在第一篇里面提到了新环境的面试过程，对我造成的迷失感持续了很长一段时间。后来我骑着车游荡在长沙的大街小巷，在骑到靠近烈士公园的地方之时，当时已经是下午五点多，接到了一个来自潭州教育人事美眉——昵称叫做本本——的一通电话。简单说明了一下情况之后，对方有意邀请我前去其公司做一个面试。由于周末有安排，我便拒绝了。&lt;/p&gt;
-&lt;p&gt;过了几天，本本再一次联系了我，再次邀请我前去做一个技术面试。当时我并不知道他们是如何知道的信息，可能是我在58和拉勾网上投出去的简历吧。这一次依然以没空婉拒了。&lt;/p&gt;
-&lt;p&gt;本以为与之再无交集，谁知这个本本有着锲而不舍的精神，再一次跟我联系了。于是，我怀着看看的态度，在某个周末&lt;del&gt;2016.5.14&lt;/del&gt;，赶车前去了。潭州教育给人的总体印象很好，在芯城科技园弄了两栋大楼，应该说在这个科技园里面是为数不多的大公司。&lt;/p&gt;
-&lt;p&gt;去的时候没有见到本本，因为当时她是休息时间，没有来上班。另外一个人事美女安排我填了一张表，上面所列出的问题有点令人看不懂，还做了一份性格测试。&lt;del&gt;又是可怕的性格测试，这里不做多言了&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;填完表格之后，过了一段时间，一个不知道什么岗位的人过来找我稍稍聊了一下，由于印象不是很深刻，我已经忘记当时到底交流了一些什么事情了。然后就回去了。&lt;/p&gt;
-&lt;p&gt;本以为没有下文了，在下一个周一的时候，本本打电话给我了，叫我安排一个时间去复试。一脸懵逼的我心里在想，这都能通过初试，到底是一个情况，细问之下才知道那天面试我的人并不是什么核心考官，只是侧面了解一下我的情况。对我表现出来的状态还是认可的，所以就给了一个通过的判定。&lt;/p&gt;
-&lt;p&gt;行吧，复试就复试吧，就当做再去河西转一圈，呼吸一下那边的新鲜空气。&lt;/p&gt;
-&lt;p&gt;复试的考官是个有来头的人物，我也后来才得知他的信息——潭州教育首席文化梦想官。跟我聊了一下我之前做过的事情，针对业务逻辑这方面的事情多聊了一天。我直言对这个不是很清楚，毕竟那个时候自己对业务逻辑这个概念都鲜少听闻，更别说什么深入理解了。所以可以说整体上聊的不是很好，或许是本身沉默寡言的性格有点吸引对方，对方向我跑出了橄榄枝。&lt;/p&gt;
-&lt;p&gt;如果能加入潭州教育，我将会处理的事情是高级前端课程的研发。没有想过要当教师的我，一开始内心是抗拒的，事实上其实也是拒绝了。总而言之最终还是离开了。&lt;/p&gt;
-&lt;p&gt;出的的芯城科技园，我就自嘲：“开什么玩笑，高级课程研发？”&lt;/p&gt;
-&lt;p&gt;是啊，&lt;strong&gt;开什么玩笑，高级课程研发？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;当时其实还是有点迷茫的，算是又一次迷失吧。以上，《迷失》第二篇。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      人生总是在各种迷失，面对这花花世界，我似乎又迷失了方向。《迷失》第二篇。
     
     </summary>
     
