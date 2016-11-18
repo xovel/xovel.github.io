@@ -66,7 +66,7 @@
 <meta property="og:url" content="http://xovel.cn/article/minify-static-html-files.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="博客优化之压缩HTML静态文件，本文介绍一种使用gulp的处理方式来解决这个问题。">
-<meta property="og:updated_time" content="2016-11-16T09:14:27.211Z">
+<meta property="og:updated_time" content="2016-11-18T10:12:39.105Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客优化之压缩HTML静态文件">
 <meta name="twitter:description" content="博客优化之压缩HTML静态文件，本文介绍一种使用gulp的处理方式来解决这个问题。">
@@ -326,6 +326,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(<span class="string">'minify-html'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> gulp.src(<span class="string">'./public/**/*.html'</span>)</span><br><span class="line">    .pipe(htmlclean())</span><br><span class="line">    .pipe(htmlmin(&#123;</span><br><span class="line">         removeComments: <span class="literal">true</span>,</span><br><span class="line">         minifyJS: <span class="literal">false</span>,</span><br><span class="line">         minifyCSS: <span class="literal">true</span>,</span><br><span class="line">         minifyURLs: <span class="literal">false</span>,</span><br><span class="line">    &#125;))</span><br><span class="line">    .pipe(gulp.dest(<span class="string">'./public'</span>))</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>那么，在每一次deploy之前，在<code>Git Bash</code>下执行一次<code>gulp minify-html</code>即可对所有的HTML代码进行压缩。</p>
 <p>CSS和JS的压缩可以编写类似的代码，这里不再赘述。</p>
+<hr>
 
       
     </div>
