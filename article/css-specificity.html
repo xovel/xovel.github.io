@@ -66,7 +66,7 @@
 <meta property="og:url" content="http://xovel.cn/article/css-specificity.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="一个元素，其对应的CSS选择可以有很多个。如果同一个元素的某个样式，使用了两个不同的CSS选择器进行定义，那么最终使用的到底是哪一个呢？于是这里就引入了一个概念，最初叫做cascade order，后来的官方文档中间叫做specificity。这个单词翻译成中文叫做特异性、特性，其概念与C语言中运算符的优先级类似，所以也称之为CSS优先级。">
-<meta property="og:updated_time" content="2016-06-20T00:39:36.176Z">
+<meta property="og:updated_time" content="2016-11-18T07:00:40.092Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS权重">
 <meta name="twitter:description" content="一个元素，其对应的CSS选择可以有很多个。如果同一个元素的某个样式，使用了两个不同的CSS选择器进行定义，那么最终使用的到底是哪一个呢？于是这里就引入了一个概念，最初叫做cascade order，后来的官方文档中间叫做specificity。这个单词翻译成中文叫做特异性、特性，其概念与C语言中运算符的优先级类似，所以也称之为CSS优先级。">
@@ -390,7 +390,7 @@ LI.red.level    /* a=0 b=2 c=1 -&gt; specificity =  21 */
 <p>内联样式的权重值是1000，ID选择器的权重值是100，class选择器的权重值是10，标签选择器的权重值是1。整条规则中的所有选择器权重值相加得到整个样式规则的权重值，数字越大权重值越高。</p>
 </blockquote>
 <p>虽然总结的很不错，但是如果遇到以下的情形，岂不是就<del>懵逼</del>了？</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span> <span class="selector-tag">body</span> <span class="selector-tag">article</span> <span class="selector-tag">div</span> <span class="selector-tag">table</span> <span class="selector-tag">tr</span> <span class="selector-tag">td</span> <span class="selector-tag">p</span> <span class="selector-tag">a</span> <span class="selector-tag">span</span> <span class="selector-tag">i</span>&#123; <span class="attribute">color</span>: black; &#125;</span><br><span class="line"><span class="selector-class">.icon-text</span>&#123; <span class="attribute">color</span>: white; &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">html</span> <span class="selector-tag">body</span> <span class="selector-tag">article</span> <span class="selector-tag">div</span> <span class="selector-tag">table</span> <span class="selector-tag">tr</span> <span class="selector-tag">td</span> <span class="selector-tag">p</span> <span class="selector-tag">a</span> <span class="selector-tag">span</span> <span class="selector-tag">i</span>&#123; <span class="attribute">color</span>: black; &#125;</div><div class="line"><span class="selector-class">.icon-text</span>&#123; <span class="attribute">color</span>: white; &#125;</div></pre></td></tr></table></figure>
 <p>那么问题来了：如果以上两条选择器对应着同一个元素，那么它的颜色到底是什么呢？</p>
 <ul>
 <li><del>我不会告诉你它是白色的</del></li><li><del>竟然用了11个标签名字</del></li><li><del>会不会有人用11个类名呢</del></li><li><del>据说这样的错误的经验同样出现在了《CSS 权威指南》一书中，<strong>第二版已修复</strong></del></li><li><del>我的确是钻牛角尖咯</del></li></ul>
@@ -405,8 +405,8 @@ LI.red.level    /* a=0 b=2 c=1 -&gt; specificity =  21 */
 <li><del>不支持拉倒</del></li></ul>
 </li><li><strong>不建议使用<code>!important</code>方法</strong>，<del>免得一不小心弄了很多个出来，显得尴尬</del>。详情请参阅：<a href="https://www.smashingmagazine.com/2010/11/the-important-css-declaration-how-and-when-to-use-it/" target="_blank" rel="external">!important CSS Declarations: How and When to Use Them</a></li></ul>
 <h4 id="继承inherite"><a href="#继承inherite" class="headerlink" title="继承inherite"></a>继承<code>inherite</code></h4><p>关于CSS样式继承，由于并非元素本身的样式定义，所以连个优先级都谈不上，其优先级将被直接忽略。</p>
-<h4 id="“诡异”的伪元素"><a href="#“诡异”的伪元素" class="headerlink" title="“诡异”的伪元素"></a>“诡异”的伪元素</h4><p>我们先来看一下一段CSS代码：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:first-letter</span>&#123;<span class="attribute">color</span>:red;&#125;</span><br></pre></td></tr></table></figure></p>
-<p>对应的HTML代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"color:cyan;"</span>&gt;</span>A<span class="tag">&lt;/<span class="name">span</span>&gt;</span>BCDEFG<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="“诡异”的伪元素"><a href="#“诡异”的伪元素" class="headerlink" title="“诡异”的伪元素"></a>“诡异”的伪元素</h4><p>我们先来看一下一段CSS代码：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:first-letter</span>&#123;<span class="attribute">color</span>:red;&#125;</div></pre></td></tr></table></figure></p>
+<p>对应的HTML代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"color:cyan;"</span>&gt;</span>A<span class="tag">&lt;/<span class="name">span</span>&gt;</span>BCDEFG<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>那么，这个字母A到底会是什么颜色呢？</p>
 <blockquote>
 <p>伪元素测试：<a href="http://runjs.cn/code/52lchoew" target="_blank" rel="external">Test 4</a></p>

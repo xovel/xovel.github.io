@@ -66,7 +66,7 @@
 <meta property="og:url" content="http://xovel.cn/article/undefined-and-void-0.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="简单介绍一下undefined与void 0。">
-<meta property="og:updated_time" content="2016-10-11T08:23:55.327Z">
+<meta property="og:updated_time" content="2016-11-18T07:00:40.177Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于undefined与void 0">
 <meta name="twitter:description" content="简单介绍一下undefined与void 0。">
@@ -332,9 +332,9 @@
 <p>当初我在构建本人的JS类库的时候也采用了void的方式，具体代码可参阅<a href="https://github.com/xovel/qslinz/blob/v0.1.3/QsLinz.0.1.3.js#L341" target="_blank" rel="external">xovel/qslinz</a>。</p>
 <hr>
 <p>有一个更加黑科技的undefined使用方法，相信很多人都知道jQuery的代码曾经有过这样的书写方式：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">window, undefined</span>)</span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;)(<span class="built_in">window</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">window, undefined</span>)</span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;)(<span class="built_in">window</span>)</div></pre></td></tr></table></figure>
 <p>其用意也很明显，直接指定undefined的值。在压缩之后代码变为：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">e,t</span>)</span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;)(<span class="built_in">window</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">e,t</span>)</span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;)(<span class="built_in">window</span>)</div></pre></td></tr></table></figure>
 <p>ES5之后的标准中，规定了全局变量下的undefined值为只读，不可改写的，但是局部变量中依然可以对之进行改写。jQuery直接指定<code>undefined</code>为undefined。</p>
 
       

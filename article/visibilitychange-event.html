@@ -66,7 +66,7 @@
 <meta property="og:url" content="http://xovel.cn/article/visibilitychange-event.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="本文简单介绍一下Page Visibility API，利用document的visibilitychange可以做一些有趣的事情。">
-<meta property="og:updated_time" content="2016-10-09T01:57:04.097Z">
+<meta property="og:updated_time" content="2016-11-18T07:00:40.177Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Page Visibility API之visibilitychange事件简介">
 <meta name="twitter:description" content="本文简单介绍一下Page Visibility API，利用document的visibilitychange可以做一些有趣的事情。">
@@ -307,7 +307,7 @@
 <p>利用这个特性，我们可以针对性的做出一些动作，比如提醒用户已经离开该页面。特别是在播放视频的页面，当页面丢失焦点之后可以利用这个API做出一些特定的动作以提升网页的用户体验，比如暂停视频的播放。</p>
 <p>注意：在使用了<code>iframe</code>的页面中，iframe的visibility属性跟随父文档。</p>
 <h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p><em>页面失去焦点后改变文档的标题</em></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"visibilitychange"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">document</span>.title = <span class="string">'new title~'</span>;</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"visibilitychange"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="built_in">document</span>.title = <span class="string">'new title~'</span>;</div><div class="line">&#125;, <span class="literal">false</span>);</div></pre></td></tr></table></figure>
 <h3 id="浏览器兼容性"><a href="#浏览器兼容性" class="headerlink" title="浏览器兼容性"></a>浏览器兼容性</h3><p><del>该小节内容改编自MDN文档，请参考最新的兼容性说明页面<a href="http://caniuse.com/#feat=pagevisibility" target="_blank" rel="external">Page Visibility - Can I Use</a></del></p>
 <p><strong>桌面浏览器</strong></p>
 <table>

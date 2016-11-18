@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="lang,html,前端," />
+  <meta name="keywords" content="前端,lang,html," />
 
 
 
@@ -66,7 +66,7 @@
 <meta property="og:url" content="http://xovel.cn/article/language-tags-in-html.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="很多网站中，都会对html标签设置一个lang属性，用来指定网页采用的语言类型。英文网站中，这个值通常是en，即&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;，而在中文网站中，这个值就变得光怪陆离了。在以前，最常见的两个设置方式是&amp;lt;html lang=&amp;quot;zh&amp;quot;&amp;gt;和&amp;lt;html lang=&amp;quot;zh-cn&amp;quot;&amp;gt;，那么，这究竟是">
-<meta property="og:updated_time" content="2016-07-22T02:55:30.482Z">
+<meta property="og:updated_time" content="2016-11-18T07:00:40.092Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML的lang标记">
 <meta name="twitter:description" content="很多网站中，都会对html标签设置一个lang属性，用来指定网页采用的语言类型。英文网站中，这个值通常是en，即&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;，而在中文网站中，这个值就变得光怪陆离了。在以前，最常见的两个设置方式是&amp;lt;html lang=&amp;quot;zh&amp;quot;&amp;gt;和&amp;lt;html lang=&amp;quot;zh-cn&amp;quot;&amp;gt;，那么，这究竟是">
@@ -320,14 +320,14 @@
 <p>知乎上有一个针对这个问题进行过细致讨论的页面：<a href="https://www.zhihu.com/question/20797118" target="_blank" rel="external">网页头部的声明应该是用 lang=”zh” 还是 lang=”zh-cn”？</a>。本文将根据这个问题的各个答案进行一个综合整理，记录HTML中这些有意思的东西。</p>
 <h3 id="HTML标签的lang属性"><a href="#HTML标签的lang属性" class="headerlink" title="HTML标签的lang属性"></a>HTML标签的lang属性</h3><p>HTML标签的lang属性将指定对应元素内容的语言。<blockquote><p>The lang attribute (in no namespace) specifies the primary language for the element’s contents and for any of the element’s attributes that contain text. Its value must be a valid BCP 47 language tag, or the empty string. Setting the attribute to the empty string indicates that the primary language is unknown.</p>
 <footer><strong>The lang and xml:lang attributes</strong><cite><a href="https://www.w3.org/TR/html5/dom.html#the-lang-and-xml:lang-attributes" target="_blank" rel="external">www.w3.org/TR/html5/dom.html#the-lang-and-xml:lang-attributes</a></cite></footer></blockquote><br>大多数情况下，直接对<code>html</code>标签指定lang属性，表示当前文档显示的语言。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"ar"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"ar"</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>以上代码意味着该网页的内容显示文本为阿拉伯语。</p>
 <p>在一些HTML4/XHTML的页面中，则有使用这样的方式进行指定的：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span> <span class="attr">lang</span>=<span class="string">"en"</span> <span class="attr">xml:lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span> <span class="attr">lang</span>=<span class="string">"zh-CN"</span> <span class="attr">xml:lang</span>=<span class="string">"zh-CN"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span> <span class="attr">lang</span>=<span class="string">"en"</span> <span class="attr">xml:lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span> <span class="attr">lang</span>=<span class="string">"zh-CN"</span> <span class="attr">xml:lang</span>=<span class="string">"zh-CN"</span>&gt;</span></div></pre></td></tr></table></figure>
 <ul>
 <li>en定义语言为英语</li><li>zh-CN定义语言为中文</li></ul>
 <p>也有一些多语言的页面会对指定元素的lang属性进行设置，如：</p>
-<figure class="highlight html"><figcaption><span>指定该p标签的语言为德语</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">lang</span>=<span class="string">"de"</span>&gt;</span>Ich bin der brennende Komet<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><figcaption><span>指定该p标签的语言为德语</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">lang</span>=<span class="string">"de"</span>&gt;</span>Ich bin der brennende Komet<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
 <h4 id="指定lang属性的益处"><a href="#指定lang属性的益处" class="headerlink" title="指定lang属性的益处"></a>指定lang属性的益处</h4><ol>
 <li>协助搜索引擎</li><li>协助语音合成</li><li>协助选择符号异体字用于高品质的印刷</li><li>协助选择一套引号</li><li>协助解决连字符、绑定和空格</li><li>协助进行拼写检查和语法检查</li></ol>
 <h3 id="语言文字标签书写顺序"><a href="#语言文字标签书写顺序" class="headerlink" title="语言文字标签书写顺序"></a>语言文字标签书写顺序</h3><p>规定语言标签按以下形式排列：<blockquote><p>language-extlang-script-region-variant-extension-privateuse</p>
@@ -456,11 +456,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/frontend/" rel="tag">#前端</a>
+          
             <a href="/tags/lang/" rel="tag">#lang</a>
           
             <a href="/tags/html/" rel="tag">#html</a>
-          
-            <a href="/tags/frontend/" rel="tag">#前端</a>
           
         </div>
       
