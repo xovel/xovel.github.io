@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-11-18T07:00:40.177Z</updated>
+  <updated>2016-12-10T08:22:00.766Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,72 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Foxmail接收密码错误的处理</title>
+    <link href="http://xovel.cn/article/fix-foxmail-receive-password-error.html"/>
+    <id>http://xovel.cn/article/fix-foxmail-receive-password-error.html</id>
+    <published>2016-12-10T07:43:49.000Z</published>
+    <updated>2016-12-10T08:22:00.766Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近在使用Foxmail邮箱的时候出现了一个问题，在接收邮件的时候会弹出一个提示框，说密码错误。</p>
+<a id="more"></a>
+<p><img src="http://ww3.sinaimg.cn/large/79be2309gw1falr9xhz16j20du09qglx.jpg" alt=""></p>
+<p><del>一开始我还真以为是密码错误了，</del>修改了密码，再去登录，依然有这个提示。</p>
+<p>打开搜索引擎搜了一下，发现有这个问题的人并不是只有我一个，看了几篇文章之后发现，竟然是跟一个叫<code>IMAP</code>的东西有关的。</p>
+<blockquote>
+<p><code>IMAP</code>，即<strong>I</strong>nternet <strong>M</strong>essage <strong>A</strong>ccess <strong>P</strong>rotocol（互联网邮件访问协议），您可以通过这种协议从邮件服务器上获取邮件的信息、下载邮件等。IMAP与POP类似，都是一种邮件获取协议。</p>
+</blockquote>
+<p>参考信息来自于：<a href="http://service.mail.qq.com/cgi-bin/help?subtype=1&amp;&amp;id=28&amp;&amp;no=331" target="_blank" rel="external">QQ邮箱帮助中心</a></p>
+<p>不管它的目的是什么，总归是为了安全方面的问题，必须要支持。</p>
+<blockquote>
+<p>其实在弹出的提示框中有链接，里面就是解决办法，我是舍近求远了。<a href="http://service.mail.qq.com/cgi-bin/help?subtype=1&amp;&amp;id=28&amp;&amp;no=1001256" target="_blank" rel="external">什么是授权码，它又是如何设置？_QQ邮箱帮助中心</a></p>
+</blockquote>
+<p>那么，问题出现了应该怎么去解决呢？</p>
+<p>设置这个密码并填写进那个提示框即可，详细步骤如下：</p>
+<blockquote>
+<p>我用的是QQ邮箱，这里演示以这个为准，其他邮箱的操作应该是类似的。</p>
+</blockquote>
+<p>首先，登录网页版邮箱，在<strong>帐户设置</strong>相关的页面中，找到<code>POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务</code>一项，如图：</p>
+<p><img src="http://ww2.sinaimg.cn/large/79be2309gw1falr9xzlk5j20qk092aas.jpg" alt=""></p>
+<p>开启<code>IMAP/SMTP服务</code>，会要求一个验证：</p>
+<p><img src="http://ww4.sinaimg.cn/large/79be2309gw1falr9ygetoj20f70adaa6.jpg" alt=""></p>
+<p>验证一下即可，验证通过后会给出一个验证码：</p>
+<p><img src="http://ww1.sinaimg.cn/large/79be2309gw1falr9ygsi5j20hv0baq3c.jpg" alt=""></p>
+<p>将这个验证码输入到Foxmail弹出的那个提示对话框中，确认即可。</p>
+<p><img src="http://ww3.sinaimg.cn/large/79be2309gw1falr9yygc1j20g506taa2.jpg" alt=""></p>
+<p>关于<code>IMAP</code>和<code>POP3</code>的区别，在<a href="http://service.mail.qq.com/cgi-bin/help?subtype=1&amp;&amp;id=28&amp;&amp;no=331" target="_blank" rel="external">QQ邮箱的帮助文档</a>中有详细介绍，这里就不赘述了。</p>
+<hr>
+<blockquote>
+<ol>
+<li>截图看起来有点不对劲，可能是<code>win10</code>系统的缘故吧。</li><li>Foxmail的那张截图，中间有乱码，应该是系统编码冲突的原因，暂时不去深究了。</li></ol>
+</blockquote>
+<hr>
+<p>本文完。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在使用Foxmail邮箱的时候出现了一个问题，在接收邮件的时候会弹出一个提示框，说密码错误。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
+    
+    
+      <category term="foxmail" scheme="http://xovel.cn/tags/foxmail/"/>
+    
+      <category term="接收密码" scheme="http://xovel.cn/tags/%E6%8E%A5%E6%94%B6%E5%AF%86%E7%A0%81/"/>
+    
+      <category term="邮箱" scheme="http://xovel.cn/tags/%E9%82%AE%E7%AE%B1/"/>
+    
+      <category term="SMTP" scheme="http://xovel.cn/tags/SMTP/"/>
+    
+      <category term="IMAP" scheme="http://xovel.cn/tags/IMAP/"/>
+    
+      <category term="授权码" scheme="http://xovel.cn/tags/%E6%8E%88%E6%9D%83%E7%A0%81/"/>
+    
+  </entry>
   
   <entry>
     <title>博客优化之压缩HTML静态文件</title>
@@ -1631,36 +1697,6 @@ object[&quot;property&quot;]
       <category term="flex" scheme="http://xovel.cn/tags/flex/"/>
     
       <category term="兼容" scheme="http://xovel.cn/tags/%E5%85%BC%E5%AE%B9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>迷失在这五彩斑斓的世界 - 3</title>
-    <link href="http://xovel.cn/article/i-am-lost-in-the-colorful-world-3.html"/>
-    <id>http://xovel.cn/article/i-am-lost-in-the-colorful-world-3.html</id>
-    <published>2016-08-30T09:54:00.000Z</published>
-    <updated>2016-11-18T07:00:40.139Z</updated>
-    
-    <content type="html"><![CDATA[<p>迷失第三篇。</p>
-<p>其实这里并没有东西，曾经最在意的那个人说过一句话：事不过三。</p>
-<p>我想我还是遵从她的意思吧。</p>
-<p>昨天去检查了一下牙齿，毁坏的程度超出了可控范围，可能会面临非常严重的治疗过程与可怕的结果。我需要权衡一下再做治疗，可能会放弃。</p>
-<p>下周开始继续写作技术类文档吧。</p>
-<p>不再轻易迷失自己，与诸君共勉。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      人生总是在各种迷失，面对这花花世界，我似乎又迷失了方向。《迷失》第三篇。
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
-    
-    
-      <category term="生活" scheme="http://xovel.cn/tags/life/"/>
-    
-      <category term="迷失" scheme="http://xovel.cn/tags/%E8%BF%B7%E5%A4%B1/"/>
     
   </entry>
   
