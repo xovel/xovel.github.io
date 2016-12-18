@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-12-10T08:22:00.766Z</updated>
+  <updated>2016-12-18T16:16:27.498Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,63 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Jade入门级介绍</title>
+    <link href="http://xovel.cn/article/introduction-to-jade.html"/>
+    <id>http://xovel.cn/article/introduction-to-jade.html</id>
+    <published>2016-12-18T15:16:51.000Z</published>
+    <updated>2016-12-18T16:16:27.498Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>最近，到了新的公司上班，接触到的HTML编写方式为使用<code>jade</code>。<del>习惯了手写HTML硬编码的我，一时之间还不太适应这种快速高兴的方式。</del></p>
+<p>我们先通过一个例子来讲述一下这款工具的牛逼之处吧！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">div.container#main Content</div><div class="line">a.btn(href=&quot;javascript:;&quot;,title=&quot;link&quot;) Button</div></pre></td></tr></table></figure>
+<p>经过工具编译后，以上代码将会输出：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span> <span class="attr">id</span>=<span class="string">"main"</span>&gt;</span>Content<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"btn"</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span> <span class="attr">title</span>=<span class="string">"link"</span>&gt;</span>Button<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><del>是不是有种简单粗暴的即视感？</del></p>
+<h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><p>基本属性的写法如下：</p>
+<p>每行开始的第一个单词将会作为HTML标签名，如果没有，则默认为<code>div</code>。</p>
+<p>类名和ID，同CSS选择器的语法——类名为<code>.</code>号开始，如果有多个类名，叠加展示即可。如<code>section.index.tips</code>；ID为<code>#</code>标识。</p>
+<p>HTML元素的其他属性可以写在跟在后面的括号<code>()</code>之内。多个属性，可以使用逗号<code>,</code>或者空格<code> </code>隔开。</p>
+<p>元素内的文本则以一个空格后直接书写。</p>
+<p>Jade采用对缩进敏感的语法，来划分HTML的层次结构。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ul</div><div class="line">  li A </div><div class="line">    span text</div><div class="line">  li B</div><div class="line">  li C</div></pre></td></tr></table></figure>
+<p>将会被编译成：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>A<span class="tag">&lt;<span class="name">span</span>&gt;</span>text<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>B<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">Li</span>&gt;</span>C<span class="tag">&lt;/<span class="name">Li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p><code>jade</code>支持循环。比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- for (var i = 0; i &lt; 3; i++)</div><div class="line">  li item</div></pre></td></tr></table></figure></p>
+<p>将会被编译成：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>item<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>item<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>item<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p><code>jade</code>使用<code>extends</code>来继承代码片段，继承可以修改代码片段。</p>
+<p>页面中使用<code>block</code>标识符，可以指定一个代码片段的名字，比如名字设为<code>name</code>。在需要使用该代码片段的地方，直接使用<code>block name</code>即可。</p>
+<h3 id="文件包含"><a href="#文件包含" class="headerlink" title="文件包含"></a>文件包含</h3><p><code>jade</code>可以使用<code>include</code>语法实现高度复用代码。将这些代码片段保存到不同的文件中，然后在需要的地方进行引入即可。</p>
+<h3 id="混合宏"><a href="#混合宏" class="headerlink" title="混合宏"></a>混合宏</h3><p><code>mixin</code>是<code>jade</code>提供的另一个方法，可以很大程度提升HTML编写的效率。语法类似于<code>sass</code>和<code>less</code>中的混合宏。</p>
+<p>混合宏具有高度复用、解耦、可读、可扩、可维护等特点，是众多预编译语言的共同特点。</p>
+<p><code>jade</code>中使用<code>mixin</code>标识符进行混合宏的创建，在需要的地方使用<code>+</code>标识符进行调用即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">mixin list</div><div class="line">  ul</div><div class="line">    li foo</div><div class="line">    li bar</div><div class="line">    li baz</div><div class="line"></div><div class="line">+list</div><div class="line">+list</div></pre></td></tr></table></figure>
+<p>将会被编译成：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>foo<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>bar<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>baz<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>foo<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>bar<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>baz<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>支持参数的传入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">mixin card(name)</div><div class="line">  li.card= name</div><div class="line">ul</div><div class="line">  +card(&apos;A&apos;)</div><div class="line">  +card(&apos;B&apos;)</div><div class="line">  +card(&apos;C&apos;)</div></pre></td></tr></table></figure></p>
+<p>将会被编译成：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"card"</span>&gt;</span>A<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"card"</span>&gt;</span>B<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"card"</span>&gt;</span>C<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>还可以使用余参：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">mixin list(id, ...items)</div><div class="line">  ul(id=id)</div><div class="line">    each item in items</div><div class="line">      li= item</div><div class="line"></div><div class="line">+list(&apos;example&apos;, 1, 2, 3, 4, 5)</div></pre></td></tr></table></figure></p>
+<p>将会被编译成：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"example"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>5<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<hr>
+<p><code>jade</code>的入门级介绍到这里就告一段落，还有一些高级语法，可以参考官方文档。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      有一种速写HTML代码的方法，叫做jade，通过严格缩进来控制HTML的层次与顺序。本文针对这个方案做一个简略的说明。
+    
+    </summary>
+    
+      <category term="开发" scheme="http://xovel.cn/categories/dev/"/>
+    
+      <category term="文档" scheme="http://xovel.cn/categories/dev/docs/"/>
+    
+    
+      <category term="jade" scheme="http://xovel.cn/tags/jade/"/>
+    
+      <category term="入门" scheme="http://xovel.cn/tags/%E5%85%A5%E9%97%A8/"/>
+    
+      <category term="HTML" scheme="http://xovel.cn/tags/html/"/>
+    
+  </entry>
   
   <entry>
     <title>Foxmail接收密码错误的处理</title>
@@ -1658,45 +1715,6 @@ object[&quot;property&quot;]
       <category term="中秋" scheme="http://xovel.cn/tags/%E4%B8%AD%E7%A7%8B/"/>
     
       <category term="心情" scheme="http://xovel.cn/tags/%E5%BF%83%E6%83%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>弹性布局的兼容性问题</title>
-    <link href="http://xovel.cn/article/flex-compability.html"/>
-    <id>http://xovel.cn/article/flex-compability.html</id>
-    <published>2016-09-01T09:15:31.000Z</published>
-    <updated>2016-11-18T07:00:40.139Z</updated>
-    
-    <content type="html"><![CDATA[<p>由于弹性布局方案，各大浏览器厂商跟进的进度不一致，导致了某些情况下，弹性布局方案的css会出现不兼容的情形。尤其是在安卓平台上的部分浏览器（如UC浏览器，微信浏览器）出现弹性布局效果失效的情形。本文针对弹性布局方案的兼容性做一个简短的处理。</p>
-<a id="more"></a>
-<p>关于弹性布局方案，本博客有文章介绍：<a href="/article/css-flex.html">初识Flex布局</a>。</p>
-<p>在应用弹性布局方案的父元素上，要做兼容性调整，需要在使用<code>display: flex</code>加上<code>display:-webkit-flex</code>，部分浏览器可能需要添加<code>display:-webkit-box</code>才会奏效。</p>
-<p>弹性项目（子元素）使用<code>flex:1</code>这样的效果时，加上<code>-webkit-flex:1</code>，为了兼容某些浏览器，需要添加<code>-webkit-box-flex:1</code>。</p>
-<p>其他属性的兼容性对应列表：</p>
-<ul>
-<li><code>align-items</code>，对应<code>-webkit-box-align</code></li><li><code>flex-direction</code>，对应<code>-webkit-box-orient-</code>/<code>box-orient</code></li><li><code>justify-content</code>，对应<code>-webkit-box-pack</code></li><li><code>order</code>，对应<code>-webkit-box-ordinal-group</code></li></ul>
-<p><strong>参考资料</strong></p>
-<ul>
-<li><a href="http://www.ccwebsite.com/flex-layout-old-and-new-compatible/" target="_blank" rel="external">Flex布局新旧混合写法详解（兼容微信）</a></li><li><a href="http://www.sheng00.com/2148.html" target="_blank" rel="external">解决UC浏览器、微信浏览器使用display:flex;的兼容性问题</a></li><li><a href="http://css.doyoe.com/properties/flexible-box/index.htm" target="_blank" rel="external">伸缩盒(Flexible Box)(旧)</a></li></ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;由于弹性布局方案，各大浏览器厂商跟进的进度不一致，导致了某些情况下，弹性布局方案的css会出现不兼容的情形。尤其是在安卓平台上的部分浏览器（如UC浏览器，微信浏览器）出现弹性布局效果失效的情形。本文针对弹性布局方案的兼容性做一个简短的处理。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="WEB" scheme="http://xovel.cn/categories/web/"/>
-    
-      <category term="CSS" scheme="http://xovel.cn/categories/web/css/"/>
-    
-    
-      <category term="css" scheme="http://xovel.cn/tags/css/"/>
-    
-      <category term="flex" scheme="http://xovel.cn/tags/flex/"/>
-    
-      <category term="兼容" scheme="http://xovel.cn/tags/%E5%85%BC%E5%AE%B9/"/>
     
   </entry>
   
