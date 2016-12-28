@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-12-24T16:42:29.946Z</updated>
+  <updated>2016-12-28T14:58:33.199Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一个JS对象操作上的小坑</title>
+    <link href="http://xovel.cn/article/a-trap-about-object.html"/>
+    <id>http://xovel.cn/article/a-trap-about-object.html</id>
+    <published>2016-12-28T14:24:41.000Z</published>
+    <updated>2016-12-28T14:58:33.199Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天，工作上遇到一个很滑稽的问题。我大概描述一下，具体的源代码和项目详情这里就不详述了。</p>
+<p>项目上使用到了一款插件叫做<code>jqGrid</code>，在使用这个插件进行表格数据载入的时候调用了一个名为<code>localData</code>的对象里面的一个列表——我们姑且称之为<code>localData.list</code>——里面的数据。在页面加载的时候这个表格就会被初始化。在点击某个按钮进行数据初始化的时候需要清空这个表格，于是我写下了一段<del>带有巨坑的</del>代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">localData = &#123;</div><div class="line">  <span class="attr">status</span>: <span class="number">0</span>,</div><div class="line">  <span class="attr">count</span>: <span class="number">0</span>,</div><div class="line">  <span class="attr">list</span>: []</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p><strong>出事了……</strong>，在后续进行数据添加之后（<code>localData.list.push</code>），进行表格的重载<code>.trigger(&quot;reloadGrid&quot;)</code>操作时，数据无法展现。</p>
+<p>百思不得其解之下，询问同事，他们也表示曾经出现过类似的问题，但是后来不知道怎么搞的就没事了。我比对了一下他们的项目源码，发现他们是这样写数据清空操作的：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">localData.status = <span class="number">0</span>;</div><div class="line">localData.count = <span class="number">0</span>;</div><div class="line">localData.list.length = <span class="number">0</span>;</div></pre></td></tr></table></figure>
+<p>喏，陷阱就埋在这里……</p>
+<p>在使用诸如<code>a={}</code>的形式进行对象的初始化操作时，之前的信息将会全部丢失，即使被赋值之后的结构与之前的一模一样，之前的对象也<strong>跟这个毫无关系</strong>了。</p>
+<p><del>其实我早就应该意识到这个陷阱的，因为：</del></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#125; === &#123;&#125;</div></pre></td></tr></table></figure>
+<p>结果为<strong>false</strong></p>
+<hr>
+<p>总结：心要更细一些，基础得加强，赋值不要随意。</p>
+<p>谨以此作文一篇，以儆效尤。本文完。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      所谓细节决定成败，本文讲述一个隐藏的比较深的陷阱，有关于JS对象操作，尤其是清空操作时候的坑，请注意防范。
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
+    
+    
+      <category term="object" scheme="http://xovel.cn/tags/object/"/>
+    
+      <category term="js" scheme="http://xovel.cn/tags/js/"/>
+    
+      <category term="trap" scheme="http://xovel.cn/tags/trap/"/>
+    
+  </entry>
   
   <entry>
     <title>Jade入门级介绍</title>
@@ -1680,41 +1720,6 @@ object[&quot;property&quot;]
       <category term="MIME" scheme="http://xovel.cn/tags/MIME/"/>
     
       <category term="404" scheme="http://xovel.cn/tags/404/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>明天就是中秋佳节了</title>
-    <link href="http://xovel.cn/article/tomorrow-is-the-mid-autumn-festival.html"/>
-    <id>http://xovel.cn/article/tomorrow-is-the-mid-autumn-festival.html</id>
-    <published>2016-09-14T08:41:15.000Z</published>
-    <updated>2016-11-18T07:00:40.177Z</updated>
-    
-    <content type="html"><![CDATA[<p>时间过得飞快，明天就是中国传统佳节——<strong>中秋节</strong>了。</p>
-<a id="more"></a>
-<blockquote>
-<p>中秋节是东亚文化圈民间的一个传统节日，起源于古代中国，为每年的农历八月十五，约在公历的9月至10月初。按照中国的农历，八月为秋季的第二个月，古时称为仲秋，因此民间称为中秋，又称秋夕、八月节、八月半、月夕、月节、 十五夜，又因为这一天月亮满圆，象征团圆，又称为团圆节，是华人四大节日之一。除华人地区外，中秋节也是韩国、日本、越南、琉球、泰国的传统节日。</p>
-</blockquote>
-<p><del>以上代码来自维基百科</del></p>
-<p>遥记得小时候，村子里面过中秋的热闹场景，只怕以后再也没有机会体验到了。吃着传说中的<em>五仁月饼</em>，讲真，还是比较喜欢莲蓉馅的。</p>
-<p>小时候的光景，也一去不复返咯，成长的忧伤慢慢增加起来，如今更是要面对各种各样的压力，实在是没什么闲暇时间去享受这该有的乐趣。</p>
-<p>本博客也有很久没有做技术方面文章的更新了，近段时间由于公司人员波动，诸多项目暂时搁置了，等节后再来统一处理吧。</p>
-<p>等会要开节前项目安排的会议，估计要花很长时间，该去准备准备了。</p>
-<p>以上，谨祝诸君中秋佳节快乐。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;时间过得飞快，明天就是中国传统佳节——&lt;strong&gt;中秋节&lt;/strong&gt;了。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
-    
-    
-      <category term="中秋" scheme="http://xovel.cn/tags/%E4%B8%AD%E7%A7%8B/"/>
-    
-      <category term="心情" scheme="http://xovel.cn/tags/%E5%BF%83%E6%83%85/"/>
     
   </entry>
   
