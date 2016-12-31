@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2016-12-28T14:58:33.199Z</updated>
+  <updated>2016-12-31T15:02:41.399Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,70 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2016年年末总结</title>
+    <link href="http://xovel.cn/article/summerize-for-2016.html"/>
+    <id>http://xovel.cn/article/summerize-for-2016.html</id>
+    <published>2016-12-31T13:01:29.000Z</published>
+    <updated>2016-12-31T15:02:41.399Z</updated>
+    
+    <content type="html"><![CDATA[<p>转眼已经是2016年的最后一天了，是时候来好好做一个全面的总结了。</p>
+<p>那么，直接进入主题吧！</p>
+<h3 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h3><p>年初，去往冷水滩的医院总部，参加了一个不大不小的会议，老板给大家讲述了宏大的愿景。那个时候的我依然是充满激情的，就如同此时此刻的我。2月份回到长沙后，因为各方面的原因，参与投资的项目的局势已然不容乐观。无论我怎么挣扎挽回，也无法避免项目的失败，期间的缘由这里就不详述了。</p>
+<p>投资失利的我，于4月初正式离开了华懿集团。在4月中下旬，去往宇成集团上班。直到上个月18号，因不可抗力，被迫离开公司。休整了一段时间之后，目前在梅溪湖一家从事教育装备系统管理的公司上班，负责装备系统的前端建设。</p>
+<p>9月22日前后，去深圳出差，这一次的出差很可能已经改变了我的人生轨迹，相关的记录本博客也有文章进行记录。</p>
+<h3 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h3><p>2016年，发生了很多有意思的事情。生活上，一切也变得越来越好。年初自己的茫然失措，到现如今的悠然自得，自己能够很清楚的感受到自己的变化。正如期望中的一样，努力变成一个内心波澜不惊的人将会是我长久的状态。</p>
+<p>虽然投资失利带来的短期内的负面效应，给我造成了很多不好的影响。失败并不可怕，可怕的是没有面对失败的勇气和战胜挫折的魄力。</p>
+<h3 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h3><p>2016年技术栈的提升，没有以往的高。当然，一直以来都没有多少提升。</p>
+<p>2016年主要攻坚的技术依然是前端WEB方面的，核心就是JS编程。</p>
+<p>在宇成工作的期间，JS编程倒并没有进行多少，主要是一些HTML和CSS的编写。自己想要晋升的技术栈，诸如<code>React</code>、<code>Angular</code>等，也只是略识皮毛。不过相对之前在福建自己对这些方面的技术的认知，已经提升了不少层次。</p>
+<p>对于JS的运用，可以说依然是有一个大幅度的提升，自己对命令行执行JS的理解，深入了不少，并且使用一款基于<code>Node.js</code>的博客构建工具<code>hexo</code>，搭建了个人博客。就是本博客。到目前为止，共计写博文47篇，不包含本篇。另有几个页面放置在特殊目录<code>花园/竹林</code>里面。</p>
+<p>APP方面的学习，目前主要是WebApp的方式，也就是我目前做的前端方式。但这种技术方式，并不是我所赞同的方式。这个想法以后有机会再详表吧。</p>
+<p>9月份，微信抛出了小程序的概念，当时的自己，及时跟进，熟悉了大部分微信小程序的文档。</p>
+<h4 id="花园-竹林"><a href="#花园-竹林" class="headerlink" title="花园/竹林"></a><a href="http://xovel.cn/garden/">花园/竹林</a></h4><p>具体的链接就不贴了，可以自行查看。</p>
+<ol>
+<li>宇成朝阳广场页面</li><li>图片转Base64编码工具</li><li>风华60年投票活动分类入口</li><li>一个错视的旋转动画</li><li>一个自适应菜单导航页面</li><li>移动端下拉刷新操作</li><li>Less在线编写</li></ol>
+<h3 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h3><p>2016年接手的项目不算太多。</p>
+<p>除去去年年末给华懿集团重新架设的官网，其他外围的项目我并没有直接进行参与。在宇成集团负责的主要项目有两个，一个是<code>奢厨生鲜</code>，另一个的是<code>狂乐传媒</code>。两者均主要为移动端进行建设，所以在进行响应式设计的时候主要考虑主流手机的界面的前端展现。前后端分离的方式，给自己的工作带来了一定程度的改变。</p>
+<h4 id="奢厨生鲜"><a href="#奢厨生鲜" class="headerlink" title="奢厨生鲜"></a>奢厨生鲜</h4><p>该项目为公司向互联网发展的核心项目之一，前端主程便是我，负责所有页面的静态实现，同时协作完成与后台数据的对接。</p>
+<h4 id="狂乐传媒"><a href="#狂乐传媒" class="headerlink" title="狂乐传媒"></a>狂乐传媒</h4><p>该项目为公司向传媒进军的项目，当时并不是核心项目，所以我只负责了静态页面的实现。后来由于项目负责人的离开，此项目也就不了了之了。</p>
+<blockquote>
+<p>关于这两个项目更多的信息，鉴于职业操守和保密规则，如果有兴趣，可以单独与我沟通了解。</p>
+</blockquote>
+<h3 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h3><p>自己是一个比较喜欢阅读与写作的人，不过说来惭愧，在2016年，自己的阅读量并不是太多。在读书馆借了不少书，但能够通读的并不多。所以，这个数据就不做展现了。</p>
+<h3 id="圣血记"><a href="#圣血记" class="headerlink" title="圣血记"></a>圣血记</h3><p>本来这一块的子标题应该是<strong>写作</strong>，但是关于博客的写作上面已经提及了，于是，关于写作方面，值得进行记录的就是<code>圣血记</code>了。</p>
+<p>2016年，所创作的剧情隶属于《圣血记》第二部《寻玉》。今年发表的篇章共计26，其中《寻玉》21篇。</p>
+<p>关于具体的剧情进展，这里不做展开了。要提一下的是今年的下半年，基本上没有进行新剧情的创作。</p>
+<h3 id="开源项目"><a href="#开源项目" class="headerlink" title="开源项目"></a>开源项目</h3><p>已架设在<code>GitHub</code>上的开源项目：</p>
+<h4 id="CanvasBubble"><a href="#CanvasBubble" class="headerlink" title="CanvasBubble"></a><a href="https://github.com/xovel/CanvasBubble" target="_blank" rel="external">CanvasBubble</a></h4><p>使用canvas实现的一个泡泡背景。</p>
+<h4 id="Carousel3D"><a href="#Carousel3D" class="headerlink" title="Carousel3D"></a><a href="https://github.com/xovel/Carousel3D" target="_blank" rel="external">Carousel3D</a></h4><p>一款3D旋转效果的小工具。</p>
+<h4 id="PullRefresh"><a href="#PullRefresh" class="headerlink" title="PullRefresh"></a><a href="https://github.com/xovel/PullRefresh" target="_blank" rel="external">PullRefresh</a></h4><p>JS实现的下拉刷新插件。</p>
+<h4 id="octoverse"><a href="#octoverse" class="headerlink" title="octoverse"></a><a href="https://github.com/xovel/octoverse" target="_blank" rel="external">octoverse</a></h4><p>GitHub上的关于2016总结页面的离线版本。</p>
+<h4 id="404"><a href="#404" class="headerlink" title="404"></a><a href="https://github.com/xovel/404" target="_blank" rel="external">404</a></h4><p>收集/制作的一些404页面，提供一些创意。<del>已停更</del></p>
+<h4 id="zmd"><a href="#zmd" class="headerlink" title="zmd"></a><a href="https://github.com/xovel/zmd" target="_blank" rel="external">zmd</a></h4><p>一款Markdown解析工具。因工作方面的需要，该项目搁置。希望可以在2017年完成。</p>
+<hr>
+<p>罢了，罢了，总结就这样吧。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      2016年年末大总结。
+    
+    </summary>
+    
+      <category term="生活" scheme="http://xovel.cn/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="2016" scheme="http://xovel.cn/tags/2016/"/>
+    
+      <category term="2017" scheme="http://xovel.cn/tags/2017/"/>
+    
+      <category term="总结" scheme="http://xovel.cn/tags/%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="经历" scheme="http://xovel.cn/tags/%E7%BB%8F%E5%8E%86/"/>
+    
+  </entry>
   
   <entry>
     <title>一个JS对象操作上的小坑</title>
@@ -1685,41 +1749,6 @@ object[&quot;property&quot;]
       <category term="O2O" scheme="http://xovel.cn/tags/o2o/"/>
     
       <category term="深圳" scheme="http://xovel.cn/tags/%E6%B7%B1%E5%9C%B3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决IIS中MIME类型方面的404错误</title>
-    <link href="http://xovel.cn/article/iis-404-mime-type.html"/>
-    <id>http://xovel.cn/article/iis-404-mime-type.html</id>
-    <published>2016-09-19T06:50:07.000Z</published>
-    <updated>2016-11-18T07:00:40.177Z</updated>
-    
-    <content type="html"><![CDATA[<p>在IIS部署本地站点时，偶然发现有几个404错误；但是使用开发工具查看具体文件时，所指向的文件本地却是存在的。那么，像这样的情况究竟是怎么回事，又怎么去解决呢？</p>
-<a id="more"></a>
-<p>请检查IIS是否开启了对相应文件类型的支持，添加对应的MIME类型即可。</p>
-<p><img src="http://image18.poco.cn/mypoco/myphoto/20160919/13/5599735820160919133814077.png" alt="IIS-MIME"></p>
-<p>如上图所示，打开IIS的MIME类型设置界面，添加条目即可。</p>
-<p>常见的可能需要手动设置的MIME类型：</p>
-<ul>
-<li>json，MIME类型为<code>application/json</code></li><li>woff/woff2，MIME类型为<code>application/x-font-woff</code></li><li>svg，MIME类型为<code>image/svg+xml</code></li><li>mp3，MIME类型为<code>audio/mpeg</code></li></ul>
-<p>更多MIME类型请参阅：<a href="http://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" rel="external">Media Types</a>。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在IIS部署本地站点时，偶然发现有几个404错误；但是使用开发工具查看具体文件时，所指向的文件本地却是存在的。那么，像这样的情况究竟是怎么回事，又怎么去解决呢？&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="开发" scheme="http://xovel.cn/categories/dev/"/>
-    
-    
-      <category term="IIS" scheme="http://xovel.cn/tags/IIS/"/>
-    
-      <category term="MIME" scheme="http://xovel.cn/tags/MIME/"/>
-    
-      <category term="404" scheme="http://xovel.cn/tags/404/"/>
     
   </entry>
   
