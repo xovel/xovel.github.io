@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2017-01-01T16:03:38.038Z</updated>
+  <updated>2017-01-09T13:33:01.084Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,147 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>React or Vue: Which Javascript UI Library Should You Be Using?</title>
+    <link href="http://xovel.cn/article/react-or-vue-which-javascript-ui-library-should-you-be-using.html"/>
+    <id>http://xovel.cn/article/react-or-vue-which-javascript-ui-library-should-you-be-using.html</id>
+    <published>2017-01-09T13:04:07.000Z</published>
+    <updated>2017-01-09T13:33:01.084Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>Source: <a href="https://medium.com/js-dojo/react-or-vue-which-javascript-ui-library-should-you-be-using-543a383608d" target="_blank" rel="external">React or Vue: Which Javascript UI Library Should You Be Using?</a><br>Translation: 未完成，敬请期待。</p>
+</blockquote>
+<p><img src="http://ww4.sinaimg.cn/large/79be2309gw1fbkp0222bkj20rs0b3gov.jpg" alt=""></p>
+<p>In 2016 React cemented its position as king of the Javascript web frameworks. This year saw rapid growth of both its web and native mobile libraries, and a comfortable lead over main rival Angular.</p>
+<p>But 2016 has been an equally impressive year for Vue. The release of its version 2 made a huge impression on the Javascript community, attested to by the 25,000 extra Github stars it gained this year.</p>
+<p>The scope of both React and Vue is undeniably similar: both are lightweight component-based libraries for building user interfaces that focus on the view layer only. Both can be used in a simple project, or be scaled up to a sophisticated app using cutting edge tooling.</p>
+<p>As a result, a lot of web developers are wondering which one they should be using. Is one clearly superior over the other? Do they have specific pros and cons to be aware of? Or are they basically the same?</p>
+<p><strong>Two frameworks, two advocates.</strong></p>
+<p>In this article I want to answer those questions with a thorough and fair comparison. The only problem is: I’m an unashamed Vue fan-boy and totally biased. I’ve used Vue heavily in my projects this year, sung its praises here on Medium and even released a <a href="https://www.udemy.com/vuejs-2-essentials" target="_blank" rel="external">Udemy course</a>.</p>
+<p>To even out my biased position I’ve bought in my friend Alexis Mangin who is both a great Javascript developer and a big React fan. He’s similarly immersed in React, using it frequently in both web and mobile projects.</p>
+<p>Alexis asked me one day: “why are you so into Vue, and not React?” Since I didn’t know React that well, I couldn’t give a good answer. So I put the idea to him that we sit down one day with our laptops and show each other what our chosen library had to offer.</p>
+<p><img src="http://ww2.sinaimg.cn/large/79be2309gw1fbkp00ztjzj20m80e2414.jpg" alt=""></p>
+<blockquote>
+<p>Anthony (left) and Alexis (right) comparing React and Vue at Bull and Bear Cafe in Chiang Mai, Thailand</p>
+</blockquote>
+<p>After a lot of discussion and learning from both sides, the following six points are our key findings.</p>
+<p><strong>If you like building apps with templates (or want the option to), go with Vue.</strong></p>
+<p>Putting your markup in an HTML file is the default option for a Vue app. Similar to Angular, moustache braces are used for data-binding expressions, while directives (special HTML attributes) are used for adding functionality to the template.</p>
+<p>The follow demonstrates a simple Vue app. It prints a message and has a button that dynamically reverses the message:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">// HTML</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"reverseMessage"</span>&gt;</span>Reverse Message<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">// JS</div><div class="line">new Vue(&#123;</div><div class="line">  el: '#app',</div><div class="line">  data: &#123;</div><div class="line">    message: 'Hello Vue.js!</div><div class="line">  &#125;,</div><div class="line">  methods: &#123;</div><div class="line">    reverseMessage: function () &#123;</div><div class="line">      this.message = this.message.split('').reverse().join('');</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>In contrast, React apps shun templates and require the developer to create their DOM in Javascript, typically aided with JSX. Below is the same simple app implemented with React:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">// HTML</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">// JS (pre-transpilation)</div><div class="line">class App extends React.Component &#123;</div><div class="line">  constructor(props) &#123;</div><div class="line">    super(props);</div><div class="line">    this.state = &#123;</div><div class="line">      message: 'Hello React.js!'</div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line">  reverseMessage() &#123;</div><div class="line">    this.setState(&#123; </div><div class="line">      message: this.state.message.split('').reverse().join('') </div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line">  render() &#123;</div><div class="line">    return (</div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;this.state.message&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> this.reverseMessage()&#125;&gt;</div><div class="line">          Reverse Message</div><div class="line">        <span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    )</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">ReactDOM.render(App, document.getElementById('app'));</div></pre></td></tr></table></figure>
+<p>Templates are easier to understand for newer developers who’ve come from the standard web development paradigm. But even some experienced developers prefer them as templates can better seperate layout from functionality and give the option of using pre-processors like Pug.</p>
+<p>But templates come at the cost of having to learn all the extended HTML syntax, while render functions only require knowledge of standard HTML and Javascript. Render functions also benefit from easier debugging and testing.</p>
+<p>On this point, though, you can’t go wrong with Vue, as it’s introduced the option of using either templates or render functions in version 2.</p>
+<p><strong>If you like simplicity and things that “just work”, go with Vue.</strong></p>
+<p>A simple Vue project can be run directly from a browser with no need of transpilation. This allows Vue to be easily dropped into a project the way jQuery is.</p>
+<p>While this is also technically possible with React, typical React code leans more heavily on JSX and on ES6 features like classes and non-mutating array methods.</p>
+<p>But Vue’s simplicity runs more deeply in its design. Let’s compare how the two libraries handle application data (i.e. “state”).</p>
+<p>State in React is immutable so you can’t directly change it. You need to use the setState API method:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.setState(&#123; </div><div class="line">    <span class="attr">message</span>: <span class="keyword">this</span>.state.message.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>) </div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>Diff’ing the current and previous state is how React knows when and what to re-render in the DOM, hence the need for immutable state.<br>In contrast, data is just mutated in Vue. The same data property can be altered far less verbosely in Vue:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Note that data properties are available as properties of </span></div><div class="line"><span class="comment">// the Vue instance</span></div><div class="line"><span class="keyword">this</span>.message = <span class="keyword">this</span>.message.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>);</div></pre></td></tr></table></figure>
+<p>Before you conclude that Vue’s rendering system must lack the efficiency of React’s, let’s examine how state in Vue is managed under the hood: when you add a new object to the state, Vue will walk through all of its properties and convert them to getter and setters. Vue’s reactivity system now keeps track of the state and will automatically re-render the DOM when it is mutated.</p>
+<p>Impressively, altering state in Vue is not only more succinct, but its re-rendering system is actually faster and more efficient than React’s.</p>
+<p>Vue’s reactivity system does have caveats, though. For example, it cannot detect property addition or deletion and certain array changes. These cases can be worked around with a React-like set method from the Vue API.</p>
+<p><strong>If you need your application to be as small and fast as possible, go with Vue.</strong></p>
+<p>Both React and Vue will build a virtual DOM and synchronise the real DOM when the app’s state changes. Both have their own means of optimising this process.</p>
+<p>Vue core developers have offered a benchmark test that shows Vue’s rendering system to be faster than React’s. In this test a list of 10,000 items are rendered 100 times. The comparison is tabled below.</p>
+<p><img src="http://ww3.sinaimg.cn/large/79be2309gw1fbkp019rknj20m808dglu.jpg" alt=""></p>
+<blockquote>
+<p>Benchmarks as published on vuejs.org</p>
+</blockquote>
+<p>From a pragmatic standpoint, this kind of benchmark is only relevant in edge cases. Most apps will not need to do this kind of operation routinely so it should generally not be considered an important point of comparison.</p>
+<p>Page size, though, is relevant to all projects, and again Vue has the upper hand. Minified, the current release of the Vue library is only 25.6KB.</p>
+<p>To get a similar set of functionality in React you need React DOM (37.4KB) and the React with Addons library (11.4KB), which totals 48.8KB, almost double the size of Vue. To be fair you will get a larger API with React, but you don’t get double as much functionality.</p>
+<p><strong>If you plan to build a large scale app, go with React.</strong></p>
+<p>A comparison of a simple app implemented in both Vue and React, like the one at the beginning of this article, may initially bias a developer to favour Vue. This is because template-based apps are easier to understand at first look, and quicker to get up and running with.</p>
+<p>But these initial benefits introduce technical debt that can slow development of apps reaching a larger scale. Templates are prone to unnoticed runtime errors, are hard to test, and are not easy to restructure or decompose.</p>
+<p>In contrast, Javascript-made templates can be organised into components with nicely decomposed and DRY code that is more reusable and testable.</p>
+<p>Vue also has a component system and render functions. But React’s rendering system is more configurable and has features like shallow rendering that, combined with React’s testing utilities, allow for far more testable and maintainable code.</p>
+<p>Meanwhile, React’s immutable application data may not be as succinct, but it shines in larger application when transparency and testability become critical.</p>
+<p><strong>If you want a library that is adaptable for both web and native apps, go with React.</strong></p>
+<p>React Native is a library for building native mobile applications with Javascript. It’s the same as React.js, only instead of using web components, it uses native components. If you’ve learnt React.js, you’ll very easily be able to pick up React Native, and vice versa.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// JS</span></div><div class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>; </div><div class="line"><span class="keyword">import</span> &#123; AppRegistry, Text, View &#125; <span class="keyword">from</span> <span class="string">'react-native'</span>;  </div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;   </div><div class="line">  render() &#123;     </div><div class="line">    <span class="keyword">return</span> (       </div><div class="line">      <span class="xml"><span class="tag">&lt;<span class="name">View</span>&gt;</span>         </span></div><div class="line">        <span class="tag">&lt;<span class="name">Text</span>&gt;</span>Hello, React Native!<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">View</span>&gt;</span></div><div class="line">    );   </div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">AppRegistry.registerComponent(<span class="string">'HelloWorld'</span>, () =&gt; HelloWorld);</div></pre></td></tr></table></figure>
+<p>The significance is that a developer can build an app on either the web or native mobile without requiring a different set of knowledge and tools. Learning React gives you a huge bang for you buck if you intend to develop for both web and mobile.</p>
+<p>Alibaba’s Weex is another cross-platform UI project. Currently it considers Vue an “inspiration” and uses a lot of the same syntax, with plans to fully integrate Vue. However, the timeline and specifics of this integration are still unclear.</p>
+<p>Since Vue has HTML templates as a core part of its design and does not have custom rendering as a current feature, it’s hard to see that a native counterpart for Vue.js in its current form will be as tight as what React.js and React Native are.</p>
+<p><strong>If you want the biggest ecosystem, go with React.</strong></p>
+<p>There’s no question that React is currently the more popular library with ~2.5M NPM downloads a month as opposed to Vue’s ~225K per month.</p>
+<p><img src="http://ww1.sinaimg.cn/large/79be2309gw1fbkp01iettj20m8092mxp.jpg" alt=""></p>
+<p>Popularity is not merely a shallow benefit. It means there are more articles, tutorials and Stack Overflow answers for help. It means there are more tools and add-ons to leverage in a project and save developers from building everything themselves.</p>
+<p>Both libraries are open source, but React was born from Facebook and benefits from that patronage. Developers and companies committing to React can be assured of continued maintenance.</p>
+<p>In contrast, Vue was created by a single developer, Evan You, and You is currently the only full time maintainer of Vue. Vue has some corporate sponsorship but not on the scale of Facebook or Google.</p>
+<p>To the credit of the Vue team, its small size and independence has not materialised as a disadvantage. Vue has a regular release cycle and even more impressively, Vue has only 54 open issues on Github compared to 3456 closed issues, while React has a far larger 530 open issues compared to 3447 closed.</p>
+<p><strong>If you’re already happy with one or the other, there’s no need to switch.</strong></p>
+<p>To recap, our findings, Vue’s strengths are:</p>
+<ul>
+<li>Flexible options for template or render functions</li><li>Simplicity in syntax and project setup</li><li>Faster rendering and smaller size</li></ul>
+<p>React’s strengths:</p>
+<ul>
+<li>Better at scale, studier and more testable</li><li>Web and native apps</li><li>Bigger ecosystem with more support and tools available</li></ul>
+<p>However, both React and Vue are exceptional UI libraries and have more similarities than differences. Most of their best features are shared:</p>
+<ul>
+<li>Fast rendering with virtual DOM</li><li>Lightweight</li><li>Reactive components</li><li>Server-side rendering</li><li>Easy integration with router, bundler and state management</li><li>Great support and community</li></ul>
+<p>If you think we’ve missed something we’d love to hear in the comments. Happy developing!</p>
+<hr>
+<p><em>About the authors</em></p>
+<p>Anthony Gore</p>
+<blockquote>
+<p>I’m a Javascript developer and online course instructor. My latest course is Vue.js 2 Essentials: Build Your First Vue App, available on Udemy.</p>
+</blockquote>
+<p>Alexis Mangin</p>
+<blockquote>
+<p>Alexis helped me write this article with his exceptional knowledge of web development. You should follow him on Medium as he writes his own great tutorials on React.</p>
+</blockquote>
+<hr>
+<p>Vue的作者<a href="https://medium.com/@youyuxi/pretty-good-comparison-overall-but-a-few-points-id-like-to-discuss-e4f6460e75d5#.mij64qy5y" target="_blank" rel="external">回复了该文</a>，摘录如下：<br>Pretty good comparison overall, but a few points I’d like to discuss:</p>
+<blockquote>
+<p>“Templates are prone to unnoticed runtime errors, are hard to test, and are not easy to restructure or decompose.”</p>
+</blockquote>
+<p>These arguments against templates are too broad. Templates are by definition statically analyzable (even more so than dynamic render functions) and Vue provides many compile-time AND runtime warnings for common template syntax errors, and can be further improved in the future. Also, since Vue templates compile into render functions under the hood, a template containing expression syntax errors will be detected at compile time instead of runtime (if you are using a build setup instead of in-browser compilation).</p>
+<blockquote>
+<p>“In contrast, Javascript-made templates can be organised into components with nicely decomposed and DRY code that is more reusable and testable.”</p>
+</blockquote>
+<p>Organizing your application as decoupled components has little to do with whether you are using templates or JSX, but more with how components are defined as a function of state and prop. In this sense, Vue components and React components are equivalent on the higher level and there’s nothing that makes a React component fundamentally more testable than a Vue component. You can do exactly the same thing with a Vue component: render the virtual DOM with different set of props and assert the output. Admittedly this is may not be very obvious for new users, but we are planning to provide official component testing utilities in the near future.</p>
+<blockquote>
+<p>“Meanwhile, React’s immutable application data may not be as succinct, but it shines in larger application when transparency and testability become critical.”</p>
+</blockquote>
+<p>This statement lacks the proper context of state management patterns used. In most cases, the built-in state management patterns provided by the frameworks themselves are insufficient for large scale apps, and a dedicated solution like Redux or Vuex must be used. It is very premature to declare that “If you plan to build a large scale app, go with React” without giving a proper discussion about the solutions designed to deal with large scale apps for both frameworks.</p>
+<blockquote>
+<p>Alibaba’s Weex is another cross-platform UI project. Currently it considers Vue an “inspiration” and uses a lot of the same syntax, with plans to fully integrate Vue. However, the timeline and specifics of this integration are still unclear.</p>
+</blockquote>
+<p>The <a href="https://github.com/weexteam/weex-vue-framework/issues/9" target="_blank" rel="external">roadmap</a> is publicly available. In the latest Weex release (0.9.4), Vue 2 is now already officially integrated as a runtime framework which allows the use of the majority of features found in Vue’s API (excluding those that are web-platform-specific). (<a href="https://github.com/alibaba/weex/tree/dev/examples/vue" target="_blank" rel="external">examples</a>)</p>
+<blockquote>
+<p>“Since Vue has HTML templates as a core part of its design and does not have custom rendering as a current feature, it’s hard to see that a native counterpart for Vue.js in its current form will be as tight as what React.js and React Native are.”</p>
+</blockquote>
+<p>This is factually wrong. Vue 2.x is designed to support <a href="https://github.com/vuejs/vue/tree/dev/src/platforms" target="_blank" rel="external">custom rendering targets</a> from the very beginning, it’s just not exposed via public APIs. Again, templates are compiled into Virtual DOM render functions which allows any type of lower-level customizations needed to adapt to native rendering targets.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      本文为英文文章《React or Vue: Which Javascript UI Library Should You Be Using?》的原文，并附带有作者介绍和Vue.js的作者的亲自回复。文章主要讲述了React和Vue之间的差异性。
+    
+    </summary>
+    
+      <category term="翻译" scheme="http://xovel.cn/categories/translate/"/>
+    
+    
+      <category term="javascript" scheme="http://xovel.cn/tags/javascript/"/>
+    
+      <category term="react" scheme="http://xovel.cn/tags/react/"/>
+    
+      <category term="vue" scheme="http://xovel.cn/tags/vue/"/>
+    
+      <category term="ui" scheme="http://xovel.cn/tags/ui/"/>
+    
+      <category term="programming" scheme="http://xovel.cn/tags/programming/"/>
+    
+      <category term="web" scheme="http://xovel.cn/tags/web/"/>
+    
+  </entry>
   
   <entry>
     <title>2016年总结</title>
@@ -109,9 +250,9 @@
       <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
     
     
-      <category term="object" scheme="http://xovel.cn/tags/object/"/>
-    
       <category term="js" scheme="http://xovel.cn/tags/js/"/>
+    
+      <category term="object" scheme="http://xovel.cn/tags/object/"/>
     
       <category term="trap" scheme="http://xovel.cn/tags/trap/"/>
     
@@ -1691,62 +1832,6 @@ object[&quot;property&quot;]
       <category term="微信小程序" scheme="http://xovel.cn/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
       <category term="WEB" scheme="http://xovel.cn/tags/WEB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>去深圳出差了一趟</title>
-    <link href="http://xovel.cn/article/a-business-trip-to-shenzhen.html"/>
-    <id>http://xovel.cn/article/a-business-trip-to-shenzhen.html</id>
-    <published>2016-09-27T09:28:23.000Z</published>
-    <updated>2016-11-18T07:00:40.177Z</updated>
-    
-    <content type="html"><![CDATA[<p>2016年9月21日，公司安排，去深圳出差了一趟。出差所涉及的事务是与一个韩国电商方面的公司进行参观与洽谈。</p>
-<a id="more"></a>
-<p>这里又挖了一个坑，以后再填吧。但愿我没有忘记出差过程中琐发生的事情与细节。</p>
-<hr>
-<p>2016.10.8更新</p>
-<p>过了一个国庆之后，感觉世界变了很多。现在就花一点时间来写一下当时去深圳出差的事情吧。</p>
-<p>9月21日，我们一行五人出发，踏上从长沙去深圳的高铁，中午时分抵达深圳北站。韩国公司方面对此十分重视，会长亲自前往迎接，可见其诚意满满。</p>
-<p>我们被接到之后，去往了宝安区的一家豪华酒店，用餐过后，享受了一个足浴服务。下午的时候去了中信城市广场去参观其正在构建中的韩国会馆。该会馆设置的有一定档次，但应该还不能算很豪华。会长为人开朗和蔼，虽然中文不流利，但依然能够跟我们侃侃而谈。<del>当然，大部分用的韩语，随行的有美女翻译人员</del></p>
-<p>之后一行人驱车前往技术演示厅，在技术演示厅里面，对方的技术人员给我们展示了其O2O系统。</p>
-<p>作为一个技术从业人员，这次前来深圳出差的目的就是考察其技术系统的，这个也是我最感兴趣的一个地方。目前这一套O2O做的相当庞大，囊括了包括供应商、生产商，消费者在内的所有体系，全部可以在一个后台可以完成。角色可以交叉身份，数据是实时同步的。</p>
-<p>作为一个前端开发者，自然对齐前端界面是如何构建的有些疑点。该O2O系统的前端界面是可以高度定制化的，这样的系统从某种程度上说大大降低了使用人员的技术门槛与难度，近乎傻瓜式的DIY模板方式，就可以很方便的将店铺装修出来。</p>
-<p>根据技术人员的介绍，数据是通过json方式传递的，简单又粗暴的实现前端与后台的交互。这有点类似于模板操作，前端根据后台传递过来的JSON数据，渲染生成DOM界面。</p>
-<p>UI方面，由于其高度定制化，也不好断定其店铺页面的效果。但单单从管理UI方面上看，还是做的很优美的，正所谓一切操作皆是为了方便用户的操作。前端与后台的UI其实并没有做到完全统一。</p>
-<p>后台由于O2O的系统本身的复杂程度，能够在短时间演示的页面并不会太多，技术人员演示的界面也只是具有代表性的几个页面。功能上说，该有的功能都是有的。只不过在使用习惯上，韩国方面的技术人员设计出来的东西跟国内常见的O2O系统还有存在一定的差别的。这个需要进一步体验之后才能给出具体的结论，这里也不做过多表述。</p>
-<p>之后又对齐ERP系统做了一个简单的演示，ERP系统从某种程度上说统筹着O2O系统的所有资源，后台界面的风格有点类似于WinXP时代的MFC框架。该O2O系统采用的技术主要为C#和.NET，跟MFC有着同样的风格也在情理之中。</p>
-<p>根据介绍，该系统采用的数据库为开源的MySQL，目前的MySQL已经完全可以胜任一个大型O2O系统的数据业务需求了。</p>
-<p>确实，由于时间的问题，很多技术层面的演示都是走马观花方式的，大概情况做个了解也就是这个技术演示的目的了。总体来说该系统还是比较健壮的，关于O2O的方方面面均有考虑和涉及。令人竟然的时候这一套系统并不是一个简单的B2B2C</p>
-<hr>
-<p>2016.10.9更新</p>
-<p><em>本段内容与技术无关。</em></p>
-<p>21日晚上，是在会长在深圳的居所处用餐的，会长夫人很好客，为我们一行人准备了正宗的韩国烤肉和泡菜，我这也是第一次吃到地道的韩国泡菜和烤肉，味道很好。不过由于来深圳的时候本人的牙齿不慎脱落半只，未能吃的痛快。</p>
-<p>会长夫人还赠送了我们每人一套礼物，是一袋化妆品。上面写的都是韩文和英文，我们也没来得及细看，一番感谢之后我们离开了会长与会长夫人的住所，驱车回了入住的酒店。时间已经不早了，就定在第二天的时候再进行详谈。</p>
-<p>晚上，我们五个人在一起聊了一阵子，谈及了今天的感受与想法。其实对于跑业务和商业谈判，不是我们的长处，也不能给出太大的实质性意见。一番总结过后就回房准备睡觉了。</p>
-<p>我一个舅舅得知我到了深圳，曾特地问我要不要晚上一起吃个饭，时间上我无法安排，就委婉的推辞了。</p>
-<p>在晚上临睡之前，刷新闻得知微信悄然启动了微信小程序的测试。这是要翻搅APP与前端的江湖的节奏，且看其风云变幻吧。</p>
-<hr>
-<p>因22号的内容涉及到核心商业秘密，本文不再更新。</p>
-<p>本次出差的收货还是挺大的，起码是有了一次与国际接轨的经历了。<del>显得逼格满满</del></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;2016年9月21日，公司安排，去深圳出差了一趟。出差所涉及的事务是与一个韩国电商方面的公司进行参观与洽谈。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
-    
-    
-      <category term="出差" scheme="http://xovel.cn/tags/%E5%87%BA%E5%B7%AE/"/>
-    
-      <category term="技术交流" scheme="http://xovel.cn/tags/%E6%8A%80%E6%9C%AF%E4%BA%A4%E6%B5%81/"/>
-    
-      <category term="O2O" scheme="http://xovel.cn/tags/o2o/"/>
-    
-      <category term="深圳" scheme="http://xovel.cn/tags/%E6%B7%B1%E5%9C%B3/"/>
     
   </entry>
   

@@ -1,0 +1,765 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="javascript,react,vue,ui,programming,web," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="清风轩" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="本文为英文文章《React or Vue: Which Javascript UI Library Should You Be Using?》的原文，并附带有作者介绍和Vue.js的作者的亲自回复。文章主要讲述了React和Vue之间的差异性。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React or Vue: Which Javascript UI Library Should You Be Using?">
+<meta property="og:url" content="http://xovel.cn/article/react-or-vue-which-javascript-ui-library-should-you-be-using.html">
+<meta property="og:site_name" content="清风轩">
+<meta property="og:description" content="本文为英文文章《React or Vue: Which Javascript UI Library Should You Be Using?》的原文，并附带有作者介绍和Vue.js的作者的亲自回复。文章主要讲述了React和Vue之间的差异性。">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/79be2309gw1fbkp0222bkj20rs0b3gov.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/79be2309gw1fbkp00ztjzj20m80e2414.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/79be2309gw1fbkp019rknj20m808dglu.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/79be2309gw1fbkp01iettj20m8092mxp.jpg">
+<meta property="og:updated_time" content="2017-01-09T13:33:01.084Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React or Vue: Which Javascript UI Library Should You Be Using?">
+<meta name="twitter:description" content="本文为英文文章《React or Vue: Which Javascript UI Library Should You Be Using?》的原文，并附带有作者介绍和Vue.js的作者的亲自回复。文章主要讲述了React和Vue之间的差异性。">
+<meta name="twitter:image" content="http://ww4.sinaimg.cn/large/79be2309gw1fbkp0222bkj20rs0b3gov.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> React or Vue: Which Javascript UI Library Should You Be Using? | 清风轩 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="http://s6.cnzz.com/stat.php?id=1259096563&web_id=1259096563" type="text/javascript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">清风轩</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">清风轩居 - 引仙阁</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-garden">
+          <a href="/garden" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-life-ring"></i> <br />
+            
+            花园
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                React or Vue: Which Javascript UI Library Should You Be Using?
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-09T21:04:07+08:00" content="2017-01-09">
+              2017-01-09
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/translate/" itemprop="url" rel="index">
+                    <span itemprop="name">翻译</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>Source: <a href="https://medium.com/js-dojo/react-or-vue-which-javascript-ui-library-should-you-be-using-543a383608d" target="_blank" rel="external">React or Vue: Which Javascript UI Library Should You Be Using?</a><br>Translation: 未完成，敬请期待。</p>
+</blockquote>
+<p><img src="http://ww4.sinaimg.cn/large/79be2309gw1fbkp0222bkj20rs0b3gov.jpg" alt=""></p>
+<p>In 2016 React cemented its position as king of the Javascript web frameworks. This year saw rapid growth of both its web and native mobile libraries, and a comfortable lead over main rival Angular.</p>
+<p>But 2016 has been an equally impressive year for Vue. The release of its version 2 made a huge impression on the Javascript community, attested to by the 25,000 extra Github stars it gained this year.</p>
+<p>The scope of both React and Vue is undeniably similar: both are lightweight component-based libraries for building user interfaces that focus on the view layer only. Both can be used in a simple project, or be scaled up to a sophisticated app using cutting edge tooling.</p>
+<p>As a result, a lot of web developers are wondering which one they should be using. Is one clearly superior over the other? Do they have specific pros and cons to be aware of? Or are they basically the same?</p>
+<p><strong>Two frameworks, two advocates.</strong></p>
+<p>In this article I want to answer those questions with a thorough and fair comparison. The only problem is: I’m an unashamed Vue fan-boy and totally biased. I’ve used Vue heavily in my projects this year, sung its praises here on Medium and even released a <a href="https://www.udemy.com/vuejs-2-essentials" target="_blank" rel="external">Udemy course</a>.</p>
+<p>To even out my biased position I’ve bought in my friend Alexis Mangin who is both a great Javascript developer and a big React fan. He’s similarly immersed in React, using it frequently in both web and mobile projects.</p>
+<p>Alexis asked me one day: “why are you so into Vue, and not React?” Since I didn’t know React that well, I couldn’t give a good answer. So I put the idea to him that we sit down one day with our laptops and show each other what our chosen library had to offer.</p>
+<p><img src="http://ww2.sinaimg.cn/large/79be2309gw1fbkp00ztjzj20m80e2414.jpg" alt=""></p>
+<blockquote>
+<p>Anthony (left) and Alexis (right) comparing React and Vue at Bull and Bear Cafe in Chiang Mai, Thailand</p>
+</blockquote>
+<p>After a lot of discussion and learning from both sides, the following six points are our key findings.</p>
+<p><strong>If you like building apps with templates (or want the option to), go with Vue.</strong></p>
+<p>Putting your markup in an HTML file is the default option for a Vue app. Similar to Angular, moustache braces are used for data-binding expressions, while directives (special HTML attributes) are used for adding functionality to the template.</p>
+<p>The follow demonstrates a simple Vue app. It prints a message and has a button that dynamically reverses the message:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">// HTML</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"reverseMessage"</span>&gt;</span>Reverse Message<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">// JS</div><div class="line">new Vue(&#123;</div><div class="line">  el: '#app',</div><div class="line">  data: &#123;</div><div class="line">    message: 'Hello Vue.js!</div><div class="line">  &#125;,</div><div class="line">  methods: &#123;</div><div class="line">    reverseMessage: function () &#123;</div><div class="line">      this.message = this.message.split('').reverse().join('');</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>In contrast, React apps shun templates and require the developer to create their DOM in Javascript, typically aided with JSX. Below is the same simple app implemented with React:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">// HTML</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">// JS (pre-transpilation)</div><div class="line">class App extends React.Component &#123;</div><div class="line">  constructor(props) &#123;</div><div class="line">    super(props);</div><div class="line">    this.state = &#123;</div><div class="line">      message: 'Hello React.js!'</div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line">  reverseMessage() &#123;</div><div class="line">    this.setState(&#123; </div><div class="line">      message: this.state.message.split('').reverse().join('') </div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line">  render() &#123;</div><div class="line">    return (</div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;this.state.message&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> this.reverseMessage()&#125;&gt;</div><div class="line">          Reverse Message</div><div class="line">        <span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    )</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">ReactDOM.render(App, document.getElementById('app'));</div></pre></td></tr></table></figure>
+<p>Templates are easier to understand for newer developers who’ve come from the standard web development paradigm. But even some experienced developers prefer them as templates can better seperate layout from functionality and give the option of using pre-processors like Pug.</p>
+<p>But templates come at the cost of having to learn all the extended HTML syntax, while render functions only require knowledge of standard HTML and Javascript. Render functions also benefit from easier debugging and testing.</p>
+<p>On this point, though, you can’t go wrong with Vue, as it’s introduced the option of using either templates or render functions in version 2.</p>
+<p><strong>If you like simplicity and things that “just work”, go with Vue.</strong></p>
+<p>A simple Vue project can be run directly from a browser with no need of transpilation. This allows Vue to be easily dropped into a project the way jQuery is.</p>
+<p>While this is also technically possible with React, typical React code leans more heavily on JSX and on ES6 features like classes and non-mutating array methods.</p>
+<p>But Vue’s simplicity runs more deeply in its design. Let’s compare how the two libraries handle application data (i.e. “state”).</p>
+<p>State in React is immutable so you can’t directly change it. You need to use the setState API method:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.setState(&#123; </div><div class="line">    <span class="attr">message</span>: <span class="keyword">this</span>.state.message.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>) </div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>Diff’ing the current and previous state is how React knows when and what to re-render in the DOM, hence the need for immutable state.<br>In contrast, data is just mutated in Vue. The same data property can be altered far less verbosely in Vue:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Note that data properties are available as properties of </span></div><div class="line"><span class="comment">// the Vue instance</span></div><div class="line"><span class="keyword">this</span>.message = <span class="keyword">this</span>.message.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>);</div></pre></td></tr></table></figure>
+<p>Before you conclude that Vue’s rendering system must lack the efficiency of React’s, let’s examine how state in Vue is managed under the hood: when you add a new object to the state, Vue will walk through all of its properties and convert them to getter and setters. Vue’s reactivity system now keeps track of the state and will automatically re-render the DOM when it is mutated.</p>
+<p>Impressively, altering state in Vue is not only more succinct, but its re-rendering system is actually faster and more efficient than React’s.</p>
+<p>Vue’s reactivity system does have caveats, though. For example, it cannot detect property addition or deletion and certain array changes. These cases can be worked around with a React-like set method from the Vue API.</p>
+<p><strong>If you need your application to be as small and fast as possible, go with Vue.</strong></p>
+<p>Both React and Vue will build a virtual DOM and synchronise the real DOM when the app’s state changes. Both have their own means of optimising this process.</p>
+<p>Vue core developers have offered a benchmark test that shows Vue’s rendering system to be faster than React’s. In this test a list of 10,000 items are rendered 100 times. The comparison is tabled below.</p>
+<p><img src="http://ww3.sinaimg.cn/large/79be2309gw1fbkp019rknj20m808dglu.jpg" alt=""></p>
+<blockquote>
+<p>Benchmarks as published on vuejs.org</p>
+</blockquote>
+<p>From a pragmatic standpoint, this kind of benchmark is only relevant in edge cases. Most apps will not need to do this kind of operation routinely so it should generally not be considered an important point of comparison.</p>
+<p>Page size, though, is relevant to all projects, and again Vue has the upper hand. Minified, the current release of the Vue library is only 25.6KB.</p>
+<p>To get a similar set of functionality in React you need React DOM (37.4KB) and the React with Addons library (11.4KB), which totals 48.8KB, almost double the size of Vue. To be fair you will get a larger API with React, but you don’t get double as much functionality.</p>
+<p><strong>If you plan to build a large scale app, go with React.</strong></p>
+<p>A comparison of a simple app implemented in both Vue and React, like the one at the beginning of this article, may initially bias a developer to favour Vue. This is because template-based apps are easier to understand at first look, and quicker to get up and running with.</p>
+<p>But these initial benefits introduce technical debt that can slow development of apps reaching a larger scale. Templates are prone to unnoticed runtime errors, are hard to test, and are not easy to restructure or decompose.</p>
+<p>In contrast, Javascript-made templates can be organised into components with nicely decomposed and DRY code that is more reusable and testable.</p>
+<p>Vue also has a component system and render functions. But React’s rendering system is more configurable and has features like shallow rendering that, combined with React’s testing utilities, allow for far more testable and maintainable code.</p>
+<p>Meanwhile, React’s immutable application data may not be as succinct, but it shines in larger application when transparency and testability become critical.</p>
+<p><strong>If you want a library that is adaptable for both web and native apps, go with React.</strong></p>
+<p>React Native is a library for building native mobile applications with Javascript. It’s the same as React.js, only instead of using web components, it uses native components. If you’ve learnt React.js, you’ll very easily be able to pick up React Native, and vice versa.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// JS</span></div><div class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>; </div><div class="line"><span class="keyword">import</span> &#123; AppRegistry, Text, View &#125; <span class="keyword">from</span> <span class="string">'react-native'</span>;  </div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;   </div><div class="line">  render() &#123;     </div><div class="line">    <span class="keyword">return</span> (       </div><div class="line">      <span class="xml"><span class="tag">&lt;<span class="name">View</span>&gt;</span>         </span></div><div class="line">        <span class="tag">&lt;<span class="name">Text</span>&gt;</span>Hello, React Native!<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">View</span>&gt;</span></div><div class="line">    );   </div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">AppRegistry.registerComponent(<span class="string">'HelloWorld'</span>, () =&gt; HelloWorld);</div></pre></td></tr></table></figure>
+<p>The significance is that a developer can build an app on either the web or native mobile without requiring a different set of knowledge and tools. Learning React gives you a huge bang for you buck if you intend to develop for both web and mobile.</p>
+<p>Alibaba’s Weex is another cross-platform UI project. Currently it considers Vue an “inspiration” and uses a lot of the same syntax, with plans to fully integrate Vue. However, the timeline and specifics of this integration are still unclear.</p>
+<p>Since Vue has HTML templates as a core part of its design and does not have custom rendering as a current feature, it’s hard to see that a native counterpart for Vue.js in its current form will be as tight as what React.js and React Native are.</p>
+<p><strong>If you want the biggest ecosystem, go with React.</strong></p>
+<p>There’s no question that React is currently the more popular library with ~2.5M NPM downloads a month as opposed to Vue’s ~225K per month.</p>
+<p><img src="http://ww1.sinaimg.cn/large/79be2309gw1fbkp01iettj20m8092mxp.jpg" alt=""></p>
+<p>Popularity is not merely a shallow benefit. It means there are more articles, tutorials and Stack Overflow answers for help. It means there are more tools and add-ons to leverage in a project and save developers from building everything themselves.</p>
+<p>Both libraries are open source, but React was born from Facebook and benefits from that patronage. Developers and companies committing to React can be assured of continued maintenance.</p>
+<p>In contrast, Vue was created by a single developer, Evan You, and You is currently the only full time maintainer of Vue. Vue has some corporate sponsorship but not on the scale of Facebook or Google.</p>
+<p>To the credit of the Vue team, its small size and independence has not materialised as a disadvantage. Vue has a regular release cycle and even more impressively, Vue has only 54 open issues on Github compared to 3456 closed issues, while React has a far larger 530 open issues compared to 3447 closed.</p>
+<p><strong>If you’re already happy with one or the other, there’s no need to switch.</strong></p>
+<p>To recap, our findings, Vue’s strengths are:</p>
+<ul>
+<li>Flexible options for template or render functions</li><li>Simplicity in syntax and project setup</li><li>Faster rendering and smaller size</li></ul>
+<p>React’s strengths:</p>
+<ul>
+<li>Better at scale, studier and more testable</li><li>Web and native apps</li><li>Bigger ecosystem with more support and tools available</li></ul>
+<p>However, both React and Vue are exceptional UI libraries and have more similarities than differences. Most of their best features are shared:</p>
+<ul>
+<li>Fast rendering with virtual DOM</li><li>Lightweight</li><li>Reactive components</li><li>Server-side rendering</li><li>Easy integration with router, bundler and state management</li><li>Great support and community</li></ul>
+<p>If you think we’ve missed something we’d love to hear in the comments. Happy developing!</p>
+<hr>
+<p><em>About the authors</em></p>
+<p>Anthony Gore</p>
+<blockquote>
+<p>I’m a Javascript developer and online course instructor. My latest course is Vue.js 2 Essentials: Build Your First Vue App, available on Udemy.</p>
+</blockquote>
+<p>Alexis Mangin</p>
+<blockquote>
+<p>Alexis helped me write this article with his exceptional knowledge of web development. You should follow him on Medium as he writes his own great tutorials on React.</p>
+</blockquote>
+<hr>
+<p>Vue的作者<a href="https://medium.com/@youyuxi/pretty-good-comparison-overall-but-a-few-points-id-like-to-discuss-e4f6460e75d5#.mij64qy5y" target="_blank" rel="external">回复了该文</a>，摘录如下：<br>Pretty good comparison overall, but a few points I’d like to discuss:</p>
+<blockquote>
+<p>“Templates are prone to unnoticed runtime errors, are hard to test, and are not easy to restructure or decompose.”</p>
+</blockquote>
+<p>These arguments against templates are too broad. Templates are by definition statically analyzable (even more so than dynamic render functions) and Vue provides many compile-time AND runtime warnings for common template syntax errors, and can be further improved in the future. Also, since Vue templates compile into render functions under the hood, a template containing expression syntax errors will be detected at compile time instead of runtime (if you are using a build setup instead of in-browser compilation).</p>
+<blockquote>
+<p>“In contrast, Javascript-made templates can be organised into components with nicely decomposed and DRY code that is more reusable and testable.”</p>
+</blockquote>
+<p>Organizing your application as decoupled components has little to do with whether you are using templates or JSX, but more with how components are defined as a function of state and prop. In this sense, Vue components and React components are equivalent on the higher level and there’s nothing that makes a React component fundamentally more testable than a Vue component. You can do exactly the same thing with a Vue component: render the virtual DOM with different set of props and assert the output. Admittedly this is may not be very obvious for new users, but we are planning to provide official component testing utilities in the near future.</p>
+<blockquote>
+<p>“Meanwhile, React’s immutable application data may not be as succinct, but it shines in larger application when transparency and testability become critical.”</p>
+</blockquote>
+<p>This statement lacks the proper context of state management patterns used. In most cases, the built-in state management patterns provided by the frameworks themselves are insufficient for large scale apps, and a dedicated solution like Redux or Vuex must be used. It is very premature to declare that “If you plan to build a large scale app, go with React” without giving a proper discussion about the solutions designed to deal with large scale apps for both frameworks.</p>
+<blockquote>
+<p>Alibaba’s Weex is another cross-platform UI project. Currently it considers Vue an “inspiration” and uses a lot of the same syntax, with plans to fully integrate Vue. However, the timeline and specifics of this integration are still unclear.</p>
+</blockquote>
+<p>The <a href="https://github.com/weexteam/weex-vue-framework/issues/9" target="_blank" rel="external">roadmap</a> is publicly available. In the latest Weex release (0.9.4), Vue 2 is now already officially integrated as a runtime framework which allows the use of the majority of features found in Vue’s API (excluding those that are web-platform-specific). (<a href="https://github.com/alibaba/weex/tree/dev/examples/vue" target="_blank" rel="external">examples</a>)</p>
+<blockquote>
+<p>“Since Vue has HTML templates as a core part of its design and does not have custom rendering as a current feature, it’s hard to see that a native counterpart for Vue.js in its current form will be as tight as what React.js and React Native are.”</p>
+</blockquote>
+<p>This is factually wrong. Vue 2.x is designed to support <a href="https://github.com/vuejs/vue/tree/dev/src/platforms" target="_blank" rel="external">custom rendering targets</a> from the very beginning, it’s just not exposed via public APIs. Again, templates are compiled into Virtual DOM render functions which allows any type of lower-level customizations needed to adapt to native rendering targets.</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+            <a href="/tags/react/" rel="tag">#react</a>
+          
+            <a href="/tags/vue/" rel="tag">#vue</a>
+          
+            <a href="/tags/ui/" rel="tag">#ui</a>
+          
+            <a href="/tags/programming/" rel="tag">#programming</a>
+          
+            <a href="/tags/web/" rel="tag">#web</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/article/summerize-for-2016.html" rel="next" title="2016年总结">
+                <i class="fa fa-chevron-left"></i> 2016年总结
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article> 
+  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="article/react-or-vue-which-javascript-ui-library-should-you-be-using.html"
+           data-title="React or Vue: Which Javascript UI Library Should You Be Using?" data-url="http://xovel.cn/article/react-or-vue-which-javascript-ui-library-should-you-be-using.html">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/xovel.jpg"
+               alt="xovel" />
+          <p class="site-author-name" itemprop="name">xovel</p>
+          <p class="site-description motion-element" itemprop="description">缓缓之间，风云静变</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">49</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">133</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xovel" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://hdk4.com" target="_blank" title="hdk4.com">
+                  
+                    <i class="fa fa-fw fa-adjust"></i>
+                  
+                  hdk4.com
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xovel</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io" rel="external nofollow" target="_blank">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow" target="_blank">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"xovel"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  
+</body>
+</html>
