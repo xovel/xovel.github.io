@@ -50,7 +50,7 @@ description: 运算符的优先级决定了表达式中运算执行的先后顺�
 | 16 | [逻辑非](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT) | 从右至左 | `! …` |
 | 16 | [按位取非](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT) | 从右至左 | `~ …` |
 | 16 | [一元加法](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_plus) | 从右至左 | `+ …` |
-| 16 | [一元剑法](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_negation) | 从右至左 | `- …` |
+| 16 | [一元减法](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_negation) | 从右至左 | `- …` |
 | 16 | [前置自增](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment) | 从右至左 | `++ …` |
 | 16 | [前置自减](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement) | 从右至左 | `-- …` |
 | 16 | [typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof) | 从右至左 | `typeof …` |
