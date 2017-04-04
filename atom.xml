@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2017-04-04T14:56:29.250Z</updated>
+  <updated>2017-04-04T14:59:18.532Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,12 +20,12 @@
     <link href="http://xovel.cn/article/brackets-emmet.html"/>
     <id>http://xovel.cn/article/brackets-emmet.html</id>
     <published>2017-04-04T14:51:51.000Z</published>
-    <updated>2017-04-04T14:56:29.250Z</updated>
+    <updated>2017-04-04T14:59:18.532Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>文章来自于本博客的issue，同时也记录到了个人日志的项目中去了。</p>
 </blockquote>
-<p><em>以下为正文：</em></p>
+<p><em>以下为正文</em></p>
 <hr>
 <p>最近决定将IDE迁移到<a href="http://brackets.io/" target="_blank" rel="external">brackets</a>，毕竟是adobe开发的用来替代古老臃肿的Dreamweaver的，口号就是<code>Code The Web</code>，为Web编程提供一套完善的IDE。</p>
 <hr>
