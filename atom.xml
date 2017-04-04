@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2017-04-04T14:59:18.532Z</updated>
+  <updated>2017-04-04T15:01:57.562Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/brackets-emmet.html"/>
     <id>http://xovel.cn/article/brackets-emmet.html</id>
     <published>2017-04-04T14:51:51.000Z</published>
-    <updated>2017-04-04T14:59:18.532Z</updated>
+    <updated>2017-04-04T15:01:57.562Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>文章来自于本博客的issue，同时也记录到了个人日志的项目中去了。</p>
@@ -78,7 +78,7 @@
     
       <category term="plugin" scheme="http://xovel.cn/tags/plugin/"/>
     
-      <category term="eidtor" scheme="http://xovel.cn/tags/eidtor/"/>
+      <category term="editor" scheme="http://xovel.cn/tags/editor/"/>
     
   </entry>
   
