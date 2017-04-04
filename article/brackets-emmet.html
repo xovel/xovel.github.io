@@ -1,0 +1,686 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="brackets,IDE,emmet,plugin,eidtor," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="清风轩" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="本文介绍一下自己对于brackets的一些使用的心得，罗列安装的一些的插件，并着重讲述一下emmet这款插件的安装过程出现的问题，以及其对应的解决方案。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Brackets的使用与emmet插件安装的一个问题">
+<meta property="og:url" content="http://xovel.cn/article/brackets-emmet.html">
+<meta property="og:site_name" content="清风轩">
+<meta property="og:description" content="本文介绍一下自己对于brackets的一些使用的心得，罗列安装的一些的插件，并着重讲述一下emmet这款插件的安装过程出现的问题，以及其对应的解决方案。">
+<meta property="og:updated_time" content="2017-04-04T14:56:29.250Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Brackets的使用与emmet插件安装的一个问题">
+<meta name="twitter:description" content="本文介绍一下自己对于brackets的一些使用的心得，罗列安装的一些的插件，并着重讲述一下emmet这款插件的安装过程出现的问题，以及其对应的解决方案。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> Brackets的使用与emmet插件安装的一个问题 | 清风轩 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="http://s6.cnzz.com/stat.php?id=1259096563&web_id=1259096563" type="text/javascript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">清风轩</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">清风轩居 - 引仙阁</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-garden">
+          <a href="/garden" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-life-ring"></i> <br />
+            
+            花园
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Brackets的使用与emmet插件安装的一个问题
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-04-04T22:51:51+08:00" content="2017-04-04">
+              2017-04-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/dev/" itemprop="url" rel="index">
+                    <span itemprop="name">开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>文章来自于本博客的issue，同时也记录到了个人日志的项目中去了。</p>
+</blockquote>
+<p><em>以下为正文：</em></p>
+<hr>
+<p>最近决定将IDE迁移到<a href="http://brackets.io/" target="_blank" rel="external">brackets</a>，毕竟是adobe开发的用来替代古老臃肿的Dreamweaver的，口号就是<code>Code The Web</code>，为Web编程提供一套完善的IDE。</p>
+<hr>
+<p>为什么是brackets？其实是可以用sublime的，但是sublime只是一个编辑器，没有IDE的一些特性，即便是有了插件的支持，也很难与大型IDE媲美。</p>
+<p>回想我用过的IDE，最开始的FrontPage，到VS，再到后来的初次全面接触前端开发使用的Dreamweaver。而后离开福建回到湖南，开始抛弃Dreamweaver，换了一种非常极端的方式：放弃了IDE，直接采用常规编辑器Notepad++、UltraEdit来进行代码的编写。那滋味其实也还好，毕竟，那个时候最IDE的要求并不高，所使用的后台语言是asp，都用不着开带着各种兼容性问题的Dreamweaver。</p>
+<p>之后的正式将主要编辑器从Notepad++转移到Sublime Text 3上面来了。用了很长一段时间的Sublime Text之后被其优雅的处理代码的方式所吸引。当然这过程中间也是过诸多其他的编辑器和IDE，比如Atom，Brackets，VS2012，那个时候还是偏向于使用纯粹的编辑器的。当然Notepad++因为处理多个文件方面的优势，我也一直在使用。</p>
+<p>在现在这个公司工作之后，由于项目采用的配套的IDE，也就是可以称得上是超级IDE的WebStorm，重心也就转移到了WebStorm上面了。经过这么三四个月的使用，发现虽然功能强大，但是我依然觉得繁琐，电脑性能问题，并不容易很好的支持超大项目的处理，这个时候Sublime的优势再一次得到展现，处理大量文件毫不费力。</p>
+<p>我试图将IDE改成Atom，毕竟这东西是github自家产物，但却不知道为何我迟迟没有进行这一项操作。我想我应该总有一天会使用这一款颇受好评的代码编辑工具的吧。vim这个应该也是差不多，因为现在并没有过多的接触后台操作，也不太习惯纯粹的命令行操作方式，希望以后能有机会成为传说中的vim重度依赖者吧。现阶段的我最多就是在bash里面运行几个简单的命令。</p>
+<hr>
+<p>之前也不知道为什么，我写markdown的工具都是打开的brackets，这个跟之前sublime的markdown插件的预览带进了巨坑是有一定关系的，至今不想再跳进去，索性就换了个编辑markdown的工具，挑来挑去，最后就是选择了brackets，仅仅是因为其界面的优雅。</p>
+<p>其实，现阶段的我依然是各路编辑器和IDE混用的，因为有时候同一个项目要被各种查看，一个IDE并不能胜任，于是就出现了我同时打开了WebStorm、Atom、Brackets、Notepad++、Sublime，甚至还搬出了多年不再使用的UltraEdit，是的，它们同时打开了同一个项目。我都不敢想象为什么我会变得如此疯狂。</p>
+<p>既然是要采用Brackets作为近阶段的IDE，那么就安装几个插件来让它如虎添翼吧。官方推荐的插件，我安装了几个自己认为重要的，现在我自己的电脑上的Brackets插件的安装情况大概是这个样子的：</p>
+<ul>
+<li><code>brackets-beautify</code>，官方推荐，代码美化工具，<strong>是的，格式化之后的代码很美！</strong></li><li><code>brackets-display-shortcuts</code>，显示快捷键列表的插件，安装好之后在帮助菜单里面执行，就可以看到当前所有的快捷键了。</li><li><code>brackets-emmet</code>，是的，这就是本文要提到的核心插件，一个快速写HTML代码的工具，那速度绝对快的飞起。</li><li><code>brackets-indent-guides</code>，显示缩进的指示线。简单又粗暴，绝对是深度依赖者的必装插件。</li><li><code>brackets-minimap</code>，当初是因为什么爱上了sublime？没错，就是因为有代码缩略地图。基本上现在用一款编辑工具，首先会去看看没有代码小地图工具，有的话先装起来再说。</li><li><code>pop-up-menu</code>，这是一个对编辑的工作区域内的右键菜单进行提升的插件，增加了一些便利性操作。</li><li><code>exclude-folders</code>，打开文件夹时，过滤指定文件夹的插件。过滤了<code>node_modules</code>文件夹之后，项目的打开速度得到了明显的提升。但是看不到node_modules文件夹还是总觉得有点欠缺的。</li><li><code>markdown-preview</code>，markdown预览插件。作为一个重度markdown使用者，这插件对我来说也是极好的。</li><li><code>file-icons</code>，简单粗暴，给打开的各路文件的前面显示一个图标。优雅美观说的就是这样的效果。</li><li><code>monokai-theme</code>，Sumline Text的爱好者对这个那必须是钟爱莫名的，非常精致的代码配色方案。</li><li><code>color-palette</code>，取色器，好用不解释。</li></ul>
+<p>嗯，这些插件的安装其实并不是顺利，因为有<del>强大的</del>GFW的存在，悲催的brackets因为调用了aws的资源，所以有时候那速度卡的飞起，所以大部分插件我都是通过github的zip链接进行安装的。</p>
+<p>安装完毕了之后，慕名已久的emmet插件一直不肯工作，这到底是为什么？</p>
+<p>可能是因为疏忽大意了，一直迟迟忘记了brackets是基于HTML/JS构建出来的编辑工具，其界面上面是自带了Chrome DevTools的。为了这个问题，我几乎是找遍了brackets、emmet、stackoverflow上面的所有资源，依然是没有解决这个问题，后来又想，干脆手动安装一次，完全的纯粹的手动方式：</p>
+<ol>
+<li>进入brackets的插件目录，我的是win10环境，所以在<code>C:\Users\xovel\AppData\Roaming\Brackets\extensions</code>这里。</li><li>进入user文件夹，打开bash。</li><li>在bash里面执行git clone操作。</li><li>clone完成之后进入插件目录<code>brackets-emmet</code>，继续执行依赖安装操作<code>npm install</code>。</li><li>安装完毕之后会发现，目录下多了个node_modules文件夹。</li><li>进去一看，里面有两个文件夹，分别是<code>emmet</code>和<code>caniuse-db</code>。</li><li>不管那么多，重启brackets。</li></ol>
+<p>很遗憾，依然没有emmet功能。</p>
+<p>几经周折，我终于看到了调试里面的开发工具，于是调出F12，看看到底是什么错误导致的。</p>
+<p>果不其然，在控制台里面有一行错误提示：大意是缺少一个文件，这个文件就是<code>\brackets-emmet\node_modules\emmet\lib\caniuse.json</code>，我仔细去看了一遍，确实是没有这个文件。</p>
+<p>这就比较尴尬了，会不是我这样的安装方式不对？我决定到一个全新的地方使用命令行的方式从npm上安装全新的emmet，使用<code>npm install emmet</code>命令之后，我竟然又执行了<code>npm install</code>，把emmet的开发依赖给安装了，甚至还跑了<code>gulp</code>任务，结果生成了一个dist文件夹，我感觉我这么做有点走弯路了，<del>是的，确实是走弯路，弯的很厉害</del>。不过看到dist下的<code>emmet.js</code>大小有<code>1868kb</code>的时候心里还是很是震惊的。</p>
+<p>依然没有看到caniuse.json，我就在想，这个名字跟上面提到的<code>caniuse-db</code>，应该是存在着某种关联的吧。果不其然，上emmet的repo上一搜，发现一个<a href="https://github.com/emmetio/emmet/pull/385" target="_blank" rel="external">提交记录</a>被接受了，就是提议将<code>caniuse.json</code>换成<code>caniuse-db</code>的。好家伙，这就很尴尬了。</p>
+<p>既然现在的版本已经被替换掉了，那么问题就相对来说简单了，我应该只需要找到这个缺失的文件并将它放到它应该出现的位置上就可以了。于是我通过repo的tag记录依次寻找，发现从1.3.2之后，这个caniuse.json就不见了踪影。也是说从1.4.0版本开始，丢弃了caniuse.json，改为使用caniuse-db进行可用性判定。</p>
+<p>于是我复制了一份json到本地目录中，然后重启brackets，甚好，<code>Emmet</code>菜单出来了。而后打开一个html文件，飞速敲下<code>div&gt;ul&gt;li</code>，然后按下<code>tab</code>，一个良好缩进展现的HTML结构跃然纸上。</p>
+<p>问题解决了，但我觉得应该不止我一个人被这个问题所困扰，后来我仔细看了一下<code>brackets-emmet</code>的插件的package文件，发现里面只有一个依赖：<code>&quot;emmet&quot;: &quot;^1.3.0&quot;</code>。好家伙，竟然是<code>&quot;^1.3.0&quot;</code>！</p>
+<p><code>^</code>！！</p>
+<p>让我说什么好呢？这语义化的版本控制机制，应该是被npm给更改了操作规则吧。因为安装出来的版本号显示的是1.6.2，这明显不科学。</p>
+<p>于是我手动将这一行代码改成了：<code>&quot;emmet&quot;: &quot;1.3.0&quot;</code>，然后将整个node_modules个删了，并在bash里面重新走了一边安装的操作，这个时候出来的结果是只安装了一个emmet了。怀着一颗激动的心，我重启了brackets，嗯，甚好，Emmet还在。</p>
+<p>至此，brackets上的emmet插件算是成功解决了。</p>
+<hr>
+<p>总结：瞎折腾之下，获取了宝贵的经验，也算是一种收获。<del>虽然内心觉得得不偿失</del></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/brackets/" rel="tag">#brackets</a>
+          
+            <a href="/tags/IDE/" rel="tag">#IDE</a>
+          
+            <a href="/tags/emmet/" rel="tag">#emmet</a>
+          
+            <a href="/tags/plugin/" rel="tag">#plugin</a>
+          
+            <a href="/tags/eidtor/" rel="tag">#eidtor</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/article/javascript-semicolons.html" rel="next" title="JavaScript Semicolon Insertion">
+                <i class="fa fa-chevron-left"></i> JavaScript Semicolon Insertion
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article> 
+  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="article/brackets-emmet.html"
+           data-title="Brackets的使用与emmet插件安装的一个问题" data-url="http://xovel.cn/article/brackets-emmet.html">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/xovel.jpg"
+               alt="xovel" />
+          <p class="site-author-name" itemprop="name">xovel</p>
+          <p class="site-description motion-element" itemprop="description">缓缓之间，风云静变</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">52</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">137</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xovel" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://hdk4.com" target="_blank" title="hdk4.com">
+                  
+                    <i class="fa fa-fw fa-adjust"></i>
+                  
+                  hdk4.com
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xovel</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io" rel="external nofollow" target="_blank">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow" target="_blank">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"xovel"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  
+</body>
+</html>

@@ -66,7 +66,7 @@
 <meta property="og:url" content="http://xovel.cn/article/javascript-semicolons.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="这是一篇发表于2010年5月28日的文章，本篇为转载，讲述关于JavaScript语法中的分号方面的问题。最近关于是否要去除不必要的分号的编程风格确认的时候，遇到了一些问题，很多支持去除分号的文章都引用了这一篇文章，故此这里纯粹作一个转载。">
-<meta property="og:updated_time" content="2017-03-29T14:50:42.888Z">
+<meta property="og:updated_time" content="2017-03-29T14:53:00.491Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript Semicolon Insertion">
 <meta name="twitter:description" content="这是一篇发表于2010年5月28日的文章，本篇为转载，讲述关于JavaScript语法中的分号方面的问题。最近关于是否要去除不必要的分号的编程风格确认的时候，遇到了一些问题，很多支持去除分号的文章都引用了这一篇文章，故此这里纯粹作一个转载。">
@@ -415,7 +415,7 @@ throw new MyComplexError(
 <p>Line breaks following <code>return</code>, <code>break</code>, and <code>continue</code> or preceding <code>++</code> and <code>--</code> tokens can affect parsing. Since the productions above are the only restricted productions in the language, this implies that whitespace including linebreaks can be freely added anywhere else as desired to improve readability. In particular the logical, arithmetic, and string concatenation operators, the ternary or conditional operator, member access using the dot or bracket notations, function calls, and while loops, for loops, switch statements, and the rest of the control structures, can all be written with linebreaks freely used throughout.</p>
 <p>As the specification says:</p>
 <blockquote>
-<p>The resulting practical advice to ECMAScript programmers is: A postfix ++ or – operator should appear on the same line as its operand. An Expression in a return or throw statement should start on the same line as the return or throw token. A Identifier in a break or continue statement should be on the same line as the break or continue token.</p>
+<p>The resulting practical advice to ECMAScript programmers is: A postfix <code>++</code> or <code>--</code> operator should appear on the same line as its operand. An Expression in a return or throw statement should start on the same line as the return or throw token. A Identifier in a break or continue statement should be on the same line as the break or continue token.</p>
 </blockquote>
 <p>The most commonly cited programmer error related to restricted productions is to put the return value on the line after the <code>return</code> token, especially common when the returned value is a large object or array literal or multiline string. Line break errors with postfix operators, break, continue, and throw statements are rarely seen in practice, for the simple reason that the erroneous line breaks look unnatural to most programmers and so are unlikely to be written.</p>
 <p>The final subtlety of ASI arises from the first rule, which requires that the program contain a token which is not allowed by the formal grammar, before a semicolon will be inserted. When writing code with optional semicolons omitted, it is important to keep this rule in mind so that required semicolons are not inadvertently omitted as well. This rule is what makes it possible to extend statements across multiple lines, as in the following examples:</p>
@@ -546,6 +546,10 @@ print(-y); // useful
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/article/brackets-emmet.html" rel="prev" title="Brackets的使用与emmet插件安装的一个问题">
+                Brackets的使用与emmet插件安装的一个问题 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -616,7 +620,7 @@ print(-y); // useful
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">51</span>
+              <span class="site-state-item-count">52</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -633,7 +637,7 @@ print(-y); // useful
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">132</span>
+                <span class="site-state-item-count">137</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
