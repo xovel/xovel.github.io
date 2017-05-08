@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2017-04-04T15:01:57.562Z</updated>
+  <updated>2017-05-07T16:30:30.758Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,82 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>浅谈英文的缩写</title>
+    <link href="http://xovel.cn/article/abbreviation.html"/>
+    <id>http://xovel.cn/article/abbreviation.html</id>
+    <published>2017-05-07T14:42:52.000Z</published>
+    <updated>2017-05-07T16:30:30.758Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近对一些英文单词的发音，有一些困惑，比如<code>APP</code>的发音，有些人念标准发音<code>æp</code>，有些人则念作按单字母一一念出。这里我们不讨论到底哪一种念法更为妥帖，相反的，我倒是对<code>APP</code>这种缩写方式产生了兴趣，那么，本篇文章就对英文缩写词做一个简单的梳理吧。</p>
+<a id="more"></a>
+<h3 id="缩写词的类型"><a href="#缩写词的类型" class="headerlink" title="缩写词的类型"></a>缩写词的类型</h3><p>通常，英文的缩写的方式有很多种，本文讲述几个常见的吧。</p>
+<h4 id="截短"><a href="#截短" class="headerlink" title="截短"></a>截短</h4><blockquote>
+<p><code>Shortening</code></p>
+</blockquote>
+<p>简单粗暴，就是直接从单词或者短语中截取能够代表核心意思的片段。</p>
+<ul>
+<li>缩写这个词本身<code>abbreviation</code>，其缩写为<code>abbr</code>。</li><li>编程领域经常会碰到的<code>sync</code>和<code>async</code>（同步和异步），就是<code>synchronous</code>和<code>asynchronous</code>的缩写。</li><li>举一个冷知识的例子：博客<code>blog</code>其实就是网络日志<code>weblog</code>的缩写。</li><li>翻阅英文字典，通常会发现单词的词性一栏，都是用的缩写，这个缩写方式就是截短，比如形容词<code>adj</code>/<code>adjective</code>，动词<code>v</code>/<code>verb</code>。</li></ul>
+<h4 id="收缩"><a href="#收缩" class="headerlink" title="收缩"></a>收缩</h4><blockquote>
+<p><code>Contraction</code></p>
+</blockquote>
+<p>跟上面提到的截短类似，收缩的方式通常省略部分字母。</p>
+<ul>
+<li><code>Dr.</code>是<code>Doctor</code>的缩写</li><li><code>Mr.</code>是<code>Mister</code>的缩写</li></ul>
+<p>如果是短语中出现这样的情形，通常会使用单引号<code>&#39;</code>来替换被省略的部分。</p>
+<ul>
+<li><code>It is me.</code> 可以缩写为<code>It&#39;s me.</code>。</li><li><code>because</code>在某些俚语中，缩写为<code>&#39;cause</code>。</li><li><code>cannot</code>缩写为<code>can&#39;t</code>。</li></ul>
+<p>注意，有些词的缩写可能会变更部分字母，比如<code>example</code>的缩写是<code>eg</code>。</p>
+<h4 id="融合"><a href="#融合" class="headerlink" title="融合"></a>融合</h4><blockquote>
+<p><code>Crasis</code></p>
+</blockquote>
+<p>这个在英文中并不常见，其他语种，比如法语，希腊语中出现的较多。<del>嗯，这一节还是忽略掉，不做深入解释了。</del></p>
+<h4 id="拼合"><a href="#拼合" class="headerlink" title="拼合"></a>拼合</h4><blockquote>
+<p><code>Blend</code></p>
+</blockquote>
+<p>由短语中的各个单词拼合而成。</p>
+<p>比如<code>smog</code>（烟雾）这个词，是由<code>smoke</code>（烟）和<code>fog</code>（雾）拼合而成；再比如<code>workaholic</code>（工作狂）是由<code>work</code>（工作）和<code>alcoholic</code>（酒鬼）拼合而成。</p>
+<blockquote>
+<p>这种拼合方式已经属于英文中的造字法了，更多知识请自行了解，这里不做展开。</p>
+</blockquote>
+<h4 id="首字母拼合"><a href="#首字母拼合" class="headerlink" title="首字母拼合"></a>首字母拼合</h4><blockquote>
+<p><code>Initialism</code></p>
+</blockquote>
+<p>同样的简单粗暴，短语的首个单词提取出来然后拼合成一个新词。大部分地名、机构、职位、专业术语的缩写通过这种方式进行，比如<code>UK</code>、<code>FBI</code>、<code>CEO</code>、<code>UFO</code>。</p>
+<h4 id="缩略词"><a href="#缩略词" class="headerlink" title="缩略词"></a>缩略词</h4><blockquote>
+<p><code>Acronym</code></p>
+</blockquote>
+<p>跟上面提到的首字母拼合基本类似。通常来说，缩略词跟首字母拼合还是有一定细微差别的：</p>
+<ul>
+<li>缩略词会适当忽略掉短语中出现的一些副词，比如中国的缩写<code>PRC</code>的全称是<code>People&#39;s Republic of China</code></li><li>缩略词是根据短语或者单词的意思进行综合提取进行缩写，并不一定是首字母拼合，比如<code>HTML</code>这个缩略词的全称是<strong>H</strong>yper<strong>t</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage，再比如<code>REST</code>的全称<strong>Re</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer。</li></ul>
+<h4 id="逆缩略词"><a href="#逆缩略词" class="headerlink" title="逆缩略词"></a>逆缩略词</h4><blockquote>
+<p><code>Backronym</code></p>
+</blockquote>
+<p>黑科技无误。先有缩写，再来定义全称。</p>
+<h3 id="缩写后的发音"><a href="#缩写后的发音" class="headerlink" title="缩写后的发音"></a>缩写后的发音</h3><p>缩略词会尽可能按照重新组装后的单词进行发音，比如<code>JPEG</code>（<strong>J</strong>oint <strong>P</strong>hotographic <strong>E</strong>xperts <strong>G</strong>roup）这个缩写词，读作<code>[ˈdʒeˌpɛɡ]</code>（美式发音，下同）。</p>
+<p>有些发音还有点特别，比如<code>OS X</code>，读作<code>[ˈmæk ˌoʊ ˌɛs ˈtɛn]</code>，<code>IEEE</code>读作<code>I triple E</code>。</p>
+<blockquote>
+<p>对于缩略出来的词没法读的时候，直接按字母念就好了。</p>
+</blockquote>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
+<li><a href="https://en.wikipedia.org/wiki/Abbreviation" target="_blank" rel="external">Abbreviation - Wikipedia</a></li><li><a href="https://en.wikipedia.org/wiki/Acronym" target="_blank" rel="external">Acronym - Wikipedia</a></li><li><a href="https://www.thoughtco.com/what-is-abbreviation-1689046" target="_blank" rel="external">What Is an Abbreviation?</a></li></ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近对一些英文单词的发音，有一些困惑，比如&lt;code&gt;APP&lt;/code&gt;的发音，有些人念标准发音&lt;code&gt;æp&lt;/code&gt;，有些人则念作按单字母一一念出。这里我们不讨论到底哪一种念法更为妥帖，相反的，我倒是对&lt;code&gt;APP&lt;/code&gt;这种缩写方式产生了兴趣，那么，本篇文章就对英文缩写词做一个简单的梳理吧。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
+    
+    
+      <category term="abbreviations" scheme="http://xovel.cn/tags/abbreviations/"/>
+    
+      <category term="abbr" scheme="http://xovel.cn/tags/abbr/"/>
+    
+  </entry>
   
   <entry>
     <title>Brackets的使用与emmet插件安装的一个问题</title>
@@ -1907,79 +1983,6 @@ object[&quot;property&quot;]
     <summary type="html">
     
       Yarn是一个新的包管理器，可以替换现有的npm客户端或者其他包管理器的工作流，同时保持与npm注册表的兼容。它与现有的工作流有着同样的特性，同时操作更快速、更安全、更可靠。
-    
-    </summary>
-    
-      <category term="翻译" scheme="http://xovel.cn/categories/translate/"/>
-    
-    
-      <category term="yarn" scheme="http://xovel.cn/tags/yarn/"/>
-    
-      <category term="facebook" scheme="http://xovel.cn/tags/facebook/"/>
-    
-      <category term="package" scheme="http://xovel.cn/tags/package/"/>
-    
-      <category term="npm" scheme="http://xovel.cn/tags/npm/"/>
-    
-      <category term="javascript" scheme="http://xovel.cn/tags/javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Yarn - A new package manager for JavaScript</title>
-    <link href="http://xovel.cn/article/yarn-a-new-package-manager-for-javascript.html"/>
-    <id>http://xovel.cn/article/yarn-a-new-package-manager-for-javascript.html</id>
-    <published>2016-10-12T01:22:27.000Z</published>
-    <updated>2016-11-18T07:00:40.177Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>Source: <a href="https://code.facebook.com/posts/1840075619545360" target="_blank" rel="external">Yarn: A new package manager for JavaScript</a><br>Translation: <a href="http://xovel.cn/article/yarn-a-new-package-manager-for-javascript-zh-cn.html">Yarn：一个新的JavaScript包管理器</a></p>
-</blockquote>
-<p><img src="http://ww1.sinaimg.cn/large/79be2309gw1f8p8wzobk8j20go094wep.jpg" alt="yarn"></p>
-<p>In the JavaScript community, engineers share hundreds of thousands of pieces of code so we can avoid rewriting basic components, libraries, or frameworks of our own. Each piece of code may in turn depend on other pieces of code, and these dependencies are managed by package managers. The most popular JavaScript package manager is the npm client, which provides access to more than 300,000 packages in the npm registry. More than 5 million engineers use the npm registry, which sees up to 5 billion downloads every month.</p>
-<p>We’ve used the npm client successfully at Facebook for years, but as the size of our codebase and the number of engineers grew, we ran into problems with consistency, security, and performance. After trying to solve for each issue as it came up, we set out to build a new solution to help us manage our dependencies more reliably. The product of that work is called Yarn — a fast, reliable, and secure alternative npm client.</p>
-<p>We’re pleased to announce the open source release of Yarn, a collaboration with Exponent, Google, and Tilde. With Yarn, engineers still have access to the npm registry, but can install packages more quickly and manage dependencies consistently across machines or in secure offline environments. Yarn enables engineers to move faster and with confidence when using shared code so they can focus on what matters — building new products and features.</p>
-<h2 id="The-evolution-of-JavaScript-package-management-at-Facebook"><a href="#The-evolution-of-JavaScript-package-management-at-Facebook" class="headerlink" title="The evolution of JavaScript package management at Facebook"></a>The evolution of JavaScript package management at Facebook</h2><p>In the days before package managers, it was commonplace for JavaScript engineers to rely on a small number of dependencies stored directly in their projects or served by a CDN. The first major JavaScript package manager, npm, was built shortly after Node.js was introduced, and it quickly became one of the most popular package managers in the world. Thousands of new open source projects were created and engineers shared more code than ever before.</p>
-<p>Many of our projects at Facebook, like React, depend on code in the npm registry. However, as we scaled internally, we faced problems with consistency when installing dependencies across different machines and users, the amount of time it took to pull dependencies in, and had some security concerns with the way the npm client executes code from some of those dependencies automatically. We attempted to build solutions around these issues, but they often raised new issues themselves.</p>
-<h3 id="Attempts-at-scaling-the-npm-client"><a href="#Attempts-at-scaling-the-npm-client" class="headerlink" title="Attempts at scaling the npm client"></a>Attempts at scaling the npm client</h3><p>Initially, following the prescribed best practices, we only checked in <code>package.json</code> and asked engineers to manually run <code>npm install</code>. This worked well enough for engineers, but broke down in our continuous integration environments, which need to be sandboxed and cut off from the internet for security and reliability reasons.</p>
-<p>The next solution we implemented was to check all of <code>node_modules</code> into the repository. While this worked, it made some simple operations quite difficult. For example, updating a minor version of <a href="https://babeljs.io/" target="_blank" rel="external">babel</a> generated an 800,000-line commit that was difficult to land and triggered lint rules for invalid utf8 byte sequences, windows line endings, non png-crushed images, and more. Merging changes to <code>node_modules</code> would often take engineers an entire day. Our source control team also pointed out that our checked-in <code>node_modules</code> folder was responsible for a tremendous amount of metadata. The React Native <code>package.json</code> currently lists just 68 dependencies, but after running <code>npm install</code> the <code>node_modules</code> directory contains 121,358 files.</p>
-<p>We made one final attempt to scale the npm client to work with the number of engineers at Facebook and the amount of code that we need to install. We decided to zip the entire <code>node_modules</code> folder and upload it to an internal CDN so that both engineers and our continuous integration systems could download and extract the files consistently. This enabled us to remove hundreds of thousands of files from source control, but made it so engineers needed internet access not just to pull new code, but also to build it.</p>
-<p>We also had to work around issues with npm’s <a href="https://docs.npmjs.com/cli/shrinkwrap" target="_blank" rel="external">shrinkwrap</a> feature, which we used to lock down dependency versions. Shrinkwrap files aren’t generated by default and will fall out of sync if engineers forget to generate them, so we wrote a tool to verify that the contents of the shrinkwrap file matches what’s in <code>node_modules</code>. These files are huge JSON blobs with unsorted keys, though, so changes to them would generate massive, difficult-to-review commits. To mitigate this, we needed to add an additional script to sort all the entries.</p>
-<p>Finally, updating a single dependency with npm also updates many unrelated ones based on <a href="http://semver.org/" target="_blank" rel="external">semantic versioning</a> rules. This makes every change much larger than anticipated, and having to do things like committing <code>node_modules</code> or uploading it to a CDN made the process less than ideal for engineers.</p>
-<h3 id="Building-a-new-client"><a href="#Building-a-new-client" class="headerlink" title="Building a new client"></a>Building a new client</h3><p>Rather than continue building infrastructure around the npm client, we decided to try looking at the problem more holistically. What if instead we attempted to build a new client that addressed the core issues we were experiencing? Sebastian McKenzie in our London office started hacking on this idea and we quickly became excited about its potential.</p>
-<p>As we worked on this, we began speaking with engineers across the industry and found that they faced a similar set of problems and had attempted many of the same solutions, often focused on resolving a single issue at a time. It became obvious that by collaborating on the whole set of problems the community was facing, we could develop a solution that worked for everyone. With the help of engineers from Exponent, Google, and Tilde, we built out the Yarn client and tested and validated its performance on every major JS framework and for additional use cases outside of Facebook. Today, we’re excited to share it with the community.</p>
-<h2 id="Introducing-Yarn"><a href="#Introducing-Yarn" class="headerlink" title="Introducing Yarn"></a>Introducing Yarn</h2><p>Yarn is a new package manager that replaces the existing workflow for the npm client or other package managers while remaining compatible with the npm registry. It has the same feature set as existing workflows while operating faster, more securely, and more reliably.</p>
-<p>The primary function of any package manager is to install some package — a piece of code that serves a particular purpose — from a global registry into an engineer’s local environment. Each package may or may not depend on other packages. A typical project could have tens, hundreds, or even thousands of packages within its tree of dependencies.</p>
-<p>These dependencies are versioned and installed based on semantic versioning (semver). Semver defines a versioning scheme that reflects the types of changes in each new version, whether a change breaks an API, adds a new feature, or fixes a bug. However, semver relies on package developers not making mistakes — breaking changes or new bugs may find their way into installed dependencies if the dependencies are not locked down.</p>
-<h3 id="Architecture"><a href="#Architecture" class="headerlink" title="Architecture"></a>Architecture</h3><p>In the Node ecosystem, dependencies get placed within a <code>node_modules</code> directory in your project. However, this file structure can differ from the actual dependency tree as duplicate dependencies are merged together. The npm client installs dependencies into the <code>node_modules</code> directory non-deterministically. This means that based on the order dependencies are installed, the structure of a <code>node_modules</code> directory could be different from one person to another. These differences can cause “works on my machine” bugs that take a long time to hunt down.</p>
-<p>Yarn resolves these issues around versioning and non-determinism by using lockfiles and an install algorithm that is deterministic and reliable. These lockfiles lock the installed dependencies to a specific version, and ensure that every install results in the exact same file structure in <code>node_modules</code> across all machines. The written lockfile uses a concise format with ordered keys to ensure that changes are minimal and review is simple.</p>
-<p>The install process is broken down into three steps:</p>
-<ol>
-<li><strong>Resolution</strong>: Yarn starts resolving dependencies by making requests to the registry and recursively looking up each dependency.</li><li><strong>Fetching</strong>: Next, Yarn looks in a global cache directory to see if the package needed has already been downloaded. If it hasn’t, Yarn fetches the tarball for the package and places it in the global cache so it can work offline and won’t need to download dependencies more than once. Dependencies can also be placed in source control as tarballs for full offline installs.</li><li><strong>Linking</strong>: Finally, Yarn links everything together by copying all the files needed from the global cache into the local node_modules directory.</li></ol>
-<p>By breaking these steps down cleanly and having deterministic results, Yarn is able to parallelize operations, which maximizes resource utilization and makes the install process faster. On some Facebook projects, Yarn reduced the install process by an order of magnitude, from several minutes to just seconds. Yarn also uses a mutex to ensure that multiple running CLI instances don’t collide and pollute each other.</p>
-<p>Throughout this entire process, Yarn imposes strict guarantees around package installation. You have control over which lifecycle scripts are executed for which packages. Package checksums are also stored in the lockfile to ensure that you get the same package every single time.</p>
-<h3 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h3><p>In addition to making installs much faster and more reliable, Yarn has additional features to further simplify the dependency management workflow.</p>
-<ul>
-<li>Compatibility with both the npm and bower workflows and supports mixing registries.</li><li>Ability to restrict licenses of installed modules and a means for outputting license information.</li><li>Exposes a stable public JS API with logging abstracted for consumption via build tools.</li><li>Readable, minimal, pretty CLI output.</li></ul>
-<h3 id="Yarn-in-production"><a href="#Yarn-in-production" class="headerlink" title="Yarn in production"></a>Yarn in production</h3><p>At Facebook we’re already using Yarn in production, and it’s been working really well for us. It powers the dependency and package management for many of our JavaScript projects. With each migration we’ve enabled engineers to build offline and helped speed up their workflow. You can see how install times for Yarn and npm compare on React Native under different conditions, which you can find <a href="http://yarnpkg.com/en/compare" target="_blank" rel="external">here</a>.</p>
-<p><img src="http://ww1.sinaimg.cn/large/79be2309gw1f8p8lxllbtg20nj05ldjm.gif" alt=""></p>
-<h2 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h2><p>The easiest way to get started is to run:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install -g yarn</div><div class="line">yarn</div></pre></td></tr></table></figure>
-<p>The <code>yarn</code> CLI replaces <code>npm</code> in your development workflow, either with a matching command or a new, similar command:</p>
-<ul>
-<li><p><code>npm install</code> → <code>yarn</code></p>
-<p>With no arguments, the <code>yarn</code> command will read your <code>package.json</code>, fetch packages from the npm registry, and populate your <code>node_modules</code> folder. It is equivalent to running <code>npm install</code>.</p>
-</li><li><p><code>npm install --save &lt;name&gt;</code> → <code>yarn add &lt;name&gt;</code></p>
-<p>We removed the “invisible dependency” behavior of <code>npm install &lt;name&gt;</code> and split the command. Running <code>yarn add &lt;name&gt;</code> is equivalent to running <code>npm install --save &lt;name&gt;</code>.</p>
-</li></ul>
-<h3 id="Future"><a href="#Future" class="headerlink" title="Future"></a>Future</h3><p>Many of us came together to build Yarn to solve common problems, and we knew that we wanted Yarn to be a true community project that everyone can use. Yarn is now <a href="https://github.com/yarnpkg/yarn" target="_blank" rel="external">available on GitHub</a> and we’re ready for the Node community to do what it does best: Use Yarn, share ideas, write documentation, support each other, and help build a great community to care for it. We believe that Yarn is already off to a great start, and it can be even better with your help.</p>
-<hr>
-<p>End</p>
-]]></content>
-    
-    <summary type="html">
-    
-      With Yarn, engineers have access to the npm registry while operating faster, more securely, and more reliably.
     
     </summary>
     
