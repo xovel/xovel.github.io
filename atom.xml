@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2017-05-17T15:25:13.578Z</updated>
+  <updated>2017-05-18T15:45:45.287Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/angular-function.html"/>
     <id>http://xovel.cn/article/angular-function.html</id>
     <published>2017-05-17T14:20:40.000Z</published>
-    <updated>2017-05-17T15:25:13.578Z</updated>
+    <updated>2017-05-18T15:45:45.287Z</updated>
     
     <content type="html"><![CDATA[<p>本人前段时间对<code>angular</code>进行了一定程度的了解，<code>angular</code>系列的博文就从本篇开始吧。本文就对其提供的函数组件做一个入门级的介绍。大部分文档直接翻译自官方文档：<a href="https://docs.angularjs.org/api/ng/function" target="_blank" rel="external">Function components in ng</a>。</p>
 <blockquote>
@@ -60,10 +60,10 @@
 <h3 id="angular-module"><a href="#angular-module" class="headerlink" title="angular.module"></a>angular.module</h3><p><code>angular</code>的核心，用于声明或者获取模块。</p>
 <h3 id="angular-errorHandlingConfig"><a href="#angular-errorHandlingConfig" class="headerlink" title="angular.errorHandlingConfig"></a>angular.errorHandlingConfig</h3><p>错误处理的配置。</p>
 <hr>
-<p>至此，<code>angular</code>自带的函数组件就梳理完毕了。更多详细的介绍，就请诸君自行查阅相当文档了。</p>
+<p>至此，<code>angular</code>自带的函数组件就梳理完毕了。更多详细的介绍，就请诸君自行查阅相关文档了。</p>
 <p>接下来的空余时间里面，将会逐步针对<code>angular</code>里面的知识点做一个全面的介绍。</p>
 <blockquote>
-<p>通常来说，本系列博文将的<code>angular</code>的版本为<code>1.5.x</code>+了。</p>
+<p>通常来说，本系列博文对应的<code>angular</code>的版本为<code>1.5.x+</code>。</p>
 </blockquote>
 ]]></content>
     
@@ -755,11 +755,11 @@ print(-y); // useful
       <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
     
     
+      <category term="object" scheme="http://xovel.cn/tags/object/"/>
+    
       <category term="js" scheme="http://xovel.cn/tags/js/"/>
     
       <category term="trap" scheme="http://xovel.cn/tags/trap/"/>
-    
-      <category term="object" scheme="http://xovel.cn/tags/object/"/>
     
   </entry>
   
