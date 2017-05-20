@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="xovel,清风,清风轩,清风工具" />
+  <meta name="keywords" content="npm,install," />
 
 
 
@@ -60,15 +60,16 @@
 
 
 
-<meta name="description" content="缓缓之间，风云静变">
-<meta property="og:type" content="website">
-<meta property="og:title" content="清风轩">
-<meta property="og:url" content="http://xovel.cn/tags/母亲/index.html">
+<meta name="description" content="对 npm install 命令的一些参数的简写方式，这里稍作一番总结，主要是为了方便查阅吧。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="npm install 命令参数的一些简写方式">
+<meta property="og:url" content="http://xovel.cn/article/npm-alias.html">
 <meta property="og:site_name" content="清风轩">
-<meta property="og:description" content="缓缓之间，风云静变">
+<meta property="og:description" content="对 npm install 命令的一些参数的简写方式，这里稍作一番总结，主要是为了方便查阅吧。">
+<meta property="og:updated_time" content="2017-05-20T16:17:58.388Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="清风轩">
-<meta name="twitter:description" content="缓缓之间，风云静变">
+<meta name="twitter:title" content="npm install 命令参数的一些简写方式">
+<meta name="twitter:description" content="对 npm install 命令的一些参数的简写方式，这里稍作一番总结，主要是为了方便查阅吧。">
 
 
 
@@ -86,7 +87,7 @@
   };
 </script>
 
-  <title> 标签: 母亲 | 清风轩 </title>
+  <title> npm install 命令参数的一些简写方式 | 清风轩 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -113,7 +114,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -221,46 +222,167 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        母亲
-        <small>标签</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/article/misunderstood-songs-for-mother.html" itemprop="url">
-              
-                <span itemprop="name">写给母亲的歌却一直被误解</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-05T16:09:14+08:00"
-              content="2016-08-05" >
-          08-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </div>
 
   
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                npm install 命令参数的一些简写方式
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-05-20T00:32:38+08:00" content="2017-05-20">
+              2017-05-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/dev/" itemprop="url" rel="index">
+                    <span itemprop="name">开发</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/dev/docs/" itemprop="url" rel="index">
+                    <span itemprop="name">文档</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在使用 <code>npm install</code> 命令时，有许多指定参数的命令是可以进行缩写的，本文就简单梳理一下。</p>
+<p><code>npm install</code>本身有一个别名，即<code>npm i</code>，可以使用这种缩写方式来运行命令，打到简化的效果。</p>
+<p>以下为指定的一些命令行参数的缩写方式：</p>
+<h3 id="g"><a href="#g" class="headerlink" title="-g"></a><code>-g</code></h3><p><code>--global</code>，缩写为<code>-g</code>，表示安装包时，视作全局的包。安装之后的包将位于系统预设的目录之下，一般来说</p>
+<h3 id="S"><a href="#S" class="headerlink" title="-S"></a><code>-S</code></h3><p><code>--save</code>，缩写为<code>-S</code>，表示安装的包将写入<code>package.json</code>里面的<code>dependencies</code>。</p>
+<h3 id="D"><a href="#D" class="headerlink" title="-D"></a><code>-D</code></h3><p><code>--save-dev</code>，缩写为<code>-D</code>，表示将安装的包将写入<code>packege.json</code>里面的<code>devDependencies</code>。</p>
+<h3 id="O"><a href="#O" class="headerlink" title="-O"></a><code>-O</code></h3><p><code>--save-optional</code>缩写为<code>-O</code>，表示将安装的包将写入<code>packege.json</code>里面的<code>optionalDependencies</code>。</p>
+<h3 id="E"><a href="#E" class="headerlink" title="-E"></a><code>-E</code></h3><p><code>--save-exact</code>缩写为<code>-E</code>，表示安装的包的版本是精确指定的。</p>
+<h3 id="B"><a href="#B" class="headerlink" title="-B"></a><code>-B</code></h3><p><code>--save-bundle</code>缩写为<code>-B</code>，表示将安装的包将写入<code>packege.json</code>里面的<code>bundleDependencies</code>。</p>
+<hr>
+<blockquote>
+<p><code>https://docs.npmjs.com/cli/install</code>，跑不了。</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/npm/" rel="tag">#npm</a>
+          
+            <a href="/tags/install/" rel="tag">#install</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/article/angular-function.html" rel="next" title="angular函数组件简介">
+                <i class="fa fa-chevron-left"></i> angular函数组件简介
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article> 
+  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -268,6 +390,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="article/npm-alias.html"
+           data-title="npm install 命令参数的一些简写方式" data-url="http://xovel.cn/article/npm-alias.html">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -287,8 +417,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/xovel.jpg"
@@ -371,6 +510,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#g"><span class="nav-number">1.</span> <span class="nav-text">-g</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S"><span class="nav-number">2.</span> <span class="nav-text">-S</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#D"><span class="nav-number">3.</span> <span class="nav-text">-D</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#O"><span class="nav-number">4.</span> <span class="nav-text">-O</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#E"><span class="nav-number">5.</span> <span class="nav-text">-E</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#B"><span class="nav-number">6.</span> <span class="nav-text">-B</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -467,6 +617,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

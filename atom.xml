@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2017-05-19T16:30:35.808Z</updated>
+  <updated>2017-05-20T16:17:58.388Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>npm install 命令参数的一些简写方式</title>
+    <link href="http://xovel.cn/article/npm-alias.html"/>
+    <id>http://xovel.cn/article/npm-alias.html</id>
+    <published>2017-05-19T16:32:38.000Z</published>
+    <updated>2017-05-20T16:17:58.388Z</updated>
+    
+    <content type="html"><![CDATA[<p>在使用 <code>npm install</code> 命令时，有许多指定参数的命令是可以进行缩写的，本文就简单梳理一下。</p>
+<p><code>npm install</code>本身有一个别名，即<code>npm i</code>，可以使用这种缩写方式来运行命令，打到简化的效果。</p>
+<p>以下为指定的一些命令行参数的缩写方式：</p>
+<h3 id="g"><a href="#g" class="headerlink" title="-g"></a><code>-g</code></h3><p><code>--global</code>，缩写为<code>-g</code>，表示安装包时，视作全局的包。安装之后的包将位于系统预设的目录之下，一般来说</p>
+<h3 id="S"><a href="#S" class="headerlink" title="-S"></a><code>-S</code></h3><p><code>--save</code>，缩写为<code>-S</code>，表示安装的包将写入<code>package.json</code>里面的<code>dependencies</code>。</p>
+<h3 id="D"><a href="#D" class="headerlink" title="-D"></a><code>-D</code></h3><p><code>--save-dev</code>，缩写为<code>-D</code>，表示将安装的包将写入<code>packege.json</code>里面的<code>devDependencies</code>。</p>
+<h3 id="O"><a href="#O" class="headerlink" title="-O"></a><code>-O</code></h3><p><code>--save-optional</code>缩写为<code>-O</code>，表示将安装的包将写入<code>packege.json</code>里面的<code>optionalDependencies</code>。</p>
+<h3 id="E"><a href="#E" class="headerlink" title="-E"></a><code>-E</code></h3><p><code>--save-exact</code>缩写为<code>-E</code>，表示安装的包的版本是精确指定的。</p>
+<h3 id="B"><a href="#B" class="headerlink" title="-B"></a><code>-B</code></h3><p><code>--save-bundle</code>缩写为<code>-B</code>，表示将安装的包将写入<code>packege.json</code>里面的<code>bundleDependencies</code>。</p>
+<hr>
+<blockquote>
+<p><code>https://docs.npmjs.com/cli/install</code>，跑不了。</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      对 npm install 命令的一些参数的简写方式，这里稍作一番总结，主要是为了方便查阅吧。
+    
+    </summary>
+    
+      <category term="开发" scheme="http://xovel.cn/categories/dev/"/>
+    
+      <category term="文档" scheme="http://xovel.cn/categories/dev/docs/"/>
+    
+    
+      <category term="npm" scheme="http://xovel.cn/tags/npm/"/>
+    
+      <category term="install" scheme="http://xovel.cn/tags/install/"/>
+    
+  </entry>
   
   <entry>
     <title>angular函数组件简介</title>
@@ -1939,55 +1978,6 @@ object[&quot;property&quot;]
       <category term="less" scheme="http://xovel.cn/tags/less/"/>
     
       <category term="预处理" scheme="http://xovel.cn/tags/%E9%A2%84%E5%A4%84%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一个FPGA部门LOGO的设计说明</title>
-    <link href="http://xovel.cn/article/a-logo-note-for-zte-fpga-design-department.html"/>
-    <id>http://xovel.cn/article/a-logo-note-for-zte-fpga-design-department.html</id>
-    <published>2016-10-17T08:37:47.000Z</published>
-    <updated>2016-11-18T07:00:40.177Z</updated>
-    
-    <content type="html"><![CDATA[<p>前段时间，某个人要求帮忙设计一个部门LOGO，原本也没有打算自己出手制作LOGO，所以叫一个专业做LOGO设计的人抽时间帮忙处理。然后就有了本篇文章：对一个FPGA部门LOGO的设计说明文档。</p>
-<a id="more"></a>
-<h3 id="有图有真相"><a href="#有图有真相" class="headerlink" title="有图有真相"></a>有图有真相</h3><p><img src="http://ww2.sinaimg.cn/large/79be2309gw1f8vddm9webj20go08wdgc.jpg" alt=""></p>
-<p>图片这里只放上面这一张核心设计图，其他图可以自行点击链接进行查阅。</p>
-<ul>
-<li><a href="http://ww2.sinaimg.cn/large/79be2309gw1f8vddltdmej20xc0dq75f.jpg" target="_blank" rel="external">设计大图</a></li><li><a href="http://ww4.sinaimg.cn/large/79be2309gw1f8vddnxna7j208w08w0sw.jpg" target="_blank" rel="external">ICON图</a></li></ul>
-<hr>
-<blockquote>
-<p><strong>特别感谢：LOGO设计者LiuLei</strong></p>
-</blockquote>
-<p>以下内容为针对本次设计的说明与解析：</p>
-<h3 id="LOGO简介"><a href="#LOGO简介" class="headerlink" title="LOGO简介"></a>LOGO简介</h3><p>以FPGA部门内容作为主体，由图像和文字的组合形式，体现部门主要的业务，同时加入了时尚年轻团结的元素，整体营造一种简约而富有气质的LOGO设计。</p>
-<h3 id="设计理念"><a href="#设计理念" class="headerlink" title="设计理念"></a>设计理念</h3><p>以亮灰化的蓝粉色（<code>light shade of blue-magenta</code>）作为背景，营造我们中兴公司恢宏的气势。LOGO核心布局颜色采用了中兴蓝，字体颜色使用纯黑色，表述大局观与稳重感。</p>
-<p>背景图由一组同心圆构成，体现中兴之“中”，圆形逐渐向外扩展，体现中兴之“兴”。</p>
-<p>左侧部分可以看作一个异化之后的字母“F”，并且呈现为倒立的三角形。颜色的渐变体现我们追求设计的渐进过程。三角形在数学和设计领域，意味着稳定，体现了我们在设计上追求稳固可用的决心。形状为倒立，可以更好的展现我们全心为客户设计的服务态度。</p>
-<p>左侧部分的右上方的斜线，为线路平行布线的模拟，这一块试图体现的内容：我们的主要产品设计是芯片电路。</p>
-<p>左侧部分不同颜色之间的堆叠正意味着我们的设计电路具有一定的层次感，搭配在一起也映射了各个小组/部门之间的团结协作的氛围。</p>
-<p>FPGA四个字母采用的是一款Clarendon字体（URWClarendonTExtBol Regular），简约又不失年轻洒脱的气质。</p>
-<p>右侧字体上面部分留白，体现了这里潜力无限，具有极大的发展空间，与左侧部分搭配，也是在尝试营造出一种海纳百川的意境。</p>
-<p>四个字母并排排列，未做任何修饰，除去本设计在极力追求简约的这一个因素，更意味着我们不单单注重团队的协作，同时也尊重每一个设计人员的个性。</p>
-<p>字母A后面的蓝色模块，体现了我们在追求模块化设计时，同时也注重多样化，中兴蓝的颜色也意味着整体的统一性。其形状是一个倒立的直角三角形，不单单是为了追求与A的搭配，也是跟LOGO左侧部分遥相呼应。前呼后应，我们是一个整体。</p>
-<hr>
-<p>以上，敬请查阅。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;前段时间，某个人要求帮忙设计一个部门LOGO，原本也没有打算自己出手制作LOGO，所以叫一个专业做LOGO设计的人抽时间帮忙处理。然后就有了本篇文章：对一个FPGA部门LOGO的设计说明文档。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="设计" scheme="http://xovel.cn/categories/design/"/>
-    
-    
-      <category term="设计" scheme="http://xovel.cn/tags/design/"/>
-    
-      <category term="logo" scheme="http://xovel.cn/tags/logo/"/>
-    
-      <category term="fpga" scheme="http://xovel.cn/tags/fpga/"/>
     
   </entry>
   
