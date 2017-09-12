@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2017-09-06T14:28:24.329Z</updated>
+  <updated>2017-09-11T17:35:47.586Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -16,11 +16,68 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>URLSearchParams 简介</title>
+    <link href="http://xovel.cn/article/url-search-params.html"/>
+    <id>http://xovel.cn/article/url-search-params.html</id>
+    <published>2017-09-11T23:52:10.000Z</published>
+    <updated>2017-09-11T17:35:47.586Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>本文根据 <code>URLSearchParams</code> 的<a href="https://url.spec.whatwg.org/#urlsearchparams" target="_blank" rel="external">官方规范文档</a>和 <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams" target="_blank" rel="external">MDN 文档</a>整理而成。</p>
+</blockquote>
+<p>URLSearchParams 是一个 WEB 接口，它定义了一些方法来处理 URL 的查询字符串。</p>
+<p>构造函数 <code>URLSearchParams()</code> 返回一个 URLSearchParams 对象，这个对象没有特别的属性，也不继承任何方法。</p>
+<p>URLSearchParams 的构造实例的方法如下：</p>
+<h3 id="append"><a href="#append" class="headerlink" title="append"></a><code>append</code></h3><p>插入一个新的搜索参数。该方法接受两个参数，无返回值，调用形式为 <code>URLSearchParams.append(name, value)</code>，<code>name</code> 为插入搜索参数的键名，<code>value</code> 为对应的值。</p>
+<h3 id="delete"><a href="#delete" class="headerlink" title="delete"></a><code>delete</code></h3><p>删除指定名称的<strong>所有</strong>搜索参数。接受一个参数 <code>name</code> 即要删除的键值名称，无返回值。</p>
+<h3 id="entries"><a href="#entries" class="headerlink" title="entries"></a><code>entries</code></h3><p><strong>不同于</strong> <code>Object.entries</code>，这里的 <code>entries</code> 方法会返回一个 <code>iterator</code>，可以遍历所有键值对的对象。每一个键值对均为 <code>USVString</code> 对象。</p>
+<blockquote>
+<ul>
+<li>iterator 是迭代协议 Iterator 对象的实例。</li><li><code>entries</code> 方法通常在 <code>Web Workers</code> 中使用。</li><li><code>USVString</code> 为 unicode 标量值（unicode scalar values）。</li></ul>
+</blockquote>
+<p>代码示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Create a test URLSearchParams object</span></div><div class="line"><span class="keyword">var</span> searchParams = <span class="keyword">new</span> URLSearchParams(<span class="string">"key1=value1&amp;key2=value2"</span>);</div><div class="line"></div><div class="line"><span class="comment">// Display the key/value pairs</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> pair <span class="keyword">of</span> searchParams.entries()) &#123;</div><div class="line">   <span class="built_in">console</span>.log(pair[<span class="number">0</span>]+ <span class="string">', '</span>+ pair[<span class="number">1</span>]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="get"><a href="#get" class="headerlink" title="get"></a><code>get</code></h3><p>获取指定搜索参数的第一个值。</p>
+<h3 id="getAll"><a href="#getAll" class="headerlink" title="getAll"></a><code>getAll</code></h3><p>获取指定搜索参数的所有值。返回一个数组。</p>
+<h3 id="has"><a href="#has" class="headerlink" title="has"></a><code>has</code></h3><p>判断是否存在指定的搜索参数。</p>
+<h3 id="keys"><a href="#keys" class="headerlink" title="keys"></a><code>keys</code></h3><p>返回 iterator 对象，包含了键/值对的所有键名。其他说明与上面的 <code>entries</code> 一样。</p>
+<h3 id="set"><a href="#set" class="headerlink" title="set"></a><code>set</code></h3><p>设置指定搜索参数对应的值。接受的参数跟 <code>append</code> 中的一样，如果存在多个搜索参数对应的值，则删除其他所有值。</p>
+<h3 id="sort"><a href="#sort" class="headerlink" title="sort"></a><code>sort</code></h3><p>按键名排序。排序规则为按键名的 <code>unicode</code> 码点，该规则是稳定排序，对相等的键值的相对顺序不做变更。</p>
+<h3 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString"></a><code>toString</code></h3><p>返回一个字符串，由所有搜索参数组成的字符串，可以直接用在 URL 上。</p>
+<h3 id="values"><a href="#values" class="headerlink" title="values"></a><code>values</code></h3><p>返回 iterator 对象，包含了键/值对的所有值。其他说明与上面的 <code>entries</code> 和 <code>keys</code> 一样。</p>
+<h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a><code>forEach</code></h3><p>扩展方法，提供接近于数组 forEach 的遍历方式，<del>但它并不是一个数组，也不是一个类数组</del>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">searchParams.forEach(<span class="function">(<span class="params">...args</span>)=&gt;</span><span class="built_in">console</span>.log(args))</div></pre></td></tr></table></figure>
+<blockquote>
+<p>上面的代码中，<code>args</code> 依次为键名、值、对应的 searchParam。</p>
+</blockquote>
+<p><em>参考资料</em>：</p>
+<ul>
+<li><a href="https://url.spec.whatwg.org/#urlsearchparams" target="_blank" rel="external">URL Standard</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams" target="_blank" rel="external">URLSearchParams - Web APIs | MDN</a></li><li><a href="https://nodejs.org/api/url.html#url_class_urlsearchparams" target="_blank" rel="external">URL | Node.js v8.4.0 Documentation</a></li><li><a href="http://caniuse.com/#feat=urlsearchparams" target="_blank" rel="external">Can I use - Feature: URLSearchParams</a></li></ul>
+]]></content>
+    
+    <summary type="html">
+    
+      本文简单介绍一下 URLSearchParams。
+    
+    </summary>
+    
+      <category term="开发" scheme="http://xovel.cn/categories/dev/"/>
+    
+      <category term="文档" scheme="http://xovel.cn/categories/dev/docs/"/>
+    
+    
+      <category term="web" scheme="http://xovel.cn/tags/web/"/>
+    
+      <category term="URLSearchParams" scheme="http://xovel.cn/tags/URLSearchParams/"/>
+    
+  </entry>
+  
+  <entry>
     <title>十个教育家</title>
     <link href="http://xovel.cn/article/10-educationists.html"/>
     <id>http://xovel.cn/article/10-educationists.html</id>
     <published>2017-08-27T17:24:44.000Z</published>
-    <updated>2017-09-06T14:28:24.329Z</updated>
+    <updated>2017-09-12T23:40:56.436Z</updated>
     
     <content type="html"><![CDATA[<p>本文介绍十个古今中外的教育家。</p>
 <a id="more"></a>
@@ -65,7 +122,7 @@
 <p>赫尔巴特主张的教育原则为教学的教育性，明确指出“不存在‘无教学的教育’这个概念，正如发过来，我不承认有任何‘无教育的教学’”，“德育问题是不能同整个教育分离开来的，而是同其他教育问题必然地、广泛深远地联系在一起的”，这极大的推进了教育理论的发展。</p>
 <p>赫尔巴特将教学过程分为四个阶段：清楚、联想、系统、方法。</p>
 <h3 id="杜威"><a href="#杜威" class="headerlink" title="杜威"></a>杜威</h3><p>美国哲学家、教育家，实用主义的集大成者。</p>
-<p>杜威从实用主义经验论和机能心理学触发，批判了传统的学校教育，并就教育本质提出了“教育即生活”和“学校即社会”的观点。杜威认为，教育过程在它的自身意外无目的，教育的目的就在教育的过程之中。</p>
+<p>杜威从实用主义经验论和机能心理学出发，批判了传统的学校教育，并就教育本质提出了“教育即生活”和“学校即社会”的观点。杜威认为，教育过程在它的自身意外无目的，教育的目的就在教育的过程之中。</p>
 <p>教学论方面，杜威提倡“从做中学”。从“思维五步”出发，杜威认为教学过程也相应的分为五步：</p>
 <ul>
 <li>教师给儿童提供一个与社会生活经验相关联的情境；</li><li>使儿童有准备去应付在情境中产生的问题；</li><li>使儿童产生对解决问题的思考和假设；</li><li>儿童自己对解决问题的假设加以整理和排列；</li><li>儿童通过应用来校验这些假设。</li></ul>
@@ -948,11 +1005,11 @@ print(-y); // useful
       <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
     
     
+      <category term="object" scheme="http://xovel.cn/tags/object/"/>
+    
       <category term="js" scheme="http://xovel.cn/tags/js/"/>
     
       <category term="trap" scheme="http://xovel.cn/tags/trap/"/>
-    
-      <category term="object" scheme="http://xovel.cn/tags/object/"/>
     
   </entry>
   
@@ -1887,45 +1944,6 @@ object[&quot;property&quot;]
       <category term="优先级" scheme="http://xovel.cn/tags/%E4%BC%98%E5%85%88%E7%BA%A7/"/>
     
       <category term="基础知识" scheme="http://xovel.cn/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一段处理多行文本的代码</title>
-    <link href="http://xovel.cn/article/a-fragment-code-of-multi-line-string-trim.html"/>
-    <id>http://xovel.cn/article/a-fragment-code-of-multi-line-string-trim.html</id>
-    <published>2016-10-24T07:28:18.000Z</published>
-    <updated>2016-11-18T07:00:40.177Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>因为一些事情，本人搁置了<code>zmd.js</code>的开发。今天查阅资料时，发现一段代码，针对多行文本进行处理的。</p>
-<h3 id="代码片段"><a href="#代码片段" class="headerlink" title="代码片段"></a>代码片段</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">rTrimInputText</span>(<span class="params">text</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> rsp = text.match(<span class="regexp">/^\s*/</span>)[<span class="number">0</span>].length,</div><div class="line">  rgx = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">'^\\s&#123;0,'</span> + rsp + <span class="string">'&#125;'</span>, <span class="string">'gm'</span>);</div><div class="line">  <span class="keyword">return</span> text.replace(rgx, <span class="string">''</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>代码来自：<a href="https://github.com/showdownjs/showdown/blob/master/dist/showdown.js#L884" target="_blank" rel="external">https://github.com/showdownjs/showdown/blob/master/dist/showdown.js#L884</a></p>
-</blockquote>
-<h3 id="代码的功能"><a href="#代码的功能" class="headerlink" title="代码的功能"></a>代码的功能</h3><p>去除多行文本中的前置空格。</p>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>以下的文本：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">code:</div><div class="line">  aaa</div><div class="line">    bbb</div><div class="line">   ccc</div></pre></td></tr></table></figure>
-<p>在使用上面的一段代码处理后得到的结果为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">result:</div><div class="line">aaa</div><div class="line">  bbb</div><div class="line"> ccc</div></pre></td></tr></table></figure>
-<p>即去除了每一行前面的两个空格。</p>
-<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><p>在针对嵌套的语法中，比如嵌套列表，在针对被嵌套的列表进行的解析的时候，就需要先去掉前面的缩进。这一段代码正好可以满足这个需求。</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">- </span>list1</div><div class="line">  * list1-1</div><div class="line">  * list1-2</div><div class="line">  * list1-3</div><div class="line"><span class="bullet">- </span>list2</div><div class="line"><span class="bullet">- </span>list3</div><div class="line">  + list3-1</div><div class="line">  + list3-2</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      针对markdown语法解析的过程中的一个代码片段，今天无意中看到了，做个记录。
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
-    
-    
-      <category term="markdown" scheme="http://xovel.cn/tags/markdown/"/>
-    
-      <category term="code" scheme="http://xovel.cn/tags/code/"/>
-    
-      <category term="string" scheme="http://xovel.cn/tags/string/"/>
     
   </entry>
   
