@@ -1,0 +1,673 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="npm,tree,htree,node,CLI," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="清风轩" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="本文是针对作者开发的一款命令行工具 htree 的介绍，讲述为什么要制作这样的一个工具，以及中途碰到的问题和相应的一些解决方案，权当是一个 node 开发入门的演练。在这期间也加深了对模块化与命令行工具编写的理解，将这些分享出来，与大家分享自己的一些心得。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="htree，一款模仿 tree 命令的本地文件结构查看工具">
+<meta property="og:url" content="http://xovel.cn/article/htree.html">
+<meta property="og:site_name" content="清风轩">
+<meta property="og:description" content="本文是针对作者开发的一款命令行工具 htree 的介绍，讲述为什么要制作这样的一个工具，以及中途碰到的问题和相应的一些解决方案，权当是一个 node 开发入门的演练。在这期间也加深了对模块化与命令行工具编写的理解，将这些分享出来，与大家分享自己的一些心得。">
+<meta property="og:updated_time" content="2017-09-21T17:57:30.635Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="htree，一款模仿 tree 命令的本地文件结构查看工具">
+<meta name="twitter:description" content="本文是针对作者开发的一款命令行工具 htree 的介绍，讲述为什么要制作这样的一个工具，以及中途碰到的问题和相应的一些解决方案，权当是一个 node 开发入门的演练。在这期间也加深了对模块化与命令行工具编写的理解，将这些分享出来，与大家分享自己的一些心得。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: undefined,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> htree，一款模仿 tree 命令的本地文件结构查看工具 | 清风轩 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="http://s6.cnzz.com/stat.php?id=1259096563&web_id=1259096563" type="text/javascript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">清风轩</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">清风轩居 - 引仙阁</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-garden">
+          <a href="/garden" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-life-ring"></i> <br />
+            
+            花园
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                htree，一款模仿 tree 命令的本地文件结构查看工具
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-09-21T22:53:22+08:00" content="2017-09-21">
+              2017-09-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/node/" itemprop="url" rel="index">
+                    <span itemprop="name">Node</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="htree-介绍"><a href="#htree-介绍" class="headerlink" title="htree 介绍"></a>htree 介绍</h3><p>首先，介绍一下 <a href="https://github.com/xovel/htree" target="_blank" rel="external"><code>htree</code></a> 这一款工具。<code>htree</code> 是一款用于在 <code>node</code> 环境下运行的工具，安装之后可以直接在 <code>node</code> 命令行窗口输入 <code>htree</code> 进行使用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">E:\Git\xovel\htree</div><div class="line">├─index.js</div><div class="line">├─LICENSE</div><div class="line">├─package.json</div><div class="line">├─README.md</div><div class="line">├─bin</div><div class="line">│  └─htree</div><div class="line">├─docs</div><div class="line">│  └─help</div><div class="line">├─node_modules</div><div class="line">└─util</div><div class="line">   ├─genText.js</div><div class="line">   ├─getByteLength.js</div><div class="line">   ├─getSize.js</div><div class="line">   ├─getTextList.js</div><div class="line">   └─walk.js</div></pre></td></tr></table></figure>
+<blockquote>
+<p>以上代码为在 <code>htree</code> 开发文件夹的命令行工具下执行命令 <code>htree</code> 生成的结果。</p>
+</blockquote>
+<h3 id="参数简介"><a href="#参数简介" class="headerlink" title="参数简介"></a>参数简介</h3><p><code>htree</code> 目前版本为 <code>0.2.0</code>，支持的参数如下：</p>
+<h4 id="ignore"><a href="#ignore" class="headerlink" title="ignore"></a>ignore</h4><p>忽略列表，为一个数组，包括文件和文件夹。在列表之中的值均会跳过不进行处理。</p>
+<h4 id="exclude"><a href="#exclude" class="headerlink" title="exclude"></a>exclude</h4><p>排除的文件夹。该值如果设置，应该是一个正则表达式。符合正则表达式匹配的文件夹会跳过。</p>
+<h4 id="maxDepth"><a href="#maxDepth" class="headerlink" title="maxDepth"></a>maxDepth</h4><p>读取文件夹的最大深度。该深度是基于当前传入的文件夹。</p>
+<h4 id="gap"><a href="#gap" class="headerlink" title="gap"></a>gap</h4><p>布尔值，为真则在文件/文件夹名称前面添加一个空格。</p>
+<h4 id="concatLength"><a href="#concatLength" class="headerlink" title="concatLength"></a>concatLength</h4><p>节点前缀和文件/文件名之间的连接符的长度。</p>
+<h4 id="indent"><a href="#indent" class="headerlink" title="indent"></a>indent</h4><p>布尔值，为真则在子文件/文件夹前面添加空格作为缩进。</p>
+<h4 id="indentLength"><a href="#indentLength" class="headerlink" title="indentLength"></a>indentLength</h4><p>上面的缩进的空格的长度。</p>
+<h4 id="suffix"><a href="#suffix" class="headerlink" title="suffix"></a>suffix</h4><p>布尔值，是否在文件夹后面添加一个后缀，默认不添加。</p>
+<h4 id="strSuffix"><a href="#strSuffix" class="headerlink" title="strSuffix"></a>strSuffix</h4><p>上面的后缀的文本，默认为 <code>/</code>。</p>
+<h4 id="strComment"><a href="#strComment" class="headerlink" title="strComment"></a>strComment</h4><p>注释标识符，类型为字符串。如果设置为非空字符串，<code>htree</code> 会自动计算文件/文件夹最大长度，然后再拼接 <code>padLength</code> 长度的空格，之后拼接 <code>strComment</code> 作为列表文本。非最大长度的行会使用空格进行补正对齐。</p>
+<h4 id="padLength"><a href="#padLength" class="headerlink" title="padLength"></a>padLength</h4><p>补齐 <code>strComment</code> 所用的空格的长度。</p>
+<h4 id="dir"><a href="#dir" class="headerlink" title="dir"></a>dir</h4><p><code>htree</code> 的执行主目录，默认为当前命令行窗口所在的文件夹。</p>
+<h4 id="folder"><a href="#folder" class="headerlink" title="folder"></a>folder</h4><p>布尔值，为真时只读取文件夹，跳过非文件夹的部分（即普通文件）。</p>
+<h4 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h4><p>布尔值，为真时对同级的文件/文件夹列表进行排序。通常这个设置没有什么效果，但在处理一些特殊字符开头的文件/文件夹之时会用到。默认为真。</p>
+<blockquote>
+<p>如下划线 <code>_</code> 开头的文件/文件夹默认排在后面。</p>
+</blockquote>
+<h4 id="size"><a href="#size" class="headerlink" title="size"></a>size</h4><p>布尔值，为真时显示文件的大小，如果 <code>strComment</code>未指定，则将其设置为 <code>#</code>。</p>
+<h4 id="order"><a href="#order" class="headerlink" title="order"></a>order</h4><p>对同级文件/文件夹进行归类显示的参数。为<strong>字符串</strong> <code>after</code> 时，文件会被统一放在文件夹后面；为真的其他情况时，文件会统一放在文件夹前面；为假则不做任何处理。</p>
+<h4 id="showDir"><a href="#showDir" class="headerlink" title="showDir"></a>showDir</h4><p>布尔值，为真时在最开始处显示当前执行的文件夹路径。</p>
+<h4 id="dot"><a href="#dot" class="headerlink" title="dot"></a>dot</h4><p>布尔值，为真时处理以点号 <code>.</code> 号开头的文件夹，否则跳过。</p>
+<h4 id="underline"><a href="#underline" class="headerlink" title="underline"></a>underline</h4><p>布尔值，为真时处理以下划线 <code>_</code> 开头的文件夹，否则跳过。</p>
+<h3 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h3><p>上面的所有设置均可以通过命令行方式进行参数指定，指定方式为小写连字符风格的字符串加上 <code>--</code> 的前缀。如要指定最大文件夹访问深度 <code>maxDepth</code> 为 <code>10</code>，则使用命令：<code>htree --max-depth 10</code>，或者 <code>htree --max-depth=10</code>。</p>
+<p>支持的短命令列表如下：</p>
+<ul>
+<li><code>-v</code>，即 <code>--version</code>，显示当前 <code>htree</code> 的版本号。</li><li><code>-h</code>，即 <code>--help</code>，显示当前 <code>htree</code> 的帮助文件。</li><li><code>-f</code>，即 <code>--folder</code>。</li><li><code>-d</code>，即 <code>--dir</code>。</li><li><code>-i</code>，即 <code>--ignore</code>。</li><li><code>-o</code>，即 <code>--output</code>。</li><li><code>-s</code>，即 <code>--show-dir</code>。</li><li><code>-m</code>，即 <code>--max-depth</code>。</li></ul>
+<p>为布尔值的参数，可以通过前缀 <code>--no-</code> 设置为 <code>false</code> 值。</p>
+<blockquote>
+<p>在设置 <code>--dir</code>、<code>--output</code>、<code>--exclude</code>、<code>--str-comment</code> 的值之时，必要时请对特殊字符进行转义操作。</p>
+</blockquote>
+<h3 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h3><p>为什么要开发这一款工具呢？其实很早以前就有过这样的想法，但是后来由于工具忙碌就搁置了。直到最近在处理一个树形结构的展示的时候，需要通过设置自定义数据来实现多级树结构的嵌套生成。这个方式与之前设想的文件夹结构展开方式类似，于是决定将这个项目正式开发出来。</p>
+<p>经过陆陆续续的改动，对参数配置进行了较大幅度的修改，版本号目前 <code>0.2.0</code>。项目已经趋于稳定，想来应该是没有什么太大的改动了。</p>
+<h3 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h3><p>这个项目里面，算是体验了一把模块化编程。大部分功能都抽离成了模块，<del>虽然也没多少个</del>。</p>
+<h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><p>在获取多级文件夹时候用到了以前上学时期学过的一个技术：递归。</p>
+<p>原则上，没有无限极的目录深度，所以递归调用肯定会有某个结束的场景。但是我还是设定了默认的最大目录深度为 <code>5</code>。</p>
+<h3 id="npm-相关"><a href="#npm-相关" class="headerlink" title="npm 相关"></a>npm 相关</h3><p>在进行本地开发的时候，我并没有创建 <code>node_modules</code> 文件夹，实际开发中，也没有依赖其他的项目，而在本地连接发布 <code>npm link</code> 的时候会自动进行创建。这也是为什么上面的目录中会有这个文件夹而上传到 <code>github</code> 上面的时候由于默认机制的原因忽略了。之前进行 <code>npm</code> 发布的遇到过一个<a href="https://github.com/xovel/xovel.github.io/issues/26" target="_blank" rel="external">不大不小的问题</a>，这一次的发布又遇到了，是的，我又设置了淘宝的国内镜像源。</p>
+<h3 id="参考项目"><a href="#参考项目" class="headerlink" title="参考项目"></a>参考项目</h3><p>所谓前人栽树，后人乘凉，在完成 <code>htree</code> 这个项目的过程中，遍寻了大量的资料。</p>
+<p>命令行代码主要是仿照 <a href="https://github.com/chjj/marked" target="_blank" rel="external">marked</a> 项目下的 <code>bin/marked</code> 来编写的。该项目也是已经长久搁置的 <code>zmd</code> 项目的核心参考资源。原本在实现命令行参数的读取的时候要采用某些依赖，比如 <a href="https://github.com/yargs/yargs" target="_blank" rel="external">yargs</a> 和 <a href="https://github.com/tj/commander.js" target="_blank" rel="external">commander.js</a>，但后来心想，干脆就自己尝试编写纯粹的命令行读取方法吧，就写成了现在这个样子的了。</p>
+<p><code>nodejs.org</code> 的官网上的 <a href="https://nodejs.org/api/" target="_blank" rel="external">API 文档</a>也提供了不少解决方案，主要是文件读取与写入方面的。</p>
+<hr>
+<p><code>htree</code> 项目的名字来源，看起来是 <code>h</code> + <code>tree</code> 的组合，粗看之下不会有人知道 <code>h</code> 代表了什么，但是我想要说的是其实这个是一个名字的谐音。嗯，是的，文本到底就结束了，希望后续能做制作一些方便使用的工具，这样也比较符合清风工具的总纲：简易、实用。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/npm/" rel="tag">#npm</a>
+          
+            <a href="/tags/tree/" rel="tag">#tree</a>
+          
+            <a href="/tags/htree/" rel="tag">#htree</a>
+          
+            <a href="/tags/node/" rel="tag">#node</a>
+          
+            <a href="/tags/CLI/" rel="tag">#CLI</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/article/url-search-params.html" rel="next" title="URLSearchParams 简介">
+                <i class="fa fa-chevron-left"></i> URLSearchParams 简介
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article> 
+  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/xovel.jpg"
+               alt="xovel" />
+          <p class="site-author-name" itemprop="name">xovel</p>
+          <p class="site-description motion-element" itemprop="description">缓缓之间，风云静变</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">59</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">153</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xovel" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://hdk4.com" target="_blank" title="hdk4.com">
+                  
+                    <i class="fa fa-fw fa-adjust"></i>
+                  
+                  hdk4.com
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#htree-介绍"><span class="nav-number">1.</span> <span class="nav-text">htree 介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参数简介"><span class="nav-number">2.</span> <span class="nav-text">参数简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ignore"><span class="nav-number">2.1.</span> <span class="nav-text">ignore</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#exclude"><span class="nav-number">2.2.</span> <span class="nav-text">exclude</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#maxDepth"><span class="nav-number">2.3.</span> <span class="nav-text">maxDepth</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gap"><span class="nav-number">2.4.</span> <span class="nav-text">gap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#concatLength"><span class="nav-number">2.5.</span> <span class="nav-text">concatLength</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#indent"><span class="nav-number">2.6.</span> <span class="nav-text">indent</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#indentLength"><span class="nav-number">2.7.</span> <span class="nav-text">indentLength</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#suffix"><span class="nav-number">2.8.</span> <span class="nav-text">suffix</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strSuffix"><span class="nav-number">2.9.</span> <span class="nav-text">strSuffix</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strComment"><span class="nav-number">2.10.</span> <span class="nav-text">strComment</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#padLength"><span class="nav-number">2.11.</span> <span class="nav-text">padLength</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dir"><span class="nav-number">2.12.</span> <span class="nav-text">dir</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#folder"><span class="nav-number">2.13.</span> <span class="nav-text">folder</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sort"><span class="nav-number">2.14.</span> <span class="nav-text">sort</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#size"><span class="nav-number">2.15.</span> <span class="nav-text">size</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#order"><span class="nav-number">2.16.</span> <span class="nav-text">order</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#showDir"><span class="nav-number">2.17.</span> <span class="nav-text">showDir</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dot"><span class="nav-number">2.18.</span> <span class="nav-text">dot</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#underline"><span class="nav-number">2.19.</span> <span class="nav-text">underline</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命令行参数"><span class="nav-number">3.</span> <span class="nav-text">命令行参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缘起"><span class="nav-number">4.</span> <span class="nav-text">缘起</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块化"><span class="nav-number">5.</span> <span class="nav-text">模块化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#递归"><span class="nav-number">6.</span> <span class="nav-text">递归</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#npm-相关"><span class="nav-number">7.</span> <span class="nav-text">npm 相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考项目"><span class="nav-number">8.</span> <span class="nav-text">参考项目</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xovel</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io" rel="external nofollow" target="_blank">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow" target="_blank">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+  
+</body>
+</html>
