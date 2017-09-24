@@ -1,0 +1,655 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="naming,case," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="清风轩" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="编程命名规则有很多种，本文就简单做一个介绍。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="编程命名规则">
+<meta property="og:url" content="http://xovel.cn/article/naming-rule.html">
+<meta property="og:site_name" content="清风轩">
+<meta property="og:description" content="编程命名规则有很多种，本文就简单做一个介绍。">
+<meta property="og:updated_time" content="2017-09-24T08:21:16.546Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="编程命名规则">
+<meta name="twitter:description" content="编程命名规则有很多种，本文就简单做一个介绍。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: undefined,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 编程命名规则 | 清风轩 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="http://s6.cnzz.com/stat.php?id=1259096563&web_id=1259096563" type="text/javascript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">清风轩</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">清风轩居 - 引仙阁</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-garden">
+          <a href="/garden" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-life-ring"></i> <br />
+            
+            花园
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                编程命名规则
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-09-24T12:07:13+08:00" content="2017-09-24">
+              2017-09-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/dev/" itemprop="url" rel="index">
+                    <span itemprop="name">开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>There are only two hard things in Computer Science: cache invalidation and naming things. – Phil Karlton</p>
+</blockquote>
+<p>正如上面这一句经典的话语，道出了计算机领域两个最大的难题：命名与缓存。</p>
+<p>本文就“命名”这个东西，做一个浅显的解读。</p>
+<h3 id="匈牙利命名法"><a href="#匈牙利命名法" class="headerlink" title="匈牙利命名法"></a>匈牙利命名法</h3><p>该方法也叫做 <code>HN 命名法</code>，通常认为是微软的一个雇员 <code>Charles Simonyi</code> 发明的，通过微软的各种产品和文档资料传播开来。这位雇员是一个匈牙利（Hungarian）人，这也就是这个命名方法的名字由来。</p>
+<p>匈牙利命名法的基本原则是：变量名依次由属性、类型、描述组成。</p>
+<p>这里就通过举例来进行直接的说明：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> iUserName; <span class="comment">// i 为 int 类型缩写</span></div><div class="line"><span class="keyword">char</span> cItemList; <span class="comment">// c 为 char 类型缩写</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bInitLogin; <span class="comment">// b 为 布尔值 boolean 缩写</span></div></pre></td></tr></table></figure>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">dim</span> frmInfoDetail; <span class="comment">' frm 为窗体 form 的缩写</span></div></pre></td></tr></table></figure>
+<h3 id="驼峰命名法"><a href="#驼峰命名法" class="headerlink" title="驼峰命名法"></a>驼峰命名法</h3><p>驼峰命名法 <code>camelCase</code>，来自于 Perl 语言普遍使用的大小写混合格式，后来被 Java 广泛采用，逐渐成为更加通用的命名方法。</p>
+<p>驼峰命名法的基本规则是变量名或者函数名是由一个或者多个单词连接在一起，构成唯一识别符，第一个单词以小写字母开始，后面的单词首字母大写，这样看起来跟驼峰一样此起彼伏，故此得名。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> myStudentCount;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fs.readFileSync</div></pre></td></tr></table></figure>
+<h3 id="帕斯卡命名法"><a href="#帕斯卡命名法" class="headerlink" title="帕斯卡命名法"></a>帕斯卡命名法</h3><p>跟驼峰命名法类似，帕斯卡命名法 <code>PascalCase</code> 的不同之处在于第一个单词首字母为<strong>大写</strong>。在一些构造器命名和全局特殊变量命名的时候通常会采用这种命名方法。</p>
+<p>鉴于跟驼峰命名法的相似，也有人将帕斯卡命名法称之为 <code>大驼峰命名法</code>，而上面的就称之为 <code>小驼峰命名法</code>。</p>
+<h3 id="蛇形命名法"><a href="#蛇形命名法" class="headerlink" title="蛇形命名法"></a>蛇形命名法</h3><p>蛇形命名法 <code>snake_case</code>，变量名由多个部分组成，每个部分之间使用下划线 <code>_</code> 进行连接，所以也称之为 <code>下划线命名法</code>。</p>
+<h3 id="脊柱命名法"><a href="#脊柱命名法" class="headerlink" title="脊柱命名法"></a>脊柱命名法</h3><p>脊柱命名法 <code>spinal-case</code>，跟蛇形命名法类似，不过连接符为连接符 <code>-</code>。也称之为 <code>kebab-case</code>、<code>train-case</code>。在 URL 命名，HTML 属性、CSS 属性、Lisp 语言比较常见，所以也称之为 <code>lisp-case</code>。</p>
+<blockquote>
+<p>kebab 意思是阿拉伯烤肉，与 train、spinal 一样，因为其生动的形象，跟连字符风格类似，均以此得名。</p>
+</blockquote>
+<h3 id="混杂大小写"><a href="#混杂大小写" class="headerlink" title="混杂大小写"></a>混杂大小写</h3><p><code>Studly caps</code>，这一种命名方法，其实我不知道该如何去翻译和描述，算是一种很非主流的命名方式。就是杂乱无章的大小写混拼方式。比如这种命名方式来命名自己的名称，可以是 StUdLyCaPs 或者 STuDLyCaPS。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>其实上面的种种命名方式，在语义学上面，统称为 <code>case</code>。这也是为什么其英文名称中大都出现了 <code>case</code> 这个词眼的原因。</p>
+<p>现罗列一下常见的各种 <code>case</code>，每一种都是用自身的方式进行书写的。</p>
+<ul>
+<li><code>CamelCase</code></li><li><code>snake_case</code></li><li><code>kebab-case</code></li><li><code>StUdLyCaPs</code></li></ul>
+<p>另外加上两个<del>凑数</del>：</p>
+<ul>
+<li><code>lowercase</code></li><li><code>UPPERCASE</code></li></ul>
+<blockquote>
+<p>嗯。是的，一个是小写，一个是大写。</p>
+</blockquote>
+<hr>
+<p>在如今的编码过程中，并不会总是遵循某一种规则，而是各种风格混合使用，这样也能更好的适应当前的业务场景。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/naming/" rel="tag">#naming</a>
+          
+            <a href="/tags/case/" rel="tag">#case</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/article/htree.html" rel="next" title="htree，一款模仿 tree 命令的本地文件结构查看工具">
+                <i class="fa fa-chevron-left"></i> htree，一款模仿 tree 命令的本地文件结构查看工具
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article> 
+  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/xovel.jpg"
+               alt="xovel" />
+          <p class="site-author-name" itemprop="name">xovel</p>
+          <p class="site-description motion-element" itemprop="description">缓缓之间，风云静变</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">60</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">155</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xovel" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://hdk4.com" target="_blank" title="hdk4.com">
+                  
+                    <i class="fa fa-fw fa-adjust"></i>
+                  
+                  hdk4.com
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#匈牙利命名法"><span class="nav-number">1.</span> <span class="nav-text">匈牙利命名法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#驼峰命名法"><span class="nav-number">2.</span> <span class="nav-text">驼峰命名法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#帕斯卡命名法"><span class="nav-number">3.</span> <span class="nav-text">帕斯卡命名法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#蛇形命名法"><span class="nav-number">4.</span> <span class="nav-text">蛇形命名法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#脊柱命名法"><span class="nav-number">5.</span> <span class="nav-text">脊柱命名法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#混杂大小写"><span class="nav-number">6.</span> <span class="nav-text">混杂大小写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xovel</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io" rel="external nofollow" target="_blank">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow" target="_blank">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+  
+</body>
+</html>
