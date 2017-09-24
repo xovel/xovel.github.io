@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.2.0"
+    "version": "3.2.2"
+  },
+  "scripts": {
+    "deploy": "hexo clean && hexo deploy",
+    "pack": "hexo clean && hexo generate && gulp min:html && hexo deploy"
   },
   "dependencies": {
     "del": "^2.2.1",

@@ -34,7 +34,7 @@ menu:
 menu_side:
   categories: /categories
   archives: /archives
-  tags: /tags  
+  tags: /tags
 
 # Enable/Disable menu icons.
 # Icon Mapping:
@@ -213,7 +213,7 @@ highlight_theme: night
 
 
 # Automatically scroll page to section which is under <!-- more --> mark.
-scroll_to_more: false #true
+scroll_to_more: false
 
 
 # Automatically Excerpt. Not recommand.
@@ -248,11 +248,12 @@ mathjax:
 # Baidu Analytics ID
 #baidu_analytics:
 
-# Duoshuo ShortName
-duoshuo:
-  shortname: xovel
-  # 是否展示评论数量
-  index: false
+# 多说已关闭评论系统
+# # Duoshuo ShortName
+# duoshuo:
+#   shortname: xovel
+#   # 是否展示评论数量
+#   index: false
 
 # Disqus
 #disqus_shortname:
@@ -282,14 +283,14 @@ duoshuo:
 cnzz_siteid: 1259096563
 
 
-# Make duoshuo show UA
-# user_id must NOT be null when admin_enable is true!
-# you can visit http://dev.duoshuo.com get duoshuo user id.
-duoshuo_info:
-  ua_enable: true
-  admin_enable: false
-  user_id: 0
-  #admin_nickname: Author
+# # Make duoshuo show UA
+# # user_id must NOT be null when admin_enable is true!
+# # you can visit http://dev.duoshuo.com get duoshuo user id.
+# duoshuo_info:
+#   ua_enable: true
+#   admin_enable: false
+#   user_id: 0
+#   #admin_nickname: Author
 
 
 # Facebook SDK Support.

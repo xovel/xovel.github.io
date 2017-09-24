@@ -16,7 +16,7 @@ timezone:
 url: http://xovel.cn
 root: /
 permalink: article/:title.html
-permalink_defaults: 
+permalink_defaults:
 #permalink: :year/:month/:day/:title/
 
 # Directory
@@ -76,7 +76,7 @@ category_map:
   杂项: misc
   开发: dev
   设计: design
-  文档: docs  
+  文档: docs
   前端: frontend
   后端: backend
   WEB: web
@@ -102,12 +102,14 @@ category_map:
   小说: fiction
   翻译: translate
   健康: health
+  生活: life
+  电影: film
   圣血记: holyblood
   鸣泉录: tweetspring
   寻玉: seekjade
   清风工具: zephyrtool
   转载: reprint
-  
+
 tag_map:
 #  心情: mood
 #  碎碎念: ssn
