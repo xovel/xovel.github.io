@@ -1149,9 +1149,9 @@ print(-y); // useful
       <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
     
     
-      <category term="object" scheme="http://xovel.cn/tags/object/"/>
-    
       <category term="js" scheme="http://xovel.cn/tags/js/"/>
+    
+      <category term="object" scheme="http://xovel.cn/tags/object/"/>
     
       <category term="trap" scheme="http://xovel.cn/tags/trap/"/>
     
