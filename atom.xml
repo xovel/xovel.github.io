@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2017-09-24T08:21:16.546Z</updated>
+  <updated>2017-12-12T01:46:55.609Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,97 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PARCEL - 一个极快零配置的打包工具</title>
+    <link href="http://xovel.cn/article/parcel-bundler.html"/>
+    <id>http://xovel.cn/article/parcel-bundler.html</id>
+    <published>2017-12-12T01:33:28.000Z</published>
+    <updated>2017-12-12T01:46:55.609Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://wx4.sinaimg.cn/large/79be2309gy1fmdqbevvmgj20m806dmz8.jpg" alt=""></p>
+<blockquote>
+<p>前端的发展真是日新月异，这不，打包工具方面最近又出了一个爆款，名字叫做 <code>parcel</code>。本篇博客转载其 <code>README.md</code>，暂不做翻译。文件有部分修改，原文请移步：<a href="https://github.com/parcel-bundler/parcel" target="_blank" rel="external">parcel-bundler/parcel</a>。</p>
+</blockquote>
+<hr>
+<p>Blazing fast, zero configuration web application bundler <a href="https://parceljs.org" target="_blank" rel="external">https://parceljs.org</a></p>
+<h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><ul>
+<li>🚀 <strong>Blazing fast</strong> bundle times - multicore compilation, and a filesystem cache for fast rebuilds even after a restart.</li><li>📦 Out of the box support for JS, CSS, HTML, file assets, and more - <strong>no plugins to install</strong>.</li><li>🐠 <strong>Automatically transforms modules</strong> using Babel, PostCSS, and PostHTML when needed - even <code>node_modules</code>.</li><li>✂️ Zero configuration <strong>code splitting</strong> using dynamic <code>import()</code> statements.</li><li>🔥 Built in support for <strong>hot module replacement</strong></li><li>🚨 Friendly error logging experience - syntax highlighted code frames help pinpoint the problem.</li></ul>
+<h2 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h2><ol>
+<li>Install with yarn:</li></ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yarn global add parcel-bundler</div></pre></td></tr></table></figure>
+<p>or with npm:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g parcel-bundler</div></pre></td></tr></table></figure></p>
+<ol>
+<li>Parcel can take any type of file as an entry point, but an HTML or JavaScript file is a good place to start. If you link your main JavaScript file in the HTML using a relative path, Parcel will also process it for you, and replace the reference with a URL to the output file.</li></ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./index.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<ol>
+<li>Parcel has a development server built in, which will automatically rebuild your app as you change files and supports hot module replacement for fast development. Just point it at your entry file:</li></ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">parcel index.html</div></pre></td></tr></table></figure>
+<ol>
+<li>Now open <a href="http://localhost:1234/" target="_blank" rel="external">http://localhost:1234/</a> in your browser. If needed, you can also override the default port with the -p option.</li></ol>
+<p>See <a href="https://parceljs.org" target="_blank" rel="external">parceljs.org</a> for more documentation!</p>
+<h2 id="Benchmarks"><a href="#Benchmarks" class="headerlink" title="Benchmarks"></a>Benchmarks</h2><p>Based on a reasonably sized app, containing 1726 modules, 6.5M uncompressed. Built on a 2016 MacBook Pro with 4 physical CPUs.</p>
+<table>
+<thead>
+<tr>
+<th>Bundler</th>
+<th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>browserify</td>
+<td>22.98s</td>
+</tr>
+<tr>
+<td>webpack</td>
+<td>20.71s</td>
+</tr>
+<tr>
+<td><strong>parcel</strong></td>
+<td><strong>9.98s</strong></td>
+</tr>
+<tr>
+<td><strong>parcel - with cache</strong></td>
+<td><strong>2.64s</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Why-parcel"><a href="#Why-parcel" class="headerlink" title="Why parcel?"></a>Why parcel?</h2><p>There are many web application bundlers out there with huge adoption, including webpack and browserify. So, why do we need another one? The main reasons are around developer experience.</p>
+<p>Many bundlers are built around configuration and plugins, and it is not uncommon to see applications with upwards of 500 lines of configuration just to get things working. This configuration is not just tedious and time consuming, but is also hard to get right and must be duplicated for each application. Oftentimes, this can lead to sub-optimized apps shipping to production. <code>parcel</code> is designed to need zero configuration: just point it at the entry point of your application, and it does the right thing.</p>
+<p>Existing bundlers are also very slow. Large applications with lots of files and many dependencies can take minutes to build, which is especially painful during development when things change all the time. File watchers can help with rebuilds, but the initial launch is often still very slow. <code>parcel</code> utilizes worker processes to compile your code in parallel, utilizing modern multicore processors. This results in a huge speedup for initial builds. It also has a file system cache, which saves the compiled results per file for even faster subsequent startups.</p>
+<p>Finally, existing bundlers are built around string loaders/transforms, where the transform takes in a string, parses it, does some transformation, and generates code again. Oftentimes this ends up causing many parses and code generation runs on a single file, which is inefficient. Instead, <code>parcel</code>‘s transforms work on ASTs so that there is one parse, many transforms, and one code generation per file.</p>
+<h2 id="How-it-works"><a href="#How-it-works" class="headerlink" title="How it works"></a>How it works</h2><p><code>parcel</code> transforms a tree of assets to a tree of bundles. Many other bundlers are fundamentally based around JavaScript assets, with other formats tacked on - for example, by default inlined as strings into JS files. <code>parcel</code> is file-type agnostic - it will work with any type of assets the way you’d expect, with no configuration.</p>
+<p><code>parcel</code> takes as input a single entry asset, which could be any type: a JS file, HTML, CSS, image, etc. There are various asset types defined in <code>parcel</code> which know how to handle specific file types. The assets are parsed, their dependencies are extracted, and they are transformed to their final compiled form. This creates a tree of assets.</p>
+<p>Once the asset tree has been constructed, the assets are placed into a bundle tree. A bundle is created for the entry asset, and child bundles are created for dynamic imports, which cause code splitting to occur. Child bundles are also created when assets of a different type are imported, for example if you imported a CSS file from JavaScript, it would be placed into a sibling bundle to the corresponding JavaScript. If an asset is required in more than one bundle, it is hoisted up to the nearest common ancestor in the bundle tree so it is not included more than once.</p>
+<p>After the bundle tree is constructed, each bundle is written to a file by a packager specific to the file type. The packagers know how to combine the code from each asset together into the final file that is loaded by a browser.</p>
+<h2 id="Community"><a href="#Community" class="headerlink" title="Community"></a>Community</h2><p>All feedback and suggestions are welcome!</p>
+<ul>
+<li>💬 Chat: Join us on <a href="https://slack.parceljs.org/" target="_blank" rel="external">slack</a>.</li><li>📣 Stay up to date on new features and announcements on <a href="https://twitter.com/parceljs" target="_blank" rel="external">@parceljs</a>.</li></ul>
+<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>MIT</p>
+<hr>
+<p><a href="http://www.css88.com/doc/parcel/" target="_blank" rel="external">Parcel 中文文档</a>。不得不佩服这个网站，以飞快之速完成了对文档的翻译。<del>当然，现在的官方文档内容其实也不多</del>。</p>
+<p>目前这个项目吸引了很多的开发者，诸多在 <code>webpack</code> 中的特性也会逐步加入进来，不出意外的话，这个是继 <code>rollup</code> 之后，又一个与 <code>webpack</code> 争天下的项目。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://wx4.sinaimg.cn/large/79be2309gy1fmdqbevvmgj20m806dmz8.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;前端的发展真是日新月异，这不，打包工具方面最近又出了一个爆款，名字
+    
+    </summary>
+    
+      <category term="开发" scheme="http://xovel.cn/categories/dev/"/>
+    
+      <category term="文档" scheme="http://xovel.cn/categories/dev/docs/"/>
+    
+    
+      <category term="parcel" scheme="http://xovel.cn/tags/parcel/"/>
+    
+      <category term="bunlder" scheme="http://xovel.cn/tags/bunlder/"/>
+    
+  </entry>
   
   <entry>
     <title>编程命名规则</title>
@@ -1149,9 +1240,9 @@ print(-y); // useful
       <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
     
     
-      <category term="js" scheme="http://xovel.cn/tags/js/"/>
-    
       <category term="object" scheme="http://xovel.cn/tags/object/"/>
+    
+      <category term="js" scheme="http://xovel.cn/tags/js/"/>
     
       <category term="trap" scheme="http://xovel.cn/tags/trap/"/>
     
@@ -1434,196 +1525,6 @@ print(-y); // useful
       <category term="读后感" scheme="http://xovel.cn/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
     
       <category term="杜月笙" scheme="http://xovel.cn/tags/%E6%9D%9C%E6%9C%88%E7%AC%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MathJax进阶</title>
-    <link href="http://xovel.cn/article/mathjax-advanced.html"/>
-    <id>http://xovel.cn/article/mathjax-advanced.html</id>
-    <published>2016-11-03T06:57:41.000Z</published>
-    <updated>2016-11-18T07:00:40.177Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>之前的文章：<a href="/article/mathjax-basic-tutorial-and-quick-reference.html">MathJax基础教程与快速参考</a>，本篇文章将对进阶的MathJax语法做一个简单的介绍。大部分内容来自于<a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="external">MathJax basic tutorial and quick reference</a>一文中后面的评论。</p>
-</blockquote>
-<h3 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h3><p>MathJax提供了良好的矩阵支持。矩阵的语法为：<code>$$\begin{matrix}…\end{matrix}$$</code>，如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$$</div><div class="line">        \begin&#123;matrix&#125;</div><div class="line">        1 &amp; x &amp; x^2 \\</div><div class="line">        1 &amp; y &amp; y^2 \\</div><div class="line">        1 &amp; z &amp; z^2 \\</div><div class="line">        \end&#123;matrix&#125;</div><div class="line">$$</div></pre></td></tr></table></figure>
-<p>$$<br>\begin{matrix}<br>        1 &amp; x &amp; x^2 \\<br>        1 &amp; y &amp; y^2 \\<br>        1 &amp; z &amp; z^2 \\<br>        \end{matrix}<br>$$</p>
-<p>关于添加括号，除了在基础教程中提到的<code>\left…\right</code>方法，还可以使用指定字符串替换上面提到的语法中的<code>matrix</code>即可：</p>
-<ul>
-<li><code>pmatrix</code>，$\begin{pmatrix}1&amp;2\\3&amp;4\\ \end{pmatrix}$</li><li><code>bmatrix</code>，$\begin{bmatrix}1&amp;2\\3&amp;4\\ \end{bmatrix}$</li><li><code>Bmatrix</code>，$\begin{Bmatrix}1&amp;2\\3&amp;4\\ \end{Bmatrix}$</li><li><code>vmatrix</code>，$\begin{vmatrix}1&amp;2\\3&amp;4\\ \end{vmatrix}$</li><li><code>Vmatrix</code>，$\begin{Vmatrix}1&amp;2\\3&amp;4\\ \end{Vmatrix}$</li></ul>
-<p>在矩阵中可以添加点号<code>\cdots</code>$\cdots$、<code>\ddots</code>$\ddots$、<code>\vdots</code>$\vdots$来表示省略的部分：</p>
-<p>$$<br>\begin{pmatrix}<br>     1 &amp; a_1 &amp; a_1^2 &amp; \cdots &amp; a_1^n \\<br>     1 &amp; a_2 &amp; a_2^2 &amp; \cdots &amp; a_2^n \\<br>     \vdots  &amp; \vdots&amp; \vdots &amp; \ddots &amp; \vdots \\<br>     1 &amp; a_m &amp; a_m^2 &amp; \cdots &amp; a_m^n<br>     \end{pmatrix}<br>$$</p>
-<p>增广矩阵则使用格式化的表格：</p>
-<p>$$<br>\left[\begin{array}{cc|c}<br>  1&amp;2&amp;3\\<br>  4&amp;5&amp;6<br>  \end{array}\right]<br>$$</p>
-<p>上面的矩阵的具体代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$$ \left[</div><div class="line">    \begin&#123;array&#125;&#123;cc|c&#125;</div><div class="line">      1&amp;2&amp;3\\</div><div class="line">      4&amp;5&amp;6</div><div class="line">    \end&#123;array&#125;</div><div class="line">\right] $$</div></pre></td></tr></table></figure>
-<p>小型行内矩阵的表示方法为<code>\bigl(\begin{smallmatrix} ... \end{smallmatrix}\bigr)</code>。例如$\bigl( \begin{smallmatrix} a &amp; b \\ c &amp; d \end{smallmatrix} \bigr)$的代码为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$\bigl( \begin&#123;smallmatrix&#125; a &amp; b \\ c &amp; d \end&#123;smallmatrix&#125; \bigr)$</div></pre></td></tr></table></figure>
-<h3 id="对齐的方程式"><a href="#对齐的方程式" class="headerlink" title="对齐的方程式"></a>对齐的方程式</h3><p>很多时候，我们想让方程式对齐以显得更加整齐美观。为了达到这样的目的，我们采用语法<code>\begin{align}…\end{align}</code>并且在每个换行符<code>\\</code>之后，添加一个连接符<code>&amp;</code>即可。</p>
-<p>举个例子：</p>
-<p>$$<br>\begin{align}<br>\sqrt{37} &amp; = \sqrt{\frac{73^2-1}{12^2}} \\<br> &amp; = \sqrt{\frac{73^2}{12^2}\cdot\frac{73^2-1}{73^2}} \\<br> &amp; = \sqrt{\frac{73^2}{12^2}}\sqrt{\frac{73^2-1}{73^2}} \\<br> &amp; = \frac{73}{12}\sqrt{1 - \frac{1}{73^2}} \\<br> &amp; \approx \frac{73}{12}\left(1 - \frac{1}{2\cdot73^2}\right)<br>\end{align}<br>$$</p>
-<p>以上方程式的代码为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">\begin&#123;align&#125;</div><div class="line">\sqrt&#123;37&#125; &amp; = \sqrt&#123;\frac&#123;73^2-1&#125;&#123;12^2&#125;&#125; \\</div><div class="line"> &amp; = \sqrt&#123;\frac&#123;73^2&#125;&#123;12^2&#125;\cdot\frac&#123;73^2-1&#125;&#123;73^2&#125;&#125; \\ </div><div class="line"> &amp; = \sqrt&#123;\frac&#123;73^2&#125;&#123;12^2&#125;&#125;\sqrt&#123;\frac&#123;73^2-1&#125;&#123;73^2&#125;&#125; \\</div><div class="line"> &amp; = \frac&#123;73&#125;&#123;12&#125;\sqrt&#123;1 - \frac&#123;1&#125;&#123;73^2&#125;&#125; \\ </div><div class="line"> &amp; \approx \frac&#123;73&#125;&#123;12&#125;\left(1 - \frac&#123;1&#125;&#123;2\cdot73^2&#125;\right)</div><div class="line">\end&#123;align&#125;</div></pre></td></tr></table></figure>
-<h3 id="分段函数"><a href="#分段函数" class="headerlink" title="分段函数"></a>分段函数</h3><p>分段函数使用的语法为：<code>\begin{cases}…\end{cases}</code>，在带有换行符<code>\\</code>的一行中，在分段处加入连接符<code>&amp;</code>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">f(n) =</div><div class="line">\begin&#123;cases&#125;</div><div class="line">n/2,  &amp; \text&#123;if $n$ is even&#125; \\</div><div class="line">3n+1, &amp; \text&#123;if $n$ is odd&#125;</div><div class="line">\end&#123;cases&#125;</div></pre></td></tr></table></figure>
-<p>展示为：</p>
-<p>$$<br>f(n) =<br>\begin{cases}<br>n/2,  &amp; \text{if $n$ is even} \\<br>3n+1, &amp; \text{if $n$ is odd}<br>\end{cases}<br>$$</p>
-<p>也可以将括号放在右边：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">\left.</div><div class="line">\begin&#123;array&#125;&#123;l&#125;</div><div class="line">\text&#123;if $n$ is even:&#125;&amp;n/2\\</div><div class="line">\text&#123;if $n$ is odd:&#125;&amp;3n+1</div><div class="line">\end&#123;array&#125;</div><div class="line">\right\&#125;</div><div class="line">=f(n)</div></pre></td></tr></table></figure>
-<p>$$<br>\left.<br>\begin{array}{l}<br>\text{if $n$ is even:}&amp;n/2\\<br>\text{if $n$ is odd:}&amp;3n+1<br>\end{array}<br>\right\}<br>=f(n)<br>$$</p>
-<p>要使得分段函数中间的空隙更大，可以使用<code>\\[2ex]</code>替换<code>\\</code>，如要得到：</p>
-<p>$$<br>f(n) =<br>\begin{cases}<br>\frac{n}{2},  &amp; \text{if $n$ is even} \\[2ex]<br>3n+1, &amp; \text{if $n$ is odd}<br>\end{cases}<br>$$</p>
-<p>使用以下代码即可：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">f(n) =</div><div class="line">\begin&#123;cases&#125;</div><div class="line">\frac&#123;n&#125;&#123;2&#125;,  &amp; \text&#123;if $n$ is even&#125; \\[2ex]</div><div class="line">3n+1, &amp; \text&#123;if $n$ is odd&#125;</div><div class="line">\end&#123;cases&#125;</div></pre></td></tr></table></figure>
-<h3 id="数组表格化"><a href="#数组表格化" class="headerlink" title="数组表格化"></a>数组表格化</h3><p>先看一个例子：</p>
-<p>$$<br>\begin{array}{c|lcr}<br>n &amp; \text{Left} &amp; \text{Center} &amp; \text{Right} \\<br>\hline<br>1 &amp; 0.24 &amp; 1 &amp; 125 \\<br>2 &amp; -1 &amp; 189 &amp; -8 \\<br>3 &amp; -20 &amp; 2000 &amp; 1+10i<br>\end{array}<br>$$</p>
-<p>其代码为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">\begin&#123;array&#125;&#123;c|lcr&#125;</div><div class="line">n &amp; \text&#123;Left&#125; &amp; \text&#123;Center&#125; &amp; \text&#123;Right&#125; \\</div><div class="line">\hline</div><div class="line">1 &amp; 0.24 &amp; 1 &amp; 125 \\</div><div class="line">2 &amp; -1 &amp; 189 &amp; -8 \\</div><div class="line">3 &amp; -20 &amp; 2000 &amp; 1+10i</div><div class="line">\end&#123;array&#125;</div></pre></td></tr></table></figure>
-<p>在上面的矩阵中，提到了格式化表格的方式。格式化代码<code>\begin{array}{c|lcr}</code>中<code>c</code>表示居中对齐，<code>l</code>表示左对齐，<code>r</code>表示右对齐。<code>\hline</code>表示横向的水平线。</p>
-<p>格式化的数组可以嵌套：</p>
-<p>$$<br>\begin{array}{c}<br>\begin{array}{cc}<br>\begin{array}{c|cccc}<br>\text{min} &amp; 0 &amp; 1 &amp; 2 &amp; 3\\<br>\hline<br>0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\<br>1 &amp; 0 &amp; 1 &amp; 1 &amp; 1\\<br>2 &amp; 0 &amp; 1 &amp; 2 &amp; 2\\<br>3 &amp; 0 &amp; 1 &amp; 2 &amp; 3<br>\end{array}<br>&amp;<br>\begin{array}{c|cccc}<br>\text{max}&amp;0&amp;1&amp;2&amp;3\\<br>\hline<br>0 &amp; 0 &amp; 1 &amp; 2 &amp; 3\\<br>1 &amp; 1 &amp; 1 &amp; 2 &amp; 3\\<br>2 &amp; 2 &amp; 2 &amp; 2 &amp; 3\\<br>3 &amp; 3 &amp; 3 &amp; 3 &amp; 3<br>\end{array}<br>\end{array}<br>\\<br>\begin{array}{c|cccc}<br>\Delta&amp;0&amp;1&amp;2&amp;3\\<br>\hline<br>0 &amp; 0 &amp; 1 &amp; 2 &amp; 3\\<br>1 &amp; 1 &amp; 0 &amp; 1 &amp; 2\\<br>2 &amp; 2 &amp; 1 &amp; 0 &amp; 1\\<br>3 &amp; 3 &amp; 2 &amp; 1 &amp; 0<br>\end{array}<br>\end{array}<br>$$</p>
-<p>以上代码省略。</p>
-<h3 id="带颜色的文本"><a href="#带颜色的文本" class="headerlink" title="带颜色的文本"></a>带颜色的文本</h3><p>MathJax支持HTML颜色代码来对文本进行染色显示。</p>
-<p>语法为<code>\color{black}{text}</code>。black为颜色的名称，text为进行染色的文本。</p>
-<p>$$<br>\begin{array}{|rc|}<br>\hline<br>\verb+\color{black}{text}+ &amp; \color{black}{text} \\<br>\verb+\color{gray}{text}+ &amp; \color{gray}{text} \\<br>\verb+\color{silver}{text}+ &amp; \color{silver}{text} \\<br>\verb+\color{white}{text}+ &amp; \color{white}{text} \\<br>\hline<br>\verb+\color{maroon}{text}+ &amp; \color{maroon}{text} \\<br>\verb+\color{red}{text}+ &amp; \color{red}{text} \\<br>\verb+\color{yellow}{text}+ &amp; \color{yellow}{text} \\<br>\verb+\color{lime}{text}+ &amp; \color{lime}{text} \\<br>\verb+\color{olive}{text}+ &amp; \color{olive}{text} \\<br>\verb+\color{green}{text}+ &amp; \color{green}{text} \\<br>\verb+\color{teal}{text}+ &amp; \color{teal}{text} \\<br>\verb+\color{aqua}{text}+ &amp; \color{aqua}{text} \\<br>\verb+\color{blue}{text}+ &amp; \color{blue}{text} \\<br>\verb+\color{navy}{text}+ &amp; \color{navy}{text} \\<br>\verb+\color{purple}{text}+ &amp; \color{purple}{text} \\<br>\verb+\color{fuchsia}{text}+ &amp; \color{magenta}{text} \\<br>\hline<br>\end{array}<br>$$</p>
-
-$$
-\begin{array}{|rrrrrrrr|}
-\hline
-\verb+#000+ & \color{#000}{text} & \verb+#005+ & \color{#005}{text} & \verb+#00A+ & \color{#00A}{text} & \verb+#00F+ & \color{#00F}{text}  \\
-\verb+#500+ & \color{#500}{text} & \verb+#505+ & \color{#505}{text} & \verb+#50A+ & \color{#50A}{text} & \verb+#50F+ & \color{#50F}{text}  \\
-\verb+#A00+ & \color{#A00}{text} & \verb+#A05+ & \color{#A05}{text} & \verb+#A0A+ & \color{#A0A}{text} & \verb+#A0F+ & \color{#A0F}{text}  \\
-\verb+#F00+ & \color{#F00}{text} & \verb+#F05+ & \color{#F05}{text} & \verb+#F0A+ & \color{#F0A}{text} & \verb+#F0F+ & \color{#F0F}{text}  \\
-\hline
-\verb+#080+ & \color{#080}{text} & \verb+#085+ & \color{#085}{text} & \verb+#08A+ & \color{#08A}{text} & \verb+#08F+ & \color{#08F}{text}  \\
-\verb+#580+ & \color{#580}{text} & \verb+#585+ & \color{#585}{text} & \verb+#58A+ & \color{#58A}{text} & \verb+#58F+ & \color{#58F}{text}  \\
-\verb+#A80+ & \color{#A80}{text} & \verb+#A85+ & \color{#A85}{text} & \verb+#A8A+ & \color{#A8A}{text} & \verb+#A8F+ & \color{#A8F}{text}  \\
-\verb+#F80+ & \color{#F80}{text} & \verb+#F85+ & \color{#F85}{text} & \verb+#F8A+ & \color{#F8A}{text} & \verb+#F8F+ & \color{#F8F}{text}  \\
-\hline
-\verb+#0F0+ & \color{#0F0}{text} & \verb+#0F5+ & \color{#0F5}{text} & \verb+#0FA+ & \color{#0FA}{text} & \verb+#0FF+ & \color{#0FF}{text}  \\
-\verb+#5F0+ & \color{#5F0}{text} & \verb+#5F5+ & \color{#5F5}{text} & \verb+#5FA+ & \color{#5FA}{text} & \verb+#5FF+ & \color{#5FF}{text}  \\
-\verb+#AF0+ & \color{#AF0}{text} & \verb+#AF5+ & \color{#AF5}{text} & \verb+#AFA+ & \color{#AFA}{text} & \verb+#AFF+ & \color{#AFF}{text}  \\
-\verb+#FF0+ & \color{#FF0}{text} & \verb+#FF5+ & \color{#FF5}{text} & \verb+#FFA+ & \color{#FFA}{text} & \verb+#FFF+ & \color{#FFF}{text}  \\
-\hline
-\end{array}
-$$
-
-<p>MathJax的HTML颜色，详情请参考<a href="http://www.w3schools.com/html/html_colors.asp" target="_blank" rel="external">这里</a>。</p>
-<h3 id="交叉线"><a href="#交叉线" class="headerlink" title="交叉线"></a>交叉线</h3><p>使用<code>\require{cancel}</code>开启实现对本文添加交叉线的效果。该语法可以用来展示删除，取消等效果。</p>
-<p>如：<br>
-$$
-\require{cancel}\begin{array}{rl}
-\verb|y+\cancel{x}| & y+\cancel{x}\\
-\verb|\cancel{y+x}| & \cancel{y+x}\\
-\verb|y+\bcancel{x}| & y+\bcancel{x}\\
-\verb|y+\xcancel{x}| & y+\xcancel{x}\\
-\verb|y+\cancelto{0}{x}| & y+\cancelto{0}{x}\\
-\verb+\frac{1\cancel9}{\cancel95} = \frac15+& \frac{1\cancel9}{\cancel95} = \frac15 \\
-\end{array}
-$$
-</p>
-<p>还可以使用<code>\require{enclose}</code>：</p>
-
-$$
-\require{enclose}\begin{array}{rl}
-\verb|\enclose{horizontalstrike}{x+y}| & \enclose{horizontalstrike}{x+y}\\
-\verb|\enclose{verticalstrike}{\frac xy}| & \enclose{verticalstrike}{\frac xy}\\
-\verb|\enclose{updiagonalstrike}{x+y}| & \enclose{updiagonalstrike}{x+y}\\
-\verb|\enclose{downdiagonalstrike}{x+y}| & \enclose{downdiagonalstrike}{x+y}\\
-\verb|\enclose{horizontalstrike,updiagonalstrike}{x+y}| & \enclose{horizontalstrike,updiagonalstrike}{x+y}\\
-\end{array}
-$$
-
-<h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h3><p>下面列出一些常见的文字修饰符：</p>
-<p><code>\overline</code> $\overline A$</p>
-<p><code>\underline</code> $\underline B$</p>
-<p><code>\widetilde</code> $\widetilde C$</p>
-<p><code>\widehat</code> $\widehat D$</p>
-<p><code>\fbox</code> $\fbox {$E$}$</p>
-<p><code>\underleftarrow</code> $\underleftarrow{F}$</p>
-<p><code>\underrightarrow</code> $\underrightarrow{G}$</p>
-<p><code>\underleftrightarrow</code> $\underleftrightarrow{H}$</p>
-<p><code>\overbrace</code> $\overbrace{(n - 2) + \overbrace{(n - 1) + n + (n + 1)} + (n + 2)}$</p>
-<p><code>\underbrace</code> $(n \underbrace{- 2) + (n \underbrace{- 1) + n + (n +} 1) + (n +} 2)$</p>
-<p><code>\overbrace</code>和<code>\underbrace</code>，可以添加上标/下标的文本。如<code>\underbrace{a\cdot a\cdots a}_{b\text{ times}}</code>展示为：</p>
-<p>$$\underbrace{a\cdot a\cdots a}_{b\text{ times}}$$</p>
-<p>音阶修饰符：</p>
-<p><code>\check</code> $\check{I}$</p>
-<p><code>\acute</code> $\acute{J}$</p>
-<p><code>\grave</code> $\grave{K}$</p>
-<h3 id="标签与标记"><a href="#标签与标记" class="headerlink" title="标签与标记"></a>标签与标记</h3><p>一些长公式，可能需要进行一些标注，或者是注明序号。</p>
-<p><code>a := x^2-y^3 \tag{*}\label{*}</code></p>
-<p>$$a := x^2-y^3 \tag{*}\label{*}$$</p>
-<p>方程式等号之上也可以添加一些本文标注：</p>
-<p><code>a+y^3 \stackrel{\eqref{*}}= x^2</code></p>
-<p>$$a+y^3 \stackrel{\eqref{*}}= x^2$$</p>
-<p>不带括号也可以，使用<code>\ref{somelabel}</code>即可。</p>
-<h3 id="自定义命令"><a href="#自定义命令" class="headerlink" title="自定义命令"></a>自定义命令</h3><p>使用<code>\newcommand</code>可以进行功能自定义。</p>
-<p><code>\newcommand{\SES}[3]{ 0 \to #1 \to #2 \to #3 \to 0 }</code></p>
-<p>定义过的命令<code>SES</code>就可以进行调用了：<code>\SES{A}{B}{C}</code></p>
-<p>$$<br>\newcommand{\SES}[3]{ 0 \to #1 \to #2 \to #3 \to 0 }<br>\SES{A}{B}{C}<br>$$</p>
-<h3 id="指定操作符"><a href="#指定操作符" class="headerlink" title="指定操作符"></a>指定操作符</h3><p>使用<code>\operatorname{…}</code>可以指定任意文本作为操作符进行展示。</p>
-<p>如<code>\operatorname{arsinh}(x)</code>展示为$\operatorname{arsinh}(x)$。</p>
-<p>如果写成<code>arsinh(x)</code>，会造成字体显示不对：$arsinh(x)$；写成<code>\arsinh(x)</code>则会报错。</p>
-<h3 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h3><p>在极限符号<code>\lim</code>后再跟一个<code> \limits</code>可以添加极限的下标。</p>
-<p><code>\lim \limits_{x \to 1} \frac{x^2-1}{x-1}</code></p>
-<p>$\lim \limits_{x \to 1} \frac{x^2-1}{x-1}$</p>
-<h3 id="高亮"><a href="#高亮" class="headerlink" title="高亮"></a>高亮</h3><p>使用<code>\bbox</code>可以对方程式进行高亮展示。</p>
-<p>如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">\bbox[yellow]</div><div class="line">&#123;</div><div class="line">e^x=\lim_&#123;n\to\infty&#125; \left( 1+\frac&#123;x&#125;&#123;n&#125; \right)^n</div><div class="line">\qquad (1)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>将展示为：</p>
-
-$$ \bbox[yellow]
-{
-e^x=\lim_{n\to\infty} \left( 1+\frac{x}{n} \right)^n
-\qquad (1)
-}
-$$
-
-<p>可以添加内边距：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$$ \bbox[yellow,5px]</div><div class="line">&#123;</div><div class="line">e^x=\lim_&#123;n\to\infty&#125; \left( 1+\frac&#123;x&#125;&#123;n&#125; \right)^n</div><div class="line">\qquad (1)</div><div class="line">&#125;</div><div class="line">$$</div></pre></td></tr></table></figure>
-
-$$ \bbox[yellow,5px]
-{
-e^x=\lim_{n\to\infty} \left( 1+\frac{x}{n} \right)^n
-\qquad (1)
-}
-$$
-
-<p>也可以指定边框：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$$ \bbox[#1695ea,5px,border:2px solid cyan]</div><div class="line">&#123;</div><div class="line">e^x=\lim_&#123;n\to\infty&#125; \left( 1+\frac&#123;x&#125;&#123;n&#125; \right)^n</div><div class="line">\qquad (2)</div><div class="line">&#125;</div><div class="line">$$</div></pre></td></tr></table></figure>
-
-$$ \bbox[#1695ea,5px,border:2px solid cyan]
-{
-e^x=\lim_{n\to\infty} \left( 1+\frac{x}{n} \right)^n
-\qquad (2)
-}
-$$
-
-<hr>
-<p>本文完。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      本文是对之前的文章《MathJax基础教程与快速参考》的扩充。
-    
-    </summary>
-    
-      <category term="开发" scheme="http://xovel.cn/categories/dev/"/>
-    
-      <category term="文档" scheme="http://xovel.cn/categories/dev/docs/"/>
-    
-    
-      <category term="mathjax" scheme="http://xovel.cn/tags/mathjax/"/>
-    
-      <category term="教程" scheme="http://xovel.cn/tags/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="参考" scheme="http://xovel.cn/tags/%E5%8F%82%E8%80%83/"/>
-    
-      <category term="进阶" scheme="http://xovel.cn/tags/%E8%BF%9B%E9%98%B6/"/>
     
   </entry>
   
