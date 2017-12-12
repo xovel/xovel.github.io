@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2017-12-12T01:46:55.609Z</updated>
+  <updated>2017-12-12T01:51:43.059Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="http://xovel.cn/article/parcel-bundler.html"/>
     <id>http://xovel.cn/article/parcel-bundler.html</id>
     <published>2017-12-12T01:33:28.000Z</published>
-    <updated>2017-12-12T01:46:55.609Z</updated>
+    <updated>2017-12-12T01:51:43.059Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://wx4.sinaimg.cn/large/79be2309gy1fmdqbevvmgj20m806dmz8.jpg" alt=""></p>
 <blockquote>
-<p>前端的发展真是日新月异，这不，打包工具方面最近又出了一个爆款，名字叫做 <code>parcel</code>。本篇博客转载其 <code>README.md</code>，暂不做翻译。文件有部分修改，原文请移步：<a href="https://github.com/parcel-bundler/parcel" target="_blank" rel="external">parcel-bundler/parcel</a>。</p>
+<p>前端的发展真是日新月异，这不，打包工具方面最近又出了一个爆款，名字叫做 <code>parcel</code>。本篇博客转载其 <code>README.md</code>，暂不做翻译。原文请移步：<a href="https://github.com/parcel-bundler/parcel" target="_blank" rel="external">parcel-bundler/parcel</a>。</p>
 </blockquote>
 <hr>
 <p>Blazing fast, zero configuration web application bundler <a href="https://parceljs.org" target="_blank" rel="external">https://parceljs.org</a></p>
@@ -89,9 +89,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://wx4.sinaimg.cn/large/79be2309gy1fmdqbevvmgj20m806dmz8.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;前端的发展真是日新月异，这不，打包工具方面最近又出了一个爆款，名字
+      前端的发展真是日新月异，这不，打包工具方面最近又出了一个爆款，名字叫做 `parcel`。本文转载其说明文档 `README.md`。
     
     </summary>
     
