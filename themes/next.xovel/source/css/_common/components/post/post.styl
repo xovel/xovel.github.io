@@ -44,10 +44,10 @@
 @import "post-gallery";
 @import "post-reward" if hexo-config('alipay') or hexo-config('wechatpay');
 
-.post-body a[rel~="external"] {
+.post-body a[rel~="noopener"] {
   color: #3370BB;
 }
-.post-body a[rel~="external"]:after {
+.post-body a[rel~="noopener"]:after {
   content:"\f08e";
   font: normal normal normal 14px/1 FontAwesome;
   margin-left:2px;
