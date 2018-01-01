@@ -61,11 +61,13 @@
 
 
 <meta name="description" content="前端的发展真是日新月异，这不，打包工具方面最近又出了一个爆款，名字叫做 `parcel`。本文转载其说明文档 `README.md`。">
+<meta name="keywords" content="parcel,bunlder">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PARCEL - 一个极快零配置的打包工具">
 <meta property="og:url" content="http://xovel.cn/article/parcel-bundler.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="前端的发展真是日新月异，这不，打包工具方面最近又出了一个爆款，名字叫做 `parcel`。本文转载其说明文档 `README.md`。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://wx4.sinaimg.cn/large/79be2309gy1fmdqbevvmgj20m806dmz8.jpg">
 <meta property="og:updated_time" content="2017-12-12T01:51:43.059Z">
 <meta name="twitter:card" content="summary">
@@ -319,25 +321,25 @@
       
         <p><img src="http://wx4.sinaimg.cn/large/79be2309gy1fmdqbevvmgj20m806dmz8.jpg" alt=""></p>
 <blockquote>
-<p>前端的发展真是日新月异，这不，打包工具方面最近又出了一个爆款，名字叫做 <code>parcel</code>。本篇博客转载其 <code>README.md</code>，暂不做翻译。原文请移步：<a href="https://github.com/parcel-bundler/parcel" target="_blank" rel="external">parcel-bundler/parcel</a>。</p>
+<p>前端的发展真是日新月异，这不，打包工具方面最近又出了一个爆款，名字叫做 <code>parcel</code>。本篇博客转载其 <code>README.md</code>，暂不做翻译。原文请移步：<a href="https://github.com/parcel-bundler/parcel" target="_blank" rel="noopener">parcel-bundler/parcel</a>。</p>
 </blockquote>
 <hr>
-<p>Blazing fast, zero configuration web application bundler <a href="https://parceljs.org" target="_blank" rel="external">https://parceljs.org</a></p>
+<p>Blazing fast, zero configuration web application bundler <a href="https://parceljs.org" target="_blank" rel="noopener">https://parceljs.org</a></p>
 <h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><ul>
 <li>🚀 <strong>Blazing fast</strong> bundle times - multicore compilation, and a filesystem cache for fast rebuilds even after a restart.</li><li>📦 Out of the box support for JS, CSS, HTML, file assets, and more - <strong>no plugins to install</strong>.</li><li>🐠 <strong>Automatically transforms modules</strong> using Babel, PostCSS, and PostHTML when needed - even <code>node_modules</code>.</li><li>✂️ Zero configuration <strong>code splitting</strong> using dynamic <code>import()</code> statements.</li><li>🔥 Built in support for <strong>hot module replacement</strong></li><li>🚨 Friendly error logging experience - syntax highlighted code frames help pinpoint the problem.</li></ul>
 <h2 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h2><ol>
 <li>Install with yarn:</li></ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yarn global add parcel-bundler</div></pre></td></tr></table></figure>
-<p>or with npm:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g parcel-bundler</div></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn global add parcel-bundler</span><br></pre></td></tr></table></figure>
+<p>or with npm:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g parcel-bundler</span><br></pre></td></tr></table></figure></p>
 <ol>
 <li>Parcel can take any type of file as an entry point, but an HTML or JavaScript file is a good place to start. If you link your main JavaScript file in the HTML using a relative path, Parcel will also process it for you, and replace the reference with a URL to the output file.</li></ol>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./index.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./index.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <ol>
 <li>Parcel has a development server built in, which will automatically rebuild your app as you change files and supports hot module replacement for fast development. Just point it at your entry file:</li></ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">parcel index.html</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parcel index.html</span><br></pre></td></tr></table></figure>
 <ol>
-<li>Now open <a href="http://localhost:1234/" target="_blank" rel="external">http://localhost:1234/</a> in your browser. If needed, you can also override the default port with the -p option.</li></ol>
-<p>See <a href="https://parceljs.org" target="_blank" rel="external">parceljs.org</a> for more documentation!</p>
+<li>Now open <a href="http://localhost:1234/" target="_blank" rel="noopener">http://localhost:1234/</a> in your browser. If needed, you can also override the default port with the -p option.</li></ol>
+<p>See <a href="https://parceljs.org" target="_blank" rel="noopener">parceljs.org</a> for more documentation!</p>
 <h2 id="Benchmarks"><a href="#Benchmarks" class="headerlink" title="Benchmarks"></a>Benchmarks</h2><p>Based on a reasonably sized app, containing 1726 modules, 6.5M uncompressed. Built on a 2016 MacBook Pro with 4 physical CPUs.</p>
 <table>
 <thead>
@@ -375,10 +377,10 @@
 <p>After the bundle tree is constructed, each bundle is written to a file by a packager specific to the file type. The packagers know how to combine the code from each asset together into the final file that is loaded by a browser.</p>
 <h2 id="Community"><a href="#Community" class="headerlink" title="Community"></a>Community</h2><p>All feedback and suggestions are welcome!</p>
 <ul>
-<li>💬 Chat: Join us on <a href="https://slack.parceljs.org/" target="_blank" rel="external">slack</a>.</li><li>📣 Stay up to date on new features and announcements on <a href="https://twitter.com/parceljs" target="_blank" rel="external">@parceljs</a>.</li></ul>
+<li>💬 Chat: Join us on <a href="https://slack.parceljs.org/" target="_blank" rel="noopener">slack</a>.</li><li>📣 Stay up to date on new features and announcements on <a href="https://twitter.com/parceljs" target="_blank" rel="noopener">@parceljs</a>.</li></ul>
 <h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>MIT</p>
 <hr>
-<p><a href="http://www.css88.com/doc/parcel/" target="_blank" rel="external">Parcel 中文文档</a>。不得不佩服这个网站，以飞快之速完成了对文档的翻译。<del>当然，现在的官方文档内容其实也不多</del>。</p>
+<p><a href="http://www.css88.com/doc/parcel/" target="_blank" rel="noopener">Parcel 中文文档</a>。不得不佩服这个网站，以飞快之速完成了对文档的翻译。<del>当然，现在的官方文档内容其实也不多</del>。</p>
 <p>目前这个项目吸引了很多的开发者，诸多在 <code>webpack</code> 中的特性也会逐步加入进来，不出意外的话，这个是继 <code>rollup</code> 之后，又一个与 <code>webpack</code> 争天下的项目。</p>
 
       
@@ -490,7 +492,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">62</span>
+              <span class="site-state-item-count">63</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -507,7 +509,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">159</span>
+                <span class="site-state-item-count">160</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -588,7 +590,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

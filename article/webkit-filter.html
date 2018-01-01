@@ -61,11 +61,13 @@
 
 
 <meta name="description" content="-webkit-filter是css3的一个属性，它为相应元素提供了诸如模糊、色相饱和、反转、灰度化等等之类的图像效果。该属性通常用在对图片、背景、边框这些对象的渲染上面。">
+<meta name="keywords" content="css,filter">
 <meta property="og:type" content="article">
 <meta property="og:title" content="-webkit-filter冰山一角">
 <meta property="og:url" content="http://xovel.cn/article/webkit-filter.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="-webkit-filter是css3的一个属性，它为相应元素提供了诸如模糊、色相饱和、反转、灰度化等等之类的图像效果。该属性通常用在对图片、背景、边框这些对象的渲染上面。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-11-18T07:00:40.140Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="-webkit-filter冰山一角">
@@ -316,12 +318,12 @@
 
       
         <blockquote>
-<p>本文根据MDN上的文章<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter" target="_blank" rel="external">filter - CSS | MDN</a>翻译/整理而成，去掉了关于<code>svg</code>和<code>url()</code>方面的内容，并加入了一些自己对CSS Filters的理解。</p>
+<p>本文根据MDN上的文章<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter" target="_blank" rel="noopener">filter - CSS | MDN</a>翻译/整理而成，去掉了关于<code>svg</code>和<code>url()</code>方面的内容，并加入了一些自己对CSS Filters的理解。</p>
 </blockquote>
 <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><code>-webkit-filter</code>是css3的一个属性，它为相应元素提供了诸如模糊、色相饱和、反转、灰度化等等之类的图像效果。该属性通常用在对图片、背景、边框这些对象的渲染上面。</p>
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">blur</span>(5<span class="selector-tag">px</span>);</div><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">brightness</span>(0<span class="selector-class">.4</span>);</div><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">contrast</span>(200%);</div><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">drop-shadow</span>(16<span class="selector-tag">px</span> 16<span class="selector-tag">px</span> 20<span class="selector-tag">px</span> <span class="selector-tag">blue</span>);</div><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">grayscale</span>(50%);</div><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">hue-rotate</span>(90<span class="selector-tag">deg</span>);</div><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">invert</span>(75%);</div><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">opacity</span>(25%);</div><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">saturate</span>(30%);</div><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">sepia</span>(60%);</div></pre></td></tr></table></figure>
-<p>可以多个属性合并写，如：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">contrast</span>(175%) <span class="selector-tag">brightness</span>(3%);</div></pre></td></tr></table></figure></p>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 给类名为mydiv的元素50%灰度化的效果  */</span></div><div class="line"><span class="selector-class">.mydiv</span> &#123; <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(50%) &#125;</div><div class="line"></div><div class="line"><span class="comment">/* 给所有图片50%灰度化并给10像素模糊的效果 */</span></div><div class="line"><span class="selector-tag">img</span> &#123;</div><div class="line">  <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(0.5) <span class="built_in">blur</span>(10px);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">blur</span>(5<span class="selector-tag">px</span>);</span><br><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">brightness</span>(0<span class="selector-class">.4</span>);</span><br><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">contrast</span>(200%);</span><br><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">drop-shadow</span>(16<span class="selector-tag">px</span> 16<span class="selector-tag">px</span> 20<span class="selector-tag">px</span> <span class="selector-tag">blue</span>);</span><br><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">grayscale</span>(50%);</span><br><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">hue-rotate</span>(90<span class="selector-tag">deg</span>);</span><br><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">invert</span>(75%);</span><br><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">opacity</span>(25%);</span><br><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">saturate</span>(30%);</span><br><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">sepia</span>(60%);</span><br></pre></td></tr></table></figure>
+<p>可以多个属性合并写，如：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">contrast</span>(175%) <span class="selector-tag">brightness</span>(3%);</span><br></pre></td></tr></table></figure></p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 给类名为mydiv的元素50%灰度化的效果  */</span></span><br><span class="line"><span class="selector-class">.mydiv</span> &#123; <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(50%) &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 给所有图片50%灰度化并给10像素模糊的效果 */</span></span><br><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(0.5) <span class="built_in">blur</span>(10px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="十种效果的详解"><a href="#十种效果的详解" class="headerlink" title="十种效果的详解"></a>十种效果的详解</h2><h3 id="blur"><a href="#blur" class="headerlink" title="blur()"></a>blur()</h3><p>模糊效果。对元素应用高斯模糊效果。</p>
 <ul>
 <li>模糊值为CSS距离，<em>不支持百分比</em></li><li>默认值为<code>0</code>，表示没有模糊效果</li></ul>
@@ -331,7 +333,7 @@
 <h3 id="contrast"><a href="#contrast" class="headerlink" title="contrast()"></a>contrast()</h3><p>对比度。</p>
 <ul>
 <li>取值同上</li><li>默认值为<code>1</code>，表示对比度不变</li><li>为<code>0</code>将会完全灰化，灰化后的颜色值为<code>grey</code>/<code>gray</code>。同样，小于0时视为0。</li><li>数值越大，对比度越强。</li></ul>
-<h3 id="drop-shadow"><a href="#drop-shadow" class="headerlink" title="drop-shadow()"></a>drop-shadow()</h3><p>阴影。跟<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow" target="_blank" rel="external">box-shadow</a>类似。</p>
+<h3 id="drop-shadow"><a href="#drop-shadow" class="headerlink" title="drop-shadow()"></a>drop-shadow()</h3><p>阴影。跟<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow" target="_blank" rel="noopener">box-shadow</a>类似。</p>
 <p>阴影的具体语法为<code>drop-shadow(offset-x, offset-y&lt;, blur-radius&gt;&lt;, color&gt;)</code></p>
 <ul>
 <li><code>offset-x</code>/<code>offset-y</code>为必需参数，前者表示阴影的横向偏移量，后者表示纵向偏移量</li><li><code>blur-radius</code>为模糊半径，默认为<code>0</code></li><li><code>color</code>为阴影的CSS颜色值，默认值为黑色<code>#000000</code>/<code>black</code></li></ul>
@@ -362,10 +364,10 @@
 <li>取值为<code>0</code>到<code>1</code>之间的<strong>数值或百分比</strong>，其他值无效</li><li><del>默认值为<code>0</code>，没有褐化效果</del>这里的解释有误，参见脚注<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></li><li>取值为<code>1</code>/<code>100%</code>时表示完全灰度化</li></ul>
 <blockquote>
 <p>该单词的本意为<code>乌贼墨色/深褐色</code>，该效果与灰度化类似，不同的是<code>sepia</code>是使得元素往褐色去渲染。</p>
-<p>根据<a href="http://encycolorpedia.com/704214" target="_blank" rel="external">Encycolorpedia</a>的解释，<code>sepia</code>的十六进制颜色值为<code>#704214</code>。</p>
+<p>根据<a href="http://encycolorpedia.com/704214" target="_blank" rel="noopener">Encycolorpedia</a>的解释，<code>sepia</code>的十六进制颜色值为<code>#704214</code>。</p>
 </blockquote>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter" target="_blank" rel="external">filter - CSS | MDN</a></li><li><a href="http://caniuse.com/#feat=css-filters" target="_blank" rel="external">Can I Use</a></li><li><a href="http://www.w3cplus.com/css3/ten-effects-with-css3-filter" target="_blank" rel="external">CSS3 Filter的十种特效</a></li></ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter" target="_blank" rel="noopener">filter - CSS | MDN</a></li><li><a href="http://caniuse.com/#feat=css-filters" target="_blank" rel="noopener">Can I Use</a></li><li><a href="http://www.w3cplus.com/css3/ten-effects-with-css3-filter" target="_blank" rel="noopener">CSS3 Filter的十种特效</a></li></ul>
 <p>全文完<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;"><strong>注意</strong>：MDN上的默认值解释与浏览器实际展现效果有出入，不给参数时，该值为<code>1</code>/<code>100%</code>，并非是<code>0</code>。</span><a href="#fnref:1" rev="footnote"> ↩</a></li></ol></div></div></p>
 
       
@@ -477,7 +479,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">62</span>
+              <span class="site-state-item-count">63</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -494,7 +496,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">159</span>
+                <span class="site-state-item-count">160</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -575,7 +577,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

@@ -61,11 +61,13 @@
 
 
 <meta name="description" content="这是一篇发表于2010年5月28日的文章，本篇为转载，讲述关于JavaScript语法中的分号方面的问题。最近关于是否要去除不必要的分号的编程风格确认的时候，遇到了一些问题，很多支持去除分号的文章都引用了这一篇文章，故此这里纯粹作一个转载。">
+<meta name="keywords" content="js,semicolon,asi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript Semicolon Insertion">
 <meta property="og:url" content="http://xovel.cn/article/javascript-semicolons.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="这是一篇发表于2010年5月28日的文章，本篇为转载，讲述关于JavaScript语法中的分号方面的问题。最近关于是否要去除不必要的分号的编程风格确认的时候，遇到了一些问题，很多支持去除分号的文章都引用了这一篇文章，故此这里纯粹作一个转载。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-03-29T14:53:00.492Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript Semicolon Insertion">
@@ -304,7 +306,7 @@
 
       
         <blockquote>
-<p>本文转自：<a href="http://inimino.org/~inimino/blog/javascript_semicolons" target="_blank" rel="external">~inimino/blog</a></p>
+<p>本文转自：<a href="http://inimino.org/~inimino/blog/javascript_semicolons" target="_blank" rel="noopener">~inimino/blog</a></p>
 </blockquote>
 <p><strong>JavaScript Semicolon Insertion</strong></p>
 <p><strong>Everything you need to know</strong></p>
@@ -328,8 +330,8 @@
 <p>事实上，至少在语法构成方面，有时候空语句是很有用的。举个例子，编写一个无限循环，可以这么写：<code>while(1);</code>，分号将被解析成一个空语句，这样可以使<code>while</code>语句的语法变得有效。如果省略分号，这个<code>while</code>语句就不完整了，因为后续的循环体是必须的。</p>
 <p>Finally, semicolons appear in for loops of the form <code>for ( Expression ; Expression ; Expression ) Statement</code>, and of course they may appear as themselves inside strings and regular expression literals.</p>
 <p><del>太长，任性不翻译了</del></p>
-<h3 id="Where-Semicolons-May-be-Omitted"><a href="#Where-Semicolons-May-be-Omitted" class="headerlink" title="Where Semicolons May be Omitted"></a>Where Semicolons May be Omitted</h3><p>In the formal grammar used in the ECMAScript specification, the semicolons are included, as described above. However, the specification prose then gives rules which describe how the actual parsing differs from the formal grammar. These are described as though semicolons are inserted into the token stream while parsing, though this is just a specification convenience; in practice, parsers do not need to generate fake semicolon tokens, but can instead regard semicolons as optional in specific places in the grammar (for an example see <a href="http://boshi.inimino.org/3box/PanPG/grammars/ECMAScript_5.peg" target="_blank" rel="external">this parser expression grammar for ECMAScript</a>, particularly the Statement, EOS, EOSnoLB, and SnoLB rules). Where the specification says that a semicolon is inserted, this simply means that the statement currently being parsed is ended.</p>
-<p>These semicolon insertion rules are specified in section 7.9 of <a href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf" target="_blank" rel="external">ECMA-262 [pdf]</a>.</p>
+<h3 id="Where-Semicolons-May-be-Omitted"><a href="#Where-Semicolons-May-be-Omitted" class="headerlink" title="Where Semicolons May be Omitted"></a>Where Semicolons May be Omitted</h3><p>In the formal grammar used in the ECMAScript specification, the semicolons are included, as described above. However, the specification prose then gives rules which describe how the actual parsing differs from the formal grammar. These are described as though semicolons are inserted into the token stream while parsing, though this is just a specification convenience; in practice, parsers do not need to generate fake semicolon tokens, but can instead regard semicolons as optional in specific places in the grammar (for an example see <a href="http://boshi.inimino.org/3box/PanPG/grammars/ECMAScript_5.peg" target="_blank" rel="noopener">this parser expression grammar for ECMAScript</a>, particularly the Statement, EOS, EOSnoLB, and SnoLB rules). Where the specification says that a semicolon is inserted, this simply means that the statement currently being parsed is ended.</p>
+<p>These semicolon insertion rules are specified in section 7.9 of <a href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf" target="_blank" rel="noopener">ECMA-262 [pdf]</a>.</p>
 <p>The section gives three basic rules, followed by two exceptions.</p>
 <p>The rules are:</p>
 <ol>
@@ -616,7 +618,7 @@ print(-y); // useful
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">62</span>
+              <span class="site-state-item-count">63</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -633,7 +635,7 @@ print(-y); // useful
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">159</span>
+                <span class="site-state-item-count">160</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -714,7 +716,7 @@ print(-y); // useful
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

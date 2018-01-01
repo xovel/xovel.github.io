@@ -61,11 +61,13 @@
 
 
 <meta name="description" content="本文介绍一下自己对于brackets的一些使用的心得，罗列安装的一些的插件，并着重讲述一下emmet这款插件的安装过程出现的问题，以及其对应的解决方案。">
+<meta name="keywords" content="brackets,IDE,emmet,plugin,editor">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Brackets的使用与emmet插件安装的一个问题">
 <meta property="og:url" content="http://xovel.cn/article/brackets-emmet.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="本文介绍一下自己对于brackets的一些使用的心得，罗列安装的一些的插件，并着重讲述一下emmet这款插件的安装过程出现的问题，以及其对应的解决方案。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-04-04T15:01:57.562Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Brackets的使用与emmet插件安装的一个问题">
@@ -308,7 +310,7 @@
 </blockquote>
 <p><em>以下为正文</em></p>
 <hr>
-<p>最近决定将IDE迁移到<a href="http://brackets.io/" target="_blank" rel="external">brackets</a>，毕竟是adobe开发的用来替代古老臃肿的Dreamweaver的，口号就是<code>Code The Web</code>，为Web编程提供一套完善的IDE。</p>
+<p>最近决定将IDE迁移到<a href="http://brackets.io/" target="_blank" rel="noopener">brackets</a>，毕竟是adobe开发的用来替代古老臃肿的Dreamweaver的，口号就是<code>Code The Web</code>，为Web编程提供一套完善的IDE。</p>
 <hr>
 <p>为什么是brackets？其实是可以用sublime的，但是sublime只是一个编辑器，没有IDE的一些特性，即便是有了插件的支持，也很难与大型IDE媲美。</p>
 <p>回想我用过的IDE，最开始的FrontPage，到VS，再到后来的初次全面接触前端开发使用的Dreamweaver。而后离开福建回到湖南，开始抛弃Dreamweaver，换了一种非常极端的方式：放弃了IDE，直接采用常规编辑器Notepad++、UltraEdit来进行代码的编写。那滋味其实也还好，毕竟，那个时候最IDE的要求并不高，所使用的后台语言是asp，都用不着开带着各种兼容性问题的Dreamweaver。</p>
@@ -330,7 +332,7 @@
 <p>几经周折，我终于看到了调试里面的开发工具，于是调出F12，看看到底是什么错误导致的。</p>
 <p>果不其然，在控制台里面有一行错误提示：大意是缺少一个文件，这个文件就是<code>\brackets-emmet\node_modules\emmet\lib\caniuse.json</code>，我仔细去看了一遍，确实是没有这个文件。</p>
 <p>这就比较尴尬了，会不是我这样的安装方式不对？我决定到一个全新的地方使用命令行的方式从npm上安装全新的emmet，使用<code>npm install emmet</code>命令之后，我竟然又执行了<code>npm install</code>，把emmet的开发依赖给安装了，甚至还跑了<code>gulp</code>任务，结果生成了一个dist文件夹，我感觉我这么做有点走弯路了，<del>是的，确实是走弯路，弯的很厉害</del>。不过看到dist下的<code>emmet.js</code>大小有<code>1868kb</code>的时候心里还是很是震惊的。</p>
-<p>依然没有看到caniuse.json，我就在想，这个名字跟上面提到的<code>caniuse-db</code>，应该是存在着某种关联的吧。果不其然，上emmet的repo上一搜，发现一个<a href="https://github.com/emmetio/emmet/pull/385" target="_blank" rel="external">提交记录</a>被接受了，就是提议将<code>caniuse.json</code>换成<code>caniuse-db</code>的。好家伙，这就很尴尬了。</p>
+<p>依然没有看到caniuse.json，我就在想，这个名字跟上面提到的<code>caniuse-db</code>，应该是存在着某种关联的吧。果不其然，上emmet的repo上一搜，发现一个<a href="https://github.com/emmetio/emmet/pull/385" target="_blank" rel="noopener">提交记录</a>被接受了，就是提议将<code>caniuse.json</code>换成<code>caniuse-db</code>的。好家伙，这就很尴尬了。</p>
 <p>既然现在的版本已经被替换掉了，那么问题就相对来说简单了，我应该只需要找到这个缺失的文件并将它放到它应该出现的位置上就可以了。于是我通过repo的tag记录依次寻找，发现从1.3.2之后，这个caniuse.json就不见了踪影。也是说从1.4.0版本开始，丢弃了caniuse.json，改为使用caniuse-db进行可用性判定。</p>
 <p>于是我复制了一份json到本地目录中，然后重启brackets，甚好，<code>Emmet</code>菜单出来了。而后打开一个html文件，飞速敲下<code>div&gt;ul&gt;li</code>，然后按下<code>tab</code>，一个良好缩进展现的HTML结构跃然纸上。</p>
 <p>问题解决了，但我觉得应该不止我一个人被这个问题所困扰，后来我仔细看了一下<code>brackets-emmet</code>的插件的package文件，发现里面只有一个依赖：<code>&quot;emmet&quot;: &quot;^1.3.0&quot;</code>。好家伙，竟然是<code>&quot;^1.3.0&quot;</code>！</p>
@@ -456,7 +458,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">62</span>
+              <span class="site-state-item-count">63</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -473,7 +475,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">159</span>
+                <span class="site-state-item-count">160</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -554,7 +556,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

@@ -61,11 +61,13 @@
 
 
 <meta name="description" content="编程命名规则有很多种，本文就简单做一个介绍。">
+<meta name="keywords" content="naming,case">
 <meta property="og:type" content="article">
 <meta property="og:title" content="编程命名规则">
 <meta property="og:url" content="http://xovel.cn/article/naming-rule.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="编程命名规则有很多种，本文就简单做一个介绍。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-09-24T08:21:16.547Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编程命名规则">
@@ -311,13 +313,13 @@
 <h3 id="匈牙利命名法"><a href="#匈牙利命名法" class="headerlink" title="匈牙利命名法"></a>匈牙利命名法</h3><p>该方法也叫做 <code>HN 命名法</code>，通常认为是微软的一个雇员 <code>Charles Simonyi</code> 发明的，通过微软的各种产品和文档资料传播开来。这位雇员是一个匈牙利（Hungarian）人，这也就是这个命名方法的名字由来。</p>
 <p>匈牙利命名法的基本原则是：变量名依次由属性、类型、描述组成。</p>
 <p>这里就通过举例来进行直接的说明：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> iUserName; <span class="comment">// i 为 int 类型缩写</span></div><div class="line"><span class="keyword">char</span> cItemList; <span class="comment">// c 为 char 类型缩写</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bInitLogin; <span class="comment">// b 为 布尔值 boolean 缩写</span></div></pre></td></tr></table></figure>
-<figure class="highlight vb"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">dim</span> frmInfoDetail; <span class="comment">' frm 为窗体 form 的缩写</span></div></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> iUserName; <span class="comment">// i 为 int 类型缩写</span></span><br><span class="line"><span class="keyword">char</span> cItemList; <span class="comment">// c 为 char 类型缩写</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> bInitLogin; <span class="comment">// b 为 布尔值 boolean 缩写</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">dim</span> frmInfoDetail; <span class="comment">' frm 为窗体 form 的缩写</span></span><br></pre></td></tr></table></figure>
 <h3 id="驼峰命名法"><a href="#驼峰命名法" class="headerlink" title="驼峰命名法"></a>驼峰命名法</h3><p>驼峰命名法 <code>camelCase</code>，来自于 Perl 语言普遍使用的大小写混合格式，后来被 Java 广泛采用，逐渐成为更加通用的命名方法。</p>
 <p>驼峰命名法的基本规则是变量名或者函数名是由一个或者多个单词连接在一起，构成唯一识别符，第一个单词以小写字母开始，后面的单词首字母大写，这样看起来跟驼峰一样此起彼伏，故此得名。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> myStudentCount;</div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fs.readFileSync</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> myStudentCount;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fs.readFileSync</span><br></pre></td></tr></table></figure>
 <h3 id="帕斯卡命名法"><a href="#帕斯卡命名法" class="headerlink" title="帕斯卡命名法"></a>帕斯卡命名法</h3><p>跟驼峰命名法类似，帕斯卡命名法 <code>PascalCase</code> 的不同之处在于第一个单词首字母为<strong>大写</strong>。在一些构造器命名和全局特殊变量命名的时候通常会采用这种命名方法。</p>
 <p>鉴于跟驼峰命名法的相似，也有人将帕斯卡命名法称之为 <code>大驼峰命名法</code>，而上面的就称之为 <code>小驼峰命名法</code>。</p>
 <h3 id="蛇形命名法"><a href="#蛇形命名法" class="headerlink" title="蛇形命名法"></a>蛇形命名法</h3><p>蛇形命名法 <code>snake_case</code>，变量名由多个部分组成，每个部分之间使用下划线 <code>_</code> 进行连接，所以也称之为 <code>下划线命名法</code>。</p>
@@ -448,7 +450,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">62</span>
+              <span class="site-state-item-count">63</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -465,7 +467,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">159</span>
+                <span class="site-state-item-count">160</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -546,7 +548,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

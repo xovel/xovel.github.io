@@ -61,11 +61,13 @@
 
 
 <meta name="description" content="博客优化之压缩HTML静态文件，本文介绍一种使用gulp的处理方式来解决这个问题。">
+<meta name="keywords" content="blog,优化,gulp,minify">
 <meta property="og:type" content="article">
 <meta property="og:title" content="博客优化之压缩HTML静态文件">
 <meta property="og:url" content="http://xovel.cn/article/minify-static-html-files.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="博客优化之压缩HTML静态文件，本文介绍一种使用gulp的处理方式来解决这个问题。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-11-18T07:00:40.177Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客优化之压缩HTML静态文件">
@@ -304,26 +306,26 @@
 
       
         <blockquote>
-<p>本文来自博客issue<a href="https://github.com/xovel/xovel.github.io/issues/16" target="_blank" rel="external">#16</a></p>
+<p>本文来自博客issue<a href="https://github.com/xovel/xovel.github.io/issues/16" target="_blank" rel="noopener">#16</a></p>
 </blockquote>
 <p>使用了<code>next</code>主题之后，默认生成的HTML文件中，会出现大量的空行。直接查看网页源代码就能够看到。</p>
 <p><code>hexo</code>默认没有提供压缩HTML/CSS/JS的功能，但我们可以通过另外的途径进行代码的压缩。</p>
 <blockquote>
 <p>之前的版本，有一个名为<code>hexo-generator-minify</code>的插件，但已经无人维护，不支持hexo 3.x版本。</p>
-<p><a href="https://hexo.io/plugins/" target="_blank" rel="external">官方插件库</a>能搜到的压缩插件，均有不同程度的问题。详情这里不表，具体诸君可以自行安装测试。</p>
+<p><a href="https://hexo.io/plugins/" target="_blank" rel="noopener">官方插件库</a>能搜到的压缩插件，均有不同程度的问题。详情这里不表，具体诸君可以自行安装测试。</p>
 </blockquote>
-<p>这里介绍一种<a href="https://github.com/gulpjs/gulp" target="_blank" rel="external"><code>gulp</code></a>自动化任务压缩的方式来处理这个问题，缺陷就是每一次blog在deploy的时候都需要事先执行一次这个压缩任务。</p>
+<p>这里介绍一种<a href="https://github.com/gulpjs/gulp" target="_blank" rel="noopener"><code>gulp</code></a>自动化任务压缩的方式来处理这个问题，缺陷就是每一次blog在deploy的时候都需要事先执行一次这个压缩任务。</p>
 <blockquote>
 <p>本人的博客曾经开启过压缩功能，但后来放弃了。<del>一方面是嫌麻烦，一方面也是觉得暂时没有这个必要</del></p>
 </blockquote>
 <p>本人采用的具体压缩工具为：</p>
 <ul>
-<li><a href="https://github.com/jonschlinkert/gulp-htmlmin" target="_blank" rel="external">gulp-htmlmin</a>，该插件对HTML代码进行压缩。</li><li><a href="https://github.com/anseki/gulp-htmlclean" target="_blank" rel="external">gulp-htmlclean</a>，该插件对HTML进行代码清理，去除不必要的空行等。</li><li><a href="https://github.com/scniro/gulp-clean-css" target="_blank" rel="external">gulp-clean-css</a>，该插件对CSS代码进行压缩与清理。</li></ul>
-<p>另外有一个图片压缩工具，暂未使用：<a href="https://github.com/sindresorhus/gulp-imagemin" target="_blank" rel="external">gulp-imagemin</a></p>
-<p>JS压缩工具可以参考：<a href="https://github.com/terinjokes/gulp-uglify" target="_blank" rel="external">gulp-uglify</a>、<a href="https://github.com/mishoo/UglifyJS2" target="_blank" rel="external">UglifyJS2</a>。</p>
-<p>引入各种插件：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> htmlmin = <span class="built_in">require</span>(<span class="string">'gulp-htmlmin'</span>);</div><div class="line"><span class="keyword">var</span> htmlclean = <span class="built_in">require</span>(<span class="string">'gulp-htmlclean'</span>);</div><div class="line"><span class="keyword">var</span> cleanCSS = <span class="built_in">require</span>(<span class="string">'gulp-clean-css'</span>);</div><div class="line"><span class="keyword">var</span> imagemin = <span class="built_in">require</span>(<span class="string">'gulp-imagemin'</span>);</div></pre></td></tr></table></figure></p>
+<li><a href="https://github.com/jonschlinkert/gulp-htmlmin" target="_blank" rel="noopener">gulp-htmlmin</a>，该插件对HTML代码进行压缩。</li><li><a href="https://github.com/anseki/gulp-htmlclean" target="_blank" rel="noopener">gulp-htmlclean</a>，该插件对HTML进行代码清理，去除不必要的空行等。</li><li><a href="https://github.com/scniro/gulp-clean-css" target="_blank" rel="noopener">gulp-clean-css</a>，该插件对CSS代码进行压缩与清理。</li></ul>
+<p>另外有一个图片压缩工具，暂未使用：<a href="https://github.com/sindresorhus/gulp-imagemin" target="_blank" rel="noopener">gulp-imagemin</a></p>
+<p>JS压缩工具可以参考：<a href="https://github.com/terinjokes/gulp-uglify" target="_blank" rel="noopener">gulp-uglify</a>、<a href="https://github.com/mishoo/UglifyJS2" target="_blank" rel="noopener">UglifyJS2</a>。</p>
+<p>引入各种插件：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> htmlmin = <span class="built_in">require</span>(<span class="string">'gulp-htmlmin'</span>);</span><br><span class="line"><span class="keyword">var</span> htmlclean = <span class="built_in">require</span>(<span class="string">'gulp-htmlclean'</span>);</span><br><span class="line"><span class="keyword">var</span> cleanCSS = <span class="built_in">require</span>(<span class="string">'gulp-clean-css'</span>);</span><br><span class="line"><span class="keyword">var</span> imagemin = <span class="built_in">require</span>(<span class="string">'gulp-imagemin'</span>);</span><br></pre></td></tr></table></figure></p>
 <p>本人采用的核心的任务代码如下：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">'minify-html'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> gulp.src(<span class="string">'./public/**/*.html'</span>)</div><div class="line">    .pipe(htmlclean())</div><div class="line">    .pipe(htmlmin(&#123;</div><div class="line">         <span class="attr">removeComments</span>: <span class="literal">true</span>,</div><div class="line">         <span class="attr">minifyJS</span>: <span class="literal">false</span>,</div><div class="line">         <span class="attr">minifyCSS</span>: <span class="literal">true</span>,</div><div class="line">         <span class="attr">minifyURLs</span>: <span class="literal">false</span>,</div><div class="line">    &#125;))</div><div class="line">    .pipe(gulp.dest(<span class="string">'./public'</span>))</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(<span class="string">'minify-html'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> gulp.src(<span class="string">'./public/**/*.html'</span>)</span><br><span class="line">    .pipe(htmlclean())</span><br><span class="line">    .pipe(htmlmin(&#123;</span><br><span class="line">         removeComments: <span class="literal">true</span>,</span><br><span class="line">         minifyJS: <span class="literal">false</span>,</span><br><span class="line">         minifyCSS: <span class="literal">true</span>,</span><br><span class="line">         minifyURLs: <span class="literal">false</span>,</span><br><span class="line">    &#125;))</span><br><span class="line">    .pipe(gulp.dest(<span class="string">'./public'</span>))</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>那么，在每一次deploy之前，在<code>Git Bash</code>下执行一次<code>gulp minify-html</code>即可对所有的HTML代码进行压缩。</p>
 <p>CSS和JS的压缩可以编写类似的代码，这里不再赘述。</p>
 
@@ -440,7 +442,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">62</span>
+              <span class="site-state-item-count">63</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -457,7 +459,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">159</span>
+                <span class="site-state-item-count">160</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -538,7 +540,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

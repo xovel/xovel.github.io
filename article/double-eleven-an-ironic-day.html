@@ -61,11 +61,13 @@
 
 
 <meta name="description" content="今天是双十一，这只是一篇随笔。稍微讲一下大量并发请求出现的时候相应的解决方案。">
+<meta name="keywords" content="并发,双十一,服务器,分布式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="双十一小记">
 <meta property="og:url" content="http://xovel.cn/article/double-eleven-an-ironic-day.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="今天是双十一，这只是一篇随笔。稍微讲一下大量并发请求出现的时候相应的解决方案。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-11-18T07:00:40.177Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="双十一小记">
@@ -315,12 +317,12 @@
 <p>业务层表现方式为动态和静态，大部分资源可以使用静态CDN的方式进行加速获取并展示。添加CDN Cache，可以大幅提升访问速度，同时降低后端实际负载。</p>
 <h3 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h3><p>使用非阻塞模式，也可以快速提升访问速度。异步化队列通过队列将请求或事务置入后台运行，从而使得同步阻塞模式变为异步非阻塞模式。</p>
 <p>比如，多个用户在抢购同一个商品时，会同时调用支付借口，同步阻塞模式的情形下，用户过多时，支付数据库的压力会非常大，可能会引起数据库服务器宕机。</p>
-<h3 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h3><p>在处理商品展示和购买操作的时候选用了分布式数据库解决方案。据悉，天猫淘宝采用的交易库应该是<code>OceanBase</code>，为了保持数据一致性，采用了<code>Paxos</code>协议。具体可以参考知乎上面的这个回答：<a href="https://www.zhihu.com/question/37421030/answer/72860789" target="_blank" rel="external">天猫双十一是怎么保证高并发、分布式系统中，数据一致性的？</a></p>
+<h3 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h3><p>在处理商品展示和购买操作的时候选用了分布式数据库解决方案。据悉，天猫淘宝采用的交易库应该是<code>OceanBase</code>，为了保持数据一致性，采用了<code>Paxos</code>协议。具体可以参考知乎上面的这个回答：<a href="https://www.zhihu.com/question/37421030/answer/72860789" target="_blank" rel="noopener">天猫双十一是怎么保证高并发、分布式系统中，数据一致性的？</a></p>
 <hr>
 <p><del>有点偏离主题思路了，这篇文章就先写到这里吧</del></p>
 <p>下面是一些参考：</p>
 <ul>
-<li><a href="http://kb.cnblogs.com/page/508432/" target="_blank" rel="external">逃不掉的双十一 可怕的分布式架构隐患</a></li><li><a href="http://cbinews.baijia.baidu.com/article/247864" target="_blank" rel="external">技术大揭秘：阿里双11“逆天”记录是如何做到的？</a></li><li><a href="http://geek.csdn.net/news/detail/74130" target="_blank" rel="external">电商系统的高并发设计和挑战</a></li></ul>
+<li><a href="http://kb.cnblogs.com/page/508432/" target="_blank" rel="noopener">逃不掉的双十一 可怕的分布式架构隐患</a></li><li><a href="http://cbinews.baijia.baidu.com/article/247864" target="_blank" rel="noopener">技术大揭秘：阿里双11“逆天”记录是如何做到的？</a></li><li><a href="http://geek.csdn.net/news/detail/74130" target="_blank" rel="noopener">电商系统的高并发设计和挑战</a></li></ul>
 <blockquote>
 <p>2016年，双十一，天猫的交易额达到了1207亿。<del>可怕！</del></p>
 </blockquote>
@@ -439,7 +441,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">62</span>
+              <span class="site-state-item-count">63</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -456,7 +458,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">159</span>
+                <span class="site-state-item-count">160</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -537,7 +539,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

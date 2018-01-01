@@ -61,11 +61,13 @@
 
 
 <meta name="description" content="微信小程序的推出，像一颗炸弹引爆了开发人员的世界，但是今天，我是来指出其不够完美之处的，也希望大家能正确看待，摆正自己的心态，好好做事，不要盲目跟风。">
+<meta name="keywords" content="微信,微信小程序,WEB">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微信小程序的一些不够美的地方">
 <meta property="og:url" content="http://xovel.cn/article/limitation-of-wechat-weapp.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="微信小程序的推出，像一颗炸弹引爆了开发人员的世界，但是今天，我是来指出其不够完美之处的，也希望大家能正确看待，摆正自己的心态，好好做事，不要盲目跟风。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-11-18T07:00:40.177Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信小程序的一些不够美的地方">
@@ -304,8 +306,8 @@
 
       
         <p>前段时间（<code>2016年9月22日</code>），腾讯释出了微信小程序的测试版，各路开发者纷纷出台攻略，一举攻占这块<del>高地</del>。</p>
-<p>随着各路牛人，纷至沓来的对微信小程序进行各种各样的测试与编制，如今这一块已经没有什么很高深的技术难度了。想要学习微信小程序的，读懂官方释出的<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/index.html" target="_blank" rel="external">开发文档</a>，基本就能应对大部分的开发需求了。</p>
-<p>当然，由于目前微信小程序还处于内侧阶段，并不是所有开发者都有自由创建微信小程序的权限。但是这并不能难倒<del>无所不能的</del>开发群众，一个<a href="https://github.com/gavinkwoe/weapp-ide-crack" target="_blank" rel="external">IDE破解版</a>应运而生。</p>
+<p>随着各路牛人，纷至沓来的对微信小程序进行各种各样的测试与编制，如今这一块已经没有什么很高深的技术难度了。想要学习微信小程序的，读懂官方释出的<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/index.html" target="_blank" rel="noopener">开发文档</a>，基本就能应对大部分的开发需求了。</p>
+<p>当然，由于目前微信小程序还处于内侧阶段，并不是所有开发者都有自由创建微信小程序的权限。但是这并不能难倒<del>无所不能的</del>开发群众，一个<a href="https://github.com/gavinkwoe/weapp-ide-crack" target="_blank" rel="noopener">IDE破解版</a>应运而生。</p>
 <p>本篇文章的重点并不是要介绍微信小程序是如何开发与运作的，下面将给出本人在攻略微信小程序的过程中遇到的一些问题，同时结合目前网上出现的一些其他疑难杂症，做一个简单的阐述。</p>
 <p>首先，微信小程序的项目文件看起来是前端文件，但实际上并不完全是。其页面文件格式为<code>wxml</code>，样式文件为<code>wxss</code>。或许是仿照<code>react native</code>的<code>JSX</code>，也或许是参考了<code>vue.js</code>的模板格式，微信小程序现在是不支持HTML的。这意味着如果要实现微信小程序的页面，需要对HTML/CSS/JS进行重写。没有DOM，这也稍稍提升了一些难度，然而这并不是什么太大的问题，参照官方给出的手册，一个个照着修改就行了。</p>
 <blockquote>
@@ -319,7 +321,7 @@
 <hr>
 <p>微信小程序部分参考资料：</p>
 <ul>
-<li><a href="https://github.com/Aufree/awesome-wechat-weapp" target="_blank" rel="external">微信小程序资源汇总整理</a></li><li><a href="https://mp.weixin.qq.com/debug/wxadoc/dev/index.html" target="_blank" rel="external">官方开发文档</a></li></ul>
+<li><a href="https://github.com/Aufree/awesome-wechat-weapp" target="_blank" rel="noopener">微信小程序资源汇总整理</a></li><li><a href="https://mp.weixin.qq.com/debug/wxadoc/dev/index.html" target="_blank" rel="noopener">官方开发文档</a></li></ul>
 <hr>
 <p><strong>更正</strong>：微信WXSS语法支持级联CSS。 2016.10.9</p>
 
@@ -434,7 +436,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">62</span>
+              <span class="site-state-item-count">63</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -451,7 +453,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">159</span>
+                <span class="site-state-item-count">160</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -532,7 +534,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

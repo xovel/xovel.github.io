@@ -61,11 +61,13 @@
 
 
 <meta name="description" content="MathJax是一个开源JavaScript库，提供优美的数学公式展现，它支持LaTeX、MathML、AsciiMath符号，可以运行于所有流行浏览器上；本文根据Stackexchange上的一篇关于MathJax的基础教程与快速参考的文章整理而成。更多内容可前往Stackexchange的原页面进行详细阅读。">
+<meta name="keywords" content="mathjax,教程,参考">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MathJax基础教程与快速参考">
 <meta property="og:url" content="http://xovel.cn/article/mathjax-basic-tutorial-and-quick-reference.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="MathJax是一个开源JavaScript库，提供优美的数学公式展现，它支持LaTeX、MathML、AsciiMath符号，可以运行于所有流行浏览器上；本文根据Stackexchange上的一篇关于MathJax的基础教程与快速参考的文章整理而成。更多内容可前往Stackexchange的原页面进行详细阅读。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-11-18T07:00:40.093Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MathJax基础教程与快速参考">
@@ -319,7 +321,7 @@
 <blockquote>
 <p>A JavaScript display engine for mathematics that works in all browsers</p>
 </blockquote>
-<p><a href="http://stackexchange.com/" target="_blank" rel="external">Stackexchange</a>上有一篇关于MathJax的基础教程与快速参考的文章：<a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="external">MathJax basic tutorial and quick reference</a>，本文根据这篇文章翻译整理而成。</p>
+<p><a href="http://stackexchange.com/" target="_blank" rel="noopener">Stackexchange</a>上有一篇关于MathJax的基础教程与快速参考的文章：<a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="noopener">MathJax basic tutorial and quick reference</a>，本文根据这篇文章翻译整理而成。</p>
 <h3 id="查看公式"><a href="#查看公式" class="headerlink" title="查看公式"></a>查看公式</h3><p>如果需要查看MathJax公式是如何编写的，在公式上点击右键，选择<code>Show Math As</code>（数学显示形式）、<code>TeX Commands</code>（TeX命令）即可。</p>
 <blockquote>
 <p>公式编写的代码将会在新窗口弹出，弹出的公式不会包含MathJax的定界符<code>$</code>。</p>
@@ -542,10 +544,10 @@
 <p>多次方根在后面使用<code>[]</code>指定即可。如<code>\sqrt[n^2]{\frac xy}</code>，$\sqrt[3]{\frac xy}$。</p>
 <h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>对于特殊函数，如<code>sin</code>、<code>lim</code>、<code>max</code>、<code>ln</code>等，会自动识别，将以常规罗马字体代替斜体进行显示。如正弦函数表示为：<code>\sin x</code>$\sin x$，并非<code>sin x</code>$sin x$。</p>
 <p>极限函数下标跟在后面即可：<code>\lim</code>: <code>\lim_{x\to 0}</code> $$\lim_{x\to 0}$$</p>
-<h3 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h3><p>MathJax支持大量特殊符号，这里罗列一部分，更多请参考：<a href="http://pic.plover.com/MISC/symbols.pdf" target="_blank" rel="external">this shorter listing</a>和<a href="http://mirror.math.ku.edu/tex-archive/info/symbols/comprehensive/symbols-a4.pdf" target="_blank" rel="external">this exhaustive listing</a></p>
+<h3 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h3><p>MathJax支持大量特殊符号，这里罗列一部分，更多请参考：<a href="http://pic.plover.com/MISC/symbols.pdf" target="_blank" rel="noopener">this shorter listing</a>和<a href="http://mirror.math.ku.edu/tex-archive/info/symbols/comprehensive/symbols-a4.pdf" target="_blank" rel="noopener">this exhaustive listing</a></p>
 <ul>
 <li>比较判断符，<code>\lt \gt \le \ge \neq</code> $\lt\, \gt\, \le\, \ge\, \neq$.<br>你可以在这些操作符前加入<code>\not</code>表示相反的意思: <code>\not\lt</code> $\not\lt$，<del>然而并不好看</del></li><li>四则运算符，<code>\times \div \pm \mp</code> $\times\, \div\, \pm\, \mp$<br><code>+</code>和<code>-</code>直接使用即可<br><code>\cdot</code>表示一个居中的乘点: $x\cdot y$</li><li>集合关系与运算符，<code>\cup \cap \setminus \subset \subseteq \subsetneq \supset \in \notin \emptyset \varnothing</code> $\cup\, \cap\, \setminus\, \subset\, \subseteq \,\subsetneq \,\supset\, \in\, \notin\, \emptyset\, \varnothing$</li><li>排列符，<code>{n+1 \choose 2k}</code>或<code>\binom{n+1}{2k}</code> ${n+1 \choose 2k}$</li><li>箭头符，<code>\to \rightarrow \leftarrow \Rightarrow \Leftarrow \mapsto</code> $\to\, \rightarrow\, \leftarrow\, \Rightarrow\, \Leftarrow\, \mapsto$</li><li>逻辑操作符，<code>\land \lor \lnot \forall \exists \top \bot \vdash \vDash</code> $\land\, \lor\, \lnot\, \forall\, \exists\, \top\, \bot\, \vdash\, \vDash$</li><li>星号类符号，<code>\star \ast \oplus \circ \bullet</code> $\star\, \ast\, \oplus\, \circ\, \bullet$</li><li>相似运算符，<code>\approx \sim \simeq \cong \equiv \prec</code> $\approx\, \sim \, \simeq\, \cong\, \equiv\, \prec$.</li><li>无穷与阿列夫零，<code>\infty \aleph_0</code> $\infty\, \aleph_0$</li><li>劈形运算符与取部分运算符，<code>\nabla \partial</code> $\nabla\, \partial$</li><li>复数的虚部与实部，<code>\Im \Re</code> $\Im\, \Re$</li><li>模运算符，<code>\pmod</code>，<code>a\equiv b\pmod n</code> $a\equiv b\pmod n$.</li><li>多点符，<code>\ldots</code>的点的位置偏下：$a_1, a_2, \ldots ,a_n$；<code>\cdots</code>点的位置居中：$a_1+a_2+\cdots+a_n$</li><li>一些具有变体的希腊字母符号: <code>\epsilon \varepsilon</code> $\epsilon\, \varepsilon$, <code>\phi \varphi</code> $\phi\, \varphi$等等</li><li>字母<code>l</code>的手写体<code>\ell</code> $\ell$</li></ul>
-<p>在<a href="http://detexify.kirelabs.org/classify.html" target="_blank" rel="external">Detexify</a>上你可以画出符号，Detexify会自动识别并给出相似的符号及其代码。但并不能保证该符号在MathJax中可用，你可以参考MathJax的官方文档<a href="http://docs.mathjax.org/en/latest/tex.html#supported-latex-commands" target="_blank" rel="external">list of currently supported $\LaTeX$ commands</a>以确定该符号是否可用。也可以参考Dr. Carol JVF Burns’s编写的页面：<a href="http://www.onemathematicalcat.org/MathJaxDocumentation/TeXSyntax.htm" target="_blank" rel="external">$\TeX$ Commands Available in MathJax</a>。</p>
+<p>在<a href="http://detexify.kirelabs.org/classify.html" target="_blank" rel="noopener">Detexify</a>上你可以画出符号，Detexify会自动识别并给出相似的符号及其代码。但并不能保证该符号在MathJax中可用，你可以参考MathJax的官方文档<a href="http://docs.mathjax.org/en/latest/tex.html#supported-latex-commands" target="_blank" rel="noopener">list of currently supported $\LaTeX$ commands</a>以确定该符号是否可用。也可以参考Dr. Carol JVF Burns’s编写的页面：<a href="http://www.onemathematicalcat.org/MathJaxDocumentation/TeXSyntax.htm" target="_blank" rel="noopener">$\TeX$ Commands Available in MathJax</a>。</p>
 <h3 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h3><p>通常情况下MathJax会忽略常规的空格。</p>
 <p>空格的表述方式：</p>
 <ul>
@@ -557,7 +559,7 @@
 <h3 id="转义与换行"><a href="#转义与换行" class="headerlink" title="转义与换行"></a>转义与换行</h3><p>如果在公式中需要直接使用特殊符号，使用<code>\</code>进行转义即可。如<code>\$</code>$\$$、<code>\_</code>$\_$。</p>
 <p>如果要使用<code>\</code>符号本身，由于<code>\\</code>表示的是换行，故而使用<code>\backslash</code> $\backslash$。</p>
 <h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
-<li><a href="https://www.mathjax.org/" target="_blank" rel="external">MathJax</a></li><li><a href="https://github.com/mathjax/MathJax" target="_blank" rel="external">mathjax/MathJax - Github</a></li><li><a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="external">MathJax basic tutorial and quick reference</a></li><li><a href="http://docs.mathjax.org/en/latest/index.html" target="_blank" rel="external">MathJax Documentation</a></li><li><a href="http://mathjax-chinese-doc.readthedocs.io/en/latest/index.html" target="_blank" rel="external">MathJax 中文文档</a></li><li><a href="https://meta.wikimedia.org/wiki/Help:Displaying_a_formula" target="_blank" rel="external">Mathematical Formula Syntax</a></li><li><a href="http://pic.plover.com/MISC/symbols.pdf" target="_blank" rel="external">LATEX and AMS-LATEX Symbols</a></li></ul>
+<li><a href="https://www.mathjax.org/" target="_blank" rel="noopener">MathJax</a></li><li><a href="https://github.com/mathjax/MathJax" target="_blank" rel="noopener">mathjax/MathJax - Github</a></li><li><a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="noopener">MathJax basic tutorial and quick reference</a></li><li><a href="http://docs.mathjax.org/en/latest/index.html" target="_blank" rel="noopener">MathJax Documentation</a></li><li><a href="http://mathjax-chinese-doc.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">MathJax 中文文档</a></li><li><a href="https://meta.wikimedia.org/wiki/Help:Displaying_a_formula" target="_blank" rel="noopener">Mathematical Formula Syntax</a></li><li><a href="http://pic.plover.com/MISC/symbols.pdf" target="_blank" rel="noopener">LATEX and AMS-LATEX Symbols</a></li></ul>
 
       
     </div>
@@ -670,7 +672,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">62</span>
+              <span class="site-state-item-count">63</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -687,7 +689,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">159</span>
+                <span class="site-state-item-count">160</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -768,7 +770,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

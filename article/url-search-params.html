@@ -61,11 +61,13 @@
 
 
 <meta name="description" content="本文简单介绍一下 URLSearchParams。">
+<meta name="keywords" content="web,URLSearchParams">
 <meta property="og:type" content="article">
 <meta property="og:title" content="URLSearchParams 简介">
 <meta property="og:url" content="http://xovel.cn/article/url-search-params.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="本文简单介绍一下 URLSearchParams。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-09-11T17:35:47.587Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="URLSearchParams 简介">
@@ -316,7 +318,7 @@
 
       
         <blockquote>
-<p>本文根据 <code>URLSearchParams</code> 的<a href="https://url.spec.whatwg.org/#urlsearchparams" target="_blank" rel="external">官方规范文档</a>和 <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams" target="_blank" rel="external">MDN 文档</a>整理而成。</p>
+<p>本文根据 <code>URLSearchParams</code> 的<a href="https://url.spec.whatwg.org/#urlsearchparams" target="_blank" rel="noopener">官方规范文档</a>和 <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams" target="_blank" rel="noopener">MDN 文档</a>整理而成。</p>
 </blockquote>
 <p>URLSearchParams 是一个 WEB 接口，它定义了一些方法来处理 URL 的查询字符串。</p>
 <p>构造函数 <code>URLSearchParams()</code> 返回一个 URLSearchParams 对象，这个对象没有特别的属性，也不继承任何方法。</p>
@@ -329,7 +331,7 @@
 <li>iterator 是迭代协议 Iterator 对象的实例。</li><li><code>entries</code> 方法通常在 <code>Web Workers</code> 中使用。</li><li><code>USVString</code> 为 unicode 标量值（unicode scalar values）。</li></ul>
 </blockquote>
 <p>代码示例：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Create a test URLSearchParams object</span></div><div class="line"><span class="keyword">var</span> searchParams = <span class="keyword">new</span> URLSearchParams(<span class="string">"key1=value1&amp;key2=value2"</span>);</div><div class="line"></div><div class="line"><span class="comment">// Display the key/value pairs</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> pair <span class="keyword">of</span> searchParams.entries()) &#123;</div><div class="line">   <span class="built_in">console</span>.log(pair[<span class="number">0</span>]+ <span class="string">', '</span>+ pair[<span class="number">1</span>]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Create a test URLSearchParams object</span></span><br><span class="line"><span class="keyword">var</span> searchParams = <span class="keyword">new</span> URLSearchParams(<span class="string">"key1=value1&amp;key2=value2"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Display the key/value pairs</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> pair <span class="keyword">of</span> searchParams.entries()) &#123;</span><br><span class="line">   <span class="built_in">console</span>.log(pair[<span class="number">0</span>]+ <span class="string">', '</span>+ pair[<span class="number">1</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="get"><a href="#get" class="headerlink" title="get"></a><code>get</code></h3><p>获取指定搜索参数的第一个值。</p>
 <h3 id="getAll"><a href="#getAll" class="headerlink" title="getAll"></a><code>getAll</code></h3><p>获取指定搜索参数的所有值。返回一个数组。</p>
 <h3 id="has"><a href="#has" class="headerlink" title="has"></a><code>has</code></h3><p>判断是否存在指定的搜索参数。</p>
@@ -339,13 +341,13 @@
 <h3 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString"></a><code>toString</code></h3><p>返回一个字符串，由所有搜索参数组成的字符串，可以直接用在 URL 上。</p>
 <h3 id="values"><a href="#values" class="headerlink" title="values"></a><code>values</code></h3><p>返回 iterator 对象，包含了键/值对的所有值。其他说明与上面的 <code>entries</code> 和 <code>keys</code> 一样。</p>
 <h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a><code>forEach</code></h3><p>扩展方法，提供接近于数组 forEach 的遍历方式，<del>但它并不是一个数组，也不是一个类数组</del>。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">searchParams.forEach(<span class="function">(<span class="params">...args</span>)=&gt;</span><span class="built_in">console</span>.log(args))</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">searchParams.forEach(<span class="function">(<span class="params">...args</span>)=&gt;</span><span class="built_in">console</span>.log(args))</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>上面的代码中，<code>args</code> 依次为键名、值、对应的 searchParam。</p>
 </blockquote>
 <p><em>参考资料</em>：</p>
 <ul>
-<li><a href="https://url.spec.whatwg.org/#urlsearchparams" target="_blank" rel="external">URL Standard</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams" target="_blank" rel="external">URLSearchParams - Web APIs | MDN</a></li><li><a href="https://nodejs.org/api/url.html#url_class_urlsearchparams" target="_blank" rel="external">URL | Node.js v8.4.0 Documentation</a></li><li><a href="http://caniuse.com/#feat=urlsearchparams" target="_blank" rel="external">Can I use - Feature: URLSearchParams</a></li></ul>
+<li><a href="https://url.spec.whatwg.org/#urlsearchparams" target="_blank" rel="noopener">URL Standard</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams" target="_blank" rel="noopener">URLSearchParams - Web APIs | MDN</a></li><li><a href="https://nodejs.org/api/url.html#url_class_urlsearchparams" target="_blank" rel="noopener">URL | Node.js v8.4.0 Documentation</a></li><li><a href="http://caniuse.com/#feat=urlsearchparams" target="_blank" rel="noopener">Can I use - Feature: URLSearchParams</a></li></ul>
 
       
     </div>
@@ -456,7 +458,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">62</span>
+              <span class="site-state-item-count">63</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -473,7 +475,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">159</span>
+                <span class="site-state-item-count">160</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -554,7 +556,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

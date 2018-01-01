@@ -61,11 +61,13 @@
 
 
 <meta name="description" content="2014年年中，IETF更新了HTTP/1.1协议：将原来的HTTP/1.1协议（RFC2616）拆开，分成了六个单独的协议。在这六个新的协议说明中，重点对之前语义模糊的部分进行了重新诠释。更新之后的协议变得更易懂、易读。">
+<meta name="keywords" content="http,rfc,协议,http1.1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTTP1.1协议更新，RFC2616被废弃">
 <meta property="og:url" content="http://xovel.cn/article/rfc2616-is-obsoleted.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="2014年年中，IETF更新了HTTP/1.1协议：将原来的HTTP/1.1协议（RFC2616）拆开，分成了六个单独的协议。在这六个新的协议说明中，重点对之前语义模糊的部分进行了重新诠释。更新之后的协议变得更易懂、易读。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-11-18T07:00:40.093Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTP1.1协议更新，RFC2616被废弃">
@@ -315,23 +317,23 @@
       
 
       
-        <p>2014年年中，IETF更新了HTTP/1.1协议：将原来的HTTP/1.1协议（<a href="https://tools.ietf.org/html/rfc2616" target="_blank" rel="external">RFC2616</a>）拆开，分成了六个单独的协议。在这六个新的协议说明中，重点对之前语义模糊的部分进行了重新诠释。更新之后的协议变得更易懂、易读。</p>
+        <p>2014年年中，IETF更新了HTTP/1.1协议：将原来的HTTP/1.1协议（<a href="https://tools.ietf.org/html/rfc2616" target="_blank" rel="noopener">RFC2616</a>）拆开，分成了六个单独的协议。在这六个新的协议说明中，重点对之前语义模糊的部分进行了重新诠释。更新之后的协议变得更易懂、易读。</p>
 <a id="more"></a>
 <p>以下是新的六个协议：</p>
 <ul>
-<li>RFC7230 - <a href="http://tools.ietf.org/html/rfc7230" target="_blank" rel="external">HTTP/1.1: Message Syntax and Routing</a> - low-level message parsing and connection management</li><li>RFC7231 - <a href="http://tools.ietf.org/html/rfc7231" target="_blank" rel="external">HTTP/1.1: Semantics and Content</a> - methods, status codes and headers</li><li>RFC7232 - <a href="http://tools.ietf.org/html/rfc7232" target="_blank" rel="external">HTTP/1.1: Conditional Requests</a> - e.g., If-Modified-Since</li><li>RFC7233 - <a href="http://tools.ietf.org/html/rfc7233" target="_blank" rel="external">HTTP/1.1: Range Requests</a> - getting partial content</li><li>RFC7234 - <a href="http://tools.ietf.org/html/rfc7234" target="_blank" rel="external">HTTP/1.1: Caching</a> - browser and intermediary caches</li><li>RFC7235 - <a href="http://tools.ietf.org/html/rfc7235" target="_blank" rel="external">HTTP/1.1: Authentication</a> - a framework for HTTP authentication</li></ul>
-<p>正如Mark Nottingham在其个人博客中的一篇文章（<a href="https://www.mnot.net/blog/2014/06/07/rfc2616_is_dead" target="_blank" rel="external">RFC2616 is Dead</a>）中的吐槽一样：</p>
+<li>RFC7230 - <a href="http://tools.ietf.org/html/rfc7230" target="_blank" rel="noopener">HTTP/1.1: Message Syntax and Routing</a> - low-level message parsing and connection management</li><li>RFC7231 - <a href="http://tools.ietf.org/html/rfc7231" target="_blank" rel="noopener">HTTP/1.1: Semantics and Content</a> - methods, status codes and headers</li><li>RFC7232 - <a href="http://tools.ietf.org/html/rfc7232" target="_blank" rel="noopener">HTTP/1.1: Conditional Requests</a> - e.g., If-Modified-Since</li><li>RFC7233 - <a href="http://tools.ietf.org/html/rfc7233" target="_blank" rel="noopener">HTTP/1.1: Range Requests</a> - getting partial content</li><li>RFC7234 - <a href="http://tools.ietf.org/html/rfc7234" target="_blank" rel="noopener">HTTP/1.1: Caching</a> - browser and intermediary caches</li><li>RFC7235 - <a href="http://tools.ietf.org/html/rfc7235" target="_blank" rel="noopener">HTTP/1.1: Authentication</a> - a framework for HTTP authentication</li></ul>
+<p>正如Mark Nottingham在其个人博客中的一篇文章（<a href="https://www.mnot.net/blog/2014/06/07/rfc2616_is_dead" target="_blank" rel="noopener">RFC2616 is Dead</a>）中的吐槽一样：</p>
 <blockquote>
 <p>Don’t use RFC2616. Delete it from your hard drives, bookmarks, and burn (or responsibly recycle) any copies that are printed out.</p>
 <p>不要再使用RFC2616了。将它从你的磁盘、书签中删除，并将打印出来的任何副本烧掉，当然你也可以回收再利用。</p>
 </blockquote>
 <p>RFC2616已经变为废弃状态。</p>
-<p>其实早在2007年，IETF内部就针对HTTP/1.1的修订展开了工作，他们成立了一个名字叫做<a href="https://tools.ietf.org/wg/httpbis/" target="_blank" rel="external">HTTPbis</a>的工作小组，目的是让HTTP/1.1协议规范更加清晰易读，并非对之前的协议进行升级或者添加新的特性。在这个修订过程中，小组成员发布了数十个草稿版本，并处理了<a href="https://trac.tools.ietf.org/wg/httpbis/trac/report/19" target="_blank" rel="external">550+问题</a>。</p>
+<p>其实早在2007年，IETF内部就针对HTTP/1.1的修订展开了工作，他们成立了一个名字叫做<a href="https://tools.ietf.org/wg/httpbis/" target="_blank" rel="noopener">HTTPbis</a>的工作小组，目的是让HTTP/1.1协议规范更加清晰易读，并非对之前的协议进行升级或者添加新的特性。在这个修订过程中，小组成员发布了数十个草稿版本，并处理了<a href="https://trac.tools.ietf.org/wg/httpbis/trac/report/19" target="_blank" rel="noopener">550+问题</a>。</p>
 <blockquote>
-<p>HTTPbis就是现在的HTTP Working Group，其官方主页为：<a href="http://httpwg.org/" target="_blank" rel="external">http://httpwg.org/</a></p>
-<p>关于为何取名HTTPbis，stackoverflow上有个讨论：<a href="http://stackoverflow.com/questions/9105639/httpbis-what-does-bis-mean" target="_blank" rel="external">HTTPbis - what does bis mean?</a></p>
+<p>HTTPbis就是现在的HTTP Working Group，其官方主页为：<a href="http://httpwg.org/" target="_blank" rel="noopener">http://httpwg.org/</a></p>
+<p>关于为何取名HTTPbis，stackoverflow上有个讨论：<a href="http://stackoverflow.com/questions/9105639/httpbis-what-does-bis-mean" target="_blank" rel="noopener">HTTPbis - what does bis mean?</a></p>
 </blockquote>
-<p>在文档整理过程中，HTTPbis也对HTTP/1.1协议中的一些不合理或者不安全的地方进行了修正与完。在官方文档中描述了对应于RFC2616的变更部分：<a href="http://tools.ietf.org/html/rfc7230#appendix-A.2" target="_blank" rel="external">Changes from RFC 2616</a>。Evert在其博客（<a href="https://evertpot.com/http-11-updated/" target="_blank" rel="external">HTTP/1.1 just got a major update</a>）中有一番总结，指出了其中的一些重大变更：</p>
+<p>在文档整理过程中，HTTPbis也对HTTP/1.1协议中的一些不合理或者不安全的地方进行了修正与完。在官方文档中描述了对应于RFC2616的变更部分：<a href="http://tools.ietf.org/html/rfc7230#appendix-A.2" target="_blank" rel="noopener">Changes from RFC 2616</a>。Evert在其博客（<a href="https://evertpot.com/http-11-updated/" target="_blank" rel="noopener">HTTP/1.1 just got a major update</a>）中有一番总结，指出了其中的一些重大变更：</p>
 <blockquote>
 <ul>
 <li>Clarifications around dealing with unexpected whitespace, which should fix response splitting vulnerabilities.</li><li>The limit of two connections per server has been removed.</li><li>HTTP/0.9 support has been dropped.</li><li>Default charset of ISO-8859-1 has been removed.</li><li>Servers are no longer required to handle all <code>Content-*</code> header fields.</li><li><code>Content-Range</code> has been explicitly banned in PUT requests.</li><li>It’s now suggested to use the <code>about:blank</code> uri in the <code>Referer</code> header when no referer exists, to distinguish between “there was no referrer” and “I don’t want to send a referrer”.</li><li>The <code>204</code>, <code>404</code>, <code>405</code>, <code>414</code> and <code>501</code> status codes are now cachable.</li><li>The status codes <code>301</code> and <code>302</code> have been changed to allow user agents to rewrite the method from <code>POST</code> to <code>GET</code>. This is a good example of a case where everybody has been (incorrectly) already doing this, and the spec now reflects the real world implementation.</li><li>The <code>Location</code> header can now contain relative uri’s as well as fragment identifiers.</li><li><code>Content-MD5</code> has been removed.</li></ul>
@@ -342,7 +344,7 @@
 <hr>
 <p>参考资料：</p>
 <ul>
-<li><a href="https://www.mnot.net/blog/2014/06/07/rfc2616_is_dead" target="_blank" rel="external">RFC2616 is Dead</a></li><li><a href="https://evertpot.com/http-11-updated/" target="_blank" rel="external">HTTP/1.1 just got a major update</a></li></ul>
+<li><a href="https://www.mnot.net/blog/2014/06/07/rfc2616_is_dead" target="_blank" rel="noopener">RFC2616 is Dead</a></li><li><a href="https://evertpot.com/http-11-updated/" target="_blank" rel="noopener">HTTP/1.1 just got a major update</a></li></ul>
 
       
     </div>
@@ -457,7 +459,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">62</span>
+              <span class="site-state-item-count">63</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -474,7 +476,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">159</span>
+                <span class="site-state-item-count">160</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -555,7 +557,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

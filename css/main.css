@@ -1391,10 +1391,10 @@ pre .javascript .function {
 .fancybox-close:hover {
   border: none;
 }
-.post-body a[rel~="external"] {
+.post-body a[rel~="noopener"] {
   color: #3370bb;
 }
-.post-body a[rel~="external"]:after {
+.post-body a[rel~="noopener"]:after {
   content: "\f08e";
   font: normal normal normal 14px/1 FontAwesome;
   margin-left: 2px;

@@ -61,11 +61,13 @@
 
 
 <meta name="description" content="本文为针对AngularJS中的自带的函数组件的简要介绍。">
+<meta name="keywords" content="angular,function,components,angularjs">
 <meta property="og:type" content="article">
 <meta property="og:title" content="angular函数组件简介">
 <meta property="og:url" content="http://xovel.cn/article/angular-function.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="本文为针对AngularJS中的自带的函数组件的简要介绍。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-05-19T16:30:35.808Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="angular函数组件简介">
@@ -315,12 +317,12 @@
       
 
       
-        <p>本人前段时间对<code>angular</code>进行了一定程度的了解，<code>angular</code>系列的博文就从本篇开始吧。本文就对其提供的函数组件做一个入门级的介绍。大部分文档直接翻译自官方文档：<a href="https://docs.angularjs.org/api/ng/function" target="_blank" rel="external">Function components in ng</a>。</p>
+        <p>本人前段时间对<code>angular</code>进行了一定程度的了解，<code>angular</code>系列的博文就从本篇开始吧。本文就对其提供的函数组件做一个入门级的介绍。大部分文档直接翻译自官方文档：<a href="https://docs.angularjs.org/api/ng/function" target="_blank" rel="noopener">Function components in ng</a>。</p>
 <blockquote>
 <p>阅读本文需要一定的<code>jQuery</code>基础。</p>
 </blockquote>
 <p>在函数组件中，<code>angular</code>提供了许多方便使用的功能，下面我将按照官方文档的顺序一一做介绍。</p>
-<h3 id="angular-forEach"><a href="#angular-forEach" class="headerlink" title="angular.forEach"></a>angular.forEach</h3><p>遍历数组或对象。功能类似<a href="http://api.jquery.com/each/" target="_blank" rel="external"><code>jQuery.each</code></a>。不同的是<code>angular.forEach</code>支持传入一个上下文作为第三个参数：<code>angular.forEach(obj, iterator, [context]);</code>。</p>
+<h3 id="angular-forEach"><a href="#angular-forEach" class="headerlink" title="angular.forEach"></a>angular.forEach</h3><p>遍历数组或对象。功能类似<a href="http://api.jquery.com/each/" target="_blank" rel="noopener"><code>jQuery.each</code></a>。不同的是<code>angular.forEach</code>支持传入一个上下文作为第三个参数：<code>angular.forEach(obj, iterator, [context]);</code>。</p>
 <h3 id="angular-extend"><a href="#angular-extend" class="headerlink" title="angular.extend"></a>angular.extend</h3><p>扩展对象。功能类似<code>jQuery.extend</code>，不过这里是个浅复制。</p>
 <h3 id="angular-merge"><a href="#angular-merge" class="headerlink" title="angular.merge"></a>angular.merge</h3><p>合并对象，深度合并，可以视为深复制。</p>
 <h3 id="angular-noop"><a href="#angular-noop" class="headerlink" title="angular.noop"></a>angular.noop</h3><p>空操作，即：<code>function () {}</code>。</p>
@@ -348,7 +350,7 @@
 <h3 id="angular-fromJson"><a href="#angular-fromJson" class="headerlink" title="angular.fromJson"></a>angular.fromJson</h3><p>将一个<code>JSON</code>字符串还原，即反序列化。</p>
 <h3 id="angular-bootstrap"><a href="#angular-bootstrap" class="headerlink" title="angular.bootstrap"></a>angular.bootstrap</h3><p>手动启动<code>AngularJS</code>的应用程序。</p>
 <h3 id="angular-reloadWithDebugInfo"><a href="#angular-reloadWithDebugInfo" class="headerlink" title="angular.reloadWithDebugInfo"></a>angular.reloadWithDebugInfo</h3><p>以调试模式重载当前的应用程序。</p>
-<h3 id="angular-injector"><a href="#angular-injector" class="headerlink" title="angular.injector"></a>angular.injector</h3><p>注入器的声明与使用。详情可参阅：<a href="https://docs.angularjs.org/guide/di" target="_blank" rel="external">dependency injection</a></p>
+<h3 id="angular-injector"><a href="#angular-injector" class="headerlink" title="angular.injector"></a>angular.injector</h3><p>注入器的声明与使用。详情可参阅：<a href="https://docs.angularjs.org/guide/di" target="_blank" rel="noopener">dependency injection</a></p>
 <h3 id="angular-element"><a href="#angular-element" class="headerlink" title="angular.element"></a>angular.element</h3><p>以<code>jQuery</code>风格包裹<code>DOM</code>元素或者<code>HTML String</code>。如果未引入<code>jQuery</code>，则采用<code>angular</code>自带的<code>jqLite</code>简化版。<code>jqLite</code>提供常见的<code>jQuery API</code>，可以满足大部分的情况。</p>
 <h3 id="angular-module"><a href="#angular-module" class="headerlink" title="angular.module"></a>angular.module</h3><p><code>angular</code>的核心，用于声明或者获取模块。</p>
 <h3 id="angular-errorHandlingConfig"><a href="#angular-errorHandlingConfig" class="headerlink" title="angular.errorHandlingConfig"></a>angular.errorHandlingConfig</h3><p>错误处理的配置。</p>
@@ -474,7 +476,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">62</span>
+              <span class="site-state-item-count">63</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -491,7 +493,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">159</span>
+                <span class="site-state-item-count">160</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -572,7 +574,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

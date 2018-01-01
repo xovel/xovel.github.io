@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="object,js,trap," />
+  <meta name="keywords" content="object,trap,js," />
 
 
 
@@ -61,11 +61,13 @@
 
 
 <meta name="description" content="所谓细节决定成败，本文讲述一个隐藏的比较深的陷阱，有关于JS对象操作，尤其是清空操作时候的坑，请注意防范。">
+<meta name="keywords" content="object,trap,js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一个JS对象操作上的小坑">
 <meta property="og:url" content="http://xovel.cn/article/a-trap-about-object.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="所谓细节决定成败，本文讲述一个隐藏的比较深的陷阱，有关于JS对象操作，尤其是清空操作时候的坑，请注意防范。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-12-28T14:58:33.200Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一个JS对象操作上的小坑">
@@ -305,14 +307,14 @@
       
         <p>今天，工作上遇到一个很滑稽的问题。我大概描述一下，具体的源代码和项目详情这里就不详述了。</p>
 <p>项目上使用到了一款插件叫做<code>jqGrid</code>，在使用这个插件进行表格数据载入的时候调用了一个名为<code>localData</code>的对象里面的一个列表——我们姑且称之为<code>localData.list</code>——里面的数据。在页面加载的时候这个表格就会被初始化。在点击某个按钮进行数据初始化的时候需要清空这个表格，于是我写下了一段<del>带有巨坑的</del>代码：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">localData = &#123;</div><div class="line">  <span class="attr">status</span>: <span class="number">0</span>,</div><div class="line">  <span class="attr">count</span>: <span class="number">0</span>,</div><div class="line">  <span class="attr">list</span>: []</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">localData = &#123;</span><br><span class="line">  status: <span class="number">0</span>,</span><br><span class="line">  count: <span class="number">0</span>,</span><br><span class="line">  list: []</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p><strong>出事了……</strong>，在后续进行数据添加之后（<code>localData.list.push</code>），进行表格的重载<code>.trigger(&quot;reloadGrid&quot;)</code>操作时，数据无法展现。</p>
 <p>百思不得其解之下，询问同事，他们也表示曾经出现过类似的问题，但是后来不知道怎么搞的就没事了。我比对了一下他们的项目源码，发现他们是这样写数据清空操作的：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">localData.status = <span class="number">0</span>;</div><div class="line">localData.count = <span class="number">0</span>;</div><div class="line">localData.list.length = <span class="number">0</span>;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">localData.status = <span class="number">0</span>;</span><br><span class="line">localData.count = <span class="number">0</span>;</span><br><span class="line">localData.list.length = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
 <p>喏，陷阱就埋在这里……</p>
 <p>在使用诸如<code>a={}</code>的形式进行对象的初始化操作时，之前的信息将会全部丢失，即使被赋值之后的结构与之前的一模一样，之前的对象也<strong>跟这个毫无关系</strong>了。</p>
 <p><del>其实我早就应该意识到这个陷阱的，因为：</del></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#125; === &#123;&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#125; === &#123;&#125;</span><br></pre></td></tr></table></figure>
 <p>结果为<strong>false</strong></p>
 <hr>
 <p>总结：心要更细一些，基础得加强，赋值不要随意。</p>
@@ -340,9 +342,9 @@
           
             <a href="/tags/object/" rel="tag">#object</a>
           
-            <a href="/tags/js/" rel="tag">#js</a>
-          
             <a href="/tags/trap/" rel="tag">#trap</a>
+          
+            <a href="/tags/js/" rel="tag">#js</a>
           
         </div>
       
@@ -359,7 +361,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/article/summerize-for-2016.html" rel="prev" title="2016年总结">
+              <a href="/article/summary-2016.html" rel="prev" title="2016年总结">
                 2016年总结 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -429,7 +431,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">62</span>
+              <span class="site-state-item-count">63</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -446,7 +448,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">159</span>
+                <span class="site-state-item-count">160</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -527,7 +529,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2017-12-31T15:58:52.650Z</updated>
+  <updated>2018-01-01T12:11:52.025Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,106 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2017 年总结</title>
+    <link href="http://xovel.cn/article/summary-2017.html"/>
+    <id>http://xovel.cn/article/summary-2017.html</id>
+    <published>2017-12-31T13:20:48.000Z</published>
+    <updated>2018-01-01T12:11:52.025Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>转眼已经是 2017 年的最后一天了，是时候来好好做一个全面的总结了。</p>
+</blockquote>
+<p>以上这段文字是<del>抄袭</del>自去年的总结。</p>
+<p>今年的总结就换一个方式吧。</p>
+<h3 id="先做检讨"><a href="#先做检讨" class="headerlink" title="先做检讨"></a>先做检讨</h3><p>2017 年设定了许多的目标，但是很遗憾，基本上没有完成。最为痛心的是继续弃坑《圣血记》，这一部当初踌躇满志气势恢宏的小说，如今也只剩一声叹息。或许是现实生活与我的理念背道而驰，或许是自己的诸多想法不切实际过于天真，导致我没有太多的心思去创作。近期我每每念及此处，都不禁哀叹遗憾。</p>
+<!--
+《圣血记》是一部作者用来反应社会现实的玄幻浪漫主义小说，有些架空和修仙的成分。有三部曲，前两部分别为《鸣泉录》、《寻玉》，最后一部暂未进行构思（有强烈的依赖关系）。了解这个系列的人应该会知道我为什么没有给第三部定名。
+
+《鸣泉录》是以作者自己为原型，用一种近乎自恋的手法来描述了一段荡气回肠的爱情故事。故事玄幻色彩很重，讲述了幽冥、驾驭魂魄的一些的现实生活中几乎不可能发生的事情，也在试图为幽魂之事正名，使其显得并不那么幽暗恐怖。《鸣泉录》因为故事中映射的女主角原型的人生经历变化，已被作者强行中止，整个故事的走向发生了剧变。在宏大场面还没有来得及展开的情况下强行中止，说起来也是一种遗憾。
+
+《寻玉》讲述的是另一位与《鸣泉录》男主人公有密切联系（为表兄弟关系）的人物寻找失落宝物相关的故事，故事本身其实是一个很大的轮回。遍寻许久没有找到的东西，原来一直就在自己身边，这也是作者将“远在天边近在眼前”的种种擦肩错过进行艺术化处理的尝试。《鸣泉录》中未能叙述的故事也将在《寻玉》中进行补充。而正当进行到了补充的阶段，《寻玉》也难以继续下去。
+
+我想这应该是一个我绕不过去的坎。总之，从 2016 年下半年开始，就一直搁置了《圣血记》的故事创作。原本打算 2017 年进行重构，但诸多之前的设定都发生了变化，我没有继续创作下去。整个 2017 年，只写了一部分关于《鸣泉录》男主角恢复神志的情节。如今，回过头看《寻玉》的创作，都快变成多主人公的设定了，有点模仿《天龙八部》和《海上牧云记》的节奏。
+
+在阅读一些作品的评鉴的时候，得知一个这样的信息：所有的小说创作，其背景其实都是为了剧情和人物而服务。如果依赖背景去进行创作，除非是有一个非常统一并且经得起推敲的背景故事，否则往往会令人曲解了故事的本原。
+
+*****************
+
+好了，上面其实都是扯谈，意图分散诸君的注意力，也是在弱化自己的侧重点。
+-->
+<p>工作方面，没有能够稳定住现有的工作。是的，我在 11 月份的时候从上一家公司离职了。上一家公司对我很好，同事之间相处也非常融洽，领导也很是器重我。我选择离开，无论如何，都是工作不稳定的一种体现。原本自己是想打算在上一家公司静静打拼两年，积攒一些人脉，但是事实上我并没有这样去做。这也可能是促使我做出离职决定的一个重大原因吧。</p>
+<p>生活方面，说来也甚是杯具。我依然在人生的道路上孤军奋战，我内心多么渴望能有一个人和我一起共同面对未知的旅途呀。说多了都是泪的节奏，归根结底都是因为自己自身的原因。所幸，2017 年，我到底还是学会了如何去勇敢面对。有时候内心面临崩溃，身边又孤立无援的时候，我不再像之前在杭州那般堕落消极，而是努力寻找解决方案。</p>
+<h3 id="挖过的坑"><a href="#挖过的坑" class="headerlink" title="挖过的坑"></a>挖过的坑</h3><p>2017 年，我给自己是挖了很多的坑的。这里也稍作罗列，希望还能有时间和精力去填补。</p>
+<ol>
+<li><code>zob</code> 项目。该项目最初设定的是解决 <code>MVVM</code> 框架的问题，后来项目失败，项目的定位迁移成了代码和写作风格指导。</li><li><code>moonlight</code> 项目。该项目原本计划是在 2017 年产出至少两个的子项目，但是很遗憾，目前只有一个半成品的小项目。</li><li><code>lui</code> 项目。这个坑挖的太大了，导致项目直接崩盘。该项目的定位是用于解决终端之间的样式风格问题，而目前市面上的大多数 UI 库都致力于解决这个问题，并不是一朝一夕的事情。<del><code>L</code> 是法语单词 <code>libellule</code> 的首字母，意思为<em>蜻蜓</em></del>。</li><li>创作系列之<strong>内心小剧场</strong>。这其实也算是一个不大不小的坑，最初的灵感来源是国庆假期的时候去见了她。一直想用一些文字来描述自己的内心世界，开设这个小项目，也是为了释放一下自己心中的情感。</li><li>代码风格统一化。这也算团队协作的一个组成部分吧，然而目前只是做到了自己编码风格的统一，并没有对团队成员做统一规范要求。</li></ol>
+<h3 id="有过的想法"><a href="#有过的想法" class="headerlink" title="有过的想法"></a>有过的想法</h3><p>在 2017 年有过的想法，但是一直没有去执行的事情：</p>
+<ol>
+<li>日历项目。记录所有重要的日期。</li><li>运营一个微信公众号。</li><li>收集某一垂直领域的相关资料。拟定的方向有两个，分别为养生和建筑。</li><li>成为 <code>vue.js</code> 的贡献者。</li></ol>
+<p>可以将理由统一定性为懒惰，不思进取。这些事情也逐渐让我明白了一个道理：一个人的精力毕竟还是有限的。</p>
+<hr>
+<p>下面来总结一下 2017 可圈可点的事情：</p>
+<h3 id="接手的项目"><a href="#接手的项目" class="headerlink" title="接手的项目"></a>接手的项目</h3><h4 id="中小学装备管理系统"><a href="#中小学装备管理系统" class="headerlink" title="中小学装备管理系统"></a>中小学装备管理系统</h4><p>上一家公司拳头产品，我在其中负责前端的开发。</p>
+<h4 id="集中采购系统"><a href="#集中采购系统" class="headerlink" title="集中采购系统"></a>集中采购系统</h4><p>上一家公司的另一款采购物品的管理后台产品，与装备管理系统密切相关。同样的，我也是前端主程。</p>
+<h4 id="数据直报系统"><a href="#数据直报系统" class="headerlink" title="数据直报系统"></a>数据直报系统</h4><p>与上一个项目基本类似，用于学校端的数据填写上报，行管端的审批与汇总，方便管理系统进行数据的统一管理。</p>
+<blockquote>
+<p>以上各个项目的版本因为公司的战略计划，统一都是 <code>V9</code>。</p>
+</blockquote>
+<h4 id="实验教学平台"><a href="#实验教学平台" class="headerlink" title="实验教学平台"></a>实验教学平台</h4><p>该项目分为三个迭代阶段，我都参与了。第一个阶段为项目雏形时期，采用传统的 <code>jQuery/Bootstrap</code> 搭建，该阶段直接被第二个阶段替代。第二个阶段为采用 <code>angular.js</code> 进行搭建，我参与了主框架的搭建，并进行了路由配置以及懒加载方案的探索与实现。第三个阶段为 <code>vue.js</code> 阶段，此阶段为项目前端正式转型之后采用的框架，我只参与了部分主框架的搭建，之后因公司战略调整，我回到了装备开发团队。</p>
+<h4 id="空港出行管理后台"><a href="#空港出行管理后台" class="headerlink" title="空港出行管理后台"></a>空港出行管理后台</h4><p>这便就是当前自己经手的核心项目。</p>
+<h3 id="与工作相关的子项目"><a href="#与工作相关的子项目" class="headerlink" title="与工作相关的子项目"></a>与工作相关的子项目</h3><h4 id="sinput-js"><a href="#sinput-js" class="headerlink" title="sinput.js"></a><a href="https://github.com/xovel/sinput/tree/1.x" target="_blank" rel="noopener"><code>sinput.js</code></a></h4><p>一个用于列表模糊检索的 <code>jQuery</code> 插件。因前面提到的装备管理系统中，存在大量的模糊检索的需求，为了应对复杂的产品需求，在采用了诸多现有的插件之后，便有了这样一个子项目的诞生。主要目的是解决千奇百怪的需求。插件性能和效果表现均十分良好。</p>
+<h4 id="dreport-xlsx"><a href="#dreport-xlsx" class="headerlink" title="dreport-xlsx"></a><code>dreport-xlsx</code></h4><p>因数据直报系统中使用到了大量的表格导入导出功能，后台人员在制作模板的过程中，需要面临大量重复冗余的操作，遂在 <code>node-xlsx</code> 的基础之上，为缩短人工操作的时间和避免操作失误，开发了这一款用于生成数据模板的子项目。</p>
+<blockquote>
+<p>不过，因为离职走的匆忙，相关的代码我没有带走。</p>
+</blockquote>
+<h4 id="util-js"><a href="#util-js" class="headerlink" title="util.js"></a><code>util.js</code></h4><p>单独将此拎出来是因为该文件的定位至关重要。该项目收集并整理了部分在前端开发中使用频率非常高的工具方法。在上一家公司之后，又加入诸多方法比如重新封装 <code>ajax</code> 方法，表格组件的支持更加丰富，加入了部分类似与 <code>vue</code> 和 <code>angular</code> 过滤器的概念方法等等。</p>
+<h3 id="个人项目"><a href="#个人项目" class="headerlink" title="个人项目"></a>个人项目</h3><h4 id="htree"><a href="#htree" class="headerlink" title="htree"></a><a href="https://github.com/xovel/htree" target="_blank" rel="noopener"><code>htree</code></a></h4><p>一款用于 <code>node.js</code> 环境的类似于 <code>Linux</code> 系统的 <code>tree</code> 命令的命令行工具。更多介绍可以参考之前在博客中发表的这篇文章：<a href="/article/htree.html">htree，一款模仿 tree 命令的本地文件结构查看工具</a>。</p>
+<h4 id="最合拍"><a href="#最合拍" class="headerlink" title="最合拍"></a>最合拍</h4><p>一款面向羽毛球运动的微信商城项目。<del>后该项目因为迭代升级原因，我个人退出下一个版本的开发</del>。</p>
+<h4 id="第五空间文学网"><a href="#第五空间文学网" class="headerlink" title="第五空间文学网"></a>第五空间文学网</h4><p>一款面向小说后台管理的静态页面实现。</p>
+<h3 id="新增的技术栈"><a href="#新增的技术栈" class="headerlink" title="新增的技术栈"></a>新增的技术栈</h3><ul>
+<li><code>angular.js</code>。开始对大型应用的 <code>MVVM</code> 模式做深入的了解与应用。</li><li><code>jenkins</code> 的使用，本人的日志项目中有许多记录是关于 <code>jenkins</code> 这一款 <code>CI</code> 系统的。</li><li><code>gulp</code> 构建复杂的大型应用。配合简单的 <code>node</code> 命令完成各种场景需求。</li><li><code>node.js</code> 编写简单基础的应用。如上面提到的 <code>dreport-xlsx</code>，上一条提到的 <code>gulp</code> 生成 <code>config</code> 配置文件，均采用 <code>node</code> 执行文件来产出。</li><li><code>nginx</code> 搭建与配置，代理纯前端站点。多文件的配置模式。</li><li><code>xshell</code> 连接远程主机进行调试。主要是操作 <code>nginx</code> 和查看 <code>tomcat</code> 的后台日志记录文件。</li><li><code>webpack</code> 技术，使用 <code>vue</code> 进行项目的骨架搭建。</li><li><code>vue</code>，非常优秀的前端框架，算是入了门。组件库的使用这里就不赘述了。</li></ul>
+<h3 id="阅读与写作"><a href="#阅读与写作" class="headerlink" title="阅读与写作"></a>阅读与写作</h3><p>说来惭愧，2017 年，自己的写作任务全面处于弃坑状态，所以这里就针对自己的阅读情况做一个简单的记录。</p>
+<ul>
+<li>《圣血记》的创作，持续搁置。“她”的原型再度丢失，我失去了创作的方向。</li><li>购买了一些技术方面的书籍，如《代码整洁之道》、《深入理解 ES6》、《HTTP 指南》等。基本上都是下半年购买的，远远没有达到年初既定的目标（<code>≥ 10</code>）。</li><li>图书馆去的次数大概在 20 次，每次借阅的书籍数量平均为两本。也是没有能够达到最初的目标的。书籍的范围大都是技术和哲学相关的。希望 2018 年能够借阅更多类型的书籍来拓展自己的知识视野。</li><li>各大博客和站点，以掘金、简书、开发者头条、干货集中营、前端之巅、前端日刊等为代表，几乎推送过来的文章，跟前端和 UI 相关的都进行了阅读，并针对部分文章做了收藏与整理记录。</li><li>个人博客的创作，2017 年的产出量不超过 10 篇，能拿得出手的其实只有两篇，一篇是介绍 <code>brackets</code> 插件的，另一篇是介绍 <code>htree</code> 的。</li><li>个人日志项目，坚持了下来。虽然每天都记录了，但是个人认为有效记录的比率在 60% 左右（即有大约 30% ~ 40% 是并没有什么实际意义的记录或者是流水账式的记录）。我会抽一个时间对 2017 年写下的日志做一个整理，看看自己的技术成长路线是个什么样子的。<del>嗯，这又算是给自己挖了一个坑</del>。</li></ul>
+<h3 id="关于音乐"><a href="#关于音乐" class="headerlink" title="关于音乐"></a>关于音乐</h3><p>截止目前为止，我在网易云音乐上面的听歌总数达到了八千多首，主要类型可以分为两类，一类是纯音乐，包括史诗、空间、纯电音、新世纪等等；另一类是柔和舒缓类型的。</p>
+<p>自己的音乐梦想，到目前为止，已经中断将近 20 年了。说起来也甚是滑稽可笑，我其实是有条件进一步接触音乐的，但我一直没有勇气将其拎起来。我并不知道何时才能重拾年幼时的梦想，也可能一辈子都不会再捡起来了吧。</p>
+<p>自己的歌唱水平比以前好了很多很多。以前 100% 走调的我，现在也能逐渐掐准节奏了。深情，有故事，这是我得到的最多的评价。</p>
+<h3 id="展望-2018"><a href="#展望-2018" class="headerlink" title="展望 2018"></a>展望 2018</h3><p>说了这么多，我其实也是在一直犹豫，对于 2018 年的规划是什么样子的，其实早在 2017 年 7 月份，我就已经做出了明确的规划。</p>
+<p>有些事情，是不方便明说的。2017 年没有来得及完成的事情，2018 年也不会特意去处理，毕竟各有各的规划。若是刻意去完成某件事情，是否又偏离了原定计划呢？</p>
+<p>简单粗暴的总结一下 2018 年的展望：</p>
+<ul>
+<li>遇见更好的自己。</li><li>让自己内心更加平静。</li><li>努力提升自己的情商和魅力值。</li></ul>
+<blockquote>
+<p>嗯，后面两点是<del>充数</del>的。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><em>知道的越多，就越发现自己不知道的其实更多</em>。<del>这句不是鲁迅说的，是古希腊大哲学家芝诺说的</del>。</p>
+<p>因此而产生恐惧，那是万万不可取的。</p>
+</blockquote>
+<hr>
+<p>2018 年，加油！</p>
+]]></content>
+    
+    <summary type="html">
+    
+      2017 年年末大总结。
+    
+    </summary>
+    
+      <category term="生活" scheme="http://xovel.cn/categories/life/"/>
+    
+    
+      <category term="2017" scheme="http://xovel.cn/tags/2017/"/>
+    
+      <category term="总结" scheme="http://xovel.cn/tags/%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="经历" scheme="http://xovel.cn/tags/%E7%BB%8F%E5%8E%86/"/>
+    
+      <category term="2018" scheme="http://xovel.cn/tags/2018/"/>
+    
+  </entry>
   
   <entry>
     <title>中国的商标分类</title>
@@ -29,7 +129,7 @@
 <p>为什么不提供精确的商标查询效果？说来惭愧，没有能够顺利破解 <code>商标网</code> 提供的 <code>API</code>。前天听后台开发的同事讲解了一些开放平台和网关拦截的知识，我想我是碰到了。我没有找到合适的破解方案，时间一到就告知权限失效或者查无数据了。所以，暂时先提供一个商标范围的搜索项目，名字就叫做 <code>trademark-classification</code>。所有数据来源来自商标网的官方数据，采集时间为 <code>2017-10-31</code>。</p>
 <p>部分参考资料：</p>
 <ul>
-<li><a href="http://sbj.saic.gov.cn/sbsq/sphfwfl/" target="_blank" rel="external">商标注册用商品和服务分类说明</a></li><li><a href="http://wsjs.saic.gov.cn" target="_blank" rel="external">中国商标网</a></li></ul>
+<li><a href="http://sbj.saic.gov.cn/sbsq/sphfwfl/" target="_blank" rel="noopener">商标注册用商品和服务分类说明</a></li><li><a href="http://wsjs.saic.gov.cn" target="_blank" rel="noopener">中国商标网</a></li></ul>
 ]]></content>
     
     <summary type="html">
@@ -56,25 +156,25 @@
     
     <content type="html"><![CDATA[<p><img src="http://wx4.sinaimg.cn/large/79be2309gy1fmdqbevvmgj20m806dmz8.jpg" alt=""></p>
 <blockquote>
-<p>前端的发展真是日新月异，这不，打包工具方面最近又出了一个爆款，名字叫做 <code>parcel</code>。本篇博客转载其 <code>README.md</code>，暂不做翻译。原文请移步：<a href="https://github.com/parcel-bundler/parcel" target="_blank" rel="external">parcel-bundler/parcel</a>。</p>
+<p>前端的发展真是日新月异，这不，打包工具方面最近又出了一个爆款，名字叫做 <code>parcel</code>。本篇博客转载其 <code>README.md</code>，暂不做翻译。原文请移步：<a href="https://github.com/parcel-bundler/parcel" target="_blank" rel="noopener">parcel-bundler/parcel</a>。</p>
 </blockquote>
 <hr>
-<p>Blazing fast, zero configuration web application bundler <a href="https://parceljs.org" target="_blank" rel="external">https://parceljs.org</a></p>
+<p>Blazing fast, zero configuration web application bundler <a href="https://parceljs.org" target="_blank" rel="noopener">https://parceljs.org</a></p>
 <h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><ul>
 <li>🚀 <strong>Blazing fast</strong> bundle times - multicore compilation, and a filesystem cache for fast rebuilds even after a restart.</li><li>📦 Out of the box support for JS, CSS, HTML, file assets, and more - <strong>no plugins to install</strong>.</li><li>🐠 <strong>Automatically transforms modules</strong> using Babel, PostCSS, and PostHTML when needed - even <code>node_modules</code>.</li><li>✂️ Zero configuration <strong>code splitting</strong> using dynamic <code>import()</code> statements.</li><li>🔥 Built in support for <strong>hot module replacement</strong></li><li>🚨 Friendly error logging experience - syntax highlighted code frames help pinpoint the problem.</li></ul>
 <h2 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h2><ol>
 <li>Install with yarn:</li></ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yarn global add parcel-bundler</div></pre></td></tr></table></figure>
-<p>or with npm:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g parcel-bundler</div></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn global add parcel-bundler</span><br></pre></td></tr></table></figure>
+<p>or with npm:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g parcel-bundler</span><br></pre></td></tr></table></figure></p>
 <ol>
 <li>Parcel can take any type of file as an entry point, but an HTML or JavaScript file is a good place to start. If you link your main JavaScript file in the HTML using a relative path, Parcel will also process it for you, and replace the reference with a URL to the output file.</li></ol>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./index.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./index.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <ol>
 <li>Parcel has a development server built in, which will automatically rebuild your app as you change files and supports hot module replacement for fast development. Just point it at your entry file:</li></ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">parcel index.html</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parcel index.html</span><br></pre></td></tr></table></figure>
 <ol>
-<li>Now open <a href="http://localhost:1234/" target="_blank" rel="external">http://localhost:1234/</a> in your browser. If needed, you can also override the default port with the -p option.</li></ol>
-<p>See <a href="https://parceljs.org" target="_blank" rel="external">parceljs.org</a> for more documentation!</p>
+<li>Now open <a href="http://localhost:1234/" target="_blank" rel="noopener">http://localhost:1234/</a> in your browser. If needed, you can also override the default port with the -p option.</li></ol>
+<p>See <a href="https://parceljs.org" target="_blank" rel="noopener">parceljs.org</a> for more documentation!</p>
 <h2 id="Benchmarks"><a href="#Benchmarks" class="headerlink" title="Benchmarks"></a>Benchmarks</h2><p>Based on a reasonably sized app, containing 1726 modules, 6.5M uncompressed. Built on a 2016 MacBook Pro with 4 physical CPUs.</p>
 <table>
 <thead>
@@ -112,10 +212,10 @@
 <p>After the bundle tree is constructed, each bundle is written to a file by a packager specific to the file type. The packagers know how to combine the code from each asset together into the final file that is loaded by a browser.</p>
 <h2 id="Community"><a href="#Community" class="headerlink" title="Community"></a>Community</h2><p>All feedback and suggestions are welcome!</p>
 <ul>
-<li>💬 Chat: Join us on <a href="https://slack.parceljs.org/" target="_blank" rel="external">slack</a>.</li><li>📣 Stay up to date on new features and announcements on <a href="https://twitter.com/parceljs" target="_blank" rel="external">@parceljs</a>.</li></ul>
+<li>💬 Chat: Join us on <a href="https://slack.parceljs.org/" target="_blank" rel="noopener">slack</a>.</li><li>📣 Stay up to date on new features and announcements on <a href="https://twitter.com/parceljs" target="_blank" rel="noopener">@parceljs</a>.</li></ul>
 <h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>MIT</p>
 <hr>
-<p><a href="http://www.css88.com/doc/parcel/" target="_blank" rel="external">Parcel 中文文档</a>。不得不佩服这个网站，以飞快之速完成了对文档的翻译。<del>当然，现在的官方文档内容其实也不多</del>。</p>
+<p><a href="http://www.css88.com/doc/parcel/" target="_blank" rel="noopener">Parcel 中文文档</a>。不得不佩服这个网站，以飞快之速完成了对文档的翻译。<del>当然，现在的官方文档内容其实也不多</del>。</p>
 <p>目前这个项目吸引了很多的开发者，诸多在 <code>webpack</code> 中的特性也会逐步加入进来，不出意外的话，这个是继 <code>rollup</code> 之后，又一个与 <code>webpack</code> 争天下的项目。</p>
 ]]></content>
     
@@ -151,13 +251,13 @@
 <h3 id="匈牙利命名法"><a href="#匈牙利命名法" class="headerlink" title="匈牙利命名法"></a>匈牙利命名法</h3><p>该方法也叫做 <code>HN 命名法</code>，通常认为是微软的一个雇员 <code>Charles Simonyi</code> 发明的，通过微软的各种产品和文档资料传播开来。这位雇员是一个匈牙利（Hungarian）人，这也就是这个命名方法的名字由来。</p>
 <p>匈牙利命名法的基本原则是：变量名依次由属性、类型、描述组成。</p>
 <p>这里就通过举例来进行直接的说明：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> iUserName; <span class="comment">// i 为 int 类型缩写</span></div><div class="line"><span class="keyword">char</span> cItemList; <span class="comment">// c 为 char 类型缩写</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bInitLogin; <span class="comment">// b 为 布尔值 boolean 缩写</span></div></pre></td></tr></table></figure>
-<figure class="highlight vb"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">dim</span> frmInfoDetail; <span class="comment">' frm 为窗体 form 的缩写</span></div></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> iUserName; <span class="comment">// i 为 int 类型缩写</span></span><br><span class="line"><span class="keyword">char</span> cItemList; <span class="comment">// c 为 char 类型缩写</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> bInitLogin; <span class="comment">// b 为 布尔值 boolean 缩写</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">dim</span> frmInfoDetail; <span class="comment">' frm 为窗体 form 的缩写</span></span><br></pre></td></tr></table></figure>
 <h3 id="驼峰命名法"><a href="#驼峰命名法" class="headerlink" title="驼峰命名法"></a>驼峰命名法</h3><p>驼峰命名法 <code>camelCase</code>，来自于 Perl 语言普遍使用的大小写混合格式，后来被 Java 广泛采用，逐渐成为更加通用的命名方法。</p>
 <p>驼峰命名法的基本规则是变量名或者函数名是由一个或者多个单词连接在一起，构成唯一识别符，第一个单词以小写字母开始，后面的单词首字母大写，这样看起来跟驼峰一样此起彼伏，故此得名。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> myStudentCount;</div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fs.readFileSync</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> myStudentCount;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fs.readFileSync</span><br></pre></td></tr></table></figure>
 <h3 id="帕斯卡命名法"><a href="#帕斯卡命名法" class="headerlink" title="帕斯卡命名法"></a>帕斯卡命名法</h3><p>跟驼峰命名法类似，帕斯卡命名法 <code>PascalCase</code> 的不同之处在于第一个单词首字母为<strong>大写</strong>。在一些构造器命名和全局特殊变量命名的时候通常会采用这种命名方法。</p>
 <p>鉴于跟驼峰命名法的相似，也有人将帕斯卡命名法称之为 <code>大驼峰命名法</code>，而上面的就称之为 <code>小驼峰命名法</code>。</p>
 <h3 id="蛇形命名法"><a href="#蛇形命名法" class="headerlink" title="蛇形命名法"></a>蛇形命名法</h3><p>蛇形命名法 <code>snake_case</code>，变量名由多个部分组成，每个部分之间使用下划线 <code>_</code> 进行连接，所以也称之为 <code>下划线命名法</code>。</p>
@@ -202,8 +302,8 @@
     <published>2017-09-21T14:53:22.000Z</published>
     <updated>2017-09-22T01:09:05.100Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="htree-介绍"><a href="#htree-介绍" class="headerlink" title="htree 介绍"></a>htree 介绍</h3><p>首先，介绍一下 <a href="https://github.com/xovel/htree" target="_blank" rel="external"><code>htree</code></a> 这一款工具。<code>htree</code> 是一款用于在 <code>node</code> 环境下运行的工具，安装之后可以直接在 <code>node</code> 命令行窗口输入 <code>htree</code> 进行使用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">E:\Git\xovel\htree</div><div class="line">├─index.js</div><div class="line">├─LICENSE</div><div class="line">├─package.json</div><div class="line">├─README.md</div><div class="line">├─bin</div><div class="line">│  └─htree</div><div class="line">├─docs</div><div class="line">│  └─help</div><div class="line">├─node_modules</div><div class="line">└─util</div><div class="line">   ├─genText.js</div><div class="line">   ├─getByteLength.js</div><div class="line">   ├─getSize.js</div><div class="line">   ├─getTextList.js</div><div class="line">   └─walk.js</div></pre></td></tr></table></figure>
+    <content type="html"><![CDATA[<h3 id="htree-介绍"><a href="#htree-介绍" class="headerlink" title="htree 介绍"></a>htree 介绍</h3><p>首先，介绍一下 <a href="https://github.com/xovel/htree" target="_blank" rel="noopener"><code>htree</code></a> 这一款工具。<code>htree</code> 是一款用于在 <code>node</code> 环境下运行的工具，安装之后可以直接在 <code>node</code> 命令行窗口输入 <code>htree</code> 进行使用。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">E:\Git\xovel\htree</span><br><span class="line">├─index.js</span><br><span class="line">├─LICENSE</span><br><span class="line">├─package.json</span><br><span class="line">├─README.md</span><br><span class="line">├─bin</span><br><span class="line">│  └─htree</span><br><span class="line">├─docs</span><br><span class="line">│  └─help</span><br><span class="line">├─node_modules</span><br><span class="line">└─util</span><br><span class="line">   ├─genText.js</span><br><span class="line">   ├─getByteLength.js</span><br><span class="line">   ├─getSize.js</span><br><span class="line">   ├─getTextList.js</span><br><span class="line">   └─walk.js</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>以上代码为在 <code>htree</code> 开发文件夹的命令行工具下执行命令 <code>htree</code> 生成的结果。</p>
 </blockquote>
@@ -243,18 +343,18 @@
 <h3 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h3><p>这个项目里面，算是体验了一把模块化编程。大部分功能都抽离成了模块，<del>虽然也没多少个</del>。</p>
 <h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><p>在获取多级文件夹时候用到了以前上学时期学过的一个技术：递归。</p>
 <p>原则上，没有无限极的目录深度，所以递归调用肯定会有某个结束的场景。但是我还是设定了默认的最大目录深度为 <code>5</code>。</p>
-<h3 id="npm-相关"><a href="#npm-相关" class="headerlink" title="npm 相关"></a>npm 相关</h3><p>在进行本地开发的时候，我并没有创建 <code>node_modules</code> 文件夹，实际开发中，也没有依赖其他的项目，而在本地连接发布 <code>npm link</code> 的时候会自动进行创建。这也是为什么上面的目录中会有这个文件夹而上传到 <code>github</code> 上面的时候由于默认机制的原因忽略了。之前进行 <code>npm</code> 发布的遇到过一个<a href="https://github.com/xovel/xovel.github.io/issues/26" target="_blank" rel="external">不大不小的问题</a>，这一次的发布又遇到了，是的，我又设置了淘宝的国内镜像源。</p>
+<h3 id="npm-相关"><a href="#npm-相关" class="headerlink" title="npm 相关"></a>npm 相关</h3><p>在进行本地开发的时候，我并没有创建 <code>node_modules</code> 文件夹，实际开发中，也没有依赖其他的项目，而在本地连接发布 <code>npm link</code> 的时候会自动进行创建。这也是为什么上面的目录中会有这个文件夹而上传到 <code>github</code> 上面的时候由于默认机制的原因忽略了。之前进行 <code>npm</code> 发布的遇到过一个<a href="https://github.com/xovel/xovel.github.io/issues/26" target="_blank" rel="noopener">不大不小的问题</a>，这一次的发布又遇到了，是的，我又设置了淘宝的国内镜像源。</p>
 <h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><p>开发过程难免碰到一些乍看起来不可思议的问题，比如在获取 <code>windows</code> 磁盘根目录下的文件列表时，由于部分系统文件夹默认禁止访问，如 <code>System Volume Information</code>。即便是开启了管理员权限，也不能直接访问这些文件/文件夹。经过一番思考，目前采用了 <code>try/catch</code> 命令来避免程序报错，并退出当前操作。一些经过特意设置的文件夹如加密过的，也是不能直接读取其属性的，这就无法判断是否是文件夹了。</p>
 <p>当然，根据提供的 <code>ignore</code> 和 <code>exclude</code> 参数，可以跳过这些文件/文件夹的访问。</p>
 <p>另一个问题是命令行执行的时候，获取当前文件夹错误，原因是最开始的命令行文件 <code>bin/htree</code> 没有对执行的环境进行指定，亦即在最开始的部分并没有这样一句代码：<code>#!/usr/bin/env node</code>。这段代码的作用的是让程序在运行时候的运行环境变为 <code>node</code>，设置为这样之后在获取目录的时候调用 <code>process.cwd()</code> 等方法就表现正常了。</p>
 <p>在处理字符串长度的时候，获取字符串的实际占用长度的时候存在一个不大不小的问题，部分字符会占据两个字母的长度，比如中文。由于本人当前主要是在中文环境下面工作，故此在获取字符串长度的时候直接将中文汉字和标点转成了两个字母长度的，再返回其长度，这样来保证设置了 <code>size</code> 或者 <code>strComment</code> 参数的时候，右侧的标识符能够对齐显示。</p>
 <p>文件字节长度的计算，这里是采用下面这段代码来实现：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSize</span>(<span class="params">size</span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> suffix = [<span class="string">'B'</span>, <span class="string">'KB'</span>, <span class="string">'MB'</span>, <span class="string">'GB'</span>, <span class="string">'TB'</span>, <span class="string">'PB'</span>, <span class="string">'EB'</span>, <span class="string">'ZB'</span>, <span class="string">'YB'</span>, <span class="string">'DB'</span>, <span class="string">'NB'</span>];</div><div class="line">  <span class="keyword">let</span> i = <span class="number">0</span>;</div><div class="line"></div><div class="line">  <span class="keyword">while</span> (size &gt;= <span class="number">1000</span>) &#123;</div><div class="line">    size /= <span class="number">1024</span>;</div><div class="line">    i++;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">if</span> (i &gt;= suffix.length) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">'...'</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> (i === <span class="number">0</span> ? size : size.toFixed(<span class="number">2</span>)) + <span class="string">' '</span> + suffix[i];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSize</span>(<span class="params">size</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> suffix = [<span class="string">'B'</span>, <span class="string">'KB'</span>, <span class="string">'MB'</span>, <span class="string">'GB'</span>, <span class="string">'TB'</span>, <span class="string">'PB'</span>, <span class="string">'EB'</span>, <span class="string">'ZB'</span>, <span class="string">'YB'</span>, <span class="string">'DB'</span>, <span class="string">'NB'</span>];</span><br><span class="line">  <span class="keyword">let</span> i = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (size &gt;= <span class="number">1000</span>) &#123;</span><br><span class="line">    size /= <span class="number">1024</span>;</span><br><span class="line">    i++;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (i &gt;= suffix.length) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'...'</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (i === <span class="number">0</span> ? size : size.toFixed(<span class="number">2</span>)) + <span class="string">' '</span> + suffix[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>为此还特意去查阅了一下计算机中的相关单位，还是挺有意思的。</p>
-<h3 id="关于代码规范"><a href="#关于代码规范" class="headerlink" title="关于代码规范"></a>关于代码规范</h3><p><code>htree</code> 其实并没有遵循特定的编码规范，当前的编码风格是自己设定的一套风格，即 <code>zob</code>，同样的由于各种原因，该项目并没有进行公布。参考了部分谷歌的<a href="https://google.github.io/styleguide/jsguide.html" target="_blank" rel="external">JS 编码风格</a>以及一些当前项目常用的 <a href="https://eslint.org/" target="_blank" rel="external">ESLint</a> 规则。</p>
+<h3 id="关于代码规范"><a href="#关于代码规范" class="headerlink" title="关于代码规范"></a>关于代码规范</h3><p><code>htree</code> 其实并没有遵循特定的编码规范，当前的编码风格是自己设定的一套风格，即 <code>zob</code>，同样的由于各种原因，该项目并没有进行公布。参考了部分谷歌的<a href="https://google.github.io/styleguide/jsguide.html" target="_blank" rel="noopener">JS 编码风格</a>以及一些当前项目常用的 <a href="https://eslint.org/" target="_blank" rel="noopener">ESLint</a> 规则。</p>
 <h3 id="参考项目"><a href="#参考项目" class="headerlink" title="参考项目"></a>参考项目</h3><p>所谓前人栽树，后人乘凉，在完成 <code>htree</code> 这个项目的过程中，遍寻了大量的资料。</p>
-<p>命令行代码主要是仿照 <a href="https://github.com/chjj/marked" target="_blank" rel="external">marked</a> 项目下的 <code>bin/marked</code> 来编写的。该项目也是已经长久搁置的 <code>zmd</code> 项目的核心参考资源。原本在实现命令行参数的读取的时候要采用某些依赖，比如 <a href="https://github.com/yargs/yargs" target="_blank" rel="external">yargs</a> 和 <a href="https://github.com/tj/commander.js" target="_blank" rel="external">commander.js</a>，但后来心想，干脆就自己尝试编写纯粹的命令行读取方法吧，就写成了现在这个样子的了。</p>
-<p><code>nodejs.org</code> 的官网上的 <a href="https://nodejs.org/api/" target="_blank" rel="external">API 文档</a>也提供了不少解决方案，主要是文件读取与写入方面的。</p>
+<p>命令行代码主要是仿照 <a href="https://github.com/chjj/marked" target="_blank" rel="noopener">marked</a> 项目下的 <code>bin/marked</code> 来编写的。该项目也是已经长久搁置的 <code>zmd</code> 项目的核心参考资源。原本在实现命令行参数的读取的时候要采用某些依赖，比如 <a href="https://github.com/yargs/yargs" target="_blank" rel="noopener">yargs</a> 和 <a href="https://github.com/tj/commander.js" target="_blank" rel="noopener">commander.js</a>，但后来心想，干脆就自己尝试编写纯粹的命令行读取方法吧，就写成了现在这个样子的了。</p>
+<p><code>nodejs.org</code> 的官网上的 <a href="https://nodejs.org/api/" target="_blank" rel="noopener">API 文档</a>也提供了不少解决方案，主要是文件读取与写入方面的。</p>
 <hr>
 <p><code>htree</code> 项目的名字来源，看起来是 <code>h</code> + <code>tree</code> 的组合，粗看之下不会有人知道 <code>h</code> 代表了什么，但是我想要说的是其实这个是一个名字的谐音。嗯，是的，文本到底就结束了，希望后续能做制作一些方便使用的工具，这样也比较符合清风工具的总纲：简易、实用。</p>
 ]]></content>
@@ -288,7 +388,7 @@
     <updated>2017-09-11T17:35:47.587Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>本文根据 <code>URLSearchParams</code> 的<a href="https://url.spec.whatwg.org/#urlsearchparams" target="_blank" rel="external">官方规范文档</a>和 <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams" target="_blank" rel="external">MDN 文档</a>整理而成。</p>
+<p>本文根据 <code>URLSearchParams</code> 的<a href="https://url.spec.whatwg.org/#urlsearchparams" target="_blank" rel="noopener">官方规范文档</a>和 <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams" target="_blank" rel="noopener">MDN 文档</a>整理而成。</p>
 </blockquote>
 <p>URLSearchParams 是一个 WEB 接口，它定义了一些方法来处理 URL 的查询字符串。</p>
 <p>构造函数 <code>URLSearchParams()</code> 返回一个 URLSearchParams 对象，这个对象没有特别的属性，也不继承任何方法。</p>
@@ -301,7 +401,7 @@
 <li>iterator 是迭代协议 Iterator 对象的实例。</li><li><code>entries</code> 方法通常在 <code>Web Workers</code> 中使用。</li><li><code>USVString</code> 为 unicode 标量值（unicode scalar values）。</li></ul>
 </blockquote>
 <p>代码示例：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Create a test URLSearchParams object</span></div><div class="line"><span class="keyword">var</span> searchParams = <span class="keyword">new</span> URLSearchParams(<span class="string">"key1=value1&amp;key2=value2"</span>);</div><div class="line"></div><div class="line"><span class="comment">// Display the key/value pairs</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> pair <span class="keyword">of</span> searchParams.entries()) &#123;</div><div class="line">   <span class="built_in">console</span>.log(pair[<span class="number">0</span>]+ <span class="string">', '</span>+ pair[<span class="number">1</span>]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Create a test URLSearchParams object</span></span><br><span class="line"><span class="keyword">var</span> searchParams = <span class="keyword">new</span> URLSearchParams(<span class="string">"key1=value1&amp;key2=value2"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Display the key/value pairs</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> pair <span class="keyword">of</span> searchParams.entries()) &#123;</span><br><span class="line">   <span class="built_in">console</span>.log(pair[<span class="number">0</span>]+ <span class="string">', '</span>+ pair[<span class="number">1</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="get"><a href="#get" class="headerlink" title="get"></a><code>get</code></h3><p>获取指定搜索参数的第一个值。</p>
 <h3 id="getAll"><a href="#getAll" class="headerlink" title="getAll"></a><code>getAll</code></h3><p>获取指定搜索参数的所有值。返回一个数组。</p>
 <h3 id="has"><a href="#has" class="headerlink" title="has"></a><code>has</code></h3><p>判断是否存在指定的搜索参数。</p>
@@ -311,13 +411,13 @@
 <h3 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString"></a><code>toString</code></h3><p>返回一个字符串，由所有搜索参数组成的字符串，可以直接用在 URL 上。</p>
 <h3 id="values"><a href="#values" class="headerlink" title="values"></a><code>values</code></h3><p>返回 iterator 对象，包含了键/值对的所有值。其他说明与上面的 <code>entries</code> 和 <code>keys</code> 一样。</p>
 <h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a><code>forEach</code></h3><p>扩展方法，提供接近于数组 forEach 的遍历方式，<del>但它并不是一个数组，也不是一个类数组</del>。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">searchParams.forEach(<span class="function">(<span class="params">...args</span>)=&gt;</span><span class="built_in">console</span>.log(args))</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">searchParams.forEach(<span class="function">(<span class="params">...args</span>)=&gt;</span><span class="built_in">console</span>.log(args))</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>上面的代码中，<code>args</code> 依次为键名、值、对应的 searchParam。</p>
 </blockquote>
 <p><em>参考资料</em>：</p>
 <ul>
-<li><a href="https://url.spec.whatwg.org/#urlsearchparams" target="_blank" rel="external">URL Standard</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams" target="_blank" rel="external">URLSearchParams - Web APIs | MDN</a></li><li><a href="https://nodejs.org/api/url.html#url_class_urlsearchparams" target="_blank" rel="external">URL | Node.js v8.4.0 Documentation</a></li><li><a href="http://caniuse.com/#feat=urlsearchparams" target="_blank" rel="external">Can I use - Feature: URLSearchParams</a></li></ul>
+<li><a href="https://url.spec.whatwg.org/#urlsearchparams" target="_blank" rel="noopener">URL Standard</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams" target="_blank" rel="noopener">URLSearchParams - Web APIs | MDN</a></li><li><a href="https://nodejs.org/api/url.html#url_class_urlsearchparams" target="_blank" rel="noopener">URL | Node.js v8.4.0 Documentation</a></li><li><a href="http://caniuse.com/#feat=urlsearchparams" target="_blank" rel="noopener">Can I use - Feature: URLSearchParams</a></li></ul>
 ]]></content>
     
     <summary type="html">
@@ -427,45 +527,45 @@
     <updated>2017-07-21T15:00:06.603Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>本文主要参考自 <code>2ality</code> 的文章：<a href="http://2ality.com/2016/02/ecmascript-2017.html" target="_blank" rel="external">ECMAScript 2017 (ES8): the final feature set</a>。部分章节会有修改，加入自己的一些理解与观点。<em>阅读本文需要有一定的 ES 基础</em>。</p>
-<p>官方公告：<a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm" target="_blank" rel="external">Standard ECMA-262</a>。</p>
+<p>本文主要参考自 <code>2ality</code> 的文章：<a href="http://2ality.com/2016/02/ecmascript-2017.html" target="_blank" rel="noopener">ECMAScript 2017 (ES8): the final feature set</a>。部分章节会有修改，加入自己的一些理解与观点。<em>阅读本文需要有一定的 ES 基础</em>。</p>
+<p>官方公告：<a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm" target="_blank" rel="noopener">Standard ECMA-262</a>。</p>
 </blockquote>
 <h2 id="主要特性"><a href="#主要特性" class="headerlink" title="主要特性"></a>主要特性</h2><h3 id="异步函数"><a href="#异步函数" class="headerlink" title="异步函数"></a>异步函数</h3><p>ES6 发布的时候，引入了 <code>Promise</code> 来处理异步操作，一个常见的 Async 函数如下：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fetchJson</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> fetch(url)</div><div class="line">  .then(<span class="function"><span class="params">request</span> =&gt;</span> request.text())</div><div class="line">  .then(<span class="function"><span class="params">text</span> =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">JSON</span>.parse(text);</div><div class="line">  &#125;)</div><div class="line">  .catch(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`ERROR: <span class="subst">$&#123;error.stack&#125;</span>`</span>);</div><div class="line">  &#125;);</div><div class="line">&#125;</div><div class="line">fetchJson(<span class="string">'http://example.com/some_file.json'</span>)</div><div class="line">.then(<span class="function"><span class="params">obj</span> =&gt;</span> <span class="built_in">console</span>.log(obj));</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fetchJson</span>(<span class="params">url</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> fetch(url)</span><br><span class="line">  .then(<span class="function"><span class="params">request</span> =&gt;</span> request.text())</span><br><span class="line">  .then(<span class="function"><span class="params">text</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">JSON</span>.parse(text);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`ERROR: <span class="subst">$&#123;error.stack&#125;</span>`</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line">fetchJson(<span class="string">'http://example.com/some_file.json'</span>)</span><br><span class="line">.then(<span class="function"><span class="params">obj</span> =&gt;</span> <span class="built_in">console</span>.log(obj));</span><br></pre></td></tr></table></figure>
 <p>现在，使用 ES2017 中新增的关键字 <code>async</code> 和 <code>await</code>，我们可以实现以看起来像是同步的代码来处理异步的操作。如上面的代码可以写成：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">  <span class="keyword">try</span> &#123;</div><div class="line">  <span class="keyword">let</span> request = <span class="keyword">await</span> fetch(url);</div><div class="line">  <span class="keyword">let</span> text = <span class="keyword">await</span> request.text();</div><div class="line">  <span class="keyword">return</span> <span class="built_in">JSON</span>.parse(text);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">catch</span> (err) &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`Error: <span class="subst">$&#123;err.stack&#125;</span>`</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params">url</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> request = <span class="keyword">await</span> fetch(url);</span><br><span class="line">  <span class="keyword">let</span> text = <span class="keyword">await</span> request.text();</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">JSON</span>.parse(text);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`Error: <span class="subst">$&#123;err.stack&#125;</span>`</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>异步函数还有一些变体，罗列如下：</p>
 <ul>
 <li>异步函数声明：<code>async function foo() {}</code></li><li>异步函数表达式：<code>const foo = async function () {};</code></li><li>异步方法定义：<code>let obj = {async foo () {}};</code></li><li>异步箭头函数：<code>const foo = async () =&gt; {};</code></li></ul>
-<p>更多资料可参阅：<a href="https://github.com/tc39/ecmascript-asyncawait" target="_blank" rel="external">tc39/ecmascript-asyncawait: Async/await for ECMAScript</a>，<a href="http://exploringjs.com/es6/ch_generators.html#sec_co-library" target="_blank" rel="external">Simplifying asynchronous computations via generators (section in “Exploring ES6”)</a></p>
+<p>更多资料可参阅：<a href="https://github.com/tc39/ecmascript-asyncawait" target="_blank" rel="noopener">tc39/ecmascript-asyncawait: Async/await for ECMAScript</a>，<a href="http://exploringjs.com/es6/ch_generators.html#sec_co-library" target="_blank" rel="noopener">Simplifying asynchronous computations via generators (section in “Exploring ES6”)</a></p>
 <h3 id="共享内存和原子"><a href="#共享内存和原子" class="headerlink" title="共享内存和原子"></a>共享内存和原子</h3><p>共享内存 <code>shared memory</code> 主要是处理并行事件对于资源调用的一种机制。</p>
 <p>该功能引入一个新的低级别 <code>Atomics</code> 命名空间对象和一个 <code>Shared Array Buffer</code> 构造函数来作为高级别并发抽象的原始构建块。这样可以使得开发人员可以使用多个 <code>service worker</code> 和核心线程之间的 <code>Shared Array Buffer</code> 对象的数据。通过这种方式，可以更轻松的在 <code>worker</code> 之间进行数据共享，改善它们之间的协调性。</p>
 <ul>
-<li><a href="https://github.com/tc39/ecmascript_sharedmem" target="_blank" rel="external">tc39/ecmascript_sharedmem: Shared memory and atomics for ECMAscript</a></li><li><a href="http://2ality.com/2017/01/shared-array-buffer.html" target="_blank" rel="external">ES proposal: Shared memory and atomics</a></li></ul>
+<li><a href="https://github.com/tc39/ecmascript_sharedmem" target="_blank" rel="noopener">tc39/ecmascript_sharedmem: Shared memory and atomics for ECMAscript</a></li><li><a href="http://2ality.com/2017/01/shared-array-buffer.html" target="_blank" rel="noopener">ES proposal: Shared memory and atomics</a></li></ul>
 <h2 id="次要更新"><a href="#次要更新" class="headerlink" title="次要更新"></a>次要更新</h2><h3 id="Object-values-Object-entries"><a href="#Object-values-Object-entries" class="headerlink" title="Object.values/Object.entries"></a>Object.values/Object.entries</h3><p>对象为键值对的数据结构时，每一个键值对都是一个 <code>entry</code>。<code>Object.entries</code> 提供将对象转换为其可枚举的每一个对象的集合的方法。而 <code>Object.values</code> 提取出对象中可枚举的字符串键值属性的所有值。</p>
 <p><code>Object.values</code> 跟 <code>Object.keys</code> 功能类似。</p>
 <p>举个例子，有一个这样的对象：<code>foo = {a: 1, b: 2, c: 3};</code>，上面提到的三个方法的结果分别为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&gt; foo = &#123;a:1,b:2,c:3&#125;</div><div class="line">&lt; Object &#123;a: 1, b: 2, c: 3&#125;</div><div class="line">&gt; Object.values(foo)</div><div class="line">&lt; (3) [1, 2, 3]</div><div class="line">&gt; Object.keys(foo)</div><div class="line">&lt; (3) [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]</div><div class="line">&gt; Object.entries(foo)</div><div class="line">&lt; (3) [Array(2), Array(2), Array(2)]0: Array(2)1: Array(2)2: Array(2)length: 3__proto__: Array(0)</div><div class="line"></div><div class="line">------</div><div class="line">&gt; Object.entries(&#123; one: 1, two: 2 &#125;)</div><div class="line">[ [ &apos;one&apos;, 1 ], [ &apos;two&apos;, 2 ] ]</div><div class="line"></div><div class="line">&gt; Object.entries(&#123; [Symbol()]: 123, foo: &apos;abc&apos; &#125;);</div><div class="line">[ [ &apos;foo&apos;, &apos;abc&apos; ] ]</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&gt; foo = &#123;a:1,b:2,c:3&#125;</span><br><span class="line">&lt; Object &#123;a: 1, b: 2, c: 3&#125;</span><br><span class="line">&gt; Object.values(foo)</span><br><span class="line">&lt; (3) [1, 2, 3]</span><br><span class="line">&gt; Object.keys(foo)</span><br><span class="line">&lt; (3) [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]</span><br><span class="line">&gt; Object.entries(foo)</span><br><span class="line">&lt; (3) [Array(2), Array(2), Array(2)]0: Array(2)1: Array(2)2: Array(2)length: 3__proto__: Array(0)</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line">&gt; Object.entries(&#123; one: 1, two: 2 &#125;)</span><br><span class="line">[ [ &apos;one&apos;, 1 ], [ &apos;two&apos;, 2 ] ]</span><br><span class="line"></span><br><span class="line">&gt; Object.entries(&#123; [Symbol()]: 123, foo: &apos;abc&apos; &#125;);</span><br><span class="line">[ [ &apos;foo&apos;, &apos;abc&apos; ] ]</span><br></pre></td></tr></table></figure>
 <ul>
-<li><a href="http://2ality.com/2015/11/stage3-object-entries.html" target="_blank" rel="external">ES proposal: Object.entries() and Object.values()</a></li><li><a href="https://github.com/tc39/proposal-object-values-entries" target="_blank" rel="external">Object.values/Object.entries</a></li></ul>
+<li><a href="http://2ality.com/2015/11/stage3-object-entries.html" target="_blank" rel="noopener">ES proposal: Object.entries() and Object.values()</a></li><li><a href="https://github.com/tc39/proposal-object-values-entries" target="_blank" rel="noopener">Object.values/Object.entries</a></li></ul>
 <h3 id="字符串填充"><a href="#字符串填充" class="headerlink" title="字符串填充"></a>字符串填充</h3><p>针对 <code>String</code> 对象，引入了 <code>String Padding</code> 的规范，为字符串的处理添加了两个字符串填充的方法：<code>padStart</code> 和 <code>padEnd</code>。</p>
 <h4 id="String-prototype-padStart"><a href="#String-prototype-padStart" class="headerlink" title="String.prototype.padStart"></a>String.prototype.padStart</h4><p>字符串的头部填充。接收两个参数 <code>String.prototype.padStart(maxLength, fillString=&#39; &#39;)</code>，第一个参数为填充的最大长度，第二个参数为指定填充的字符串。</p>
 <p>假设我们有一个这样的操作：<code>s.padStart(n, f)</code>，s 为待填充的字符串，n 为填充后的长度，f 为填充的字符串。如果 f 的长度不够 n，则会重复使用，直到填充的长度达到了 n。如果 s 本身的长度已经超过 n 则不会进行填充。</p>
 <h4 id="String-prototype-padEnd"><a href="#String-prototype-padEnd" class="headerlink" title="String.prototype.padEnd"></a>String.prototype.padEnd</h4><p>跟上面的方法类似，填充的位置在后面，其他处理方式一致。</p>
 <ul>
-<li><a href="https://github.com/tc39/proposal-string-pad-start-end" target="_blank" rel="external">ECMAScript spec proposal for String.prototype.{padStart,padEnd}</a></li></ul>
+<li><a href="https://github.com/tc39/proposal-string-pad-start-end" target="_blank" rel="noopener">ECMAScript spec proposal for String.prototype.{padStart,padEnd}</a></li></ul>
 <h3 id="Object-getOwnPropertyDescriptors"><a href="#Object-getOwnPropertyDescriptors" class="headerlink" title="Object.getOwnPropertyDescriptors"></a>Object.getOwnPropertyDescriptors</h3><p>该方法是 <code>Object.getOwnPropertyDescriptor</code> 的复数形式：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getOwnPropertyDescriptors</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">  <span class="keyword">const</span> result = &#123;&#125;;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> key <span class="keyword">of</span> <span class="built_in">Reflect</span>.ownKeys(obj)) &#123;</div><div class="line">    result[key] = <span class="built_in">Object</span>.getOwnPropertyDescriptor(obj, key);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> result;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getOwnPropertyDescriptors</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> result = &#123;&#125;;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> key <span class="keyword">of</span> <span class="built_in">Reflect</span>.ownKeys(obj)) &#123;</span><br><span class="line">    result[key] = <span class="built_in">Object</span>.getOwnPropertyDescriptor(obj, key);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>旨在简化对象复制的过程，它允许装饰器能够轻松的从另一个类或对象中提取出所有描述符，并将它们分配给一个新的对象。</p>
 <p>由于 <code>Object.assign</code> 方法不够完美，这个是用一种吞噬行为的方式复制对象，也就是依然会出现键值覆盖的情形。</p>
 <p>配合 <code>Object.create</code> 可以实现一个对象的深拷贝：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> clone = <span class="function"><span class="params">obj</span> =&gt;</span> <span class="built_in">Object</span>.create(<span class="built_in">Object</span>.getPrototypeOf(obj), <span class="built_in">Object</span>.getOwnPropertyDescriptors(obj));</div></pre></td></tr></table></figure>
-<p>更多 <code>Object.getOwnPropertyDescriptor</code> 的使用场景可以参阅：<a href="http://2ality.com/2016/02/object-getownpropertydescriptors.html" target="_blank" rel="external">ES proposal: Object.getOwnPropertyDescriptors()</a>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> clone = <span class="function"><span class="params">obj</span> =&gt;</span> <span class="built_in">Object</span>.create(<span class="built_in">Object</span>.getPrototypeOf(obj), <span class="built_in">Object</span>.getOwnPropertyDescriptors(obj));</span><br></pre></td></tr></table></figure>
+<p>更多 <code>Object.getOwnPropertyDescriptor</code> 的使用场景可以参阅：<a href="http://2ality.com/2016/02/object-getownpropertydescriptors.html" target="_blank" rel="noopener">ES proposal: Object.getOwnPropertyDescriptors()</a>。</p>
 <h3 id="函数的拖尾逗号"><a href="#函数的拖尾逗号" class="headerlink" title="函数的拖尾逗号"></a>函数的拖尾逗号</h3><p>以前的函数在参数定义时或者调用时，不允许出现拖尾逗号，如下面的代码：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span></span></div><div class="line">  bar,</div><div class="line">  baz,</div><div class="line">) &#123; ... &#125;</div><div class="line">foo(</div><div class="line">  param1,</div><div class="line">  param2,</div><div class="line">);</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span></span></span><br><span class="line"><span class="function"><span class="params">  bar,</span></span></span><br><span class="line"><span class="function"><span class="params">  baz,</span></span></span><br><span class="line"><span class="function"><span class="params"></span>) </span>&#123; ... &#125;</span><br><span class="line">foo(</span><br><span class="line">  param1,</span><br><span class="line">  param2,</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 <p>在之前的版本中是错误的，但是新规范中，这可以的，拖尾逗号将被忽略，如同<strong>数组和对象字面量</strong>中的拖尾逗号。</p>
 <h2 id="拓展阅读"><a href="#拓展阅读" class="headerlink" title="拓展阅读"></a>拓展阅读</h2><ul>
-<li><a href="http://2ality.com/2016/01/ecmascript-2016.html" target="_blank" rel="external">The final feature set of ECMAScript 2016 (ES7)</a></li><li><a href="https://github.com/tc39/proposals/blob/master/README.md#active-proposals" target="_blank" rel="external">tc39/proposals - Active proposals</a></li></ul>
+<li><a href="http://2ality.com/2016/01/ecmascript-2016.html" target="_blank" rel="noopener">The final feature set of ECMAScript 2016 (ES7)</a></li><li><a href="https://github.com/tc39/proposals/blob/master/README.md#active-proposals" target="_blank" rel="noopener">tc39/proposals - Active proposals</a></li></ul>
 ]]></content>
     
     <summary type="html">
@@ -535,12 +635,12 @@
     <published>2017-05-17T14:20:40.000Z</published>
     <updated>2017-05-19T16:30:35.808Z</updated>
     
-    <content type="html"><![CDATA[<p>本人前段时间对<code>angular</code>进行了一定程度的了解，<code>angular</code>系列的博文就从本篇开始吧。本文就对其提供的函数组件做一个入门级的介绍。大部分文档直接翻译自官方文档：<a href="https://docs.angularjs.org/api/ng/function" target="_blank" rel="external">Function components in ng</a>。</p>
+    <content type="html"><![CDATA[<p>本人前段时间对<code>angular</code>进行了一定程度的了解，<code>angular</code>系列的博文就从本篇开始吧。本文就对其提供的函数组件做一个入门级的介绍。大部分文档直接翻译自官方文档：<a href="https://docs.angularjs.org/api/ng/function" target="_blank" rel="noopener">Function components in ng</a>。</p>
 <blockquote>
 <p>阅读本文需要一定的<code>jQuery</code>基础。</p>
 </blockquote>
 <p>在函数组件中，<code>angular</code>提供了许多方便使用的功能，下面我将按照官方文档的顺序一一做介绍。</p>
-<h3 id="angular-forEach"><a href="#angular-forEach" class="headerlink" title="angular.forEach"></a>angular.forEach</h3><p>遍历数组或对象。功能类似<a href="http://api.jquery.com/each/" target="_blank" rel="external"><code>jQuery.each</code></a>。不同的是<code>angular.forEach</code>支持传入一个上下文作为第三个参数：<code>angular.forEach(obj, iterator, [context]);</code>。</p>
+<h3 id="angular-forEach"><a href="#angular-forEach" class="headerlink" title="angular.forEach"></a>angular.forEach</h3><p>遍历数组或对象。功能类似<a href="http://api.jquery.com/each/" target="_blank" rel="noopener"><code>jQuery.each</code></a>。不同的是<code>angular.forEach</code>支持传入一个上下文作为第三个参数：<code>angular.forEach(obj, iterator, [context]);</code>。</p>
 <h3 id="angular-extend"><a href="#angular-extend" class="headerlink" title="angular.extend"></a>angular.extend</h3><p>扩展对象。功能类似<code>jQuery.extend</code>，不过这里是个浅复制。</p>
 <h3 id="angular-merge"><a href="#angular-merge" class="headerlink" title="angular.merge"></a>angular.merge</h3><p>合并对象，深度合并，可以视为深复制。</p>
 <h3 id="angular-noop"><a href="#angular-noop" class="headerlink" title="angular.noop"></a>angular.noop</h3><p>空操作，即：<code>function () {}</code>。</p>
@@ -568,7 +668,7 @@
 <h3 id="angular-fromJson"><a href="#angular-fromJson" class="headerlink" title="angular.fromJson"></a>angular.fromJson</h3><p>将一个<code>JSON</code>字符串还原，即反序列化。</p>
 <h3 id="angular-bootstrap"><a href="#angular-bootstrap" class="headerlink" title="angular.bootstrap"></a>angular.bootstrap</h3><p>手动启动<code>AngularJS</code>的应用程序。</p>
 <h3 id="angular-reloadWithDebugInfo"><a href="#angular-reloadWithDebugInfo" class="headerlink" title="angular.reloadWithDebugInfo"></a>angular.reloadWithDebugInfo</h3><p>以调试模式重载当前的应用程序。</p>
-<h3 id="angular-injector"><a href="#angular-injector" class="headerlink" title="angular.injector"></a>angular.injector</h3><p>注入器的声明与使用。详情可参阅：<a href="https://docs.angularjs.org/guide/di" target="_blank" rel="external">dependency injection</a></p>
+<h3 id="angular-injector"><a href="#angular-injector" class="headerlink" title="angular.injector"></a>angular.injector</h3><p>注入器的声明与使用。详情可参阅：<a href="https://docs.angularjs.org/guide/di" target="_blank" rel="noopener">dependency injection</a></p>
 <h3 id="angular-element"><a href="#angular-element" class="headerlink" title="angular.element"></a>angular.element</h3><p>以<code>jQuery</code>风格包裹<code>DOM</code>元素或者<code>HTML String</code>。如果未引入<code>jQuery</code>，则采用<code>angular</code>自带的<code>jqLite</code>简化版。<code>jqLite</code>提供常见的<code>jQuery API</code>，可以满足大部分的情况。</p>
 <h3 id="angular-module"><a href="#angular-module" class="headerlink" title="angular.module"></a>angular.module</h3><p><code>angular</code>的核心，用于声明或者获取模块。</p>
 <h3 id="angular-errorHandlingConfig"><a href="#angular-errorHandlingConfig" class="headerlink" title="angular.errorHandlingConfig"></a>angular.errorHandlingConfig</h3><p>错误处理的配置。</p>
@@ -661,7 +761,7 @@
 <p>对于缩略出来的词没法读的时候，直接按字母念就好了。</p>
 </blockquote>
 <h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
-<li><a href="https://en.wikipedia.org/wiki/Abbreviation" target="_blank" rel="external">Abbreviation - Wikipedia</a></li><li><a href="https://en.wikipedia.org/wiki/Acronym" target="_blank" rel="external">Acronym - Wikipedia</a></li><li><a href="https://www.thoughtco.com/what-is-abbreviation-1689046" target="_blank" rel="external">What Is an Abbreviation?</a></li></ul>
+<li><a href="https://en.wikipedia.org/wiki/Abbreviation" target="_blank" rel="noopener">Abbreviation - Wikipedia</a></li><li><a href="https://en.wikipedia.org/wiki/Acronym" target="_blank" rel="noopener">Acronym - Wikipedia</a></li><li><a href="https://www.thoughtco.com/what-is-abbreviation-1689046" target="_blank" rel="noopener">What Is an Abbreviation?</a></li></ul>
 ]]></content>
     
     <summary type="html">
@@ -691,7 +791,7 @@
 </blockquote>
 <p><em>以下为正文</em></p>
 <hr>
-<p>最近决定将IDE迁移到<a href="http://brackets.io/" target="_blank" rel="external">brackets</a>，毕竟是adobe开发的用来替代古老臃肿的Dreamweaver的，口号就是<code>Code The Web</code>，为Web编程提供一套完善的IDE。</p>
+<p>最近决定将IDE迁移到<a href="http://brackets.io/" target="_blank" rel="noopener">brackets</a>，毕竟是adobe开发的用来替代古老臃肿的Dreamweaver的，口号就是<code>Code The Web</code>，为Web编程提供一套完善的IDE。</p>
 <hr>
 <p>为什么是brackets？其实是可以用sublime的，但是sublime只是一个编辑器，没有IDE的一些特性，即便是有了插件的支持，也很难与大型IDE媲美。</p>
 <p>回想我用过的IDE，最开始的FrontPage，到VS，再到后来的初次全面接触前端开发使用的Dreamweaver。而后离开福建回到湖南，开始抛弃Dreamweaver，换了一种非常极端的方式：放弃了IDE，直接采用常规编辑器Notepad++、UltraEdit来进行代码的编写。那滋味其实也还好，毕竟，那个时候最IDE的要求并不高，所使用的后台语言是asp，都用不着开带着各种兼容性问题的Dreamweaver。</p>
@@ -713,7 +813,7 @@
 <p>几经周折，我终于看到了调试里面的开发工具，于是调出F12，看看到底是什么错误导致的。</p>
 <p>果不其然，在控制台里面有一行错误提示：大意是缺少一个文件，这个文件就是<code>\brackets-emmet\node_modules\emmet\lib\caniuse.json</code>，我仔细去看了一遍，确实是没有这个文件。</p>
 <p>这就比较尴尬了，会不是我这样的安装方式不对？我决定到一个全新的地方使用命令行的方式从npm上安装全新的emmet，使用<code>npm install emmet</code>命令之后，我竟然又执行了<code>npm install</code>，把emmet的开发依赖给安装了，甚至还跑了<code>gulp</code>任务，结果生成了一个dist文件夹，我感觉我这么做有点走弯路了，<del>是的，确实是走弯路，弯的很厉害</del>。不过看到dist下的<code>emmet.js</code>大小有<code>1868kb</code>的时候心里还是很是震惊的。</p>
-<p>依然没有看到caniuse.json，我就在想，这个名字跟上面提到的<code>caniuse-db</code>，应该是存在着某种关联的吧。果不其然，上emmet的repo上一搜，发现一个<a href="https://github.com/emmetio/emmet/pull/385" target="_blank" rel="external">提交记录</a>被接受了，就是提议将<code>caniuse.json</code>换成<code>caniuse-db</code>的。好家伙，这就很尴尬了。</p>
+<p>依然没有看到caniuse.json，我就在想，这个名字跟上面提到的<code>caniuse-db</code>，应该是存在着某种关联的吧。果不其然，上emmet的repo上一搜，发现一个<a href="https://github.com/emmetio/emmet/pull/385" target="_blank" rel="noopener">提交记录</a>被接受了，就是提议将<code>caniuse.json</code>换成<code>caniuse-db</code>的。好家伙，这就很尴尬了。</p>
 <p>既然现在的版本已经被替换掉了，那么问题就相对来说简单了，我应该只需要找到这个缺失的文件并将它放到它应该出现的位置上就可以了。于是我通过repo的tag记录依次寻找，发现从1.3.2之后，这个caniuse.json就不见了踪影。也是说从1.4.0版本开始，丢弃了caniuse.json，改为使用caniuse-db进行可用性判定。</p>
 <p>于是我复制了一份json到本地目录中，然后重启brackets，甚好，<code>Emmet</code>菜单出来了。而后打开一个html文件，飞速敲下<code>div&gt;ul&gt;li</code>，然后按下<code>tab</code>，一个良好缩进展现的HTML结构跃然纸上。</p>
 <p>问题解决了，但我觉得应该不止我一个人被这个问题所困扰，后来我仔细看了一下<code>brackets-emmet</code>的插件的package文件，发现里面只有一个依赖：<code>&quot;emmet&quot;: &quot;^1.3.0&quot;</code>。好家伙，竟然是<code>&quot;^1.3.0&quot;</code>！</p>
@@ -754,7 +854,7 @@
     <updated>2017-03-29T14:53:00.492Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>本文转自：<a href="http://inimino.org/~inimino/blog/javascript_semicolons" target="_blank" rel="external">~inimino/blog</a></p>
+<p>本文转自：<a href="http://inimino.org/~inimino/blog/javascript_semicolons" target="_blank" rel="noopener">~inimino/blog</a></p>
 </blockquote>
 <p><strong>JavaScript Semicolon Insertion</strong></p>
 <p><strong>Everything you need to know</strong></p>
@@ -778,8 +878,8 @@
 <p>事实上，至少在语法构成方面，有时候空语句是很有用的。举个例子，编写一个无限循环，可以这么写：<code>while(1);</code>，分号将被解析成一个空语句，这样可以使<code>while</code>语句的语法变得有效。如果省略分号，这个<code>while</code>语句就不完整了，因为后续的循环体是必须的。</p>
 <p>Finally, semicolons appear in for loops of the form <code>for ( Expression ; Expression ; Expression ) Statement</code>, and of course they may appear as themselves inside strings and regular expression literals.</p>
 <p><del>太长，任性不翻译了</del></p>
-<h3 id="Where-Semicolons-May-be-Omitted"><a href="#Where-Semicolons-May-be-Omitted" class="headerlink" title="Where Semicolons May be Omitted"></a>Where Semicolons May be Omitted</h3><p>In the formal grammar used in the ECMAScript specification, the semicolons are included, as described above. However, the specification prose then gives rules which describe how the actual parsing differs from the formal grammar. These are described as though semicolons are inserted into the token stream while parsing, though this is just a specification convenience; in practice, parsers do not need to generate fake semicolon tokens, but can instead regard semicolons as optional in specific places in the grammar (for an example see <a href="http://boshi.inimino.org/3box/PanPG/grammars/ECMAScript_5.peg" target="_blank" rel="external">this parser expression grammar for ECMAScript</a>, particularly the Statement, EOS, EOSnoLB, and SnoLB rules). Where the specification says that a semicolon is inserted, this simply means that the statement currently being parsed is ended.</p>
-<p>These semicolon insertion rules are specified in section 7.9 of <a href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf" target="_blank" rel="external">ECMA-262 [pdf]</a>.</p>
+<h3 id="Where-Semicolons-May-be-Omitted"><a href="#Where-Semicolons-May-be-Omitted" class="headerlink" title="Where Semicolons May be Omitted"></a>Where Semicolons May be Omitted</h3><p>In the formal grammar used in the ECMAScript specification, the semicolons are included, as described above. However, the specification prose then gives rules which describe how the actual parsing differs from the formal grammar. These are described as though semicolons are inserted into the token stream while parsing, though this is just a specification convenience; in practice, parsers do not need to generate fake semicolon tokens, but can instead regard semicolons as optional in specific places in the grammar (for an example see <a href="http://boshi.inimino.org/3box/PanPG/grammars/ECMAScript_5.peg" target="_blank" rel="noopener">this parser expression grammar for ECMAScript</a>, particularly the Statement, EOS, EOSnoLB, and SnoLB rules). Where the specification says that a semicolon is inserted, this simply means that the statement currently being parsed is ended.</p>
+<p>These semicolon insertion rules are specified in section 7.9 of <a href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf" target="_blank" rel="noopener">ECMA-262 [pdf]</a>.</p>
 <p>The section gives three basic rules, followed by two exceptions.</p>
 <p>The rules are:</p>
 <ol>
@@ -1016,7 +1116,7 @@ print(-y); // useful
 <hr>
 <p>嗯，关于这两场的婚礼记录，就写这么多吧。</p>
 <p>最近要开启提升团队能力的计划，具体的细节我需要思索一下，然后制定一个方案，届时也会在博客中公开发布。我虽然现在不是一个管理者，但我觉得团队中每个人都应该去思考这样的问题：如何去提升整个团队的作战水平。</p>
-<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;"><a href="https://github.com/xovel/diary/blob/master/2017/01/2017-01-31-wedding.md" target="_blank" rel="external">2017-01-31-wedding.md</a></span><a href="#fnref:1" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;"><a href="https://github.com/xovel/diary/blob/master/2017/01/2017-01-31-wedding.md" target="_blank" rel="noopener">2017-01-31-wedding.md</a></span><a href="#fnref:1" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
     
     <summary type="html">
     
@@ -1043,7 +1143,7 @@ print(-y); // useful
     <updated>2017-01-09T14:10:22.870Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>Source: <a href="https://medium.com/js-dojo/react-or-vue-which-javascript-ui-library-should-you-be-using-543a383608d" target="_blank" rel="external">React or Vue: Which Javascript UI Library Should You Be Using?</a><br>Translation: 未完成，敬请期待。</p>
+<p>Source: <a href="https://medium.com/js-dojo/react-or-vue-which-javascript-ui-library-should-you-be-using-543a383608d" target="_blank" rel="noopener">React or Vue: Which Javascript UI Library Should You Be Using?</a><br>Translation: 未完成，敬请期待。</p>
 </blockquote>
 <p><img src="http://ww4.sinaimg.cn/large/79be2309gw1fbkp0222bkj20rs0b3gov.jpg" alt=""></p>
 <p>In 2016 React cemented its position as king of the Javascript web frameworks. This year saw rapid growth of both its web and native mobile libraries, and a comfortable lead over main rival Angular.</p>
@@ -1051,7 +1151,7 @@ print(-y); // useful
 <p>The scope of both React and Vue is undeniably similar: both are lightweight component-based libraries for building user interfaces that focus on the view layer only. Both can be used in a simple project, or be scaled up to a sophisticated app using cutting edge tooling.</p>
 <p>As a result, a lot of web developers are wondering which one they should be using. Is one clearly superior over the other? Do they have specific pros and cons to be aware of? Or are they basically the same?</p>
 <p><strong>Two frameworks, two advocates.</strong></p>
-<p>In this article I want to answer those questions with a thorough and fair comparison. The only problem is: I’m an unashamed Vue fan-boy and totally biased. I’ve used Vue heavily in my projects this year, sung its praises here on Medium and even released a <a href="https://www.udemy.com/vuejs-2-essentials" target="_blank" rel="external">Udemy course</a>.</p>
+<p>In this article I want to answer those questions with a thorough and fair comparison. The only problem is: I’m an unashamed Vue fan-boy and totally biased. I’ve used Vue heavily in my projects this year, sung its praises here on Medium and even released a <a href="https://www.udemy.com/vuejs-2-essentials" target="_blank" rel="noopener">Udemy course</a>.</p>
 <p>To even out my biased position I’ve bought in my friend Alexis Mangin who is both a great Javascript developer and a big React fan. He’s similarly immersed in React, using it frequently in both web and mobile projects.</p>
 <p>Alexis asked me one day: “why are you so into Vue, and not React?” Since I didn’t know React that well, I couldn’t give a good answer. So I put the idea to him that we sit down one day with our laptops and show each other what our chosen library had to offer.</p>
 <p><img src="http://ww2.sinaimg.cn/large/79be2309gw1fbkp00ztjzj20m80e2414.jpg" alt=""></p>
@@ -1062,9 +1162,9 @@ print(-y); // useful
 <p><strong>If you like building apps with templates (or want the option to), go with Vue.</strong></p>
 <p>Putting your markup in an HTML file is the default option for a Vue app. Similar to Angular, moustache braces are used for data-binding expressions, while directives (special HTML attributes) are used for adding functionality to the template.</p>
 <p>The follow demonstrates a simple Vue app. It prints a message and has a button that dynamically reverses the message:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">// HTML</div><div class="line">&lt;div id=&quot;app&quot;&gt;</div><div class="line">  &lt;p&gt;&#123;&#123; message &#125;&#125;&lt;/p&gt;</div><div class="line">  &lt;button v-on:click=&quot;reverseMessage&quot;&gt;Reverse Message&lt;/button&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">// JS</div><div class="line">new Vue(&#123;</div><div class="line">  el: &apos;#app&apos;,</div><div class="line">  data: &#123;</div><div class="line">    message: &apos;Hello Vue.js!</div><div class="line">  &#125;,</div><div class="line">  methods: &#123;</div><div class="line">    reverseMessage: function () &#123;</div><div class="line">      this.message = this.message.split(&apos;&apos;).reverse().join(&apos;&apos;);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// HTML</span><br><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">  &lt;p&gt;&#123;&#123; message &#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;button v-on:click=&quot;reverseMessage&quot;&gt;Reverse Message&lt;/button&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">// JS</span><br><span class="line">new Vue(&#123;</span><br><span class="line">  el: &apos;#app&apos;,</span><br><span class="line">  data: &#123;</span><br><span class="line">    message: &apos;Hello Vue.js!</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    reverseMessage: function () &#123;</span><br><span class="line">      this.message = this.message.split(&apos;&apos;).reverse().join(&apos;&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>In contrast, React apps shun templates and require the developer to create their DOM in Javascript, typically aided with JSX. Below is the same simple app implemented with React:</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// HTML</span></div><div class="line">&lt;div id=<span class="string">"app"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line"><span class="comment">// JS (pre-transpilation)</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>(props) &#123;</div><div class="line">    <span class="keyword">super</span>(props);</div><div class="line">    <span class="keyword">this</span>.state = &#123;</div><div class="line">      <span class="attr">message</span>: <span class="string">'Hello React.js!'</span></div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line">  reverseMessage() &#123;</div><div class="line">    <span class="keyword">this</span>.setState(&#123; </div><div class="line">      <span class="attr">message</span>: <span class="keyword">this</span>.state.message.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>) </div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;this.state.message&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> this.reverseMessage()&#125;&gt;</div><div class="line">          Reverse Message</div><div class="line">        <span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    )</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">ReactDOM.render(App, <span class="built_in">document</span>.getElementById(<span class="string">'app'</span>));</div></pre></td></tr></table></figure>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// HTML</span></span><br><span class="line">&lt;div id=<span class="string">"app"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="comment">// JS (pre-transpilation)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props);</span><br><span class="line">    <span class="keyword">this</span>.state = &#123;</span><br><span class="line">      message: <span class="string">'Hello React.js!'</span></span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  reverseMessage() &#123;</span><br><span class="line">    <span class="keyword">this</span>.setState(&#123; </span><br><span class="line">      message: <span class="keyword">this</span>.state.message.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>) </span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;p&gt;&#123;<span class="keyword">this</span>.state.message&#125;&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">        &lt;button onClick=&#123;() =&gt; this.reverseMessage()&#125;&gt;</span></span><br><span class="line"><span class="regexp">          Reverse Message</span></span><br><span class="line"><span class="regexp">        &lt;/</span>button&gt;</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">ReactDOM.render(App, document.getElementById('app'));</span></span><br></pre></td></tr></table></figure>
 <p>Templates are easier to understand for newer developers who’ve come from the standard web development paradigm. But even some experienced developers prefer them as templates can better seperate layout from functionality and give the option of using pre-processors like Pug.</p>
 <p>But templates come at the cost of having to learn all the extended HTML syntax, while render functions only require knowledge of standard HTML and Javascript. Render functions also benefit from easier debugging and testing.</p>
 <p>On this point, though, you can’t go wrong with Vue, as it’s introduced the option of using either templates or render functions in version 2.</p>
@@ -1073,9 +1173,9 @@ print(-y); // useful
 <p>While this is also technically possible with React, typical React code leans more heavily on JSX and on ES6 features like classes and non-mutating array methods.</p>
 <p>But Vue’s simplicity runs more deeply in its design. Let’s compare how the two libraries handle application data (i.e. “state”).</p>
 <p>State in React is immutable so you can’t directly change it. You need to use the setState API method:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.setState(&#123; </div><div class="line">    <span class="attr">message</span>: <span class="keyword">this</span>.state.message.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>) </div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.setState(&#123; </span><br><span class="line">    message: <span class="keyword">this</span>.state.message.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>) </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>Diff’ing the current and previous state is how React knows when and what to re-render in the DOM, hence the need for immutable state.<br>In contrast, data is just mutated in Vue. The same data property can be altered far less verbosely in Vue:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Note that data properties are available as properties of </span></div><div class="line"><span class="comment">// the Vue instance</span></div><div class="line"><span class="keyword">this</span>.message = <span class="keyword">this</span>.message.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Note that data properties are available as properties of </span></span><br><span class="line"><span class="comment">// the Vue instance</span></span><br><span class="line"><span class="keyword">this</span>.message = <span class="keyword">this</span>.message.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>);</span><br></pre></td></tr></table></figure>
 <p>Before you conclude that Vue’s rendering system must lack the efficiency of React’s, let’s examine how state in Vue is managed under the hood: when you add a new object to the state, Vue will walk through all of its properties and convert them to getter and setters. Vue’s reactivity system now keeps track of the state and will automatically re-render the DOM when it is mutated.</p>
 <p>Impressively, altering state in Vue is not only more succinct, but its re-rendering system is actually faster and more efficient than React’s.</p>
 <p>Vue’s reactivity system does have caveats, though. For example, it cannot detect property addition or deletion and certain array changes. These cases can be worked around with a React-like set method from the Vue API.</p>
@@ -1097,7 +1197,7 @@ print(-y); // useful
 <p>Meanwhile, React’s immutable application data may not be as succinct, but it shines in larger application when transparency and testability become critical.</p>
 <p><strong>If you want a library that is adaptable for both web and native apps, go with React.</strong></p>
 <p>React Native is a library for building native mobile applications with Javascript. It’s the same as React.js, only instead of using web components, it uses native components. If you’ve learnt React.js, you’ll very easily be able to pick up React Native, and vice versa.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// JS</span></div><div class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>; </div><div class="line"><span class="keyword">import</span> &#123; AppRegistry, Text, View &#125; <span class="keyword">from</span> <span class="string">'react-native'</span>;  </div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;   </div><div class="line">  render() &#123;     </div><div class="line">    <span class="keyword">return</span> (       </div><div class="line">      <span class="xml"><span class="tag">&lt;<span class="name">View</span>&gt;</span>         </span></div><div class="line">        <span class="tag">&lt;<span class="name">Text</span>&gt;</span>Hello, React Native!<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">View</span>&gt;</span></div><div class="line">    );   </div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">AppRegistry.registerComponent(<span class="string">'HelloWorld'</span>, () =&gt; HelloWorld);</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// JS</span></span><br><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>; </span><br><span class="line"><span class="keyword">import</span> &#123; AppRegistry, Text, View &#125; <span class="keyword">from</span> <span class="string">'react-native'</span>;  </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;   </span><br><span class="line">  render() &#123;     </span><br><span class="line">    <span class="keyword">return</span> (       </span><br><span class="line">      &lt;View&gt;         </span><br><span class="line">        &lt;Text&gt;Hello, React Native!<span class="xml"><span class="tag">&lt;/<span class="name">Text</span>&gt;</span></span></span><br><span class="line">      &lt;<span class="regexp">/View&gt;</span></span><br><span class="line"><span class="regexp">    );   </span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">AppRegistry.registerComponent('HelloWorld', () =&gt; HelloWorld);</span></span><br></pre></td></tr></table></figure>
 <p>The significance is that a developer can build an app on either the web or native mobile without requiring a different set of knowledge and tools. Learning React gives you a huge bang for you buck if you intend to develop for both web and mobile.</p>
 <p>Alibaba’s Weex is another cross-platform UI project. Currently it considers Vue an “inspiration” and uses a lot of the same syntax, with plans to fully integrate Vue. However, the timeline and specifics of this integration are still unclear.</p>
 <p>Since Vue has HTML templates as a core part of its design and does not have custom rendering as a current feature, it’s hard to see that a native counterpart for Vue.js in its current form will be as tight as what React.js and React Native are.</p>
@@ -1130,7 +1230,7 @@ print(-y); // useful
 <p>Alexis helped me write this article with his exceptional knowledge of web development. You should follow him on Medium as he writes his own great tutorials on React.</p>
 </blockquote>
 <hr>
-<p>Vue的作者<a href="https://medium.com/@youyuxi/pretty-good-comparison-overall-but-a-few-points-id-like-to-discuss-e4f6460e75d5#.mij64qy5y" target="_blank" rel="external">回复了该文</a>，摘录如下：<br>Pretty good comparison overall, but a few points I’d like to discuss:</p>
+<p>Vue的作者<a href="https://medium.com/@youyuxi/pretty-good-comparison-overall-but-a-few-points-id-like-to-discuss-e4f6460e75d5#.mij64qy5y" target="_blank" rel="noopener">回复了该文</a>，摘录如下：<br>Pretty good comparison overall, but a few points I’d like to discuss:</p>
 <blockquote>
 <p>“Templates are prone to unnoticed runtime errors, are hard to test, and are not easy to restructure or decompose.”</p>
 </blockquote>
@@ -1146,11 +1246,11 @@ print(-y); // useful
 <blockquote>
 <p>Alibaba’s Weex is another cross-platform UI project. Currently it considers Vue an “inspiration” and uses a lot of the same syntax, with plans to fully integrate Vue. However, the timeline and specifics of this integration are still unclear.</p>
 </blockquote>
-<p>The <a href="https://github.com/weexteam/weex-vue-framework/issues/9" target="_blank" rel="external">roadmap</a> is publicly available. In the latest Weex release (0.9.4), Vue 2 is now already officially integrated as a runtime framework which allows the use of the majority of features found in Vue’s API (excluding those that are web-platform-specific). (<a href="https://github.com/alibaba/weex/tree/dev/examples/vue" target="_blank" rel="external">examples</a>)</p>
+<p>The <a href="https://github.com/weexteam/weex-vue-framework/issues/9" target="_blank" rel="noopener">roadmap</a> is publicly available. In the latest Weex release (0.9.4), Vue 2 is now already officially integrated as a runtime framework which allows the use of the majority of features found in Vue’s API (excluding those that are web-platform-specific). (<a href="https://github.com/alibaba/weex/tree/dev/examples/vue" target="_blank" rel="noopener">examples</a>)</p>
 <blockquote>
 <p>“Since Vue has HTML templates as a core part of its design and does not have custom rendering as a current feature, it’s hard to see that a native counterpart for Vue.js in its current form will be as tight as what React.js and React Native are.”</p>
 </blockquote>
-<p>This is factually wrong. Vue 2.x is designed to support <a href="https://github.com/vuejs/vue/tree/dev/src/platforms" target="_blank" rel="external">custom rendering targets</a> from the very beginning, it’s just not exposed via public APIs. Again, templates are compiled into Virtual DOM render functions which allows any type of lower-level customizations needed to adapt to native rendering targets.</p>
+<p>This is factually wrong. Vue 2.x is designed to support <a href="https://github.com/vuejs/vue/tree/dev/src/platforms" target="_blank" rel="noopener">custom rendering targets</a> from the very beginning, it’s just not exposed via public APIs. Again, templates are compiled into Virtual DOM render functions which allows any type of lower-level customizations needed to adapt to native rendering targets.</p>
 ]]></content>
     
     <summary type="html">
@@ -1178,10 +1278,10 @@ print(-y); // useful
   
   <entry>
     <title>2016年总结</title>
-    <link href="http://xovel.cn/article/summerize-for-2016.html"/>
-    <id>http://xovel.cn/article/summerize-for-2016.html</id>
+    <link href="http://xovel.cn/article/summary-2016.html"/>
+    <id>http://xovel.cn/article/summary-2016.html</id>
     <published>2016-12-31T13:01:29.000Z</published>
-    <updated>2017-01-01T16:03:38.039Z</updated>
+    <updated>2018-01-01T09:09:20.956Z</updated>
     
     <content type="html"><![CDATA[<p>转眼已经是2016年的最后一天了，是时候来好好做一个全面的总结了。</p>
 <p>那么，直接进入主题吧！</p>
@@ -1211,10 +1311,10 @@ print(-y); // useful
 <p>2016年，所创作的剧情隶属于《圣血记》第二部《寻玉》。今年发表的篇章共计26，其中《寻玉》21篇。</p>
 <p>关于具体的剧情进展，这里不做展开了。要提一下的是今年的下半年，基本上没有进行新剧情的创作。</p>
 <h3 id="开源项目"><a href="#开源项目" class="headerlink" title="开源项目"></a>开源项目</h3><p>已架设在<code>GitHub</code>上的开源项目：</p>
-<h4 id="CanvasBubble"><a href="#CanvasBubble" class="headerlink" title="CanvasBubble"></a><a href="https://github.com/xovel/CanvasBubble" target="_blank" rel="external">CanvasBubble</a></h4><p>使用canvas实现的一个泡泡背景。</p>
-<h4 id="Carousel3D"><a href="#Carousel3D" class="headerlink" title="Carousel3D"></a><a href="https://github.com/xovel/Carousel3D" target="_blank" rel="external">Carousel3D</a></h4><p>一款3D旋转效果的小工具。</p>
-<h4 id="PullRefresh"><a href="#PullRefresh" class="headerlink" title="PullRefresh"></a><a href="https://github.com/xovel/PullRefresh" target="_blank" rel="external">PullRefresh</a></h4><p>JS实现的下拉刷新插件。</p>
-<h4 id="octoverse"><a href="#octoverse" class="headerlink" title="octoverse"></a><a href="https://github.com/xovel/octoverse" target="_blank" rel="external">octoverse</a></h4><p>GitHub上的关于2016总结页面的离线版本。</p>
+<h4 id="CanvasBubble"><a href="#CanvasBubble" class="headerlink" title="CanvasBubble"></a><a href="https://github.com/xovel/CanvasBubble" target="_blank" rel="noopener">CanvasBubble</a></h4><p>使用canvas实现的一个泡泡背景。</p>
+<h4 id="Carousel3D"><a href="#Carousel3D" class="headerlink" title="Carousel3D"></a><a href="https://github.com/xovel/Carousel3D" target="_blank" rel="noopener">Carousel3D</a></h4><p>一款3D旋转效果的小工具。</p>
+<h4 id="PullRefresh"><a href="#PullRefresh" class="headerlink" title="PullRefresh"></a><a href="https://github.com/xovel/PullRefresh" target="_blank" rel="noopener">PullRefresh</a></h4><p>JS实现的下拉刷新插件。</p>
+<h4 id="octoverse"><a href="#octoverse" class="headerlink" title="octoverse"></a><a href="https://github.com/xovel/octoverse" target="_blank" rel="noopener">octoverse</a></h4><p>GitHub上的关于2016总结页面的离线版本。</p>
 <hr>
 <p>罢了，罢了，总结就这样吧。</p>
 ]]></content>
@@ -1247,14 +1347,14 @@ print(-y); // useful
     
     <content type="html"><![CDATA[<p>今天，工作上遇到一个很滑稽的问题。我大概描述一下，具体的源代码和项目详情这里就不详述了。</p>
 <p>项目上使用到了一款插件叫做<code>jqGrid</code>，在使用这个插件进行表格数据载入的时候调用了一个名为<code>localData</code>的对象里面的一个列表——我们姑且称之为<code>localData.list</code>——里面的数据。在页面加载的时候这个表格就会被初始化。在点击某个按钮进行数据初始化的时候需要清空这个表格，于是我写下了一段<del>带有巨坑的</del>代码：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">localData = &#123;</div><div class="line">  <span class="attr">status</span>: <span class="number">0</span>,</div><div class="line">  <span class="attr">count</span>: <span class="number">0</span>,</div><div class="line">  <span class="attr">list</span>: []</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">localData = &#123;</span><br><span class="line">  status: <span class="number">0</span>,</span><br><span class="line">  count: <span class="number">0</span>,</span><br><span class="line">  list: []</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p><strong>出事了……</strong>，在后续进行数据添加之后（<code>localData.list.push</code>），进行表格的重载<code>.trigger(&quot;reloadGrid&quot;)</code>操作时，数据无法展现。</p>
 <p>百思不得其解之下，询问同事，他们也表示曾经出现过类似的问题，但是后来不知道怎么搞的就没事了。我比对了一下他们的项目源码，发现他们是这样写数据清空操作的：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">localData.status = <span class="number">0</span>;</div><div class="line">localData.count = <span class="number">0</span>;</div><div class="line">localData.list.length = <span class="number">0</span>;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">localData.status = <span class="number">0</span>;</span><br><span class="line">localData.count = <span class="number">0</span>;</span><br><span class="line">localData.list.length = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
 <p>喏，陷阱就埋在这里……</p>
 <p>在使用诸如<code>a={}</code>的形式进行对象的初始化操作时，之前的信息将会全部丢失，即使被赋值之后的结构与之前的一模一样，之前的对象也<strong>跟这个毫无关系</strong>了。</p>
 <p><del>其实我早就应该意识到这个陷阱的，因为：</del></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#125; === &#123;&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#125; === &#123;&#125;</span><br></pre></td></tr></table></figure>
 <p>结果为<strong>false</strong></p>
 <hr>
 <p>总结：心要更细一些，基础得加强，赋值不要随意。</p>
@@ -1272,9 +1372,9 @@ print(-y); // useful
     
       <category term="object" scheme="http://xovel.cn/tags/object/"/>
     
-      <category term="js" scheme="http://xovel.cn/tags/js/"/>
-    
       <category term="trap" scheme="http://xovel.cn/tags/trap/"/>
+    
+      <category term="js" scheme="http://xovel.cn/tags/js/"/>
     
   </entry>
   
@@ -1287,8 +1387,8 @@ print(-y); // useful
     
     <content type="html"><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>最近，到了新的公司上班，接触到的HTML编写方式为使用<code>jade</code>。<del>习惯了手写HTML硬编码的我，一时之间还不太适应这种快速高效的方式。</del></p>
 <p>我们先通过一个例子来讲述一下这款工具的牛逼之处吧！</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">div.container#main Content</div><div class="line">a.btn(href=&quot;javascript:;&quot;,title=&quot;link&quot;) Button</div></pre></td></tr></table></figure>
-<p>经过工具编译后，以上代码将会输出：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span> <span class="attr">id</span>=<span class="string">"main"</span>&gt;</span>Content<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"btn"</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span> <span class="attr">title</span>=<span class="string">"link"</span>&gt;</span>Button<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">div.container#main Content</span><br><span class="line">a.btn(href=&quot;javascript:;&quot;,title=&quot;link&quot;) Button</span><br></pre></td></tr></table></figure>
+<p>经过工具编译后，以上代码将会输出：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span> <span class="attr">id</span>=<span class="string">"main"</span>&gt;</span>Content<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"btn"</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span> <span class="attr">title</span>=<span class="string">"link"</span>&gt;</span>Button<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p><del>是不是有种简单粗暴的即视感？</del></p>
 <h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><p>基本属性的写法如下：</p>
 <p>每行开始的第一个单词将会作为HTML标签名，如果没有，则默认为<code>div</code>。</p>
@@ -1296,22 +1396,22 @@ print(-y); // useful
 <p>HTML元素的其他属性可以写在跟在后面的括号<code>()</code>之内。多个属性，可以使用逗号<code>,</code>或者空格<code> </code>隔开。</p>
 <p>元素内的文本则以一个空格后直接书写。</p>
 <p>Jade采用对缩进敏感的语法，来划分HTML的层次结构。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ul</div><div class="line">  li A </div><div class="line">    span text</div><div class="line">  li B</div><div class="line">  li C</div></pre></td></tr></table></figure>
-<p>将会被编译成：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>A<span class="tag">&lt;<span class="name">span</span>&gt;</span>text<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>B<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">Li</span>&gt;</span>C<span class="tag">&lt;/<span class="name">Li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p><code>jade</code>支持循环。比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- for (var i = 0; i &lt; 3; i++)</div><div class="line">  li item</div></pre></td></tr></table></figure></p>
-<p>将会被编译成：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>item<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>item<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>item<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ul</span><br><span class="line">  li A </span><br><span class="line">    span text</span><br><span class="line">  li B</span><br><span class="line">  li C</span><br></pre></td></tr></table></figure>
+<p>将会被编译成：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>A<span class="tag">&lt;<span class="name">span</span>&gt;</span>text<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>B<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Li</span>&gt;</span>C<span class="tag">&lt;/<span class="name">Li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p><code>jade</code>支持循环。比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- for (var i = 0; i &lt; 3; i++)</span><br><span class="line">  li item</span><br></pre></td></tr></table></figure></p>
+<p>将会被编译成：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>item<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>item<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>item<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p><code>jade</code>使用<code>extends</code>来继承代码片段，继承可以修改代码片段。</p>
 <p>页面中使用<code>block</code>标识符，可以指定一个代码片段的名字，比如名字设为<code>name</code>。在需要使用该代码片段的地方，直接使用<code>block name</code>即可。</p>
 <h3 id="文件包含"><a href="#文件包含" class="headerlink" title="文件包含"></a>文件包含</h3><p><code>jade</code>可以使用<code>include</code>语法实现高度复用代码。将这些代码片段保存到不同的文件中，然后在需要的地方进行引入即可。</p>
 <h3 id="混合宏"><a href="#混合宏" class="headerlink" title="混合宏"></a>混合宏</h3><p><code>mixin</code>是<code>jade</code>提供的另一个方法，可以很大程度提升HTML编写的效率。语法类似于<code>sass</code>和<code>less</code>中的混合宏。</p>
 <p>混合宏具有高度复用、解耦、可读、可扩、可维护等特点，是众多预编译语言的共同特点。</p>
 <p><code>jade</code>中使用<code>mixin</code>标识符进行混合宏的创建，在需要的地方使用<code>+</code>标识符进行调用即可。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">mixin list</div><div class="line">  ul</div><div class="line">    li foo</div><div class="line">    li bar</div><div class="line">    li baz</div><div class="line"></div><div class="line">+list</div><div class="line">+list</div></pre></td></tr></table></figure>
-<p>将会被编译成：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>foo<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>bar<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>baz<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>foo<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>bar<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>baz<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>支持参数的传入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">mixin card(name)</div><div class="line">  li.card= name</div><div class="line">ul</div><div class="line">  +card(&apos;A&apos;)</div><div class="line">  +card(&apos;B&apos;)</div><div class="line">  +card(&apos;C&apos;)</div></pre></td></tr></table></figure></p>
-<p>将会被编译成：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"card"</span>&gt;</span>A<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"card"</span>&gt;</span>B<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"card"</span>&gt;</span>C<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>还可以使用余参：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">mixin list(id, ...items)</div><div class="line">  ul(id=id)</div><div class="line">    each item in items</div><div class="line">      li= item</div><div class="line"></div><div class="line">+list(&apos;example&apos;, 1, 2, 3, 4, 5)</div></pre></td></tr></table></figure></p>
-<p>将会被编译成：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"example"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>5<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mixin list</span><br><span class="line">  ul</span><br><span class="line">    li foo</span><br><span class="line">    li bar</span><br><span class="line">    li baz</span><br><span class="line"></span><br><span class="line">+list</span><br><span class="line">+list</span><br></pre></td></tr></table></figure>
+<p>将会被编译成：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>foo<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>bar<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>baz<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>foo<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>bar<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>baz<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>支持参数的传入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mixin card(name)</span><br><span class="line">  li.card= name</span><br><span class="line">ul</span><br><span class="line">  +card(&apos;A&apos;)</span><br><span class="line">  +card(&apos;B&apos;)</span><br><span class="line">  +card(&apos;C&apos;)</span><br></pre></td></tr></table></figure></p>
+<p>将会被编译成：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"card"</span>&gt;</span>A<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"card"</span>&gt;</span>B<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"card"</span>&gt;</span>C<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>还可以使用余参：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mixin list(id, ...items)</span><br><span class="line">  ul(id=id)</span><br><span class="line">    each item in items</span><br><span class="line">      li= item</span><br><span class="line"></span><br><span class="line">+list(&apos;example&apos;, 1, 2, 3, 4, 5)</span><br></pre></td></tr></table></figure></p>
+<p>将会被编译成：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"example"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>5<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <hr>
 <p><code>jade</code>的入门级介绍到这里就告一段落，还有一些高级语法，可以参考官方文档。</p>
 ]]></content>
@@ -1350,10 +1450,10 @@ print(-y); // useful
 <blockquote>
 <p><code>IMAP</code>，即<strong>I</strong>nternet <strong>M</strong>essage <strong>A</strong>ccess <strong>P</strong>rotocol（互联网邮件访问协议），您可以通过这种协议从邮件服务器上获取邮件的信息、下载邮件等。IMAP与POP类似，都是一种邮件获取协议。</p>
 </blockquote>
-<p>参考信息来自于：<a href="http://service.mail.qq.com/cgi-bin/help?subtype=1&amp;&amp;id=28&amp;&amp;no=331" target="_blank" rel="external">QQ邮箱帮助中心</a></p>
+<p>参考信息来自于：<a href="http://service.mail.qq.com/cgi-bin/help?subtype=1&amp;&amp;id=28&amp;&amp;no=331" target="_blank" rel="noopener">QQ邮箱帮助中心</a></p>
 <p>不管它的目的是什么，总归是为了安全方面的问题，必须要支持。</p>
 <blockquote>
-<p>其实在弹出的提示框中有链接，里面就是解决办法，我是舍近求远了。<a href="http://service.mail.qq.com/cgi-bin/help?subtype=1&amp;&amp;id=28&amp;&amp;no=1001256" target="_blank" rel="external">什么是授权码，它又是如何设置？_QQ邮箱帮助中心</a></p>
+<p>其实在弹出的提示框中有链接，里面就是解决办法，我是舍近求远了。<a href="http://service.mail.qq.com/cgi-bin/help?subtype=1&amp;&amp;id=28&amp;&amp;no=1001256" target="_blank" rel="noopener">什么是授权码，它又是如何设置？_QQ邮箱帮助中心</a></p>
 </blockquote>
 <p>那么，问题出现了应该怎么去解决呢？</p>
 <p>设置这个密码并填写进那个提示框即可，详细步骤如下：</p>
@@ -1368,7 +1468,7 @@ print(-y); // useful
 <p><img src="http://ww1.sinaimg.cn/large/79be2309gw1falr9ygsi5j20hv0baq3c.jpg" alt=""></p>
 <p>将这个验证码输入到Foxmail弹出的那个提示对话框中，确认即可。</p>
 <p><img src="http://ww3.sinaimg.cn/large/79be2309gw1falr9yygc1j20g506taa2.jpg" alt=""></p>
-<p>关于<code>IMAP</code>和<code>POP3</code>的区别，在<a href="http://service.mail.qq.com/cgi-bin/help?subtype=1&amp;&amp;id=28&amp;&amp;no=331" target="_blank" rel="external">QQ邮箱的帮助文档</a>中有详细介绍，这里就不赘述了。</p>
+<p>关于<code>IMAP</code>和<code>POP3</code>的区别，在<a href="http://service.mail.qq.com/cgi-bin/help?subtype=1&amp;&amp;id=28&amp;&amp;no=331" target="_blank" rel="noopener">QQ邮箱的帮助文档</a>中有详细介绍，这里就不赘述了。</p>
 <hr>
 <blockquote>
 <ol>
@@ -1409,26 +1509,26 @@ print(-y); // useful
     <updated>2016-11-18T07:00:40.177Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>本文来自博客issue<a href="https://github.com/xovel/xovel.github.io/issues/16" target="_blank" rel="external">#16</a></p>
+<p>本文来自博客issue<a href="https://github.com/xovel/xovel.github.io/issues/16" target="_blank" rel="noopener">#16</a></p>
 </blockquote>
 <p>使用了<code>next</code>主题之后，默认生成的HTML文件中，会出现大量的空行。直接查看网页源代码就能够看到。</p>
 <p><code>hexo</code>默认没有提供压缩HTML/CSS/JS的功能，但我们可以通过另外的途径进行代码的压缩。</p>
 <blockquote>
 <p>之前的版本，有一个名为<code>hexo-generator-minify</code>的插件，但已经无人维护，不支持hexo 3.x版本。</p>
-<p><a href="https://hexo.io/plugins/" target="_blank" rel="external">官方插件库</a>能搜到的压缩插件，均有不同程度的问题。详情这里不表，具体诸君可以自行安装测试。</p>
+<p><a href="https://hexo.io/plugins/" target="_blank" rel="noopener">官方插件库</a>能搜到的压缩插件，均有不同程度的问题。详情这里不表，具体诸君可以自行安装测试。</p>
 </blockquote>
-<p>这里介绍一种<a href="https://github.com/gulpjs/gulp" target="_blank" rel="external"><code>gulp</code></a>自动化任务压缩的方式来处理这个问题，缺陷就是每一次blog在deploy的时候都需要事先执行一次这个压缩任务。</p>
+<p>这里介绍一种<a href="https://github.com/gulpjs/gulp" target="_blank" rel="noopener"><code>gulp</code></a>自动化任务压缩的方式来处理这个问题，缺陷就是每一次blog在deploy的时候都需要事先执行一次这个压缩任务。</p>
 <blockquote>
 <p>本人的博客曾经开启过压缩功能，但后来放弃了。<del>一方面是嫌麻烦，一方面也是觉得暂时没有这个必要</del></p>
 </blockquote>
 <p>本人采用的具体压缩工具为：</p>
 <ul>
-<li><a href="https://github.com/jonschlinkert/gulp-htmlmin" target="_blank" rel="external">gulp-htmlmin</a>，该插件对HTML代码进行压缩。</li><li><a href="https://github.com/anseki/gulp-htmlclean" target="_blank" rel="external">gulp-htmlclean</a>，该插件对HTML进行代码清理，去除不必要的空行等。</li><li><a href="https://github.com/scniro/gulp-clean-css" target="_blank" rel="external">gulp-clean-css</a>，该插件对CSS代码进行压缩与清理。</li></ul>
-<p>另外有一个图片压缩工具，暂未使用：<a href="https://github.com/sindresorhus/gulp-imagemin" target="_blank" rel="external">gulp-imagemin</a></p>
-<p>JS压缩工具可以参考：<a href="https://github.com/terinjokes/gulp-uglify" target="_blank" rel="external">gulp-uglify</a>、<a href="https://github.com/mishoo/UglifyJS2" target="_blank" rel="external">UglifyJS2</a>。</p>
-<p>引入各种插件：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> htmlmin = <span class="built_in">require</span>(<span class="string">'gulp-htmlmin'</span>);</div><div class="line"><span class="keyword">var</span> htmlclean = <span class="built_in">require</span>(<span class="string">'gulp-htmlclean'</span>);</div><div class="line"><span class="keyword">var</span> cleanCSS = <span class="built_in">require</span>(<span class="string">'gulp-clean-css'</span>);</div><div class="line"><span class="keyword">var</span> imagemin = <span class="built_in">require</span>(<span class="string">'gulp-imagemin'</span>);</div></pre></td></tr></table></figure></p>
+<li><a href="https://github.com/jonschlinkert/gulp-htmlmin" target="_blank" rel="noopener">gulp-htmlmin</a>，该插件对HTML代码进行压缩。</li><li><a href="https://github.com/anseki/gulp-htmlclean" target="_blank" rel="noopener">gulp-htmlclean</a>，该插件对HTML进行代码清理，去除不必要的空行等。</li><li><a href="https://github.com/scniro/gulp-clean-css" target="_blank" rel="noopener">gulp-clean-css</a>，该插件对CSS代码进行压缩与清理。</li></ul>
+<p>另外有一个图片压缩工具，暂未使用：<a href="https://github.com/sindresorhus/gulp-imagemin" target="_blank" rel="noopener">gulp-imagemin</a></p>
+<p>JS压缩工具可以参考：<a href="https://github.com/terinjokes/gulp-uglify" target="_blank" rel="noopener">gulp-uglify</a>、<a href="https://github.com/mishoo/UglifyJS2" target="_blank" rel="noopener">UglifyJS2</a>。</p>
+<p>引入各种插件：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> htmlmin = <span class="built_in">require</span>(<span class="string">'gulp-htmlmin'</span>);</span><br><span class="line"><span class="keyword">var</span> htmlclean = <span class="built_in">require</span>(<span class="string">'gulp-htmlclean'</span>);</span><br><span class="line"><span class="keyword">var</span> cleanCSS = <span class="built_in">require</span>(<span class="string">'gulp-clean-css'</span>);</span><br><span class="line"><span class="keyword">var</span> imagemin = <span class="built_in">require</span>(<span class="string">'gulp-imagemin'</span>);</span><br></pre></td></tr></table></figure></p>
 <p>本人采用的核心的任务代码如下：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">'minify-html'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> gulp.src(<span class="string">'./public/**/*.html'</span>)</div><div class="line">    .pipe(htmlclean())</div><div class="line">    .pipe(htmlmin(&#123;</div><div class="line">         <span class="attr">removeComments</span>: <span class="literal">true</span>,</div><div class="line">         <span class="attr">minifyJS</span>: <span class="literal">false</span>,</div><div class="line">         <span class="attr">minifyCSS</span>: <span class="literal">true</span>,</div><div class="line">         <span class="attr">minifyURLs</span>: <span class="literal">false</span>,</div><div class="line">    &#125;))</div><div class="line">    .pipe(gulp.dest(<span class="string">'./public'</span>))</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(<span class="string">'minify-html'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> gulp.src(<span class="string">'./public/**/*.html'</span>)</span><br><span class="line">    .pipe(htmlclean())</span><br><span class="line">    .pipe(htmlmin(&#123;</span><br><span class="line">         removeComments: <span class="literal">true</span>,</span><br><span class="line">         minifyJS: <span class="literal">false</span>,</span><br><span class="line">         minifyCSS: <span class="literal">true</span>,</span><br><span class="line">         minifyURLs: <span class="literal">false</span>,</span><br><span class="line">    &#125;))</span><br><span class="line">    .pipe(gulp.dest(<span class="string">'./public'</span>))</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>那么，在每一次deploy之前，在<code>Git Bash</code>下执行一次<code>gulp minify-html</code>即可对所有的HTML代码进行压缩。</p>
 <p>CSS和JS的压缩可以编写类似的代码，这里不再赘述。</p>
 ]]></content>
@@ -1449,56 +1549,6 @@ print(-y); // useful
       <category term="gulp" scheme="http://xovel.cn/tags/gulp/"/>
     
       <category term="minify" scheme="http://xovel.cn/tags/minify/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>双十一小记</title>
-    <link href="http://xovel.cn/article/double-eleven-an-ironic-day.html"/>
-    <id>http://xovel.cn/article/double-eleven-an-ironic-day.html</id>
-    <published>2016-11-11T06:39:56.000Z</published>
-    <updated>2016-11-18T07:00:40.177Z</updated>
-    
-    <content type="html"><![CDATA[<p>又是一年剁手时节，今年的双十一，我没有打算花费过多费用在购物上面，毕竟有些东西还是实体店购买来的更加方便可靠。</p>
-<p>众所周知，眼下的双十一是一个电商狂欢节，起初，它的目的并不像现在这般，只是为了倾销堆积商品。</p>
-<blockquote>
-<p>后来，淘宝和天猫积压的商品在双十一之后仍旧过多，唯品会借助这个机会，弯道超车，另辟蹊径，成为了另一个大的电商平台。</p>
-</blockquote>
-<p>淘宝和天猫在双十一峰值的时候会达到十多万每秒的高并发请求数量（2015年的数据），这无疑是一个巨大的挑战。在今年这个数据可能会更高，据相关推算，今年的峰值并发量将会达到百万级。</p>
-<p>那么，在应对如此巨大的并发请求的时候，通常采用的方式是什么呢？</p>
-<p>应对高并发，有两个很重要的概念：缓存与异步。</p>
-<h3 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h3><p>缓存，即<code>cache</code>，应对高并发场景，可以在用户行为的所有环节上添加一个合理的缓存操作。首先对浏览器端进行Cache设置，设置合理的过期规则，配合CDN，让部分元素直接从浏览器的Cache获取，有效降低服务器的访问压力。</p>
-<p>业务层表现方式为动态和静态，大部分资源可以使用静态CDN的方式进行加速获取并展示。添加CDN Cache，可以大幅提升访问速度，同时降低后端实际负载。</p>
-<h3 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h3><p>使用非阻塞模式，也可以快速提升访问速度。异步化队列通过队列将请求或事务置入后台运行，从而使得同步阻塞模式变为异步非阻塞模式。</p>
-<p>比如，多个用户在抢购同一个商品时，会同时调用支付借口，同步阻塞模式的情形下，用户过多时，支付数据库的压力会非常大，可能会引起数据库服务器宕机。</p>
-<h3 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h3><p>在处理商品展示和购买操作的时候选用了分布式数据库解决方案。据悉，天猫淘宝采用的交易库应该是<code>OceanBase</code>，为了保持数据一致性，采用了<code>Paxos</code>协议。具体可以参考知乎上面的这个回答：<a href="https://www.zhihu.com/question/37421030/answer/72860789" target="_blank" rel="external">天猫双十一是怎么保证高并发、分布式系统中，数据一致性的？</a></p>
-<hr>
-<p><del>有点偏离主题思路了，这篇文章就先写到这里吧</del></p>
-<p>下面是一些参考：</p>
-<ul>
-<li><a href="http://kb.cnblogs.com/page/508432/" target="_blank" rel="external">逃不掉的双十一 可怕的分布式架构隐患</a></li><li><a href="http://cbinews.baijia.baidu.com/article/247864" target="_blank" rel="external">技术大揭秘：阿里双11“逆天”记录是如何做到的？</a></li><li><a href="http://geek.csdn.net/news/detail/74130" target="_blank" rel="external">电商系统的高并发设计和挑战</a></li></ul>
-<blockquote>
-<p>2016年，双十一，天猫的交易额达到了1207亿。<del>可怕！</del></p>
-</blockquote>
-<p>所以，本文的标题英文为<code>an ironic day</code>。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      今天是双十一，这只是一篇随笔。稍微讲一下大量并发请求出现的时候相应的解决方案。
-    
-    </summary>
-    
-      <category term="开发" scheme="http://xovel.cn/categories/dev/"/>
-    
-    
-      <category term="并发" scheme="http://xovel.cn/tags/%E5%B9%B6%E5%8F%91/"/>
-    
-      <category term="双十一" scheme="http://xovel.cn/tags/%E5%8F%8C%E5%8D%81%E4%B8%80/"/>
-    
-      <category term="服务器" scheme="http://xovel.cn/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-      <category term="分布式" scheme="http://xovel.cn/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
     
   </entry>
   

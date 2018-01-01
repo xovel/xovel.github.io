@@ -61,11 +61,13 @@
 
 
 <meta name="description" content="Markdown是一款轻量级文本标记语言。使用Markdown进行写作，你可以轻松的使用纯文本格式编辑HTML代码；本文对Markdown语法进行一个说明，会涉及大部分常见Markdown语法，增强语法与进阶语法部分请在使用时结合当前解析工具进行，部分可能不支持或者效果不对应。">
+<meta name="keywords" content="markdown,语法,百科,资料">
 <meta property="og:type" content="article">
 <meta property="og:title" content="markdown语法说明">
 <meta property="og:url" content="http://xovel.cn/article/markdown-syntax.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="Markdown是一款轻量级文本标记语言。使用Markdown进行写作，你可以轻松的使用纯文本格式编辑HTML代码；本文对Markdown语法进行一个说明，会涉及大部分常见Markdown语法，增强语法与进阶语法部分请在使用时结合当前解析工具进行，部分可能不支持或者效果不对应。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-11-18T07:00:40.093Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="markdown语法说明">
@@ -316,7 +318,7 @@
 
       
         <p>Markdown是一款轻量级文本标记语言。使用Markdown进行写作，你可以轻松的使用纯文本格式编辑HTML代码。<blockquote><p><code>Markdown</code> is a way to style text on the web. You control the display of the document; formatting words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly, Markdown is just regular text with a few non-alphabetic characters thrown in, like <code>#</code> or <code>*</code>.</p>
-<footer><strong>What is Markdown</strong><cite><a href="https://guides.github.com/features/mastering-markdown/#what" target="_blank" rel="external">guides.github.com/features/mastering-markdown/#what</a></cite></footer></blockquote><br>关于Markdown的介绍与优势，这里就不深入详细讨论了，在本文末尾有参考资料，可自行参阅。本文主要讲述Markdown的相关语法。话不多说，直接上干货吧！</p>
+<footer><strong>What is Markdown</strong><cite><a href="https://guides.github.com/features/mastering-markdown/#what" target="_blank" rel="noopener">guides.github.com/features/mastering-markdown/#what</a></cite></footer></blockquote><br>关于Markdown的介绍与优势，这里就不深入详细讨论了，在本文末尾有参考资料，可自行参阅。本文主要讲述Markdown的相关语法。话不多说，直接上干货吧！</p>
 <h2 id="Markdown基本语法"><a href="#Markdown基本语法" class="headerlink" title="Markdown基本语法"></a>Markdown基本语法</h2><h3 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h3><p>普通文本即为段落，没有任何语法修饰。</p>
 <h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>标题使用1到6个符号<code>#</code>来表示。标题的级别由<code>#</code>的数量决定。标题文本与<code>#</code>之间由一个空格隔开。</p>
 <pre><code># 标题1
@@ -331,7 +333,7 @@
 这里是标题2
 -----------
 </code></pre><ul>
-<li><code>#</code>形式的标题来源于<a href="http://www.aaronsw.com/2002/atx/" target="_blank" rel="external"><code>atx</code></a></li><li><code>=</code>和<code>-</code>形式的标题来源于<a href="http://docutils.sourceforge.net/mirror/setext.html" target="_blank" rel="external"><code>Setext</code></a></li><li><code>#</code>形式的标题可以主动闭合，即文本后面也可以跟<code>#</code>，通常这样做是为了文本看起来更加美观。如<code>## 这里是标题2 ##</code>，标题的级别由开头的<code>#</code>数量决定。</li><li><code>=</code>和<code>-</code>的方式看起来就像是给文字加了一条下划线。不过<code>#</code>显得更加直观</li></ul>
+<li><code>#</code>形式的标题来源于<a href="http://www.aaronsw.com/2002/atx/" target="_blank" rel="noopener"><code>atx</code></a></li><li><code>=</code>和<code>-</code>形式的标题来源于<a href="http://docutils.sourceforge.net/mirror/setext.html" target="_blank" rel="noopener"><code>Setext</code></a></li><li><code>#</code>形式的标题可以主动闭合，即文本后面也可以跟<code>#</code>，通常这样做是为了文本看起来更加美观。如<code>## 这里是标题2 ##</code>，标题的级别由开头的<code>#</code>数量决定。</li><li><code>=</code>和<code>-</code>的方式看起来就像是给文字加了一条下划线。不过<code>#</code>显得更加直观</li></ul>
 <h3 id="块引用"><a href="#块引用" class="headerlink" title="块引用"></a>块引用</h3><p>使用符号<code>&gt;</code>表示块引用。</p>
 <pre><code>&gt; 这里是块引用
 </code></pre><ul>
@@ -390,13 +392,13 @@
 <pre><code>- 列表项1
 - 列表项2
 </code></pre><p>这段代码将被转换成：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>而这段代码</p>
 <pre><code>- 列表项1
 
 - 列表项2
 </code></pre><p>将被转换成：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>列表项1<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>列表项2<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>列表项1<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>列表项2<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>如果列表项内容为多行，对每一行进行缩进即可。段落中有多行的情况时可以一并缩进也可以不用缩进。</p>
 <p>列表项的内容可以嵌套其他markdown语法，如块引用，代码块等。</p>
 <p>无序列表的三个不同的符号避免在同一列表中交叉使用，不同的符号生成的列表是独立的，这可能会对样式的渲染造成一定的干扰。</p>
@@ -410,7 +412,7 @@
 
     This is a code block.
 </code></pre><p>这段代码将被转换成：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This is a normal paragraph:<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">pre</span>&gt;</span><span class="tag">&lt;<span class="name">code</span>&gt;</span>This is a code block.</div><div class="line"><span class="tag">&lt;/<span class="name">code</span>&gt;</span><span class="tag">&lt;/<span class="name">pre</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This is a normal paragraph:<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">pre</span>&gt;</span><span class="tag">&lt;<span class="name">code</span>&gt;</span>This is a code block.</span><br><span class="line"><span class="tag">&lt;/<span class="name">code</span>&gt;</span><span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>代码块会对里面的一些符号进行转义，变为HTML实体符：</p>
 <ul>
 <li>And连接符<code>&amp;</code>将被转换为<code>&amp;amp;</code></li><li>左尖括号<code>&lt;</code>将被转换为<code>&amp;lt;</code></li><li>右尖括号<code>&gt;</code>将被转换为<code>&amp;gt;</code></li></ul>
@@ -470,7 +472,7 @@ __我也是粗体__
 </code></pre><h3 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h3><p>文档中的链接可以使用定界符尖括号<code>&lt;&gt;</code>实现自动链接效果，不需要额外的链接语法操作。</p>
 <pre><code>&lt;https://github.com/&gt;
 </code></pre><p>将被转换为：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://github.com/"</span>&gt;</span>https://github.com/<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://github.com/"</span>&gt;</span>https://github.com/<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>对于邮箱地址链接，同样有效。</p>
 <h3 id="取消转义"><a href="#取消转义" class="headerlink" title="取消转义"></a>取消转义</h3><p>使用反斜杠<code>\</code>进行语法取消。</p>
 <p>使用反斜杠可以使得语法相关符号以字面量进行显示，接受以下符号的取消转义：</p>
@@ -487,17 +489,17 @@ __我也是粗体__
 <h3 id="Emoji"><a href="#Emoji" class="headerlink" title="Emoji"></a>Emoji</h3><p>可以在文档中插入Emoji表情，语法为对应Emoji表情名称使用一对冒号<code>:</code>进行定界即可。</p>
 <pre><code>:smile:
 </code></pre><blockquote>
-<p><a href="http://www.emoji-cheat-sheet.com/" target="_blank" rel="external">Emoji Cheat Sheet</a></p>
+<p><a href="http://www.emoji-cheat-sheet.com/" target="_blank" rel="noopener">Emoji Cheat Sheet</a></p>
 </blockquote>
 <h3 id="围栏代码块与语法高亮"><a href="#围栏代码块与语法高亮" class="headerlink" title="围栏代码块与语法高亮"></a>围栏代码块与语法高亮</h3><p>使用三个<code>`</code>作为定界符，也可以使文本转换为可以代码块。我们可以将之称为围栏代码块。</p>
 <p>在第一组<code>`</code>后面可以指定高亮采用的语法。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">```javascript</div><div class="line">var now = function()&#123;</div><div class="line">    return new Date().getTime()</div><div class="line">&#125;</div><div class="line">```</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">```javascript</span><br><span class="line">var now = function()&#123;</span><br><span class="line">    return new Date().getTime()</span><br><span class="line">&#125;</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
 <p>以上代码将会以javascript语法的方式对代码进行高亮显示。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> now = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Date</span>().getTime()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> now = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Date</span>().getTime()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>We use <a href="https://github.com/github/linguist" target="_blank" rel="external">Linguist</a> to perform language detection and syntax highlighting. You can find out which keywords are valid in <a href="https://github.com/github/linguist/blob/master/lib/linguist/languages.yml" target="_blank" rel="external">the languages YAML file</a>.</p>
+<p>We use <a href="https://github.com/github/linguist" target="_blank" rel="noopener">Linguist</a> to perform language detection and syntax highlighting. You can find out which keywords are valid in <a href="https://github.com/github/linguist/blob/master/lib/linguist/languages.yml" target="_blank" rel="noopener">the languages YAML file</a>.</p>
 </blockquote>
-<p>常用高亮代码库<a href="https://github.com/isagalaev/highlight.js" target="_blank" rel="external">Highlight</a>可以实现多种语法的高亮风格展示，其支持的高亮语法与样式效果请自行参考<a href="https://highlightjs.org/static/demo/" target="_blank" rel="external">官方Demo</a>。</p>
+<p>常用高亮代码库<a href="https://github.com/isagalaev/highlight.js" target="_blank" rel="noopener">Highlight</a>可以实现多种语法的高亮风格展示，其支持的高亮语法与样式效果请自行参考<a href="https://highlightjs.org/static/demo/" target="_blank" rel="noopener">官方Demo</a>。</p>
 <h3 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h3><p>在列表项前面使用<code>[ ]</code>和<code>[x]</code>可以表示该任务列表的状态。前者为未完成，后者为已完成。</p>
 <p><code>[ ]</code>和<code>[x]</code>的位置在列表标识符和列表项的中间，均由空格隔开。</p>
 <pre><code>- [ ] 未完成1
@@ -530,27 +532,27 @@ __我也是粗体__
 名称2
 :    B1
 </code></pre><p>代码将被转换为：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dt</span>&gt;</span>名称1<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dd</span>&gt;</span>A1<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dd</span>&gt;</span>A2<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">dt</span>&gt;</span>名称2<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dd</span>&gt;</span>B1<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dt</span>&gt;</span>名称1<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dd</span>&gt;</span>A1<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dd</span>&gt;</span>A2<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dt</span>&gt;</span>名称2<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dd</span>&gt;</span>B1<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>参考：</p>
 <ul>
-<li><a href="https://michelf.ca/projects/php-markdown/extra/#def-list" target="_blank" rel="external">PHP Markdown Extra - Definition Lists </a></li></ul>
+<li><a href="https://michelf.ca/projects/php-markdown/extra/#def-list" target="_blank" rel="noopener">PHP Markdown Extra - Definition Lists </a></li></ul>
 <h3 id="特殊属性"><a href="#特殊属性" class="headerlink" title="特殊属性"></a>特殊属性</h3><p>可以对生成后的元素指定特殊属性，如ID，类名等。</p>
 <p>使用花括号<code>{}</code>作为定界符对转换后的标签添加特殊属性。</p>
 <pre><code>我是一个段落 {#para .color-red foo=bar}
 </code></pre><p>将被转换为：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"para"</span> <span class="attr">class</span>=<span class="string">"color-red"</span> <span class="attr">foo</span>=<span class="string">"bar"</span>&gt;</span>我是一个段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"para"</span> <span class="attr">class</span>=<span class="string">"color-red"</span> <span class="attr">foo</span>=<span class="string">"bar"</span>&gt;</span>我是一个段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h3><p>可以对指定文本进行缩写提示，转换后对该文本使用<code>&lt;abbr&gt;</code>标签包裹，该标签会有一个<code>title</code>属性指定其详细名称。</p>
 <pre><code>喜大普奔是一个缩写词。
 
 *[喜大普奔]: 喜闻乐见、大快人心、普天同庆、奔走相告
-</code></pre><p>将被转换为：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">abbr</span> <span class="attr">title</span>=<span class="string">"喜闻乐见、大快人心、普天同庆、奔走相告"</span>&gt;</span>喜大普奔<span class="tag">&lt;/<span class="name">abbr</span>&gt;</span>是一个缩写词。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
+</code></pre><p>将被转换为：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">abbr</span> <span class="attr">title</span>=<span class="string">"喜闻乐见、大快人心、普天同庆、奔走相告"</span>&gt;</span>喜大普奔<span class="tag">&lt;/<span class="name">abbr</span>&gt;</span>是一个缩写词。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p><code>*[text]: title</code>为缩写的描述定义文本语法，<code>text</code>为缩写，<code>title</code>为描述，跟链接引用的定义文本类似，可以在文档中的任意位置，最终解析出来的文档将会忽略。</p>
 <h3 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h3><p>脚注的语法：在需要添加脚注的地方使用语法：<code>[^x]</code>，在文档的任意位置放置脚注的定义说明即可，如：<code>[^x]: 我是脚注说明</code>。</p>
 <p>参考：</p>
 <ul>
-<li><a href="http://pandoc.org/README.html#footnotes" target="_blank" rel="external">Pandoc - Pandoc User’s Guide - Footnotes</a></li><li><a href="https://github.com/markdown-it/markdown-it-footnote" target="_blank" rel="external">markdown-it/markdown-it-footnote: Footnotes plugin for markdown-it markdown parser</a></li><li><a href="https://github.com/LouisBarranqueiro/hexo-footnotes" target="_blank" rel="external">LouisBarranqueiro/hexo-footnotes: A plugin to support markdown footnotes in your Hexo blog posts</a></li></ul>
+<li><a href="http://pandoc.org/README.html#footnotes" target="_blank" rel="noopener">Pandoc - Pandoc User’s Guide - Footnotes</a></li><li><a href="https://github.com/markdown-it/markdown-it-footnote" target="_blank" rel="noopener">markdown-it/markdown-it-footnote: Footnotes plugin for markdown-it markdown parser</a></li><li><a href="https://github.com/LouisBarranqueiro/hexo-footnotes" target="_blank" rel="noopener">LouisBarranqueiro/hexo-footnotes: A plugin to support markdown footnotes in your Hexo blog posts</a></li></ul>
 <h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><p>自动生成文档的目录。语法格式为：<code>[TOC]</code>（Table of Content）。</p>
-<p>参考一个目录实现的repo：<a href="https://github.com/jonschlinkert/markdown-toc" target="_blank" rel="external">jonschlinkert/markdown-toc</a></p>
+<p>参考一个目录实现的repo：<a href="https://github.com/jonschlinkert/markdown-toc" target="_blank" rel="noopener">jonschlinkert/markdown-toc</a></p>
 <h3 id="下标"><a href="#下标" class="headerlink" title="下标"></a>下标</h3><p>使用一对符号<code>~</code>对文本定界。如：<code>H~2~O</code>。转换后的文本将使用标签<code>&lt;sub&gt;</code>包裹。</p>
 <h3 id="上标"><a href="#上标" class="headerlink" title="上标"></a>上标</h3><ul>
 <li>使用一对符号<code>^</code>对文本定界。如：<code>21^st^</code>。转换后的文本将使用标签<code>&lt;sup&gt;</code>包裹。</li><li>使用数学公式实现上标。如：<code>`$21^{st}$`</code>。</li></ul>
@@ -567,16 +569,16 @@ __我也是粗体__
 <p>块状数学公式语法：</p>
 <ul>
 <li>一行公式，定界符改为<code>$$</code>即可（Mathjax的语法）。</li><li>多行公式，使用类似语法高亮的语法，反引号后跟<code>math</code>即可。</li></ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="code">```math</span></div><div class="line">这里放置具体公式代码</div><div class="line">```</div></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">```math</span></span><br><span class="line"><span class="code">这里放置具体公式代码</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
 <p>常见数学公式渲染工具：</p>
 <ul>
-<li><a href="https://github.com/mathjax/MathJax" target="_blank" rel="external">Mathjax</a></li><li><a href="http://www.latex-project.org/" target="_blank" rel="external">LeTeX</a></li><li><a href="https://github.com/Khan/KaTeX" target="_blank" rel="external">KaTeX</a></li></ul>
-<h3 id="流程图、时序图、甘特图"><a href="#流程图、时序图、甘特图" class="headerlink" title="流程图、时序图、甘特图"></a>流程图、时序图、甘特图</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">流程图：</div><div class="line"><span class="code">```</span></div><div class="line">graph TD;</div><div class="line">    A--&gt;B;</div><div class="line">    A--&gt;C;</div><div class="line">    B--&gt;D;</div><div class="line">    C--&gt;D;</div><div class="line">```</div><div class="line"></div><div class="line">时序图：</div><div class="line"><span class="code">```</span></div><div class="line">sequenceDiagram</div><div class="line">    Alice-&gt;&gt;John: Hello John, how are you?</div><div class="line">    John--&gt;&gt;Alice: Great!</div><div class="line">```</div><div class="line"></div><div class="line">甘特图：</div><div class="line"><span class="code">```</span></div><div class="line">gantt</div><div class="line">    title A Gantt Diagram</div><div class="line"></div><div class="line">    section Section</div><div class="line">    A task           :a1, 2014-01-01, 30d</div><div class="line">    Another task     :after a1  , 20d</div><div class="line">    section Another</div><div class="line">    Task in sec      :2014-01-12  , 12d</div><div class="line">    anther task      : 24d</div><div class="line">```</div></pre></td></tr></table></figure>
+<li><a href="https://github.com/mathjax/MathJax" target="_blank" rel="noopener">Mathjax</a></li><li><a href="http://www.latex-project.org/" target="_blank" rel="noopener">LeTeX</a></li><li><a href="https://github.com/Khan/KaTeX" target="_blank" rel="noopener">KaTeX</a></li></ul>
+<h3 id="流程图、时序图、甘特图"><a href="#流程图、时序图、甘特图" class="headerlink" title="流程图、时序图、甘特图"></a>流程图、时序图、甘特图</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">流程图：</span><br><span class="line"><span class="code">```</span></span><br><span class="line"><span class="code">graph TD;</span></span><br><span class="line"><span class="code">    A--&gt;B;</span></span><br><span class="line"><span class="code">    A--&gt;C;</span></span><br><span class="line"><span class="code">    B--&gt;D;</span></span><br><span class="line"><span class="code">    C--&gt;D;</span></span><br><span class="line"><span class="code">```</span></span><br><span class="line"></span><br><span class="line">时序图：</span><br><span class="line"><span class="code">```</span></span><br><span class="line"><span class="code">sequenceDiagram</span></span><br><span class="line"><span class="code">    Alice-&gt;&gt;John: Hello John, how are you?</span></span><br><span class="line"><span class="code">    John--&gt;&gt;Alice: Great!</span></span><br><span class="line"><span class="code">```</span></span><br><span class="line"></span><br><span class="line">甘特图：</span><br><span class="line"><span class="code">```</span></span><br><span class="line"><span class="code">gantt</span></span><br><span class="line"><span class="code">    title A Gantt Diagram</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    section Section</span></span><br><span class="line"><span class="code">    A task           :a1, 2014-01-01, 30d</span></span><br><span class="line"><span class="code">    Another task     :after a1  , 20d</span></span><br><span class="line"><span class="code">    section Another</span></span><br><span class="line"><span class="code">    Task in sec      :2014-01-12  , 12d</span></span><br><span class="line"><span class="code">    anther task      : 24d</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
 <p>参考：</p>
 <ul>
-<li><a href="https://github.com/adrai/flowchart.js" target="_blank" rel="external">adrai/flowchart.js</a></li><li><a href="https://github.com/knsv/mermaid" target="_blank" rel="external">knsv/mermaid</a></li></ul>
+<li><a href="https://github.com/adrai/flowchart.js" target="_blank" rel="noopener">adrai/flowchart.js</a></li><li><a href="https://github.com/knsv/mermaid" target="_blank" rel="noopener">knsv/mermaid</a></li></ul>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://blog.codinghorror.com/the-future-of-markdown/" target="_blank" rel="external">The Future of Markdown</a></li><li><a href="http://www.worldhello.net/gotgithub/appendix/markups.html" target="_blank" rel="external">轻量级标记语言 — GotGitHub</a></li><li><a href="https://daringfireball.net/projects/markdown/syntax" target="_blank" rel="external">Daring Fireball: Markdown Syntax Documentation</a></li><li><a href="http://tool.lu/markdown/" target="_blank" rel="external">html转markdown - 在线工具</a></li><li><a href="http://www.atool.org/html2markdown.php" target="_blank" rel="external">Html转MarkDown代码, Html2MarkDown - aTool在线工具</a></li><li><a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/" target="_blank" rel="external">Basic writing and formatting syntax - User Documentation - Github</a></li></ul>
+<li><a href="https://blog.codinghorror.com/the-future-of-markdown/" target="_blank" rel="noopener">The Future of Markdown</a></li><li><a href="http://www.worldhello.net/gotgithub/appendix/markups.html" target="_blank" rel="noopener">轻量级标记语言 — GotGitHub</a></li><li><a href="https://daringfireball.net/projects/markdown/syntax" target="_blank" rel="noopener">Daring Fireball: Markdown Syntax Documentation</a></li><li><a href="http://tool.lu/markdown/" target="_blank" rel="noopener">html转markdown - 在线工具</a></li><li><a href="http://www.atool.org/html2markdown.php" target="_blank" rel="noopener">Html转MarkDown代码, Html2MarkDown - aTool在线工具</a></li><li><a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/" target="_blank" rel="noopener">Basic writing and formatting syntax - User Documentation - Github</a></li></ul>
 
       
     </div>
@@ -691,7 +693,7 @@ __我也是粗体__
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">62</span>
+              <span class="site-state-item-count">63</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -708,7 +710,7 @@ __我也是粗体__
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">159</span>
+                <span class="site-state-item-count">160</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -789,7 +791,7 @@ __我也是粗体__
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

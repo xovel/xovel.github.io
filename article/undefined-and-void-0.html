@@ -61,11 +61,13 @@
 
 
 <meta name="description" content="简单介绍一下undefined与void 0。">
+<meta name="keywords" content="undefined,void">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于undefined与void 0">
 <meta property="og:url" content="http://xovel.cn/article/undefined-and-void-0.html">
 <meta property="og:site_name" content="清风轩">
 <meta property="og:description" content="简单介绍一下undefined与void 0。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-11-18T07:00:40.177Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于undefined与void 0">
@@ -315,12 +317,12 @@
       
 
       
-        <p>在JS的通用语法里面，undefined表示未定义。更多资料可以查阅MDN文章：<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined" target="_blank" rel="external">undefined</a></p>
+        <p>在JS的通用语法里面，undefined表示未定义。更多资料可以查阅MDN文章：<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined" target="_blank" rel="noopener">undefined</a></p>
 <p>在ES5之前，window下的<code>undefined</code>是可以被<strong>重写</strong>的，于是导致了某些极端情况下使用undefined会出现一定的差错。</p>
 <p><code>void 0</code>的返回值均是<code>undefined</code>，这个是实实在在的undefined。</p>
 <blockquote>
 <p>事实上，<code>void</code>的返回值都是<code>undefined</code>。</p>
-<p>The void operator evaluates the given expression and then returns undefined. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void" target="_blank" rel="external">void operator</a></p>
+<p>The void operator evaluates the given expression and then returns undefined. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void" target="_blank" rel="noopener">void operator</a></p>
 </blockquote>
 <p>那么，在某些地方我们看到的<code>void 0</code>究竟是什么情况呢？</p>
 <p>总结了一下，有一下两个主要原因：</p>
@@ -329,12 +331,12 @@
 <blockquote>
 <p>事实上，有很多代码压缩工具会将<code>undefined</code>改写为<code>void 0</code>。<del>黑科技</del></p>
 </blockquote>
-<p>当初我在构建本人的JS类库的时候也采用了void的方式，具体代码可参阅<a href="https://github.com/xovel/qslinz/blob/v0.1.3/QsLinz.0.1.3.js#L341" target="_blank" rel="external">xovel/qslinz</a>。</p>
+<p>当初我在构建本人的JS类库的时候也采用了void的方式，具体代码可参阅<a href="https://github.com/xovel/qslinz/blob/v0.1.3/QsLinz.0.1.3.js#L341" target="_blank" rel="noopener">xovel/qslinz</a>。</p>
 <hr>
 <p>有一个更加黑科技的undefined使用方法，相信很多人都知道jQuery的代码曾经有过这样的书写方式：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">window, undefined</span>)</span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;)(<span class="built_in">window</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">window, undefined</span>)</span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;)(<span class="built_in">window</span>)</span><br></pre></td></tr></table></figure>
 <p>其用意也很明显，直接指定undefined的值。在压缩之后代码变为：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">e,t</span>)</span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;)(<span class="built_in">window</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">e,t</span>)</span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;)(<span class="built_in">window</span>)</span><br></pre></td></tr></table></figure>
 <p>ES5之后的标准中，规定了全局变量下的undefined值为只读，不可改写的，但是局部变量中依然可以对之进行改写。jQuery直接指定<code>undefined</code>为undefined。</p>
 
       
@@ -446,7 +448,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">62</span>
+              <span class="site-state-item-count">63</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -463,7 +465,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">159</span>
+                <span class="site-state-item-count">160</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -544,7 +546,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
