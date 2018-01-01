@@ -64,7 +64,7 @@ HTTP状态由[RFC 2068][rfc2068]定义，经过[RFC 2616][rfc2616]更新，[RFC 
 
 + 参考：[RFC7231, Section 6.2.2](http://tools.ietf.org/html/rfc7231#section-6.2.2)
 
-> The 101 (Switching Protocols) status code indicates that the server understands and is willing to comply with the client's request, via the Upgrade header field (Section 6.7 of [RFC7230]), for a change in the application protocol being used on this connection. The server MUST generate an Upgrade header field in the response that indicates which protocol(s) will be switched to immediately after the empty line that terminates the 101 response. 
+> The 101 (Switching Protocols) status code indicates that the server understands and is willing to comply with the client's request, via the Upgrade header field (Section 6.7 of [RFC7230]), for a change in the application protocol being used on this connection. The server MUST generate an Upgrade header field in the response that indicates which protocol(s) will be switched to immediately after the empty line that terminates the 101 response.
 
 > It is assumed that the server will only agree to switch protocols when it is advantageous to do so. For example, switching to a newer version of HTTP might be advantageous over older versions, and switching to a real-time, synchronous protocol might be advantageous when delivering resources that use such features.
 
@@ -75,6 +75,16 @@ HTTP状态由[RFC 2068][rfc2068]定义，经过[RFC 2616][rfc2616]更新，[RFC 
 > A WebDAV request may contain many sub-requests involving file operations, requiring a long time to complete the request. This code indicates that the server has received and is processing the request, but no response is available yet. This prevents the client from timing out and assuming the request was lost.
 
 + 参考：[RFC2518, Section 10.1](https://tools.ietf.org/html/rfc2518#section-10.1)
+
+#### 103 Early Hints
+
+由 IETF 直接颁布的最新 HTTP 状态码，该状态码目的是为了最小化用户感知的延迟，让浏览器预加载一些外部资源链接，服务器发送头文件前先发送包含外部资源链接的头文件，浏览器客户端可以根据这个信息来提前预加载 CSS 和 JavaScript 文件。
+
+> The 103 (Early Hints) informational status code indicates to the client that the server is likely to send a final response with the header fields included in the informational response.
+
++ 参考：[103 Early Hints - draft-ietf-httpbis-early-hints-05 - An HTTP Status Code for Indicating Hints](https://tools.ietf.org/html/draft-ietf-httpbis-early-hints-05#section-2)
++ 参考：[An HTTP Status Code for Indicating Hints](https://datatracker.ietf.org/doc/draft-ietf-httpbis-early-hints/)
++ 参考：[HTTP 103 – An HTTP Status Code for Indicating Hints | Hacker News](https://news.ycombinator.com/item?id=15590049)
 
 ### 2xx 成功
 
@@ -200,7 +210,7 @@ HTTP状态由[RFC 2068][rfc2068]定义，经过[RFC 2616][rfc2616]更新，[RFC 
 
 新的永久性的 URI 应当在响应的 Location 域中返回。除非这是一个 HEAD 请求，否则响应的实体中应当包含指向新的 URI 的超链接及简短说明。
 
-如果这不是一个 GET 或者 HEAD 请求，因此浏览器禁止自动进行重定向，除非得到用户的确认，因为请求的条件可能因此发生变化。 
+如果这不是一个 GET 或者 HEAD 请求，因此浏览器禁止自动进行重定向，除非得到用户的确认，因为请求的条件可能因此发生变化。
 
 注意：对于某些使用 HTTP/1.0 协议的浏览器，当它们发送的 POST 请求得到了一个301响应的话，接下来的重定向请求将会变成 GET 方式。
 
@@ -253,7 +263,7 @@ HTTP状态由[RFC 2068][rfc2068]定义，经过[RFC 2616][rfc2616]更新，[RFC 
 
 > The 305 (Use Proxy) status code has been deprecated due to security
    concerns regarding in-band configuration of a proxy.
-   
+
 > 由于安全原因，该状态已被废弃。
 
 #### 306 ~~Switch Proxy~~ Unused
@@ -588,7 +598,7 @@ WebDAV 扩展，表示由于之前的某个请求发生的错误，导致当前�
 
 > The server is unable to store the representation needed to complete the request.
 
-#### 508 Loop Detected 
+#### 508 Loop Detected
 
 服务器发现了一个无限的循环档处理请求的时候。
 
@@ -875,16 +885,16 @@ IIS 8.0 中添加的：
 > ARR（Application Request Route）是一个寄宿于 IIS7（及以后的IIS 版本）的一个基于代理的模块，它可以通过判断Http Headers，Server Variables 以及负载均衡算法将 HTTP 的请求转发到不同的处理服务器之上。
 
 - 400.601	错误的客户端请求
-- 400.602	无效的时间格式 
-- 400.603	解析范围错误 
+- 400.602	无效的时间格式
+- 400.603	解析范围错误
 - 400.604	发往客户端
-- 400.605	最大转发数量 
+- 400.605	最大转发数量
 - 400.606	异步完成错误
 - 502.2	映射请求失败
-- 502.3	WinHTTP 异步完成失败 
+- 502.3	WinHTTP 异步完成失败
 - 502.4	无服务器
-- 502.5	WebSocket 失败 
-- 502.6	转发请求失败 
+- 502.5	WebSocket 失败
+- 502.6	转发请求失败
 - 502.7	执行请求失败
 
 更多信息请参阅微软官方文档：[IIS 7.0、IIS 7.5 和 IIS 8.0 中的 HTTP 状态代码][iis]
