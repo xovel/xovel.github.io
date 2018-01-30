@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2018-01-10T16:29:05.308Z</updated>
+  <updated>2018-01-30T16:39:19.880Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,86 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>node 下的微信公众号支付初探</title>
+    <link href="http://xovel.cn/article/node-wxpay.html"/>
+    <id>http://xovel.cn/article/node-wxpay.html</id>
+    <published>2018-01-30T15:06:50.000Z</published>
+    <updated>2018-01-30T16:39:19.880Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>那么，就直接开门见山呗。本篇博客根据个人日志记录整理而成。</p>
+</blockquote>
+<p>其实大部分的文档，微信官方开发文档里面都提供了，我们只需要按照其说明严格执行就可以达到目的。</p>
+<p>注意，这里只讲述公众号支付相关的情形，其他的基本类似，本人未作深入实践，故此不敢多言。</p>
+<p>这次的讲解，主要从四个方面进行说明：</p>
+<ol>
+<li>相关账户配置</li><li>后台的搭建</li><li>前端页面的展示</li><li>支付流程</li></ol>
+<h3 id="账户"><a href="#账户" class="headerlink" title="账户"></a>账户</h3><p>首先，肯定是需要一个微信公众号的。公众号的性质需要满足开通商户号和微信支付，并且实际上已经开通好了。这次我用的账号是认证好了的服务号。</p>
+<p>进入公众号设置界面，对相关的域名进行配置，本次调试，我使用的域名是 <code>z.hdk4.com</code>，故此在公众的管理页面的 <code>【设置】-【公众号设置】-【功能设置】</code> 中对 <code>业务域名</code>、<code>JS接口安全域名</code>、<code>网页授权域名</code> 全部进行了相应的设置。</p>
+<blockquote>
+<p>至于开发者的添加和公众号密钥和商户号密钥等数据的获取，属于入门级别，这里不再赘述。</p>
+</blockquote>
+<p>要做微信支付，需要事先对 <code>支付授权目录</code> 进行设置，在商户号管理页面就能够找得到，直接进行设置即可。注意这里是 <code>支付目录</code> 的设置，即浏览器访问下的 <code>location.pathname</code> 对应的访问路径，结尾必须以 <code>/</code> 结束且<strong>区分大小写</strong>。</p>
+<h3 id="后台"><a href="#后台" class="headerlink" title="后台"></a>后台</h3><p>这一块最为重要也是核心所在，由于只是演示与测验，所以采用了简单粗暴的 <code>express</code> 来作为后台服务器。详情容后再禀。</p>
+<h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><p>前端页面相对来说简单一些，在引入微信的官方 <code>js</code>，即 <a href="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" target="_blank" rel="noopener">http://res.wx.qq.com/open/js/jweixin-1.2.0.js</a> 之后，调用 <code>WeixinJSBridge</code> 的 API，发起 <code>getBrandWCPayRequest</code> 请求即可。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">WeixinJSBridge.invoke(<span class="string">'getBrandWCPayRequest'</span>, &#123;</span><br><span class="line">  appId: data.appId,</span><br><span class="line">  timeStamp: data.timeStamp,</span><br><span class="line">  nonceStr: data.nonceStr,</span><br><span class="line">  package: data.package,</span><br><span class="line">  signType: data.signType,</span><br><span class="line">  paySign: data.paySign</span><br><span class="line">&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>当然，在这里之前，需要先获取用户的 <code>openid</code>。</p>
+<p>当然，在获取 <code>openid</code> 之前，还需要获取一下用户的访问 <code>code</code>。</p>
+<p>那么，这个访问的 <code>code</code> 如何获取呢？</p>
+<p>根据微信开发文档提供的链接 <a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140842" target="_blank" rel="noopener">https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140842</a>，我们先判断链接是否有 <code>code</code> 字段，如果没有则跳转到微信的链接去进行获取。获取到了之后再进行 <code>openid</code> 的获取。文档方面的信息这里不详细展开，直接上代码进行说明吧！</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> code = getUrlParam(<span class="string">'code'</span>) || sessionStorage.code;</span><br><span class="line"><span class="keyword">var</span> openid = sessionStorage.openid;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 没有 openid 则尝试获取 code</span></span><br><span class="line"><span class="comment">// code 获取之后跳回原链接进行临时存储</span></span><br><span class="line"><span class="keyword">if</span> (!openid) &#123;</span><br><span class="line">  <span class="keyword">if</span> (!code) &#123;</span><br><span class="line">    <span class="keyword">var</span> redirect_uri = <span class="built_in">encodeURIComponent</span>(<span class="string">'http://z.hdk4.com/d.html'</span>);</span><br><span class="line">    <span class="built_in">window</span>.location.replace(<span class="string">'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxbce0a3daf503097c&amp;redirect_uri='</span> + redirect_uri + <span class="string">'&amp;response_type=code&amp;scope=snsapi_base&amp;state=7'</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (!sessionStorage.code) &#123;</span><br><span class="line">    sessionStorage.code = code;</span><br><span class="line">    <span class="built_in">window</span>.location.replace(<span class="string">'http://z.hdk4.com/d.html'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>几点说明：</p>
+<ul>
+<li><code>deviceId</code> 是临时的测试参数，可以忽略。</li><li><code>redirect_uri</code> 中的 <code>state=7</code> 是随便写的一个值。</li><li><code>window.location.replace</code> 用于直接替换，如果不想要替换效果，可以修改为 <code>window.location.href = &#39;...&#39;</code>。</li><li>采用 <code>sessionStorage</code> 进行数据的缓存。</li><li><code>getUrlParam</code> 为提取链接中的 <code>querystring</code>。</li><li><del>不要管 <code>yoda</code> 什么的了</del></li></ul>
+<p>前端差不多能说的就这么多了。</p>
+<h3 id="支付流程"><a href="#支付流程" class="headerlink" title="支付流程"></a>支付流程</h3><p>整个支付流程浓缩起来就是：</p>
+<ol>
+<li>获取 <code>code</code></li><li>获取 <code>openid</code></li><li>开始进行支付操作</li><li>后台发起预支付订单</li><li>后台将获取到的预支付信息返回给前端</li><li>前端尝试唤起微信支付</li><li>进行支付</li><li>前端/后台处理支付回调。是的，都进行处理。前端无所谓，后台必须处理，不然微信会发很多次请求。</li><li>支付完成</li><li>后续一些相关操作。由于本次只是演示与测验，就不做处理了。</li></ol>
+<hr>
+<p>现在来说一下核心的重点，即后台的相关逻辑处理与接口的设计。</p>
+<h3 id="后台-1"><a href="#后台-1" class="headerlink" title="后台"></a>后台</h3><p>相关的库的引入与声明，这里就不赘述了。</p>
+<h4 id="api-getopenid-接口"><a href="#api-getopenid-接口" class="headerlink" title="/api/getopenid 接口"></a><code>/api/getopenid</code> 接口</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取 openid</span></span><br><span class="line">app.get(<span class="string">'/api/getopenid'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> code = req.query.code;</span><br><span class="line">  <span class="keyword">const</span> access_token_url = <span class="string">`https://api.weixin.qq.com/sns/oauth2/access_token?appid=<span class="subst">$&#123;config.app_id&#125;</span>&amp;secret=<span class="subst">$&#123;config.app_secret&#125;</span>&amp;code=<span class="subst">$&#123;code&#125;</span>&amp;grant_type=authorization_code`</span>;</span><br><span class="line"></span><br><span class="line">  request.post(&#123; <span class="attr">url</span>: access_token_url &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">error, response, body</span>) </span>&#123;</span><br><span class="line">    wFile(<span class="string">'openid'</span>, body);</span><br><span class="line">    <span class="keyword">if</span> (error) &#123;</span><br><span class="line">      res.json(&#123; <span class="attr">error</span>: body &#125;);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (response.statusCode === <span class="number">200</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span> (body.errcode === <span class="number">40029</span> ) &#123;</span><br><span class="line">        res.json(&#123; <span class="attr">error</span>: body &#125;);</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        body = <span class="built_in">JSON</span>.parse(body);</span><br><span class="line">        res.json(&#123; <span class="attr">data</span>: body &#125;);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      res.json(&#123; <span class="attr">error</span>: <span class="number">-1</span> &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>该接口是用来获取用户的 <code>openid</code> 的，要求的东西是 <code>code</code>，这个 <code>code</code> 就是上面前端花费一番周折得到的东西。</p>
+<p>前端调用方式：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getOpenId</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (sessionStorage.openid) &#123;</span><br><span class="line">      resolve(sessionStorage.openid);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      $.get(<span class="string">'/api/getopenid?code='</span> + sessionStorage.code).then(<span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> data = res.data;</span><br><span class="line">        <span class="keyword">if</span> (data &amp;&amp; data.openid) &#123;</span><br><span class="line">          sessionStorage.openid = data.openid;</span><br><span class="line">          resolve(data.openid)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          reject();</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>是的， <code>$</code> 就是大名鼎鼎的 <code>jQuery</code>。</li><li>采用了 <code>Promise</code> 对象。</li></ul>
+<h4 id="api-unifiedorder-接口"><a href="#api-unifiedorder-接口" class="headerlink" title="/api/unifiedorder 接口"></a><code>/api/unifiedorder</code> 接口</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取微信支付的统一下单相关数据</span></span><br><span class="line">app.get(<span class="string">'/api/unifiedorder'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> openid = req.query.openid;</span><br><span class="line">  <span class="keyword">const</span> ip = getClientIp(req);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 商户订单号</span></span><br><span class="line">  <span class="keyword">const</span> out_trade_no = <span class="string">'test'</span> + <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 统一下单的相关参数</span></span><br><span class="line">  <span class="keyword">const</span> paramUnifiedOrder = &#123;</span><br><span class="line">    appid: config.app_id,</span><br><span class="line">    attach: <span class="string">'test'</span>,</span><br><span class="line">    body: <span class="string">'desc'</span>,</span><br><span class="line">    mch_id: config.mch_id,</span><br><span class="line">    nonce_str: createNonceStr(),</span><br><span class="line">    notify_url: config.notify_url, <span class="comment">// 微信付款后的回调地址</span></span><br><span class="line">    openid: openid,</span><br><span class="line">    out_trade_no: out_trade_no,</span><br><span class="line">    spbill_create_ip: ip,</span><br><span class="line">    total_fee: <span class="number">1</span>,</span><br><span class="line">    trade_type: <span class="string">'JSAPI'</span></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 签名</span></span><br><span class="line">  paramUnifiedOrder.sign = getSign(paramUnifiedOrder);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 请求微信支付下单接口，获取预订单编号</span></span><br><span class="line">  request.post(&#123; <span class="attr">url</span>: <span class="string">'https://api.mch.weixin.qq.com/pay/unifiedorder'</span>, <span class="attr">body</span>: <span class="built_in">JSON</span>.stringify(getUnifiedOrderXml(paramUnifiedOrder)) &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">error, response, body</span>) </span>&#123;</span><br><span class="line">    wFile(<span class="string">'unifiedorder'</span>, body);</span><br><span class="line">    <span class="keyword">if</span> (error) &#123;</span><br><span class="line">      res.json(&#123; <span class="attr">error</span>: body &#125;);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (response.statusCode === <span class="number">200</span>) &#123;</span><br><span class="line">      <span class="keyword">let</span> prepay_id = <span class="string">''</span>; <span class="comment">// 预订单编号</span></span><br><span class="line">      <span class="comment">// 微信返回的数据为 xml 格式，需要进行解析</span></span><br><span class="line">      xml2jsparseString(body, &#123; <span class="attr">async</span>: <span class="literal">true</span> &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">error, result</span>) </span>&#123;</span><br><span class="line">        prepay_id = result.xml.prepay_id[<span class="number">0</span>]; <span class="comment">// 获取预订单编号</span></span><br><span class="line">        <span class="keyword">const</span> paramWCPay = &#123;</span><br><span class="line">          appId: config.app_id,</span><br><span class="line">          timeStamp: <span class="built_in">parseInt</span>(<span class="keyword">new</span> <span class="built_in">Date</span>().getTime() / <span class="number">1000</span>).toString(),</span><br><span class="line">          nonceStr: createNonceStr(),</span><br><span class="line">          package: <span class="string">'prepay_id='</span> + prepay_id,</span><br><span class="line">          signType: <span class="string">'MD5'</span></span><br><span class="line">        &#125;;</span><br><span class="line">        paramWCPay.paySign = getSign(paramWCPay); <span class="comment">// 微信支付签名</span></span><br><span class="line">        res.json(&#123; <span class="attr">data</span>: paramWCPay &#125;);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      res.json(&#123; <span class="attr">error</span>: <span class="number">-1</span> &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>getClientIp</code> 是获取客户端真实 IP 地址的方法。</li><li><code>createNonceStr</code> 是生成随机串的方式，非常简单粗暴。</li><li><code>out_trade_no</code> 是商户自定义的订单号，这个也是最终输出的数据库附加上去了。</li><li><code>getUnifiedOrderXml</code> 是用来拼接发送给微信支付统一下单接口的数据，要 <code>xml</code> 格式的，所以就给一个封装。</li><li><code>wFile</code> 是日志记录相关操作，可以无视。</li><li><code>xml2jsparseString</code> 是解析 <code>xml</code> 文件的库。微信支付统一下单接口返回的数据是 <code>xml</code> 格式的，需要进行相应的解码。</li><li><code>getSign</code> 是生成签名的方法。</li></ul>
+<hr>
+<p>如果不出意外，下单接口会返回一个 <code>xml</code> 数据，然后我们就可以提取到 <code>prepay_id</code> 这个核心的信息了。</p>
+<h4 id="api-wxresponse-接口"><a href="#api-wxresponse-接口" class="headerlink" title="/api/wxresponse 接口"></a><code>/api/wxresponse</code> 接口</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 处理微信支付的回调</span></span><br><span class="line">app.post(<span class="string">'/api/wxresponse'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  wFile(<span class="string">'response'</span>, req.body);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> xmlData = req.body.xml;</span><br><span class="line">  <span class="keyword">let</span> ret = <span class="string">''</span>;</span><br><span class="line">  <span class="keyword">if</span> (xmlData.sign === getSign(xmlData)) &#123;</span><br><span class="line">    ret = <span class="string">`&lt;xml&gt;</span></span><br><span class="line"><span class="string">  &lt;return_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/return_code&gt;</span></span><br><span class="line"><span class="string">  &lt;return_msg&gt;&lt;![CDATA[OK]]&gt;&lt;/return_msg&gt;</span></span><br><span class="line"><span class="string">&lt;/xml&gt;`</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    ret = <span class="string">`&lt;xml&gt;</span></span><br><span class="line"><span class="string">  &lt;return_code&gt;&lt;![CDATA[SIGNATRURE_ERROR]]&gt;&lt;/return_code&gt;</span></span><br><span class="line"><span class="string">  &lt;return_msg&gt;&lt;![CDATA[FAIL]]&gt;&lt;/return_msg&gt;</span></span><br><span class="line"><span class="string">&lt;/xml&gt;`</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  res.send(ret);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>该接口是用来处理 <code>notify_url</code> 指定的回调链接的相关数据的，本次用的具体值就是 <a href="http://z.hdk4.com/api/wxresponse" target="_blank" rel="noopener">http://z.hdk4.com/api/wxresponse</a>。</p>
+<p>由于只是测试，所以就简单粗暴的直接 <code>res.send(ret)</code> 回去了。如果不对该接口做回应，微信支付会一直发请求，直至系统判定失败。</p>
+<p>注意，使用 <code>express</code> 进行开发时，会收不到 <code>req.body</code>，采用以下方法进行解决即可：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> bodyParser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">'body-parser-xml'</span>)(bodyParser);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 解决微信支付通知回调数据</span></span><br><span class="line">app.use(bodyParser.xml(&#123;</span><br><span class="line">  limit: <span class="string">'1MB'</span>,   <span class="comment">// Reject payload bigger than 1 MB</span></span><br><span class="line">  xmlParseOptions: &#123;</span><br><span class="line">    normalize: <span class="literal">true</span>,     <span class="comment">// Trim whitespace inside text nodes</span></span><br><span class="line">    normalizeTags: <span class="literal">true</span>, <span class="comment">// Transform tags to lowercase</span></span><br><span class="line">    explicitArray: <span class="literal">false</span> <span class="comment">// Only put nodes in array if &gt;1</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure>
+<h4 id="签名算法"><a href="#签名算法" class="headerlink" title="签名算法"></a>签名算法</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 签名算法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSign</span>(<span class="params">paramSign</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 按 key 值的 ascii 排序</span></span><br><span class="line">  <span class="keyword">const</span> keys = <span class="built_in">Object</span>.keys(paramSign).sort();</span><br><span class="line">  <span class="keyword">const</span> temp = [];</span><br><span class="line">  keys.forEach(<span class="function"><span class="params">v</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (paramSign[v] &amp;&amp; v !== <span class="string">'sign'</span>) &#123;</span><br><span class="line">      temp.push(<span class="string">`<span class="subst">$&#123;v&#125;</span>=<span class="subst">$&#123;paramSign[v]&#125;</span>`</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  temp.push(<span class="string">`key=<span class="subst">$&#123;config.mch_key&#125;</span>`</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> ret = temp.join(<span class="string">'&amp;'</span>);</span><br><span class="line">  <span class="comment">// 生成签名</span></span><br><span class="line">  <span class="keyword">return</span> crypto.createHash(<span class="string">'md5'</span>).update(ret, <span class="string">'utf8'</span>).digest(<span class="string">'hex'</span>).toUpperCase();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>非常<del>简单粗暴</del>的算法，嗯，如上所示。如果是其他语言，在生成 <code>MD5</code> 值的时候方法可能会有所不同，使用对应的方法即可。</p>
+<h4 id="随机字符串方法"><a href="#随机字符串方法" class="headerlink" title="随机字符串方法"></a>随机字符串方法</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createNonceStr</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.random().toString(<span class="number">36</span>).substr(<span class="number">2</span>, <span class="number">15</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><del>是的，这一条是滥竽充数的</del>。</p>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
+<li><a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_4" target="_blank" rel="noopener">获取openid</a></li><li><a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140842" target="_blank" rel="noopener">微信网页授权</a></li><li><a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_7&amp;index=6" target="_blank" rel="noopener">微信内H5调起支付</a></li><li><a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_3" target="_blank" rel="noopener">签名算法</a></li><li><a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_1" target="_blank" rel="noopener">统一下单</a></li><li><a href="https://github.com/wxpay/WXPay-SDK-Node.js" target="_blank" rel="noopener">wxpay/WXPay-SDK-Node.js</a></li><li><a href="https://gitee.com/anziguoer/wechatPay" target="_blank" rel="noopener">nodejs 微信公众号支付开发</a>，<em>大部分代码参考于此</em>。</li><li><a href="https://www.cnblogs.com/yimiyan/p/5603657.html" target="_blank" rel="noopener">微信公众号支付开发全过程 –JAVA</a></li><li><a href="http://blog.csdn.net/aofavx/article/details/52220394" target="_blank" rel="noopener">微信公众号支付详细步骤(整理)</a></li><li><a href="https://segmentfault.com/a/1190000005797170" target="_blank" rel="noopener">Nginx向ExpressJS转发真实IP地址</a></li><li><a href="https://www.jianshu.com/p/0496ef49b2a5" target="_blank" rel="noopener">Nodejs 部署到阿里云全过程</a></li><li><a href="http://www.expressjs.com.cn/starter/static-files.html" target="_blank" rel="noopener">利用 Express 托管静态文件</a></li><li><a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass" target="_blank" rel="noopener">proxy_pass</a></li></ul>
+]]></content>
+    
+    <summary type="html">
+    
+      本文记录一下关于 node/express 下的微信公众号支付测试小 demo 的开发过程。
+    
+    </summary>
+    
+      <category term="Node" scheme="http://xovel.cn/categories/node/"/>
+    
+    
+      <category term="node" scheme="http://xovel.cn/tags/node/"/>
+    
+      <category term="wxpay" scheme="http://xovel.cn/tags/wxpay/"/>
+    
+      <category term="公众号" scheme="http://xovel.cn/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>Gulp 4 已发布！</title>
@@ -151,11 +231,11 @@
     
       <category term="2017" scheme="http://xovel.cn/tags/2017/"/>
     
-      <category term="2018" scheme="http://xovel.cn/tags/2018/"/>
-    
       <category term="总结" scheme="http://xovel.cn/tags/%E6%80%BB%E7%BB%93/"/>
     
       <category term="经历" scheme="http://xovel.cn/tags/%E7%BB%8F%E5%8E%86/"/>
+    
+      <category term="2018" scheme="http://xovel.cn/tags/2018/"/>
     
   </entry>
   
@@ -414,11 +494,11 @@
     
       <category term="npm" scheme="http://xovel.cn/tags/npm/"/>
     
+      <category term="node" scheme="http://xovel.cn/tags/node/"/>
+    
       <category term="tree" scheme="http://xovel.cn/tags/tree/"/>
     
       <category term="htree" scheme="http://xovel.cn/tags/htree/"/>
-    
-      <category term="node" scheme="http://xovel.cn/tags/node/"/>
     
       <category term="CLI" scheme="http://xovel.cn/tags/CLI/"/>
     
@@ -1372,13 +1452,13 @@ print(-y); // useful
       <category term="生活" scheme="http://xovel.cn/categories/life/"/>
     
     
+      <category term="2016" scheme="http://xovel.cn/tags/2016/"/>
+    
       <category term="2017" scheme="http://xovel.cn/tags/2017/"/>
     
       <category term="总结" scheme="http://xovel.cn/tags/%E6%80%BB%E7%BB%93/"/>
     
       <category term="经历" scheme="http://xovel.cn/tags/%E7%BB%8F%E5%8E%86/"/>
-    
-      <category term="2016" scheme="http://xovel.cn/tags/2016/"/>
     
   </entry>
   
@@ -1414,9 +1494,9 @@ print(-y); // useful
       <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
     
     
-      <category term="js" scheme="http://xovel.cn/tags/js/"/>
-    
       <category term="object" scheme="http://xovel.cn/tags/object/"/>
+    
+      <category term="js" scheme="http://xovel.cn/tags/js/"/>
     
       <category term="trap" scheme="http://xovel.cn/tags/trap/"/>
     
@@ -1476,72 +1556,6 @@ print(-y); // useful
       <category term="入门" scheme="http://xovel.cn/tags/%E5%85%A5%E9%97%A8/"/>
     
       <category term="HTML" scheme="http://xovel.cn/tags/html/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Foxmail接收密码错误的处理</title>
-    <link href="http://xovel.cn/article/fix-foxmail-receive-password-error.html"/>
-    <id>http://xovel.cn/article/fix-foxmail-receive-password-error.html</id>
-    <published>2016-12-10T07:43:49.000Z</published>
-    <updated>2016-12-10T08:22:00.767Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近在使用Foxmail邮箱的时候出现了一个问题，在接收邮件的时候会弹出一个提示框，说密码错误。</p>
-<a id="more"></a>
-<p><img src="http://ww3.sinaimg.cn/large/79be2309gw1falr9xhz16j20du09qglx.jpg" alt=""></p>
-<p><del>一开始我还真以为是密码错误了，</del>修改了密码，再去登录，依然有这个提示。</p>
-<p>打开搜索引擎搜了一下，发现有这个问题的人并不是只有我一个，看了几篇文章之后发现，竟然是跟一个叫<code>IMAP</code>的东西有关的。</p>
-<blockquote>
-<p><code>IMAP</code>，即<strong>I</strong>nternet <strong>M</strong>essage <strong>A</strong>ccess <strong>P</strong>rotocol（互联网邮件访问协议），您可以通过这种协议从邮件服务器上获取邮件的信息、下载邮件等。IMAP与POP类似，都是一种邮件获取协议。</p>
-</blockquote>
-<p>参考信息来自于：<a href="http://service.mail.qq.com/cgi-bin/help?subtype=1&amp;&amp;id=28&amp;&amp;no=331" target="_blank" rel="noopener">QQ邮箱帮助中心</a></p>
-<p>不管它的目的是什么，总归是为了安全方面的问题，必须要支持。</p>
-<blockquote>
-<p>其实在弹出的提示框中有链接，里面就是解决办法，我是舍近求远了。<a href="http://service.mail.qq.com/cgi-bin/help?subtype=1&amp;&amp;id=28&amp;&amp;no=1001256" target="_blank" rel="noopener">什么是授权码，它又是如何设置？_QQ邮箱帮助中心</a></p>
-</blockquote>
-<p>那么，问题出现了应该怎么去解决呢？</p>
-<p>设置这个密码并填写进那个提示框即可，详细步骤如下：</p>
-<blockquote>
-<p>我用的是QQ邮箱，这里演示以这个为准，其他邮箱的操作应该是类似的。</p>
-</blockquote>
-<p>首先，登录网页版邮箱，在<strong>帐户设置</strong>相关的页面中，找到<code>POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务</code>一项，如图：</p>
-<p><img src="http://ww2.sinaimg.cn/large/79be2309gw1falr9xzlk5j20qk092aas.jpg" alt=""></p>
-<p>开启<code>IMAP/SMTP服务</code>，会要求一个验证：</p>
-<p><img src="http://ww4.sinaimg.cn/large/79be2309gw1falr9ygetoj20f70adaa6.jpg" alt=""></p>
-<p>验证一下即可，验证通过后会给出一个验证码：</p>
-<p><img src="http://ww1.sinaimg.cn/large/79be2309gw1falr9ygsi5j20hv0baq3c.jpg" alt=""></p>
-<p>将这个验证码输入到Foxmail弹出的那个提示对话框中，确认即可。</p>
-<p><img src="http://ww3.sinaimg.cn/large/79be2309gw1falr9yygc1j20g506taa2.jpg" alt=""></p>
-<p>关于<code>IMAP</code>和<code>POP3</code>的区别，在<a href="http://service.mail.qq.com/cgi-bin/help?subtype=1&amp;&amp;id=28&amp;&amp;no=331" target="_blank" rel="noopener">QQ邮箱的帮助文档</a>中有详细介绍，这里就不赘述了。</p>
-<hr>
-<blockquote>
-<ol>
-<li>截图看起来有点不对劲，可能是<code>win10</code>系统的缘故吧。</li><li>Foxmail的那张截图，中间有乱码，应该是系统编码冲突的原因，暂时不去深究了。</li></ol>
-</blockquote>
-<hr>
-<p>本文完。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近在使用Foxmail邮箱的时候出现了一个问题，在接收邮件的时候会弹出一个提示框，说密码错误。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
-    
-    
-      <category term="foxmail" scheme="http://xovel.cn/tags/foxmail/"/>
-    
-      <category term="接收密码" scheme="http://xovel.cn/tags/%E6%8E%A5%E6%94%B6%E5%AF%86%E7%A0%81/"/>
-    
-      <category term="邮箱" scheme="http://xovel.cn/tags/%E9%82%AE%E7%AE%B1/"/>
-    
-      <category term="SMTP" scheme="http://xovel.cn/tags/SMTP/"/>
-    
-      <category term="IMAP" scheme="http://xovel.cn/tags/IMAP/"/>
-    
-      <category term="授权码" scheme="http://xovel.cn/tags/%E6%8E%88%E6%9D%83%E7%A0%81/"/>
     
   </entry>
   
