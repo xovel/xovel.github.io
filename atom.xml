@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2018-01-30T16:39:19.880Z</updated>
+  <updated>2018-01-30T16:46:39.749Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,10 +20,11 @@
     <link href="http://xovel.cn/article/node-wxpay.html"/>
     <id>http://xovel.cn/article/node-wxpay.html</id>
     <published>2018-01-30T15:06:50.000Z</published>
-    <updated>2018-01-30T16:39:19.880Z</updated>
+    <updated>2018-01-30T16:46:39.749Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>那么，就直接开门见山呗。本篇博客根据个人日志记录整理而成。</p>
+<p>项目地址：<a href="https://github.com/xovel/node-wxpay-test" target="_blank" rel="noopener">https://github.com/xovel/node-wxpay-test</a></p>
 </blockquote>
 <p>其实大部分的文档，微信官方开发文档里面都提供了，我们只需要按照其说明严格执行就可以达到目的。</p>
 <p>注意，这里只讲述公众号支付相关的情形，其他的基本类似，本人未作深入实践，故此不敢多言。</p>
