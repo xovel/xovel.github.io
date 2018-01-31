@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2018-01-30T16:46:39.749Z</updated>
+  <updated>2018-01-31T02:20:16.532Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xovel.cn/article/node-wxpay.html"/>
     <id>http://xovel.cn/article/node-wxpay.html</id>
     <published>2018-01-30T15:06:50.000Z</published>
-    <updated>2018-01-30T16:46:39.749Z</updated>
+    <updated>2018-01-31T02:20:16.532Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>那么，就直接开门见山呗。本篇博客根据个人日志记录整理而成。</p>
@@ -47,7 +47,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> code = getUrlParam(<span class="string">'code'</span>) || sessionStorage.code;</span><br><span class="line"><span class="keyword">var</span> openid = sessionStorage.openid;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 没有 openid 则尝试获取 code</span></span><br><span class="line"><span class="comment">// code 获取之后跳回原链接进行临时存储</span></span><br><span class="line"><span class="keyword">if</span> (!openid) &#123;</span><br><span class="line">  <span class="keyword">if</span> (!code) &#123;</span><br><span class="line">    <span class="keyword">var</span> redirect_uri = <span class="built_in">encodeURIComponent</span>(<span class="string">'http://z.hdk4.com/d.html'</span>);</span><br><span class="line">    <span class="built_in">window</span>.location.replace(<span class="string">'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxbce0a3daf503097c&amp;redirect_uri='</span> + redirect_uri + <span class="string">'&amp;response_type=code&amp;scope=snsapi_base&amp;state=7'</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (!sessionStorage.code) &#123;</span><br><span class="line">    sessionStorage.code = code;</span><br><span class="line">    <span class="built_in">window</span>.location.replace(<span class="string">'http://z.hdk4.com/d.html'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>几点说明：</p>
 <ul>
-<li><code>deviceId</code> 是临时的测试参数，可以忽略。</li><li><code>redirect_uri</code> 中的 <code>state=7</code> 是随便写的一个值。</li><li><code>window.location.replace</code> 用于直接替换，如果不想要替换效果，可以修改为 <code>window.location.href = &#39;...&#39;</code>。</li><li>采用 <code>sessionStorage</code> 进行数据的缓存。</li><li><code>getUrlParam</code> 为提取链接中的 <code>querystring</code>。</li><li><del>不要管 <code>yoda</code> 什么的了</del></li></ul>
+<li><code>redirect_uri</code> 中的 <code>state=7</code> 是随便写的一个值。</li><li><code>window.location.replace</code> 用于直接替换，如果不想要替换效果，可以修改为 <code>window.location.href = &#39;...&#39;</code>。</li><li>采用 <code>sessionStorage</code> 进行数据的缓存。</li><li><code>getUrlParam</code> 为提取链接中的 <code>querystring</code>。</li><li><del>不要管 <code>yoda</code> 什么的了</del></li></ul>
 <p>前端差不多能说的就这么多了。</p>
 <h3 id="支付流程"><a href="#支付流程" class="headerlink" title="支付流程"></a>支付流程</h3><p>整个支付流程浓缩起来就是：</p>
 <ol>
@@ -68,8 +68,10 @@
 <p>如果不出意外，下单接口会返回一个 <code>xml</code> 数据，然后我们就可以提取到 <code>prepay_id</code> 这个核心的信息了。</p>
 <h4 id="api-wxresponse-接口"><a href="#api-wxresponse-接口" class="headerlink" title="/api/wxresponse 接口"></a><code>/api/wxresponse</code> 接口</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 处理微信支付的回调</span></span><br><span class="line">app.post(<span class="string">'/api/wxresponse'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  wFile(<span class="string">'response'</span>, req.body);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> xmlData = req.body.xml;</span><br><span class="line">  <span class="keyword">let</span> ret = <span class="string">''</span>;</span><br><span class="line">  <span class="keyword">if</span> (xmlData.sign === getSign(xmlData)) &#123;</span><br><span class="line">    ret = <span class="string">`&lt;xml&gt;</span></span><br><span class="line"><span class="string">  &lt;return_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/return_code&gt;</span></span><br><span class="line"><span class="string">  &lt;return_msg&gt;&lt;![CDATA[OK]]&gt;&lt;/return_msg&gt;</span></span><br><span class="line"><span class="string">&lt;/xml&gt;`</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    ret = <span class="string">`&lt;xml&gt;</span></span><br><span class="line"><span class="string">  &lt;return_code&gt;&lt;![CDATA[SIGNATRURE_ERROR]]&gt;&lt;/return_code&gt;</span></span><br><span class="line"><span class="string">  &lt;return_msg&gt;&lt;![CDATA[FAIL]]&gt;&lt;/return_msg&gt;</span></span><br><span class="line"><span class="string">&lt;/xml&gt;`</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  res.send(ret);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>该接口是用来处理 <code>notify_url</code> 指定的回调链接的相关数据的，本次用的具体值就是 <a href="http://z.hdk4.com/api/wxresponse" target="_blank" rel="noopener">http://z.hdk4.com/api/wxresponse</a>。</p>
-<p>由于只是测试，所以就简单粗暴的直接 <code>res.send(ret)</code> 回去了。如果不对该接口做回应，微信支付会一直发请求，直至系统判定失败。</p>
+<p>如果不对该接口做回应，微信支付会一直发请求，直至系统判定失败。</p>
+<blockquote>
 <p>注意，使用 <code>express</code> 进行开发时，会收不到 <code>req.body</code>，采用以下方法进行解决即可：</p>
+</blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> bodyParser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">'body-parser-xml'</span>)(bodyParser);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 解决微信支付通知回调数据</span></span><br><span class="line">app.use(bodyParser.xml(&#123;</span><br><span class="line">  limit: <span class="string">'1MB'</span>,   <span class="comment">// Reject payload bigger than 1 MB</span></span><br><span class="line">  xmlParseOptions: &#123;</span><br><span class="line">    normalize: <span class="literal">true</span>,     <span class="comment">// Trim whitespace inside text nodes</span></span><br><span class="line">    normalizeTags: <span class="literal">true</span>, <span class="comment">// Transform tags to lowercase</span></span><br><span class="line">    explicitArray: <span class="literal">false</span> <span class="comment">// Only put nodes in array if &gt;1</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure>
 <h4 id="签名算法"><a href="#签名算法" class="headerlink" title="签名算法"></a>签名算法</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 签名算法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSign</span>(<span class="params">paramSign</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 按 key 值的 ascii 排序</span></span><br><span class="line">  <span class="keyword">const</span> keys = <span class="built_in">Object</span>.keys(paramSign).sort();</span><br><span class="line">  <span class="keyword">const</span> temp = [];</span><br><span class="line">  keys.forEach(<span class="function"><span class="params">v</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (paramSign[v] &amp;&amp; v !== <span class="string">'sign'</span>) &#123;</span><br><span class="line">      temp.push(<span class="string">`<span class="subst">$&#123;v&#125;</span>=<span class="subst">$&#123;paramSign[v]&#125;</span>`</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  temp.push(<span class="string">`key=<span class="subst">$&#123;config.mch_key&#125;</span>`</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> ret = temp.join(<span class="string">'&amp;'</span>);</span><br><span class="line">  <span class="comment">// 生成签名</span></span><br><span class="line">  <span class="keyword">return</span> crypto.createHash(<span class="string">'md5'</span>).update(ret, <span class="string">'utf8'</span>).digest(<span class="string">'hex'</span>).toUpperCase();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>非常<del>简单粗暴</del>的算法，嗯，如上所示。如果是其他语言，在生成 <code>MD5</code> 值的时候方法可能会有所不同，使用对应的方法即可。</p>
@@ -1389,6 +1391,8 @@ print(-y); // useful
     
       <category term="javascript" scheme="http://xovel.cn/tags/javascript/"/>
     
+      <category term="web" scheme="http://xovel.cn/tags/web/"/>
+    
       <category term="react" scheme="http://xovel.cn/tags/react/"/>
     
       <category term="vue" scheme="http://xovel.cn/tags/vue/"/>
@@ -1396,8 +1400,6 @@ print(-y); // useful
       <category term="ui" scheme="http://xovel.cn/tags/ui/"/>
     
       <category term="programming" scheme="http://xovel.cn/tags/programming/"/>
-    
-      <category term="web" scheme="http://xovel.cn/tags/web/"/>
     
   </entry>
   
@@ -1497,9 +1499,9 @@ print(-y); // useful
     
       <category term="object" scheme="http://xovel.cn/tags/object/"/>
     
-      <category term="js" scheme="http://xovel.cn/tags/js/"/>
-    
       <category term="trap" scheme="http://xovel.cn/tags/trap/"/>
+    
+      <category term="js" scheme="http://xovel.cn/tags/js/"/>
     
   </entry>
   
