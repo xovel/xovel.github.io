@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2018-03-30T18:59:22.107Z</updated>
+  <updated>2018-03-31T04:47:25.294Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -20,9 +20,10 @@
     <link href="http://xovel.cn/article/use-nginx.html"/>
     <id>http://xovel.cn/article/use-nginx.html</id>
     <published>2018-03-26T01:07:00.000Z</published>
-    <updated>2018-03-30T18:59:22.107Z</updated>
+    <updated>2018-03-31T04:47:25.294Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
+    <content type="html"><![CDATA[<p><img src="https://nginx.org/nginx.png" alt="nginx"></p>
+<blockquote>
 <p>本文根据个人日志中相关记录进行整理而成。</p>
 <p>注意，这并不是一篇配置攻略或者是文档性质的，阅读时请不要以本篇文章描述的为主，请适当进行斟酌。</p>
 </blockquote>
@@ -550,11 +551,11 @@
     
       <category term="npm" scheme="http://xovel.cn/tags/npm/"/>
     
+      <category term="node" scheme="http://xovel.cn/tags/node/"/>
+    
       <category term="tree" scheme="http://xovel.cn/tags/tree/"/>
     
       <category term="htree" scheme="http://xovel.cn/tags/htree/"/>
-    
-      <category term="node" scheme="http://xovel.cn/tags/node/"/>
     
       <category term="CLI" scheme="http://xovel.cn/tags/CLI/"/>
     
