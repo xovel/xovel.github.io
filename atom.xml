@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xovel.cn/"/>
-  <updated>2018-01-31T02:53:28.513Z</updated>
+  <updated>2018-03-30T18:59:22.107Z</updated>
   <id>http://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 nginx</title>
+    <link href="http://xovel.cn/article/use-nginx.html"/>
+    <id>http://xovel.cn/article/use-nginx.html</id>
+    <published>2018-03-26T01:07:00.000Z</published>
+    <updated>2018-03-30T18:59:22.107Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>本文根据个人日志中相关记录进行整理而成。</p>
+<p>注意，这并不是一篇配置攻略或者是文档性质的，阅读时请不要以本篇文章描述的为主，请适当进行斟酌。</p>
+</blockquote>
+<p>导语中的文本来自于百度百科，不过根据官网的描述，<code>nginx</code> 是这样的一个东西：</p>
+<blockquote>
+<p>nginx [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server, originally written by Igor Sysoev.</p>
+</blockquote>
+<p>本文将一句个人日志项目中关于 <code>nginx</code> 的记载进行阐述。</p>
+<p>最初，在去年 9 月份，我第一次记录了关于 <code>nginx</code> 的东西，是关于如何在 <code>nginx</code> 站点中开启文件目录的浏览：在 <code>location</code> 模块中使用 <code>autoindex on;</code> 指令即可。</p>
+<p>然后没过多久，写了一篇关于开启指定域名访问的记录，即设置 <code>server_name</code> 指令。</p>
+<p>在 12 月初，写了一篇重量级的文章，安装 <code>nginx</code>，这也是我第一次完全自己部署前端站点的一次尝试。</p>
+<p><code>nginx</code> 的常规依赖：</p>
+<ul>
+<li><code>zlib</code>，用于开启 <code>gzip</code> 压缩。</li><li><code>pcre</code>，用于开启伪静态或者重定向。</li><li><code>openssh</code>，用于开启 <code>ssl</code>，或者换个说法，叫做 <code>https</code>。</li></ul>
+<p>安装过程中需要 <code>gcc-c++</code> 运行库。</p>
+<p>紧接着没多久，写了一篇如何配置 <code>nginx</code> 的日志，讲述了如何开启多配置文件模式，主要是 <code>include</code> 指令。顺便阐述了一下过滤非法域名访问的问题，<code>default_server</code> 关键字进行设置即可。</p>
+<p>之后在一篇微信支付相关的记录中，提到了关于反向代理转发真实 IP 地址的方法。</p>
+<p>过完年之后，由于等级保护评估测试相关的原因，针对前端全站开启了 <code>https</code> 模式。关键配置为 <code>listen 443 ssl;</code>，结合 <code>ssl_certificate</code> 和 <code>ssl_certificate_key</code> 进行相关文件的配置即可完成。</p>
+<p>由于 <code>https</code> 的访问模式，页面不能直接使用 <code>http</code> 请求，于是针对之前提到的反向代理 <code>proxy_pass</code> 进行了再一次的阐述，并对负载均衡进行了说明。<code>nginx</code> 的负载均衡是一个非常强大的功能，主要依赖 <code>upstream</code> 来进行相关配置。</p>
+<p>之后没多久，有需要页面重定向的需求，于是对 <code>rewrite</code> 指令做了简单的介绍。</p>
+<p>因为某一次的服务器改版，转发 <code>https</code> 到 <code>http</code> 的时候，发现端口出现了稍稍的偏差。于是针对 <code>X-Forwarded-Proto</code> 之类的参数设置进行了相关的解释。</p>
+<p>后来因个人项目，部署的时候想尝试一下路由的 <code>history</code> 模式，于是 <code>nginx</code> 的 <code>try_files</code> 指令被提上日程，但是目前我并没有进行日志记录。</p>
+<p>至此，本人日志项目关于 <code>nginx</code> 的记录就回顾完毕，这大概也就是本篇文章的主要内容了。</p>
+<p>另外，在阅读子项目中，曾经记录了一篇跟 <code>nginx</code> 密切相关的书籍《Nginx 开发从入门到精通》，该书是 <code>tengine</code> 开发团队主笔的。</p>
+<hr>
+<ul>
+<li><a href="http://nginx.org/" target="_blank" rel="noopener">nginx 官网</a></li><li><a href="http://nginx.org/en/docs/" target="_blank" rel="noopener">nginx documentation</a></li><li><a href="http://nginx.org/en/docs/stream/ngx_stream_upstream_module.html" target="_blank" rel="noopener">Module ngx_stream_upstream_module</a></li><li><a href="https://trac.nginx.org/nginx/browser/nginx/src/http/modules/ngx_http_proxy_module.c" target="_blank" rel="noopener">ngx_http_proxy_module.c in nginx/src/http/modules – nginx</a></li><li><a href="https://www.nginx.com/resources/wiki/start/topics/depth/ifisevil/" target="_blank" rel="noopener">If Is Evil | NGINX</a></li><li><a href="http://tengine.taobao.org/book/index.html" target="_blank" rel="noopener">Nginx开发从入门到精通</a></li><li><a href="https://serverfault.com/questions/630413/nginx-apache-set-hsts-only-if-x-forwarded-proto-is-https" target="_blank" rel="noopener">Nginx/Apache: set HSTS only if X-Forwarded-Proto is https - Server Fault</a></li></ul>
+]]></content>
+    
+    <summary type="html">
+    
+      Nginx (engine x) 是一个高性能的 HTTP 和反向代理服务器，也是一个 IMAP/POP3/SMTP 服务器。
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://xovel.cn/categories/essay/"/>
+    
+    
+      <category term="nginx" scheme="http://xovel.cn/tags/nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>node 下的微信公众号支付初探</title>
@@ -500,11 +550,11 @@
     
       <category term="npm" scheme="http://xovel.cn/tags/npm/"/>
     
-      <category term="node" scheme="http://xovel.cn/tags/node/"/>
-    
       <category term="tree" scheme="http://xovel.cn/tags/tree/"/>
     
       <category term="htree" scheme="http://xovel.cn/tags/htree/"/>
+    
+      <category term="node" scheme="http://xovel.cn/tags/node/"/>
     
       <category term="CLI" scheme="http://xovel.cn/tags/CLI/"/>
     
@@ -1505,63 +1555,6 @@ print(-y); // useful
       <category term="js" scheme="http://xovel.cn/tags/js/"/>
     
       <category term="trap" scheme="http://xovel.cn/tags/trap/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Jade入门级介绍</title>
-    <link href="http://xovel.cn/article/introduction-to-jade.html"/>
-    <id>http://xovel.cn/article/introduction-to-jade.html</id>
-    <published>2016-12-18T15:16:51.000Z</published>
-    <updated>2016-12-24T16:42:29.947Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>最近，到了新的公司上班，接触到的HTML编写方式为使用<code>jade</code>。<del>习惯了手写HTML硬编码的我，一时之间还不太适应这种快速高效的方式。</del></p>
-<p>我们先通过一个例子来讲述一下这款工具的牛逼之处吧！</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">div.container#main Content</span><br><span class="line">a.btn(href=&quot;javascript:;&quot;,title=&quot;link&quot;) Button</span><br></pre></td></tr></table></figure>
-<p>经过工具编译后，以上代码将会输出：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span> <span class="attr">id</span>=<span class="string">"main"</span>&gt;</span>Content<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"btn"</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span> <span class="attr">title</span>=<span class="string">"link"</span>&gt;</span>Button<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p><del>是不是有种简单粗暴的即视感？</del></p>
-<h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><p>基本属性的写法如下：</p>
-<p>每行开始的第一个单词将会作为HTML标签名，如果没有，则默认为<code>div</code>。</p>
-<p>类名和ID，同CSS选择器的语法——类名为<code>.</code>号开始，如果有多个类名，叠加展示即可。如<code>section.index.tips</code>；ID为<code>#</code>标识。</p>
-<p>HTML元素的其他属性可以写在跟在后面的括号<code>()</code>之内。多个属性，可以使用逗号<code>,</code>或者空格<code> </code>隔开。</p>
-<p>元素内的文本则以一个空格后直接书写。</p>
-<p>Jade采用对缩进敏感的语法，来划分HTML的层次结构。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ul</span><br><span class="line">  li A </span><br><span class="line">    span text</span><br><span class="line">  li B</span><br><span class="line">  li C</span><br></pre></td></tr></table></figure>
-<p>将会被编译成：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>A<span class="tag">&lt;<span class="name">span</span>&gt;</span>text<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>B<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Li</span>&gt;</span>C<span class="tag">&lt;/<span class="name">Li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p><code>jade</code>支持循环。比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- for (var i = 0; i &lt; 3; i++)</span><br><span class="line">  li item</span><br></pre></td></tr></table></figure></p>
-<p>将会被编译成：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>item<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>item<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>item<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p><code>jade</code>使用<code>extends</code>来继承代码片段，继承可以修改代码片段。</p>
-<p>页面中使用<code>block</code>标识符，可以指定一个代码片段的名字，比如名字设为<code>name</code>。在需要使用该代码片段的地方，直接使用<code>block name</code>即可。</p>
-<h3 id="文件包含"><a href="#文件包含" class="headerlink" title="文件包含"></a>文件包含</h3><p><code>jade</code>可以使用<code>include</code>语法实现高度复用代码。将这些代码片段保存到不同的文件中，然后在需要的地方进行引入即可。</p>
-<h3 id="混合宏"><a href="#混合宏" class="headerlink" title="混合宏"></a>混合宏</h3><p><code>mixin</code>是<code>jade</code>提供的另一个方法，可以很大程度提升HTML编写的效率。语法类似于<code>sass</code>和<code>less</code>中的混合宏。</p>
-<p>混合宏具有高度复用、解耦、可读、可扩、可维护等特点，是众多预编译语言的共同特点。</p>
-<p><code>jade</code>中使用<code>mixin</code>标识符进行混合宏的创建，在需要的地方使用<code>+</code>标识符进行调用即可。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mixin list</span><br><span class="line">  ul</span><br><span class="line">    li foo</span><br><span class="line">    li bar</span><br><span class="line">    li baz</span><br><span class="line"></span><br><span class="line">+list</span><br><span class="line">+list</span><br></pre></td></tr></table></figure>
-<p>将会被编译成：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>foo<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>bar<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>baz<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>foo<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>bar<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>baz<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>支持参数的传入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mixin card(name)</span><br><span class="line">  li.card= name</span><br><span class="line">ul</span><br><span class="line">  +card(&apos;A&apos;)</span><br><span class="line">  +card(&apos;B&apos;)</span><br><span class="line">  +card(&apos;C&apos;)</span><br></pre></td></tr></table></figure></p>
-<p>将会被编译成：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"card"</span>&gt;</span>A<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"card"</span>&gt;</span>B<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"card"</span>&gt;</span>C<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>还可以使用余参：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mixin list(id, ...items)</span><br><span class="line">  ul(id=id)</span><br><span class="line">    each item in items</span><br><span class="line">      li= item</span><br><span class="line"></span><br><span class="line">+list(&apos;example&apos;, 1, 2, 3, 4, 5)</span><br></pre></td></tr></table></figure></p>
-<p>将会被编译成：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"example"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>5<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<hr>
-<p><code>jade</code>的入门级介绍到这里就告一段落，还有一些高级语法，可以参考官方文档。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      有一种速写HTML代码的方法，叫做jade，通过严格缩进来控制HTML的层次与顺序。本文针对这个方案做一个简略的说明。
-    
-    </summary>
-    
-      <category term="开发" scheme="http://xovel.cn/categories/dev/"/>
-    
-      <category term="文档" scheme="http://xovel.cn/categories/dev/docs/"/>
-    
-    
-      <category term="jade" scheme="http://xovel.cn/tags/jade/"/>
-    
-      <category term="入门" scheme="http://xovel.cn/tags/%E5%85%A5%E9%97%A8/"/>
-    
-      <category term="HTML" scheme="http://xovel.cn/tags/html/"/>
     
   </entry>
   
