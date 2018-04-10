@@ -1445,8 +1445,6 @@ print(-y); // useful
     
       <category term="javascript" scheme="https://xovel.cn/tags/javascript/"/>
     
-      <category term="web" scheme="https://xovel.cn/tags/web/"/>
-    
       <category term="react" scheme="https://xovel.cn/tags/react/"/>
     
       <category term="vue" scheme="https://xovel.cn/tags/vue/"/>
@@ -1454,6 +1452,8 @@ print(-y); // useful
       <category term="ui" scheme="https://xovel.cn/tags/ui/"/>
     
       <category term="programming" scheme="https://xovel.cn/tags/programming/"/>
+    
+      <category term="web" scheme="https://xovel.cn/tags/web/"/>
     
   </entry>
   
@@ -1553,9 +1553,9 @@ print(-y); // useful
     
       <category term="object" scheme="https://xovel.cn/tags/object/"/>
     
-      <category term="trap" scheme="https://xovel.cn/tags/trap/"/>
-    
       <category term="js" scheme="https://xovel.cn/tags/js/"/>
+    
+      <category term="trap" scheme="https://xovel.cn/tags/trap/"/>
     
   </entry>
   
