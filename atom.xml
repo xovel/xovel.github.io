@@ -551,11 +551,11 @@
     
       <category term="npm" scheme="https://xovel.cn/tags/npm/"/>
     
-      <category term="node" scheme="https://xovel.cn/tags/node/"/>
-    
       <category term="tree" scheme="https://xovel.cn/tags/tree/"/>
     
       <category term="htree" scheme="https://xovel.cn/tags/htree/"/>
+    
+      <category term="node" scheme="https://xovel.cn/tags/node/"/>
     
       <category term="CLI" scheme="https://xovel.cn/tags/CLI/"/>
     
@@ -1551,9 +1551,9 @@ print(-y); // useful
       <category term="随笔" scheme="https://xovel.cn/categories/essay/"/>
     
     
-      <category term="object" scheme="https://xovel.cn/tags/object/"/>
-    
       <category term="js" scheme="https://xovel.cn/tags/js/"/>
+    
+      <category term="object" scheme="https://xovel.cn/tags/object/"/>
     
       <category term="trap" scheme="https://xovel.cn/tags/trap/"/>
     
