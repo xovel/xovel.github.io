@@ -1,7 +1,7 @@
-{% if theme.cnzz_siteid %}
+{% if theme.cnzz_url %}
 
   <div style="display: none;">
-    <script src="http://s6.cnzz.com/stat.php?id={{ theme.cnzz_siteid }}&web_id={{ theme.cnzz_siteid }}" type="text/javascript"></script>
+    <script src="{{ theme.cnzz_url }}" type="text/javascript"></script>
   </div>
 
 {% endif %}
