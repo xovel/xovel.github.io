@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xovel.cn/"/>
-  <updated>2018-03-31T04:47:25.294Z</updated>
+  <updated>2018-05-24T13:21:48.054Z</updated>
   <id>https://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,71 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ES6 模块</title>
+    <link href="https://xovel.cn/article/es6-modules.html"/>
+    <id>https://xovel.cn/article/es6-modules.html</id>
+    <published>2018-05-24T09:54:29.000Z</published>
+    <updated>2018-05-24T13:21:48.054Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>阅读本文需要有一定的 ES6 基础。</p>
+</blockquote>
+<p>ES6 模块是 ES6 中的一个非常重要的特性，它收集了多年来各种模块化的优点，解决了其间的差异化，并期望能最终形成一个大家共同遵守的规范。</p>
+<blockquote>
+<p>关于 JS 的模块化历程，可以参考本文后面的<a href="https://appendto.com/2016/06/the-short-history-of-javascript-module-loaders/" target="_blank" rel="noopener">参考资料</a>。</p>
+</blockquote>
+<p>本文从 <code>import</code> 和 <code>export</code> 两部分对 ES6 模块做一个基础的介绍，这两部分内容也就是 ES6 模块的全部了。</p>
+<h3 id="import"><a href="#import" class="headerlink" title="import"></a>import</h3><p>来看一组现有的 <code>import</code> 语法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> defaultExport <span class="keyword">from</span> <span class="string">"module-name"</span>;</span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> name <span class="keyword">from</span> <span class="string">"module-name"</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="keyword">export</span> &#125; <span class="keyword">from</span> <span class="string">"module-name"</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="keyword">export</span> <span class="keyword">as</span> alias &#125; <span class="keyword">from</span> <span class="string">"module-name"</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; export1 , export2 &#125; <span class="keyword">from</span> <span class="string">"module-name"</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; export1 , export2 <span class="keyword">as</span> alias2 , [...] &#125; <span class="keyword">from</span> <span class="string">"module-name"</span>;</span><br><span class="line"><span class="keyword">import</span> defaultExport, &#123; <span class="keyword">export</span> [ , [...] ] &#125; <span class="keyword">from</span> <span class="string">"module-name"</span>;</span><br><span class="line"><span class="keyword">import</span> defaultExport, * <span class="keyword">as</span> name <span class="keyword">from</span> <span class="string">"module-name"</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">"module-name"</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>以上代码来自 MDN 上面关于 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import" target="_blank" rel="noopener">import</a> 的介绍。</p>
+</blockquote>
+<p><code>import</code> 是模块导入语句的关键字，通过指定具体的导入方式，可以进行相应模块的导入操作。</p>
+<p>以下是逐条说明：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入默认模块</span></span><br><span class="line"><span class="keyword">import</span> defaultExport <span class="keyword">from</span> <span class="string">"module-name"</span>;</span><br><span class="line"><span class="comment">// 导入所有模块并指定一个新的名称，导入后的对象包含了所有具名模块</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> name <span class="keyword">from</span> <span class="string">"module-name"</span>;</span><br><span class="line"><span class="comment">// 导入指定模块</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="keyword">export</span> &#125; <span class="keyword">from</span> <span class="string">"module-name"</span>;</span><br><span class="line"><span class="comment">// 导入指定的模块并指定一个新的名称，即直接进行重命名操作</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="keyword">export</span> <span class="keyword">as</span> alias &#125; <span class="keyword">from</span> <span class="string">"module-name"</span>;</span><br><span class="line"><span class="comment">// 导入多个模块</span></span><br><span class="line"><span class="keyword">import</span> &#123; export1 , export2 &#125; <span class="keyword">from</span> <span class="string">"module-name"</span>;</span><br><span class="line"><span class="comment">// 导入多个模块，并对其中的某一部分进行重命名</span></span><br><span class="line"><span class="keyword">import</span> &#123; export1 , export2 <span class="keyword">as</span> alias2 , [...] &#125; <span class="keyword">from</span> <span class="string">"module-name"</span>;</span><br><span class="line"><span class="comment">// 同时导入默认模块和其他模块</span></span><br><span class="line"><span class="keyword">import</span> defaultExport, &#123; <span class="keyword">export</span> [ , [...] ] &#125; <span class="keyword">from</span> <span class="string">"module-name"</span>;</span><br><span class="line"><span class="comment">// 同时导入模块模块，并将所有模块以新名称进行导入</span></span><br><span class="line"><span class="keyword">import</span> defaultExport, * <span class="keyword">as</span> name <span class="keyword">from</span> <span class="string">"module-name"</span>;</span><br><span class="line"><span class="comment">// 直接引入模块，不导入任何东西</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">"module-name"</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="export"><a href="#export" class="headerlink" title="export"></a>export</h3><p><code>export</code> 是模块导出语句的关键字，同样的，来看一组 <code>export</code> 的语法，代码来自 MDN 上面的 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export" target="_blank" rel="noopener">export</a>：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导出指定模块</span></span><br><span class="line"><span class="keyword">export</span> &#123; name1, name2, …, nameN &#125;;</span><br><span class="line"><span class="comment">// 导出指定模块，并进行重命名</span></span><br><span class="line"><span class="keyword">export</span> &#123; variable1 <span class="keyword">as</span> name1, variable2 <span class="keyword">as</span> name2, …, nameN &#125;;</span><br><span class="line"><span class="comment">// 导出变量</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">let</span> name1, name2, …, nameN; <span class="comment">// also var</span></span><br><span class="line"><span class="comment">// 导出变量，并对变量直接进行定义</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">let</span> name1 = …, name2 = …, …, nameN; <span class="comment">// also var, const</span></span><br><span class="line"><span class="comment">// 导出函数</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">FunctionName</span>(<span class="params"></span>)</span>&#123;...&#125;</span><br><span class="line"><span class="comment">// 导出类</span></span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">ClassName</span> </span>&#123;...&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 导出一个表达式作为默认模块</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> expression;</span><br><span class="line"><span class="comment">// 导出匿名函数，类和生成器函数亦可</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> (<span class="params">…</span>) </span>&#123; … &#125; <span class="comment">// also class, function*</span></span><br><span class="line"><span class="comment">// 导出具名函数，类和生成器函数亦可</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">name1</span>(<span class="params">…</span>) </span>&#123; … &#125; <span class="comment">// also class, function*</span></span><br><span class="line"><span class="comment">// 将指定模块作为默认模块进行导出</span></span><br><span class="line"><span class="keyword">export</span> &#123; name1 <span class="keyword">as</span> <span class="keyword">default</span>, … &#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从另一个模块提取所有模块进行导出</span></span><br><span class="line"><span class="keyword">export</span> * <span class="keyword">from</span> …;</span><br><span class="line"><span class="comment">// 从另一个模块提取指定模块进行导出</span></span><br><span class="line"><span class="keyword">export</span> &#123; name1, name2, …, nameN &#125; <span class="keyword">from</span> …;</span><br><span class="line"><span class="comment">// 从另一个模块提取指定的模块并进行重命名后再导出</span></span><br><span class="line"><span class="keyword">export</span> &#123; import1 <span class="keyword">as</span> name1, import2 <span class="keyword">as</span> name2, …, nameN &#125; <span class="keyword">from</span> …;</span><br><span class="line"><span class="comment">// 从另一个模块导出默认模块</span></span><br><span class="line"><span class="keyword">export</span> &#123; <span class="keyword">default</span> &#125; <span class="keyword">from</span> …;</span><br></pre></td></tr></table></figure>
+<h3 id="一些说明"><a href="#一些说明" class="headerlink" title="一些说明"></a>一些说明</h3><ol>
+<li>在进行 <code>import</code> 的时候，<code>import { export } from &quot;module-name&quot;;</code> 中的 <code>{ export }</code> 语法并不等同于对象的解构，这是 <code>import</code> 专门的语法。</li><li><code>export</code> 和 <code>export default</code> 的区别是在后续进行引入的时候需要分别使用 <code>import { ... } from</code> 和 <code>import ... from</code> 进行操作。</li><li>作为默认模块进行导出时，匿名函数和具名函数在导出之后并无区分。</li><li>导出后的模块，如果存在变量，该变量对外是不可变的。可以通过模块内置的方法进行改变。</li></ol>
+<hr>
+<p>大体上就是这些内容了，ES6 的模块化给编程领域尤其是前端开发这一块，带来非常大的便利。</p>
+<blockquote>
+<p>由于市面上直接支持 ES6 模块的产品的覆盖率依然不够理想，所以需要通过一些转译工具进行转译之后再进行使用。这些工具中，首当其冲的就要数 <code>babel</code> 了。</p>
+<blockquote>
+<p>目前，本人主要工作是在进行微信小程序的开发，好在小程序现在的开发环境已经基本支持 <code>import</code> 和 <code>export</code> 语法（除了 <code>export ... from</code>），所以可以放心无忧的进行现代化 ES6 代码的编写了。目前使用原生代码进行微信小程序的编写，感觉良好。至于 <code>wepy</code> 和 <code>mpvue</code> 之类的前瞻框架，由于未进行全面使用，所以不做过多评述。</p>
+</blockquote>
+</blockquote>
+<hr>
+<p>在撰写本文的时候，参考了大量的资料，但是提笔的时候却又感觉很词穷，所以只是简单的做了一个代码层次的注释说明，更多的参考资料罗列如下，请诸君自行参阅。</p>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
+<li><a href="http://2ality.com/2014/09/es6-modules-final.html" target="_blank" rel="noopener">ECMAScript 6 modules: the final syntax</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import" target="_blank" rel="noopener">import - JavaScript | MDN</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export" target="_blank" rel="noopener">export - JavaScript | MDN</a></li><li><a href="https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/" target="_blank" rel="noopener">Previewing ES6 Modules and more from ES2015, ES2016 and beyond</a></li><li><a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/" target="_blank" rel="noopener">ES6 In Depth: Modules</a></li><li><a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/" target="_blank" rel="noopener">ES modules: A cartoon deep-dive</a></li><li><a href="http://exploringjs.com/es6/ch_modules.html#_modules" target="_blank" rel="noopener">Exploring ES6 - 16. Modules</a></li><li><a href="https://github.com/eslint/espree/pull/43" target="_blank" rel="noopener">eslint/espree - #43 - adds module import and export grammar</a></li><li><a href="https://github.com/tc39/proposal-export-default-from" target="_blank" rel="noopener">tc39/proposal-export-default-from</a></li><li><a href="https://github.com/tc39/proposal-dynamic-import" target="_blank" rel="noopener">tc39/proposal-dynamic-import</a></li><li><a href="http://2ality.com/2015/07/es6-module-exports.html" target="_blank" rel="noopener">What do ES6 modules export?</a></li><li><a href="https://www.sitepoint.com/understanding-es6-modules/" target="_blank" rel="noopener">Understanding ES6 Modules</a></li><li><a href="http://www.commonjs.org/" target="_blank" rel="noopener">CommonJS</a></li><li><a href="http://jsmodules.io/" target="_blank" rel="noopener">JavaScript Modules</a></li><li><a href="https://developer.telerik.com/featured/choose-es6-modules-today/" target="_blank" rel="noopener">Choose ES6 modules Today!</a></li><li><a href="https://medium.freecodecamp.org/javascript-modules-a-beginner-s-guide-783f7d7a5fcc" target="_blank" rel="noopener">JavaScript Modules: A Beginner’s Guide</a></li><li><a href="https://appendto.com/2016/06/the-short-history-of-javascript-module-loaders/" target="_blank" rel="noopener">History and Background of JavaScript Module Loaders</a></li><li><a href="http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html" target="_blank" rel="noopener">JavaScript Module Pattern: In-Depth</a></li></ul>
+<p>&lt;本文完&gt;</p>
+]]></content>
+    
+    <summary type="html">
+    
+      本文是对 ES6 模块化的简单介绍。
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://xovel.cn/categories/web/"/>
+    
+      <category term="文档" scheme="https://xovel.cn/categories/web/docs/"/>
+    
+    
+      <category term="javascript" scheme="https://xovel.cn/tags/javascript/"/>
+    
+      <category term="es6" scheme="https://xovel.cn/tags/es6/"/>
+    
+      <category term="module" scheme="https://xovel.cn/tags/module/"/>
+    
+      <category term="import" scheme="https://xovel.cn/tags/import/"/>
+    
+      <category term="export" scheme="https://xovel.cn/tags/export/"/>
+    
+  </entry>
   
   <entry>
     <title>使用 nginx</title>
@@ -551,11 +616,11 @@
     
       <category term="npm" scheme="https://xovel.cn/tags/npm/"/>
     
-      <category term="node" scheme="https://xovel.cn/tags/node/"/>
-    
       <category term="tree" scheme="https://xovel.cn/tags/tree/"/>
     
       <category term="htree" scheme="https://xovel.cn/tags/htree/"/>
+    
+      <category term="node" scheme="https://xovel.cn/tags/node/"/>
     
       <category term="CLI" scheme="https://xovel.cn/tags/CLI/"/>
     
@@ -1516,46 +1581,6 @@ print(-y); // useful
       <category term="总结" scheme="https://xovel.cn/tags/%E6%80%BB%E7%BB%93/"/>
     
       <category term="经历" scheme="https://xovel.cn/tags/%E7%BB%8F%E5%8E%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一个JS对象操作上的小坑</title>
-    <link href="https://xovel.cn/article/a-trap-about-object.html"/>
-    <id>https://xovel.cn/article/a-trap-about-object.html</id>
-    <published>2016-12-28T14:24:41.000Z</published>
-    <updated>2016-12-28T14:58:33.200Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天，工作上遇到一个很滑稽的问题。我大概描述一下，具体的源代码和项目详情这里就不详述了。</p>
-<p>项目上使用到了一款插件叫做<code>jqGrid</code>，在使用这个插件进行表格数据载入的时候调用了一个名为<code>localData</code>的对象里面的一个列表——我们姑且称之为<code>localData.list</code>——里面的数据。在页面加载的时候这个表格就会被初始化。在点击某个按钮进行数据初始化的时候需要清空这个表格，于是我写下了一段<del>带有巨坑的</del>代码：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">localData = &#123;</span><br><span class="line">  status: <span class="number">0</span>,</span><br><span class="line">  count: <span class="number">0</span>,</span><br><span class="line">  list: []</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p><strong>出事了……</strong>，在后续进行数据添加之后（<code>localData.list.push</code>），进行表格的重载<code>.trigger(&quot;reloadGrid&quot;)</code>操作时，数据无法展现。</p>
-<p>百思不得其解之下，询问同事，他们也表示曾经出现过类似的问题，但是后来不知道怎么搞的就没事了。我比对了一下他们的项目源码，发现他们是这样写数据清空操作的：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">localData.status = <span class="number">0</span>;</span><br><span class="line">localData.count = <span class="number">0</span>;</span><br><span class="line">localData.list.length = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
-<p>喏，陷阱就埋在这里……</p>
-<p>在使用诸如<code>a={}</code>的形式进行对象的初始化操作时，之前的信息将会全部丢失，即使被赋值之后的结构与之前的一模一样，之前的对象也<strong>跟这个毫无关系</strong>了。</p>
-<p><del>其实我早就应该意识到这个陷阱的，因为：</del></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#125; === &#123;&#125;</span><br></pre></td></tr></table></figure>
-<p>结果为<strong>false</strong></p>
-<hr>
-<p>总结：心要更细一些，基础得加强，赋值不要随意。</p>
-<p>谨以此作文一篇，以儆效尤。本文完。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      所谓细节决定成败，本文讲述一个隐藏的比较深的陷阱，有关于JS对象操作，尤其是清空操作时候的坑，请注意防范。
-    
-    </summary>
-    
-      <category term="随笔" scheme="https://xovel.cn/categories/essay/"/>
-    
-    
-      <category term="object" scheme="https://xovel.cn/tags/object/"/>
-    
-      <category term="js" scheme="https://xovel.cn/tags/js/"/>
-    
-      <category term="trap" scheme="https://xovel.cn/tags/trap/"/>
     
   </entry>
   
