@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://xovel.cn/article/chrome-extensions.html</loc>
+    
+    <lastmod>2018-10-26T17:16:31.303Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xovel.cn/article/vscode-extensions.html</loc>
+    
+    <lastmod>2018-10-26T16:47:02.304Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://xovel.cn/article/node-buffer.html</loc>
     
     <lastmod>2018-10-07T15:13:42.490Z</lastmod>
@@ -212,27 +226,6 @@
   </url>
   
   <url>
-    <loc>https://xovel.cn/article/a-fragment-code-of-multi-line-string-trim.html</loc>
-    
-    <lastmod>2016-11-18T07:00:40.177Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xovel.cn/article/undefined-and-void-0.html</loc>
-    
-    <lastmod>2016-11-18T07:00:40.177Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xovel.cn/article/yarn-a-new-package-manager-for-javascript.html</loc>
-    
-    <lastmod>2016-11-18T07:00:40.177Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://xovel.cn/article/yarn-a-new-package-manager-for-javascript-zh-cn.html</loc>
     
     <lastmod>2016-11-18T07:00:40.177Z</lastmod>
@@ -261,7 +254,7 @@
   </url>
   
   <url>
-    <loc>https://xovel.cn/garden/index.html</loc>
+    <loc>https://xovel.cn/article/a-fragment-code-of-multi-line-string-trim.html</loc>
     
     <lastmod>2016-11-18T07:00:40.177Z</lastmod>
     
@@ -282,14 +275,7 @@
   </url>
   
   <url>
-    <loc>https://xovel.cn/article/mathjax-advanced.html</loc>
-    
-    <lastmod>2016-11-18T07:00:40.177Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xovel.cn/article/double-eleven-an-ironic-day.html</loc>
+    <loc>https://xovel.cn/article/limitation-of-wechat-weapp.html</loc>
     
     <lastmod>2016-11-18T07:00:40.177Z</lastmod>
     
@@ -297,6 +283,13 @@
   
   <url>
     <loc>https://xovel.cn/article/book-review-about-the-bio-of-du-yue-sheng.html</loc>
+    
+    <lastmod>2016-11-18T07:00:40.177Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xovel.cn/article/double-eleven-an-ironic-day.html</loc>
     
     <lastmod>2016-11-18T07:00:40.177Z</lastmod>
     
@@ -317,7 +310,28 @@
   </url>
   
   <url>
+    <loc>https://xovel.cn/article/visibilitychange-event.html</loc>
+    
+    <lastmod>2016-11-18T07:00:40.177Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xovel.cn/article/undefined-and-void-0.html</loc>
+    
+    <lastmod>2016-11-18T07:00:40.177Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://xovel.cn/article/iis-404-mime-type.html</loc>
+    
+    <lastmod>2016-11-18T07:00:40.177Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xovel.cn/article/yarn-a-new-package-manager-for-javascript.html</loc>
     
     <lastmod>2016-11-18T07:00:40.177Z</lastmod>
     
@@ -331,30 +345,16 @@
   </url>
   
   <url>
-    <loc>https://xovel.cn/article/limitation-of-wechat-weapp.html</loc>
+    <loc>https://xovel.cn/garden/index.html</loc>
     
     <lastmod>2016-11-18T07:00:40.177Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://xovel.cn/article/visibilitychange-event.html</loc>
+    <loc>https://xovel.cn/article/mathjax-advanced.html</loc>
     
     <lastmod>2016-11-18T07:00:40.177Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xovel.cn/article/today-is-7-7.html</loc>
-    
-    <lastmod>2016-11-18T07:00:40.140Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xovel.cn/article/a-responsive-menu.html</loc>
-    
-    <lastmod>2016-11-18T07:00:40.140Z</lastmod>
     
   </url>
   
@@ -373,13 +373,6 @@
   </url>
   
   <url>
-    <loc>https://xovel.cn/article/webkit-filter.html</loc>
-    
-    <lastmod>2016-11-18T07:00:40.140Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://xovel.cn/article/code-golf-output-fit-numbers.html</loc>
     
     <lastmod>2016-11-18T07:00:40.140Z</lastmod>
@@ -387,7 +380,14 @@
   </url>
   
   <url>
-    <loc>https://xovel.cn/article/i-am-lost-in-the-colorful-world-3.html</loc>
+    <loc>https://xovel.cn/article/webkit-filter.html</loc>
+    
+    <lastmod>2016-11-18T07:00:40.140Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xovel.cn/article/today-is-7-7.html</loc>
     
     <lastmod>2016-11-18T07:00:40.140Z</lastmod>
     
@@ -422,7 +422,21 @@
   </url>
   
   <url>
+    <loc>https://xovel.cn/article/a-responsive-menu.html</loc>
+    
+    <lastmod>2016-11-18T07:00:40.140Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://xovel.cn/article/flex-compability.html</loc>
+    
+    <lastmod>2016-11-18T07:00:40.140Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xovel.cn/article/i-am-lost-in-the-colorful-world-3.html</loc>
     
     <lastmod>2016-11-18T07:00:40.140Z</lastmod>
     
@@ -436,21 +450,7 @@
   </url>
   
   <url>
-    <loc>https://xovel.cn/article/things-about-display.html</loc>
-    
-    <lastmod>2016-11-18T07:00:40.093Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xovel.cn/article/turn-a-router-to-a-switch.html</loc>
-    
-    <lastmod>2016-11-18T07:00:40.093Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xovel.cn/article/regexp-assertion.html</loc>
+    <loc>https://xovel.cn/article/css-specificity.html</loc>
     
     <lastmod>2016-11-18T07:00:40.093Z</lastmod>
     
@@ -458,13 +458,6 @@
   
   <url>
     <loc>https://xovel.cn/article/dom-nodetype.html</loc>
-    
-    <lastmod>2016-11-18T07:00:40.093Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xovel.cn/article/mathjax-basic-tutorial-and-quick-reference.html</loc>
     
     <lastmod>2016-11-18T07:00:40.093Z</lastmod>
     
@@ -492,6 +485,13 @@
   </url>
   
   <url>
+    <loc>https://xovel.cn/article/mathjax-basic-tutorial-and-quick-reference.html</loc>
+    
+    <lastmod>2016-11-18T07:00:40.093Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://xovel.cn/article/how-technology-hijacks-poeples-minds.html</loc>
     
     <lastmod>2016-11-18T07:00:40.093Z</lastmod>
@@ -499,14 +499,28 @@
   </url>
   
   <url>
-    <loc>https://xovel.cn/article/css-specificity.html</loc>
+    <loc>https://xovel.cn/article/language-tags-in-html.html</loc>
     
     <lastmod>2016-11-18T07:00:40.093Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://xovel.cn/article/language-tags-in-html.html</loc>
+    <loc>https://xovel.cn/article/turn-a-router-to-a-switch.html</loc>
+    
+    <lastmod>2016-11-18T07:00:40.093Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xovel.cn/article/regexp-assertion.html</loc>
+    
+    <lastmod>2016-11-18T07:00:40.093Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xovel.cn/article/things-about-display.html</loc>
     
     <lastmod>2016-11-18T07:00:40.093Z</lastmod>
     

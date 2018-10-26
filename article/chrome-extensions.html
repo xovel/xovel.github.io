@@ -1,0 +1,663 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="扩展,Chrome," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="清风轩" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="本文简单介绍本人在实际开发中使用到的几个 Chrome 扩展。">
+<meta name="keywords" content="扩展,Chrome">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chrome 扩展">
+<meta property="og:url" content="https://xovel.cn/article/chrome-extensions.html">
+<meta property="og:site_name" content="清风轩">
+<meta property="og:description" content="本文简单介绍本人在实际开发中使用到的几个 Chrome 扩展。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-26T17:16:31.303Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chrome 扩展">
+<meta name="twitter:description" content="本文简单介绍本人在实际开发中使用到的几个 Chrome 扩展。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: undefined,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> Chrome 扩展 | 清风轩 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s4.cnzz.com/z_stat.php?id=1259096563&web_id=1259096563" type="text/javascript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">清风轩</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">清风轩居 - 引仙阁</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-garden">
+          <a href="/garden" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-life-ring"></i> <br />
+            
+            花园
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Chrome 扩展
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-10-27T00:05:43+08:00" content="2018-10-27">
+              2018-10-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/essay/" itemprop="url" rel="index">
+                    <span itemprop="name">随笔</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>之前曾经介绍过一个跟扩展相关的文章，那已经是 18 个月前的事情了：<a href="/article/brackets-emmet.html">Brackets</a>。</p>
+<p>近日将再记录两篇文章，一个是跟 <code>VSCode</code> 的扩展，另一个是 <code>Chrome</code> 浏览器的扩展。列出的扩展是本人<strong>使用过</strong>的。本文讲述 <code>Chrome</code> 的扩展。</p>
+</blockquote>
+<p>话不多说，直接进入正题，本次列举的扩展如下：</p>
+<h3 id="AdBlock"><a href="#AdBlock" class="headerlink" title="AdBlock"></a>AdBlock</h3><p>广告拦截插件，实力拦截不入眼的东西。</p>
+<h3 id="Axure-RP-Extension-for-Chrome"><a href="#Axure-RP-Extension-for-Chrome" class="headerlink" title="Axure RP Extension for Chrome"></a>Axure RP Extension for Chrome</h3><p>Axure 原型图工具导出的 HTML 文档的查看工具，直接通过 file 协议查看的话会有所限制，使用该插件之后就可以愉快的浏览 Axure 的制作的原型图了。</p>
+<blockquote>
+<p>目前已经转战墨刀。</p>
+</blockquote>
+<h3 id="GitHub-Hovercard"><a href="#GitHub-Hovercard" class="headerlink" title="GitHub Hovercard"></a>GitHub Hovercard</h3><p><code>GitHub</code> 辅助工具，鼠标悬浮上去的时候拉取关键信息并进行显示。</p>
+<h3 id="Isometric-Contributions"><a href="#Isometric-Contributions" class="headerlink" title="Isometric Contributions"></a>Isometric Contributions</h3><p>在 <code>GitHub</code> 首页，将贡献记录渲染成 <code>3D</code> 视图，更加立体的展现。</p>
+<h3 id="JSONView"><a href="#JSONView" class="headerlink" title="JSONView"></a>JSONView</h3><p>格式化 <code>JSON</code> 文件。</p>
+<h3 id="OctoLinker"><a href="#OctoLinker" class="headerlink" title="OctoLinker"></a>OctoLinker</h3><p>快速查看代码中引用的文件或类库。</p>
+<h3 id="Octotree"><a href="#Octotree" class="headerlink" title="Octotree"></a>Octotree</h3><p><code>GitHub</code> 项目查看时使用 Code tree 模式进行查看和管理。</p>
+<h3 id="Vue-js-devtools"><a href="#Vue-js-devtools" class="headerlink" title="Vue.js devtools"></a>Vue.js devtools</h3><p><code>Vue</code> 开发工具。</p>
+<h3 id="Wappalyzer"><a href="#Wappalyzer" class="headerlink" title="Wappalyzer"></a>Wappalyzer</h3><p>检测当前访问的网站所使用到的技术，包含服务器、使用到的工具、框架等等。</p>
+<hr>
+<blockquote>
+<p>以下部分安装在非 <code>Chrome</code> 浏览器上，但是也是在 <code>Chromium</code> 内核的浏览器运行的扩展/插件。</p>
+</blockquote>
+<h3 id="CSSViewer"><a href="#CSSViewer" class="headerlink" title="CSSViewer"></a>CSSViewer</h3><p>CSS 查看工具。</p>
+<h3 id="Fiddler"><a href="#Fiddler" class="headerlink" title="Fiddler"></a>Fiddler</h3><p>简单的 API 侦听工具。</p>
+<h3 id="Frameworks"><a href="#Frameworks" class="headerlink" title="Frameworks"></a>Frameworks</h3><p>跟上面的 <code>Wappalyzer</code> 的功能类似，但只检测使用到的框架和类库。</p>
+<h3 id="Page-Ruler"><a href="#Page-Ruler" class="headerlink" title="Page Ruler"></a>Page Ruler</h3><p>页面尺寸丈量工具。</p>
+<h3 id="Postman-Interceptor"><a href="#Postman-Interceptor" class="headerlink" title="Postman Interceptor"></a>Postman Interceptor</h3><p>Postman 拦截器工具。</p>
+<blockquote>
+<p>依然不能愉快的解决跨域问题，所以直接弃用了，采用了客户端软件。浏览器的自己编写了超级简单的一个<a href="https://hdk4.com/garden/tools/api-test.html" target="_blank" rel="noopener">工具</a>。</p>
+</blockquote>
+<h3 id="QQ空间放大"><a href="#QQ空间放大" class="headerlink" title="QQ空间放大"></a>QQ空间放大</h3><p>专门用于放大 <code>QQ空间</code> 里面的图片的一个工具。<del>现在已经基本不逛了</del>。</p>
+<h3 id="Redirector"><a href="#Redirector" class="headerlink" title="Redirector"></a>Redirector</h3><p>伪装重定向工具，通过某种设置可以做出翻墙工具的效果，但有效性堪忧。</p>
+<h3 id="Responsive-Web-Design-Tester"><a href="#Responsive-Web-Design-Tester" class="headerlink" title="Responsive Web Design Tester"></a>Responsive Web Design Tester</h3><p>快速切换浏览器大小。</p>
+<h3 id="Web-Developer"><a href="#Web-Developer" class="headerlink" title="Web Developer"></a>Web Developer</h3><p>很实用的一套 WEB 开发工具组合。</p>
+<h3 id="WhatFont"><a href="#WhatFont" class="headerlink" title="WhatFont"></a>WhatFont</h3><p>快速查看 CSS 字体。</p>
+<h3 id="好声音"><a href="#好声音" class="headerlink" title="好声音"></a>好声音</h3><p>获取当前网页中的音效和音乐的实际地址。</p>
+<h3 id="眼不见心不烦（新浪微博）"><a href="#眼不见心不烦（新浪微博）" class="headerlink" title="眼不见心不烦（新浪微博）"></a>眼不见心不烦（新浪微博）</h3><p>新浪微博美化工具。</p>
+<h3 id="草料二维码"><a href="#草料二维码" class="headerlink" title="草料二维码"></a>草料二维码</h3><p>二维码管理工具。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/extension/" rel="tag">#扩展</a>
+          
+            <a href="/tags/chrome/" rel="tag">#Chrome</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/article/node-buffer.html" rel="next" title="Buffer 简介">
+                <i class="fa fa-chevron-left"></i> Buffer 简介
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/article/vscode-extensions.html" rel="prev" title="VSCode 扩展">
+                VSCode 扩展 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article> 
+  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/xovel.jpg"
+               alt="xovel" />
+          <p class="site-author-name" itemprop="name">xovel</p>
+          <p class="site-description motion-element" itemprop="description">缓缓之间，风云静变</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">70</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">171</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xovel" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://hdk4.com" target="_blank" title="hdk4.com">
+                  
+                    <i class="fa fa-fw fa-adjust"></i>
+                  
+                  hdk4.com
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#AdBlock"><span class="nav-number">1.</span> <span class="nav-text">AdBlock</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Axure-RP-Extension-for-Chrome"><span class="nav-number">2.</span> <span class="nav-text">Axure RP Extension for Chrome</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GitHub-Hovercard"><span class="nav-number">3.</span> <span class="nav-text">GitHub Hovercard</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Isometric-Contributions"><span class="nav-number">4.</span> <span class="nav-text">Isometric Contributions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSONView"><span class="nav-number">5.</span> <span class="nav-text">JSONView</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OctoLinker"><span class="nav-number">6.</span> <span class="nav-text">OctoLinker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Octotree"><span class="nav-number">7.</span> <span class="nav-text">Octotree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-js-devtools"><span class="nav-number">8.</span> <span class="nav-text">Vue.js devtools</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Wappalyzer"><span class="nav-number">9.</span> <span class="nav-text">Wappalyzer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSSViewer"><span class="nav-number">10.</span> <span class="nav-text">CSSViewer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fiddler"><span class="nav-number">11.</span> <span class="nav-text">Fiddler</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Frameworks"><span class="nav-number">12.</span> <span class="nav-text">Frameworks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Page-Ruler"><span class="nav-number">13.</span> <span class="nav-text">Page Ruler</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Postman-Interceptor"><span class="nav-number">14.</span> <span class="nav-text">Postman Interceptor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QQ空间放大"><span class="nav-number">15.</span> <span class="nav-text">QQ空间放大</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redirector"><span class="nav-number">16.</span> <span class="nav-text">Redirector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Responsive-Web-Design-Tester"><span class="nav-number">17.</span> <span class="nav-text">Responsive Web Design Tester</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Web-Developer"><span class="nav-number">18.</span> <span class="nav-text">Web Developer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WhatFont"><span class="nav-number">19.</span> <span class="nav-text">WhatFont</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#好声音"><span class="nav-number">20.</span> <span class="nav-text">好声音</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#眼不见心不烦（新浪微博）"><span class="nav-number">21.</span> <span class="nav-text">眼不见心不烦（新浪微博）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#草料二维码"><span class="nav-number">22.</span> <span class="nav-text">草料二维码</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xovel</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io" rel="external nofollow" target="_blank">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow" target="_blank">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+  
+</body>
+</html>
