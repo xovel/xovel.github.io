@@ -626,6 +626,14 @@ WebDAV 扩展，表示由于之前的某个请求发生的错误，导致当前�
 
 > Used in the resumable requests proposal to resume aborted PUT or POST requests.
 
+#### 218 This is fine
+
+> Used as a catch-all error condition for allowing response bodies to flow through Apache when ProxyErrorOverride is enabled. When ProxyErrorOverride is enabled in Apache, response bodies that contain a status code of 4xx or 5xx are automatically discarded by Apache in favor of a generic response or a custom response specified by the ErrorDocument directive.
+
+#### 419 Page Expired (Laravel Framework)
+
+> Used by the Laravel Framework when a CSRF Token is missing or expired.
+
 #### 420 Method Failure (Spring Framework)
 
 > A deprecated response used by the Spring Framework when a method has failed.
@@ -657,6 +665,10 @@ WebDAV 扩展，表示由于之前的某个请求发生的错误，导致当前�
 #### 530 Site is frozen
 
 > Used by the Pantheon web platform to indicate a site that has been frozen due to inactivity.
+
+#### 598 Network read timeout error
+
+> Used by some HTTP proxies to signal a network read timeout behind the proxy to a client in front of the proxy.
 
 ### IIS扩展的HTTP状态码
 
@@ -751,6 +763,10 @@ CloudFlare的服务器针对5xx错误进行了部分扩展。
 #### 526 Invalid SSL Certificate
 
 > CloudFlare could not validate the SSL/TLS certificate that the origin server presented.
+
+#### 527 Railgun Error
+
+> Error 527 indicates that the request timed out or failed after the WAN connection had been established.
 
 ### 其他HTTP状态码
 
