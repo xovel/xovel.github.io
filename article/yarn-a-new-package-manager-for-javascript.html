@@ -331,12 +331,19 @@
 <p>Yarn resolves these issues around versioning and non-determinism by using lockfiles and an install algorithm that is deterministic and reliable. These lockfiles lock the installed dependencies to a specific version, and ensure that every install results in the exact same file structure in <code>node_modules</code> across all machines. The written lockfile uses a concise format with ordered keys to ensure that changes are minimal and review is simple.</p>
 <p>The install process is broken down into three steps:</p>
 <ol>
-<li><strong>Resolution</strong>: Yarn starts resolving dependencies by making requests to the registry and recursively looking up each dependency.</li><li><strong>Fetching</strong>: Next, Yarn looks in a global cache directory to see if the package needed has already been downloaded. If it hasn’t, Yarn fetches the tarball for the package and places it in the global cache so it can work offline and won’t need to download dependencies more than once. Dependencies can also be placed in source control as tarballs for full offline installs.</li><li><strong>Linking</strong>: Finally, Yarn links everything together by copying all the files needed from the global cache into the local node_modules directory.</li></ol>
+<li><strong>Resolution</strong>: Yarn starts resolving dependencies by making requests to the registry and recursively looking up each dependency.</li>
+<li><strong>Fetching</strong>: Next, Yarn looks in a global cache directory to see if the package needed has already been downloaded. If it hasn’t, Yarn fetches the tarball for the package and places it in the global cache so it can work offline and won’t need to download dependencies more than once. Dependencies can also be placed in source control as tarballs for full offline installs.</li>
+<li><strong>Linking</strong>: Finally, Yarn links everything together by copying all the files needed from the global cache into the local node_modules directory.</li>
+</ol>
 <p>By breaking these steps down cleanly and having deterministic results, Yarn is able to parallelize operations, which maximizes resource utilization and makes the install process faster. On some Facebook projects, Yarn reduced the install process by an order of magnitude, from several minutes to just seconds. Yarn also uses a mutex to ensure that multiple running CLI instances don’t collide and pollute each other.</p>
 <p>Throughout this entire process, Yarn imposes strict guarantees around package installation. You have control over which lifecycle scripts are executed for which packages. Package checksums are also stored in the lockfile to ensure that you get the same package every single time.</p>
 <h3 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h3><p>In addition to making installs much faster and more reliable, Yarn has additional features to further simplify the dependency management workflow.</p>
 <ul>
-<li>Compatibility with both the npm and bower workflows and supports mixing registries.</li><li>Ability to restrict licenses of installed modules and a means for outputting license information.</li><li>Exposes a stable public JS API with logging abstracted for consumption via build tools.</li><li>Readable, minimal, pretty CLI output.</li></ul>
+<li>Compatibility with both the npm and bower workflows and supports mixing registries.</li>
+<li>Ability to restrict licenses of installed modules and a means for outputting license information.</li>
+<li>Exposes a stable public JS API with logging abstracted for consumption via build tools.</li>
+<li>Readable, minimal, pretty CLI output.</li>
+</ul>
 <h3 id="Yarn-in-production"><a href="#Yarn-in-production" class="headerlink" title="Yarn in production"></a>Yarn in production</h3><p>At Facebook we’re already using Yarn in production, and it’s been working really well for us. It powers the dependency and package management for many of our JavaScript projects. With each migration we’ve enabled engineers to build offline and helped speed up their workflow. You can see how install times for Yarn and npm compare on React Native under different conditions, which you can find <a href="http://yarnpkg.com/en/compare" target="_blank" rel="noopener">here</a>.</p>
 <p><img src="http://ww1.sinaimg.cn/large/79be2309gw1f8p8lxllbtg20nj05ldjm.gif" alt=""></p>
 <h2 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h2><p>The easiest way to get started is to run:</p>
@@ -345,9 +352,11 @@
 <ul>
 <li><p><code>npm install</code> → <code>yarn</code></p>
 <p>With no arguments, the <code>yarn</code> command will read your <code>package.json</code>, fetch packages from the npm registry, and populate your <code>node_modules</code> folder. It is equivalent to running <code>npm install</code>.</p>
-</li><li><p><code>npm install --save &lt;name&gt;</code> → <code>yarn add &lt;name&gt;</code></p>
+</li>
+<li><p><code>npm install --save &lt;name&gt;</code> → <code>yarn add &lt;name&gt;</code></p>
 <p>We removed the “invisible dependency” behavior of <code>npm install &lt;name&gt;</code> and split the command. Running <code>yarn add &lt;name&gt;</code> is equivalent to running <code>npm install --save &lt;name&gt;</code>.</p>
-</li></ul>
+</li>
+</ul>
 <h3 id="Future"><a href="#Future" class="headerlink" title="Future"></a>Future</h3><p>Many of us came together to build Yarn to solve common problems, and we knew that we wanted Yarn to be a true community project that everyone can use. Yarn is now <a href="https://github.com/yarnpkg/yarn" target="_blank" rel="noopener">available on GitHub</a> and we’re ready for the Node community to do what it does best: Use Yarn, share ideas, write documentation, support each other, and help build a great community to care for it. We believe that Yarn is already off to a great start, and it can be even better with your help.</p>
 <hr>
 <p>End</p>
@@ -467,7 +476,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">71</span>
+              <span class="site-state-item-count">73</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -484,7 +493,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">172</span>
+                <span class="site-state-item-count">177</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -565,7 +574,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

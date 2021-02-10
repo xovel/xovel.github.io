@@ -324,7 +324,19 @@
 </blockquote>
 <p>返回一个整数，表示该节点的类型。下面将列出节点类型常量。</p>
 <h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><ul>
-<li><code>Node.ELEMENT_NODE</code>，1，<code>Element</code>，<code>元素</code>，如<code>&lt;p&gt;</code>，<code>&lt;div&gt;</code></li><li><code>Node.ATTRIBUTE_NODE</code>，2，<code>Attr</code>，元素的属性。<em>已废弃</em>。</li><li><code>Node.TEXT_NODE</code>，3，<code>Text</code>，文本。元素或者属性的实际文本。</li><li><code>Node.CDATA_SECTION_NODE</code>，4，<code>CDATASection</code>，文档中的 CDATA 部分。<em>已废弃</em>。</li><li><code>Node.ENTITY_REFERENCE_NODE</code>，5，<code>EntityReference</code>，XML的实体引用节点。<em>已废弃</em>。</li><li><code>Node.ENTITY_NODE</code>，6，<code>Entity</code>，XML中的<code>&lt;!ENTITY ...&gt;</code>节点。<em>已废弃</em>。</li><li><code>Node.PROCESSING_INSTRUCTION_NODE</code>，7，<code>ProcessingInstruction</code>，XML文档中的处理指令声明，如<code>&lt;?xml-stylesheet ... ?&gt;</code>。</li><li><code>Node.COMMENT_NODE</code>，8，<code>Comment</code>，注释。</li><li><code>Node.DOCUMENT_NODE</code>，9，<code>Document</code>，文档。</li><li><code>Node.DOCUMENT_TYPE_NODE</code>，10，<code>DocumentType</code>，描述文档类型，如<code>HTML5</code>的声明<code>&lt;!DOCTYPE html&gt;</code>。</li><li><code>Node.DOCUMENT_FRAGMENT_NODE</code>，11，<code>DocumentFragment</code>，文档片段。</li><li><code>Node.NOTATION_NODE</code>，12，<code>Notation</code>，XML的<code>&lt;!NOTATION ...&gt;</code>节点。<em>已废弃</em>。</li></ul>
+<li><code>Node.ELEMENT_NODE</code>，1，<code>Element</code>，<code>元素</code>，如<code>&lt;p&gt;</code>，<code>&lt;div&gt;</code></li>
+<li><code>Node.ATTRIBUTE_NODE</code>，2，<code>Attr</code>，元素的属性。<em>已废弃</em>。</li>
+<li><code>Node.TEXT_NODE</code>，3，<code>Text</code>，文本。元素或者属性的实际文本。</li>
+<li><code>Node.CDATA_SECTION_NODE</code>，4，<code>CDATASection</code>，文档中的 CDATA 部分。<em>已废弃</em>。</li>
+<li><code>Node.ENTITY_REFERENCE_NODE</code>，5，<code>EntityReference</code>，XML的实体引用节点。<em>已废弃</em>。</li>
+<li><code>Node.ENTITY_NODE</code>，6，<code>Entity</code>，XML中的<code>&lt;!ENTITY ...&gt;</code>节点。<em>已废弃</em>。</li>
+<li><code>Node.PROCESSING_INSTRUCTION_NODE</code>，7，<code>ProcessingInstruction</code>，XML文档中的处理指令声明，如<code>&lt;?xml-stylesheet ... ?&gt;</code>。</li>
+<li><code>Node.COMMENT_NODE</code>，8，<code>Comment</code>，注释。</li>
+<li><code>Node.DOCUMENT_NODE</code>，9，<code>Document</code>，文档。</li>
+<li><code>Node.DOCUMENT_TYPE_NODE</code>，10，<code>DocumentType</code>，描述文档类型，如<code>HTML5</code>的声明<code>&lt;!DOCTYPE html&gt;</code>。</li>
+<li><code>Node.DOCUMENT_FRAGMENT_NODE</code>，11，<code>DocumentFragment</code>，文档片段。</li>
+<li><code>Node.NOTATION_NODE</code>，12，<code>Notation</code>，XML的<code>&lt;!NOTATION ...&gt;</code>节点。<em>已废弃</em>。</li>
+</ul>
 <blockquote>
 <p>在<a href="https://www.w3.org/TR/2015/REC-dom-20151119/#dom-node-nodetype" target="_blank" rel="noopener">DOM4的规范草案</a>中，nodeType属性值<code>2</code>、<code>4</code>、<code>5</code>、<code>6</code>、<code>12</code>均已废弃不再使用。</p>
 </blockquote>
@@ -334,7 +346,9 @@
 <hr>
 <p>参考文档：</p>
 <ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType" target="_blank" rel="noopener">Node.nodeType - Web APIs | MDN</a></li><li><a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1950641247" target="_blank" rel="noopener">Document Object Model (DOM) Level 3 Core Specification - Node.nodeType</a></li></ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType" target="_blank" rel="noopener">Node.nodeType - Web APIs | MDN</a></li>
+<li><a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1950641247" target="_blank" rel="noopener">Document Object Model (DOM) Level 3 Core Specification - Node.nodeType</a></li>
+</ul>
 
       
     </div>
@@ -447,7 +461,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">71</span>
+              <span class="site-state-item-count">73</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -464,7 +478,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">172</span>
+                <span class="site-state-item-count">177</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -545,7 +559,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

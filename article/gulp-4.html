@@ -310,7 +310,11 @@
 </blockquote>
 <p>在这一天发布的日子里面，其实 <code>gulp</code> 一口气是出了四个版本的：</p>
 <ul>
-<li><code>v4.0.0-alpha.1</code></li><li><code>v4.0.0-alpha.2</code></li><li><code>v4.0.0-alpha.3</code></li><li><code>v4.0.0</code></li></ul>
+<li><code>v4.0.0-alpha.1</code></li>
+<li><code>v4.0.0-alpha.2</code></li>
+<li><code>v4.0.0-alpha.3</code></li>
+<li><code>v4.0.0</code></li>
+</ul>
 <p>前面三个是打了 <code>pre-release</code> 的标签的。</p>
 <p><a href="https://github.com/gulpjs/gulp/releases" target="_blank" rel="noopener">更新记录</a>这里就不赘述了，简单来说一下发布带来的新特性吧。</p>
 <p>首先是 API 的变化，新增了两个非常重要的改进：<code>gulp.parallel</code> 和 <code>gulp.series</code>。这一点我之前在<a href="https://github.com/xovel/diary/blob/master/2017/10/2017-10-22-gulp-4.md" target="_blank" rel="noopener">个人日志项目</a>里面也进行过记录，当时的说明还是略显简陋的。</p>
@@ -320,7 +324,11 @@
 <p><code>gulp.watch</code> 改进，在 <a href="https://github.com/paulmillr/chokidar" target="_blank" rel="noopener"><code>chokidar</code></a> 的基础上支持各种文件操作方式的监视。</p>
 <p>另外新增了几个 API：</p>
 <ul>
-<li><code>gulp.symlink</code> 用于创建 <code>symlinks</code>。</li><li><code>gulp.lastRun</code> 用于获得指定任务上一次的执行时间。</li><li><code>gulp.tree</code> 用于获取当前任务的树形结构。</li><li><code>gulp.registry</code> 用于获取或者设置注册任务。</li></ul>
+<li><code>gulp.symlink</code> 用于创建 <code>symlinks</code>。</li>
+<li><code>gulp.lastRun</code> 用于获得指定任务上一次的执行时间。</li>
+<li><code>gulp.tree</code> 用于获取当前任务的树形结构。</li>
+<li><code>gulp.registry</code> 用于获取或者设置注册任务。</li>
+</ul>
 <p>所有 API 的详细说明可以在这里找到：<a href="https://github.com/gulpjs/gulp/blob/v4.0.0/docs/API.md" target="_blank" rel="noopener">https://github.com/gulpjs/gulp/blob/v4.0.0/docs/API.md</a>。</p>
 <p>另外，对于命令行执行方式，也添加更加丰富的指令，详情可以参阅：<a href="https://github.com/gulpjs/gulp/blob/v4.0.0/docs/CLI.md" target="_blank" rel="noopener">https://github.com/gulpjs/gulp/blob/v4.0.0/docs/CLI.md</a></p>
 <p>更新之后，对现有的生态系统影响不会太大，因为还是保留了 <code>v3.9.1</code> 的安装方式。要安装 <code>v4</code>，需要使用 <code>npm install gulp@next</code> 命令来进行安装和获取。这些也都在其 <code>README.md</code> 文件里面有详细说明。</p>
@@ -435,7 +443,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">71</span>
+              <span class="site-state-item-count">73</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -452,7 +460,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">172</span>
+                <span class="site-state-item-count">177</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -533,7 +541,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

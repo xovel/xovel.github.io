@@ -324,7 +324,13 @@
 <h3 id="断言元字符"><a href="#断言元字符" class="headerlink" title="断言元字符"></a>断言元字符</h3><p>最常用的两个断言元字符是<code>^</code>和<code>$</code>，它们分别表示字符串开始和字符串结束。</p>
 <p>其他一些断言元字符参见下表：</p>
 <ul>
-<li><code>\b</code>，单词分界符</li><li><code>\B</code>，非单词分界符</li><li><code>\A</code>，字符串的开头，忽略<code>multiline</code>标识</li><li><code>\Z</code>，字符串的结尾或者字符串结尾的换行符<code>\n</code>之前，忽略<code>multiline</code>标识</li><li><code>\z</code>，字符串的结尾，忽略<code>multiline</code>标识</li><li><code>\G</code>，字符串的第一个位置</li></ul>
+<li><code>\b</code>，单词分界符</li>
+<li><code>\B</code>，非单词分界符</li>
+<li><code>\A</code>，字符串的开头，忽略<code>multiline</code>标识</li>
+<li><code>\Z</code>，字符串的结尾或者字符串结尾的换行符<code>\n</code>之前，忽略<code>multiline</code>标识</li>
+<li><code>\z</code>，字符串的结尾，忽略<code>multiline</code>标识</li>
+<li><code>\G</code>，字符串的第一个位置</li>
+</ul>
 <blockquote>
 <p><code>\A</code>、<code>\Z</code>、<code>\z</code>、<code>\G</code>很少使用。</p>
 </blockquote>
@@ -332,19 +338,47 @@
 <h3 id="零宽断言"><a href="#零宽断言" class="headerlink" title="零宽断言"></a>零宽断言</h3><p>断言元字符通常是基于当前位置的测试，断言也可以支持更加复杂的判断条件。更复杂的断言以子模式来进行表示，包括先行断言和后行断言。两者都是本文要解说的<code>零宽断言</code>。</p>
 <p>同断言元字符一样，零宽断言的判断匹配只做条件匹配，不会记录匹配结果，也不会匹配字符。</p>
 <h4 id="零宽正向先行断言"><a href="#零宽正向先行断言" class="headerlink" title="零宽正向先行断言"></a>零宽正向先行断言</h4><ul>
-<li>英文：<code>zero-width positive lookahead assertion</code></li><li>简称：<code>positive lookahead</code></li><li>语法：<code>(?=pattern)</code></li><li>概述：从当前位置开始测试后面的字符串<strong>匹配</strong><code>pattern</code>，仅当右侧<strong>匹配成功</strong>时才继续。</li><li>举例：<code>[a-zA-Z]+(?=\d)</code>，匹配一个后面跟着数字的字母，但匹配结果不包含该数字。</li></ul>
+<li>英文：<code>zero-width positive lookahead assertion</code></li>
+<li>简称：<code>positive lookahead</code></li>
+<li>语法：<code>(?=pattern)</code></li>
+<li>概述：从当前位置开始测试后面的字符串<strong>匹配</strong><code>pattern</code>，仅当右侧<strong>匹配成功</strong>时才继续。</li>
+<li>举例：<code>[a-zA-Z]+(?=\d)</code>，匹配一个后面跟着数字的字母，但匹配结果不包含该数字。</li>
+</ul>
 <h4 id="零宽负向先行断言"><a href="#零宽负向先行断言" class="headerlink" title="零宽负向先行断言"></a>零宽负向先行断言</h4><ul>
-<li>英文：<code>zero-width negative lookahead assertion</code></li><li>简称：<code>negative lookahead</code></li><li>语法：<code>(?!pattern)</code></li><li>概述：从当前位置开始测试后面的字符串<strong>不匹配</strong><code>pattern</code>，仅当右侧<strong>不能匹配</strong>时才继续。</li><li>举例：使用正则表达式<code>re(?!g)</code>，匹配字符串<code>regular expression</code>，则<em><strong>re</strong>gular</em>中的<em>re</em>不会被匹配，<em>exp<strong>re</strong>ssion</em>中的<em>re</em>将会被匹配。</li></ul>
+<li>英文：<code>zero-width negative lookahead assertion</code></li>
+<li>简称：<code>negative lookahead</code></li>
+<li>语法：<code>(?!pattern)</code></li>
+<li>概述：从当前位置开始测试后面的字符串<strong>不匹配</strong><code>pattern</code>，仅当右侧<strong>不能匹配</strong>时才继续。</li>
+<li>举例：使用正则表达式<code>re(?!g)</code>，匹配字符串<code>regular expression</code>，则<em><strong>re</strong>gular</em>中的_re_不会被匹配，<em>exp<strong>re</strong>ssion</em>中的_re_将会被匹配。</li>
+</ul>
 <h4 id="零宽正向后行断言"><a href="#零宽正向后行断言" class="headerlink" title="零宽正向后行断言"></a>零宽正向后行断言</h4><ul>
-<li>英文：<code>zero-width positive lookbehind assertion</code></li><li>简称：<code>positive lookbehind</code></li><li>语法：<code>(?&lt;=pattern)</code></li><li>概述：从当前位置开始测试前面的字符串<strong>匹配</strong><code>pattern</code>，仅当左侧<em>匹配成功</em>时才继续。</li></ul>
+<li>英文：<code>zero-width positive lookbehind assertion</code></li>
+<li>简称：<code>positive lookbehind</code></li>
+<li>语法：<code>(?&lt;=pattern)</code></li>
+<li>概述：从当前位置开始测试前面的字符串<strong>匹配</strong><code>pattern</code>，仅当左侧<em>匹配成功</em>时才继续。</li>
+</ul>
 <h4 id="零宽正向后行断言-1"><a href="#零宽正向后行断言-1" class="headerlink" title="零宽正向后行断言"></a>零宽正向后行断言</h4><ul>
-<li>英文：<code>zero-width negative lookbehind assertion</code></li><li>简称：<code>negative lookbehind</code></li><li>语法：<code>(?&lt;!pattern)</code></li><li>概述：从当前位置开始测试前面的字符串<em>不匹配</em><code>pattern</code>，仅当左侧<em>不能匹配</em>时才继续。</li></ul>
+<li>英文：<code>zero-width negative lookbehind assertion</code></li>
+<li>简称：<code>negative lookbehind</code></li>
+<li>语法：<code>(?&lt;!pattern)</code></li>
+<li>概述：从当前位置开始测试前面的字符串<em>不匹配</em><code>pattern</code>，仅当左侧<em>不能匹配</em>时才继续。</li>
+</ul>
 <p><strong>注意</strong>：后行断言由于存在回溯情况，<code>JavaScript</code><strong>没有对其进行实现</strong>。</p>
 <blockquote>
 <p><a href="https://www.zhihu.com/question/20154937" target="_blank" rel="noopener">为什么 JavaScript 的正则不支持 “零宽度正回顾后发断言” ？</a></p>
 </blockquote>
 <h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
-<li><a href="http://regexr.com/" target="_blank" rel="noopener">RegExr - 在线测试正则表达式</a></li><li><a href="https://regexper.com" target="_blank" rel="noopener">Regexper - 根据正则表达式生成SVG示意图</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp" target="_blank" rel="noopener">RegExp - JavaScript | MDN</a></li><li><a href="https://msdn.microsoft.com/zh-cn/library/ae5bf541(v=vs.100).aspx" target="_blank" rel="noopener">Regular Expression Syntax - 微软官方正则表达式参考</a></li><li><a href="http://www.regular-expressions.info/" target="_blank" rel="noopener">Regular-Expressions.info - The Premier website about Regular Expressions</a></li><li><a href="http://www.regular-expressions.info/lookaround.html" target="_blank" rel="noopener">Regex Tutorial - Lookahead and Lookbehind Zero-Length Assertions</a></li><li><a href="http://www.regular-expressions.info/brackets.html" title="分组与捕获" target="_blank" rel="noopener">Regex Tutorial - Parentheses for Grouping and Capturing</a></li><li><a href="http://www.regular-expressions.info/refcapture.html" title="捕获组详细介绍，内含各种编程语言对其的实现" target="_blank" rel="noopener">Regular Expression Reference: Capturing Groups and Backreferences</a></li><li><a href="http://stackoverflow.com/questions/3512471/what-is-a-non-capturing-group" target="_blank" rel="noopener">regex - What is a non capturing group? (?:) - Stack Overflow</a></li><li><a href="https://blog.getify.com/to-capture-or-not/" target="_blank" rel="noopener">To capture or not to capture | getiblog</a></li></ul>
+<li><a href="http://regexr.com/" target="_blank" rel="noopener">RegExr - 在线测试正则表达式</a></li>
+<li><a href="https://regexper.com" target="_blank" rel="noopener">Regexper - 根据正则表达式生成SVG示意图</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp" target="_blank" rel="noopener">RegExp - JavaScript | MDN</a></li>
+<li><a href="https://msdn.microsoft.com/zh-cn/library/ae5bf541(v=vs.100).aspx" target="_blank" rel="noopener">Regular Expression Syntax - 微软官方正则表达式参考</a></li>
+<li><a href="http://www.regular-expressions.info/" target="_blank" rel="noopener">Regular-Expressions.info - The Premier website about Regular Expressions</a></li>
+<li><a href="http://www.regular-expressions.info/lookaround.html" target="_blank" rel="noopener">Regex Tutorial - Lookahead and Lookbehind Zero-Length Assertions</a></li>
+<li><a href="http://www.regular-expressions.info/brackets.html" title="分组与捕获" target="_blank" rel="noopener">Regex Tutorial - Parentheses for Grouping and Capturing</a></li>
+<li><a href="http://www.regular-expressions.info/refcapture.html" title="捕获组详细介绍，内含各种编程语言对其的实现" target="_blank" rel="noopener">Regular Expression Reference: Capturing Groups and Backreferences</a></li>
+<li><a href="http://stackoverflow.com/questions/3512471/what-is-a-non-capturing-group" target="_blank" rel="noopener">regex - What is a non capturing group? (?:) - Stack Overflow</a></li>
+<li><a href="https://blog.getify.com/to-capture-or-not/" target="_blank" rel="noopener">To capture or not to capture | getiblog</a></li>
+</ul>
 
       
     </div>
@@ -457,7 +491,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">71</span>
+              <span class="site-state-item-count">73</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -474,7 +508,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">172</span>
+                <span class="site-state-item-count">177</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -555,7 +589,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

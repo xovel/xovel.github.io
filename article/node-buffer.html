@@ -325,7 +325,15 @@
 <p>上面的代码，是 <code>node</code> 环境下关于浏览器 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/atob" target="_blank" rel="noopener"><code>atob</code></a> 和 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/btoa" target="_blank" rel="noopener"><code>btoa</code></a> 方法的实现。</p>
 <p><code>Node.js</code> 目前支持的字符编码如下：</p>
 <ul>
-<li><code>ascii</code>，仅支持 7 位 ASCII 数据。</li><li><code>utf8</code>，多字节编码的 Unicode 字符。许多网页和其他文档格式都使用 <code>UTF-8</code>。</li><li><code>utf16le</code>，2 或 4 字节，<code>little-endian</code>(小字节序)编码的 Unicode 字符。支持 <code>U+10000</code> 到 <code>U+10FFFF</code> 的代理对。</li><li><code>usc2</code>，即 <code>utf16le</code>。</li><li><code>base64</code>，即 <code>Base64</code> 编码。</li><li><code>latin1</code>，即 <code>Latin-1</code> 编码，具体由 IANA 在 <a href="https://tools.ietf.org/html/rfc1345" target="_blank" rel="noopener">RFC1345</a> 中定义。</li><li><code>binary</code>，即 <code>latin1</code>。</li><li><code>hex</code>，将每个字节编码为两个十六进制字符。</li></ul>
+<li><code>ascii</code>，仅支持 7 位 ASCII 数据。</li>
+<li><code>utf8</code>，多字节编码的 Unicode 字符。许多网页和其他文档格式都使用 <code>UTF-8</code>。</li>
+<li><code>utf16le</code>，2 或 4 字节，<code>little-endian</code>(小字节序)编码的 Unicode 字符。支持 <code>U+10000</code> 到 <code>U+10FFFF</code> 的代理对。</li>
+<li><code>usc2</code>，即 <code>utf16le</code>。</li>
+<li><code>base64</code>，即 <code>Base64</code> 编码。</li>
+<li><code>latin1</code>，即 <code>Latin-1</code> 编码，具体由 IANA 在 <a href="https://tools.ietf.org/html/rfc1345" target="_blank" rel="noopener">RFC1345</a> 中定义。</li>
+<li><code>binary</code>，即 <code>latin1</code>。</li>
+<li><code>hex</code>，将每个字节编码为两个十六进制字符。</li>
+</ul>
 <blockquote>
 <p>注意，现代浏览器遵循 <a href="https://encoding.spec.whatwg.org/" target="_blank" rel="noopener">WHATWG 编码标准</a> 将 <code>latin1</code> 和 <code>ISO-8859-1</code> 别名为 <code>win-1252</code>。这意味着在进行例如 <code>http.get()</code> 获取到的字符编码在规范列表中，服务器可能返回 <code>win-1252</code> 编码的数据，此时如果使用 <code>latin1</code> 字符编码，可能会得到错误的解码数据。</p>
 </blockquote>
@@ -333,7 +341,14 @@
 <p>使用 <code>new</code> 操作符实例化一个 <code>Buffer</code> 的方法已经被弃用。注意，<strong>已经弃用的方法本文不做介绍</strong>。</p>
 <p>创建 <code>Buffer</code> 实例的方法有下面几个：</p>
 <ul>
-<li><code>Buffer.from(array)</code>，从数组进行创建。</li><li><code>Buffer.from(arrayBuffer[, byteOffset[, length]])</code>，从 <code>arrayBuffer</code> 的实例进行创建。</li><li><code>Buffer.from(buffer)</code>，直接根据 <code>buffer</code> 创建。</li><li><code>Buffer.from(string[, encoding])</code>，根据字符串创建，<code>encoding</code> 即使用的编码方式。</li><li><code>Buffer.from(object[, offsetOrEncoding[, length]])</code>，根据对象创建，该对象需要支持 <code>Symbol.toPrimitive</code> 或者有 <code>valueOf()</code> 方法，比如 <code>Buffer.from(new String(&#39;this is a test&#39;));</code>。</li><li><code>Buffer.alloc(size[, fill[, encoding]])</code>，创建一个指定长度的对象，<code>fill</code> 表示用来填充新建的 <code>Buffer</code> 的值，默认为 <code>0</code>。</li><li><code>Buffer.allocUnsafe(size)</code>，分配一个大小为 <code>size</code> 的对象。该方式创建的 <code>Buffer</code> 对象是未经过初始化的，内容未知，可能包含敏感数据。</li></ul>
+<li><code>Buffer.from(array)</code>，从数组进行创建。</li>
+<li><code>Buffer.from(arrayBuffer[, byteOffset[, length]])</code>，从 <code>arrayBuffer</code> 的实例进行创建。</li>
+<li><code>Buffer.from(buffer)</code>，直接根据 <code>buffer</code> 创建。</li>
+<li><code>Buffer.from(string[, encoding])</code>，根据字符串创建，<code>encoding</code> 即使用的编码方式。</li>
+<li><code>Buffer.from(object[, offsetOrEncoding[, length]])</code>，根据对象创建，该对象需要支持 <code>Symbol.toPrimitive</code> 或者有 <code>valueOf()</code> 方法，比如 <code>Buffer.from(new String(&#39;this is a test&#39;));</code>。</li>
+<li><code>Buffer.alloc(size[, fill[, encoding]])</code>，创建一个指定长度的对象，<code>fill</code> 表示用来填充新建的 <code>Buffer</code> 的值，默认为 <code>0</code>。</li>
+<li><code>Buffer.allocUnsafe(size)</code>，分配一个大小为 <code>size</code> 的对象。该方式创建的 <code>Buffer</code> 对象是未经过初始化的，内容未知，可能包含敏感数据。</li>
+</ul>
 <blockquote>
 <p>更多的创建方式不在本文的记述范围之内。</p>
 </blockquote>
@@ -386,8 +401,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/article/vscode-extensions.html" rel="prev" title="VSCode 扩展">
-                VSCode 扩展 <i class="fa fa-chevron-right"></i>
+              <a href="/article/chrome-extensions.html" rel="prev" title="Chrome 扩展">
+                Chrome 扩展 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -456,7 +471,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">71</span>
+              <span class="site-state-item-count">73</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -473,7 +488,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">172</span>
+                <span class="site-state-item-count">177</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -554,7 +569,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

@@ -322,12 +322,30 @@
 <p>其实，现阶段的我依然是各路编辑器和IDE混用的，因为有时候同一个项目要被各种查看，一个IDE并不能胜任，于是就出现了我同时打开了WebStorm、Atom、Brackets、Notepad++、Sublime，甚至还搬出了多年不再使用的UltraEdit，是的，它们同时打开了同一个项目。我都不敢想象为什么我会变得如此疯狂。</p>
 <p>既然是要采用Brackets作为近阶段的IDE，那么就安装几个插件来让它如虎添翼吧。官方推荐的插件，我安装了几个自己认为重要的，现在我自己的电脑上的Brackets插件的安装情况大概是这个样子的：</p>
 <ul>
-<li><code>brackets-beautify</code>，官方推荐，代码美化工具，<strong>是的，格式化之后的代码很美！</strong></li><li><code>brackets-display-shortcuts</code>，显示快捷键列表的插件，安装好之后在帮助菜单里面执行，就可以看到当前所有的快捷键了。</li><li><code>brackets-emmet</code>，是的，这就是本文要提到的核心插件，一个快速写HTML代码的工具，那速度绝对快的飞起。</li><li><code>brackets-indent-guides</code>，显示缩进的指示线。简单又粗暴，绝对是深度依赖者的必装插件。</li><li><code>brackets-minimap</code>，当初是因为什么爱上了sublime？没错，就是因为有代码缩略地图。基本上现在用一款编辑工具，首先会去看看没有代码小地图工具，有的话先装起来再说。</li><li><code>pop-up-menu</code>，这是一个对编辑的工作区域内的右键菜单进行提升的插件，增加了一些便利性操作。</li><li><code>exclude-folders</code>，打开文件夹时，过滤指定文件夹的插件。过滤了<code>node_modules</code>文件夹之后，项目的打开速度得到了明显的提升。但是看不到node_modules文件夹还是总觉得有点欠缺的。</li><li><code>markdown-preview</code>，markdown预览插件。作为一个重度markdown使用者，这插件对我来说也是极好的。</li><li><code>file-icons</code>，简单粗暴，给打开的各路文件的前面显示一个图标。优雅美观说的就是这样的效果。</li><li><code>monokai-theme</code>，Sumline Text的爱好者对这个那必须是钟爱莫名的，非常精致的代码配色方案。</li><li><code>color-palette</code>，取色器，好用不解释。</li></ul>
+<li><code>brackets-beautify</code>，官方推荐，代码美化工具，<strong>是的，格式化之后的代码很美！</strong></li>
+<li><code>brackets-display-shortcuts</code>，显示快捷键列表的插件，安装好之后在帮助菜单里面执行，就可以看到当前所有的快捷键了。</li>
+<li><code>brackets-emmet</code>，是的，这就是本文要提到的核心插件，一个快速写HTML代码的工具，那速度绝对快的飞起。</li>
+<li><code>brackets-indent-guides</code>，显示缩进的指示线。简单又粗暴，绝对是深度依赖者的必装插件。</li>
+<li><code>brackets-minimap</code>，当初是因为什么爱上了sublime？没错，就是因为有代码缩略地图。基本上现在用一款编辑工具，首先会去看看没有代码小地图工具，有的话先装起来再说。</li>
+<li><code>pop-up-menu</code>，这是一个对编辑的工作区域内的右键菜单进行提升的插件，增加了一些便利性操作。</li>
+<li><code>exclude-folders</code>，打开文件夹时，过滤指定文件夹的插件。过滤了<code>node_modules</code>文件夹之后，项目的打开速度得到了明显的提升。但是看不到node_modules文件夹还是总觉得有点欠缺的。</li>
+<li><code>markdown-preview</code>，markdown预览插件。作为一个重度markdown使用者，这插件对我来说也是极好的。</li>
+<li><code>file-icons</code>，简单粗暴，给打开的各路文件的前面显示一个图标。优雅美观说的就是这样的效果。</li>
+<li><code>monokai-theme</code>，Sumline Text的爱好者对这个那必须是钟爱莫名的，非常精致的代码配色方案。</li>
+<li><code>color-palette</code>，取色器，好用不解释。</li>
+</ul>
 <p>嗯，这些插件的安装其实并不是顺利，因为有<del>强大的</del>GFW的存在，悲催的brackets因为调用了aws的资源，所以有时候那速度卡的飞起，所以大部分插件我都是通过github的zip链接进行安装的。</p>
 <p>安装完毕了之后，慕名已久的emmet插件一直不肯工作，这到底是为什么？</p>
 <p>可能是因为疏忽大意了，一直迟迟忘记了brackets是基于HTML/JS构建出来的编辑工具，其界面上面是自带了Chrome DevTools的。为了这个问题，我几乎是找遍了brackets、emmet、stackoverflow上面的所有资源，依然是没有解决这个问题，后来又想，干脆手动安装一次，完全的纯粹的手动方式：</p>
 <ol>
-<li>进入brackets的插件目录，我的是win10环境，所以在<code>C:\Users\xovel\AppData\Roaming\Brackets\extensions</code>这里。</li><li>进入user文件夹，打开bash。</li><li>在bash里面执行git clone操作。</li><li>clone完成之后进入插件目录<code>brackets-emmet</code>，继续执行依赖安装操作<code>npm install</code>。</li><li>安装完毕之后会发现，目录下多了个node_modules文件夹。</li><li>进去一看，里面有两个文件夹，分别是<code>emmet</code>和<code>caniuse-db</code>。</li><li>不管那么多，重启brackets。</li></ol>
+<li>进入brackets的插件目录，我的是win10环境，所以在<code>C:\Users\xovel\AppData\Roaming\Brackets\extensions</code>这里。</li>
+<li>进入user文件夹，打开bash。</li>
+<li>在bash里面执行git clone操作。</li>
+<li>clone完成之后进入插件目录<code>brackets-emmet</code>，继续执行依赖安装操作<code>npm install</code>。</li>
+<li>安装完毕之后会发现，目录下多了个node_modules文件夹。</li>
+<li>进去一看，里面有两个文件夹，分别是<code>emmet</code>和<code>caniuse-db</code>。</li>
+<li>不管那么多，重启brackets。</li>
+</ol>
 <p>很遗憾，依然没有emmet功能。</p>
 <p>几经周折，我终于看到了调试里面的开发工具，于是调出F12，看看到底是什么错误导致的。</p>
 <p>果不其然，在控制台里面有一行错误提示：大意是缺少一个文件，这个文件就是<code>\brackets-emmet\node_modules\emmet\lib\caniuse.json</code>，我仔细去看了一遍，确实是没有这个文件。</p>
@@ -458,7 +476,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">71</span>
+              <span class="site-state-item-count">73</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -475,7 +493,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">172</span>
+                <span class="site-state-item-count">177</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -556,7 +574,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

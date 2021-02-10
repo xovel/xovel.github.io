@@ -311,7 +311,8 @@
 <h3 id="等额本金"><a href="#等额本金" class="headerlink" title="等额本金"></a>等额本金</h3><p>等额本金指的是在还款期内把贷款数的总额进行划分，每月的还款额的组成为固定的还款额和剩余贷款在该月的利息。因为每月还款本金固定，利息会随着时间的推移逐月递减，贷款人开始的时候还款压力较大，随着时间的推移每月还款额越来越少。</p>
 <p><em>参考资料：</em></p>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Mortgage_loan" target="_blank" rel="noopener">Mortgage loan</a></li></ul>
+<li><a href="https://en.wikipedia.org/wiki/Mortgage_loan" target="_blank" rel="noopener">Mortgage loan</a></li>
+</ul>
 <h2 id="每月还款额的计算方式"><a href="#每月还款额的计算方式" class="headerlink" title="每月还款额的计算方式"></a>每月还款额的计算方式</h2><h3 id="等额本息-1"><a href="#等额本息-1" class="headerlink" title="等额本息"></a>等额本息</h3><p>每月还款额=贷款额*月贷款利息*(1+月贷款利息)^贷款期限/((1+月贷款利息)^贷款期限-1)</p>
 <p>我们进行一个简单的数学建模：</p>
 <blockquote>
@@ -331,7 +332,12 @@
 <p><code>PMT(Rate, Nper, Pv, Fv, Type)</code></p>
 <p>参数说明：</p>
 <ul>
-<li>Rate，必需。贷款利率。</li><li>Nper，必需。贷款的总期数。</li><li>Pv，必需。贷款总额。</li><li>Fv，可选。未来值，或在最后一次付款后可以获得的现金余额。如果忽略，则此值为0。</li><li>Type，可选。用以指定付款时间在期初还是在期末。1表示起初，0表示在期末。默认为0。</li></ul>
+<li>Rate，必需。贷款利率。</li>
+<li>Nper，必需。贷款的总期数。</li>
+<li>Pv，必需。贷款总额。</li>
+<li>Fv，可选。未来值，或在最后一次付款后可以获得的现金余额。如果忽略，则此值为0。</li>
+<li>Type，可选。用以指定付款时间在期初还是在期末。1表示起初，0表示在期末。默认为0。</li>
+</ul>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">等比数列求和公式：$S_n=a_1\cdot\frac{1-q^n}{1-q}=\frac{a_1-a_n*q}{1-q} (q\neq1)$，$a_1$为基数，$q$为等比系数。</span><a href="#fnref:1" rev="footnote"> ↩</a></li></ol></div></div>
       
     </div>
@@ -446,7 +452,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">71</span>
+              <span class="site-state-item-count">73</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -463,7 +469,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">172</span>
+                <span class="site-state-item-count">177</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -544,7 +550,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

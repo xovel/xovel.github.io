@@ -529,7 +529,9 @@
 <p>需要注意的是，括号组的符号在使用时不会根据内容进行缩放。如果需要自适应缩放，请使用<code>\left</code>和<code>\right</code>。</p>
 <p>示例：</p>
 <ul>
-<li>公式<code>(\frac{\sqrt x}{y^3})</code>展示为$(\frac{\sqrt x}{y^3})$。</li><li>带自适应效果时：$\left(\frac{\sqrt x}{y^3}\right)$</li></ul>
+<li>公式<code>(\frac{\sqrt x}{y^3})</code>展示为$(\frac{\sqrt x}{y^3})$。</li>
+<li>带自适应效果时：$\left(\frac{\sqrt x}{y^3}\right)$</li>
+</ul>
 <p>自适应效果除了上面提到的几组括号外，同样可以应用在<code>|</code> $|x|$、<code>\vert</code> $\vert x \vert$、<code>\Vert</code> $\Vert x \Vert$、向上取整<code>\lceil</code>和<code>\rceil</code> $\lceil x \rceil$、向下取整<code>\lfloor</code>和<code>\rfloor</code> $\lfloor x \rfloor$。</p>
 <p>括号组可以只保留一边，在自适应情形下，另一边使用数点代替即可。示例：<code>\left.\frac12\right\rbrace</code>，$\left.\frac12\right\rbrace$。</p>
 <h3 id="求和与积分"><a href="#求和与积分" class="headerlink" title="求和与积分"></a>求和与积分</h3><p>使用<code>\sum</code>表示求和$\sum_1^n$，<code>\int</code>表示积分$\int_1^\infty$。上标为上限，下标为下限。如果上限与下限包含多个符号，请注意使用花括号进行界定。</p>
@@ -539,19 +541,45 @@
 <p>第一种为<code>\frac</code>，如<code>\frac xy</code> $\frac xy$。分子和分母分别跟在后面即可，同样注意花括号的使用。</p>
 <p>第二种为<code>\over</code>，如<code>{a+1\over b+1}</code> ${a+1\over b+1}$。分子和分母位于两边。通常在公式很复杂采用。</p>
 <h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><ul>
-<li>使用<code>\mathbb</code>或者<code>\Bbb</code>来表示黑板粗体<code>blackboard bold</code><br>  $\mathbb{CHNQRZ}$.</li><li>使用<code>\mathbf</code>表示黑体<br>  $\mathbf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$ $\mathbf{abcdefghijklmnopqrstuvwxyz}$.</li><li>使用<code>\mathtt</code>表示打印机字体<br>  $\mathtt{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$ $\mathtt{abcdefghijklmnopqrstuvwxyz}$.</li><li>使用<code>\mathrm</code>表示罗马字体<br>  $\mathrm{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$ $\mathrm{abcdefghijklmnopqrstuvwxyz}$.</li><li>使用<code>\mathsf</code>表示无衬线字体<br>  $\mathsf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$ $\mathsf{abcdefghijklmnopqrstuvwxyz}$.</li><li>使用<code>\mathcal</code>表示书法体<br>  $\mathcal{ ABCDEFGHIJKLMNOPQRSTUVWXYZ}$</li><li>使用<code>\mathscr</code>表示手写体<br>  $\mathscr{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$</li><li>使用<code>\mathfrak</code>表示Fraktur字体（一款德文黑体字）:<br>  $\mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \mathfrak{abcdefghijklmnopqrstuvwxyz}$.</li></ul>
+<li>使用<code>\mathbb</code>或者<code>\Bbb</code>来表示黑板粗体<code>blackboard bold</code><br>  $\mathbb{CHNQRZ}$.</li>
+<li>使用<code>\mathbf</code>表示黑体<br>  $\mathbf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$ $\mathbf{abcdefghijklmnopqrstuvwxyz}$.</li>
+<li>使用<code>\mathtt</code>表示打印机字体<br>  $\mathtt{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$ $\mathtt{abcdefghijklmnopqrstuvwxyz}$.</li>
+<li>使用<code>\mathrm</code>表示罗马字体<br>  $\mathrm{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$ $\mathrm{abcdefghijklmnopqrstuvwxyz}$.</li>
+<li>使用<code>\mathsf</code>表示无衬线字体<br>  $\mathsf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$ $\mathsf{abcdefghijklmnopqrstuvwxyz}$.</li>
+<li>使用<code>\mathcal</code>表示书法体<br>  $\mathcal{ ABCDEFGHIJKLMNOPQRSTUVWXYZ}$</li>
+<li>使用<code>\mathscr</code>表示手写体<br>  $\mathscr{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$</li>
+<li>使用<code>\mathfrak</code>表示Fraktur字体（一款德文黑体字）:<br>  $\mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \mathfrak{abcdefghijklmnopqrstuvwxyz}$.</li>
+</ul>
 <h3 id="根号"><a href="#根号" class="headerlink" title="根号"></a>根号</h3><p>使用<code>\sqrt</code>表示根号。如<code>\sqrt2</code>，$\sqrt2$。</p>
 <p>多次方根在后面使用<code>[]</code>指定即可。如<code>\sqrt[n^2]{\frac xy}</code>，$\sqrt[3]{\frac xy}$。</p>
 <h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>对于特殊函数，如<code>sin</code>、<code>lim</code>、<code>max</code>、<code>ln</code>等，会自动识别，将以常规罗马字体代替斜体进行显示。如正弦函数表示为：<code>\sin x</code>$\sin x$，并非<code>sin x</code>$sin x$。</p>
 <p>极限函数下标跟在后面即可：<code>\lim</code>: <code>\lim_{x\to 0}</code> $$\lim_{x\to 0}$$</p>
 <h3 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h3><p>MathJax支持大量特殊符号，这里罗列一部分，更多请参考：<a href="http://pic.plover.com/MISC/symbols.pdf" target="_blank" rel="noopener">this shorter listing</a>和<a href="http://mirror.math.ku.edu/tex-archive/info/symbols/comprehensive/symbols-a4.pdf" target="_blank" rel="noopener">this exhaustive listing</a></p>
 <ul>
-<li>比较判断符，<code>\lt \gt \le \ge \neq</code> $\lt\, \gt\, \le\, \ge\, \neq$.<br>你可以在这些操作符前加入<code>\not</code>表示相反的意思: <code>\not\lt</code> $\not\lt$，<del>然而并不好看</del></li><li>四则运算符，<code>\times \div \pm \mp</code> $\times\, \div\, \pm\, \mp$<br><code>+</code>和<code>-</code>直接使用即可<br><code>\cdot</code>表示一个居中的乘点: $x\cdot y$</li><li>集合关系与运算符，<code>\cup \cap \setminus \subset \subseteq \subsetneq \supset \in \notin \emptyset \varnothing</code> $\cup\, \cap\, \setminus\, \subset\, \subseteq \,\subsetneq \,\supset\, \in\, \notin\, \emptyset\, \varnothing$</li><li>排列符，<code>{n+1 \choose 2k}</code>或<code>\binom{n+1}{2k}</code> ${n+1 \choose 2k}$</li><li>箭头符，<code>\to \rightarrow \leftarrow \Rightarrow \Leftarrow \mapsto</code> $\to\, \rightarrow\, \leftarrow\, \Rightarrow\, \Leftarrow\, \mapsto$</li><li>逻辑操作符，<code>\land \lor \lnot \forall \exists \top \bot \vdash \vDash</code> $\land\, \lor\, \lnot\, \forall\, \exists\, \top\, \bot\, \vdash\, \vDash$</li><li>星号类符号，<code>\star \ast \oplus \circ \bullet</code> $\star\, \ast\, \oplus\, \circ\, \bullet$</li><li>相似运算符，<code>\approx \sim \simeq \cong \equiv \prec</code> $\approx\, \sim \, \simeq\, \cong\, \equiv\, \prec$.</li><li>无穷与阿列夫零，<code>\infty \aleph_0</code> $\infty\, \aleph_0$</li><li>劈形运算符与取部分运算符，<code>\nabla \partial</code> $\nabla\, \partial$</li><li>复数的虚部与实部，<code>\Im \Re</code> $\Im\, \Re$</li><li>模运算符，<code>\pmod</code>，<code>a\equiv b\pmod n</code> $a\equiv b\pmod n$.</li><li>多点符，<code>\ldots</code>的点的位置偏下：$a_1, a_2, \ldots ,a_n$；<code>\cdots</code>点的位置居中：$a_1+a_2+\cdots+a_n$</li><li>一些具有变体的希腊字母符号: <code>\epsilon \varepsilon</code> $\epsilon\, \varepsilon$, <code>\phi \varphi</code> $\phi\, \varphi$等等</li><li>字母<code>l</code>的手写体<code>\ell</code> $\ell$</li></ul>
+<li>比较判断符，<code>\lt \gt \le \ge \neq</code> $\lt\, \gt\, \le\, \ge\, \neq$.<br>你可以在这些操作符前加入<code>\not</code>表示相反的意思: <code>\not\lt</code> $\not\lt$，<del>然而并不好看</del></li>
+<li>四则运算符，<code>\times \div \pm \mp</code> $\times\, \div\, \pm\, \mp$<br><code>+</code>和<code>-</code>直接使用即可<br><code>\cdot</code>表示一个居中的乘点: $x\cdot y$</li>
+<li>集合关系与运算符，<code>\cup \cap \setminus \subset \subseteq \subsetneq \supset \in \notin \emptyset \varnothing</code> $\cup\, \cap\, \setminus\, \subset\, \subseteq \,\subsetneq \,\supset\, \in\, \notin\, \emptyset\, \varnothing$</li>
+<li>排列符，<code>{n+1 \choose 2k}</code>或<code>\binom{n+1}{2k}</code> ${n+1 \choose 2k}$</li>
+<li>箭头符，<code>\to \rightarrow \leftarrow \Rightarrow \Leftarrow \mapsto</code> $\to\, \rightarrow\, \leftarrow\, \Rightarrow\, \Leftarrow\, \mapsto$</li>
+<li>逻辑操作符，<code>\land \lor \lnot \forall \exists \top \bot \vdash \vDash</code> $\land\, \lor\, \lnot\, \forall\, \exists\, \top\, \bot\, \vdash\, \vDash$</li>
+<li>星号类符号，<code>\star \ast \oplus \circ \bullet</code> $\star\, \ast\, \oplus\, \circ\, \bullet$</li>
+<li>相似运算符，<code>\approx \sim \simeq \cong \equiv \prec</code> $\approx\, \sim \, \simeq\, \cong\, \equiv\, \prec$.</li>
+<li>无穷与阿列夫零，<code>\infty \aleph_0</code> $\infty\, \aleph_0$</li>
+<li>劈形运算符与取部分运算符，<code>\nabla \partial</code> $\nabla\, \partial$</li>
+<li>复数的虚部与实部，<code>\Im \Re</code> $\Im\, \Re$</li>
+<li>模运算符，<code>\pmod</code>，<code>a\equiv b\pmod n</code> $a\equiv b\pmod n$.</li>
+<li>多点符，<code>\ldots</code>的点的位置偏下：$a_1, a_2, \ldots ,a_n$；<code>\cdots</code>点的位置居中：$a_1+a_2+\cdots+a_n$</li>
+<li>一些具有变体的希腊字母符号: <code>\epsilon \varepsilon</code> $\epsilon\, \varepsilon$, <code>\phi \varphi</code> $\phi\, \varphi$等等</li>
+<li>字母<code>l</code>的手写体<code>\ell</code> $\ell$</li>
+</ul>
 <p>在<a href="http://detexify.kirelabs.org/classify.html" target="_blank" rel="noopener">Detexify</a>上你可以画出符号，Detexify会自动识别并给出相似的符号及其代码。但并不能保证该符号在MathJax中可用，你可以参考MathJax的官方文档<a href="http://docs.mathjax.org/en/latest/tex.html#supported-latex-commands" target="_blank" rel="noopener">list of currently supported $\LaTeX$ commands</a>以确定该符号是否可用。也可以参考Dr. Carol JVF Burns’s编写的页面：<a href="http://www.onemathematicalcat.org/MathJaxDocumentation/TeXSyntax.htm" target="_blank" rel="noopener">$\TeX$ Commands Available in MathJax</a>。</p>
 <h3 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h3><p>通常情况下MathJax会忽略常规的空格。</p>
 <p>空格的表述方式：</p>
 <ul>
-<li><code>\,</code>表示一个细微的空格$a\,b$</li><li><code>\;</code>稍大一点的空格$a\;b$</li><li><code>\quad</code>和<code>\qquad</code>表示更大的空格$a\quad b$, $a\qquad b$</li></ul>
+<li><code>\,</code>表示一个细微的空格$a\,b$</li>
+<li><code>\;</code>稍大一点的空格$a\;b$</li>
+<li><code>\quad</code>和<code>\qquad</code>表示更大的空格$a\quad b$, $a\qquad b$</li>
+</ul>
 <p>在<code>\text{...}</code>表示的文本中，空格将会保留。你可以在公式中嵌入<code>\text{...}</code>。</p>
 <h3 id="顶部标记"><a href="#顶部标记" class="headerlink" title="顶部标记"></a>顶部标记</h3><p><code>\hat</code>表示这样一个简单的符号：$\hat x$，<code>\widehat</code>表示一个长公式$\widehat{xy}$。</p>
 <p>同样的有<code>\bar</code> $\bar x$和<code>\overline</code> $\overline{xyz}$，以及<code>\vec</code> $\vec x$ 和<code>\overrightarrow</code> $\overrightarrow{xy}$、<code>\overleftrightarrow</code> $\overleftrightarrow{xy}$</p>
@@ -559,7 +587,14 @@
 <h3 id="转义与换行"><a href="#转义与换行" class="headerlink" title="转义与换行"></a>转义与换行</h3><p>如果在公式中需要直接使用特殊符号，使用<code>\</code>进行转义即可。如<code>\$</code>$\$$、<code>\_</code>$\_$。</p>
 <p>如果要使用<code>\</code>符号本身，由于<code>\\</code>表示的是换行，故而使用<code>\backslash</code> $\backslash$。</p>
 <h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
-<li><a href="https://www.mathjax.org/" target="_blank" rel="noopener">MathJax</a></li><li><a href="https://github.com/mathjax/MathJax" target="_blank" rel="noopener">mathjax/MathJax - Github</a></li><li><a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="noopener">MathJax basic tutorial and quick reference</a></li><li><a href="http://docs.mathjax.org/en/latest/index.html" target="_blank" rel="noopener">MathJax Documentation</a></li><li><a href="http://mathjax-chinese-doc.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">MathJax 中文文档</a></li><li><a href="https://meta.wikimedia.org/wiki/Help:Displaying_a_formula" target="_blank" rel="noopener">Mathematical Formula Syntax</a></li><li><a href="http://pic.plover.com/MISC/symbols.pdf" target="_blank" rel="noopener">LATEX and AMS-LATEX Symbols</a></li></ul>
+<li><a href="https://www.mathjax.org/" target="_blank" rel="noopener">MathJax</a></li>
+<li><a href="https://github.com/mathjax/MathJax" target="_blank" rel="noopener">mathjax/MathJax - Github</a></li>
+<li><a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="noopener">MathJax basic tutorial and quick reference</a></li>
+<li><a href="http://docs.mathjax.org/en/latest/index.html" target="_blank" rel="noopener">MathJax Documentation</a></li>
+<li><a href="http://mathjax-chinese-doc.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">MathJax 中文文档</a></li>
+<li><a href="https://meta.wikimedia.org/wiki/Help:Displaying_a_formula" target="_blank" rel="noopener">Mathematical Formula Syntax</a></li>
+<li><a href="http://pic.plover.com/MISC/symbols.pdf" target="_blank" rel="noopener">LATEX and AMS-LATEX Symbols</a></li>
+</ul>
 
       
     </div>
@@ -672,7 +707,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">71</span>
+              <span class="site-state-item-count">73</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -689,7 +724,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">172</span>
+                <span class="site-state-item-count">177</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -770,7 +805,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

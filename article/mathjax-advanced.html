@@ -325,7 +325,12 @@
 <p>$$<br>\begin{matrix}<br>        1 &amp; x &amp; x^2 \\<br>        1 &amp; y &amp; y^2 \\<br>        1 &amp; z &amp; z^2 \\<br>        \end{matrix}<br>$$</p>
 <p>关于添加括号，除了在基础教程中提到的<code>\left…\right</code>方法，还可以使用指定字符串替换上面提到的语法中的<code>matrix</code>即可：</p>
 <ul>
-<li><code>pmatrix</code>，$\begin{pmatrix}1&amp;2\\3&amp;4\\ \end{pmatrix}$</li><li><code>bmatrix</code>，$\begin{bmatrix}1&amp;2\\3&amp;4\\ \end{bmatrix}$</li><li><code>Bmatrix</code>，$\begin{Bmatrix}1&amp;2\\3&amp;4\\ \end{Bmatrix}$</li><li><code>vmatrix</code>，$\begin{vmatrix}1&amp;2\\3&amp;4\\ \end{vmatrix}$</li><li><code>Vmatrix</code>，$\begin{Vmatrix}1&amp;2\\3&amp;4\\ \end{Vmatrix}$</li></ul>
+<li><code>pmatrix</code>，$\begin{pmatrix}1&amp;2\\3&amp;4\\ \end{pmatrix}$</li>
+<li><code>bmatrix</code>，$\begin{bmatrix}1&amp;2\\3&amp;4\\ \end{bmatrix}$</li>
+<li><code>Bmatrix</code>，$\begin{Bmatrix}1&amp;2\\3&amp;4\\ \end{Bmatrix}$</li>
+<li><code>vmatrix</code>，$\begin{vmatrix}1&amp;2\\3&amp;4\\ \end{vmatrix}$</li>
+<li><code>Vmatrix</code>，$\begin{Vmatrix}1&amp;2\\3&amp;4\\ \end{Vmatrix}$</li>
+</ul>
 <p>在矩阵中可以添加点号<code>\cdots</code>$\cdots$、<code>\ddots</code>$\ddots$、<code>\vdots</code>$\vdots$来表示省略的部分：</p>
 <p>$$<br>\begin{pmatrix}<br>     1 &amp; a_1 &amp; a_1^2 &amp; \cdots &amp; a_1^n \\<br>     1 &amp; a_2 &amp; a_2^2 &amp; \cdots &amp; a_2^n \\<br>     \vdots  &amp; \vdots&amp; \vdots &amp; \ddots &amp; \vdots \\<br>     1 &amp; a_m &amp; a_m^2 &amp; \cdots &amp; a_m^n<br>     \end{pmatrix}<br>$$</p>
 <p>增广矩阵则使用格式化的表格：</p>
@@ -440,7 +445,7 @@ $$
 <h3 id="指定操作符"><a href="#指定操作符" class="headerlink" title="指定操作符"></a>指定操作符</h3><p>使用<code>\operatorname{…}</code>可以指定任意文本作为操作符进行展示。</p>
 <p>如<code>\operatorname{arsinh}(x)</code>展示为$\operatorname{arsinh}(x)$。</p>
 <p>如果写成<code>arsinh(x)</code>，会造成字体显示不对：$arsinh(x)$；写成<code>\arsinh(x)</code>则会报错。</p>
-<h3 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h3><p>在极限符号<code>\lim</code>后再跟一个<code> \limits</code>可以添加极限的下标。</p>
+<h3 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h3><p>在极限符号<code>\lim</code>后再跟一个<code>\limits</code>可以添加极限的下标。</p>
 <p><code>\lim \limits_{x \to 1} \frac{x^2-1}{x-1}</code></p>
 <p>$\lim \limits_{x \to 1} \frac{x^2-1}{x-1}$</p>
 <h3 id="高亮"><a href="#高亮" class="headerlink" title="高亮"></a>高亮</h3><p>使用<code>\bbox</code>可以对方程式进行高亮展示。</p>
@@ -591,7 +596,7 @@ $$
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">71</span>
+              <span class="site-state-item-count">73</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -608,7 +613,7 @@ $$
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">172</span>
+                <span class="site-state-item-count">177</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -689,7 +694,7 @@ $$
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

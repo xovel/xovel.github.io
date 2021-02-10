@@ -313,7 +313,9 @@ object[&quot;property&quot;]
 </code></pre><p>这两种属性访问方式效果等同。</p>
 <p>这两种不同的方式的差异性如下：</p>
 <ol>
-<li>点号<code>.</code>能访问对象的属性的名称必须是严格的JS识别符。这个识别符的具体要求跟变量名类似。</li><li>方括号<code>[]</code>可以访问包含标准属性在内的一切属性。</li></ol>
+<li>点号<code>.</code>能访问对象的属性的名称必须是严格的JS识别符。这个识别符的具体要求跟变量名类似。</li>
+<li>方括号<code>[]</code>可以访问包含标准属性在内的一切属性。</li>
+</ol>
 <p><del>可以简单粗暴的认为点号的访问方式是方括号访问方式的一种语法糖</del></p>
 <p>数字的点号属性访问不能直接跟在后面，需要使用如下方式进行访问：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">77</span> .toExponential();</span><br><span class="line"><span class="comment">// or</span></span><br><span class="line"><span class="number">77</span></span><br><span class="line">.toExponential();</span><br><span class="line"><span class="comment">// or</span></span><br><span class="line">(<span class="number">77</span>).toExponential();</span><br><span class="line"><span class="comment">// or</span></span><br><span class="line"><span class="number">77.</span>.toExponential();</span><br><span class="line"><span class="comment">// or</span></span><br><span class="line"><span class="number">77.0</span>.toExponential();</span><br><span class="line"><span class="comment">// because 77. === 77.0, no ambiguity :p</span></span><br></pre></td></tr></table></figure>
@@ -432,7 +434,7 @@ object[&quot;property&quot;]
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">71</span>
+              <span class="site-state-item-count">73</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -449,7 +451,7 @@ object[&quot;property&quot;]
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">172</span>
+                <span class="site-state-item-count">177</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -530,7 +532,7 @@ object[&quot;property&quot;]
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

@@ -328,7 +328,10 @@
 <h3 id="entries"><a href="#entries" class="headerlink" title="entries"></a><code>entries</code></h3><p><strong>不同于</strong> <code>Object.entries</code>，这里的 <code>entries</code> 方法会返回一个 <code>iterator</code>，可以遍历所有键值对的对象。每一个键值对均为 <code>USVString</code> 对象。</p>
 <blockquote>
 <ul>
-<li>iterator 是迭代协议 Iterator 对象的实例。</li><li><code>entries</code> 方法通常在 <code>Web Workers</code> 中使用。</li><li><code>USVString</code> 为 unicode 标量值（unicode scalar values）。</li></ul>
+<li>iterator 是迭代协议 Iterator 对象的实例。</li>
+<li><code>entries</code> 方法通常在 <code>Web Workers</code> 中使用。</li>
+<li><code>USVString</code> 为 unicode 标量值（unicode scalar values）。</li>
+</ul>
 </blockquote>
 <p>代码示例：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Create a test URLSearchParams object</span></span><br><span class="line"><span class="keyword">var</span> searchParams = <span class="keyword">new</span> URLSearchParams(<span class="string">"key1=value1&amp;key2=value2"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Display the key/value pairs</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> pair <span class="keyword">of</span> searchParams.entries()) &#123;</span><br><span class="line">   <span class="built_in">console</span>.log(pair[<span class="number">0</span>]+ <span class="string">', '</span>+ pair[<span class="number">1</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -347,7 +350,11 @@
 </blockquote>
 <p><em>参考资料</em>：</p>
 <ul>
-<li><a href="https://url.spec.whatwg.org/#urlsearchparams" target="_blank" rel="noopener">URL Standard</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams" target="_blank" rel="noopener">URLSearchParams - Web APIs | MDN</a></li><li><a href="https://nodejs.org/api/url.html#url_class_urlsearchparams" target="_blank" rel="noopener">URL | Node.js v8.4.0 Documentation</a></li><li><a href="http://caniuse.com/#feat=urlsearchparams" target="_blank" rel="noopener">Can I use - Feature: URLSearchParams</a></li></ul>
+<li><a href="https://url.spec.whatwg.org/#urlsearchparams" target="_blank" rel="noopener">URL Standard</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams" target="_blank" rel="noopener">URLSearchParams - Web APIs | MDN</a></li>
+<li><a href="https://nodejs.org/api/url.html#url_class_urlsearchparams" target="_blank" rel="noopener">URL | Node.js v8.4.0 Documentation</a></li>
+<li><a href="http://caniuse.com/#feat=urlsearchparams" target="_blank" rel="noopener">Can I use - Feature: URLSearchParams</a></li>
+</ul>
 
       
     </div>
@@ -458,7 +465,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">71</span>
+              <span class="site-state-item-count">73</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -475,7 +482,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">172</span>
+                <span class="site-state-item-count">177</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -556,7 +563,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

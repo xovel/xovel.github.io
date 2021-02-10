@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xovel.cn/"/>
-  <updated>2019-01-04T16:41:41.251Z</updated>
+  <updated>2021-02-10T05:38:59.847Z</updated>
   <id>https://xovel.cn/</id>
   
   <author>
@@ -14,6 +14,167 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2020 年回顾</title>
+    <link href="https://xovel.cn/article/summary-2020.html"/>
+    <id>https://xovel.cn/article/summary-2020.html</id>
+    <published>2021-02-10T03:04:19.000Z</published>
+    <updated>2021-02-10T05:38:59.847Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>转眼就快到春节了，是时候来一个不大不小的总结了。</p>
+</blockquote>
+<p>今年发生的事情比较多，也没有想过要去逐个去进行记录。</p>
+<p>说起年度总结，已经有很长一段时间没有进行记录了。</p>
+<p>还是按照上一次的总结的提纲来进行简单记录吧。</p>
+<h3 id="公司项目"><a href="#公司项目" class="headerlink" title="公司项目"></a>公司项目</h3><p>回顾之下，2020 年做的项目太少了。公司项目只有一个，已经够了。个人项目有点散乱，在之前的项目维护的基础上进行了一番修订。</p>
+<p>负责参与的项目为公司内部的核心 A 级项目，本人将负责的内容分阶段进行阐述。</p>
+<h4 id="第一季度"><a href="#第一季度" class="headerlink" title="第一季度"></a>第一季度</h4><p>刚入职，那个时候刚巧碰上疫情，在家里远程办公，持续到 3 月份才返回职场。远程的效率其实远远没有现场高，诸多权限限制，得到无法顺利进行编译代码，开发效率不可谓不低。饶是如此，还是取得了不少的进展。</p>
+<p>内部几个迭代之后发布的效果还算令人不错，我在其中负责多个模块的管理与开发，包括“企业信用管理”，“任企付”（后改名叫“易企发”），“疫情减息活动”，“数字证”，“数字保管箱”，“数字融资”（涉及到中小企业贷款），“企业资讯”等。</p>
+<h4 id="第二季度"><a href="#第二季度" class="headerlink" title="第二季度"></a>第二季度</h4><p>由于公司高层的战略调整，我们的 APP 的功能点与公司内另外一个 APP 的功能点高度重合，于是有了项目合并的操作。合并之后还是叫数字口袋，内部叫法只是在前面加了一个新字以示区别。</p>
+<p>新 APP 的功能略有调整，“易企发”由于有高度重合的现有产品，被裁撤。数字融资为两边都有的功能，进行合并。“企业信用管理”由于对接的第三方存在诸多问题，被无限期挂起。“企业资讯”改名叫“企业头条”（后定名为“数字头条”）。</p>
+<p>可以看到，数字化运作是我们项目的一大亮点，也是一种运营手段。</p>
+<p>期间，“数字证”，“数字保管箱”，“数字头条”是本人核心负责的模块，也参与“数字融资”的部分开发与管理工作。同时发挥自己的技术优势，开始对前端 WEB 开发进行规范性指导，解决开发团队面对的重点和难点问题。</p>
+<h4 id="第三季度"><a href="#第三季度" class="headerlink" title="第三季度"></a>第三季度</h4><p>是的，大概从第二季度结尾期间，业务侧准备搞一点大事件，做营销活动。我被指派为营销活动的前端开发负责人。</p>
+<p>之前原本计划负责的数字头条内部 CMS 系统建设由于本人的技术重心变更，业务也放弃了这方面的规划。</p>
+<p>整个团队之前从未进行过营销活动方面的开发，可以说是毫无经验，我持有的部分经验无法带动带现有体系当中，所以做起来也多半是吃力不讨好的。</p>
+<p>经过一番苦战，我主要负责新客大礼包的相关开发和管理，这也是业务准备重点推广的拉新活动。截止到 11 月份，新客大礼包的活动取得的效果卓著，拉新效果远远高出其他所有活动的总和。这一点也是令我们感到荣幸的。</p>
+<p>部分开发人员由于合约到期，不能再进行驻场，也是经历几波迎来送往。</p>
+<h4 id="第四季度"><a href="#第四季度" class="headerlink" title="第四季度"></a>第四季度</h4><p>团队内部对模块的管理出现了严重的分歧，管理层商议之下之后，决定将几个可以分离的模块分离出去以进行单独管理，以达到快速发版迭代的要求。于是本人被授命担任营销活动模块整体分离的负责人。由于分离需要进行全功能覆盖范围和迁移相关的兼容性测试，工作量较大，好在整个迁移过程平稳并未出现问题。迁移期间由于开发人员和测试人员配合到位，新客大礼包的营销效果一如既往的卓越。</p>
+<p>迁移完成之后，由于当时的前端开发体系混乱（甚至有提到前端不需要架构、没有架构可言），本人被指派为前端架构优化整改的负责人之一。虽然说之一，但实际上之一可以拿掉的，另外几个负责人实际上由于各种各样的原因，并没有参与到其中。</p>
+<p>在这期间，本人利用自己的技术优势，提供了大量的通用方法，也综合考虑不同的前端页面场景，着重探索了原生 APP 与 HTML5 页面之间的交互问题。提出的一些建议很快得到落实，给团队的整理开发能力上升了一个台阶。</p>
+<p>另外，对于部分开发人员的代码风格混乱的场景，将之前建议的 lint 校验工具升级为强制校验。本质上是利用了 <code>git hooks</code> 在提交代码的时候进行代码检测。也算是自己对 Git 工程化辅助能力的一种很好的使用。</p>
+<h4 id="综合回顾"><a href="#综合回顾" class="headerlink" title="综合回顾"></a>综合回顾</h4><p>在梳理和整合前端体系的时候，出现了很多令我捉摸不透的问题。这可能跟团队的性质有关。之前我们的团队的主要工作内容是创新性质的，而之后团队整合，变成了求稳。也或许是因为这样，诸多优秀的技术无法得到顺利的落地，在提升效率的道路上遇到了极为严重的阻碍。</p>
+<p>在既有资源的支撑下，本人不遗余力的将诸多优秀的工具引入团队中，其中不乏包括优秀的 <code>webpack</code> 插件，极具指导性的风格指导，<code>eslint</code>，<code>shelljs</code>，<code>git hooks</code>，<code>stylus</code> 等。</p>
+<p>核心依赖在确保不会出现重大问题的前提之下进行了升级，比如 <code>axios</code>，<code>core-js</code>，<code>vuex</code> 等工具，解决了一些已经被公开的安全漏洞。</p>
+<p>期间也发现了团队内部的开发人员的水平普遍具有鲜明的个性，团队建设很多时候变成了一句空谈。可能心还是比较散漫吧，据说是被惯的。</p>
+<h4 id="关于敏捷不得不说的一些事"><a href="#关于敏捷不得不说的一些事" class="headerlink" title="关于敏捷不得不说的一些事"></a>关于敏捷不得不说的一些事</h4><p>从我入职的时候开始，团队里面是有一个敏捷教练协助我们进行敏捷化转型。抛开敏捷转型的必要性和可执行性不谈，团队内部对于敏捷教练的态度是令我感到最为困惑的地方。</p>
+<p>之前在拥有敏捷教练的团队里面待过，教练拥有非常高的权限，基本上是没有人敢顶撞教练的。然而在我们团队中间，敏捷教练仿佛成为了一个摆设，令不行，禁不止，转型过程谈不上成功。敏捷教练后半年退场，之后团队继续陷入混沌状态。</p>
+<p>有一说一，在面对如此的一个团队的时候，可能没有人敢跳出来指正和纠偏吧。</p>
+<p>本人对于敏捷的理解可能跟很多人的并不一致，我内心从来没有赞同过敏捷机制，但我尊重这个机制，毕竟在没有找到更加有效地方式之前，敏捷机制给团队带来的效果是显著的。</p>
+<h3 id="个人项目"><a href="#个人项目" class="headerlink" title="个人项目"></a>个人项目</h3><h4 id="zob"><a href="#zob" class="headerlink" title="zob"></a><code>zob</code></h4><p>得益于团队内部开发团队能力的建设，我将搁置许久的 <code>zob</code> 项目捡了起来，并且更新了 <code>eslint</code> 插件，添加了一些规则。</p>
+<h4 id="zmin"><a href="#zmin" class="headerlink" title="zmin"></a><code>zmin</code></h4><p>尚未整理和进行发布的执行压缩的工具，借助于 <code>image-min</code> 的能力，对常见图片 <code>jpg</code> 和 <code>png</code> 进行压缩，以减少其体积。</p>
+<h3 id="人来人往"><a href="#人来人往" class="headerlink" title="人来人往"></a>人来人往</h3><h4 id="有人来"><a href="#有人来" class="headerlink" title="有人来"></a>有人来</h4><p>是的，新冠疫情缠绕我们一整年的时候，到目前为止还并未有丝毫退散之意，这足以令人唏嘘。在疫情笼罩一下，本人有幸能陪伴自己的爱人一路走来，并在 6 月份喜结连理，从此生命中多了一个至关重要的人。9 月份的婚宴，虽然不大，但已然是生命中美好的记忆点了。</p>
+<h4 id="有人走"><a href="#有人走" class="headerlink" title="有人走"></a>有人走</h4><blockquote>
+<p>逝者已去，生者不息。</p>
+</blockquote>
+<p>舅舅因疾病救治无效离开人世，给家族带来了悲伤难以挥去。文字太过悲伤，就不再对其进行描述了。</p>
+<h3 id="吃喝玩乐"><a href="#吃喝玩乐" class="headerlink" title="吃喝玩乐"></a>吃喝玩乐</h3><h4 id="再回母校"><a href="#再回母校" class="headerlink" title="再回母校"></a>再回母校</h4><p>受限于疫情，妻子不太方便离深，故而并未去其他地方游玩。非要说一个，那就是我的母校湖南大学了。因为自己的身体原因，需要去大医院进行诊治，请了一个礼拜的假，带妻子一起去了长沙。在湘雅医院看病完成之后，便带她去了湖南大学。</p>
+<p>彼时，地铁已经开通，可以直达我的母校。</p>
+<h4 id="云南之行"><a href="#云南之行" class="headerlink" title="云南之行"></a>云南之行</h4><p>已经好几年没有出去旅游了，这一次，我们携手去往了云南，游玩了丽江古城，嬉戏于泸沽湖之上，还特意去探索了木府，本来应该有一篇游记进行记录的，奈何那个时候自己的重点压根不在文字上面，所以也就没有及时进行记录。等到后续有空，自己的记忆还没有淡去，进行添补也未尝不好。</p>
+<h4 id="其他散点"><a href="#其他散点" class="headerlink" title="其他散点"></a>其他散点</h4><p>像洪湖公园，锦绣文化村，玫瑰海岸，大梅沙，海景公园此类市内景点，也是去游玩了一番的。只可惜莲花山的勒杜鹃画展妻子没有能够赶上，翻看单反随手拍的一些照片也算是一种参与方式吧。</p>
+<h4 id="厨艺"><a href="#厨艺" class="headerlink" title="厨艺"></a>厨艺</h4><p>没错，因为要照顾妻子的缘故，我将多年搁置的厨艺捡了起来，也尝试许多不同的菜式。以前从来没有做过大菜的我，也进行了尝试。好在效果还算不错，味道也不是那么差，可以继续加油呢。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>已经很久没有进行总结和展望了，或许混沌的前两年给自己带来的改变，或许是抑郁抗争从未停止，我已经不太愿意去跟其他人谈论自己的总结和梦想，甚至连自我总结也不会再轻易提及。</p>
+<p>随风来，随风去。</p>
+<hr>
+<p>最后，总要说点什么新年愿望的，那么我的愿望很简单，就是希望她们母女平安健康，这也是我接下来很长一段时间的核心任务。</p>
+<p>至于自我成长，太过遥远，我们先放一放，能将自己的博客或者 <code>camphor</code> 项目捡起来就已经是对自己最大的回报了。</p>
+<p>加油！</p>
+]]></content>
+    
+    <summary type="html">
+    
+      2020 年的一些得失，一些故事，一些感悟。
+    
+    </summary>
+    
+      <category term="生活" scheme="https://xovel.cn/categories/life/"/>
+    
+    
+      <category term="经历" scheme="https://xovel.cn/tags/%E7%BB%8F%E5%8E%86/"/>
+    
+      <category term="2020" scheme="https://xovel.cn/tags/2020/"/>
+    
+      <category term="2021" scheme="https://xovel.cn/tags/2021/"/>
+    
+      <category term="回顾" scheme="https://xovel.cn/tags/%E5%9B%9E%E9%A1%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>北京旅游攻略</title>
+    <link href="https://xovel.cn/article/travel-in-beijing.html"/>
+    <id>https://xovel.cn/article/travel-in-beijing.html</id>
+    <published>2019-04-14T15:37:56.000Z</published>
+    <updated>2021-02-10T06:01:42.422Z</updated>
+    
+    <content type="html"><![CDATA[<p>场景描述：在北京国际会议中心下榻，晚上出游。</p>
+<ol>
+<li>天安门及周围</li>
+</ol>
+<p>天安门广场附近是夜北京最美的地方之一。白日里端庄威严的天安门城楼此时被灯光映衬晶莹剔透，仿佛一处玉雕殿堂。城楼前高低起伏的硕大喷泉，仿佛随歌起舞的仙子，轻灵、飘逸潇洒自如，引得无数游人驻足，甚至有不少年轻人走到喷泉近前，伸出双手去迎接那一朵朵四溅开来的珠花。</p>
+<blockquote>
+<p>前门大街可以考虑去逛逛。</p>
+</blockquote>
+<p>前门大街是北京著名商业街。位于京城中轴线，北起前门月亮湾，南至天桥路口，与天桥南大街相连。明嘉靖二十九年(1550)建外城前是皇帝出城赴天坛、山川坛的御路，建外城后为外城主要南北街道。</p>
+<p>前门大街悠久的历史，造就了这里的许多中华老字号，如六必居酱园、同仁堂药店、瑞蚨祥绸布店、长春堂药店、内联升鞋店、张一元茶庄，还有月盛斋的酱肉店、都一处的烧卖店等16处老字号分列道路两侧。</p>
+<blockquote>
+<p>长安街也是绝佳的去处。</p>
+</blockquote>
+<p>长安街在北京，以致全国的的地位十分重要，中国的象征——天安门和天安门广场，就在长安街上，长安街两侧还有人民大会堂、中南海和公安部、商务部等其他中央政府的机关。</p>
+<blockquote>
+<p>东单/西单</p>
+</blockquote>
+<p>位于天安门广场的两侧。西单有商业街，东单有很值得一逛的银街小店。东单离王府井不远，可以一并逛逛。</p>
+<ol start="2">
+<li>什刹海</li>
+</ol>
+<blockquote>
+<p>强烈推荐。可以去看看钟楼和南锣鼓巷，还有一个很有意思的烟袋斜街。</p>
+</blockquote>
+<p>这里风光优美，而且人文积淀深厚，既有南国水乡的清幽秀丽，又兼具北方皇家的雍容气度，既能感受普通百姓的生活气息，亦能寻访帝王将相昔日的烙印与足迹，是了解老北京历史与文化的绝佳之地，也是目前北京城内老北京风貌保存最完好的地方。</p>
+<p>什刹海景区包括前海、后海、西海等水域以及沿岸众多名胜古迹和胡同民居，这里有宋庆龄故居、郭沫若故居、恭王府花园、广化寺、火神庙、钟鼓楼和银锭桥等古迹。</p>
+<p>什刹海的夜，层次丰富、韵味浓厚，什刹海的夜，五彩斑斓、光怪陆离。这里可以乘船游览、赏花、游胡同、享美食，街边的小店更是藏满了神秘与诱惑。夏夜，灯火通明的酒吧一条街人头涌动，中外游人云集，古典与现代在这里完美交融，传统与前卫在这里激情碰撞，品酒眺湖，微风扑面，湖光粼粼，游船杨柳，窃窃私语，别有一番风味。</p>
+<p>什刹海景区具有大量典型的胡同和四合院，如金丝套地区的大、小金丝胡同，南、北官房胡同和后海北沿的鸦儿胡同以及白米斜街、烟袋斜街等。</p>
+<p>依托胡同和四合院，什刹海地区自古以来就有许多富有特色的民裕活动，如放荷灯、泛舟游湖、宴饮赏荷、冰床围酌、大阅冰鞋等。至今，一些有生命力的民俗活动仍然在什刹海地区大量存在，如钓鱼、游泳、划船、赛艇、下棋、弹唱、消夏舞会等。</p>
+<ol start="3">
+<li>簋街</li>
+</ol>
+<p>北京簋街的美食一条街可谓是不容错过。嘉陵楼馋嘴城、两岸一家、哈哈镜鸭脖子、宽板凳老灶火锅、胡大饭馆、金簋簋街小山城、俞家小院猪脚巷、兰溪小馆、江边城外烤全鱼等店子都可以去逛逛。</p>
+<ol start="4">
+<li>三里屯</li>
+</ol>
+<p>全北京的时尚中心之一、文化中心之一，世界各地的艺术、戏剧、音乐、商务、时尚、餐饮和购物在三里屯融汇。可以在户外的商业街区随心漫步，也可以享受室内餐饮和娱乐的空间。花园、庭院和小巷点缀其间，格局开阔，整体设计凸现空间无界的概念，让人漫步其中，体会无穷乐趣。从经典到前卫，三里屯带给人的感觉是持续变幻出新的，体验也是多方位的。夜色中的三里屯，是潮人的天堂。</p>
+<ol start="5">
+<li>鸟巢</li>
+</ol>
+<p>夜幕降临，灯光自鸟巢那盘根错节的无数钢柱中透射出来，加上水中的倒影，柔和之美与力量之美完美融合。而水立方那透亮的蓝光，让人仿佛到了塞班、马尔代夫，置身于清澈的海水中，感受海天一色的美，感受洁白的浪花打在身上时的凉爽。</p>
+<p>鸟巢与水立方，一静一动，一刚一柔，相互烘托又相互映衬，加之国家体育场的身份，成为北京夜色的经典。</p>
+<ol start="6">
+<li>世贸天阶</li>
+</ol>
+<p>世贸天阶地处首都CBD区域，非常适合下班后休闲或谈事。</p>
+<p>晚上通常会放映一些灯光秀或设计秀，这里周末都会聚集一大批文艺青年，来拍照摄影。</p>
+<ol start="7">
+<li>朝阳公园/蓝色港湾国际商区</li>
+</ol>
+<p>一个充满了灿烂阳光、幽静湖水、优雅建筑、浪漫小径的购物公园，一个位于亚洲最大的城市公园——朝阳公园西北湖岸的欧式商业小镇。</p>
+<ol start="8">
+<li>中央广播电视塔/玉渊潭</li>
+</ol>
+<p>中央广播电视塔是集广播电视发射和旅游观光、餐饮娱乐为一体的综合性建筑，是北京现代化的一个重要标志。中央广播电视塔共分20余层。塔的设计充分考虑首都北京的特殊地理环境，力图表现塔的中国属性和北京特色。中央广播电视塔的夜景照明也是一绝，曾被评为首都夜景照明工作一等奖。在晚上，仰视中央电视塔，如同一个大灯笼一样挂在空中。</p>
+<p>玉渊潭公园樱花节，有机会可以去看看。不过鉴于是晚上，估计看不清，另外，要门票 10 块。</p>
+<ol start="9">
+<li>清华/北大</li>
+</ol>
+<p>凑数的。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      搜集的一篇关于北京旅游的文章，仅供参考。
+    
+    </summary>
+    
+      <category term="生活" scheme="https://xovel.cn/categories/life/"/>
+    
+    
+      <category term="旅游" scheme="https://xovel.cn/tags/%E6%97%85%E6%B8%B8/"/>
+    
+      <category term="北京" scheme="https://xovel.cn/tags/%E5%8C%97%E4%BA%AC/"/>
+    
+  </entry>
   
   <entry>
     <title>2018 年总结</title>
@@ -133,14 +294,22 @@
 <h3 id="新增的技术栈"><a href="#新增的技术栈" class="headerlink" title="新增的技术栈"></a>新增的技术栈</h3><p>很惭愧，2018 年在技术栈可谓是毫无建树，并没有追加什么新技术栈。只是稳固了这么久以来使用到的一些技术和知识，特别是 <code>vue</code>，目前已经逐渐变成一个重度使用者了。</p>
 <p><code>node</code> 是用的逐渐多了起来，但很多也只是停留在个人实验性阶段，并没有实际的应用，顶多也只是做一个中间件或者转发请求，这些原本使用 <code>nginx</code> 就可以轻松做到。</p>
 <h3 id="尝试过的技术"><a href="#尝试过的技术" class="headerlink" title="尝试过的技术"></a>尝试过的技术</h3><ul>
-<li><code>react</code></li><li><code>dart</code></li><li><code>flutter</code></li><li><code>redis</code></li><li><code>docker</code></li></ul>
+<li><code>react</code></li>
+<li><code>dart</code></li>
+<li><code>flutter</code></li>
+<li><code>redis</code></li>
+<li><code>docker</code></li>
+</ul>
 <blockquote>
 <p>仅仅是尝试，挺有意思的，学无止境，大概说的就是这个吧。</p>
 </blockquote>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>去年提出的展望是这个：</p>
 <blockquote>
 <ul>
-<li>遇见更好的自己。</li><li>让自己内心更加平静。</li><li>努力提升自己的情商和魅力值。</li></ul>
+<li>遇见更好的自己。</li>
+<li>让自己内心更加平静。</li>
+<li>努力提升自己的情商和魅力值。</li>
+</ul>
 </blockquote>
 <p>很遗憾，只有第二条算做到了。第一条勉强也算，但是第三条的话，因为 7 月份的时候一些事情的发生，苗头被迅速抹杀，同时也直接造就了《圣血记外传之萧非玉》的萌芽。相关细节由于过于悲苦，过往不愿再被提起，就此长久搁置。</p>
 <p>回顾整个 2018 年，上半年我是阳光灿烂的存在，但是 7 月份的转机过大，灰霾阴郁持续笼罩。经历了长达半年的失眠抑郁，我却依然没有倒下，充满希望的我收拾自己的行囊，重新踏上征程。灰暗存在，或许只是为了衬托光明的存在。</p>
@@ -167,6 +336,56 @@
       <category term="2018" scheme="https://xovel.cn/tags/2018/"/>
     
       <category term="2019" scheme="https://xovel.cn/tags/2019/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VSCode 扩展</title>
+    <link href="https://xovel.cn/article/vscode-extensions.html"/>
+    <id>https://xovel.cn/article/vscode-extensions.html</id>
+    <published>2018-10-26T16:05:43.000Z</published>
+    <updated>2018-10-26T16:47:02.304Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>之前曾经介绍过一个跟扩展相关的文章，那已经是 18 个月前的事情了：<a href="/article/brackets-emmet.html">Brackets</a>。</p>
+<p>近日将再记录两篇文章，一个是跟 <code>VSCode</code> 的扩展，另一个是 <code>Chrome</code> 浏览器的扩展。列出的扩展是本人<strong>使用过</strong>的。本文讲述 <code>VSCode</code> 的扩展。</p>
+</blockquote>
+<p>话不多说，直接进入正题，本次列举的扩展如下：</p>
+<h3 id="Auto-Close-Tag-和-Auto-Rename-Tag"><a href="#Auto-Close-Tag-和-Auto-Rename-Tag" class="headerlink" title="Auto Close Tag 和 Auto Rename Tag"></a>Auto Close Tag 和 Auto Rename Tag</h3><p>这两个扩展通常会放在一起，前者是自动闭合 HTML 标签的，后者是自动重命名 HTML 标签的。</p>
+<h3 id="Beautify"><a href="#Beautify" class="headerlink" title="Beautify"></a>Beautify</h3><p>代码格式化工具。</p>
+<h3 id="Bracket-Pair-Colorizer"><a href="#Bracket-Pair-Colorizer" class="headerlink" title="Bracket Pair Colorizer"></a>Bracket Pair Colorizer</h3><p>括号匹配高亮。非常实用的一个扩展。</p>
+<h3 id="Color-Picker"><a href="#Color-Picker" class="headerlink" title="Color Picker"></a>Color Picker</h3><p>CSS 颜色选择器。</p>
+<h3 id="Debugger-for-Chrome"><a href="#Debugger-for-Chrome" class="headerlink" title="Debugger for Chrome"></a>Debugger for Chrome</h3><p>调试神器。</p>
+<h3 id="Document-This"><a href="#Document-This" class="headerlink" title="Document This"></a>Document This</h3><p>自动对代码进行智能注释，兼容 <code>JSDoc</code>，可以作用域 <code>function</code>、<code>class</code> 等地方。默认快捷键为<strong>按两次</strong> <code>Ctrl+Alt+D</code>。</p>
+<h3 id="ESLint"><a href="#ESLint" class="headerlink" title="ESLint"></a>ESLint</h3><p><code>ESLint</code> 在 <code>VSCode</code> 中的应用。</p>
+<h3 id="Git-History"><a href="#Git-History" class="headerlink" title="Git History"></a>Git History</h3><p>管理 Git 提交记录的工具。在多项目中也表现优异。</p>
+<h3 id="Guides"><a href="#Guides" class="headerlink" title="Guides"></a>Guides</h3><p>空白换行等的可视化标示。</p>
+<h3 id="Markdown-PDF"><a href="#Markdown-PDF" class="headerlink" title="Markdown PDF"></a>Markdown PDF</h3><p>将 markdown 文件转换为 PDF，同时支持转换为 html、jpeg 和 png。</p>
+<h3 id="Markdown-TOC"><a href="#Markdown-TOC" class="headerlink" title="Markdown TOC"></a>Markdown TOC</h3><p>给 markdown 生成目录并自动更新。</p>
+<h3 id="Material-Icon-Theme"><a href="#Material-Icon-Theme" class="headerlink" title="Material Icon Theme"></a>Material Icon Theme</h3><p>一套 Material Design 风格的文件图标。</p>
+<h3 id="Polacode"><a href="#Polacode" class="headerlink" title="Polacode"></a>Polacode</h3><p>将指定代码生成一张看起来挺不错的图片。</p>
+<h3 id="RegExp-Preview-and-Editor"><a href="#RegExp-Preview-and-Editor" class="headerlink" title="RegExp Preview and Editor"></a>RegExp Preview and Editor</h3><p>正则表达式的可视化工具。</p>
+<h3 id="Sublime-Text-Keymap-and-Settings-Importer"><a href="#Sublime-Text-Keymap-and-Settings-Importer" class="headerlink" title="Sublime Text Keymap and Settings Importer"></a>Sublime Text Keymap and Settings Importer</h3><p>使用 Sublime 的快捷键。之前习惯使用 Sublime，所以也将几个常用的快捷键搬了过来。</p>
+<h3 id="SVG-Viewer"><a href="#SVG-Viewer" class="headerlink" title="SVG Viewer"></a>SVG Viewer</h3><p><code>svg</code> 图片直接查看工具。</p>
+<h3 id="Toggle-Quotes"><a href="#Toggle-Quotes" class="headerlink" title="Toggle Quotes"></a>Toggle Quotes</h3><p>切换引号。引号组是 <code>&quot;</code>、<code>&#39;</code>、<code>`</code>。</p>
+<h3 id="Vetur"><a href="#Vetur" class="headerlink" title="Vetur"></a>Vetur</h3><p>是的，就是 <code>vue</code>。</p>
+<hr>
+<p>介绍完毕。</p>
+<p><del>下一篇的走起了。</del></p>
+]]></content>
+    
+    <summary type="html">
+    
+      本文简单介绍本人在实际开发中使用到的几个 VSCode 扩展。
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://xovel.cn/categories/essay/"/>
+    
+    
+      <category term="VSCode" scheme="https://xovel.cn/tags/vscode/"/>
+    
+      <category term="扩展" scheme="https://xovel.cn/tags/extension/"/>
     
   </entry>
   
@@ -225,59 +444,9 @@
       <category term="随笔" scheme="https://xovel.cn/categories/essay/"/>
     
     
+      <category term="扩展" scheme="https://xovel.cn/tags/extension/"/>
+    
       <category term="Chrome" scheme="https://xovel.cn/tags/chrome/"/>
-    
-      <category term="扩展" scheme="https://xovel.cn/tags/extension/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VSCode 扩展</title>
-    <link href="https://xovel.cn/article/vscode-extensions.html"/>
-    <id>https://xovel.cn/article/vscode-extensions.html</id>
-    <published>2018-10-26T16:05:43.000Z</published>
-    <updated>2018-10-26T16:47:02.304Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>之前曾经介绍过一个跟扩展相关的文章，那已经是 18 个月前的事情了：<a href="/article/brackets-emmet.html">Brackets</a>。</p>
-<p>近日将再记录两篇文章，一个是跟 <code>VSCode</code> 的扩展，另一个是 <code>Chrome</code> 浏览器的扩展。列出的扩展是本人<strong>使用过</strong>的。本文讲述 <code>VSCode</code> 的扩展。</p>
-</blockquote>
-<p>话不多说，直接进入正题，本次列举的扩展如下：</p>
-<h3 id="Auto-Close-Tag-和-Auto-Rename-Tag"><a href="#Auto-Close-Tag-和-Auto-Rename-Tag" class="headerlink" title="Auto Close Tag 和 Auto Rename Tag"></a>Auto Close Tag 和 Auto Rename Tag</h3><p>这两个扩展通常会放在一起，前者是自动闭合 HTML 标签的，后者是自动重命名 HTML 标签的。</p>
-<h3 id="Beautify"><a href="#Beautify" class="headerlink" title="Beautify"></a>Beautify</h3><p>代码格式化工具。</p>
-<h3 id="Bracket-Pair-Colorizer"><a href="#Bracket-Pair-Colorizer" class="headerlink" title="Bracket Pair Colorizer"></a>Bracket Pair Colorizer</h3><p>括号匹配高亮。非常实用的一个扩展。</p>
-<h3 id="Color-Picker"><a href="#Color-Picker" class="headerlink" title="Color Picker"></a>Color Picker</h3><p>CSS 颜色选择器。</p>
-<h3 id="Debugger-for-Chrome"><a href="#Debugger-for-Chrome" class="headerlink" title="Debugger for Chrome"></a>Debugger for Chrome</h3><p>调试神器。</p>
-<h3 id="Document-This"><a href="#Document-This" class="headerlink" title="Document This"></a>Document This</h3><p>自动对代码进行智能注释，兼容 <code>JSDoc</code>，可以作用域 <code>function</code>、<code>class</code> 等地方。默认快捷键为<strong>按两次</strong> <code>Ctrl+Alt+D</code>。</p>
-<h3 id="ESLint"><a href="#ESLint" class="headerlink" title="ESLint"></a>ESLint</h3><p><code>ESLint</code> 在 <code>VSCode</code> 中的应用。</p>
-<h3 id="Git-History"><a href="#Git-History" class="headerlink" title="Git History"></a>Git History</h3><p>管理 Git 提交记录的工具。在多项目中也表现优异。</p>
-<h3 id="Guides"><a href="#Guides" class="headerlink" title="Guides"></a>Guides</h3><p>空白换行等的可视化标示。</p>
-<h3 id="Markdown-PDF"><a href="#Markdown-PDF" class="headerlink" title="Markdown PDF"></a>Markdown PDF</h3><p>将 markdown 文件转换为 PDF，同时支持转换为 html、jpeg 和 png。</p>
-<h3 id="Markdown-TOC"><a href="#Markdown-TOC" class="headerlink" title="Markdown TOC"></a>Markdown TOC</h3><p>给 markdown 生成目录并自动更新。</p>
-<h3 id="Material-Icon-Theme"><a href="#Material-Icon-Theme" class="headerlink" title="Material Icon Theme"></a>Material Icon Theme</h3><p>一套 Material Design 风格的文件图标。</p>
-<h3 id="Polacode"><a href="#Polacode" class="headerlink" title="Polacode"></a>Polacode</h3><p>将指定代码生成一张看起来挺不错的图片。</p>
-<h3 id="RegExp-Preview-and-Editor"><a href="#RegExp-Preview-and-Editor" class="headerlink" title="RegExp Preview and Editor"></a>RegExp Preview and Editor</h3><p>正则表达式的可视化工具。</p>
-<h3 id="Sublime-Text-Keymap-and-Settings-Importer"><a href="#Sublime-Text-Keymap-and-Settings-Importer" class="headerlink" title="Sublime Text Keymap and Settings Importer"></a>Sublime Text Keymap and Settings Importer</h3><p>使用 Sublime 的快捷键。之前习惯使用 Sublime，所以也将几个常用的快捷键搬了过来。</p>
-<h3 id="SVG-Viewer"><a href="#SVG-Viewer" class="headerlink" title="SVG Viewer"></a>SVG Viewer</h3><p><code>svg</code> 图片直接查看工具。</p>
-<h3 id="Toggle-Quotes"><a href="#Toggle-Quotes" class="headerlink" title="Toggle Quotes"></a>Toggle Quotes</h3><p>切换引号。引号组是 <code>&quot;</code>、<code>&#39;</code>、<code>`</code>。</p>
-<h3 id="Vetur"><a href="#Vetur" class="headerlink" title="Vetur"></a>Vetur</h3><p>是的，就是 <code>vue</code>。</p>
-<hr>
-<p>介绍完毕。</p>
-<p><del>下一篇的走起了。</del></p>
-]]></content>
-    
-    <summary type="html">
-    
-      本文简单介绍本人在实际开发中使用到的几个 VSCode 扩展。
-    
-    </summary>
-    
-      <category term="随笔" scheme="https://xovel.cn/categories/essay/"/>
-    
-    
-      <category term="扩展" scheme="https://xovel.cn/tags/extension/"/>
-    
-      <category term="VSCode" scheme="https://xovel.cn/tags/vscode/"/>
     
   </entry>
   
@@ -308,7 +477,15 @@
 <p>上面的代码，是 <code>node</code> 环境下关于浏览器 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/atob" target="_blank" rel="noopener"><code>atob</code></a> 和 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/btoa" target="_blank" rel="noopener"><code>btoa</code></a> 方法的实现。</p>
 <p><code>Node.js</code> 目前支持的字符编码如下：</p>
 <ul>
-<li><code>ascii</code>，仅支持 7 位 ASCII 数据。</li><li><code>utf8</code>，多字节编码的 Unicode 字符。许多网页和其他文档格式都使用 <code>UTF-8</code>。</li><li><code>utf16le</code>，2 或 4 字节，<code>little-endian</code>(小字节序)编码的 Unicode 字符。支持 <code>U+10000</code> 到 <code>U+10FFFF</code> 的代理对。</li><li><code>usc2</code>，即 <code>utf16le</code>。</li><li><code>base64</code>，即 <code>Base64</code> 编码。</li><li><code>latin1</code>，即 <code>Latin-1</code> 编码，具体由 IANA 在 <a href="https://tools.ietf.org/html/rfc1345" target="_blank" rel="noopener">RFC1345</a> 中定义。</li><li><code>binary</code>，即 <code>latin1</code>。</li><li><code>hex</code>，将每个字节编码为两个十六进制字符。</li></ul>
+<li><code>ascii</code>，仅支持 7 位 ASCII 数据。</li>
+<li><code>utf8</code>，多字节编码的 Unicode 字符。许多网页和其他文档格式都使用 <code>UTF-8</code>。</li>
+<li><code>utf16le</code>，2 或 4 字节，<code>little-endian</code>(小字节序)编码的 Unicode 字符。支持 <code>U+10000</code> 到 <code>U+10FFFF</code> 的代理对。</li>
+<li><code>usc2</code>，即 <code>utf16le</code>。</li>
+<li><code>base64</code>，即 <code>Base64</code> 编码。</li>
+<li><code>latin1</code>，即 <code>Latin-1</code> 编码，具体由 IANA 在 <a href="https://tools.ietf.org/html/rfc1345" target="_blank" rel="noopener">RFC1345</a> 中定义。</li>
+<li><code>binary</code>，即 <code>latin1</code>。</li>
+<li><code>hex</code>，将每个字节编码为两个十六进制字符。</li>
+</ul>
 <blockquote>
 <p>注意，现代浏览器遵循 <a href="https://encoding.spec.whatwg.org/" target="_blank" rel="noopener">WHATWG 编码标准</a> 将 <code>latin1</code> 和 <code>ISO-8859-1</code> 别名为 <code>win-1252</code>。这意味着在进行例如 <code>http.get()</code> 获取到的字符编码在规范列表中，服务器可能返回 <code>win-1252</code> 编码的数据，此时如果使用 <code>latin1</code> 字符编码，可能会得到错误的解码数据。</p>
 </blockquote>
@@ -316,7 +493,14 @@
 <p>使用 <code>new</code> 操作符实例化一个 <code>Buffer</code> 的方法已经被弃用。注意，<strong>已经弃用的方法本文不做介绍</strong>。</p>
 <p>创建 <code>Buffer</code> 实例的方法有下面几个：</p>
 <ul>
-<li><code>Buffer.from(array)</code>，从数组进行创建。</li><li><code>Buffer.from(arrayBuffer[, byteOffset[, length]])</code>，从 <code>arrayBuffer</code> 的实例进行创建。</li><li><code>Buffer.from(buffer)</code>，直接根据 <code>buffer</code> 创建。</li><li><code>Buffer.from(string[, encoding])</code>，根据字符串创建，<code>encoding</code> 即使用的编码方式。</li><li><code>Buffer.from(object[, offsetOrEncoding[, length]])</code>，根据对象创建，该对象需要支持 <code>Symbol.toPrimitive</code> 或者有 <code>valueOf()</code> 方法，比如 <code>Buffer.from(new String(&#39;this is a test&#39;));</code>。</li><li><code>Buffer.alloc(size[, fill[, encoding]])</code>，创建一个指定长度的对象，<code>fill</code> 表示用来填充新建的 <code>Buffer</code> 的值，默认为 <code>0</code>。</li><li><code>Buffer.allocUnsafe(size)</code>，分配一个大小为 <code>size</code> 的对象。该方式创建的 <code>Buffer</code> 对象是未经过初始化的，内容未知，可能包含敏感数据。</li></ul>
+<li><code>Buffer.from(array)</code>，从数组进行创建。</li>
+<li><code>Buffer.from(arrayBuffer[, byteOffset[, length]])</code>，从 <code>arrayBuffer</code> 的实例进行创建。</li>
+<li><code>Buffer.from(buffer)</code>，直接根据 <code>buffer</code> 创建。</li>
+<li><code>Buffer.from(string[, encoding])</code>，根据字符串创建，<code>encoding</code> 即使用的编码方式。</li>
+<li><code>Buffer.from(object[, offsetOrEncoding[, length]])</code>，根据对象创建，该对象需要支持 <code>Symbol.toPrimitive</code> 或者有 <code>valueOf()</code> 方法，比如 <code>Buffer.from(new String(&#39;this is a test&#39;));</code>。</li>
+<li><code>Buffer.alloc(size[, fill[, encoding]])</code>，创建一个指定长度的对象，<code>fill</code> 表示用来填充新建的 <code>Buffer</code> 的值，默认为 <code>0</code>。</li>
+<li><code>Buffer.allocUnsafe(size)</code>，分配一个大小为 <code>size</code> 的对象。该方式创建的 <code>Buffer</code> 对象是未经过初始化的，内容未知，可能包含敏感数据。</li>
+</ul>
 <blockquote>
 <p>更多的创建方式不在本文的记述范围之内。</p>
 </blockquote>
@@ -351,7 +535,7 @@
     <link href="https://xovel.cn/article/es6-modules.html"/>
     <id>https://xovel.cn/article/es6-modules.html</id>
     <published>2018-05-24T09:54:29.000Z</published>
-    <updated>2018-05-25T03:11:48.987Z</updated>
+    <updated>2021-02-03T13:08:21.540Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>阅读本文需要有一定的 ES6 基础。</p>
@@ -372,7 +556,11 @@
 <h3 id="export"><a href="#export" class="headerlink" title="export"></a>export</h3><p><code>export</code> 是模块导出语句的关键字，同样的，来看一组 <code>export</code> 的语法，代码来自 MDN 上面的 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export" target="_blank" rel="noopener">export</a>：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导出指定模块</span></span><br><span class="line"><span class="keyword">export</span> &#123; name1, name2, …, nameN &#125;;</span><br><span class="line"><span class="comment">// 导出指定模块，并进行重命名</span></span><br><span class="line"><span class="keyword">export</span> &#123; variable1 <span class="keyword">as</span> name1, variable2 <span class="keyword">as</span> name2, …, nameN &#125;;</span><br><span class="line"><span class="comment">// 导出变量</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">let</span> name1, name2, …, nameN; <span class="comment">// also var</span></span><br><span class="line"><span class="comment">// 导出变量，并对变量直接进行定义</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">let</span> name1 = …, name2 = …, …, nameN; <span class="comment">// also var, const</span></span><br><span class="line"><span class="comment">// 导出函数</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">FunctionName</span>(<span class="params"></span>)</span>&#123;...&#125;</span><br><span class="line"><span class="comment">// 导出类</span></span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">ClassName</span> </span>&#123;...&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 导出一个表达式作为默认模块</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> expression;</span><br><span class="line"><span class="comment">// 导出匿名函数作为默认模块，类和生成器函数亦可</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> (<span class="params">…</span>) </span>&#123; … &#125; <span class="comment">// also class, function*</span></span><br><span class="line"><span class="comment">// 导出具名函数作为默认模块，类和生成器函数亦可</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">name1</span>(<span class="params">…</span>) </span>&#123; … &#125; <span class="comment">// also class, function*</span></span><br><span class="line"><span class="comment">// 将指定模块作为默认模块进行导出</span></span><br><span class="line"><span class="keyword">export</span> &#123; name1 <span class="keyword">as</span> <span class="keyword">default</span>, … &#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从另一个模块提取所有模块进行导出</span></span><br><span class="line"><span class="keyword">export</span> * <span class="keyword">from</span> …;</span><br><span class="line"><span class="comment">// 从另一个模块提取指定模块进行导出</span></span><br><span class="line"><span class="keyword">export</span> &#123; name1, name2, …, nameN &#125; <span class="keyword">from</span> …;</span><br><span class="line"><span class="comment">// 从另一个模块提取指定的模块并进行重命名后再导出</span></span><br><span class="line"><span class="keyword">export</span> &#123; import1 <span class="keyword">as</span> name1, import2 <span class="keyword">as</span> name2, …, nameN &#125; <span class="keyword">from</span> …;</span><br><span class="line"><span class="comment">// 从另一个模块导出默认模块</span></span><br><span class="line"><span class="keyword">export</span> &#123; <span class="keyword">default</span> &#125; <span class="keyword">from</span> …;</span><br></pre></td></tr></table></figure>
 <h3 id="一些说明"><a href="#一些说明" class="headerlink" title="一些说明"></a>一些说明</h3><ol>
-<li>在进行 <code>import</code> 的时候，<code>import { export } from &quot;module-name&quot;;</code> 中的 <code>{ export }</code> 语法并不等同于对象的解构，这是 <code>import</code> 专门的语法。</li><li><code>export</code> 和 <code>export default</code> 的区别是在后续进行引入的时候需要分别使用 <code>import { ... } from</code> 和 <code>import ... from</code> 进行操作。</li><li>作为默认模块进行导出时，匿名函数和具名函数在导出之后并无区分。</li><li>导出后的模块，如果存在变量，该变量对外是不可变的。可以通过模块内置的方法进行改变。</li></ol>
+<li>在进行 <code>import</code> 的时候，<code>import { export } from &quot;module-name&quot;;</code> 中的 <code>{ export }</code> 语法并不等同于对象的解构，这是 <code>import</code> 专门的语法。</li>
+<li><code>export</code> 和 <code>export default</code> 的区别是在后续进行引入的时候需要分别使用 <code>import { ... } from</code> 和 <code>import ... from</code> 进行操作。</li>
+<li>作为默认模块进行导出时，匿名函数和具名函数在导出之后并无区分。</li>
+<li>导出后的模块，如果存在变量，该变量对外是不可变的。可以通过模块内置的方法进行改变。</li>
+</ol>
 <hr>
 <p>大体上就是这些内容了，ES6 的模块化给编程领域尤其是前端开发这一块，带来非常大的便利。</p>
 <blockquote>
@@ -384,7 +572,25 @@
 <hr>
 <p>在撰写本文的时候，参考了大量的资料，但是提笔的时候却又感觉很词穷，所以只是简单的做了一个代码层次的注释说明，更多的参考资料罗列如下，请诸君自行参阅。</p>
 <h3 id="参考资料与拓展阅读"><a href="#参考资料与拓展阅读" class="headerlink" title="参考资料与拓展阅读"></a>参考资料与拓展阅读</h3><ul>
-<li><a href="http://2ality.com/2014/09/es6-modules-final.html" target="_blank" rel="noopener">ECMAScript 6 modules: the final syntax</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import" target="_blank" rel="noopener">import - JavaScript | MDN</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export" target="_blank" rel="noopener">export - JavaScript | MDN</a></li><li><a href="https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/" target="_blank" rel="noopener">Previewing ES6 Modules and more from ES2015, ES2016 and beyond</a></li><li><a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/" target="_blank" rel="noopener">ES6 In Depth: Modules</a></li><li><a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/" target="_blank" rel="noopener">ES modules: A cartoon deep-dive</a></li><li><a href="http://exploringjs.com/es6/ch_modules.html#_modules" target="_blank" rel="noopener">Exploring ES6 - 16. Modules</a></li><li><a href="https://github.com/eslint/espree/pull/43" target="_blank" rel="noopener">eslint/espree - #43 - adds module import and export grammar</a></li><li><a href="https://github.com/tc39/proposal-export-default-from" target="_blank" rel="noopener">tc39/proposal-export-default-from</a></li><li><a href="https://github.com/tc39/proposal-dynamic-import" target="_blank" rel="noopener">tc39/proposal-dynamic-import</a></li><li><a href="http://2ality.com/2015/07/es6-module-exports.html" target="_blank" rel="noopener">What do ES6 modules export?</a></li><li><a href="https://www.sitepoint.com/understanding-es6-modules/" target="_blank" rel="noopener">Understanding ES6 Modules</a></li><li><a href="http://www.commonjs.org/" target="_blank" rel="noopener">CommonJS</a></li><li><a href="http://jsmodules.io/" target="_blank" rel="noopener">JavaScript Modules</a></li><li><a href="https://developer.telerik.com/featured/choose-es6-modules-today/" target="_blank" rel="noopener">Choose ES6 modules Today!</a></li><li><a href="https://medium.freecodecamp.org/javascript-modules-a-beginner-s-guide-783f7d7a5fcc" target="_blank" rel="noopener">JavaScript Modules: A Beginner’s Guide</a></li><li><a href="https://appendto.com/2016/06/the-short-history-of-javascript-module-loaders/" target="_blank" rel="noopener">History and Background of JavaScript Module Loaders</a></li><li><a href="http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html" target="_blank" rel="noopener">JavaScript Module Pattern: In-Depth</a></li></ul>
+<li><a href="http://2ality.com/2014/09/es6-modules-final.html" target="_blank" rel="noopener">ECMAScript 6 modules: the final syntax</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import" target="_blank" rel="noopener">import - JavaScript | MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export" target="_blank" rel="noopener">export - JavaScript | MDN</a></li>
+<li><a href="https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/" target="_blank" rel="noopener">Previewing ES6 Modules and more from ES2015, ES2016 and beyond</a></li>
+<li><a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/" target="_blank" rel="noopener">ES6 In Depth: Modules</a></li>
+<li><a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/" target="_blank" rel="noopener">ES modules: A cartoon deep-dive</a></li>
+<li><a href="http://exploringjs.com/es6/ch_modules.html#_modules" target="_blank" rel="noopener">Exploring ES6 - 16. Modules</a></li>
+<li><a href="https://github.com/eslint/espree/pull/43" target="_blank" rel="noopener">eslint/espree - #43 - adds module import and export grammar</a></li>
+<li><a href="https://github.com/tc39/proposal-export-default-from" target="_blank" rel="noopener">tc39/proposal-export-default-from</a></li>
+<li><a href="https://github.com/tc39/proposal-dynamic-import" target="_blank" rel="noopener">tc39/proposal-dynamic-import</a></li>
+<li><a href="http://2ality.com/2015/07/es6-module-exports.html" target="_blank" rel="noopener">What do ES6 modules export?</a></li>
+<li><a href="https://www.sitepoint.com/understanding-es6-modules/" target="_blank" rel="noopener">Understanding ES6 Modules</a></li>
+<li><a href="http://www.commonjs.org/" target="_blank" rel="noopener">CommonJS</a></li>
+<li><a href="http://jsmodules.io/" target="_blank" rel="noopener">JavaScript Modules</a></li>
+<li><a href="https://developer.telerik.com/featured/choose-es6-modules-today/" target="_blank" rel="noopener">Choose ES6 modules Today!</a></li>
+<li><a href="https://medium.freecodecamp.org/javascript-modules-a-beginner-s-guide-783f7d7a5fcc" target="_blank" rel="noopener">JavaScript Modules: A Beginner’s Guide</a></li>
+<li><a href="https://appendto.com/2016/06/the-short-history-of-javascript-module-loaders/" target="_blank" rel="noopener">History and Background of JavaScript Module Loaders</a></li>
+<li><a href="http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html" target="_blank" rel="noopener">JavaScript Module Pattern: In-Depth</a></li>
+</ul>
 <p>&lt;本文完&gt;</p>
 ]]></content>
     
@@ -433,7 +639,10 @@
 <p>在 12 月初，写了一篇重量级的文章，安装 <code>nginx</code>，这也是我第一次完全自己部署前端站点的一次尝试。</p>
 <p><code>nginx</code> 的常规依赖：</p>
 <ul>
-<li><code>zlib</code>，用于开启 <code>gzip</code> 压缩。</li><li><code>pcre</code>，用于开启伪静态或者重定向。</li><li><code>openssh</code>，用于开启 <code>ssl</code>，或者换个说法，叫做 <code>https</code>。</li></ul>
+<li><code>zlib</code>，用于开启 <code>gzip</code> 压缩。</li>
+<li><code>pcre</code>，用于开启伪静态或者重定向。</li>
+<li><code>openssh</code>，用于开启 <code>ssl</code>，或者换个说法，叫做 <code>https</code>。</li>
+</ul>
 <p>安装过程中需要 <code>gcc-c++</code> 运行库。</p>
 <p>紧接着没多久，写了一篇如何配置 <code>nginx</code> 的日志，讲述了如何开启多配置文件模式，主要是 <code>include</code> 指令。顺便阐述了一下过滤非法域名访问的问题，<code>default_server</code> 关键字进行设置即可。</p>
 <p>之后在一篇微信支付相关的记录中，提到了关于反向代理转发真实 IP 地址的方法。</p>
@@ -446,7 +655,14 @@
 <p>另外，在阅读子项目中，曾经记录了一篇跟 <code>nginx</code> 密切相关的书籍《Nginx 开发从入门到精通》，该书是 <code>tengine</code> 开发团队主笔的。</p>
 <hr>
 <ul>
-<li><a href="http://nginx.org/" target="_blank" rel="noopener">nginx 官网</a></li><li><a href="http://nginx.org/en/docs/" target="_blank" rel="noopener">nginx documentation</a></li><li><a href="http://nginx.org/en/docs/stream/ngx_stream_upstream_module.html" target="_blank" rel="noopener">Module ngx_stream_upstream_module</a></li><li><a href="https://trac.nginx.org/nginx/browser/nginx/src/http/modules/ngx_http_proxy_module.c" target="_blank" rel="noopener">ngx_http_proxy_module.c in nginx/src/http/modules – nginx</a></li><li><a href="https://www.nginx.com/resources/wiki/start/topics/depth/ifisevil/" target="_blank" rel="noopener">If Is Evil | NGINX</a></li><li><a href="http://tengine.taobao.org/book/index.html" target="_blank" rel="noopener">Nginx开发从入门到精通</a></li><li><a href="https://serverfault.com/questions/630413/nginx-apache-set-hsts-only-if-x-forwarded-proto-is-https" target="_blank" rel="noopener">Nginx/Apache: set HSTS only if X-Forwarded-Proto is https - Server Fault</a></li></ul>
+<li><a href="http://nginx.org/" target="_blank" rel="noopener">nginx 官网</a></li>
+<li><a href="http://nginx.org/en/docs/" target="_blank" rel="noopener">nginx documentation</a></li>
+<li><a href="http://nginx.org/en/docs/stream/ngx_stream_upstream_module.html" target="_blank" rel="noopener">Module ngx_stream_upstream_module</a></li>
+<li><a href="https://trac.nginx.org/nginx/browser/nginx/src/http/modules/ngx_http_proxy_module.c" target="_blank" rel="noopener">ngx_http_proxy_module.c in nginx/src/http/modules – nginx</a></li>
+<li><a href="https://www.nginx.com/resources/wiki/start/topics/depth/ifisevil/" target="_blank" rel="noopener">If Is Evil | NGINX</a></li>
+<li><a href="http://tengine.taobao.org/book/index.html" target="_blank" rel="noopener">Nginx开发从入门到精通</a></li>
+<li><a href="https://serverfault.com/questions/630413/nginx-apache-set-hsts-only-if-x-forwarded-proto-is-https" target="_blank" rel="noopener">Nginx/Apache: set HSTS only if X-Forwarded-Proto is https - Server Fault</a></li>
+</ul>
 ]]></content>
     
     <summary type="html">
@@ -477,7 +693,11 @@
 <p>注意，这里只讲述公众号支付相关的情形，其他的基本类似，本人未作深入实践，故此不敢多言。</p>
 <p>这次的讲解，主要从四个方面进行说明：</p>
 <ol>
-<li>相关账户配置</li><li>后台的搭建</li><li>前端页面的展示</li><li>支付流程</li></ol>
+<li>相关账户配置</li>
+<li>后台的搭建</li>
+<li>前端页面的展示</li>
+<li>支付流程</li>
+</ol>
 <h3 id="账户"><a href="#账户" class="headerlink" title="账户"></a>账户</h3><p>首先，肯定是需要一个微信公众号的。公众号的性质需要满足开通商户号和微信支付，并且实际上已经开通好了。这次我用的账号是认证好了的服务号。</p>
 <p>进入公众号设置界面，对相关的域名进行配置，本次调试，我使用的域名是 <code>z.hdk4.com</code>，故此在公众的管理页面的 <code>【设置】-【公众号设置】-【功能设置】</code> 中对 <code>业务域名</code>、<code>JS接口安全域名</code>、<code>网页授权域名</code> 全部进行了相应的设置。</p>
 <blockquote>
@@ -494,11 +714,26 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> code = getUrlParam(<span class="string">'code'</span>) || sessionStorage.code;</span><br><span class="line"><span class="keyword">var</span> openid = sessionStorage.openid;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 没有 openid 则尝试获取 code</span></span><br><span class="line"><span class="comment">// code 获取之后跳回原链接进行临时存储</span></span><br><span class="line"><span class="keyword">if</span> (!openid) &#123;</span><br><span class="line">  <span class="keyword">if</span> (!code) &#123;</span><br><span class="line">    <span class="keyword">var</span> redirect_uri = <span class="built_in">encodeURIComponent</span>(<span class="string">'http://z.hdk4.com/d.html'</span>);</span><br><span class="line">    <span class="built_in">window</span>.location.replace(<span class="string">'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxbce0a3daf503097c&amp;redirect_uri='</span> + redirect_uri + <span class="string">'&amp;response_type=code&amp;scope=snsapi_base&amp;state=7'</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (!sessionStorage.code) &#123;</span><br><span class="line">    sessionStorage.code = code;</span><br><span class="line">    <span class="built_in">window</span>.location.replace(<span class="string">'http://z.hdk4.com/d.html'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>几点说明：</p>
 <ul>
-<li><code>redirect_uri</code> 中的 <code>state=7</code> 是随便写的一个值。</li><li><code>window.location.replace</code> 用于直接替换，如果不想要替换效果，可以修改为 <code>window.location.href = &#39;...&#39;</code>。</li><li>采用 <code>sessionStorage</code> 进行数据的缓存。</li><li><code>getUrlParam</code> 为提取链接中的 <code>querystring</code>。</li><li><del>不要管 <code>yoda</code> 什么的了</del></li></ul>
+<li><code>redirect_uri</code> 中的 <code>state=7</code> 是随便写的一个值。</li>
+<li><code>window.location.replace</code> 用于直接替换，如果不想要替换效果，可以修改为 <code>window.location.href = &#39;...&#39;</code>。</li>
+<li>采用 <code>sessionStorage</code> 进行数据的缓存。</li>
+<li><code>getUrlParam</code> 为提取链接中的 <code>querystring</code>。</li>
+<li><del>不要管 <code>yoda</code> 什么的了</del></li>
+</ul>
 <p>前端差不多能说的就这么多了。</p>
 <h3 id="支付流程"><a href="#支付流程" class="headerlink" title="支付流程"></a>支付流程</h3><p>整个支付流程浓缩起来就是：</p>
 <ol>
-<li>获取 <code>code</code></li><li>获取 <code>openid</code></li><li>开始进行支付操作</li><li>后台发起预支付订单</li><li>后台将获取到的预支付信息返回给前端</li><li>前端尝试唤起微信支付</li><li>进行支付</li><li>前端/后台处理支付回调。是的，都进行处理。前端无所谓，后台必须处理，不然微信会发很多次请求。</li><li>支付完成</li><li>后续一些相关操作。由于本次只是演示与测验，就不做处理了。</li></ol>
+<li>获取 <code>code</code></li>
+<li>获取 <code>openid</code></li>
+<li>开始进行支付操作</li>
+<li>后台发起预支付订单</li>
+<li>后台将获取到的预支付信息返回给前端</li>
+<li>前端尝试唤起微信支付</li>
+<li>进行支付</li>
+<li>前端/后台处理支付回调。是的，都进行处理。前端无所谓，后台必须处理，不然微信会发很多次请求。</li>
+<li>支付完成</li>
+<li>后续一些相关操作。由于本次只是演示与测验，就不做处理了。</li>
+</ol>
 <hr>
 <p>现在来说一下核心的重点，即后台的相关逻辑处理与接口的设计。</p>
 <h3 id="后台-1"><a href="#后台-1" class="headerlink" title="后台"></a>后台</h3><p>相关的库的引入与声明，这里就不赘述了。</p>
@@ -510,10 +745,18 @@
 <p>前端调用方式：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getOpenId</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (sessionStorage.openid) &#123;</span><br><span class="line">      resolve(sessionStorage.openid);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      $.get(<span class="string">'/api/getopenid?code='</span> + sessionStorage.code).then(<span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> data = res.data;</span><br><span class="line">        <span class="keyword">if</span> (data &amp;&amp; data.openid) &#123;</span><br><span class="line">          sessionStorage.openid = data.openid;</span><br><span class="line">          resolve(data.openid)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          reject();</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>是的， <code>$</code> 就是大名鼎鼎的 <code>jQuery</code>。</li><li>采用了 <code>Promise</code> 对象。</li></ul>
+<li>是的， <code>$</code> 就是大名鼎鼎的 <code>jQuery</code>。</li>
+<li>采用了 <code>Promise</code> 对象。</li>
+</ul>
 <h4 id="api-unifiedorder-接口"><a href="#api-unifiedorder-接口" class="headerlink" title="/api/unifiedorder 接口"></a><code>/api/unifiedorder</code> 接口</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取微信支付的统一下单相关数据</span></span><br><span class="line">app.get(<span class="string">'/api/unifiedorder'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> openid = req.query.openid;</span><br><span class="line">  <span class="keyword">const</span> ip = getClientIp(req);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 商户订单号</span></span><br><span class="line">  <span class="keyword">const</span> out_trade_no = <span class="string">'test'</span> + <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 统一下单的相关参数</span></span><br><span class="line">  <span class="keyword">const</span> paramUnifiedOrder = &#123;</span><br><span class="line">    appid: config.app_id,</span><br><span class="line">    attach: <span class="string">'test'</span>,</span><br><span class="line">    body: <span class="string">'desc'</span>,</span><br><span class="line">    mch_id: config.mch_id,</span><br><span class="line">    nonce_str: createNonceStr(),</span><br><span class="line">    notify_url: config.notify_url, <span class="comment">// 微信付款后的回调地址</span></span><br><span class="line">    openid: openid,</span><br><span class="line">    out_trade_no: out_trade_no,</span><br><span class="line">    spbill_create_ip: ip,</span><br><span class="line">    total_fee: <span class="number">1</span>,</span><br><span class="line">    trade_type: <span class="string">'JSAPI'</span></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 签名</span></span><br><span class="line">  paramUnifiedOrder.sign = getSign(paramUnifiedOrder);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 请求微信支付下单接口，获取预订单编号</span></span><br><span class="line">  request.post(&#123; <span class="attr">url</span>: <span class="string">'https://api.mch.weixin.qq.com/pay/unifiedorder'</span>, <span class="attr">body</span>: <span class="built_in">JSON</span>.stringify(getUnifiedOrderXml(paramUnifiedOrder)) &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">error, response, body</span>) </span>&#123;</span><br><span class="line">    wFile(<span class="string">'unifiedorder'</span>, body);</span><br><span class="line">    <span class="keyword">if</span> (error) &#123;</span><br><span class="line">      res.json(&#123; <span class="attr">error</span>: body &#125;);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (response.statusCode === <span class="number">200</span>) &#123;</span><br><span class="line">      <span class="keyword">let</span> prepay_id = <span class="string">''</span>; <span class="comment">// 预订单编号</span></span><br><span class="line">      <span class="comment">// 微信返回的数据为 xml 格式，需要进行解析</span></span><br><span class="line">      xml2jsparseString(body, &#123; <span class="attr">async</span>: <span class="literal">true</span> &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">error, result</span>) </span>&#123;</span><br><span class="line">        prepay_id = result.xml.prepay_id[<span class="number">0</span>]; <span class="comment">// 获取预订单编号</span></span><br><span class="line">        <span class="keyword">const</span> paramWCPay = &#123;</span><br><span class="line">          appId: config.app_id,</span><br><span class="line">          timeStamp: <span class="built_in">parseInt</span>(<span class="keyword">new</span> <span class="built_in">Date</span>().getTime() / <span class="number">1000</span>).toString(),</span><br><span class="line">          nonceStr: createNonceStr(),</span><br><span class="line">          package: <span class="string">'prepay_id='</span> + prepay_id,</span><br><span class="line">          signType: <span class="string">'MD5'</span></span><br><span class="line">        &#125;;</span><br><span class="line">        paramWCPay.paySign = getSign(paramWCPay); <span class="comment">// 微信支付签名</span></span><br><span class="line">        res.json(&#123; <span class="attr">data</span>: paramWCPay &#125;);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      res.json(&#123; <span class="attr">error</span>: <span class="number">-1</span> &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <ul>
-<li><code>getClientIp</code> 是获取客户端真实 IP 地址的方法。</li><li><code>createNonceStr</code> 是生成随机串的方式，非常简单粗暴。</li><li><code>out_trade_no</code> 是商户自定义的订单号。</li><li><code>getUnifiedOrderXml</code> 是用来拼接发送给微信支付统一下单接口的数据，要 <code>xml</code> 格式的，所以就给一个封装。</li><li><code>xml2jsparseString</code> 是解析 <code>xml</code> 文件的库。微信支付统一下单接口返回的数据是 <code>xml</code> 格式的，需要进行相应的解码。</li><li><code>getSign</code> 是生成签名的方法。</li></ul>
+<li><code>getClientIp</code> 是获取客户端真实 IP 地址的方法。</li>
+<li><code>createNonceStr</code> 是生成随机串的方式，非常简单粗暴。</li>
+<li><code>out_trade_no</code> 是商户自定义的订单号。</li>
+<li><code>getUnifiedOrderXml</code> 是用来拼接发送给微信支付统一下单接口的数据，要 <code>xml</code> 格式的，所以就给一个封装。</li>
+<li><code>xml2jsparseString</code> 是解析 <code>xml</code> 文件的库。微信支付统一下单接口返回的数据是 <code>xml</code> 格式的，需要进行相应的解码。</li>
+<li><code>getSign</code> 是生成签名的方法。</li>
+</ul>
 <hr>
 <p>如果不出意外，下单接口会返回一个 <code>xml</code> 数据，然后我们就可以提取到 <code>prepay_id</code> 这个核心的信息了。</p>
 <h4 id="api-wxresponse-接口"><a href="#api-wxresponse-接口" class="headerlink" title="/api/wxresponse 接口"></a><code>/api/wxresponse</code> 接口</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 处理微信支付的回调</span></span><br><span class="line">app.post(<span class="string">'/api/wxresponse'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  wFile(<span class="string">'response'</span>, req.body);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> xmlData = req.body.xml;</span><br><span class="line">  <span class="keyword">let</span> ret = <span class="string">''</span>;</span><br><span class="line">  <span class="keyword">if</span> (xmlData.sign === getSign(xmlData)) &#123;</span><br><span class="line">    ret = <span class="string">`&lt;xml&gt;</span></span><br><span class="line"><span class="string">  &lt;return_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/return_code&gt;</span></span><br><span class="line"><span class="string">  &lt;return_msg&gt;&lt;![CDATA[OK]]&gt;&lt;/return_msg&gt;</span></span><br><span class="line"><span class="string">&lt;/xml&gt;`</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    ret = <span class="string">`&lt;xml&gt;</span></span><br><span class="line"><span class="string">  &lt;return_code&gt;&lt;![CDATA[SIGNATRURE_ERROR]]&gt;&lt;/return_code&gt;</span></span><br><span class="line"><span class="string">  &lt;return_msg&gt;&lt;![CDATA[FAIL]]&gt;&lt;/return_msg&gt;</span></span><br><span class="line"><span class="string">&lt;/xml&gt;`</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  res.send(ret);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
@@ -528,7 +771,20 @@
 <h4 id="随机字符串方法"><a href="#随机字符串方法" class="headerlink" title="随机字符串方法"></a>随机字符串方法</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createNonceStr</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.random().toString(<span class="number">36</span>).substr(<span class="number">2</span>, <span class="number">15</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><del>是的，这一条是滥竽充数的</del>。</p>
 <h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
-<li><a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_4" target="_blank" rel="noopener">获取openid</a></li><li><a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140842" target="_blank" rel="noopener">微信网页授权</a></li><li><a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_7&amp;index=6" target="_blank" rel="noopener">微信内H5调起支付</a></li><li><a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_3" target="_blank" rel="noopener">签名算法</a></li><li><a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_1" target="_blank" rel="noopener">统一下单</a></li><li><a href="https://github.com/wxpay/WXPay-SDK-Node.js" target="_blank" rel="noopener">wxpay/WXPay-SDK-Node.js</a></li><li><a href="https://gitee.com/anziguoer/wechatPay" target="_blank" rel="noopener">nodejs 微信公众号支付开发</a>，<em>大部分代码参考于此</em>。</li><li><a href="https://www.cnblogs.com/yimiyan/p/5603657.html" target="_blank" rel="noopener">微信公众号支付开发全过程 –JAVA</a></li><li><a href="http://blog.csdn.net/aofavx/article/details/52220394" target="_blank" rel="noopener">微信公众号支付详细步骤(整理)</a></li><li><a href="https://segmentfault.com/a/1190000005797170" target="_blank" rel="noopener">Nginx向ExpressJS转发真实IP地址</a></li><li><a href="https://www.jianshu.com/p/0496ef49b2a5" target="_blank" rel="noopener">Nodejs 部署到阿里云全过程</a></li><li><a href="http://www.expressjs.com.cn/starter/static-files.html" target="_blank" rel="noopener">利用 Express 托管静态文件</a></li><li><a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass" target="_blank" rel="noopener">proxy_pass</a></li></ul>
+<li><a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_4" target="_blank" rel="noopener">获取openid</a></li>
+<li><a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140842" target="_blank" rel="noopener">微信网页授权</a></li>
+<li><a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_7&amp;index=6" target="_blank" rel="noopener">微信内H5调起支付</a></li>
+<li><a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_3" target="_blank" rel="noopener">签名算法</a></li>
+<li><a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_1" target="_blank" rel="noopener">统一下单</a></li>
+<li><a href="https://github.com/wxpay/WXPay-SDK-Node.js" target="_blank" rel="noopener">wxpay/WXPay-SDK-Node.js</a></li>
+<li><a href="https://gitee.com/anziguoer/wechatPay" target="_blank" rel="noopener">nodejs 微信公众号支付开发</a>，<em>大部分代码参考于此</em>。</li>
+<li><a href="https://www.cnblogs.com/yimiyan/p/5603657.html" target="_blank" rel="noopener">微信公众号支付开发全过程 –JAVA</a></li>
+<li><a href="http://blog.csdn.net/aofavx/article/details/52220394" target="_blank" rel="noopener">微信公众号支付详细步骤(整理)</a></li>
+<li><a href="https://segmentfault.com/a/1190000005797170" target="_blank" rel="noopener">Nginx向ExpressJS转发真实IP地址</a></li>
+<li><a href="https://www.jianshu.com/p/0496ef49b2a5" target="_blank" rel="noopener">Nodejs 部署到阿里云全过程</a></li>
+<li><a href="http://www.expressjs.com.cn/starter/static-files.html" target="_blank" rel="noopener">利用 Express 托管静态文件</a></li>
+<li><a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass" target="_blank" rel="noopener">proxy_pass</a></li>
+</ul>
 ]]></content>
     
     <summary type="html">
@@ -560,7 +816,11 @@
 </blockquote>
 <p>在这一天发布的日子里面，其实 <code>gulp</code> 一口气是出了四个版本的：</p>
 <ul>
-<li><code>v4.0.0-alpha.1</code></li><li><code>v4.0.0-alpha.2</code></li><li><code>v4.0.0-alpha.3</code></li><li><code>v4.0.0</code></li></ul>
+<li><code>v4.0.0-alpha.1</code></li>
+<li><code>v4.0.0-alpha.2</code></li>
+<li><code>v4.0.0-alpha.3</code></li>
+<li><code>v4.0.0</code></li>
+</ul>
 <p>前面三个是打了 <code>pre-release</code> 的标签的。</p>
 <p><a href="https://github.com/gulpjs/gulp/releases" target="_blank" rel="noopener">更新记录</a>这里就不赘述了，简单来说一下发布带来的新特性吧。</p>
 <p>首先是 API 的变化，新增了两个非常重要的改进：<code>gulp.parallel</code> 和 <code>gulp.series</code>。这一点我之前在<a href="https://github.com/xovel/diary/blob/master/2017/10/2017-10-22-gulp-4.md" target="_blank" rel="noopener">个人日志项目</a>里面也进行过记录，当时的说明还是略显简陋的。</p>
@@ -570,7 +830,11 @@
 <p><code>gulp.watch</code> 改进，在 <a href="https://github.com/paulmillr/chokidar" target="_blank" rel="noopener"><code>chokidar</code></a> 的基础上支持各种文件操作方式的监视。</p>
 <p>另外新增了几个 API：</p>
 <ul>
-<li><code>gulp.symlink</code> 用于创建 <code>symlinks</code>。</li><li><code>gulp.lastRun</code> 用于获得指定任务上一次的执行时间。</li><li><code>gulp.tree</code> 用于获取当前任务的树形结构。</li><li><code>gulp.registry</code> 用于获取或者设置注册任务。</li></ul>
+<li><code>gulp.symlink</code> 用于创建 <code>symlinks</code>。</li>
+<li><code>gulp.lastRun</code> 用于获得指定任务上一次的执行时间。</li>
+<li><code>gulp.tree</code> 用于获取当前任务的树形结构。</li>
+<li><code>gulp.registry</code> 用于获取或者设置注册任务。</li>
+</ul>
 <p>所有 API 的详细说明可以在这里找到：<a href="https://github.com/gulpjs/gulp/blob/v4.0.0/docs/API.md" target="_blank" rel="noopener">https://github.com/gulpjs/gulp/blob/v4.0.0/docs/API.md</a>。</p>
 <p>另外，对于命令行执行方式，也添加更加丰富的指令，详情可以参阅：<a href="https://github.com/gulpjs/gulp/blob/v4.0.0/docs/CLI.md" target="_blank" rel="noopener">https://github.com/gulpjs/gulp/blob/v4.0.0/docs/CLI.md</a></p>
 <p>更新之后，对现有的生态系统影响不会太大，因为还是保留了 <code>v3.9.1</code> 的安装方式。要安装 <code>v4</code>，需要使用 <code>npm install gulp@next</code> 命令来进行安装和获取。这些也都在其 <code>README.md</code> 文件里面有详细说明。</p>
@@ -624,10 +888,19 @@
 <p>生活方面，说来也甚是杯具。我依然在人生的道路上孤军奋战，我内心多么渴望能有一个人和我一起共同面对未知的旅途呀。说多了都是泪的节奏，归根结底都是因为自己自身的原因。所幸，2017 年，我到底还是学会了如何去勇敢面对。有时候内心面临崩溃，身边又孤立无援的时候，我不再像之前在杭州那般堕落消极，而是努力寻找解决方案。</p>
 <h3 id="挖过的坑"><a href="#挖过的坑" class="headerlink" title="挖过的坑"></a>挖过的坑</h3><p>2017 年，我给自己是挖了很多的坑的。这里也稍作罗列，希望还能有时间和精力去填补。</p>
 <ol>
-<li><code>zob</code> 项目。该项目最初设定的是解决 <code>MVVM</code> 框架的问题，后来项目失败，项目的定位迁移成了代码和写作风格指导。</li><li><code>moonlight</code> 项目。该项目原本计划是在 2017 年产出至少两个的子项目，但是很遗憾，目前只有一个半成品的小项目。</li><li><code>lui</code> 项目。这个坑挖的太大了，导致项目直接崩盘。该项目的定位是用于解决终端之间的样式风格问题，而目前市面上的大多数 UI 库都致力于解决这个问题，并不是一朝一夕的事情。<del><code>L</code> 是法语单词 <code>libellule</code> 的首字母，意思为<em>蜻蜓</em></del>。</li><li>创作系列之<strong>内心小剧场</strong>。这其实也算是一个不大不小的坑，最初的灵感来源是国庆假期的时候去见了她。一直想用一些文字来描述自己的内心世界，开设这个小项目，也是为了释放一下自己心中的情感。</li><li>代码风格统一化。这也算团队协作的一个组成部分吧，然而目前只是做到了自己编码风格的统一，并没有对团队成员做统一规范要求。</li></ol>
+<li><code>zob</code> 项目。该项目最初设定的是解决 <code>MVVM</code> 框架的问题，后来项目失败，项目的定位迁移成了代码和写作风格指导。</li>
+<li><code>moonlight</code> 项目。该项目原本计划是在 2017 年产出至少两个的子项目，但是很遗憾，目前只有一个半成品的小项目。</li>
+<li><code>lui</code> 项目。这个坑挖的太大了，导致项目直接崩盘。该项目的定位是用于解决终端之间的样式风格问题，而目前市面上的大多数 UI 库都致力于解决这个问题，并不是一朝一夕的事情。<del><code>L</code> 是法语单词 <code>libellule</code> 的首字母，意思为_蜻蜓_</del>。</li>
+<li>创作系列之<strong>内心小剧场</strong>。这其实也算是一个不大不小的坑，最初的灵感来源是国庆假期的时候去见了她。一直想用一些文字来描述自己的内心世界，开设这个小项目，也是为了释放一下自己心中的情感。</li>
+<li>代码风格统一化。这也算团队协作的一个组成部分吧，然而目前只是做到了自己编码风格的统一，并没有对团队成员做统一规范要求。</li>
+</ol>
 <h3 id="有过的想法"><a href="#有过的想法" class="headerlink" title="有过的想法"></a>有过的想法</h3><p>在 2017 年有过的想法，但是一直没有去执行的事情：</p>
 <ol>
-<li>日历项目。记录所有重要的日期。</li><li>运营一个微信公众号。</li><li>收集某一垂直领域的相关资料。拟定的方向有两个，分别为养生和建筑。</li><li>成为 <code>vue.js</code> 的贡献者。</li></ol>
+<li>日历项目。记录所有重要的日期。</li>
+<li>运营一个微信公众号。</li>
+<li>收集某一垂直领域的相关资料。拟定的方向有两个，分别为养生和建筑。</li>
+<li>成为 <code>vue.js</code> 的贡献者。</li>
+</ol>
 <p>可以将理由统一定性为懒惰，不思进取。这些事情也逐渐让我明白了一个道理：一个人的精力毕竟还是有限的。</p>
 <hr>
 <p>下面来总结一下 2017 可圈可点的事情：</p>
@@ -649,10 +922,24 @@
 <h4 id="最合拍"><a href="#最合拍" class="headerlink" title="最合拍"></a>最合拍</h4><p>一款面向羽毛球运动的微信商城项目。<del>后该项目因为迭代升级原因，我个人退出下一个版本的开发</del>。</p>
 <h4 id="第五空间文学网"><a href="#第五空间文学网" class="headerlink" title="第五空间文学网"></a>第五空间文学网</h4><p>一款面向小说后台管理的静态页面实现。</p>
 <h3 id="新增的技术栈"><a href="#新增的技术栈" class="headerlink" title="新增的技术栈"></a>新增的技术栈</h3><ul>
-<li><code>angular.js</code>。开始对大型应用的 <code>MVVM</code> 模式做深入的了解与应用。</li><li><code>jenkins</code> 的使用，本人的日志项目中有许多记录是关于 <code>jenkins</code> 这一款 <code>CI</code> 系统的。</li><li><code>gulp</code> 构建复杂的大型应用。配合简单的 <code>node</code> 命令完成各种场景需求。</li><li><code>node.js</code> 编写简单基础的应用。如上面提到的 <code>dreport-xlsx</code>，上一条提到的 <code>gulp</code> 生成 <code>config</code> 配置文件，均采用 <code>node</code> 执行文件来产出。</li><li><code>nginx</code> 搭建与配置，代理纯前端站点。多文件的配置模式。</li><li><code>xshell</code> 连接远程主机进行调试。主要是操作 <code>nginx</code> 和查看 <code>tomcat</code> 的后台日志记录文件。</li><li><code>webpack</code> 技术，使用 <code>vue</code> 进行项目的骨架搭建。</li><li><code>vue</code>，非常优秀的前端框架，算是入了门。组件库的使用这里就不赘述了。</li></ul>
+<li><code>angular.js</code>。开始对大型应用的 <code>MVVM</code> 模式做深入的了解与应用。</li>
+<li><code>jenkins</code> 的使用，本人的日志项目中有许多记录是关于 <code>jenkins</code> 这一款 <code>CI</code> 系统的。</li>
+<li><code>gulp</code> 构建复杂的大型应用。配合简单的 <code>node</code> 命令完成各种场景需求。</li>
+<li><code>node.js</code> 编写简单基础的应用。如上面提到的 <code>dreport-xlsx</code>，上一条提到的 <code>gulp</code> 生成 <code>config</code> 配置文件，均采用 <code>node</code> 执行文件来产出。</li>
+<li><code>nginx</code> 搭建与配置，代理纯前端站点。多文件的配置模式。</li>
+<li><code>xshell</code> 连接远程主机进行调试。主要是操作 <code>nginx</code> 和查看 <code>tomcat</code> 的后台日志记录文件。</li>
+<li><code>webpack</code> 技术，使用 <code>vue</code> 进行项目的骨架搭建。</li>
+<li><code>vue</code>，非常优秀的前端框架，算是入了门。组件库的使用这里就不赘述了。</li>
+</ul>
 <h3 id="阅读与写作"><a href="#阅读与写作" class="headerlink" title="阅读与写作"></a>阅读与写作</h3><p>说来惭愧，2017 年，自己的写作任务全面处于弃坑状态，所以这里就针对自己的阅读情况做一个简单的记录。</p>
 <ul>
-<li>《圣血记》的创作，持续搁置。“她”的原型再度丢失，我失去了创作的方向。</li><li>购买了一些技术方面的书籍，如《代码整洁之道》、《深入理解 ES6》、《HTTP 指南》等。基本上都是下半年购买的，远远没有达到年初既定的目标（<code>≥ 10</code>）。</li><li>图书馆去的次数大概在 20 次，每次借阅的书籍数量平均为两本。也是没有能够达到最初的目标的。书籍的范围大都是技术和哲学相关的。希望 2018 年能够借阅更多类型的书籍来拓展自己的知识视野。</li><li>各大博客和站点，以掘金、简书、开发者头条、干货集中营、前端之巅、前端日刊等为代表，几乎推送过来的文章，跟前端和 UI 相关的都进行了阅读，并针对部分文章做了收藏与整理记录。</li><li>个人博客的创作，2017 年的产出量不超过 10 篇，能拿得出手的其实只有两篇，一篇是介绍 <code>brackets</code> 插件的，另一篇是介绍 <code>htree</code> 的。</li><li>个人日志项目，坚持了下来。虽然每天都记录了，但是个人认为有效记录的比率在 60% 左右（即有大约 30% ~ 40% 是并没有什么实际意义的记录或者是流水账式的记录）。我会抽一个时间对 2017 年写下的日志做一个整理，看看自己的技术成长路线是个什么样子的。<del>嗯，这又算是给自己挖了一个坑</del>。</li></ul>
+<li>《圣血记》的创作，持续搁置。“她”的原型再度丢失，我失去了创作的方向。</li>
+<li>购买了一些技术方面的书籍，如《代码整洁之道》、《深入理解 ES6》、《HTTP 指南》等。基本上都是下半年购买的，远远没有达到年初既定的目标（<code>≥ 10</code>）。</li>
+<li>图书馆去的次数大概在 20 次，每次借阅的书籍数量平均为两本。也是没有能够达到最初的目标的。书籍的范围大都是技术和哲学相关的。希望 2018 年能够借阅更多类型的书籍来拓展自己的知识视野。</li>
+<li>各大博客和站点，以掘金、简书、开发者头条、干货集中营、前端之巅、前端日刊等为代表，几乎推送过来的文章，跟前端和 UI 相关的都进行了阅读，并针对部分文章做了收藏与整理记录。</li>
+<li>个人博客的创作，2017 年的产出量不超过 10 篇，能拿得出手的其实只有两篇，一篇是介绍 <code>brackets</code> 插件的，另一篇是介绍 <code>htree</code> 的。</li>
+<li>个人日志项目，坚持了下来。虽然每天都记录了，但是个人认为有效记录的比率在 60% 左右（即有大约 30% ~ 40% 是并没有什么实际意义的记录或者是流水账式的记录）。我会抽一个时间对 2017 年写下的日志做一个整理，看看自己的技术成长路线是个什么样子的。<del>嗯，这又算是给自己挖了一个坑</del>。</li>
+</ul>
 <h3 id="关于音乐"><a href="#关于音乐" class="headerlink" title="关于音乐"></a>关于音乐</h3><p>截止目前为止，我在网易云音乐上面的听歌总数达到了八千多首，主要类型可以分为两类，一类是纯音乐，包括史诗、空间、纯电音、新世纪等等；另一类是柔和舒缓类型的。</p>
 <p>自己的音乐梦想，到目前为止，已经中断将近 20 年了。说起来也甚是滑稽可笑，我其实是有条件进一步接触音乐的，但我一直没有勇气将其拎起来。我并不知道何时才能重拾年幼时的梦想，也可能一辈子都不会再捡起来了吧。</p>
 <p>自己的歌唱水平比以前好了很多很多。以前 100% 走调的我，现在也能逐渐掐准节奏了。深情，有故事，这是我得到的最多的评价。</p>
@@ -660,7 +947,10 @@
 <p>有些事情，是不方便明说的。2017 年没有来得及完成的事情，2018 年也不会特意去处理，毕竟各有各的规划。若是刻意去完成某件事情，是否又偏离了原定计划呢？</p>
 <p>简单粗暴的总结一下 2018 年的展望：</p>
 <ul>
-<li>遇见更好的自己。</li><li>让自己内心更加平静。</li><li>努力提升自己的情商和魅力值。</li></ul>
+<li>遇见更好的自己。</li>
+<li>让自己内心更加平静。</li>
+<li>努力提升自己的情商和魅力值。</li>
+</ul>
 <blockquote>
 <p>嗯，后面两点是<del>充数</del>的。</p>
 </blockquote>
@@ -706,7 +996,9 @@
 <p>为什么不提供精确的商标查询效果？说来惭愧，没有能够顺利破解 <code>商标网</code> 提供的 <code>API</code>。前天听后台开发的同事讲解了一些开放平台和网关拦截的知识，我想我是碰到了。我没有找到合适的破解方案，时间一到就告知权限失效或者查无数据了。所以，暂时先提供一个商标范围的搜索项目，名字就叫做 <code>trademark-classification</code>。所有数据来源来自商标网的官方数据，采集时间为 <code>2017-10-31</code>。</p>
 <p>部分参考资料：</p>
 <ul>
-<li><a href="http://sbj.saic.gov.cn/sbsq/sphfwfl/" target="_blank" rel="noopener">商标注册用商品和服务分类说明</a></li><li><a href="http://wsjs.saic.gov.cn" target="_blank" rel="noopener">中国商标网</a></li></ul>
+<li><a href="http://sbj.saic.gov.cn/sbsq/sphfwfl/" target="_blank" rel="noopener">商标注册用商品和服务分类说明</a></li>
+<li><a href="http://wsjs.saic.gov.cn" target="_blank" rel="noopener">中国商标网</a></li>
+</ul>
 ]]></content>
     
     <summary type="html">
@@ -738,19 +1030,29 @@
 <hr>
 <p>Blazing fast, zero configuration web application bundler <a href="https://parceljs.org" target="_blank" rel="noopener">https://parceljs.org</a></p>
 <h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><ul>
-<li>🚀 <strong>Blazing fast</strong> bundle times - multicore compilation, and a filesystem cache for fast rebuilds even after a restart.</li><li>📦 Out of the box support for JS, CSS, HTML, file assets, and more - <strong>no plugins to install</strong>.</li><li>🐠 <strong>Automatically transforms modules</strong> using Babel, PostCSS, and PostHTML when needed - even <code>node_modules</code>.</li><li>✂️ Zero configuration <strong>code splitting</strong> using dynamic <code>import()</code> statements.</li><li>🔥 Built in support for <strong>hot module replacement</strong></li><li>🚨 Friendly error logging experience - syntax highlighted code frames help pinpoint the problem.</li></ul>
+<li>🚀 <strong>Blazing fast</strong> bundle times - multicore compilation, and a filesystem cache for fast rebuilds even after a restart.</li>
+<li>📦 Out of the box support for JS, CSS, HTML, file assets, and more - <strong>no plugins to install</strong>.</li>
+<li>🐠 <strong>Automatically transforms modules</strong> using Babel, PostCSS, and PostHTML when needed - even <code>node_modules</code>.</li>
+<li>✂️ Zero configuration <strong>code splitting</strong> using dynamic <code>import()</code> statements.</li>
+<li>🔥 Built in support for <strong>hot module replacement</strong></li>
+<li>🚨 Friendly error logging experience - syntax highlighted code frames help pinpoint the problem.</li>
+</ul>
 <h2 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h2><ol>
-<li>Install with yarn:</li></ol>
+<li>Install with yarn:</li>
+</ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn global add parcel-bundler</span><br></pre></td></tr></table></figure>
 <p>or with npm:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g parcel-bundler</span><br></pre></td></tr></table></figure></p>
-<ol>
-<li>Parcel can take any type of file as an entry point, but an HTML or JavaScript file is a good place to start. If you link your main JavaScript file in the HTML using a relative path, Parcel will also process it for you, and replace the reference with a URL to the output file.</li></ol>
+<ol start="2">
+<li>Parcel can take any type of file as an entry point, but an HTML or JavaScript file is a good place to start. If you link your main JavaScript file in the HTML using a relative path, Parcel will also process it for you, and replace the reference with a URL to the output file.</li>
+</ol>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./index.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ol>
-<li>Parcel has a development server built in, which will automatically rebuild your app as you change files and supports hot module replacement for fast development. Just point it at your entry file:</li></ol>
+<ol start="3">
+<li>Parcel has a development server built in, which will automatically rebuild your app as you change files and supports hot module replacement for fast development. Just point it at your entry file:</li>
+</ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parcel index.html</span><br></pre></td></tr></table></figure>
-<ol>
-<li>Now open <a href="http://localhost:1234/" target="_blank" rel="noopener">http://localhost:1234/</a> in your browser. If needed, you can also override the default port with the -p option.</li></ol>
+<ol start="4">
+<li>Now open <a href="http://localhost:1234/" target="_blank" rel="noopener">http://localhost:1234/</a> in your browser. If needed, you can also override the default port with the -p option.</li>
+</ol>
 <p>See <a href="https://parceljs.org" target="_blank" rel="noopener">parceljs.org</a> for more documentation!</p>
 <h2 id="Benchmarks"><a href="#Benchmarks" class="headerlink" title="Benchmarks"></a>Benchmarks</h2><p>Based on a reasonably sized app, containing 1726 modules, 6.5M uncompressed. Built on a 2016 MacBook Pro with 4 physical CPUs.</p>
 <table>
@@ -789,7 +1091,9 @@
 <p>After the bundle tree is constructed, each bundle is written to a file by a packager specific to the file type. The packagers know how to combine the code from each asset together into the final file that is loaded by a browser.</p>
 <h2 id="Community"><a href="#Community" class="headerlink" title="Community"></a>Community</h2><p>All feedback and suggestions are welcome!</p>
 <ul>
-<li>💬 Chat: Join us on <a href="https://slack.parceljs.org/" target="_blank" rel="noopener">slack</a>.</li><li>📣 Stay up to date on new features and announcements on <a href="https://twitter.com/parceljs" target="_blank" rel="noopener">@parceljs</a>.</li></ul>
+<li>💬 Chat: Join us on <a href="https://slack.parceljs.org/" target="_blank" rel="noopener">slack</a>.</li>
+<li>📣 Stay up to date on new features and announcements on <a href="https://twitter.com/parceljs" target="_blank" rel="noopener">@parceljs</a>.</li>
+</ul>
 <h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>MIT</p>
 <hr>
 <p><a href="http://www.css88.com/doc/parcel/" target="_blank" rel="noopener">Parcel 中文文档</a>。不得不佩服这个网站，以飞快之速完成了对文档的翻译。<del>当然，现在的官方文档内容其实也不多</del>。</p>
@@ -846,10 +1150,16 @@
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>其实上面的种种命名方式，在语义学上面，统称为 <code>case</code>。这也是为什么其英文名称中大都出现了 <code>case</code> 这个词眼的原因。</p>
 <p>现罗列一下常见的各种 <code>case</code>，每一种都是用自身的方式进行书写的。</p>
 <ul>
-<li><code>CamelCase</code></li><li><code>snake_case</code></li><li><code>kebab-case</code></li><li><code>StUdLyCaPs</code></li></ul>
+<li><code>CamelCase</code></li>
+<li><code>snake_case</code></li>
+<li><code>kebab-case</code></li>
+<li><code>StUdLyCaPs</code></li>
+</ul>
 <p>另外加上两个<del>凑数</del>：</p>
 <ul>
-<li><code>lowercase</code></li><li><code>UPPERCASE</code></li></ul>
+<li><code>lowercase</code></li>
+<li><code>UPPERCASE</code></li>
+</ul>
 <blockquote>
 <p>嗯。是的，一个是小写，一个是大写。</p>
 </blockquote>
@@ -910,7 +1220,15 @@
 <h3 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h3><p>上面的所有设置均可以通过命令行方式进行参数指定，指定方式为小写连字符风格的字符串加上 <code>--</code> 的前缀。如要指定最大文件夹访问深度 <code>maxDepth</code> 为 <code>10</code>，则使用命令：<code>htree --max-depth 10</code>，或者 <code>htree --max-depth=10</code>。</p>
 <p>支持的短命令列表如下：</p>
 <ul>
-<li><code>-v</code>，即 <code>--version</code>，显示当前 <code>htree</code> 的版本号。</li><li><code>-h</code>，即 <code>--help</code>，显示当前 <code>htree</code> 的帮助文件。</li><li><code>-f</code>，即 <code>--folder</code>。</li><li><code>-d</code>，即 <code>--dir</code>。</li><li><code>-i</code>，即 <code>--ignore</code>。</li><li><code>-o</code>，即 <code>--output</code>。</li><li><code>-s</code>，即 <code>--show-dir</code>。</li><li><code>-m</code>，即 <code>--max-depth</code>。</li></ul>
+<li><code>-v</code>，即 <code>--version</code>，显示当前 <code>htree</code> 的版本号。</li>
+<li><code>-h</code>，即 <code>--help</code>，显示当前 <code>htree</code> 的帮助文件。</li>
+<li><code>-f</code>，即 <code>--folder</code>。</li>
+<li><code>-d</code>，即 <code>--dir</code>。</li>
+<li><code>-i</code>，即 <code>--ignore</code>。</li>
+<li><code>-o</code>，即 <code>--output</code>。</li>
+<li><code>-s</code>，即 <code>--show-dir</code>。</li>
+<li><code>-m</code>，即 <code>--max-depth</code>。</li>
+</ul>
 <p>为布尔值的参数，可以通过前缀 <code>--no-</code> 设置为 <code>false</code> 值。</p>
 <blockquote>
 <p>在设置 <code>--dir</code>、<code>--output</code>、<code>--exclude</code>、<code>--str-comment</code> 的值之时，必要时请对特殊字符进行转义操作。</p>
@@ -975,7 +1293,10 @@
 <h3 id="entries"><a href="#entries" class="headerlink" title="entries"></a><code>entries</code></h3><p><strong>不同于</strong> <code>Object.entries</code>，这里的 <code>entries</code> 方法会返回一个 <code>iterator</code>，可以遍历所有键值对的对象。每一个键值对均为 <code>USVString</code> 对象。</p>
 <blockquote>
 <ul>
-<li>iterator 是迭代协议 Iterator 对象的实例。</li><li><code>entries</code> 方法通常在 <code>Web Workers</code> 中使用。</li><li><code>USVString</code> 为 unicode 标量值（unicode scalar values）。</li></ul>
+<li>iterator 是迭代协议 Iterator 对象的实例。</li>
+<li><code>entries</code> 方法通常在 <code>Web Workers</code> 中使用。</li>
+<li><code>USVString</code> 为 unicode 标量值（unicode scalar values）。</li>
+</ul>
 </blockquote>
 <p>代码示例：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Create a test URLSearchParams object</span></span><br><span class="line"><span class="keyword">var</span> searchParams = <span class="keyword">new</span> URLSearchParams(<span class="string">"key1=value1&amp;key2=value2"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Display the key/value pairs</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> pair <span class="keyword">of</span> searchParams.entries()) &#123;</span><br><span class="line">   <span class="built_in">console</span>.log(pair[<span class="number">0</span>]+ <span class="string">', '</span>+ pair[<span class="number">1</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -994,7 +1315,11 @@
 </blockquote>
 <p><em>参考资料</em>：</p>
 <ul>
-<li><a href="https://url.spec.whatwg.org/#urlsearchparams" target="_blank" rel="noopener">URL Standard</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams" target="_blank" rel="noopener">URLSearchParams - Web APIs | MDN</a></li><li><a href="https://nodejs.org/api/url.html#url_class_urlsearchparams" target="_blank" rel="noopener">URL | Node.js v8.4.0 Documentation</a></li><li><a href="http://caniuse.com/#feat=urlsearchparams" target="_blank" rel="noopener">Can I use - Feature: URLSearchParams</a></li></ul>
+<li><a href="https://url.spec.whatwg.org/#urlsearchparams" target="_blank" rel="noopener">URL Standard</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams" target="_blank" rel="noopener">URLSearchParams - Web APIs | MDN</a></li>
+<li><a href="https://nodejs.org/api/url.html#url_class_urlsearchparams" target="_blank" rel="noopener">URL | Node.js v8.4.0 Documentation</a></li>
+<li><a href="http://caniuse.com/#feat=urlsearchparams" target="_blank" rel="noopener">Can I use - Feature: URLSearchParams</a></li>
+</ul>
 ]]></content>
     
     <summary type="html">
@@ -1030,7 +1355,11 @@
 <h3 id="孔子"><a href="#孔子" class="headerlink" title="孔子"></a>孔子</h3><p>作为有着 <code>至圣</code> 之称的儒家学派创始人，孔子在每一个中国人心中的印象都不可磨灭，我们从丫丫学语开始就在接触着孔子的教诲。</p>
 <p>孔子在教育界领域也是鼎鼎大名，这主要体现在下面四个方面：</p>
 <ol>
-<li>《论语》。由孔子弟子及后人编纂的这一部《论语》是四书五经中的代表，是孔子与其子弟对话的浓缩精炼。诸多脍炙人口的名句至今读来仍然是掷地有声，发生深省。</li><li>“有教无类”、“不愤不启不悱不发”、“学而不思则罔，思而不学则殆”的教育思想。</li><li>在教学原则方面崇尚启发性教学和因材施教。</li><li>探索出典型的教学过程：学 - 思 - 行。</li></ol>
+<li>《论语》。由孔子弟子及后人编纂的这一部《论语》是四书五经中的代表，是孔子与其子弟对话的浓缩精炼。诸多脍炙人口的名句至今读来仍然是掷地有声，发生深省。</li>
+<li>“有教无类”、“不愤不启不悱不发”、“学而不思则罔，思而不学则殆”的教育思想。</li>
+<li>在教学原则方面崇尚启发性教学和因材施教。</li>
+<li>探索出典型的教学过程：学 - 思 - 行。</li>
+</ol>
 <p>孔子对教育的认知在当时是极为先明的，其创立的儒学思想对中国和世界都有着深远的影响。</p>
 <h3 id="孟子"><a href="#孟子" class="headerlink" title="孟子"></a>孟子</h3><p>“亚圣”孟轲，中国另一位伟大的思想家、教育家，儒家学派代表人物，与孔子并称“孔孟”。</p>
 <p>在《孟子·尽心上》，“教育”一词被最早提及。推崇的教育理念是内发论，认为教育的目的与 17 世纪提出的“个人本位论”如出一辙。</p>
@@ -1067,7 +1396,12 @@
 <p>杜威从实用主义经验论和机能心理学出发，批判了传统的学校教育，并就教育本质提出了“教育即生活”和“学校即社会”的观点。杜威认为，教育过程在它的自身意外无目的，教育的目的就在教育的过程之中。</p>
 <p>教学论方面，杜威提倡“从做中学”。从“思维五步”出发，杜威认为教学过程也相应的分为五步：</p>
 <ul>
-<li>教师给儿童提供一个与社会生活经验相关联的情境；</li><li>使儿童有准备去应付在情境中产生的问题；</li><li>使儿童产生对解决问题的思考和假设；</li><li>儿童自己对解决问题的假设加以整理和排列；</li><li>儿童通过应用来校验这些假设。</li></ul>
+<li>教师给儿童提供一个与社会生活经验相关联的情境；</li>
+<li>使儿童有准备去应付在情境中产生的问题；</li>
+<li>使儿童产生对解决问题的思考和假设；</li>
+<li>儿童自己对解决问题的假设加以整理和排列；</li>
+<li>儿童通过应用来校验这些假设。</li>
+</ul>
 <blockquote>
 <p>思维五步：疑难的情境、确定疑难所在、提出解决疑难的各种假设、对这些假设进行推断、验证或者修改假设。</p>
 </blockquote>
@@ -1076,7 +1410,10 @@
 <p>舒尔茨的人力资本理论主要观点有两个：<strong>人力资本的积累是社会经济增长的源泉</strong>和<strong>教育也是使个人收入的社会分配趋于平等的因素</strong>。</p>
 <p>舒尔茨论述到教育对个人收入的影响：</p>
 <ul>
-<li>工资的差别主要是由所受的教育的差别引起的，教育可以提高收入的能力。</li><li>教育水平的提高会使因教育不同而产生的相对收入差别趋于减缓。</li><li>人力资本投资的增加还可以使物力资本投资和财产收入趋于下降。</li></ul>
+<li>工资的差别主要是由所受的教育的差别引起的，教育可以提高收入的能力。</li>
+<li>教育水平的提高会使因教育不同而产生的相对收入差别趋于减缓。</li>
+<li>人力资本投资的增加还可以使物力资本投资和财产收入趋于下降。</li>
+</ul>
 <hr>
 <p>行文到此，本文就算是完结了，没有什么要特别进行说明的。嗯，就是这样。这十个名单我也忘记了从哪里看到的了。看到的时候做了一个记录，但是上面的资料很<del>简陋</del>，我重新查阅了网络上的一些资料，并进行一番整理，于是就有了这一篇文章。</p>
 ]]></content>
@@ -1105,6 +1442,8 @@
     
     <content type="html"><![CDATA[<blockquote>
 <p>本文主要参考自 <code>2ality</code> 的文章：<a href="http://2ality.com/2016/02/ecmascript-2017.html" target="_blank" rel="noopener">ECMAScript 2017 (ES8): the final feature set</a>。部分章节会有修改，加入自己的一些理解与观点。<em>阅读本文需要有一定的 ES 基础</em>。</p>
+</blockquote>
+<blockquote>
 <p>官方公告：<a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm" target="_blank" rel="noopener">Standard ECMA-262</a>。</p>
 </blockquote>
 <h2 id="主要特性"><a href="#主要特性" class="headerlink" title="主要特性"></a>主要特性</h2><h3 id="异步函数"><a href="#异步函数" class="headerlink" title="异步函数"></a>异步函数</h3><p>ES6 发布的时候，引入了 <code>Promise</code> 来处理异步操作，一个常见的 Async 函数如下：</p>
@@ -1113,24 +1452,33 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params">url</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> request = <span class="keyword">await</span> fetch(url);</span><br><span class="line">  <span class="keyword">let</span> text = <span class="keyword">await</span> request.text();</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">JSON</span>.parse(text);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`Error: <span class="subst">$&#123;err.stack&#125;</span>`</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>异步函数还有一些变体，罗列如下：</p>
 <ul>
-<li>异步函数声明：<code>async function foo() {}</code></li><li>异步函数表达式：<code>const foo = async function () {};</code></li><li>异步方法定义：<code>let obj = {async foo () {}};</code></li><li>异步箭头函数：<code>const foo = async () =&gt; {};</code></li></ul>
+<li>异步函数声明：<code>async function foo() {}</code></li>
+<li>异步函数表达式：<code>const foo = async function () {};</code></li>
+<li>异步方法定义：<code>let obj = {async foo () {}};</code></li>
+<li>异步箭头函数：<code>const foo = async () =&gt; {};</code></li>
+</ul>
 <p>更多资料可参阅：<a href="https://github.com/tc39/ecmascript-asyncawait" target="_blank" rel="noopener">tc39/ecmascript-asyncawait: Async/await for ECMAScript</a>，<a href="http://exploringjs.com/es6/ch_generators.html#sec_co-library" target="_blank" rel="noopener">Simplifying asynchronous computations via generators (section in “Exploring ES6”)</a></p>
 <h3 id="共享内存和原子"><a href="#共享内存和原子" class="headerlink" title="共享内存和原子"></a>共享内存和原子</h3><p>共享内存 <code>shared memory</code> 主要是处理并行事件对于资源调用的一种机制。</p>
 <p>该功能引入一个新的低级别 <code>Atomics</code> 命名空间对象和一个 <code>Shared Array Buffer</code> 构造函数来作为高级别并发抽象的原始构建块。这样可以使得开发人员可以使用多个 <code>service worker</code> 和核心线程之间的 <code>Shared Array Buffer</code> 对象的数据。通过这种方式，可以更轻松的在 <code>worker</code> 之间进行数据共享，改善它们之间的协调性。</p>
 <ul>
-<li><a href="https://github.com/tc39/ecmascript_sharedmem" target="_blank" rel="noopener">tc39/ecmascript_sharedmem: Shared memory and atomics for ECMAscript</a></li><li><a href="http://2ality.com/2017/01/shared-array-buffer.html" target="_blank" rel="noopener">ES proposal: Shared memory and atomics</a></li></ul>
+<li><a href="https://github.com/tc39/ecmascript_sharedmem" target="_blank" rel="noopener">tc39/ecmascript_sharedmem: Shared memory and atomics for ECMAscript</a></li>
+<li><a href="http://2ality.com/2017/01/shared-array-buffer.html" target="_blank" rel="noopener">ES proposal: Shared memory and atomics</a></li>
+</ul>
 <h2 id="次要更新"><a href="#次要更新" class="headerlink" title="次要更新"></a>次要更新</h2><h3 id="Object-values-Object-entries"><a href="#Object-values-Object-entries" class="headerlink" title="Object.values/Object.entries"></a>Object.values/Object.entries</h3><p>对象为键值对的数据结构时，每一个键值对都是一个 <code>entry</code>。<code>Object.entries</code> 提供将对象转换为其可枚举的每一个对象的集合的方法。而 <code>Object.values</code> 提取出对象中可枚举的字符串键值属性的所有值。</p>
 <p><code>Object.values</code> 跟 <code>Object.keys</code> 功能类似。</p>
 <p>举个例子，有一个这样的对象：<code>foo = {a: 1, b: 2, c: 3};</code>，上面提到的三个方法的结果分别为：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&gt; foo = &#123;a:1,b:2,c:3&#125;</span><br><span class="line">&lt; Object &#123;a: 1, b: 2, c: 3&#125;</span><br><span class="line">&gt; Object.values(foo)</span><br><span class="line">&lt; (3) [1, 2, 3]</span><br><span class="line">&gt; Object.keys(foo)</span><br><span class="line">&lt; (3) [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]</span><br><span class="line">&gt; Object.entries(foo)</span><br><span class="line">&lt; (3) [Array(2), Array(2), Array(2)]0: Array(2)1: Array(2)2: Array(2)length: 3__proto__: Array(0)</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line">&gt; Object.entries(&#123; one: 1, two: 2 &#125;)</span><br><span class="line">[ [ &apos;one&apos;, 1 ], [ &apos;two&apos;, 2 ] ]</span><br><span class="line"></span><br><span class="line">&gt; Object.entries(&#123; [Symbol()]: 123, foo: &apos;abc&apos; &#125;);</span><br><span class="line">[ [ &apos;foo&apos;, &apos;abc&apos; ] ]</span><br></pre></td></tr></table></figure>
 <ul>
-<li><a href="http://2ality.com/2015/11/stage3-object-entries.html" target="_blank" rel="noopener">ES proposal: Object.entries() and Object.values()</a></li><li><a href="https://github.com/tc39/proposal-object-values-entries" target="_blank" rel="noopener">Object.values/Object.entries</a></li></ul>
+<li><a href="http://2ality.com/2015/11/stage3-object-entries.html" target="_blank" rel="noopener">ES proposal: Object.entries() and Object.values()</a></li>
+<li><a href="https://github.com/tc39/proposal-object-values-entries" target="_blank" rel="noopener">Object.values/Object.entries</a></li>
+</ul>
 <h3 id="字符串填充"><a href="#字符串填充" class="headerlink" title="字符串填充"></a>字符串填充</h3><p>针对 <code>String</code> 对象，引入了 <code>String Padding</code> 的规范，为字符串的处理添加了两个字符串填充的方法：<code>padStart</code> 和 <code>padEnd</code>。</p>
 <h4 id="String-prototype-padStart"><a href="#String-prototype-padStart" class="headerlink" title="String.prototype.padStart"></a>String.prototype.padStart</h4><p>字符串的头部填充。接收两个参数 <code>String.prototype.padStart(maxLength, fillString=&#39; &#39;)</code>，第一个参数为填充的最大长度，第二个参数为指定填充的字符串。</p>
 <p>假设我们有一个这样的操作：<code>s.padStart(n, f)</code>，s 为待填充的字符串，n 为填充后的长度，f 为填充的字符串。如果 f 的长度不够 n，则会重复使用，直到填充的长度达到了 n。如果 s 本身的长度已经超过 n 则不会进行填充。</p>
 <h4 id="String-prototype-padEnd"><a href="#String-prototype-padEnd" class="headerlink" title="String.prototype.padEnd"></a>String.prototype.padEnd</h4><p>跟上面的方法类似，填充的位置在后面，其他处理方式一致。</p>
 <ul>
-<li><a href="https://github.com/tc39/proposal-string-pad-start-end" target="_blank" rel="noopener">ECMAScript spec proposal for String.prototype.{padStart,padEnd}</a></li></ul>
+<li><a href="https://github.com/tc39/proposal-string-pad-start-end" target="_blank" rel="noopener">ECMAScript spec proposal for String.prototype.{padStart,padEnd}</a></li>
+</ul>
 <h3 id="Object-getOwnPropertyDescriptors"><a href="#Object-getOwnPropertyDescriptors" class="headerlink" title="Object.getOwnPropertyDescriptors"></a>Object.getOwnPropertyDescriptors</h3><p>该方法是 <code>Object.getOwnPropertyDescriptor</code> 的复数形式：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getOwnPropertyDescriptors</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> result = &#123;&#125;;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> key <span class="keyword">of</span> <span class="built_in">Reflect</span>.ownKeys(obj)) &#123;</span><br><span class="line">    result[key] = <span class="built_in">Object</span>.getOwnPropertyDescriptor(obj, key);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>旨在简化对象复制的过程，它允许装饰器能够轻松的从另一个类或对象中提取出所有描述符，并将它们分配给一个新的对象。</p>
@@ -1142,7 +1490,9 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span></span></span><br><span class="line"><span class="function"><span class="params">  bar,</span></span></span><br><span class="line"><span class="function"><span class="params">  baz,</span></span></span><br><span class="line"><span class="function"><span class="params"></span>) </span>&#123; ... &#125;</span><br><span class="line">foo(</span><br><span class="line">  param1,</span><br><span class="line">  param2,</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 <p>在之前的版本中是错误的，但是新规范中，这可以的，拖尾逗号将被忽略，如同<strong>数组和对象字面量</strong>中的拖尾逗号。</p>
 <h2 id="拓展阅读"><a href="#拓展阅读" class="headerlink" title="拓展阅读"></a>拓展阅读</h2><ul>
-<li><a href="http://2ality.com/2016/01/ecmascript-2016.html" target="_blank" rel="noopener">The final feature set of ECMAScript 2016 (ES7)</a></li><li><a href="https://github.com/tc39/proposals/blob/master/README.md#active-proposals" target="_blank" rel="noopener">tc39/proposals - Active proposals</a></li></ul>
+<li><a href="http://2ality.com/2016/01/ecmascript-2016.html" target="_blank" rel="noopener">The final feature set of ECMAScript 2016 (ES7)</a></li>
+<li><a href="https://github.com/tc39/proposals/blob/master/README.md#active-proposals" target="_blank" rel="noopener">tc39/proposals - Active proposals</a></li>
+</ul>
 ]]></content>
     
     <summary type="html">
@@ -1238,7 +1588,11 @@
 <h3 id="angular-equals"><a href="#angular-equals" class="headerlink" title="angular.equals"></a>angular.equals</h3><p>判断两个参数是否相等。</p>
 <p>符合以下条件之一的均视为相等：</p>
 <ul>
-<li>通过严格等于<code>===</code>的判断</li><li>对象的类型一样并且其所有属性通过<code>angular.equals</code>判断均相等</li><li>两者均为<code>NaN</code></li><li>两者为正则表达式，并且其表达式相等</li></ul>
+<li>通过严格等于<code>===</code>的判断</li>
+<li>对象的类型一样并且其所有属性通过<code>angular.equals</code>判断均相等</li>
+<li>两者均为<code>NaN</code></li>
+<li>两者为正则表达式，并且其表达式相等</li>
+</ul>
 <h3 id="angular-bind"><a href="#angular-bind" class="headerlink" title="angular.bind"></a>angular.bind</h3><p>对函数进行绑定对象。<code>angular.bind</code>的参数形式类似函数的<code>call</code>方法。</p>
 <p>通常用于偏函数和柯里化。</p>
 <h3 id="angular-toJson"><a href="#angular-toJson" class="headerlink" title="angular.toJson"></a>angular.toJson</h3><p>转为<code>JSON</code>风格的字符串。这个过程可以称之为序列化。</p>
@@ -1277,149 +1631,6 @@
       <category term="components" scheme="https://xovel.cn/tags/components/"/>
     
       <category term="angularjs" scheme="https://xovel.cn/tags/angularjs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>浅谈英文的缩写</title>
-    <link href="https://xovel.cn/article/abbreviation.html"/>
-    <id>https://xovel.cn/article/abbreviation.html</id>
-    <published>2017-05-07T14:42:52.000Z</published>
-    <updated>2017-05-07T16:30:30.759Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近对一些英文单词的发音，有一些困惑，比如<code>APP</code>的发音，有些人念标准发音<code>æp</code>，有些人则念作按单字母一一念出。这里我们不讨论到底哪一种念法更为妥帖，相反的，我倒是对<code>APP</code>这种缩写方式产生了兴趣，那么，本篇文章就对英文缩写词做一个简单的梳理吧。</p>
-<a id="more"></a>
-<h3 id="缩写词的类型"><a href="#缩写词的类型" class="headerlink" title="缩写词的类型"></a>缩写词的类型</h3><p>通常，英文的缩写的方式有很多种，本文讲述几个常见的吧。</p>
-<h4 id="截短"><a href="#截短" class="headerlink" title="截短"></a>截短</h4><blockquote>
-<p><code>Shortening</code></p>
-</blockquote>
-<p>简单粗暴，就是直接从单词或者短语中截取能够代表核心意思的片段。</p>
-<ul>
-<li>缩写这个词本身<code>abbreviation</code>，其缩写为<code>abbr</code>。</li><li>编程领域经常会碰到的<code>sync</code>和<code>async</code>（同步和异步），就是<code>synchronous</code>和<code>asynchronous</code>的缩写。</li><li>举一个冷知识的例子：博客<code>blog</code>其实就是网络日志<code>weblog</code>的缩写。</li><li>翻阅英文字典，通常会发现单词的词性一栏，都是用的缩写，这个缩写方式就是截短，比如形容词<code>adj</code>/<code>adjective</code>，动词<code>v</code>/<code>verb</code>。</li></ul>
-<h4 id="收缩"><a href="#收缩" class="headerlink" title="收缩"></a>收缩</h4><blockquote>
-<p><code>Contraction</code></p>
-</blockquote>
-<p>跟上面提到的截短类似，收缩的方式通常省略部分字母。</p>
-<ul>
-<li><code>Dr.</code>是<code>Doctor</code>的缩写</li><li><code>Mr.</code>是<code>Mister</code>的缩写</li></ul>
-<p>如果是短语中出现这样的情形，通常会使用单引号<code>&#39;</code>来替换被省略的部分。</p>
-<ul>
-<li><code>It is me.</code> 可以缩写为<code>It&#39;s me.</code>。</li><li><code>because</code>在某些俚语中，缩写为<code>&#39;cause</code>。</li><li><code>cannot</code>缩写为<code>can&#39;t</code>。</li></ul>
-<p>注意，有些词的缩写可能会变更部分字母，比如<code>example</code>的缩写是<code>eg</code>。</p>
-<h4 id="融合"><a href="#融合" class="headerlink" title="融合"></a>融合</h4><blockquote>
-<p><code>Crasis</code></p>
-</blockquote>
-<p>这个在英文中并不常见，其他语种，比如法语，希腊语中出现的较多。<del>嗯，这一节还是忽略掉，不做深入解释了。</del></p>
-<h4 id="拼合"><a href="#拼合" class="headerlink" title="拼合"></a>拼合</h4><blockquote>
-<p><code>Blend</code></p>
-</blockquote>
-<p>由短语中的各个单词拼合而成。</p>
-<p>比如<code>smog</code>（烟雾）这个词，是由<code>smoke</code>（烟）和<code>fog</code>（雾）拼合而成；再比如<code>workaholic</code>（工作狂）是由<code>work</code>（工作）和<code>alcoholic</code>（酒鬼）拼合而成。</p>
-<blockquote>
-<p>这种拼合方式已经属于英文中的造字法了，更多知识请自行了解，这里不做展开。</p>
-</blockquote>
-<h4 id="首字母拼合"><a href="#首字母拼合" class="headerlink" title="首字母拼合"></a>首字母拼合</h4><blockquote>
-<p><code>Initialism</code></p>
-</blockquote>
-<p>同样的简单粗暴，短语的首个单词提取出来然后拼合成一个新词。大部分地名、机构、职位、专业术语的缩写通过这种方式进行，比如<code>UK</code>、<code>FBI</code>、<code>CEO</code>、<code>UFO</code>。</p>
-<h4 id="缩略词"><a href="#缩略词" class="headerlink" title="缩略词"></a>缩略词</h4><blockquote>
-<p><code>Acronym</code></p>
-</blockquote>
-<p>跟上面提到的首字母拼合基本类似。通常来说，缩略词跟首字母拼合还是有一定细微差别的：</p>
-<ul>
-<li>缩略词会适当忽略掉短语中出现的一些副词，比如中国的缩写<code>PRC</code>的全称是<code>People&#39;s Republic of China</code></li><li>缩略词是根据短语或者单词的意思进行综合提取进行缩写，并不一定是首字母拼合，比如<code>HTML</code>这个缩略词的全称是<strong>H</strong>yper<strong>t</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage，再比如<code>REST</code>的全称<strong>Re</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer。</li></ul>
-<h4 id="逆缩略词"><a href="#逆缩略词" class="headerlink" title="逆缩略词"></a>逆缩略词</h4><blockquote>
-<p><code>Backronym</code></p>
-</blockquote>
-<p>黑科技无误。先有缩写，再来定义全称。</p>
-<h3 id="缩写后的发音"><a href="#缩写后的发音" class="headerlink" title="缩写后的发音"></a>缩写后的发音</h3><p>缩略词会尽可能按照重新组装后的单词进行发音，比如<code>JPEG</code>（<strong>J</strong>oint <strong>P</strong>hotographic <strong>E</strong>xperts <strong>G</strong>roup）这个缩写词，读作<code>[ˈdʒeˌpɛɡ]</code>（美式发音，下同）。</p>
-<p>有些发音还有点特别，比如<code>OS X</code>，读作<code>[ˈmæk ˌoʊ ˌɛs ˈtɛn]</code>，<code>IEEE</code>读作<code>I triple E</code>。</p>
-<blockquote>
-<p>对于缩略出来的词没法读的时候，直接按字母念就好了。</p>
-</blockquote>
-<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
-<li><a href="https://en.wikipedia.org/wiki/Abbreviation" target="_blank" rel="noopener">Abbreviation - Wikipedia</a></li><li><a href="https://en.wikipedia.org/wiki/Acronym" target="_blank" rel="noopener">Acronym - Wikipedia</a></li><li><a href="https://www.thoughtco.com/what-is-abbreviation-1689046" target="_blank" rel="noopener">What Is an Abbreviation?</a></li></ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近对一些英文单词的发音，有一些困惑，比如&lt;code&gt;APP&lt;/code&gt;的发音，有些人念标准发音&lt;code&gt;æp&lt;/code&gt;，有些人则念作按单字母一一念出。这里我们不讨论到底哪一种念法更为妥帖，相反的，我倒是对&lt;code&gt;APP&lt;/code&gt;这种缩写方式产生了兴趣，那么，本篇文章就对英文缩写词做一个简单的梳理吧。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="https://xovel.cn/categories/essay/"/>
-    
-    
-      <category term="abbreviations" scheme="https://xovel.cn/tags/abbreviations/"/>
-    
-      <category term="abbr" scheme="https://xovel.cn/tags/abbr/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Brackets的使用与emmet插件安装的一个问题</title>
-    <link href="https://xovel.cn/article/brackets-emmet.html"/>
-    <id>https://xovel.cn/article/brackets-emmet.html</id>
-    <published>2017-04-04T14:51:51.000Z</published>
-    <updated>2017-04-04T15:01:57.562Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>文章来自于本博客的issue，同时也记录到了个人日志的项目中去了。</p>
-</blockquote>
-<p><em>以下为正文</em></p>
-<hr>
-<p>最近决定将IDE迁移到<a href="http://brackets.io/" target="_blank" rel="noopener">brackets</a>，毕竟是adobe开发的用来替代古老臃肿的Dreamweaver的，口号就是<code>Code The Web</code>，为Web编程提供一套完善的IDE。</p>
-<hr>
-<p>为什么是brackets？其实是可以用sublime的，但是sublime只是一个编辑器，没有IDE的一些特性，即便是有了插件的支持，也很难与大型IDE媲美。</p>
-<p>回想我用过的IDE，最开始的FrontPage，到VS，再到后来的初次全面接触前端开发使用的Dreamweaver。而后离开福建回到湖南，开始抛弃Dreamweaver，换了一种非常极端的方式：放弃了IDE，直接采用常规编辑器Notepad++、UltraEdit来进行代码的编写。那滋味其实也还好，毕竟，那个时候最IDE的要求并不高，所使用的后台语言是asp，都用不着开带着各种兼容性问题的Dreamweaver。</p>
-<p>之后的正式将主要编辑器从Notepad++转移到Sublime Text 3上面来了。用了很长一段时间的Sublime Text之后被其优雅的处理代码的方式所吸引。当然这过程中间也是过诸多其他的编辑器和IDE，比如Atom，Brackets，VS2012，那个时候还是偏向于使用纯粹的编辑器的。当然Notepad++因为处理多个文件方面的优势，我也一直在使用。</p>
-<p>在现在这个公司工作之后，由于项目采用的配套的IDE，也就是可以称得上是超级IDE的WebStorm，重心也就转移到了WebStorm上面了。经过这么三四个月的使用，发现虽然功能强大，但是我依然觉得繁琐，电脑性能问题，并不容易很好的支持超大项目的处理，这个时候Sublime的优势再一次得到展现，处理大量文件毫不费力。</p>
-<p>我试图将IDE改成Atom，毕竟这东西是github自家产物，但却不知道为何我迟迟没有进行这一项操作。我想我应该总有一天会使用这一款颇受好评的代码编辑工具的吧。vim这个应该也是差不多，因为现在并没有过多的接触后台操作，也不太习惯纯粹的命令行操作方式，希望以后能有机会成为传说中的vim重度依赖者吧。现阶段的我最多就是在bash里面运行几个简单的命令。</p>
-<hr>
-<p>之前也不知道为什么，我写markdown的工具都是打开的brackets，这个跟之前sublime的markdown插件的预览带进了巨坑是有一定关系的，至今不想再跳进去，索性就换了个编辑markdown的工具，挑来挑去，最后就是选择了brackets，仅仅是因为其界面的优雅。</p>
-<p>其实，现阶段的我依然是各路编辑器和IDE混用的，因为有时候同一个项目要被各种查看，一个IDE并不能胜任，于是就出现了我同时打开了WebStorm、Atom、Brackets、Notepad++、Sublime，甚至还搬出了多年不再使用的UltraEdit，是的，它们同时打开了同一个项目。我都不敢想象为什么我会变得如此疯狂。</p>
-<p>既然是要采用Brackets作为近阶段的IDE，那么就安装几个插件来让它如虎添翼吧。官方推荐的插件，我安装了几个自己认为重要的，现在我自己的电脑上的Brackets插件的安装情况大概是这个样子的：</p>
-<ul>
-<li><code>brackets-beautify</code>，官方推荐，代码美化工具，<strong>是的，格式化之后的代码很美！</strong></li><li><code>brackets-display-shortcuts</code>，显示快捷键列表的插件，安装好之后在帮助菜单里面执行，就可以看到当前所有的快捷键了。</li><li><code>brackets-emmet</code>，是的，这就是本文要提到的核心插件，一个快速写HTML代码的工具，那速度绝对快的飞起。</li><li><code>brackets-indent-guides</code>，显示缩进的指示线。简单又粗暴，绝对是深度依赖者的必装插件。</li><li><code>brackets-minimap</code>，当初是因为什么爱上了sublime？没错，就是因为有代码缩略地图。基本上现在用一款编辑工具，首先会去看看没有代码小地图工具，有的话先装起来再说。</li><li><code>pop-up-menu</code>，这是一个对编辑的工作区域内的右键菜单进行提升的插件，增加了一些便利性操作。</li><li><code>exclude-folders</code>，打开文件夹时，过滤指定文件夹的插件。过滤了<code>node_modules</code>文件夹之后，项目的打开速度得到了明显的提升。但是看不到node_modules文件夹还是总觉得有点欠缺的。</li><li><code>markdown-preview</code>，markdown预览插件。作为一个重度markdown使用者，这插件对我来说也是极好的。</li><li><code>file-icons</code>，简单粗暴，给打开的各路文件的前面显示一个图标。优雅美观说的就是这样的效果。</li><li><code>monokai-theme</code>，Sumline Text的爱好者对这个那必须是钟爱莫名的，非常精致的代码配色方案。</li><li><code>color-palette</code>，取色器，好用不解释。</li></ul>
-<p>嗯，这些插件的安装其实并不是顺利，因为有<del>强大的</del>GFW的存在，悲催的brackets因为调用了aws的资源，所以有时候那速度卡的飞起，所以大部分插件我都是通过github的zip链接进行安装的。</p>
-<p>安装完毕了之后，慕名已久的emmet插件一直不肯工作，这到底是为什么？</p>
-<p>可能是因为疏忽大意了，一直迟迟忘记了brackets是基于HTML/JS构建出来的编辑工具，其界面上面是自带了Chrome DevTools的。为了这个问题，我几乎是找遍了brackets、emmet、stackoverflow上面的所有资源，依然是没有解决这个问题，后来又想，干脆手动安装一次，完全的纯粹的手动方式：</p>
-<ol>
-<li>进入brackets的插件目录，我的是win10环境，所以在<code>C:\Users\xovel\AppData\Roaming\Brackets\extensions</code>这里。</li><li>进入user文件夹，打开bash。</li><li>在bash里面执行git clone操作。</li><li>clone完成之后进入插件目录<code>brackets-emmet</code>，继续执行依赖安装操作<code>npm install</code>。</li><li>安装完毕之后会发现，目录下多了个node_modules文件夹。</li><li>进去一看，里面有两个文件夹，分别是<code>emmet</code>和<code>caniuse-db</code>。</li><li>不管那么多，重启brackets。</li></ol>
-<p>很遗憾，依然没有emmet功能。</p>
-<p>几经周折，我终于看到了调试里面的开发工具，于是调出F12，看看到底是什么错误导致的。</p>
-<p>果不其然，在控制台里面有一行错误提示：大意是缺少一个文件，这个文件就是<code>\brackets-emmet\node_modules\emmet\lib\caniuse.json</code>，我仔细去看了一遍，确实是没有这个文件。</p>
-<p>这就比较尴尬了，会不是我这样的安装方式不对？我决定到一个全新的地方使用命令行的方式从npm上安装全新的emmet，使用<code>npm install emmet</code>命令之后，我竟然又执行了<code>npm install</code>，把emmet的开发依赖给安装了，甚至还跑了<code>gulp</code>任务，结果生成了一个dist文件夹，我感觉我这么做有点走弯路了，<del>是的，确实是走弯路，弯的很厉害</del>。不过看到dist下的<code>emmet.js</code>大小有<code>1868kb</code>的时候心里还是很是震惊的。</p>
-<p>依然没有看到caniuse.json，我就在想，这个名字跟上面提到的<code>caniuse-db</code>，应该是存在着某种关联的吧。果不其然，上emmet的repo上一搜，发现一个<a href="https://github.com/emmetio/emmet/pull/385" target="_blank" rel="noopener">提交记录</a>被接受了，就是提议将<code>caniuse.json</code>换成<code>caniuse-db</code>的。好家伙，这就很尴尬了。</p>
-<p>既然现在的版本已经被替换掉了，那么问题就相对来说简单了，我应该只需要找到这个缺失的文件并将它放到它应该出现的位置上就可以了。于是我通过repo的tag记录依次寻找，发现从1.3.2之后，这个caniuse.json就不见了踪影。也是说从1.4.0版本开始，丢弃了caniuse.json，改为使用caniuse-db进行可用性判定。</p>
-<p>于是我复制了一份json到本地目录中，然后重启brackets，甚好，<code>Emmet</code>菜单出来了。而后打开一个html文件，飞速敲下<code>div&gt;ul&gt;li</code>，然后按下<code>tab</code>，一个良好缩进展现的HTML结构跃然纸上。</p>
-<p>问题解决了，但我觉得应该不止我一个人被这个问题所困扰，后来我仔细看了一下<code>brackets-emmet</code>的插件的package文件，发现里面只有一个依赖：<code>&quot;emmet&quot;: &quot;^1.3.0&quot;</code>。好家伙，竟然是<code>&quot;^1.3.0&quot;</code>！</p>
-<p><code>^</code>！！</p>
-<p>让我说什么好呢？这语义化的版本控制机制，应该是被npm给更改了操作规则吧。因为安装出来的版本号显示的是1.6.2，这明显不科学。</p>
-<p>于是我手动将这一行代码改成了：<code>&quot;emmet&quot;: &quot;1.3.0&quot;</code>，然后将整个node_modules个删了，并在bash里面重新走了一边安装的操作，这个时候出来的结果是只安装了一个emmet了。怀着一颗激动的心，我重启了brackets，嗯，甚好，Emmet还在。</p>
-<p>至此，brackets上的emmet插件算是成功解决了。</p>
-<hr>
-<p>总结：瞎折腾之下，获取了宝贵的经验，也算是一种收获。<del>虽然内心觉得得不偿失</del></p>
-]]></content>
-    
-    <summary type="html">
-    
-      本文介绍一下自己对于brackets的一些使用的心得，罗列安装的一些的插件，并着重讲述一下emmet这款插件的安装过程出现的问题，以及其对应的解决方案。
-    
-    </summary>
-    
-      <category term="开发" scheme="https://xovel.cn/categories/dev/"/>
-    
-    
-      <category term="brackets" scheme="https://xovel.cn/tags/brackets/"/>
-    
-      <category term="IDE" scheme="https://xovel.cn/tags/IDE/"/>
-    
-      <category term="emmet" scheme="https://xovel.cn/tags/emmet/"/>
-    
-      <category term="plugin" scheme="https://xovel.cn/tags/plugin/"/>
-    
-      <category term="editor" scheme="https://xovel.cn/tags/editor/"/>
     
   </entry>
   

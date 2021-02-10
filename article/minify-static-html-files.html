@@ -312,6 +312,8 @@
 <p><code>hexo</code>默认没有提供压缩HTML/CSS/JS的功能，但我们可以通过另外的途径进行代码的压缩。</p>
 <blockquote>
 <p>之前的版本，有一个名为<code>hexo-generator-minify</code>的插件，但已经无人维护，不支持hexo 3.x版本。</p>
+</blockquote>
+<blockquote>
 <p><a href="https://hexo.io/plugins/" target="_blank" rel="noopener">官方插件库</a>能搜到的压缩插件，均有不同程度的问题。详情这里不表，具体诸君可以自行安装测试。</p>
 </blockquote>
 <p>这里介绍一种<a href="https://github.com/gulpjs/gulp" target="_blank" rel="noopener"><code>gulp</code></a>自动化任务压缩的方式来处理这个问题，缺陷就是每一次blog在deploy的时候都需要事先执行一次这个压缩任务。</p>
@@ -320,7 +322,10 @@
 </blockquote>
 <p>本人采用的具体压缩工具为：</p>
 <ul>
-<li><a href="https://github.com/jonschlinkert/gulp-htmlmin" target="_blank" rel="noopener">gulp-htmlmin</a>，该插件对HTML代码进行压缩。</li><li><a href="https://github.com/anseki/gulp-htmlclean" target="_blank" rel="noopener">gulp-htmlclean</a>，该插件对HTML进行代码清理，去除不必要的空行等。</li><li><a href="https://github.com/scniro/gulp-clean-css" target="_blank" rel="noopener">gulp-clean-css</a>，该插件对CSS代码进行压缩与清理。</li></ul>
+<li><a href="https://github.com/jonschlinkert/gulp-htmlmin" target="_blank" rel="noopener">gulp-htmlmin</a>，该插件对HTML代码进行压缩。</li>
+<li><a href="https://github.com/anseki/gulp-htmlclean" target="_blank" rel="noopener">gulp-htmlclean</a>，该插件对HTML进行代码清理，去除不必要的空行等。</li>
+<li><a href="https://github.com/scniro/gulp-clean-css" target="_blank" rel="noopener">gulp-clean-css</a>，该插件对CSS代码进行压缩与清理。</li>
+</ul>
 <p>另外有一个图片压缩工具，暂未使用：<a href="https://github.com/sindresorhus/gulp-imagemin" target="_blank" rel="noopener">gulp-imagemin</a></p>
 <p>JS压缩工具可以参考：<a href="https://github.com/terinjokes/gulp-uglify" target="_blank" rel="noopener">gulp-uglify</a>、<a href="https://github.com/mishoo/UglifyJS2" target="_blank" rel="noopener">UglifyJS2</a>。</p>
 <p>引入各种插件：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> htmlmin = <span class="built_in">require</span>(<span class="string">'gulp-htmlmin'</span>);</span><br><span class="line"><span class="keyword">var</span> htmlclean = <span class="built_in">require</span>(<span class="string">'gulp-htmlclean'</span>);</span><br><span class="line"><span class="keyword">var</span> cleanCSS = <span class="built_in">require</span>(<span class="string">'gulp-clean-css'</span>);</span><br><span class="line"><span class="keyword">var</span> imagemin = <span class="built_in">require</span>(<span class="string">'gulp-imagemin'</span>);</span><br></pre></td></tr></table></figure></p>
@@ -442,7 +447,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">71</span>
+              <span class="site-state-item-count">73</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -459,7 +464,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">172</span>
+                <span class="site-state-item-count">177</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -540,7 +545,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

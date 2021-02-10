@@ -335,7 +335,10 @@
 <p>The section gives three basic rules, followed by two exceptions.</p>
 <p>The rules are:</p>
 <ol>
-<li>When the program contains a token that is not allowed by the formal grammar, then a semicolon is inserted if (a) there is a line break at that point, or (b) the unexpected token was a closing brace.</li><li>When the end of a file is reached, if the program cannot be parsed otherwise, then a semicolon is inserted.</li><li>When a “restricted production” is encountered and contains a line terminator in a place where the grammar contains the annotation “[no LineTerminator here]”, then a semicolon is inserted.</li></ol>
+<li>When the program contains a token that is not allowed by the formal grammar, then a semicolon is inserted if (a) there is a line break at that point, or (b) the unexpected token was a closing brace.</li>
+<li>When the end of a file is reached, if the program cannot be parsed otherwise, then a semicolon is inserted.</li>
+<li>When a “restricted production” is encountered and contains a line terminator in a place where the grammar contains the annotation “[no LineTerminator here]”, then a semicolon is inserted.</li>
+</ol>
 <p>Approximately, these rules state that a statement can be terminated without a semicolon either (a) before a closing brace, (b) at the end of the program, or (c) when the next token cannot be parsed otherwise, and furthermore that there are certain places in the grammar in which, if a line break appears, it terminates the statement unconditionally. The practical effects of these rules are discussed below.</p>
 <p>The exceptions are that a semicolon is never inserted as part of the header of a for loop of the form <code>for ( Expression ; Expression ; Expression ) Statement</code>, and a semicolon is never inserted if it would be parsed as an empty statement.</p>
 <p>What do these rules and exceptions mean in practice?</p>
@@ -618,7 +621,7 @@ print(-y); // useful
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">71</span>
+              <span class="site-state-item-count">73</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -635,7 +638,7 @@ print(-y); // useful
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">172</span>
+                <span class="site-state-item-count">177</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -716,7 +719,7 @@ print(-y); // useful
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

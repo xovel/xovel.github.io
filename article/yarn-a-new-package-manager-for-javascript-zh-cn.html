@@ -337,7 +337,10 @@
 <p>Yarn通过锁定文件和一个具有确定性和可靠性的安装算法来解决版本控制和非确定性方面的问题。这些锁定文件会将已安装的依赖锁定到一个指定的版本，并确保在所有机器上的每一次安装结果中<code>node_modules</code>的文件结构都会是相同的。写好的锁定文件使用了带有序键值的简明格式以确保更改是最小的，审查起来也很简单。</p>
 <p>安装过程分为以下三个步骤：</p>
 <ol>
-<li><strong>决议</strong>：Yarn开始通过请求注册和递归查找每一个依赖，决定要安装的依赖。</li><li><strong>获取</strong>：接着，Yarn在全部缓存目录中查看所需要的包是否已经下载。如果没有，Yarn获取包的<code>tarball</code>并放置的全局缓存中，这样它可以脱机工作并且不用多次下载依赖。依赖也可以放置在代码控制中作为完整的离线安装<code>tarball</code>。</li><li><strong>连接</strong>：最后，Yarn通过从全局缓存中复制所有需要的文件到本地的<code>node_modules</code>目录来串联所有东西。</li></ol>
+<li><strong>决议</strong>：Yarn开始通过请求注册和递归查找每一个依赖，决定要安装的依赖。</li>
+<li><strong>获取</strong>：接着，Yarn在全部缓存目录中查看所需要的包是否已经下载。如果没有，Yarn获取包的<code>tarball</code>并放置的全局缓存中，这样它可以脱机工作并且不用多次下载依赖。依赖也可以放置在代码控制中作为完整的离线安装<code>tarball</code>。</li>
+<li><strong>连接</strong>：最后，Yarn通过从全局缓存中复制所有需要的文件到本地的<code>node_modules</code>目录来串联所有东西。</li>
+</ol>
 <blockquote>
 <p><code>tarball</code>是压缩包的意思。 ——<em>译者注</em></p>
 </blockquote>
@@ -345,7 +348,11 @@
 <p>在整个过程中，Yarn对包的安装强制进行了严格的保证。你可以控制某个包的某个生命周期脚本。包的校验也可以存储在锁定文件中，以确保每次获取的包是一样的。</p>
 <h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><p>除了使安装更快、更可靠之外，Yarn还有进一步简化依赖管理工作流的附加功能。</p>
 <ul>
-<li>兼容<code>npm</code>和<code>bower</code>的工作流，并支持混合注册模式。</li><li>能够限制已安装模块的许可证，并且有输出许可证信息的方法。</li><li>暴露一个稳定的公共的JS API，通过构建工具可以进行消费日志文件的提取。</li><li>可读、最小化、美观的CLI输出。</li></ul>
+<li>兼容<code>npm</code>和<code>bower</code>的工作流，并支持混合注册模式。</li>
+<li>能够限制已安装模块的许可证，并且有输出许可证信息的方法。</li>
+<li>暴露一个稳定的公共的JS API，通过构建工具可以进行消费日志文件的提取。</li>
+<li>可读、最小化、美观的CLI输出。</li>
+</ul>
 <h3 id="Yarn的使用"><a href="#Yarn的使用" class="headerlink" title="Yarn的使用"></a>Yarn的使用</h3><p>在Facebook，我们已经在生产中使用Yarn，它为我们一直都工作地非常好。它为我们的许多JavaScript项目提供了依赖和包管理。每次迁移，我们能够让工程师离线构建并帮助他们加快工作流。在<a href="http://yarnpkg.com/en/compare" target="_blank" rel="noopener">这里</a>，你可以看到在不同的条件下<code>Yarn</code>和<code>npm</code>对<code>React Native</code>的安装情况的比较。</p>
 <p><img src="http://ww1.sinaimg.cn/large/79be2309gw1f8p8lxllbtg20nj05ldjm.gif" alt=""></p>
 <h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><p>最简单的入门方法是运行：</p>
@@ -354,9 +361,11 @@
 <ul>
 <li><p><code>npm install</code> → <code>yarn</code></p>
 <p>  不带任何参数，则<code>yarn</code>命令将会读取你的<code>package.json</code>，从<code>npm</code>注册表中获取包，并填充至你的<code>node_modules</code>目录下。这等同于运行<code>npm install</code>。</p>
-</li><li><p><code>npm install --save &lt;name&gt;</code> → <code>yarn add &lt;name&gt;</code></p>
+</li>
+<li><p><code>npm install --save &lt;name&gt;</code> → <code>yarn add &lt;name&gt;</code></p>
 <p>  我们删除了<code>npm install &lt;name&gt;</code>的“隐形的依赖”的行为并拆分命令。运行<code>yarn add &lt;name&gt;</code>与<code>npm install --save &lt;name&gt;</code>效果等同。</p>
-</li></ul>
+</li>
+</ul>
 <h3 id="未来"><a href="#未来" class="headerlink" title="未来"></a>未来</h3><p>我们许多人共同创建Yarn来解决常见的问题，我们希望Yarn能够成为一个真正的社区项目，每个人都可以使用。Yarn现在<a href="https://github.com/yarnpkg/yarn" target="_blank" rel="noopener">架设在Github上</a>，我们已经准备好了Node社区来让它变得更好：使用Yarn、分享观点、写文档、互相支持，并建立一个伟大的社区来维护它。我们相信Yarn已经有了一个伟大的开始，有你的帮助它会变得更好。</p>
 <hr>
 <p>全文完</p>
@@ -479,7 +488,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">71</span>
+              <span class="site-state-item-count">73</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -496,7 +505,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">172</span>
+                <span class="site-state-item-count">177</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -577,7 +586,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

@@ -426,18 +426,29 @@
 </blockquote>
 <h4 id="display-none-vs-visibility-hidden"><a href="#display-none-vs-visibility-hidden" class="headerlink" title="display:none vs visibility:hidden"></a><em>display:none</em> vs <em>visibility:hidden</em></h4><ul>
 <li>display:none<ul>
-<li>视为不存在，且不加载！</li><li>使用该属性后，HTML元素（对象）的宽度、高度等各种属性值都将“丢失”</li><li>消失于视野，不占任何空间</li></ul>
-</li><li>visibility:hidden<ul>
-<li>隐藏，但在浏览时保留位置</li><li>使用该属性后，HTML元素（对象）仅仅是在视觉上看不见（完全透明），而它所占据的空间位置仍然存在，也即是说它仍具有高度、宽度等属性值。</li><li>隐形，虽然视野看不见，但仍有占位符</li></ul>
-</li></ul>
+<li>视为不存在，且不加载！</li>
+<li>使用该属性后，HTML元素（对象）的宽度、高度等各种属性值都将“丢失”</li>
+<li>消失于视野，不占任何空间</li>
+</ul>
+</li>
+<li>visibility:hidden<ul>
+<li>隐藏，但在浏览时保留位置</li>
+<li>使用该属性后，HTML元素（对象）仅仅是在视觉上看不见（完全透明），而它所占据的空间位置仍然存在，也即是说它仍具有高度、宽度等属性值。</li>
+<li>隐形，虽然视野看不见，但仍有占位符</li>
+</ul>
+</li>
+</ul>
 <h4 id="display-inline-block相关"><a href="#display-inline-block相关" class="headerlink" title="display:inline-block相关"></a><em>display:inline-block</em>相关</h4><ul>
-<li><em>display:inline-block</em>：将对象呈递为内联对象，但是对象的内容作为块对象呈递。旁边的内联对象会被呈递在同一行内，允许空格。</li><li>IE6、7支持inline元素转换成inline-block，但不支持block元素转换成inline-block，所以非inline元素在IE6、7下要转换成inline-block，需先转换成inline，然后触发hasLayout，以此来获得和inline-block类似的效果</li></ul>
+<li><em>display:inline-block</em>：将对象呈递为内联对象，但是对象的内容作为块对象呈递。旁边的内联对象会被呈递在同一行内，允许空格。</li>
+<li>IE6、7支持inline元素转换成inline-block，但不支持block元素转换成inline-block，所以非inline元素在IE6、7下要转换成inline-block，需先转换成inline，然后触发hasLayout，以此来获得和inline-block类似的效果</li>
+</ul>
 <blockquote>
 <p>你可以使用以下代码实现上一条效果：</p>
 </blockquote>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    *display: inline;</span><br><span class="line">    *<span class="selector-tag">zoom</span>: 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="其他说明"><a href="#其他说明" class="headerlink" title="其他说明"></a>其他说明</h4><ul>
-<li>如果position既不是static也不是relative或者float不是none或者元素是根元素，当display:inline-table时，display的计算值为table；当display:inline | inline-block | run-in | table-* 系时，display的计算值为block，其它情况为指定值。</li></ul>
+<li>如果position既不是static也不是relative或者float不是none或者元素是根元素，当display:inline-table时，display的计算值为table；当display:inline | inline-block | run-in | table-* 系时，display的计算值为block，其它情况为指定值。</li>
+</ul>
 <h3 id="jQuery中对元素display属性的操作"><a href="#jQuery中对元素display属性的操作" class="headerlink" title="jQuery中对元素display属性的操作"></a>jQuery中对元素display属性的操作</h3><p>jQuery中对获取元素默认display属性的代码：</p>
 <figure class="highlight javascript"><figcaption><span>jQuery1.12.2</span><a href="https://github.com/jquery/jquery/blob/1.12-stable/src/css/defaultDisplay.js" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 代码太长，请点击右上角link查看。</span></span><br></pre></td></tr></table></figure>
 <p>jQuery中调用display默认值进行应用的实现函数：</p>
@@ -447,7 +458,13 @@
 <p>采用强制指定元素display属性的方式，将常见的不同display值存于对象oDisplay中，实现快速获取display值。<blockquote><p>QsLinz.js是仿照jQuery代码风格实现的一个简易Javascript类库，算是一个练手的自定义类库。<del>已弃坑，目前未公布版本为0.1.4。</del></p>
 <footer><strong>QsLinz.js</strong><cite><a href="https://github.com/xovel/qslinz/" target="_blank" rel="noopener">github.com/xovel/qslinz</a></cite></footer></blockquote></p>
 <h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" target="_blank" rel="noopener">display - CSS | MDN</a></li><li><a href="http://blog.csdn.net/teamlet/article/details/42024995" target="_blank" rel="noopener">CSS中display对布局的影响以及元素display的默认值</a></li><li><a href="http://www.w3schools.com/cssref/pr_class_display.asp" target="_blank" rel="noopener">CSS display property</a></li><li><a href="http://api.jquery.com/show/" target="_blank" rel="noopener">.show() | jQuery API Documentation</a></li><li><a href="http://www.css88.com/book/css/properties/layout/display.htm" target="_blank" rel="noopener">display - CSS3参考手册</a></li><li><a href="https://www.zhihu.com/question/22991944" target="_blank" rel="noopener">CSS3 display:flex和display:box有什么区别？</a></li></ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" target="_blank" rel="noopener">display - CSS | MDN</a></li>
+<li><a href="http://blog.csdn.net/teamlet/article/details/42024995" target="_blank" rel="noopener">CSS中display对布局的影响以及元素display的默认值</a></li>
+<li><a href="http://www.w3schools.com/cssref/pr_class_display.asp" target="_blank" rel="noopener">CSS display property</a></li>
+<li><a href="http://api.jquery.com/show/" target="_blank" rel="noopener">.show() | jQuery API Documentation</a></li>
+<li><a href="http://www.css88.com/book/css/properties/layout/display.htm" target="_blank" rel="noopener">display - CSS3参考手册</a></li>
+<li><a href="https://www.zhihu.com/question/22991944" target="_blank" rel="noopener">CSS3 display:flex和display:box有什么区别？</a></li>
+</ul>
 
       
     </div>
@@ -560,7 +577,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">71</span>
+              <span class="site-state-item-count">73</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -577,7 +594,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">172</span>
+                <span class="site-state-item-count">177</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -658,7 +675,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

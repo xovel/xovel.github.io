@@ -322,12 +322,16 @@
 <p><code>void 0</code>的返回值均是<code>undefined</code>，这个是实实在在的undefined。</p>
 <blockquote>
 <p>事实上，<code>void</code>的返回值都是<code>undefined</code>。</p>
+</blockquote>
+<blockquote>
 <p>The void operator evaluates the given expression and then returns undefined. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void" target="_blank" rel="noopener">void operator</a></p>
 </blockquote>
 <p>那么，在某些地方我们看到的<code>void 0</code>究竟是什么情况呢？</p>
 <p>总结了一下，有一下两个主要原因：</p>
 <ul>
-<li>防止<code>undefined</code>被重写，导致判断不准确。</li><li>便于压缩。<del>论字节长度，void 0果断胜出</del></li></ul>
+<li>防止<code>undefined</code>被重写，导致判断不准确。</li>
+<li>便于压缩。<del>论字节长度，void 0果断胜出</del></li>
+</ul>
 <blockquote>
 <p>事实上，有很多代码压缩工具会将<code>undefined</code>改写为<code>void 0</code>。<del>黑科技</del></p>
 </blockquote>
@@ -448,7 +452,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">71</span>
+              <span class="site-state-item-count">73</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -465,7 +469,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">172</span>
+                <span class="site-state-item-count">177</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -546,7 +550,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

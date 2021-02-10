@@ -322,7 +322,10 @@
 <p>在 12 月初，写了一篇重量级的文章，安装 <code>nginx</code>，这也是我第一次完全自己部署前端站点的一次尝试。</p>
 <p><code>nginx</code> 的常规依赖：</p>
 <ul>
-<li><code>zlib</code>，用于开启 <code>gzip</code> 压缩。</li><li><code>pcre</code>，用于开启伪静态或者重定向。</li><li><code>openssh</code>，用于开启 <code>ssl</code>，或者换个说法，叫做 <code>https</code>。</li></ul>
+<li><code>zlib</code>，用于开启 <code>gzip</code> 压缩。</li>
+<li><code>pcre</code>，用于开启伪静态或者重定向。</li>
+<li><code>openssh</code>，用于开启 <code>ssl</code>，或者换个说法，叫做 <code>https</code>。</li>
+</ul>
 <p>安装过程中需要 <code>gcc-c++</code> 运行库。</p>
 <p>紧接着没多久，写了一篇如何配置 <code>nginx</code> 的日志，讲述了如何开启多配置文件模式，主要是 <code>include</code> 指令。顺便阐述了一下过滤非法域名访问的问题，<code>default_server</code> 关键字进行设置即可。</p>
 <p>之后在一篇微信支付相关的记录中，提到了关于反向代理转发真实 IP 地址的方法。</p>
@@ -335,7 +338,14 @@
 <p>另外，在阅读子项目中，曾经记录了一篇跟 <code>nginx</code> 密切相关的书籍《Nginx 开发从入门到精通》，该书是 <code>tengine</code> 开发团队主笔的。</p>
 <hr>
 <ul>
-<li><a href="http://nginx.org/" target="_blank" rel="noopener">nginx 官网</a></li><li><a href="http://nginx.org/en/docs/" target="_blank" rel="noopener">nginx documentation</a></li><li><a href="http://nginx.org/en/docs/stream/ngx_stream_upstream_module.html" target="_blank" rel="noopener">Module ngx_stream_upstream_module</a></li><li><a href="https://trac.nginx.org/nginx/browser/nginx/src/http/modules/ngx_http_proxy_module.c" target="_blank" rel="noopener">ngx_http_proxy_module.c in nginx/src/http/modules – nginx</a></li><li><a href="https://www.nginx.com/resources/wiki/start/topics/depth/ifisevil/" target="_blank" rel="noopener">If Is Evil | NGINX</a></li><li><a href="http://tengine.taobao.org/book/index.html" target="_blank" rel="noopener">Nginx开发从入门到精通</a></li><li><a href="https://serverfault.com/questions/630413/nginx-apache-set-hsts-only-if-x-forwarded-proto-is-https" target="_blank" rel="noopener">Nginx/Apache: set HSTS only if X-Forwarded-Proto is https - Server Fault</a></li></ul>
+<li><a href="http://nginx.org/" target="_blank" rel="noopener">nginx 官网</a></li>
+<li><a href="http://nginx.org/en/docs/" target="_blank" rel="noopener">nginx documentation</a></li>
+<li><a href="http://nginx.org/en/docs/stream/ngx_stream_upstream_module.html" target="_blank" rel="noopener">Module ngx_stream_upstream_module</a></li>
+<li><a href="https://trac.nginx.org/nginx/browser/nginx/src/http/modules/ngx_http_proxy_module.c" target="_blank" rel="noopener">ngx_http_proxy_module.c in nginx/src/http/modules – nginx</a></li>
+<li><a href="https://www.nginx.com/resources/wiki/start/topics/depth/ifisevil/" target="_blank" rel="noopener">If Is Evil | NGINX</a></li>
+<li><a href="http://tengine.taobao.org/book/index.html" target="_blank" rel="noopener">Nginx开发从入门到精通</a></li>
+<li><a href="https://serverfault.com/questions/630413/nginx-apache-set-hsts-only-if-x-forwarded-proto-is-https" target="_blank" rel="noopener">Nginx/Apache: set HSTS only if X-Forwarded-Proto is https - Server Fault</a></li>
+</ul>
 
       
     </div>
@@ -444,7 +454,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">71</span>
+              <span class="site-state-item-count">73</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -461,7 +471,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">172</span>
+                <span class="site-state-item-count">177</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -542,7 +552,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
