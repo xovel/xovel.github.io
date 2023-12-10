@@ -153,15 +153,17 @@
       play();
     });
 
-    // PC 端兼容
-    olist.onmouseenter = function () {
-      stop();
-    }
-    olist.onmouseleave = function () {
-      play();
+    if (!('touchstart' in window)) {
+      // PC 端兼容
+      olist.onmouseenter = function () {
+        stop();
+      }
+      olist.onmouseleave = function () {
+        play();
+      }
     }
   </script>
-  <script type="demo">
+  <!-- <script type="demo">
     // 在当前列表后追加复制一份，使列表长度变为当前2倍
     // 获取list列表
     var olist = document.getElementById("list");
@@ -207,7 +209,9 @@
       move();
     }
 
-  </script>
+  </script> -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/vConsole/3.15.1/vconsole.min.js"></script>
+  <script>window.vc = new VConsole();</script>
 </body>
 
 </html>
