@@ -66,6 +66,8 @@
     </ul>
   </div>
 
+  <button id="ori">查看 Oritention</button>
+
   <script src="https://cdn.bootcdn.net/ajax/libs/vConsole/3.15.1/vconsole.min.js"></script>
   <script>window.vc = new VConsole();</script>
 
@@ -176,6 +178,77 @@
       slide.onload = function () {
         options.width = slide.offsetWidth;
         play();
+      }
+    }
+
+    function getOri() {
+      if ('orientation' in window) {
+        var orientation = window.orientation;
+        if (orientation === 0 || orientation === 180) {
+          return 'portrait';
+        }
+        if (orientation === 90 || orientation === -90) {
+          return 'landscape';
+        }
+        return '';
+      }
+
+      var orientation =
+        (screen.orientation || {}).type ||
+        screen.mozOrientation ||
+        screen.msOrientation;
+
+      if (orientation === "landscape-primary") {
+        console.log("That looks good.");
+      } else if (orientation === "landscape-secondary") {
+        console.log("Mmmh... the screen is upside down!");
+      } else if (
+        orientation === "portrait-secondary" ||
+        orientation === "portrait-primary"
+      ) {
+        console.log("Mmmh... you should rotate your device to landscape");
+      } else if (orientation === undefined) {
+        console.log("The orientation API isn't supported in this browser :(");
+      }
+
+      return orientation || '';
+    }
+
+    ori.onclick = function () {
+      console.log(getOri());
+      reqDO();
+    }
+
+    function reqDO() {
+      if (typeof DeviceOrientationEvent !== 'undefined') {
+        if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+          DeviceOrientationEvent.requestPermission()
+            .then(permissionState => {
+              console.log('DeviceOrientationEvent.requestPermission()', permissionState);
+              if (permissionState === 'granted') {
+                // handle data
+                initDO();
+              } else {
+                console.log('无 DeviceOrientationEvent 访问权限');
+              }
+            })
+            .catch((err) => {
+              console.log(err)
+            });
+        } else {
+          // han
+          initDO();
+        }
+      }
+    }
+    var inited = false;
+
+    function initDO() {
+      if (!inited) {
+        inited = true;
+        window.addEventListener("deviceorientation", function (event) {
+          console.log(event.alpha + " : " + event.beta + " : " + event.gamma);
+        });
       }
     }
 
