@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta http-equiv="Cache-control" content="max-age=1700,no-transform,no-siteapp">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no,email=no">
+  <title>三诺历史盛展</title>
+  <script src="./anime.min.js"></script>
+  <style type="text/css">
+    /* 重置所有元素的边距，并指定盒子模型 */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    #box {
+      width: 100%;
+      /* 设置父元素盒子总宽度=每张图片宽度+图片中间的边距margin之和 */
+      margin: 0px auto;
+      /* 设置父元素距顶部50px，居中，便于显示 */
+      overflow: hidden;
+      /* 设置超出的图片内容隐藏 */
+
+    }
+
+    #box ul {
+      list-style: none;
+      /* 取消ul的默认圆点样式 */
+      width: 5000px;
+      /* ul宽度设置大一点，超过图片+边距总长度的两倍 */
+      position: relative;
+      /* 设置相对定位，便于使用left控制图片列表的位置，不断左移 */
+    }
+
+    #box ul li {
+      float: left;
+      /* 设置每一项靠左在一行显示 */
+      margin-right: 0px;
+      /* 设置右边距 */
+    }
+
+    #list img {
+      width: 100%;
+      /* 设置图片统一宽度 */
+    }
+
+    /* 当鼠标悬浮在图片上时 */
+    #list img:hover {
+      cursor: pointer;
+      /* 鼠标变为手势 */
+      scale: 1.3;
+      /* 图片放大为1.3倍 */
+    }
+  </style>
+</head>
+
+<body>
+  <div id="box">
+    <ul id="list">
+      <li><img src="a.jpg" alt="" /></li>
+      <li><img src="a.jpg" alt="" /></li>
+    </ul>
+  </div>
+  <script>
+    var options = {
+      // 图片宽度
+      width: 1024,
+      // 图片高度
+      height: 409,
+      // 轮播的时长
+      duration: 5000,
+    };
+    var tmr = null;
+    var img = new Image();
+    img.onload = function () {
+      options.width = img.naturalWidth || img.width;
+      options.height = img.naturalHeight || img.height;
+      play();
+    }
+    img.src = 'a.jpg';
+
+    // 给 raf 一个垫片处理
+    if (!window.requestAnimationFrame) {
+      var lastTime = 0;
+      window.requestAnimationFrame = function (callback) {
+        var currentTime = new Date().getTime();
+        var timeToCall = Math.max(0, 16 - (currentTime - lastTime));
+        var id = window.setTimeout(function () {
+          callback(currentTime + timeToCall);
+        }, timeToCall);
+        lastTime = currentTime + timeToCall;
+        return id;
+      }
+      window.cancelAnimationFrame = function (id) {
+        window.clearTimeout(id);
+      }
+    }
+    var olist = document.getElementById("list");
+    var slide = olist.querySelector('img');
+    var width = slide.offsetWidth;
+    var ani;
+    function getLeft() {
+      return parseFloat(getComputedStyle(olist).left) || 0;
+    }
+    // 播放动画
+    function play() {
+      stop();
+      var initLeft = getLeft();
+      var duration = (width - Math.abs(initLeft)) / width * options.duration;
+      ani = anime({
+        targets: olist,
+        left: [initLeft, -width],
+        duration: duration,
+        easing: 'linear',
+        complete() {
+          olist.style.left = 0;
+          play();
+        }
+      });
+    }
+    // 暂停动画
+    function stop() {
+      if (ani) {
+        ani.pause();
+      }
+    }
+    var t = {};
+    // 触屏控制
+    olist.addEventListener('touchstart', function (e) {
+      stop();
+      var touch = e.touches[0];
+      t.x = touch.pageX;
+      t.y = touch.pageY;
+      t.l = getLeft();
+    });
+    olist.addEventListener('touchmove', function (e) {
+      var touch = e.touches[0];
+      // 移动的距离
+      var dX = touch.pageX - t.x;
+      var dY = touch.pageY - t.y;
+      var l = t.l + dX;
+      // 边界处理
+      if (l >= 0) {
+        l -= width;
+      }
+      if (l < -width) {
+        l = 0;
+      }
+      olist.style.left = l + 'px';
+    });
+    olist.addEventListener('touchend', function (e) {
+      play();
+    });
+
+    // PC 端兼容
+    olist.onmouseenter = function () {
+      stop();
+    }
+    olist.onmouseleave = function () {
+      play();
+    }
+  </script>
+  <script type="demo">
+    // 在当前列表后追加复制一份，使列表长度变为当前2倍
+    // 获取list列表
+    var olist = document.getElementById("list");
+    // 获取li数组
+    var liArr = document.querySelectorAll('#list>li');
+    // 新建一个变量接收新节点
+    var newLiNode = null;
+    // 遍历li数组，依次复制li，并挂载到父节点上
+    for (var i = 0; i < liArr.length; i++) {
+      // 复制节点
+      newLiNode = liArr[i].cloneNode(true);
+      // 挂载在父节点上
+      olist.appendChild(newLiNode);
+    }
+
+    // 定义一个全局变量的定时器
+    var timer = null;
+    // 定义一个全局变量的left值
+    var moveLeft = 0;
+
+    // 声明滚动函数move，不传参，内部变量使用全局变量moveLeft
+    function move() {
+      timer = setInterval(function () {
+        // 当跑完一轮时，重置位置
+        if (moveLeft === -1040) {
+          moveLeft = 0;
+        }
+        moveLeft -= 5;
+        // 设置列表每20毫秒左移5px
+        olist.style.left = moveLeft + "px";
+      }, 100)
+    }
+
+    // 加载页面时调用该滚动函数
+    move();
+
+    // 鼠标移入清清除定时器
+    olist.onmouseenter = function () {
+      clearInterval(timer);
+    };
+    // 鼠标移出，调用move重新开启定时器
+    olist.onmouseleave = function () {
+      move();
+    }
+
+  </script>
+</body>
+
+</html>
