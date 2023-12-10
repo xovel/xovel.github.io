@@ -66,6 +66,11 @@
     </ul>
   </div>
 
+  <button id="ori">查看 Oritention</button>
+
+  <script src="https://cdn.bootcdn.net/ajax/libs/vConsole/3.15.1/vconsole.min.js"></script>
+  <script>window.vc = new VConsole();</script>
+
   <script src="./anime.min.js"></script>
   <script>
     // 给 raf 一个垫片处理
@@ -84,14 +89,62 @@
         window.clearTimeout(id);
       }
     }
+    // 节流函数
+    // Returns a function, that, when invoked, will only be triggered at most once
+    // during a given window of time. Normally, the throttled function will run
+    // as much as it can, without ever going more than once per `wait` duration;
+    // but if you'd like to disable the execution on the leading edge, pass
+    // `{leading: false}`. To disable execution on the trailing edge, ditto.
+    function throttle(func, wait, options) {
+      var timeout, context, args, result;
+      var previous = 0;
+      if (!options) options = {};
+
+      var later = function () {
+        previous = options.leading === false ? 0 : Date.now();
+        timeout = null;
+        result = func.apply(context, args);
+        if (!timeout) context = args = null;
+      };
+
+      var throttled = function () {
+        var _now = Date.now();
+        if (!previous && options.leading === false) previous = _now;
+        var remaining = wait - (_now - previous);
+        context = this;
+        args = arguments;
+        if (remaining <= 0 || remaining > wait) {
+          if (timeout) {
+            clearTimeout(timeout);
+            timeout = null;
+          }
+          previous = _now;
+          result = func.apply(context, args);
+          if (!timeout) context = args = null;
+        } else if (!timeout && options.trailing !== false) {
+          timeout = setTimeout(later, remaining);
+        }
+        return result;
+      };
+
+      throttled.cancel = function () {
+        clearTimeout(timeout);
+        previous = 0;
+        timeout = context = args = null;
+      };
+
+      return throttled;
+    }
   </script>
   <script>
     var options = {
-      // 单次播放时长
+      // 轮播的时长
       duration: 5000,
-      // 单张距离，通过页面效果计算得到
+      // 单张距离
       width: 0,
     };
+
+    console.log(options);
 
     var olist = document.getElementById("list");
     var slide = olist.querySelector('img');
@@ -105,7 +158,7 @@
       stop();
       var initLeft = getLeft();
       var duration = (options.width - Math.abs(initLeft)) / options.width * options.duration;
-
+      console.log('play...', duration, initLeft);
       ani = anime({
         targets: olist,
         left: [initLeft, -options.width],
@@ -173,6 +226,83 @@
         play();
       }
     }
+
+    function getOri() {
+      if ('orientation' in window) {
+        var orientation = window.orientation;
+        if (orientation === 0 || orientation === 180) {
+          return 'portrait';
+        }
+        if (orientation === 90 || orientation === -90) {
+          return 'landscape';
+        }
+        return '';
+      }
+
+      var orientation =
+        (screen.orientation || {}).type ||
+        screen.mozOrientation ||
+        screen.msOrientation;
+
+      if (orientation === "landscape-primary") {
+        console.log("That looks good.");
+      } else if (orientation === "landscape-secondary") {
+        console.log("Mmmh... the screen is upside down!");
+      } else if (
+        orientation === "portrait-secondary" ||
+        orientation === "portrait-primary"
+      ) {
+        console.log("Mmmh... you should rotate your device to landscape");
+      } else if (orientation === undefined) {
+        console.log("The orientation API isn't supported in this browser :(");
+      }
+
+      return orientation || '';
+    }
+
+    ori.onclick = function () {
+      console.log(getOri());
+      reqDO();
+    }
+
+    function reqDO() {
+      if (typeof DeviceOrientationEvent !== 'undefined') {
+        if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+          DeviceOrientationEvent.requestPermission()
+            .then(permissionState => {
+              console.log('DeviceOrientationEvent.requestPermission()', permissionState);
+              if (permissionState === 'granted') {
+                // handle data
+                initDO();
+              } else {
+                console.log('无 DeviceOrientationEvent 访问权限');
+              }
+            })
+            .catch((err) => {
+              console.log(err)
+            });
+        } else {
+          // han
+          initDO();
+        }
+      }
+    }
+    var inited = false;
+
+    function initDO() {
+      if (!inited) {
+        inited = true;
+        window.addEventListener("deviceorientation", throttle(function (event) {
+          console.log(event.alpha.toFixed(5) + " : " + event.beta.toFixed(5) + " : " + event.gamma.toFixed(5));
+        }, 800));
+        console.log('deviceorientation inited');
+      }
+    }
+
+    if (window.location.protocol === 'https:') {
+      reqDO();
+    }
+
   </script>
   <!-- <script type="demo">
     // 在当前列表后追加复制一份，使列表长度变为当前2倍
