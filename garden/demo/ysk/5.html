@@ -5,15 +5,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta http-equiv="Cache-control" content="max-age=1700,no-transform,no-siteapp">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
   <meta name="format-detection" content="telephone=no,email=no">
   <title>三诺历史盛展</title>
   <script src="./anime.min.js"></script>
   <style type="text/css">
     /* 重置所有元素的边距，并指定盒子模型 */
     * {
-      margin: 0; padding: 0; box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
     #box {
       width: 100%;
       /* 设置父元素盒子总宽度=每张图片宽度+图片中间的边距margin之和 */
@@ -49,7 +53,7 @@
     #list img:hover {
       cursor: pointer;
       /* 鼠标变为手势 */
-      scale: 1.3;
+      /* scale: 1.3; */
       /* 图片放大为1.3倍 */
     }
   </style>
@@ -157,11 +161,14 @@
       // PC 端兼容
       olist.onmouseenter = function () {
         stop();
+        olist.style.transform = 'scale(1.3)';
       }
       olist.onmouseleave = function () {
         play();
+        olist.style.transform = '';
       }
     }
+    play();
   </script>
   <!-- <script type="demo">
     // 在当前列表后追加复制一份，使列表长度变为当前2倍
