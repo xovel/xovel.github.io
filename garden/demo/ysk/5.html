@@ -9,7 +9,6 @@
     content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
   <meta name="format-detection" content="telephone=no,email=no">
   <title>三诺历史盛展</title>
-  <script src="./anime.min.js"></script>
   <style type="text/css">
     /* 重置所有元素的边距，并指定盒子模型 */
     * {
@@ -66,16 +65,12 @@
       <li><img src="a.jpg" alt="" /></li>
     </ul>
   </div>
-  <script>
-    var options = {
-      // 图片宽度
-      width: 1024,
-      // 图片高度
-      height: 409,
-      // 轮播的时长
-      duration: 5000,
-    };
 
+  <script src="https://cdn.bootcdn.net/ajax/libs/vConsole/3.15.1/vconsole.min.js"></script>
+  <script>window.vc = new VConsole();</script>
+
+  <script src="./anime.min.js"></script>
+  <script>
     // 给 raf 一个垫片处理
     if (!window.requestAnimationFrame) {
       var lastTime = 0;
@@ -92,10 +87,21 @@
         window.clearTimeout(id);
       }
     }
+  </script>
+  <script>
+    var options = {
+      // 轮播的时长
+      duration: 5000,
+      // 单张距离
+      width: 0,
+    };
+
+    console.log(options);
+
     var olist = document.getElementById("list");
     var slide = olist.querySelector('img');
-    var width = slide.offsetWidth;
     var ani;
+    // 取 olist 的 left 样式值
     function getLeft() {
       return parseFloat(getComputedStyle(olist).left) || 0;
     }
@@ -103,10 +109,11 @@
     function play() {
       stop();
       var initLeft = getLeft();
-      var duration = (width - Math.abs(initLeft)) / width * options.duration;
+      var duration = (options.width - Math.abs(initLeft)) / options.width * options.duration;
+      console.log('play...', duration, initLeft);
       ani = anime({
         targets: olist,
-        left: [initLeft, -width],
+        left: [initLeft, -options.width],
         duration: duration,
         easing: 'linear',
         complete() {
@@ -138,9 +145,9 @@
       var l = t.l + dX;
       // 边界处理
       if (l >= 0) {
-        l -= width;
+        l -= options.width;
       }
-      if (l < -width) {
+      if (l < -options.width) {
         l = 0;
       }
       olist.style.left = l + 'px';
@@ -160,7 +167,18 @@
         olist.style.transform = '';
       }
     }
-    play();
+
+    var width = slide.offsetWidth;
+    if (width) {
+      options.width = width;
+      play();
+    } else {
+      slide.onload = function () {
+        options.width = slide.offsetWidth;
+        play();
+      }
+    }
+
   </script>
   <!-- <script type="demo">
     // 在当前列表后追加复制一份，使列表长度变为当前2倍
@@ -209,8 +227,6 @@
     }
 
   </script> -->
-  <script src="https://cdn.bootcdn.net/ajax/libs/vConsole/3.15.1/vconsole.min.js"></script>
-  <script>window.vc = new VConsole();console.log('2023-12-10 a111');</script>
 </body>
 
 </html>
